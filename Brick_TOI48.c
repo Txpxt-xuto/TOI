@@ -19,4 +19,15 @@ int main()
     {
         scanf("%s",&a[i]);
     }
+    for(i=0;i<N;i++)
+    {   
+        for(i=0;i<N;i++)
+        {
+            printf("%c",Brick[i]);
+        }
+    }
+    for(i=0;i<M;i++)
+    {
+        printf("%s",a[i]);
+    }
 }
