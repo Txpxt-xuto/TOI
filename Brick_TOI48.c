@@ -37,7 +37,7 @@ int main()
                 count+=1;
             }
         }
-        if(count==N-1)
+        if(count==N)
         {
             for(k=N-a[j];k<N;k++)
             {
