@@ -1,7 +1,7 @@
 /*
 Lang: C
 TASK: CHAIN
-AUTHOR: Tapat Toungsakul
+AUTHOR: Tapat Toungsakuld
 CENTER: Home
 */
 #include <stdio.h>
