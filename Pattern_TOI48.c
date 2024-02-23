@@ -1,7 +1,7 @@
 /*
 TASK: PATTERN
 AUTHOR: Tapat Toungsakul
-CENTER: Home
+CENTER: myHome
 */
 #include <stdio.h>
 int main()
