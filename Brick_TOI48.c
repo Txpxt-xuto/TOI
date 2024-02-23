@@ -7,7 +7,7 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int N,M,i,j;
+    int N,M,i,j,k,count;
     scanf("%d %d",&N,&M);
     char Brick[N][M];
     int a[M];
@@ -15,19 +15,43 @@ int main()
     {
         scanf("%s",&Brick[i]);
     }
-    for(i=0;i<M;i++)
+    for(j=0;j<M;j++)
     {
-        scanf("%s",&a[i]);
+        scanf("%d",&a[j]);
     }
-    for(i=0;i<N;i++)
-    {   
+    for(j=0;j<M;j++)
+    {
+        count=0;
         for(i=0;i<N;i++)
         {
-            printf("%c",Brick[i]);
+            if(Brick[i][j]=='O')
+            {
+                for(k=i-a[j];k<i;k++)
+                {
+                    Brick[k][j]='#';
+                }
+                break;
+            }
+            else if(Brick[i][j]!='O')
+            {
+                count+=1;
+            }
+        }
+        if(count==N-1)
+        {
+            for(k=N-a[j];k<N;k++)
+            {
+                Brick[k][j]='#';
+            }
         }
     }
-    for(i=0;i<M;i++)
+    for(i=0;i<N;i++)
     {
-        printf("%s",a[i]);
+        for(j=0;j<M;j++)
+        {
+            printf("%c",Brick[i][j]);
+        }
+        printf("\n");
     }
+
 }
