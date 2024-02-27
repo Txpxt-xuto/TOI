@@ -24,7 +24,12 @@ int main()
         }
     }
     printf("%d %d\n",bee-fibo,bee);//คำตอบของปี i
-    for (x=1;x<j;x++) 
+    fibo1=0;
+    fibo2=1;
+    fibo=fibo1+fibo2;
+    bee1=4;
+    bee=bee1;
+    for (x=1;x<j+1;x++) 
     {
         fibo1 = fibo2;
         fibo2 = fibo;
