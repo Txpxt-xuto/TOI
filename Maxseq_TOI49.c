@@ -21,7 +21,7 @@ int main()
             sum=0;
             for (k=i;k<=j;k++)
             {
-                sum+=Main_Sequences[k];
+                sum+=Main_Sequences[k]; //หาค่าที่มากที่สุดของลำดับซึ่งเป็นลำดับย่อย
             }
             if(max<sum)
             {
