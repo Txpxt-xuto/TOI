@@ -5,6 +5,7 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <stdio.h>
+#include <string.h>
 int main()
 {
     int i,j,k,n,m,x,y,z;
