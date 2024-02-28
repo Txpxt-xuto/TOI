@@ -1,5 +1,5 @@
 /*
-TASK: PATTERN
+TASK: NUGGET
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
