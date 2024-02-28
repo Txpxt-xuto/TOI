@@ -23,7 +23,7 @@ int main()
             bee1=bee;
         }
     }
-    printf("%d %d\n",bee-fibo,bee);//คำตอบของปี i
+    printf("%d %d\n",bee-fibo,bee);//คำตอบของปี i โดยเป็น จำนวนมดงาน จำนวนมดทั้งหมด
     fibo1=0;
     fibo2=1;
     fibo=fibo1+fibo2;
@@ -40,5 +40,5 @@ int main()
             bee1=bee;
         }
     }
-    printf("%d %d",bee-fibo,bee);//คำตอบของป j
+    printf("%d %d",bee-fibo,bee);//คำตอบของป j โดยเป็น จำนวนมดงาน จำนวนมดทั้งหมด
 }
