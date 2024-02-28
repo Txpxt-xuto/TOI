@@ -10,7 +10,7 @@ int main()
 {
     int i,j,k,n,m,x,y,z;
     scanf("%d",&n);
-    char word[n][1000];
+    char word[n][1001];
     for(i=0;i<n;i++)
     {
         scanf("%s",&word[i]);
