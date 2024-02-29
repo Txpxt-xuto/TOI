@@ -3,7 +3,7 @@ Lang: C
 TASK: CHAIN
 AUTHOR: Tapat Toungsakul
 CENTER: Home
-*/
+ */
 #include <stdio.h>
 int main()
 {
