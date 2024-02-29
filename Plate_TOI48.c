@@ -35,7 +35,7 @@ int main()
                     break;
                 }
             }
-            array[j]=Idcome;
+            array[j] =Idcome;
             j++;
             for(i=0;i<=j;i++)
             {
