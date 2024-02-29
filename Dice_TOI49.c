@@ -8,7 +8,7 @@ CENTER: Home
 #include <string.h>
 int main()
 {
-    int i,j,k,n,m,x,y,z;
+    int i,j,k,n,m,x;
     scanf("%d",&n);
     char word[n][1001];
     for(i=0;i<n;i++)
@@ -17,71 +17,58 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-        int ON=1,FRONT=2,LEFT=3,BLACK=5,RIGHT=4,LOW=6;
-        m = strlen(word[i]);
-        for(j=0;j<m;j++)
-        {
-            if(word[i][j]=='B')
+        int dice[6] = {1, 2, 3, 4, 5, 6};
+		m = strlen(word[i]);
+		for(j=0;j<m;j++){
+			if (word[i][j] == 'F')
             {
-                x=BLACK;
-                y=LOW;
-                z=ON;
-                ON=FRONT;
-                BLACK=z;
-                LOW=x;
-                FRONT=y;
-            }
-            else if(word[i][j]=='F')
+				x = dice[0];
+				dice[0] = dice[4];
+				dice[4] = dice[5];
+				dice[5] = dice[1];
+				dice[1] = x;
+			} 
+            else if (word[i][j] == 'B')
             {
-                x=BLACK;
-                y=LOW;
-                z=ON;
-                ON=x;
-                BLACK=y;
-                LOW=FRONT;
-                FRONT=z;
-            }
-            else if(word[i][j]=='L')
+				x = dice[0];
+				dice[0] = dice[1];
+				dice[1] = dice[5];				
+				dice[5] = dice[4];
+				dice[4] = x;
+			} 
+            else if (word[i][j] == 'L')
             {
-                x=RIGHT;
-                y=LOW;
-                z=ON;
-                ON=LEFT;
-                RIGHT=z;
-                LOW=x;
-                LEFT=y;
-            }
-            else if(word[i][j]=='R')
+				x = dice[0];
+				dice[0] = dice[3];
+				dice[3] = dice[5];
+				dice[5] = dice[2];
+				dice[2] = x;				
+			} 
+            else if (word[i][j] == 'R')
             {
-                x=RIGHT;
-                y=LOW;
-                z=ON;
-                ON=x;
-                RIGHT=y;
-                LOW=LEFT;
-                LEFT=z;
-            }
-            else if(word[i][j]=='D')
+				x = dice[0];
+				dice[0] = dice[2];
+				dice[2] = dice[5];
+				dice[5] = dice[3];
+				dice[3] = x;				
+			}
+            else if (word[i][j] == 'C')
             {
-                x=RIGHT;
-                y=BLACK;
-                z=FRONT;
-                FRONT=LEFT;
-                RIGHT=z;
-                BLACK=x;
-                LEFT=y;
-            }
-            else if(word[i][j]=='C')
+				x = dice[1];
+				dice[1] = dice[3];
+				dice[3] = dice[4];								
+				dice[4] = dice[2];
+				dice[2] = x;
+			} 
+            else if (word[i][j] == 'D')
             {
-                x=RIGHT;
-                y=BLACK;
-                z=FRONT;
-                FRONT=x;
-                RIGHT=y;
-                BLACK=LEFT;
-                LEFT=z;
-            }
-        }
-        printf("%d ",FRONT);
+				x = dice[1];
+				dice[1] = dice[2];
+				dice[2] = dice[4];
+				dice[4] = dice[3];
+				dice[3] = x;				
+			}
+		}
+        printf("%d ",dice[1]);
     }
 }
