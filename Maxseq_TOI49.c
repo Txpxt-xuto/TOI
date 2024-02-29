@@ -38,10 +38,10 @@ int main()
     }
     else if(max>0)
     {
-        printf("%d\n",max);
         for(z=x;z<=y;z++)
         {
             printf("%d ",Main_Sequences[z]);
         }
+        printf("%d\n",max);
     }
 }
