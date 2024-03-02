@@ -10,7 +10,7 @@ int main()
     int L,N,x,y,z;
     scanf("%d",&L);
     scanf("%d",&N);
-    char word[N][L];
+    char word[N][L+1];
     for(x=0;x<N;x++)
     {
         scanf("%s",&word[x]);
@@ -22,7 +22,7 @@ int main()
         {
             if(word[x][y]!=word[x+1][y])
             {
-                z+=1;
+                z++;
             }
         }
         if(z>2)
@@ -32,6 +32,13 @@ int main()
                 printf("%c",word[x][y]);
             }
             break;
+        }
+    }
+    if(z<=2)
+    {
+        for(y=0;y<L;y++)
+        {
+            printf("%c",word[N-1][y]);
         }
     }
 }
