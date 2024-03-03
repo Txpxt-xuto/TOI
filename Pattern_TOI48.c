@@ -6,7 +6,7 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int i,j,k,x,y,z,N,recheak;
+    int i,j,k,x,y,z,N,recheak,max;
     scanf("%d",&N);
     int P[N],Q[N],R[N];
     for(i=0;i<N;i++)
@@ -93,7 +93,22 @@ int main()
     }
     //ปิดจบในบรรทัดสุดท้าย
     for(j=R[N-1]+Q[N-1];j<=70;j++)
+    {
+            printf("o");
+    }
+    for(i=0;i<N;i++)
+    {
+        if(max<=P[i])
+        {
+            max=P[i];
+        }
+    }
+    for(i=max;i<N;i++)
+    {
+        printf("\n");
+        for(j=1;j<=70;j++)
         {
             printf("o");
         }
+    }
 }
