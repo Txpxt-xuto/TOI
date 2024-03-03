@@ -7,7 +7,7 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int i,j,k,n,sum,max=0,x,y,z;
+    int i,j,n,sum,max=-1000,x,y;
     scanf("%d",&n);
     int Main_Sequences[n];
     for (i=0;i<n;i++)
@@ -16,19 +16,15 @@ int main()
     }
     for (i=0;i<n;i++)
     {
+        sum=0;
         for (j=i;j<n;j++)
         {
-            sum=0;
-            for (k=i;k<=j;k++)
-            {
-                sum+=Main_Sequences[k]; //หาค่าที่มากที่สุดของลำดับซึ่งเป็นลำดับย่อย
-            }
+            sum+=Main_Sequences[j]; //หาค่าที่มากที่สุดของลำดับซึ่งเป็นลำดับย่อย
             if(max<sum)
             {
                 max=sum;
                 x=i;
                 y=j;
-                z=k;
             }
         }
     }
@@ -36,12 +32,12 @@ int main()
     {
         printf("Empty sequence");
     }
-    else if(max>0)
+    else
     {
-        for(z=x;z<=y;z++)
+        for(i=x;i<=y;i++)
         {
-            printf("%d ",Main_Sequences[z]);
+            printf("%d ",Main_Sequences[i]);
         }
-        printf("%d\n",max);
+        printf("\n%d",max);
     }
 }
