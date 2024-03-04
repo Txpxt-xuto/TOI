@@ -5,6 +5,7 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <iostream>
+using namespace std;
 int main()
 {
     int n,i,j,k,count=0;
@@ -14,30 +15,31 @@ int main()
     {
         for(j=0;j<n;j++)
         {
-            std::cin >> Tiling[i][j];
+            cin >> Tiling[i][j];
         }
     }
-    for(i=0;i<n;i++)
+    for(i=0;i<n-1;i++)
     {
-        for(j=0;j<n;j++)
+        for(j=0;j<n-1;j++)
         {
-            if(Tiling[i][j]==Tiling[i][j+1] && Tiling[i][j+1]==Tiling[i+1][j] && Tiling[i+1][j]!=Tiling[i+1][j+1])
+            if((Tiling[i][j]==Tiling[i][j+1]) && (Tiling[i][j]==Tiling[i+1][j]) && (Tiling[i][j]!=Tiling[i+1][j+1]))
             {
                 count++;
             }
-            else if(Tiling[i][j]==Tiling[i][j+1] && Tiling[i][j+1]==Tiling[i+1][j+1] && Tiling[i+1][j+1]!=Tiling[i+1][j])
+            else if((Tiling[i][j]==Tiling[i][j+1])&& (Tiling[i][j]==Tiling[i+1][j+1]) && (Tiling[i][j]!=Tiling[i+1][j]))
             {
                 count++;
             }
-            else if(Tiling[i][j]==Tiling[i+1][j] && Tiling[i+1][j]==Tiling[i+1][j+1] && Tiling[i+1][j+1]!=Tiling[i][j+1])
+            else if((Tiling[i][j]==Tiling[i+1][j]) && (Tiling[i][j]==Tiling[i+1][j+1]) && (Tiling[i][j]!=Tiling[i][j+1]) && (Tiling[i][j]!=Tiling[i][j-1]))
             {
                 count++;
             }
-            else if(Tiling[i][j+1]==Tiling[i+1][j+1] && Tiling[i+1][j+1]==Tiling[i+1][j] && Tiling[i+1][j]!=Tiling[i][j])
+            else if((Tiling[i][j+1]==Tiling[i+1][j+1]) && (Tiling[i][j+1]==Tiling[i+1][j]) && (Tiling[i][j+1]!=Tiling[i][j]))
             {
                 count++;
+                j++;
             }
         }
     }
-    std::cout << count;
+    cout << count;
 }
