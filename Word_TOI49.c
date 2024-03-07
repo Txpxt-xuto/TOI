@@ -1,6 +1,6 @@
 /*
+TASK: WORD
 Lang: C
-TASK: Word
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
