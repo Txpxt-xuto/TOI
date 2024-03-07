@@ -1,5 +1,5 @@
 /*
-TASK: CAKE
+TASK: cake
 LANG: C
 AUTHOR: Tapat Toungsakul
 CENTER: Home
