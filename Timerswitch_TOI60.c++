@@ -6,21 +6,34 @@ CENTER: YourCenter
 */
 #include <iostream>
 using namespace std;
-int N,i,j=1;
-string timer_switch;
+int N,i,j=1,k,x,y;
+string timer_switch,check;
 int main()
 {
     cin >> N >> timer_switch;
-    for(i=0;i<N-1;i++)
+    check=timer_switch;
+    for(i=0;i<=N;i++)
     {
-        if(timer_switch[0]==timer_switch[i+1])
+        if(k==N)
         {
-            cout << j;
+            cout << x ;
             break;
         }
-        else
+        for(j=0;j<N-1;j++)
         {
-            j++;
+            y=check[j];
+            check[j]=check[j+1];
+            check[j+1]=y;
+        }
+        x++;
+        k=0;
+        for(j=0;j<N;j++)
+        {   
+            if(check[j]==timer_switch[j])
+            {
+                k++;
+            }
+            else{break;}
         }
     }
 }
