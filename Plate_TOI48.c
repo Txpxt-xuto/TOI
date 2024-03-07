@@ -1,6 +1,6 @@
 /*
-TASK: PLATE
 LANG: C
+TASK: PLATE
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
