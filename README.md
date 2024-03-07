@@ -1,4 +1,4 @@
-# TOI
+# TOI 🏆
 Project for TOI problem solving in C,C++ or Python language.
 By Tapat Toungsakul (auto)
 
