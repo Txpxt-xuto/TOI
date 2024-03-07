@@ -1,5 +1,5 @@
 /*
-TASK: FILTER
+TASK: filter
 LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
