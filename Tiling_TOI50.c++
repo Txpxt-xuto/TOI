@@ -1,5 +1,5 @@
 /*
-TASK: TILING
+TASK: tiling
 LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
