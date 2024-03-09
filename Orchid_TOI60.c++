@@ -8,20 +8,42 @@ CENTER: Home
 using namespace std;
 int main()
 {
-    int i,j=0,N;
+    int i,j,N;
     cin >> N;
     int orchid[N];
     for(i=0;i<N;i++)
     {
         cin >> orchid[i];
     }
-    for(i=0;i<N-1;i++)
+    int Forchid[N],Borchid[N];
+    for(i=0;i<N;i++)
     {
-        if(orchid[i]>orchid[i+1])
+        Forchid[i]=orchid[i];
+        Borchid[i]=orchid[i];
+    }
+    int k1=0;
+    //Front
+    for(j=0;j<N;j++)
+    {
+        for(i=0;i<N-1;i++)
         {
-            j++;
-            orchid[i+1]=orchid[i];
+            if(Forchid[i]>Forchid[i+1])
+            {
+                k1++;
+                Forchid[i]=Forchid[i+1];
+            }
         }
     }
-    cout << j;
+    int k2=0;
+    //Back
+    for(i=0;i<N-1;i++)
+    {
+        if(Borchid[i]>Borchid[i+1])
+        {
+            k2++;
+            Borchid[i+1]=Borchid[i];
+        }
+    }
+    if(k1>=k2){cout << k2;}
+    else{cout << k1;}
 }
