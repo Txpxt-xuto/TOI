@@ -22,19 +22,19 @@ int main()
     {
         for(j=0;j<n-1;j++)
         {
-            if((Tiling[i][j]==Tiling[i][j+1]) && (Tiling[i][j]==Tiling[i+1][j]) && (Tiling[i][j]!=Tiling[i+1][j+1]))
+            if((Tiling[i][j]==Tiling[i][j+1]) && (Tiling[i][j]==Tiling[i+1][j]) && (Tiling[i][j]!=Tiling[i+1][j+1]) && (Tiling[i][j]!=Tiling[i-1][j]) && (Tiling[i][j]!=Tiling[i][j-1]) && (Tiling[i][j+1]!=Tiling[i-1][j+1]) && (Tiling[i][j+1]!=Tiling[i][j+2]) && (Tiling[i+1][j]!=Tiling[i][j-1]) && (Tiling[i+1][j]!=Tiling[i+2][j]))
             {
                 count++;
             }
-            else if((Tiling[i][j]==Tiling[i][j+1])&& (Tiling[i][j]==Tiling[i+1][j+1]) && (Tiling[i][j]!=Tiling[i+1][j]))
+            else if((Tiling[i][j]==Tiling[i][j+1])&& (Tiling[i][j]==Tiling[i+1][j+1]) && (Tiling[i][j]!=Tiling[i+1][j]) && (Tiling[i][j]!=Tiling[i-1][j]) && (Tiling[i][j]!=Tiling[i][j-1]) && (Tiling[i][j+1]!=Tiling[i-1][j+1]) && (Tiling[i][j+1]!=Tiling[i][j+2]) && (Tiling[i+1][j+1]!=Tiling[i+2][j+1]) && (Tiling[i+1][j+1]!=Tiling[i+1][j+2]))
             {
                 count++;
             }
-            else if((Tiling[i][j]==Tiling[i+1][j]) && (Tiling[i][j]==Tiling[i+1][j+1]) && (Tiling[i][j]!=Tiling[i][j+1]) && (Tiling[i][j]!=Tiling[i][j-1]))
+            else if((Tiling[i][j]==Tiling[i+1][j]) && (Tiling[i][j]==Tiling[i+1][j+1]) && (Tiling[i][j]!=Tiling[i][j+1])&& (Tiling[i][j]!=Tiling[i-1][j]) && (Tiling[i][j]!=Tiling[i][j-1]) && (Tiling[i+1][j+1]!=Tiling[i+2][j+1]) && (Tiling[i+1][j+1]!=Tiling[i+1][j+2]) && (Tiling[i+1][j]!=Tiling[i][j-1]) && (Tiling[i+1][j]!=Tiling[i+2][j]))
             {
                 count++;
             }
-            else if((Tiling[i][j+1]==Tiling[i+1][j+1]) && (Tiling[i][j+1]==Tiling[i+1][j]) && (Tiling[i][j+1]!=Tiling[i][j]))
+            else if((Tiling[i][j+1]==Tiling[i+1][j+1]) && (Tiling[i][j+1]==Tiling[i+1][j]) && (Tiling[i][j+1]!=Tiling[i][j]) && (Tiling[i][j+1]!=Tiling[i-1][j+1]) && (Tiling[i][j+1]!=Tiling[i][j+2]) && (Tiling[i+1][j]!=Tiling[i][j-1]) && (Tiling[i+1][j]!=Tiling[i+2][j]) && (Tiling[i+1][j+1]!=Tiling[i+2][j+1]) && (Tiling[i+1][j+1]!=Tiling[i+1][j+2]))
             {
                 count++;
                 j++;
