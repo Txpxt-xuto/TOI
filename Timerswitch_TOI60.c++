@@ -25,6 +25,11 @@ int main()
             check[j]=check[j+1];
             check[j+1]=y;
         }
+        for(j=0;j<N;j++)
+        {
+            cout << check[j];
+        }
+        cout << "\n";
         x++;
         k=0;
         for(j=0;j<N;j++)
