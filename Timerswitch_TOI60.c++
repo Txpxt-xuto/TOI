@@ -33,7 +33,7 @@ int main()
         x++;
         k=0;
         for(j=0;j<N;j++)
-        {   
+        {    
             if(check[j]==timer_switch[j])
             {
                 k++;
