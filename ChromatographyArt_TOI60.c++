@@ -11,7 +11,7 @@ int main()
     int i,j,k,N,non,z,max=0;
     cin >> N >> non;
     int s[N],h[N],w[N],o[N];
-    int table[3*N][3*N],count[100];
+    int table[N*N][N*N],count[100];
     for(i=0;i<N;i++)
     {
         cin >> s[i] >> h[i] >> w[i] >> o[i];
@@ -27,6 +27,10 @@ int main()
             }
         }
     }
+    for(z=0;z<100;z++)
+    {
+        count[z]=0;
+    }
     //สิ้้นสุดเขต work
     for(i=0;i<N;i++)
     {
@@ -37,11 +41,10 @@ int main()
             {
                 for(z=0;z<100;z++)
                 {
-                    if(z==table[position+k][j])
+                    if(table[position+k][j]==z)
                     {
                         count[z]++;
                     }
-                    else{break;}
                 }
             }
         }
