@@ -23,6 +23,7 @@ int main(void)
         cin >> stand[i];
     }
     sort(heinght, heinght+N);
+    sort(stand, stand+N, greater<int>());
     /*for(i=0;i<N;i++)
     {
         for(j=0;j<N-1;j++)
@@ -45,18 +46,7 @@ int main(void)
     {
         sum[i]=stand[i]+heinght[i];
     }
-    for(i=0;i<N;i++)
-    {
-        for(j=0;j<N-1;j++)
-        {
-            if(sum[j]>sum[j+1])
-            {
-                k=sum[j];
-                sum[j]=sum[j+1];
-                sum[j+1]=k;
-            }
-        }
-    }
+    sort(sum, sum+N);
     for(i=0;i<N-1;i++)
     {
         count+=sum[i+1]-sum[i];
