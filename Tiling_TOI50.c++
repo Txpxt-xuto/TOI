@@ -6,10 +6,8 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-
-int n,count;
+int n,sum=0;
 int Tiling[30][30];
-
 bool ck(int y,int x){
     if(Tiling[y][x]==Tiling[y-1][x] && Tiling[y][x]==Tiling[y][x+1] && Tiling[y][x]!=Tiling[y-2][x] && Tiling[y][x]!=Tiling[y-1][x+1] && Tiling[y][x]!=Tiling[y][x+2] && Tiling[y][x]!=Tiling[y+1][x+1] && Tiling[y][x]!=Tiling[y+1][x] && Tiling[y][x]!=Tiling[y][x-1] && Tiling[y][x]!=Tiling[y-1][x-1]) 
     {
@@ -29,7 +27,6 @@ bool ck(int y,int x){
     }
     return 0;
 }
-
 int main()
 {
     ios::sync_with_stdio(0);
@@ -49,9 +46,9 @@ int main()
         {
             if(ck(i,j)) 
             {
-                count++;
+                sum+=1;
             }
         }
     }
-    cout << count;
+    cout << sum;
 }
