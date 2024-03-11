@@ -24,6 +24,5 @@ int main()
             L[k]=j;
         }
     }
-    
     cout << n-L.size();
 }
