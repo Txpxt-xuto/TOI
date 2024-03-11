@@ -24,24 +24,6 @@ int main(void)
     }
     sort(heinght, heinght+N);
     sort(stand, stand+N, greater<int>());
-    /*for(i=0;i<N;i++)
-    {
-        for(j=0;j<N-1;j++)
-        {
-            if(heinght[j]>heinght[j+1])
-            {
-                k=heinght[j];
-                heinght[j]=heinght[j+1];
-                heinght[j+1]=k;
-            }
-            if(stand[j]<stand[j+1])
-            {
-                k=stand[j];
-                stand[j]=stand[j+1];
-                stand[j+1]=k;
-            }
-        }
-    }*/
     for(i=0;i<N;i++)
     {
         sum[i]=stand[i]+heinght[i];
