@@ -5,6 +5,7 @@ AUTHOR: Tapat TOungsakul
 CENTER: Home
 */
 #include <iostream>
+#include <algorithm>
 using namespace std;
 int main()
 {
@@ -19,7 +20,8 @@ int main()
     {
         cin >> stand[i];
     }
-    for(i=0;i<N;i++)
+    sort(heinght, heinght+n);
+    /*for(i=0;i<N;i++)
     {
         for(j=0;j<N-1;j++)
         {
@@ -36,7 +38,7 @@ int main()
                 stand[j+1]=k;
             }
         }
-    }
+    }*/
     for(i=0;i<N;i++)
     {
         sum[i]=stand[i]+heinght[i];
