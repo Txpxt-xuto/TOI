@@ -4,53 +4,40 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 Center: Home
 */
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
+int n,x;
+string s[15];
+long long sz[15], arr[15], mn = LLONG_MAX;
+void f(int idx, long long cnt)
+{
+    if(idx == n+1 && cnt)
+    { 
+        mn = min(mn, cnt); 
+        return; 
+    }
+    for(long long i = 0; i < arr[idx] && cnt+i < mn; i += arr[idx-1]) 
+    {   
+        if(s[idx][(cnt+i) % sz[idx]] - '0' == x) 
+        {
+            f(idx+1, cnt+i);
+        }
+    }
+        
+}
 int main()
 {
-    int i,j,k,N,sum=1;
-    char T;
-    cin >> N >> T;
-    int count[N];
-    char wheel[N][100];
-    for(i=0;i<N;i++)
+    ios_base::sync_with_stdio(0);
+    cout.tie(0);
+    cin.tie(0);
+    cin >> n >> x;
+    arr[0] = 1;
+    for(int i = 1; i <= n; ++i)
     {
-        cin >> wheel[i];
+        cin >> s[i];
+        sz[i] = s[i].size();
+        arr[i] = (arr[i-1]*sz[i])/__gcd(arr[i-1], sz[i]);
     }
-    for(i=0;i<N;i++)
-    {
-        count[i]=0;
-        for(j=0;j<100;j++)
-        {
-            if(wheel[i][j]>='0' && wheel[i][j]<='9')
-            {
-                count[i]+=1;
-            }
-            else
-            {
-                break;
-            }
-        }
-    }
-    for(j=1;j<100;j++)
-    {
-        k=0;
-        for(i=0;i<N;i++)
-        {
-            if(T==wheel[i][j%count[i]])
-            {
-                k+=1;
-            }
-            else
-            {
-                sum+=1;
-                break;
-            }
-        }
-        if(k==N)
-        {
-            cout << sum;
-            break;
-        }
-    }
+    f(1, 0);
+    cout << mn;
 }
