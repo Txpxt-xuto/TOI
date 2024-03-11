@@ -26,7 +26,6 @@ int main()
             for(k=0;k<w[i];k++)
             {
                 table[j][position+k]=+o[i];
-                cout << table[j][position+k] << " ";
             }
         }
     }
