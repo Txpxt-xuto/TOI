@@ -27,8 +27,8 @@ int main()
         {
             for(k=0;k<w[i];k++)
             {
-                table[j][s[i]+k]=table[j][s[i]+k]+o[i];
-                cout << table[j][s[i]+k] << " ";
+                table[j][position+k]=table[j][position+k]+o[i];
+                cout << table[j][position+k] << " ";
             }
         }
     }
@@ -78,5 +78,8 @@ int main()
             max=count[z];
         }
     }
+    cout << endl;
+    cout << endl;
+    cout << endl;
     cout << max;
 }
