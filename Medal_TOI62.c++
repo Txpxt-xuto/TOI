@@ -7,8 +7,10 @@ CENTER: Home
 #include <iostream>
 #include <algorithm>
 using namespace std;
-int main()
+int main(void)
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
     int i,j,k,N,count=0;
     cin >> N;
     int stand[N],heinght[N],sum[N];
@@ -20,7 +22,7 @@ int main()
     {
         cin >> stand[i];
     }
-    sort(heinght, heinght+n);
+    sort(heinght, heinght+N);
     /*for(i=0;i<N;i++)
     {
         for(j=0;j<N-1;j++)
