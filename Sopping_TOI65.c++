@@ -1,30 +1,37 @@
+/*
+TASK: shopping
+LANG: C++
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/
 #include <bits/stdc++.h>
 using namespace std;
-
 using ll = long long;
-const int MxN = 500050;
-ll a[MxN], cost[MxN], score[MxN];
-
-int main(){
+const int shop = 500050;
+ll a[shop], cost[shop], point[shop];
+int main()
+{
 	cin.tie(nullptr)->ios::sync_with_stdio(false);
-	int n, q;
+	int n,q,i;
 	cin >> n >> q;
-	for(int i=1; i<=n; ++i){
+	for(i=1; i<=n; ++i)
+    {
 		cin >> a[i];
 		if(a[i] >= 0){
-			score[i] += a[i];
+			point[i] += a[i];
 		}
 		else{
 			cost[i] -= a[i];
 		}
-		score[i] += score[i - 1];
+		point[i] += point[i - 1];
 		cost[i] += cost[i - 1];
 	}
-	int idx, x;
-	while(q--){
-		cin >> idx >> x;
-		int id = lower_bound(cost + 1, cost + n + 1, x + cost[idx]) - (cost + 1);
-		cout << score[id] - score[idx] << "\n";
+	int k,x;
+	while(q--)
+    {
+		cin >> k >> x;
+		int id = lower_bound(cost + 1, cost + n + 1, x + cost[k]) - (cost + 1);
+		cout << point[id] - point[k] << "\n";
 	}
 	return 0;
 }
