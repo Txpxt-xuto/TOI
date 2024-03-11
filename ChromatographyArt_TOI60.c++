@@ -18,8 +18,6 @@ int main()
     }
     //สิ้้นสุดเขต work
 
-
-
     for(i=0;i<N;i++)
     {
         int position=s[i];
@@ -36,22 +34,6 @@ int main()
     {
         count[z]=0;
     }
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    for(i=0;i<N;i++)
-    {
-        int position=s[i];
-        for(j=0;j<h[i];j++)
-        {
-            for(k=0;k<w[i];k++)
-            {
-                cout << table[j][s[i]+k] << " ";
-            }
-        }
-    }
-
-
 
     //สิ้้นสุดเขต work
     for(i=0;i<N;i++)
@@ -78,8 +60,5 @@ int main()
             max=count[z];
         }
     }
-    cout << endl;
-    cout << endl;
-    cout << endl;
     cout << max;
 }
