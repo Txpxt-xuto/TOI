@@ -4,10 +4,11 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
+    int N;
     vector<int> L;
     int A[1000005];
     for (int t = 1; t <= N; t++)
