@@ -16,6 +16,10 @@ int main()
     {
         cin >> s[i] >> h[i] >> w[i] >> o[i];
     }
+    //สิ้้นสุดเขต work
+
+
+
     for(i=0;i<N;i++)
     {
         int position=s[i];
@@ -23,7 +27,8 @@ int main()
         {
             for(k=0;k<w[i];k++)
             {
-                table[position+k][j]=+o[i];
+                table[j][s[i]+k]=table[j][s[i]+k]+o[i];
+                cout << table[j][s[i]+k] << " ";
             }
         }
     }
@@ -31,6 +36,23 @@ int main()
     {
         count[z]=0;
     }
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    for(i=0;i<N;i++)
+    {
+        int position=s[i];
+        for(j=0;j<h[i];j++)
+        {
+            for(k=0;k<w[i];k++)
+            {
+                cout << table[j][s[i]+k] << " ";
+            }
+        }
+    }
+
+
+
     //สิ้้นสุดเขต work
     for(i=0;i<N;i++)
     {
@@ -41,7 +63,7 @@ int main()
             {
                 for(z=0;z<100;z++)
                 {
-                    if(table[position+k][j]==z)
+                    if(table[j][position+k]==z)
                     {
                         count[z]++;
                     }
