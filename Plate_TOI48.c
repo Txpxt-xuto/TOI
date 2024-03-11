@@ -7,51 +7,81 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int Nc,Ns,i,j,k,y,z;
-    scanf("%d %d",&Nc,&Ns);
-    int Class[Ns][Ns],x[Ns];
-    char come,Idcome[Ns],array[Ns];
-    for(i=0;i<Ns;i++)
+    struct Data 
     {
-        for(j=0;j<2;j++)
-        {
-            scanf("%d",&Class[i][j]);
-        }
+        int room;
+        int id;
+    };
+    int c,s,i,j;
+    scanf("%d %d", &c, &s);
+    struct Data student[s], line[s];
+    int exit[s], count1 = 0, count2 = 0;
+    for (i = 0; i < s; i ++) 
+    {
+        scanf("%d %d", &student[i].room, &student[i].id);
+        line[i].id = line[i].room = 0;
     }
-    y=0;
-    j=0;
-    k=0;
-    while(k==0)
+    char cmd;
+    while (cmd != 'X')
     {
-        scanf("%s",&come);
-        if(come=='E')
+        scanf("%c", &cmd);
+        if (cmd == 'E') 
         {
-            scanf("%s",&Idcome);
-            for(i=0;i<Ns;i++)
+            int id, room;
+            scanf("%d", &id);
+            for (i=0;i<s; i++)
             {
-                if(Idcome==Class[i][1])
+                if (student[i].id == id)
                 {
-                    x[j]=Class[i][0];
+                    room = student[i].room;
                     break;
                 }
             }
-            array[j]=Idcome;
-            j++;
-            for(i=0;i<=j;i++)
+            if (count1 == 0)
             {
-                printf("%d %s\n",x[i],array[i]);
+                count1 ++;
+                line[0].id = id;
+                line[0].room = room;
+            } 
+            else
+            {
+                int alr = 0;
+                for (i = 0; i < count1; i ++)
+                {
+                    if (line[i].room == room && line[i + 1].room != room)
+                    {
+                        for (j = count1; j > i; j --)
+                        {
+                            line[j].room = line[j - 1].room;
+                            line[j].id = line[j - 1].id;
+                        }
+                        line[i + 1].room = room;
+                        line[i + 1].id = id;
+                        count1 ++;
+                        alr ++;
+                        break;
+                    }
+                }
+                if (alr == 0)
+                {
+                    line[count1].room = room;
+                    line[count1].id = id;
+                    count1 ++;
+                }
             }
         }
-        else if(come=='D')
+        else if (cmd == 'D')
         {
-        }
-        else if(come=='X')
-        {
-            k=1;
+            exit[count2] = line[0].id;
+            for (i = 0; i < count1; i ++)
+            {
+                line[i].room = line[i + 1].room;
+                line[i].id = line[i + 1].id;
+            }
+            line[count1 - 1].room = line[count1 - 1].id = 0;
+            count1 --;
+            count2 ++;
         }
     }
-    for(i=0;i<j;i++)
-    {
-        printf("%d %s\n",x[i],array[i]);
-    }
+    
 }
