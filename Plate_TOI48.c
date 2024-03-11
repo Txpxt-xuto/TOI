@@ -83,5 +83,17 @@ int main()
             count2 ++;
         }
     }
-    
+    for (i = 0; i < count2; i ++) 
+    {
+        printf("%d\n", exit[i]);
+    }
+    if(count2 == 0)
+    {
+        printf("empty");
+    }
+    else if(count2 != 0)
+    {
+        printf("0");
+    }
+    return 0;
 }
