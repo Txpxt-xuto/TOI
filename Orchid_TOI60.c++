@@ -8,16 +8,22 @@ CENTER: Home
 using namespace std;
 int main()
 {
-    int N;
-    vector<int> L;
-    int A[1000005];
-    for (int t = 1; t <= N; t++)
+    vector <int> L;
+    int n,i,j,k;
+    cin >> n;
+    for(i=0;i<n;i++)
     {
-        int x = A[t];
-        auto it = upper_bound(L.begin(), L.end(), x);
-        if (it == L.end())
-        L.push_back(x);
-        else
-        *it = x;
-    }   
+        cin >> j;
+        k=upper_bound(L.begin(),L.end(),j)-L.begin();
+        if(k==L.size())
+        {
+            L.push_back(j);
+        } 
+        else 
+        {
+            L[k]=j;
+        }
+    }
+    
+    cout << n-L.size();
 }
