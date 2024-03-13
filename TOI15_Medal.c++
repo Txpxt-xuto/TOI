@@ -1,7 +1,7 @@
 /*
 TASK: medal.cpp
 LANG: C++
-AUTHOR: Tapat TOungsakul
+AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <iostream>
