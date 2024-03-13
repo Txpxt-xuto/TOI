@@ -1,8 +1,8 @@
 /*
 TASK: switch.cpp
 LANG: C++
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
+AUTHOR: Tapat Toungsakul
+CENTER: Home
 */
 #include <iostream>
 using namespace std;
