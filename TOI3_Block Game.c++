@@ -9,7 +9,7 @@ CENTER: Home
 using namespace std;
 int main()
 {
-    int i,j,l,m,n;
+    int i,j,l,m,n,o;
     cin >> m >> n;
     char k,block[m][n];
     for(i=0;i<m;i++)
@@ -26,15 +26,17 @@ int main()
     {
         cin >> codexy[i][0] >> codexy[i][1] >> codeLR[i];
     }
+    //กระบวนการ
     for(i=0;i<l;i++)
     {
         int a=codexy[i][0],b=codexy[i][1];
-        if(codeLR[i]=='L' && block[a][b-1]!='#')
+        if(codeLR[i]=='L' && block[a][b-1]!='#')//กรณีไปซ้าย
         {
             k=block[a][b-1];
             block[a][b-1]=block[a][b];
             block[a][b]=k;
             b-=1;
+            //ระบบอักษรตก
             while (block[a+1][b]=='-')
             {
                 k=block[a][b];
@@ -42,6 +44,7 @@ int main()
                 block[a+1][b]=k;
                 a++;
             }
+            //ระบบระเบิดอักษร
             if(block[a][b]==block[a+1][b])
             {
                 block[a+1][b]='-';
@@ -56,12 +59,13 @@ int main()
             }
             block[a][b]='-';
         }
-        else if(codeLR[i]=='R' && block[a][b+1]!='#')
+        else if(codeLR[i]=='R' && block[a][b+1]!='#')//กรณีไปขวา
         {
             k=block[a][b+1];
             block[a][b+1]=block[a][b];
             block[a][b]=k;
             b+=1;
+            //ระบบอักษรตก
             while (block[a+1][b]=='-')
             {
                 k=block[a][b];
@@ -69,6 +73,7 @@ int main()
                 block[a+1][b]=k;
                 a++;
             }
+            //ระบบระเบิดอักษร
             if(block[a][b]==block[a+1][b])
             {
                 block[a+1][b]='-';
@@ -83,7 +88,21 @@ int main()
             }
             block[a][b]='-';
         }
+        //ระบบอักษรตกของอักษรอื่นๆ
+        for(o=0;o<m;o++)
+        {
+            for(j=0;j<n;j++)
+            {
+                if(block[o][j]!='#' && block[o+1][j]=='-')
+                {
+                    k=block[o][j];
+                    block[o][j]=block[o+1][j];
+                    block[o+1][j]=k;
+                }
+            }
+        }
     }
+    //ผลลัพธ์
     for(i=0;i<m;i++)
     {
         for(j=0;j<n;j++)
