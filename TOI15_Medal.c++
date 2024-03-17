@@ -9,8 +9,6 @@ CENTER: Home
 using namespace std;
 int main(void)
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
     int i,j,k,N,count=0;
     cin >> N;
     int stand[N],heinght[N],sum[N];
