@@ -5,6 +5,33 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <iostream>
+#include <queue>
+using namespace std;
+int main()
+{
+    int n;
+    string s; 
+    cin >> n >> s;
+    queue<bool> main, sub;
+    for (int i = 0;i < n;i++) 
+    {
+        main.push(s[i] == '0');
+        sub.push(s[i] == '0');
+    }
+    for (int i = 1;i <= n;i++)
+    {
+        sub.push( sub.front()); 
+        sub.pop();
+        if (n % i == 0 && main ==  sub)
+        {
+            cout << i;
+            return 0;
+        }
+            
+    }
+}
+/*
+#include <iostream>
 using namespace std;
 int N,i,j=1,k,x,y;
 string timer_switch,check;
@@ -25,11 +52,6 @@ int main()
             check[j]=check[j+1];
             check[j+1]=y;
         }
-        for(j=0;j<N;j++)
-        {
-            cout << check[j];
-        }
-        cout << "\n";
         x++;
         k=0;
         for(j=0;j<N;j++)
@@ -42,3 +64,4 @@ int main()
         }
     }
 }
+*/
