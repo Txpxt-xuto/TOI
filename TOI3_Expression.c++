@@ -11,12 +11,10 @@ using namespace std;
 int main()
 {   
     vector<int> vec={1,2,3};
-    int* ptr = vec.data();
-    cout << ptr[0];
-    cout << ptr[1];
-    cout << ptr[2];
-    ptr[0]=10;
-    cout << ptr[0];
-    cout << ptr[1];
-    cout << ptr[2];
+    //int* ptr = vec.data();
+    vector<int>::iterator it = vec.begin();
+    cout << *it;
+    *it = 10;
+    cout << endl;
+    cout << vec[0];
 } 
