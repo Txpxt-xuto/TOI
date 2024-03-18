@@ -5,50 +5,81 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <iostream>
-#include <bits/stdc++.h>
-#include <vector>
-using namespace std;
-class Node
-{
+#include <string>
+
+class Song {
 public:
-    int data;
-    Node *prev;
-    Node *next;
+    std::string title;
+    Song *next;
+    Song *prev;
 
-    Node(int data)
-    {
-        this->data = data;
-        this->next = nullptr;
-        this->prev = nullptr;
-    }
-        
+    Song(std::string title) : title(title), next(nullptr), prev(nullptr) {}
 };
-void printlist(Node *n)
-{
-    while(n != nullptr)
-    {
-        cout << n->data << " ";
-        n = n -> next;
-    }
-}
-void printBacklist(Node *n)
-{
-    while(n != nullptr)
-    {
-        cout << n->data << " ";
-        n = n -> prev;
-    }
-}
-int main()
-{   
-    Node *head1 = new Node(1);
-    Node *head2 = new Node(2);
-    Node *head3 = new Node(3);
 
-    head1 -> next = head2;
-    head2 -> next = head3;
-    head2 -> prev = head1;
-    head3 -> prev = head2;
-    printlist(head1);
-    printBacklist(head3);
+class Playlist {
+private:
+    Song *head;
+    Song *tail;
+
+public:
+    Playlist() : head(nullptr), tail(nullptr) {}
+
+  // Add a new song to the end of the playlist
+    void addSong(std::string title) {
+    Song *newSong = new Song(title);
+    if (!head) {
+        head = newSong;
+        tail = newSong;
+    } else {
+        tail->next = newSong;
+        newSong->prev = tail;
+        tail = newSong;
+    }
+    }
+
+  // Remove a song from the playlist
+    bool removeSong(std::string title) {
+    Song *temp = head;
+    while (temp != nullptr) {
+        if (temp->title == title) {
+            if (temp->prev)
+                temp->prev->next = temp->next;
+            if (temp->next)
+                temp->next->prev = temp->prev;
+            if (temp == head)
+                head = temp->next;
+            if (temp == tail)
+                tail = temp->prev;
+        delete temp;
+        return true;
+        }
+        temp = temp->next;
+    }
+    return false; // Song not found
+    }
+
+  // Display all songs in the playlist
+    void display() {
+    Song *temp = head;
+    while (temp != nullptr) {
+        std::cout << temp->title << std::endl;
+        temp = temp->next;
+    }
+    }
+};
+
+int main() {
+    Playlist myPlaylist;
+    myPlaylist.addSong("Song 1");
+    myPlaylist.addSong("Song 2");
+    myPlaylist.addSong("Song 3");
+
+    std::cout << "Current Playlist:" << std::endl;
+    myPlaylist.display();
+
+    myPlaylist.removeSong("Song 2");
+    std::cout << "\nPlaylist after removing a song:" << std::endl;
+    myPlaylist.display();
+
+    return 0;
 }
