@@ -10,23 +10,13 @@ CENTER: Home
 using namespace std;
 int main()
 {   
-    vector<int> a;
-    int i,j,k,n;
-    cin >> j;
-    for(i=0;i<j;i++)
-    {
-        cin >> k;
-        a.push_back(k);
-    }
-    for(i=0;i<j;i++)
-    {
-        cout << a[i] << " ";
-    }
-    cin >> n;
-    a.erase(a.begin()+n);
-    cout << endl;
-    for(i=0;i<a.size();i++)
-    {
-        cout << a[i] << " ";
-    }
+    vector<int> vec={1,2,3};
+    int* ptr = vec.data();
+    cout << ptr[0];
+    cout << ptr[1];
+    cout << ptr[2];
+    ptr[0]=10;
+    cout << ptr[0];
+    cout << ptr[1];
+    cout << ptr[2];
 } 
