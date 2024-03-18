@@ -6,40 +6,27 @@ CENTER: Home
 */
 #include <iostream>
 #include <bits/stdc++.h>
+#include <vector>
 using namespace std;
-void hello(int a)
-{
-    cout << "auto " << a << endl;
-}
-
 int main()
 {   
-    //pointer
-    /*  (number = *ptr and &number = ptr) */
-    int number = 10;
-    int* ptr = &number;
-    cout << &number << endl;
-    cout << *ptr << endl;
-
-    number = 20;
-    cout << &number << endl;
-    cout << *ptr << endl;
-
-    *ptr = 30; // number = 30
+    vector<int> a;
+    int i,j,k,n;
+    cin >> j;
+    for(i=0;i<j;i++)
+    {
+        cin >> k;
+        a.push_back(k);
+    }
+    for(i=0;i<j;i++)
+    {
+        cout << a[i] << " ";
+    }
+    cin >> n;
+    a.erase(a.begin()+n);
     cout << endl;
-    cout << &number << endl;
-    cout << ptr << endl;
-    cout << number << endl;
-    cout << *ptr << endl;
-    cout << endl;
-    int arr[5]={1,2,3,4,5};
-    int* ptrarr = arr ; //มีค่าเท่ากับ int* ptrarr = &arr[0];
-    cout << *ptrarr << endl; //ค่าเริ่มที่ array ตำแหน่งที่ 0
-    cout << ptrarr << endl; //pointer เริ่มที่ array ตำแหน่งที่ 0
-    cout << arr << endl; //pointer เริ่มที่ array ตำแหน่งที่ 0
-    void (*functionptr)(int) = hello;
-    functionptr(1);
-
-
-    return 0;
-}
+    for(i=0;i<a.size();i++)
+    {
+        cout << a[i] << " ";
+    }
+} 
