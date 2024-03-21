@@ -12,13 +12,13 @@ int main()
 {
     int i,j,k,n,m;
     vector<vector<int>> v;
-    cout << v.size();
     cin >> n >> m;
     for(i=0;i<n;i++)
     {
         for(j=0;j<m;j++)
         {
-            cin >> v[i][j];
+            cin >> k;
+            v.push_back(k);
         }
     }
     for(i=0;i<n;i++)
