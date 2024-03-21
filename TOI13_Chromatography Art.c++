@@ -12,6 +12,7 @@ int main()
 {
     int i,j,k,n,m;
     vector<vector<int>> v;
+    cin >> n >> m;
     for(i=0;i<n;i++)
     {
         for(j=0;j<m;j++)
@@ -19,7 +20,6 @@ int main()
             cin >> v[i][j];
         }
     }
-    vector<vector<int>> v;
     for(i=0;i<n;i++)
     {
         for(j=0;j<m;j++)
