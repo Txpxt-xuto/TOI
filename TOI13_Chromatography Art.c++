@@ -12,6 +12,7 @@ int main()
 {
     int i,j,k,n,m;
     vector<vector<int>> v;
+    cout << v.size();
     cin >> n >> m;
     for(i=0;i<n;i++)
     {
