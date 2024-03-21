@@ -24,7 +24,8 @@ int main()
     {
         for(j=0;j<m;j++)
         {
-            cin >> v[i][j];
+            cout << v[i][j] << " ";
         }
+        cout << endl;
     }
 }
