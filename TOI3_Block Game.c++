@@ -92,7 +92,7 @@ int main()
         {
             for(j=0;j<n;j++)
             {
-                if(block[o][j]!='#' && block[o+1][j]=='-')
+                if(block[o][j]!='#' && block[o][j]!='-' && block[o+1][j]=='-')
                 {
                     k=block[o][j];
                     block[o][j]=block[o+1][j];
