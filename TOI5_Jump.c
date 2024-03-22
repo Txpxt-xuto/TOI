@@ -23,6 +23,7 @@ int main()
             {
                 sum=j-i+1;
             }
+            else{break;}
         }
         if(Max<sum)
         {
