@@ -8,7 +8,7 @@ CENTER: Home
 #include <math.h>
 int main()
 {
-    double Fixed_cost,Variable_cost,profit,income,Total_cost,Number_of_books_sold,Selling_price_per_book,Number_of_prints,D,min=1000;
+    double Fixed_cost,Variable_cost,profit,income,Total_cost,Number_of_books_sold,Selling_price_per_book,Number_of_prints,D,min=9999999999999;
     double A,B,C;
     scanf("%lf",&Fixed_cost);
     for(Number_of_prints=1000;Number_of_prints<=15000;Number_of_prints+=500)
