@@ -5,24 +5,9 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <stdio.h>
-unsigned int x[30005];
+#include <math.h>
 int main()
 {
-    int N,K,i,j,sum,start,Max=0;
-    scanf("%d %d",&N,&K);
-    for(i=0;i<N;i++)
-    {
-        scanf("%d",&x[i]);
-    }
-    for(i=0;i<N;i++)
-    {
-        sum = 0;
-        for(j=i;j<N-1;j++)
-        {
-            if(x[j+1]-x[i] <= K) sum=j-i+1;
-            else break;
-        }
-        if(Max<sum) Max=sum;
-    }
-    printf("%d",Max);
+    int Fixed_cost,Variable_cost,profit,income,Total_cost,Number_of_books_sold,Selling_price_per_book;
+    scanf("%d",&Fixed_cost);
 }
