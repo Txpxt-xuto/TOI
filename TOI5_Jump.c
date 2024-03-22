@@ -5,7 +5,7 @@ AUTHOR: YourName YourLastName
 CENTER: YourCenter
 */
 #include <stdio.h>
-unsigned int x[30000];
+unsigned int x[30005];
 int main()
 {
     int N,K,i,j,sum,start,Max=0;
