@@ -20,7 +20,6 @@ int main()
             Number_of_books_sold =  ((100 - (0.8569 * exp(0.09*(Selling_price_per_book-100)))) * Number_of_prints ) / 100;
             income = Number_of_books_sold * Selling_price_per_book;
             profit = income - Total_cost;
-            //printf("%f %f %f %f %f %f %f %f %f \n",Fixed_cost,Variable_cost,profit,income,Total_cost,Number_of_books_sold,Selling_price_per_book,Number_of_prints,D);
             if(profit >= 0 && min>profit)
             {
                 min = profit;
