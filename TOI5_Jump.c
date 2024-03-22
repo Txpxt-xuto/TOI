@@ -24,8 +24,10 @@ int main()
                 sum++;
             }
         }
-        if(Max<sum):Max=sum;
-        
+        if(Max<sum)
+        {
+            Max=sum;
+        }
     }
     printf("%d",Max);
 }
