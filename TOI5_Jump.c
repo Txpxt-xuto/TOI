@@ -19,16 +19,10 @@ int main()
         sum = 0;
         for(j=i;j<N-1;j++)
         {
-            if(x[j+1]-x[i] <= K)
-            {
-                sum=j-i+1;
-            }
-            else{break;}
+            if(x[j+1]-x[i] <= K) sum=j-i+1;
+            else break;
         }
-        if(Max<sum)
-        {
-            Max=sum;
-        }
+        if(Max<sum) Max=sum;
     }
     printf("%d",Max);
 }
