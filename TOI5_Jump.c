@@ -18,9 +18,9 @@ int main()
     {
         sum = 0;
         start = x[i]+K;
-        for(j=i;j<N;j++)
+        for(j=i+1;j<N;j++)
         {
-            if(start >= x[j])
+            if(start > x[j])
             {
                 sum++;
             }
