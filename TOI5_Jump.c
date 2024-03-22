@@ -21,7 +21,7 @@ int main()
         {
             if(x[j+1]-x[i] <= K)
             {
-                sum++;
+                sum=j-i+1;
             }
         }
         if(Max<sum)
