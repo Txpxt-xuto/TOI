@@ -16,19 +16,20 @@ int main()
     }
     for(i=0;i<N;i++)
     {
+        sum = 0;
+        start = x[i]+K;
         for(j=i+1;j<N;j++)
         {
-            if(x[i]+K > x[j])
+            if(start > x[j])
             {
                 sum++;
-                printf("%d ",sum);
             }
         }
         if(sum > max)
         {
             max=sum;
         }
-        sum = 0;
+        
     }
     printf("%d",max);
 }
