@@ -1,8 +1,8 @@
 /*
 TASK: Jump
 LANG: C
-AUTHOR: YourName YourLastName 
-CENTER: YourCenter
+AUTHOR: Tapat Toungsakul
+CENTER: Home
 */
 #include <stdio.h>
 unsigned int x[30005];
