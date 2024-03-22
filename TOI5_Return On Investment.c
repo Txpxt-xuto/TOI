@@ -26,9 +26,9 @@ int main()
                 min = profit;
                 A = Number_of_prints;
                 B = Selling_price_per_book;
-                C;
+                C = profit;
             }
         }
     }
-
+    printf("%.0lf %.0lf %.2lf",A,B,C);
 }
