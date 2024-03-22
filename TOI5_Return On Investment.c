@@ -21,14 +21,15 @@ int main()
             Number_of_books_sold =  ((100 - (0.8569 * exp(0.09*D))) * Number_of_prints ) / 100;
             income = Number_of_books_sold * Selling_price_per_book;
             profit = income - Total_cost;
-            if(profit >= 0 && min>profit)
+            printf("%f %f %f %f %f %f %f %f %f \n",Fixed_cost,Variable_cost,profit,income,Total_cost,Number_of_books_sold,Selling_price_per_book,Number_of_prints,D);
+            /*if(profit >= 0 && min>profit)
             {
                 min = profit;
                 A = Number_of_prints;
                 B = Selling_price_per_book;
                 C = profit;
-            }
+            }*/
         }
     }
-    printf("%.0lf %.0lf %.2lf",A,B,C);
+    printf("%.0f %.0f %.2f",A,B,C);
 }
