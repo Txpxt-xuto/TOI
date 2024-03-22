@@ -29,7 +29,6 @@ int main()
         {
             max=sum;
         }
-        
     }
     printf("%d",max);
 }
