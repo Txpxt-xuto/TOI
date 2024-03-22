@@ -15,7 +15,7 @@ int main()
     {
         for(Selling_price_per_book=74;Selling_price_per_book<=144;Selling_price_per_book++)
         {
-            Variable_cost = Number_of_prints + (102 - (Number_of_prints/500));
+            Variable_cost = Number_of_prints + (100 - ((Number_of_prints-1000)/500));
             Total_cost = Fixed_cost + Variable_cost;
             D = Selling_price_per_book-100;
             Number_of_books_sold =  ((100 - (0.8569 * exp(0.09*D))) * Number_of_prints ) / 100;
