@@ -13,7 +13,7 @@ int main()
     scanf("%lf",&Fixed_cost);
     for(Number_of_prints=1000;Number_of_prints<=15000;Number_of_prints+=500)
     {
-        Variable_cost = Number_of_prints + (100 - ((Number_of_prints-1000)/500));
+        Variable_cost = Number_of_prints * (100 - ((Number_of_prints-1000)/500));
         Total_cost = Fixed_cost + Variable_cost;
         for(Selling_price_per_book=74;Selling_price_per_book<=144;Selling_price_per_book++)
         {
