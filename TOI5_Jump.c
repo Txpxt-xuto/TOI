@@ -8,7 +8,7 @@ CENTER: YourCenter
 unsigned int x[30000];
 int main()
 {
-    int N,K,i,j,sum,,max=0;
+    int N,K,i,j,sum,max=0;
     scanf("%d %d",&N,&K);
     for(i=0;i<N;i++)
     {
@@ -16,9 +16,9 @@ int main()
     }
     for(i=0;i<N;i++)
     {
-        for(j=i;j<N;j++)
+        for(j=i+1;j<N;j++)
         {
-            if(x[i]+K > x[j+1])
+            if(x[i]+K > x[j])
             {
                 sum=j-i;
             }
@@ -26,6 +26,7 @@ int main()
         if(sum > max)
         {
             max=sum;
+            sum=0;
         }
     }
     printf("%d",max);
