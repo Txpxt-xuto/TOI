@@ -25,60 +25,28 @@ int main()
 				num = num*10 + (treasure[0] -'0');
 				treasure.erase(0,1);//ลบตัวเลขจากกลุ่มคำ
 			}
-			else
-            {
-				break;
-			}
-		}
+			else break;
+        }
         int len = treasure.length();
         //กรณีของทิศต่างๆ
         if(treasure == "*")
         {
             k=sqrt((y*y)+(x*x));
-            cout << fixed << setprecision(3) << x << " " << fixed << setprecision(3) << y << endl;
-            cout << fixed << setprecision(3) << k;
+            cout << fixed << setprecision(3) << x << " " << fixed << setprecision(3) << y << endl << fixed << setprecision(3) << k;
         }
         else if(len==1)
         {
-            if(treasure =="N")
-            {
-                y+=num;
-            }
-            else if(treasure =="S")
-            {
-                y-=num;
-            }
-            else if(treasure =="E")
-            {
-                x+=num;
-            }
-            else if(treasure =="W")
-            {
-                x-=num;
-            }
+            if(treasure =="N") y+=num;
+            else if(treasure =="S") y-=num;
+            else if(treasure =="E") x+=num;
+            else if(treasure =="W") x-=num;
         }
-        else
+        else if(len!=1)
         {
-            if(treasure =="NE")
-            {
-                y+=num;                
-                x+=num;
-            }
-            else if(treasure =="SE")
-            {
-                y-=num;
-                x+=num;
-            }
-            else if(treasure =="NW")
-            {
-                y+=num;
-                x-=num;
-            }
-            else if(treasure =="SW")
-            {
-                y-=num;
-                x-=num;
-            }
+            if(treasure =="NE"){y+=num;x+=num;} 
+            else if(treasure =="SE"){y-=num;x+=num;}
+            else if(treasure =="NW"){y+=num;x-=num;}
+            else if(treasure =="SW"){y-=num;x-=num;}
         }
     }
 }
