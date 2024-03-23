@@ -8,21 +8,21 @@ CENTER: Home
 #include <string.h>
 int main()
 {
-    char input[3],password[256];
+    char input[3],password[256],code[256];
     scanf("%s\n%s",&input,&password);
+    code[256]=password[256];
     int i,j,k;
     for(i=0;i<strlen(password);i++)
     {
-        printf("%c ",input[0]);
-        printf("%c ",input[1]);
-        printf("%c \n",input[2]);
-        input[0]=((input[0]-'0')+(password[i]-'0'))%10;
-        input[1]=((input[0]-'0')+(password[i]-'0'))%10;
-        input[2]=((input[1]-'0')+(password[i]-'0'))%10;
-        printf("%d \n",password[i]-'0');
-        printf("%d ",input[0]);
-        printf("%d ",input[1]);
-        printf("%d ",input[2]);
-
+        for(j=0;j<3;j++)
+        {
+            password[i]=((input[j]+password[i]-'0'-'0'-2)%9+1)+'0';
+            if(j==0|j==2) input[j] = ((input[j]+code[i]-'0'-'0'-1)%9+1)+'0';
+            else input[j]=((input[j]+7-'0')%9+1)+'0';
+        }
+    }
+    for(i=0;i<strlen(password);i++)
+    {
+        printf("%c",password[i]);
     }
 }
