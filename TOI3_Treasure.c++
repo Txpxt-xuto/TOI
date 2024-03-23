@@ -17,6 +17,7 @@ int main()
 		if(treasure == "*")
         {
             printf("%.3f %.3f %.3f",x,y,sqrt((y*y)+(x*x)));
+            break;
         }
         while(treasure[0] >= '0' && treasure[0] <= '9')
         {
