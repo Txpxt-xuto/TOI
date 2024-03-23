@@ -26,5 +26,6 @@ int main()
     {
         j+=Walailak[i]-Dara[i];
     }
+    if(j<=0) j=-j;
     cout << j;
 }
