@@ -9,30 +9,25 @@ CENTER: Home
 int main()
 {
     int i,j,k;
-    char input[5],password[260],code[260];
-    scanf("%s\n%s",&input,&password);
-    for(i=0;i<strlen(password);i++)
+    int input[5],code[5];
+    char password[260];
+    scanf("%s",&password);
+    for(i=0;i<3;i++)
     {
-        code[i]=password[i];
+        input[i]=password[i]-'0';
+        code[i]=input[i];
     }
-    
+    scanf("%s",&password);
     for(i=0;i<strlen(password);i++)
     {
-        for(j=0;j<3;j++)
-        {
-            password[i]=(((input[j]-'0')+(password[i]-'0')-2)%9+1)+'0';
-            if(j==0||j==2)
-            {
-                input[j] = (((input[j]-'0')+(code[j]-'0')-1)%9+1)+'0';
-            }
-            else
-            {
-                input[j]=(((input[j]-'0')+7)%9+1)+'0';
-            }
-        }
-    }
-    for(i=0;i<strlen(password);i++)
-    {
-        printf("%c",password[i]);
+        int dp = (password[i] - '0');
+        dp = (input[0]+dp-2)%9 + 1;
+        dp = (input[1]+dp-2)%9 + 1;
+        dp = (input[2]+dp-2)%9 + 1;
+
+        input[0]= ((input[0])+code[0]-1)%9+1;
+        input[2]= ((input[2])+code[2]-1)%9+1;
+        input[1] = input[1]==1?9:input[1]-1;
+        printf("%d",dp);
     }
 }
