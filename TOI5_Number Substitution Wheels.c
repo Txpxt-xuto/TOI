@@ -20,14 +20,16 @@ int main()
     scanf("%s",&password);
     for(i=0;i<strlen(password);i++)
     {
-        int dp = (password[i] - '0');
-        dp = (input[0]+dp-2)%9 + 1;
-        dp = (input[1]+dp-2)%9 + 1;
-        dp = (input[2]+dp-2)%9 + 1;
-
-        input[0]= ((input[0])+code[0]-1)%9+1;
-        input[2]= ((input[2])+code[2]-1)%9+1;
+        k = (password[i] - '0');
+        for(j=0;j<3;j++)
+        {
+            k = (input[j]+k-2)%9 + 1;
+            if(j==0 || j==2)
+            {
+                input[j]= ((input[j])+code[j]-1)%9+1;
+            }
+        }
         input[1] = input[1]==1?9:input[1]-1;
-        printf("%d",dp);
+        printf("%d",k);
     }
 }
