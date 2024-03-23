@@ -28,13 +28,14 @@ int main()
                 if(min>land[i][j] && test[i][j]==0)
                 {
                     min = land[i][j];
-                    printf("%.2f",min);
+                    
                     x=i;
                     y=j;
-                    printf(" %d %d \n",x,y);
+                    
                 }
             }
-        }
+        }printf("%.2f",min);
+        printf(" %d %d \n",x,y);
         test[x][y]=1;
         sum+=land[x][y];
         land[i-1][j-1]+=land[x][y]*0.1;
