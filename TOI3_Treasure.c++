@@ -4,15 +4,12 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include <iostream>
-#include <iomanip>
 #include <bits/stdc++.h>
 using namespace std;
 string treasure;
 int main()
 {
-    int i=1,j;
-    float x=0,y=0,k;
+    float x=0,y=0;
     while(true)
     {
 		cin >> treasure;
@@ -31,8 +28,7 @@ int main()
         //กรณีของทิศต่างๆ
         if(treasure == "*")
         {
-            k=sqrt((y*y)+(x*x));
-            cout << fixed << setprecision(3) << x << " " << fixed << setprecision(3) << y << endl << fixed << setprecision(3) << k;
+            printf("%.3f %.3f %.3f",x,y,sqrt((y*y)+(x*x)));
         }
         else if(len==1)
         {
