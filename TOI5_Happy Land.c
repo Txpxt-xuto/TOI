@@ -35,11 +35,11 @@ int main()
                 }
             }
         }
-        printf("%.2f",min);
-        printf(" %d %d \n",x,y);
-
         test[x][y]=1;
         sum+=land[x][y];
+
+        printf("%.2f",min);
+        printf(" %d %d %d\n",x,y,test[x][y]);
 
         land[i-1][j-1]+=land[x][y]*0.1;
         land[i-1][j]+=land[x][y]*0.1;
