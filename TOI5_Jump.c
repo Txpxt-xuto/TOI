@@ -8,21 +8,25 @@ CENTER: Home
 unsigned int x[30005];
 int main()
 {
-    int N,K,i,j,sum,start,Max=0;
+    int N,K,i,j,Max=0;
     scanf("%d %d",&N,&K);
     for(i=0;i<N;i++)
     {
         scanf("%d",&x[i]);
     }
-    for(i=0;i<N;i++)
+    i=0;
+    j=0;
+    while( j < N )
     {
-        sum = 0;
-        for(j=i;j<N-1;j++)
+        if( x[j] - x[i] > K ) i++;
+        else
         {
-            if(x[j+1]-x[i] <= K) sum=j-i+1;
-            else break;
+            if(Max<j-i)
+            {
+                Max=j-i;
+            }
+            j++;
         }
-        if(Max<sum) Max=sum;
     }
     printf("%d",Max);
 }
