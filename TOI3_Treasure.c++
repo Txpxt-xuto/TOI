@@ -23,20 +23,13 @@ int main()
 			num = num*10 + (treasure[0] -'0');
 			treasure.erase(0,1);
         }
-        int len = treasure.length();
-        if(len==1)
-        {
-            if(treasure =="N") y+=num;
-            else if(treasure =="S") y-=num;
-            else if(treasure =="E") x+=num;
-            else if(treasure =="W") x-=num;
-        }
-        else if(len!=1)
-        {
-            if(treasure =="NE"){y+=num;x+=num;} 
-            else if(treasure =="SE"){y-=num;x+=num;}
-            else if(treasure =="NW"){y+=num;x-=num;}
-            else if(treasure =="SW"){y-=num;x-=num;}
-        }
+        if(treasure =="N") y+=num;
+        else if(treasure =="S") y-=num;
+        else if(treasure =="E") x+=num;            
+        else if(treasure =="W") x-=num;
+        else if(treasure =="NE"){y+=(num/sqrt(2));x+=(num/sqrt(2));}
+        else if(treasure =="SE"){y-=(num/sqrt(2));x+=(num/sqrt(2));}
+        else if(treasure =="NW"){y+=(num/sqrt(2));x-=(num/sqrt(2));}
+        else if(treasure =="SW"){y-=(num/sqrt(2));x-=(num/sqrt(2));}
     }
 }
