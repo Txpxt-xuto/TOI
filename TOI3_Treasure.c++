@@ -14,23 +14,21 @@ int main()
     {
 		cin >> treasure;
 		double num = 0;
-        //หาเลขหน้าตัวเลขอักษร
-		while(true)
+		if(treasure == "*")
+        {
+            printf("%.3f %.3f %.3f",x,y,sqrt((y*y)+(x*x)));
+        }
+        while(true)
         {
 			if(treasure[0] >= '0' && treasure[0] <= '9')
             {
 				num = num*10 + (treasure[0] -'0');
-				treasure.erase(0,1);//ลบตัวเลขจากกลุ่มคำ
+				treasure.erase(0,1);
 			}
 			else break;
         }
         int len = treasure.length();
-        //กรณีของทิศต่างๆ
-        if(treasure == "*")
-        {
-            printf("%.3f %.3f %.3f",x,y,sqrt((y*y)+(x*x)));
-        }
-        else if(len==1)
+        if(len==1)
         {
             if(treasure =="N") y+=num;
             else if(treasure =="S") y-=num;
