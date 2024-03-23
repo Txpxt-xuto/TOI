@@ -7,9 +7,9 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int M,N,i,j,x,y;
+    int M,N,i,j,k,x,y;
     scanf("%d %d",&M,&N);
-    double land[M][N],min=9999999999999;
+    double land[M][N],min=9999999999999,sum;
     for(i=0;i<M;i++)
     {
         for(j=0;j<N;j++)
@@ -17,16 +17,31 @@ int main()
             scanf("%f",&land[i][j]);
         }
     }
-    for(i=0;i<M;i++)
+    for(k=0;k<M*N;k++)
     {
-        for(j=0;j<N;j++)
+        min=9999999999999;
+        for(i=0;i<M;i++)
         {
-            if(min<land[i][j])
+            for(j=0;j<N;j++)
             {
-                min = land[i][j];
-                x=i;
-                y=j;
+                if(min<land[i][j])
+                {
+                    min = land[i][j];
+                    x=i;
+                    y=j;
+                }
             }
         }
+        sum+=land[x][y];
+        land[i-1][j-1]+=land[x][y]/10;
+        land[i-1][j]+=land[x][y]/10;
+        land[i-1][j+1]+=land[x][y]/10;
+        land[i][j-1]+=land[x][y]/10;
+        land[i][j+1]+=land[x][y]/10;
+        land[i+1][j-1]+=land[x][y]/10;
+        land[i+1][j]+=land[x][y]/10;
+        land[i+1][j+1]+=land[x][y]/10;
     }
+    printf("%.2f",sum);
+
 }
