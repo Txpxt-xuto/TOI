@@ -21,9 +21,9 @@ int main()
         for(j=0;j<3;j++)
         {
             password[i]=((input[j]+password[i]-'0'-'0'-2)%9+1)+'0';
-            if(j==0|j==2)
+            if(j==0||j==2)
             {
-                input[j] = ((input[j]+code[i]-'0'-'0'-1)%9+1)+'0';
+                input[j] = ((input[j]+code[j]-'0'-'0'-1)%9+1)+'0';
             }
             else
             {
