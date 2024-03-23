@@ -9,15 +9,15 @@ using namespace std;
 string treasure;
 int main()
 {
+    int i=0;
     float x=0,y=0;
-    while(true)
+    while(i==0)
     {
 		cin >> treasure;
 		int num = 0;
 		if(treasure == "*")
         {
-            printf("%.3f %.3f %.3f",x,y,sqrt((y*y)+(x*x)));
-            break;
+            i=10;
         }
         while(treasure[0] >= '0' && treasure[0] <= '9')
         {
@@ -33,4 +33,5 @@ int main()
         else if(treasure =="NW"){y+=(num/sqrt(2));x-=(num/sqrt(2));}
         else if(treasure =="SW"){y-=(num/sqrt(2));x-=(num/sqrt(2));}
     }
+    printf("%.3f %.3f \n%.3f",x,y,sqrt((y*y)+(x*x)));
 }
