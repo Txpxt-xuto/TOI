@@ -15,6 +15,7 @@ int main()
         for(j=0;j<N;j++)
         {
             scanf("%f",&land[i][j]);
+            test[i][j]=0;
         }
     }
     for(k=0;k<M*N;k++)
