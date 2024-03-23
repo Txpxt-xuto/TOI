@@ -17,12 +17,13 @@ int main()
         printf("%d ",input[0]);
         printf("%d ",input[1]);
         printf("%d ",input[2]);
-        input[0]=input[0]+(password[i]-'0');
-        input[1]=input[0]+(password[i]-'0');
-        input[2]=input[1]+(password[i]-'0');
-        printf("%c ",input[0]);
-        printf("%c ",input[1]);
-        printf("%c ",input[2]);
+        printf("%d ",input[3]);
+        input[0]=(input[0]+(password[i]-'0'))%10;
+        input[1]=(input[0]+(password[i]-'0'))%10;
+        input[2]=(input[1]+(password[i]-'0'))%10;
+        printf("%d ",input[0]);
+        printf("%d ",input[1]);
+        printf("%d ",input[2]);
 
     }
 }
