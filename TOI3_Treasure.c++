@@ -13,19 +13,15 @@ int main()
     while(true)
     {
 		cin >> treasure;
-		double num = 0;
+		int num = 0;
 		if(treasure == "*")
         {
             printf("%.3f %.3f %.3f",x,y,sqrt((y*y)+(x*x)));
         }
-        while(true)
+        while(treasure[0] >= '0' && treasure[0] <= '9')
         {
-			if(treasure[0] >= '0' && treasure[0] <= '9')
-            {
-				num = num*10 + (treasure[0] -'0');
-				treasure.erase(0,1);
-			}
-			else break;
+			num = num*10 + (treasure[0] -'0');
+			treasure.erase(0,1);
         }
         int len = treasure.length();
         if(len==1)
