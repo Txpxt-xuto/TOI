@@ -9,7 +9,7 @@ CENTER: Home
 int main()
 {
     int i,j,k;
-    char input[3],password[256],code[256];
+    char input[5],password[260],code[260];
     scanf("%s\n%s",&input,&password);
     for(i=0;i<strlen(password);i++)
     {
@@ -20,14 +20,14 @@ int main()
     {
         for(j=0;j<3;j++)
         {
-            password[i]=((input[j]+password[i]-'0'-'0'-2)%9+1)+'0';
+            password[i]=(((input[j]-'0')+(password[i]-'0')-2)%9+1)+'0';
             if(j==0||j==2)
             {
-                input[j] = ((input[j]+code[j]-'0'-'0'-1)%9+1)+'0';
+                input[j] = (((input[j]-'0')+(code[j]-'0')-1)%9+1)+'0';
             }
             else
             {
-                input[j]=((input[j]+7-'0')%9+1)+'0';
+                input[j]=(((input[j]-'0')+7)%9+1)+'0';
             }
         }
     }
