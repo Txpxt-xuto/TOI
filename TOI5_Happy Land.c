@@ -25,26 +25,27 @@ int main()
         {
             for(j=0;j<N;j++)
             {
-                if(min<land[i][j] && test[i][j]==0)
+                if(min>land[i][j] && test[i][j]==0)
                 {
                     min = land[i][j];
                     printf("%.2f",min);
                     x=i;
                     y=j;
+                    printf(" %d %d \n",x,y);
                 }
             }
         }
         test[x][y]=1;
         sum+=land[x][y];
-        land[i-1][j-1]+=land[x][y]/10;
-        land[i-1][j]+=land[x][y]/10;
-        land[i-1][j+1]+=land[x][y]/10;
-        land[i][j-1]+=land[x][y]/10;
-        land[i][j+1]+=land[x][y]/10;
-        land[i+1][j-1]+=land[x][y]/10;
-        land[i+1][j]+=land[x][y]/10;
-        land[i+1][j+1]+=land[x][y]/10;
+        land[i-1][j-1]+=land[x][y]*0.1;
+        land[i-1][j]+=land[x][y]*0.1;
+        land[i-1][j+1]+=land[x][y]*0.1;
+        land[i][j-1]+=land[x][y]*0.1;
+        land[i][j+1]+=land[x][y]*0.1;
+        land[i+1][j-1]+=land[x][y]*0.1;
+        land[i+1][j]+=land[x][y]*0.1;
+        land[i+1][j+1]+=land[x][y]*0.1;
     }
-    printf("%.2f",sum);
+    printf("--%.2f",sum);
 
 }
