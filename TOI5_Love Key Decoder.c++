@@ -6,23 +6,38 @@ CENTER: Home
 */
 #include <iostream>
 #include <cmath>
+#include <string>
 using namespace std;
-string bit,input;
-int bin_to_int(string);
+string bit,input,p;
 
-int bin_to_int(string s)
+char check(string s)
 {
-    int dec = 0,j,len = s.length();
-    for (int j = 0; j < len; j+=8)
-    {
-        dec = 0;
-        for (int i = 0; i < 8; i++)
-        {
-            dec += ((int)s[i] - '0') * pow(2, len - i - 1);
-        }
-        cout << dec << endl;
-    }
-    return 0;
+    if(s=="01000001") cout << 'A';
+    else if(s=="01000010")cout << 'B';        
+    else if(s=="01000011")cout << 'C';
+    else if(s=="01000100")cout << 'D';
+    else if(s=="01000101")cout << 'E';
+    else if(s=="01000110")cout << 'F';
+    else if(s=="01000111")cout << 'G';
+    else if(s=="01001000")cout << 'H';
+    else if(s=="01001001")cout << 'I';
+    else if(s=="01001010")cout << 'J';
+    else if(s=="01001011")cout << 'K';
+    else if(s=="01001100")cout << 'L';
+    else if(s=="01001101")cout << 'M';
+    else if(s=="01001110")cout << 'N';
+    else if(s=="01001111")cout << 'O';
+    else if(s=="01010000")cout << 'P';
+    else if(s=="01010001")cout << 'Q';
+    else if(s=="01010010")cout << 'R';
+    else if(s=="01010011")cout << 'S';
+    else if(s=="01010100")cout << 'T';
+    else if(s=="01010101")cout << 'U';
+    else if(s=="01010110")cout << 'V';
+    else if(s=="01010111")cout << 'W';
+    else if(s=="01011000")cout << 'X';
+    else if(s=="01011001")cout << 'Y';
+    else cout << 'Z';
 }
 
 int main()
@@ -79,6 +94,13 @@ int main()
         }
         i+=2;
     }
-    cout << input;
-    bin_to_int(input);
+    for(j=0;j<input.length();j+=8)
+    {
+        for(i=0;i<8;i++)
+        {
+            p+=input[i];
+        }
+        cout << p << endl;
+    }
+    
 }
