@@ -22,6 +22,7 @@ int bin_to_int(string s)
         }
         return dec;
     }
+    return 0;
 }
 
 int main()
