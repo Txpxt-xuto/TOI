@@ -24,7 +24,6 @@ int main()
         for(j=0;j<N;j++)
         {
             printf("%f ",land[i][j]);
-            test[i][j]=0;
         }
         printf("\n");
     }
