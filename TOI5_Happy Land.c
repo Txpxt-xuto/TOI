@@ -92,5 +92,5 @@ int main()
             land[j]+=q;
         }
     }
-    printf("\n%f",sum);
+    printf("\n---%f",sum);
 }
