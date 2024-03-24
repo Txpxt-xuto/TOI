@@ -96,7 +96,6 @@ int main()
         }
         i+=2;
     }
-    cout << input;
     for(j=0;j<input.length();j+=8)
     {
         p={};
@@ -106,5 +105,4 @@ int main()
         }
         check(p);
     }
-    
 }
