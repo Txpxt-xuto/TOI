@@ -103,7 +103,6 @@ int main()
             p+=input[i+j];
         }
         check(p);
-        cout << p << endl;
     }
     
 }
