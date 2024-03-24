@@ -49,12 +49,12 @@ int main()
         land[x+1][y-1]+=(land[x][y]/10);
         land[x+1][y]+=(land[x][y]/10);
         land[x+1][y+1]+=(land[x][y]/10);
-        printf("\n");
         for(i=0;i<M;i++)
         {
             for(j=0;j<N;j++)
             {
-                printf("%f",land[i][j]);
+                land[i][j]=land[i][j]-land[x][y]/10;
+                printf("%f ",land[i][j]);
             }
         }
         printf("\n");
