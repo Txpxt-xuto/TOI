@@ -26,11 +26,10 @@ int main()
         {
             for(j=0;j<N;j++)
             {
-                printf(" %d %d",i,j);
+                printf("%f ",land[i][j]);
                 if(min>land[i][j] && test[i][j]==0)
                 {
                     min = land[i][j];
-                    printf(" --> %.2f ",min);
                     x=i;
                     y=j;
                     
@@ -40,18 +39,26 @@ int main()
         test[x][y]=1;
         sum+=land[x][y];
 
-        printf("\n%.2f",min);
-        printf(" %d %d %d\n",x,y,test[x][y]);
+        printf("%.2f %.2f\n",min, (land[x][y]/10));
 
-        land[x-1][y-1]+=land[x][y]*0.1;
-        land[x-1][y]+=land[x][y]*0.1;
-        land[x-1][y+1]+=land[x][y]*0.1;
-        land[x][y-1]+=land[x][y]*0.1;
-        land[x][y+1]+=land[x][y]*0.1;
-        land[x+1][y-1]+=land[x][y]*0.1;
-        land[x+1][y]+=land[x][y]*0.1;
-        land[x+1][y+1]+=land[x][y]*0.1;
+        land[x-1][y-1]+=(land[x][y]/10);
+        land[x-1][y]+=(land[x][y]/10);
+        land[x-1][y+1]+=(land[x][y]/10);
+        land[x][y-1]+=(land[x][y]/10);
+        land[x][y+1]+=(land[x][y]/10);
+        land[x+1][y-1]+=(land[x][y]/10);
+        land[x+1][y]+=(land[x][y]/10);
+        land[x+1][y+1]+=(land[x][y]/10);
+        printf("\n");
+        for(i=0;i<M;i++)
+        {
+            for(j=0;j<N;j++)
+            {
+                printf("%f",land[i][j]);
+            }
+        }
+        printf("\n");
     }
-    printf("--%.2f",sum);
+    printf("sum = %.2f",sum);
 
 }
