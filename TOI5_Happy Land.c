@@ -35,6 +35,8 @@ int main()
         }
         sum+=land[x][y];
         l = land[x][y]/10;
+        land[x][y]=-1000000000;
+        
         printf("-- %.2f %.2f\n",min,l);
         land[x-1][y-1]+=l;
         land[x-1][y]+=l;
