@@ -10,7 +10,7 @@ int main()
     int M,N,i,j,k;
     scanf("%d %d",&M,&N);
     int x,y,test[M][N];
-    double land[M][N],min=9999999999999,sum;
+    float land[M][N],min=9999999999999,sum=0;
     for(i=0;i<M;i++)
     {
         for(j=0;j<N;j++)
@@ -19,16 +19,7 @@ int main()
             test[i][j]=0;
         }
     }
-    for(i=0;i<M;i++)
-    {
-        for(j=0;j<N;j++)
-        {
-            printf("%f ",land[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n------------\n");
-    for(k=0;k<M*N;k++)
+    for(k=0;k<(M*N);k++)
     {
         min=9999999999999;
         for(i=0;i<M;i++)
@@ -38,6 +29,7 @@ int main()
                 if(min>land[i][j] && test[i][j]==0)
                 {
                     min = land[i][j];
+                    printf("--> %.2f ",min);
                     x=i;
                     y=j;
                     
