@@ -9,15 +9,15 @@ using namespace std;
 string treasure;
 int main()
 {
-    int i=0;
-    float x=0,y=0;
-    while(i==0)
+
+    double x=0,y=0,dis;
+    while(true)
     {
 		cin >> treasure;
-		int num = 0;
+		double num = 0;
 		if(treasure == "*")
         {
-            i=10;
+            break;
         }
         while(treasure[0] >= '0' && treasure[0] <= '9')
         {
