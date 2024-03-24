@@ -5,21 +5,58 @@ AUTHOR: Tapat Toungsakul
 Center: Home
 */
 #include <iostream>
-#include <bits/stdc++.h>
-#include <string>
-#include <vector>
 using namespace std;
 int main()
 {
-    int r,c;
-    cin >> r >> c;
-    vector<vector<double>> a(r+2,vector<double> (c+2,INT_MIN));
-    for(int i=1;i<=r;i++)
+    int i,j,k,N,non,z,max=0;
+    cin >> N >> non;
+    int s[N],h[N],w[N],o[N];
+    int table[N*N][N*N],count[100];
+    for(i=0;i<N;i++) cin >> s[i] >> h[i] >> w[i] >> o[i];
+    for(i=0;i<N;i++)
     {
-        for(int j=1;j<=c;j++)
+        int position=s[i];
+        for(j=0;j<h[i];j++)
         {
-            cin >> a[i][j];
+            for(k=0;k<w[i];k++)
+            {
+                table[j][position+k]=0;
+            }
         }
     }
-
+    for(i=0;i<N;i++)
+    {
+        int position=s[i];
+        for(j=0;j<h[i];j++)
+        {
+            for(k=0;k<w[i];k++)
+            {
+                table[j][position+k]+=o[i];
+            }
+        }
+    }
+    for(z=0;z<100;z++) count[z]=0;
+    for(i=0;i<N;i++)
+    {
+        int position=s[i];
+        for(j=0;j<h[i];j++)
+        {
+            for(k=0;k<w[i];k++)
+            {
+                for(z=0;z<100;z++)
+                {
+                    if(table[j][position+k]==z && table[j][position+k]>=0)
+                    {
+                        count[z]++;
+                        table[j][position+k]=-99999;
+                    }
+                }
+            }
+        }
+    }
+    for(z=0;z<100;z++)
+    {
+        if(max<count[z])max=count[z];
+    }
+    cout << max;
 }
