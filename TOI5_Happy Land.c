@@ -3,7 +3,7 @@ TASK: Land
 LANG: C
 AUTHOR: Tapat Toungsakul
 CENTER: Home
-*/
+
 #include <stdio.h>
 int main()
 {
@@ -57,4 +57,40 @@ int main()
     }
     printf("sum = %.2f",sum);
 
+}
+*/
+#include <stdio.h>
+
+int main()
+{
+    int i,j,m,n;
+    scanf("%d %d",&m,&n);
+    float sum=0,land[m*n],k,q;
+    for(i=0;i<m*n;i++)
+    {
+        scanf("%f",&land[i]);
+    }
+    for(j=0;j<m*n;j++)
+    {
+        for(i=0;i<(m*n)-1;i++)
+        {
+            if(land[i]>land[i+1])
+            {
+                k=land[i];
+                land[i]=land[i+1];
+                land[i+1]=k;
+            }
+        }
+    }
+    for(i=0;i<m*n;i++)
+    {
+        sum+=land[i];
+        printf("%f ",land[i]);
+        q=land[i]/10;
+        for(j=i+1;j<m*n;j++)
+        {
+            land[j]+=q;
+        }
+    }
+    printf("\n%f",sum);
 }
