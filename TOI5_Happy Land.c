@@ -7,7 +7,7 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int M,N,i,j,k;
+    int M,N,i,j,k,l;
     scanf("%d %d",&M,&N);
     int x,y,test[M][N];
     float land[M][N],min=999999999,sum=0;
@@ -38,24 +38,24 @@ int main()
         }
         test[x][y]=1;
         sum+=land[x][y];
-
-        printf("%.2f %.2f\n",min, (land[x][y]/10));
-
-        land[x-1][y-1]+=(land[x][y]/10);
-        land[x-1][y]+=(land[x][y]/10);
-        land[x-1][y+1]+=(land[x][y]/10);
-        land[x][y-1]+=(land[x][y]/10);
-        land[x][y+1]+=(land[x][y]/10);
-        land[x+1][y-1]+=(land[x][y]/10);
-        land[x+1][y]+=(land[x][y]/10);
-        land[x+1][y+1]+=(land[x][y]/10);
+        l = land[x][y]/10;
+        printf("-- %.2f %.2f\n",min,l);
+        land[x-1][y-1]+=l;
+        land[x-1][y]+=l;
+        land[x-1][y+1]+=l;
+        land[x][y-1]+=l;
+        land[x][y+1]+=l;
+        land[x+1][y-1]+=l;
+        land[x+1][y]+=l;
+        land[x+1][y+1]+=l;
         for(i=0;i<M;i++)
+        printf("\n");
         {
             for(j=0;j<N;j++)
             {
-                land[i][j]=land[i][j]-land[x][y]/10;
                 printf("%f ",land[i][j]);
             }
+            
         }
         printf("\n");
     }
