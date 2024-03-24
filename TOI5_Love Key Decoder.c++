@@ -9,6 +9,8 @@ CENTER: Home
 #include <algorithm>
 using namespace std;
 string bit,input;
+int bin_to_int(string);
+
 int bin_to_int(string s)
 {
     int dec = 0,j,len = s.length();
@@ -20,8 +22,8 @@ int bin_to_int(string s)
         }
         return dec;
     }
-    
 }
+
 int main()
 {
     int N,i,j;
@@ -76,6 +78,6 @@ int main()
         }
         i+=2;
     }
-    printf("%s",input);
+    cout << input;
     bin_to_int(input);
 }
