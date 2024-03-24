@@ -6,7 +6,6 @@ CENTER: Home
 */
 #include <iostream>
 #include <cmath>
-#include <algorithm>
 using namespace std;
 string bit,input;
 int bin_to_int(string);
@@ -21,7 +20,7 @@ int bin_to_int(string s)
         {
             dec += ((int)s[i] - '0') * pow(2, len - i - 1);
         }
-        cout << dec;
+        cout << dec << endl;
     }
     return 0;
 }
