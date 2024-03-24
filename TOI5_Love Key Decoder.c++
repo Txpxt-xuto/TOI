@@ -21,41 +21,41 @@ int main()
     {
         if(status==1 && (bit[i]=='0' && bit[i+1]=='0'))
         {
-
+            cout << '0';
         }
         else if(status==1 && (bit[i]=='1' && bit[i+1]=='1'))
         {
             status=2;
-            cin >> "1";
+            cout << '1';
         }
         else if(status==2 && (bit[i]=='1' && bit[i+1]=='0'))
         {
             status=3;
-            cin >> "0";
+            cout << '0';
         }
         else if(status==2 && (bit[i]=='0' && bit[i+1]=='1'))
         {
             status=4;
-            cin >> "1";
+            cout << "1";
         }
         else if(status==3 && (bit[i]=='0' && bit[i+1]=='0'))
         {
             status=2;
-            cin >> "1";
+            cout << "1";
         }
         else if(status==3 && (bit[i]=='1' && bit[i+1]=='1'))
         {
             status=1;
-            cin >> "0";
+            cout << "0";
         }
         else if(status==4 && (bit[i]=='0' && bit[i+1]=='1'))
         {
             status=3;
-            cin >> "0";
+            cout << "0";
         }
         else if(status==4 && (bit[i]=='1' && bit[i+1]=='0'))
         {
-            cin >> "1";
+            cout << '1';
         }
     }
 }
