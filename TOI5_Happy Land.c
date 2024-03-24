@@ -56,5 +56,4 @@ int main()
         printf("\n");
     }
     printf("sum = %.2f",sum);
-
 }
