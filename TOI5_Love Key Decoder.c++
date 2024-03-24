@@ -37,7 +37,9 @@ char check(string s)
     else if(s=="01010111")cout << 'W';
     else if(s=="01011000")cout << 'X';
     else if(s=="01011001")cout << 'Y';
-    else cout << 'Z';
+    else if(s=="01011010")cout << 'Z';
+
+    return 0;
 }
 
 int main()
@@ -98,8 +100,9 @@ int main()
     {
         for(i=0;i<8;i++)
         {
-            p+=input[i];
+            p+=input[i+j];
         }
+        check(p);
         cout << p << endl;
     }
     
