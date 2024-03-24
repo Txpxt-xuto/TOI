@@ -16,11 +16,12 @@ int bin_to_int(string s)
     int dec = 0,j,len = s.length();
     for (int j = 0; j < len; j+=8)
     {
+        dec = 0;
         for (int i = 0; i < 8; i++)
         {
             dec += ((int)s[i] - '0') * pow(2, len - i - 1);
         }
-        return dec;
+        cout << dec;
     }
     return 0;
 }
