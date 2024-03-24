@@ -6,14 +6,11 @@ CENTER: Home
 */
 #include <stdio.h>
 int M,N,i,j,k,x,y,check[10];
-double land[5][5],min=999999999,sum=0,l;
+double land[3][3],min=999999999,sum=0,l;
 void place(int k,double x){
     if(k==M*N)
     {
-        if(min>x)
-        {
-            min = x;
-        }
+        if(min>x) min = x;
         return;
     }
     for(int i=0;i<M*N;i++)
@@ -54,4 +51,5 @@ int main()
     }
     place(0,0);
     printf("sum = %.2lf",sum);
+    printf("sum = %.2lf",min);
 }
