@@ -19,6 +19,16 @@ int main()
             test[i][j]=0;
         }
     }
+    for(i=0;i<M;i++)
+    {
+        for(j=0;j<N;j++)
+        {
+            printf("%f ",land[i][j]);
+            test[i][j]=0;
+        }
+        printf("\n");
+    }
+    printf("\n------------\n");
     for(k=0;k<M*N;k++)
     {
         min=9999999999999;
