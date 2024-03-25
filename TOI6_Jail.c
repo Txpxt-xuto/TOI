@@ -17,7 +17,7 @@ int main()
     for(i=0;i<n;i++)
     {
         loop+=m;
-        printf("\n%d",Jail[i+loop%(n-i)]);
+        printf("\n%d",Jail[i+(loop%(n-i)-1)]);
         for(j=0;j<n;j++)
         {
             for(k=0;k<n-1;k++)
@@ -30,8 +30,7 @@ int main()
         printf("\n");
         for(i=0;i<n;i++)
         {
-            printf("%d",Jail[i]);
-        }
-        printf("\n");
+            printf("%d ",Jail[i]);
+        }    
     }
 }
