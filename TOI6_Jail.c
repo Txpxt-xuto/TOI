@@ -10,11 +10,11 @@ int main()
     int i,j=0,k=1,n,m;
     scanf("%d %d",&n,&m);
     int Jail[n];
-    for(i=1;i<=n;i++)
+    for(i=0;i<n;i++)
     {
         Jail[i]=0;
     }
-    i=1;
+    i=0;
     while(j!=n)
     {
         if(i>=n) i-=n;
