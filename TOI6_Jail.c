@@ -9,7 +9,7 @@ int main()
 {
     int i,j,k,n,m,p,loop=0;
     scanf("%d %d",&n,&m);
-    int Jail[n],a[n];
+    int Jail[n];
     for(i=0;i<n;i++)
     {
         Jail[i]=i+1;
@@ -18,20 +18,24 @@ int main()
     {
         loop+=m;
         printf("\n%d",Jail[i+(loop%(n-i)-1)]);
-        Jail[i+(loop%(n-i)-1)]=0;
+        Jail[i+(loop-1)%(n-i)]=0;
         for(j=0;j<n;j++)
         {
             for(k=0;k<n-1;k++)
             {
-                p=Jail[k];
-                Jail[k]=Jail[k+1];
-                Jail[k+1]=p;
+                if(Jail[k]>Jail[k+1])
+                {
+                    p=Jail[k];
+                    Jail[k]=Jail[k+1];
+                    Jail[k+1]=p;
+                }
             }
         }
         printf("\n");
-        for(i=0;i<n;i++)
+        for(j=0;i<n;j++)
         {
-            printf("%d ",Jail[i]);
+            printf("%d ",Jail[j]);
         }    
+        printf("||||\n");
     }
 }
