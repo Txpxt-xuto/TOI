@@ -17,7 +17,10 @@ int main()
     i=0;
     while(j!=n)
     {
-        if(i>=n) i-=n;
+        if(i>=n)
+        {
+            i-=n;
+        }
         if(k%m==0 && Jail[i]==0) 
         {
             printf("%d ",i+1);
@@ -25,7 +28,10 @@ int main()
             k++;
             j++;
         } 
-        else if(Jail[i]!=1) k++;
+        else if(Jail[i]!=1)
+        {
+            k++;
+        }
         i++;
     }
 }
