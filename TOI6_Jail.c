@@ -12,12 +12,13 @@ int main()
     int Jail[n],a[n];
     for(i=0;i<n;i++)
     {
-        Jail[i]=i;
+        Jail[i]=i+1;
     }
     for(i=0;i<n;i++)
     {
         loop+=m;
         printf("\n%d",Jail[i+(loop%(n-i)-1)]);
+        Jail[i+(loop%(n-i)-1)]=0;
         for(j=0;j<n;j++)
         {
             for(k=0;k<n-1;k++)
