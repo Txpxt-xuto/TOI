@@ -11,7 +11,7 @@ int main()
     int i,j,k,N,non,z,max=0;
     cin >> N >> non;
     int s[N],h[N],w[N],o[N];
-    int table[N*N][N*N],count[100];
+    int table[N*N*N][N*N*N],count[100];
     for(i=0;i<N;i++) cin >> s[i] >> h[i] >> w[i] >> o[i];
     for(i=0;i<N;i++)
     {
