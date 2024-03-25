@@ -21,7 +21,7 @@ int main()
             n-=5;
             sum+=1500;
         }
-        else if(n==2)
+        else if(n>=2)
         {
             n-=2;
             sum+=800;
