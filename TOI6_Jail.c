@@ -7,35 +7,25 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int i,j,k,n,m,p,loop=0;
+    int i,j=0,k=1,n,m;
     scanf("%d %d",&n,&m);
     int Jail[n];
-    for(i=0;i<n;i++)
+    for(i=1;i<=n;i++)
     {
-        Jail[i]=i+1;
+        Jail[i]=0;
     }
-    for(i=0;i<n;i++)
+    i=1;
+    while(j!=n)
     {
-        loop+=m;
-        printf("\n%d",Jail[i+(loop-1)%(n-i)]);
-        Jail[i+(loop-1)%(n-i)]=0;
-        for(j=0;j<n;j++)
+        if(i>=n) i-=n;
+        if(k%m==0 && Jail[i]==0) 
         {
-            for(k=0;k<n-1;k++)
-            {
-                if(Jail[k]>Jail[k+1])
-                {
-                    p=Jail[k];
-                    Jail[k]=Jail[k+1];
-                    Jail[k+1]=p;
-                }
-            }
-        }
-        printf("\n");
-        for(j=0;j<n;j++)
-        {
-            printf("%d ",Jail[j]);
-        }    
-        printf("||||\n");
+            printf("%d ",i+1);
+            Jail[i]=1;
+            k++;
+            j++;
+        } 
+        else if(Jail[i]!=1) k++;
+        i++;
     }
 }
