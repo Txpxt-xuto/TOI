@@ -7,7 +7,7 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int i,j,k=0,n,m;
+    int i,j,k,n,m,p,loop=0;
     scanf("%d %d",&n,&m);
     int Jail[n],a[n];
     for(i=0;i<n;i++)
@@ -16,19 +16,22 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-        k+=m;
-        printf("%d",Jail[k%(n-i+1)]);
-        Jail[k%(n-i+1)]=0;
-        for(k=0;k<n;k++)
+        loop+=m;
+        printf("\n%d",Jail[i+loop%(n-i)]);
+        for(j=0;j<n;j++)
         {
-            for(j=0;j<n;j++)
+            for(k=0;k<n-1;k++)
             {
-                if(Jail[j]!=0)
-                {
-                    a[k]=Jail[j]
-                }
+                p=Jail[k];
+                Jail[k]=Jail[k+1];
+                Jail[k+1]=p;
             }
         }
+        printf("\n");
+        for(i=0;i<n;i++)
+        {
+            printf("%d",Jail[i]);
+        }
+        printf("\n");
     }
-
 }
