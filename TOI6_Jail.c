@@ -4,7 +4,7 @@ LANG: C
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include <stdio.h>
+#include <stdio.h> //คำตอบเหมือนกันแต่ช้า
 int main()
 {
     int i,j,k,n,m,num;
