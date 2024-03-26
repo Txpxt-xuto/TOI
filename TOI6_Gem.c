@@ -7,10 +7,32 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int linear,n[5],m[5];
-    int Gem[5][n[5]*2],danger[5][m[5]];
-    for()
+    int linear,n[5],m[5],i;
+    int Gem[5][n[linear]*2],danger[5][m[linear]];
+    for(linear=0;linear<5;linear++)
     {
-        scanf("%d",&)
+        scanf("%d %d",&n[linear],&m[linear]);
+        for(i=0;i<n[linear]*2;i++)
+        {
+            scanf("%d",&Gem[linear][i]);
+        }
+        for(i=0;i<m[linear];i++)
+        {
+            scanf("%d",&danger[linear][i]);
+        }
+    }
+    for(linear=0;linear<5;linear++)
+    {
+        printf("%d/n%d",n[linear],m[linear]);
+        for(i=0;i<n[linear]*2;i++)
+        {
+            printf("%d ",Gem[linear][i]);
+        }
+        printf("\n");
+        for(i=0;i<m[linear];i++)
+        {
+            printf("%d ",danger[linear][i]);
+        }
+        printf("\n");
     }
 }
