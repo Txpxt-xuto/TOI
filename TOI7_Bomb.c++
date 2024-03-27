@@ -1,5 +1,5 @@
 /*
-TASK: switch.cpp
+TASK: bomb
 LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
