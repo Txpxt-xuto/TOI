@@ -20,7 +20,7 @@ int main()
         int a=x[i],b=y[i];
         for(j=0;j<n;j++)
         {
-            if(a>x[j] && b>y[j])
+            if(a<x[j] && b<y[j])
             {
                 a=x[j];
                 b=y[j];
