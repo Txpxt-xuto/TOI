@@ -4,33 +4,28 @@ LANG: C
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include <stdio.h> //คำตอบเหมือนกันแต่ช้า
+#include <stdio.h>
 int main()
 {
-    int i,j,k,n,m,num;
+    int i,j=0,k=1,n,m;
     scanf("%d %d",&n,&m);
-    int Jail[n],a[num],loop=0;
-    for(i=0;i<n;i++) Jail[i]=i+1;
-    num=n;
-    while(num!=0)
+    int Jail[n];
+    for(i=0;i<n;i++)
     {
-        printf("%d ",Jail[(loop+m-1)%num]);
-        Jail[(loop+m-1)%num]=0;
-        loop=(loop+m-1)%num;
-        num=0;
-        for(i=0;i<n;i++) if(Jail[i]!=0) num++;
-        for(j=0;j<num;j++)
+        Jail[i]=0;
+    }
+    i=0;
+    while(j!=n)
+    {
+        if(i>=n) i-=n;
+        if(k%m==0 && Jail[i]==0) 
         {
-            for(k=0;k<num+1;k++)
-            {
-                if(Jail[k]!=0)
-                {
-                    a[j]=Jail[k];
-                    Jail[k]=0;
-                    break;
-                }
-            }
-        }
-        for(i=0;i<num;i++) Jail[i]=a[i];
+            printf("%d ",i+1);
+            Jail[i]=1;
+            k++;
+            j++;
+        } 
+        else if(Jail[i]!=1) k++;
+        i++;
     }
 }
