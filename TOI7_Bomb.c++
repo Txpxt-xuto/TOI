@@ -37,5 +37,4 @@ int main()
             bomby[k]=b;
         }
     }
-    
 }
