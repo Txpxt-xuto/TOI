@@ -8,11 +8,9 @@ CENTER: Home
 using namespace std;
 #define endl '\n'
 #define MOD 1e9 + 7
-
 int a,b;
 vector<vector<vector<char> > > s1,s2;
 vector<int> x1,x2;
-
 int val(vector<vector<char> > x)
 {
     if(x[0][1]==' ')
@@ -32,7 +30,6 @@ int val(vector<vector<char> > x)
     if(x[1][2]!='|') return 6;
     return 8;
 }
-
 void pl()
 {
     reverse(x1.begin(),x1.end());
@@ -48,7 +45,6 @@ void pl()
     reverse(ans.begin(),ans.end());
     for(int i = 0;i < ans.size();i++) cout << ans[i];
 }
-
 int main()
 {
     ios_base::sync_with_stdio(0); cin.tie(0);
