@@ -8,5 +8,7 @@ CENTER: Home
 using namespace std;
 int main()
 {
-    
+    int n,m,i,j;
+    cin >> n >> m;
+    int food[n],danger[m];
 }
