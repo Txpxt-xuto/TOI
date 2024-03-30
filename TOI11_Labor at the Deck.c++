@@ -21,5 +21,5 @@ int main()
         if (all >= N) b = mid;
         else a = mid + 1;
     }
-    cout << a
+    cout << a;
 }
