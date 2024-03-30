@@ -27,12 +27,10 @@ int main()
             else if(j>=2)
             {
                 pointodd-=3;
-                printf("pointodd %d %d\n",pointodd,i);
             }
             else
             {
                 pointodd-=1;
-                printf("pointodd %d %d \n",pointodd,i);
             }
             j++;
             i++;
@@ -48,12 +46,10 @@ int main()
             else if(j>=2)
             {
                 pointeven-=3;
-                printf("pointeven %d \n",pointeven);
             }
             else
             {
                 pointeven-=1;
-                printf("pointeven %d \n",pointeven);
             }
             j++;
             i++;
