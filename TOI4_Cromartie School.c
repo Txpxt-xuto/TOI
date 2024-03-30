@@ -17,17 +17,17 @@ int main()
         { 
             j=0;
             k++;
-            if(pointodd<=0) printf("0\n%d",num[i-1]);
-            else if(k>=2) pointodd-=3;
-            else pointodd-=1;
+            if(pointeven<=0) printf("0\n%d",num[i]);
+            else if(k>=2) pointeven-=3;
+            else pointeven-=1;
         }
         else
         {
             j++;
             k=0;
-            if(pointeven<=0) printf("1\n%d",num[i-1]);
-            else if(j>=2) pointeven-=3;
-            else pointeven-=1;
+            if(pointodd<=0) printf("1\n%d",num[i]);
+            else if(j>=2) pointodd-=3;
+            else pointodd-=1;
         }
     }
 }
