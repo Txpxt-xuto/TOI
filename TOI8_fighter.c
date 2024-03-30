@@ -8,35 +8,22 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int P,i,j,k;
+    int P;
     scanf("%d",&P);
-    int a,pointodd=P,pointeven=P;
-    for(i=0;i<2*P;++i)
+    int num[2]={P,P},a=0,b=-1,x;
+    for(int i=0; i<2*P; i++)
     {
-        scanf("%d",&a);
-        if(a%2==0)
-        { 
-            j=0;
-            k++;
-            if(k>2) pointeven-=3;
-            if(pointeven<=0) 
-            {
-                printf("0\n%d",a);
-                break;
-            }
-            else pointeven-=1;
-        }
-        else
+        scanf("%d",&x);
+        if(x%2!=b)
         {
-            j++;
-            k=0;
-            if(j>2) pointodd-=3;
-            if(pointodd<=0)
-            {
-                printf("1\n%d",a);
-                break;
-            } 
-            else pointodd-=1;
+            a=0;
+            b=x%2;
         }
+        if(a<2)
+        {
+            num[!b]--;
+            a++;
+        } else num[!b]-=3;
+        if(num[!b]<=0)printf("%d\n%d",b,x);
     }
 }
