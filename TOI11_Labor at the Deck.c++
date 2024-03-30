@@ -6,13 +6,14 @@ CENTER: Home
 */ 
 #include <bits/stdc++.h>
 using namespace std;
-long long N, M;
-long long Labor[1000100];
+#define ll long long
 int main() 
 {
+    ll N, M;
+    ll Labor[1000001];
     scanf("%lld %lld", &M, &N);
     for (int i = 1; i <= M; i++) cin >> Labor[i];
-    long long a = 1, b = 1000000LL * N;
+    long long a = 1, b = 1e12;
     while (a < b)
     {
         long long mid = (a + b) / 2;
@@ -22,4 +23,5 @@ int main()
         else a = mid + 1;
     }
     cout << a;
+    return 0;
 }
