@@ -13,7 +13,7 @@ int main()
     ll Labor[1000001];
     scanf("%lld %lld", &M, &N);
     for (int i = 1; i <= M; i++) cin >> Labor[i];
-    long long a = 1, b = 1e12;
+    ll a = 1, b = 1e12;
     while (a < b)
     {
         long long mid = (a + b) / 2;
