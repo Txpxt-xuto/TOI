@@ -10,8 +10,8 @@ int main()
     int P,i,j,k;
     scanf("%d",&P);
     int num[P*2],pointodd=P,pointeven=P;
-    for(i=0;i<2*P;i++) scanf("%d",&num[i]);
-    for(i=0;i<2*P;i++)
+    for(i=0;i<2*P;++i) scanf("%d",&num[i]);
+    for(i=0;i<2*P;++i)
     {
         if(num[i]%2==0)
         { 
