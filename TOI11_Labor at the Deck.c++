@@ -11,7 +11,7 @@ long long Labor[1000100];
 int main() 
 {
     scanf("%lld %lld", &M, &N);
-    for (int i = 1; i <= M; i++) scanf("%lld", &Labor[i]);
+    for (int i = 1; i <= M; i++) cin >> Labor[i];
     long long a = 1, b = 1000000LL * N;
     while (a < b)
     {
@@ -21,5 +21,5 @@ int main()
         if (all >= N) b = mid;
         else a = mid + 1;
     }
-    printf("%lld", a);
+    cout << a
 }
