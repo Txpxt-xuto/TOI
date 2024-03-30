@@ -17,24 +17,24 @@ int main()
         { 
             j=0;
             k++;
+            if(k>2) pointeven-=3;
             if(pointeven<=0) 
             {
-                printf("0\n%d",num[i]);
+                printf("0\n%d",num[i],i);
                 break;
             }
-            else if(k>=2) pointeven-=3;
             else pointeven-=1;
         }
         else
         {
             j++;
             k=0;
+            if(j>2) pointodd-=3;
             if(pointodd<=0)
             {
                 printf("1\n%d",num[i]);
                 break;
             } 
-            else if(j>=2) pointodd-=3;
             else pointodd-=1;
         }
     }
