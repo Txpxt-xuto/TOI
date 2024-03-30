@@ -21,7 +21,7 @@ int main()
             else if(k>=2) pointodd-=3;
             else pointodd-=1;
         }
-        if(num[i]%2==1)
+        else
         {
             j++;
             k=0;
