@@ -1,3 +1,9 @@
+/*
+TASK: labor.cpp
+LANG: C++
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/ 
 #include <bits/stdc++.h>
 using namespace std;
 long long N, M;
