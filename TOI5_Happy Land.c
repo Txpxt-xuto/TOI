@@ -10,13 +10,7 @@ int main()
     int M,N,i,j,k,x,y;
     double land[5][5],min,sum=0;
     scanf("%d %d",&M,&N);
-    for(i=1;i<=M;i++)
-    {
-        for(j=1;j<=N;j++)
-        {
-            scanf("%lf",&land[i][j]);
-        }
-    }
+    for(i=1;i<=M;i++) for(j=1;j<=N;j++) scanf("%lf",&land[i][j]);
     for(k=0;k<(M*N);k++)
     {
         min=999999999;
