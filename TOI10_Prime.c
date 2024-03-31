@@ -4,22 +4,27 @@ LANG: C
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */ 
-#include <stdio.h>
+#include<stdio.h>
+int prime[7368789];
 int main()
 {
-    int n,i,j=1,k,sum=0;
-    scanf("%d",&n);
-    while(sum<n)
+    long long n;
+    scanf(" %lld",&n);
+    //if(n==500000) printf("7368787");
+    //else if(n==1) printf("2");
+    //else if(n==2) printf("3");
+    int cou=1;
+    for(long long i=2;i<7368788;i++)
     {
-        j++;
-        k=0;
-        for(i=1;i<j;i++)
+        if(cou==n && prime[i]==0)
         {
-            if(j%i!=0 || j==2 || i==1) k++;
-            else i=j;
+            printf("%lld",i);
+            return 0;
         }
-        if(k==j-1) sum++;
-        
+        else if(cou<n && prime[i]==0)
+        {
+            for(long long j=i*2;j<7368788;j+=i){ prime[j]=1; }
+            cou++;
+        }
     }
-    printf("%d",j);
 }
