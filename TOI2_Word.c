@@ -27,7 +27,6 @@ int main()
         scanf(" %s",b);
         len = strlen(b);
         for(i=0;i<len;i++) b[i] = toupper(b[i]);
-            
         for(i=0;i<m;i++)
         {
             for(j=0;j<n;j++)
