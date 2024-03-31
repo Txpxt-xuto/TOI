@@ -8,7 +8,7 @@ CENTER: Home
 using namespace std;
 #define ll long long
 
-int main()
+signed main()
 {
     ll n,m,x,y,i,j;
     string s1,s2,s3,s4,s5,s6;
