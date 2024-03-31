@@ -29,6 +29,6 @@ int main()
         }
         i++;
     }
-    if (ca > cb) printf("%d\n%d", 0, t);
-    else printf("%d\n%d", 1, t);
+    if (ca > cb) printf("%d\n%d",0,t);
+    else printf("%d\n%d",1,t);
 }
