@@ -6,99 +6,66 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-int main()
+#define int long long
+
+int n,m,x,y,i,j;
+string s1,s2,s3,s4,s5,s6;
+
+signed main()
 {
-    int i,j,k,n,m,upnum=0,downnum=0;
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     cin >> n >> m;
-    char up[3][n*3],down[3][m*3];
-    for(i=0;i<3;i++) for(j=0;j<n*3;j++) cin >> up[i][j];
-    for(i=0;i<3;i++) for(j=0;j<m*3;j++)cin >> down[i][j];
-    i=0;
-    for(j=0;j<n*3;j+=3)
+    cin.ignore();
+    getline(cin,s1);
+    getline(cin,s2);
+    getline(cin,s3);
+    getline(cin,s4);
+    getline(cin,s5);
+    getline(cin,s6);
+    for(i=0;i<n;i++)
     {
-        if(up[i][j]==' '&& up[i][j+1]==' ' && up[i][j+2]==' '&& up[i+1][j]==' ' && up[i+1][j+1]==' ' && up[i+1][j+2]=='|' && up[i+2][j]==' ' && up[i+2][j+1]==' ' && up[i+2][j+2]=='|')
+        string str="";
+        int a;
+        for(j=0;j<3;j++)
         {
-            upnum = upnum*10 + 1;
+            str+=s1[i*4+j];
+            str+=s2[i*4+j];
+            str+=s3[i*4+j];
         }
-        else if(up[i][j]==' '&& up[i][j+1]=='_' && up[i][j+2]==' '&& up[i+1][j]==' ' && up[i+1][j+1]=='_' && up[i+1][j+2]=='|' && up[i+2][j]=='|' && up[i+2][j+1]=='_' && up[i+2][j+2]==' ')
-        {
-            upnum = upnum*10 + 2;
-        }
-        else if(up[i][j]==' '&& up[i][j+1]=='_' && up[i][j+2]==' '&& up[i+1][j]==' ' && up[i+1][j+1]=='_' && up[i+1][j+2]=='|' && up[i+2][j]==' ' && up[i+2][j+1]=='_' && up[i+2][j+2]=='|')
-        {
-            upnum = upnum*10 + 3;
-        }
-        else if(up[i][j]==' '&& up[i][j+1]==' ' && up[i][j+2]==' '&& up[i+1][j]=='|' && up[i+1][j+1]=='_' && up[i+1][j+2]=='|' && up[i+2][j]==' ' && up[i+2][j+1]==' ' && up[i+2][j+2]=='|')
-        {
-            upnum = upnum*10 + 4;
-        }
-        else if(up[i][j]==' '&& up[i][j+1]=='_' && up[i][j+2]==' '&& up[i+1][j]=='|' && up[i+1][j+1]=='_' && up[i+1][j+2]==' ' && up[i+2][j]==' ' && up[i+2][j+1]=='_' && up[i+2][j+2]=='|')
-        {
-            upnum = upnum*10 + 5;
-        }
-        else if(up[i][j]==' '&& up[i][j+1]=='_' && up[i][j+2]==' '&& up[i+1][j]=='|' && up[i+1][j+1]=='_' && up[i+1][j+2]==' ' && up[i+2][j]=='|' && up[i+2][j+1]=='_' && up[i+2][j+2]=='|')
-        {
-            upnum = upnum*10 + 6;
-        }
-        else if(up[i][j]==' '&& up[i][j+1]=='_' && up[i][j+2]==' '&& up[i+1][j]==' ' && up[i+1][j+1]==' ' && up[i+1][j+2]=='|' && up[i+2][j]==' ' && up[i+2][j+1]==' ' && up[i+2][j+2]=='|')
-        {
-            upnum = upnum*10 + 7;
-        }
-        else if(up[i][j]==' '&& up[i][j+1]=='_' && up[i][j+2]==' '&& up[i+1][j]=='|' && up[i+1][j+1]=='_' && up[i+1][j+2]=='|' && up[i+2][j]=='|' && up[i+2][j+1]=='_' && up[i+2][j+2]=='|')
-        {
-            upnum = upnum*10 + 8;
-        }
-        else if(up[i][j]==' '&& up[i][j+1]=='_' && up[i][j+2]==' '&& up[i+1][j]=='|' && up[i+1][j+1]=='_' && up[i+1][j+2]=='|' && up[i+2][j]==' ' && up[i+2][j+1]=='_' && up[i+2][j+2]=='|')
-        {
-            upnum = upnum*10 + 9;
-        }
-        else if(up[i][j]==' '&& up[i][j+1]=='_' && up[i][j+2]==' '&& up[i+1][j]=='|' && up[i+1][j+1]==' ' && up[i+1][j+2]=='|' && up[i+2][j]=='|' && up[i+2][j+1]=='_' && up[i+2][j+2]=='|')
-        {
-            upnum = upnum*10 + 3;
-        }
+        if(str=="       ||") a=1;
+        else if(str=="  |___ | ") a=2;
+        else if(str=="   ___ ||") a=3;
+        else if(str==" |  _  ||") a=4;
+        else if(str==" | ___  |") a=5;
+        else if(str==" ||___  |") a=6;
+        else if(str=="   _   ||") a=7;
+        else if(str==" ||___ ||") a=8;
+        else if(str==" | ___ ||") a=9;
+        else if(str==" ||_ _ ||") a=0;
+        x+=pow(10,(n-i-1))*a;
     }
-    for(j=0;j<n*3;j+=3)
+    for(i=0;i<m;i++)
     {
-        if(down[i][j]==' '&& down[i][j+1]==' ' && down[i][j+2]==' '&& down[i+1][j]==' ' && down[i+1][j+1]==' ' && down[i+1][j+2]=='|' && down[i+2][j]==' ' && down[i+2][j+1]==' ' && down[i+2][j+2]=='|')
+        string str="";
+        int a;
+        for(j=0;j<3;j++)
         {
-            downnum = downnum*10 + 1;
+            str+=s4[i*4+j];
+            str+=s5[i*4+j];
+            str+=s6[i*4+j];
         }
-        else if(down[i][j]==' '&& down[i][j+1]=='_' && down[i][j+2]==' '&& down[i+1][j]==' ' && down[i+1][j+1]=='_' && down[i+1][j+2]=='|' && down[i+2][j]=='|' && down[i+2][j+1]=='_' && down[i+2][j+2]==' ')
-        {
-            downnum = downnum*10 + 2;
-        }
-        else if(down[i][j]==' '&& down[i][j+1]=='_' && down[i][j+2]==' '&& down[i+1][j]==' ' && down[i+1][j+1]=='_' && down[i+1][j+2]=='|' && down[i+2][j]==' ' && down[i+2][j+1]=='_' && down[i+2][j+2]=='|')
-        {
-            downnum = downnum*10 + 3;
-        }
-        else if(down[i][j]==' '&& down[i][j+1]==' ' && down[i][j+2]==' '&& down[i+1][j]=='|' && down[i+1][j+1]=='_' && down[i+1][j+2]=='|' && down[i+2][j]==' ' && down[i+2][j+1]==' ' && down[i+2][j+2]=='|')
-        {
-            downnum = downnum*10 + 4;
-        }
-        else if(down[i][j]==' '&& down[i][j+1]=='_' && down[i][j+2]==' '&& down[i+1][j]=='|' && down[i+1][j+1]=='_' && down[i+1][j+2]==' ' && down[i+2][j]==' ' && down[i+2][j+1]=='_' && down[i+2][j+2]=='|')
-        {
-            downnum = downnum*10 + 5;
-        }
-        else if(down[i][j]==' '&& down[i][j+1]=='_' && down[i][j+2]==' '&& down[i+1][j]=='|' && down[i+1][j+1]=='_' && down[i+1][j+2]==' ' && down[i+2][j]=='|' && down[i+2][j+1]=='_' && down[i+2][j+2]=='|')
-        {
-            downnum = downnum*10 + 6;
-        }
-        else if(down[i][j]==' '&& down[i][j+1]=='_' && down[i][j+2]==' '&& down[i+1][j]==' ' && down[i+1][j+1]==' ' && down[i+1][j+2]=='|' && down[i+2][j]==' ' && down[i+2][j+1]==' ' && down[i+2][j+2]=='|')
-        {
-            downnum = downnum*10 + 7;
-        }
-        else if(down[i][j]==' '&& down[i][j+1]=='_' && down[i][j+2]==' '&& down[i+1][j]=='|' && down[i+1][j+1]=='_' && down[i+1][j+2]=='|' && down[i+2][j]=='|' && down[i+2][j+1]=='_' && down[i+2][j+2]=='|')
-        {
-            downnum = downnum*10 + 8;
-        }
-        else if(down[i][j]==' '&& down[i][j+1]=='_' && down[i][j+2]==' '&& down[i+1][j]=='|' && down[i+1][j+1]=='_' && down[i+1][j+2]=='|' && down[i+2][j]==' ' && down[i+2][j+1]=='_' && down[i+2][j+2]=='|')
-        {
-            downnum = downnum*10 + 9;
-        }
-        else if(down[i][j]==' '&& down[i][j+1]=='_' && down[i][j+2]==' '&& down[i+1][j]=='|' && down[i+1][j+1]==' ' && down[i+1][j+2]=='|' && down[i+2][j]=='|' && down[i+2][j+1]=='_' && down[i+2][j+2]=='|')
-        {
-            downnum = downnum*10 + 3;
-        }
+        if(str=="       ||") a=1;
+        else if(str=="  |___ | ") a=2;
+        else if(str=="   ___ ||") a=3;
+        else if(str==" |  _  ||") a=4;
+        else if(str==" | ___  |") a=5;
+        else if(str==" ||___  |") a=6;
+        else if(str=="   _   ||") a=7;
+        else if(str==" ||___ ||") a=8;
+        else if(str==" | ___ ||") a=9;
+        else if(str==" ||_ _ ||") a=0;
+        y+=pow(10,(m-i-1))*a;
     }
-    cout << downnum+upnum ;
+    cout << x+y;
 }
