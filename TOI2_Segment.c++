@@ -6,9 +6,9 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-#define int long long
+#define ll long long
 
-int n,m,x,y,i,j;
+ll n,m,x,y,i,j;
 string s1,s2,s3,s4,s5,s6;
 
 signed main()
@@ -26,7 +26,7 @@ signed main()
     for(i=0;i<n;i++)
     {
         string str="";
-        int a;
+        ll a;
         for(j=0;j<3;j++)
         {
             str+=s1[i*4+j];
@@ -48,7 +48,7 @@ signed main()
     for(i=0;i<m;i++)
     {
         string str="";
-        int a;
+        ll a;
         for(j=0;j<3;j++)
         {
             str+=s4[i*4+j];
