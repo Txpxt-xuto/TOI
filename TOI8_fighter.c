@@ -6,7 +6,8 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */ 
 #include <stdio.h>
-int main() {
+int main()
+{
     int n;
     scanf("%d", &n);
     int ca = 1, cb = 1, a = n, b = n, i = 0, t;
