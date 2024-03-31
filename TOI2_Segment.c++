@@ -8,11 +8,10 @@ CENTER: Home
 using namespace std;
 #define ll long long
 
-ll n,m,x,y,i,j;
-string s1,s2,s3,s4,s5,s6;
-
-signed main()
+int main()
 {
+    ll n,m,x,y,i,j;
+    string s1,s2,s3,s4,s5,s6;
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin >> n >> m;
