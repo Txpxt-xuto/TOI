@@ -7,7 +7,7 @@ CENTER: Home
 #include<bits/stdc++.h>
 using namespace std;
 string order;
-map<char,bool> mp;
+map<char,bool> probability;
 int main()
 {
     int n,m,i;
@@ -17,11 +17,11 @@ int main()
     {
         char c;
         cin>>c;
-        mp[c]=true;
+        probability[c]=true;
     }
     do
     {
-        if(!mp[order[0]])
+        if(!probability[order[0]])
         {
             for(auto c:order) cout<<c<<" ";
             cout<<"\n";
