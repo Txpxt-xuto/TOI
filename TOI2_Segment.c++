@@ -6,6 +6,7 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
+
 map<string, int> mp 
 {
     {"     |  |", 1}, 
@@ -19,8 +20,10 @@ map<string, int> mp
     {" _ |_| _|", 9}, 
     {" _ | ||_|", 0}
 };
+
 string a[3],b[3];
 long long suma,sumb;
+
 int main() 
 {
 	int n,m; cin >> n >> m;
