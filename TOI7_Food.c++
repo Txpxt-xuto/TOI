@@ -24,11 +24,8 @@ int main()
         if(!mp[order[0]])
         {
             for(auto c:order) cout<<c<<" ";
-                
             cout<<"\n";
         } 
     } 
     while (next_permutation(order.begin(),order.end()));
-    
-    return 0;
 }
