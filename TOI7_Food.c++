@@ -6,14 +6,14 @@ CENTER: Home
 */
 #include<bits/stdc++.h>
 using namespace std;
-string s;
+string order;
 map<char,bool> mp;
 int main()
 {
     int n,m;
     cin>>n>>m;
-    for(int i=1;i<=n;i++)
-        s.push_back(i+'0');
+    for(int i=1;i<=n;i++) order.push_back(i+'0');
+        
     for(int i=0;i<m;i++)
     {
         char c;
@@ -22,14 +22,14 @@ int main()
     }
     do
     {
-        if(!mp[s[0]])
+        if(!mp[order[0]])
         {
-            for(auto c:s)
+            for(auto c:order)
                 cout<<c<<" ";
             cout<<"\n";
         } 
     } 
-    while (next_permutation(s.begin(),s.end()));
+    while (next_permutation(order.begin(),order.end()));
     
     return 0;
 }
