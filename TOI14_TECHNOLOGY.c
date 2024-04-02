@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-int main()//TECHNOLOGY//
+int main()
 {
     int i,j,k,N,K,T,x,y,z=0;
     scanf("%d %d %d",&N,&K,&T);
