@@ -38,52 +38,53 @@ void dfs(int a){
         comIndex++;
     }
 }
-void solve(){
+void solve()
+{
     int a,b,i,j,c,d,e;
     cin>>a>>b;
     in = 1;
     comIndex = 1;
-    for(i=1;i<=b;i++){
+    for(i=1;i<=b;i++)
+    {
         go[i] = 0;
         com[i] = 0;
         inSt[i] = 0 ;
         lowIn[i] = 0;
     }
-    while(st.size()){
+    while(st.size())
+    {
         st.pop();
     }
-    for(i=1;i<=a;i++){
+    for(i=1;i<=a;i++)
+    {
         cin>>c>>d;
         space[i].first = c;
         space[i].second = d;
     }
-    for(i=0;i<b/2;i++){
+    for(i=0;i<b/2;i++)
+    {
         cin>>c>>d;
         np[c] = d;
         np[d] = c;
     }
-    for(i=1;i<=a;i++){
+    for(i=1;i<=a;i++)
+    {
         auto pa = space[i];
         adj[np[pa.first]].push_back(pa.second);
         adj[np[pa.second]].push_back(pa.first);
     }
-    for(i=1;i<=b;i++){
-        if(com[i]==0){
-            dfs(i);
-        }
+    for(i=1;i<=b;i++)
+    {
+        if(com[i]==0) dfs(i);
     }
-    // for(i=1;i<=b;i++){
-    //     cout<<i<<':'<<com[i]<<' ';
-    //     for(auto p : adj[i]){
-    //         cout<<p<<' ';
-    //     }
-    //     cout<<'\n';
-    // }
-    for(i=1;i<=b;i++){
+    for(i=1;i<=b;i++)
+    {
         adj[i].clear();
     }
-    for(i=1;i<=b;i++){
-        if(com[i] == com[np[i]]){
+    for(i=1;i<=b;i++)
+    {
+        if(com[i] == com[np[i]])
+        {
         cout<<'N';
         return ;
         }
@@ -96,7 +97,8 @@ int main()
     ios_base::sync_with_stdio(0);
     int a=5;
     int np[200000];
-    while(a--){
+    while(a--)
+    {
         solve();
     }
 }
