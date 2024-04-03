@@ -4,34 +4,35 @@ LANG: C
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include <stdio.h>
-#include <string.h>
+#include <bits/stdc++.h>
+using namespace std;
 int main()
 {
-    int N,M,i,j,k;
-    scanf("%d %d",&N,&M);
-    char Brick[N][M];
-    for(i=0;i<M;i++) scanf("%s",&Brick[i]);
+    int M,N,i,j,k,a;
+    cin >> M >> N;
+    vector<string> Brick(M);
+    for(i=0;i<M;i++) cin >> Brick[i];
     for(i=0;i<N;i++)
     {
-        scanf("%d",&k);
+        cin >> a;
         if(Brick[0][i]=='O') continue;
         j = 0;
-        while(1)
+        while(true)
         {
             if(Brick[j][i]=='O') break;
             j++;
             if(j>=M) break;
         }
-        int x = j-1,c = 0;
-        while(1)
+        k = j-1;
+        int c = 0;
+        while(true)
         {
-            if(c==k) break;
-            if(x<0) break;
-            Brick[x][i] = '#';
+            if(c==a) break;
+            if(k<0) break;
+            Brick[k][i] = '#';
             c++; 
-            x--;
+            k--;
         }
     }
-    for(i=0;i<M;i++) scanf("%s\n",Brick[i]);
+    for(i=0;i<M;i++) cout << Brick[i] << endl;
 }
