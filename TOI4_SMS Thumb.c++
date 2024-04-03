@@ -8,21 +8,26 @@ CENTER: Home
 #include<bits/stdc++.h>
 #include<string>
 using namespace std;
-
-int main(){
+int main()
+{
 	int n,s,m,i,r=0,c=0;
 	string table="ABCDEFGHIJKLMNOPQRSTUVWXYZ",ans="";
 	cin>>n;
-	for(i=0;i<n;i++){
-		if(i==0){
+	for(i=0;i<n;i++)
+    {
+		if(i==0)
+        {
 			cin>>s>>m;
 		}
-		else{
+		else
+        {
 			cin>>r>>c>>m;	
 		}
 		s=s+r+(3*c);
-		if(s==1){
-			while(m>0&&ans!=""){
+		if(s==1)
+        {
+			while(m>0&&ans!="")
+            {
 				ans.pop_back();
 				m--;
 			}		
@@ -33,5 +38,4 @@ int main(){
 	}
 	if(ans!="") cout<<ans;
 	else cout<<"null";
-	return 0;
 }
