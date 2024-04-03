@@ -22,12 +22,12 @@ void dfs(int a){
             dfs(np);
             lowIn[a] = min(lowIn[a],lowIn[np]);
         }
-        else if(inSt[np]){
-            lowIn[a] = min(lowIn[a],go[np]);
-        }
+        else if(inSt[np]) lowIn[a] = min(lowIn[a],go[np]);
     }
-    if(go[a] == lowIn[a]){
-        while(st.top()!=a){
+    if(go[a] == lowIn[a])
+    {
+        while(st.top()!=a)
+        {
             com[st.top()]=comIndex;
             inSt[st.top()] = 0;
             st.pop();
