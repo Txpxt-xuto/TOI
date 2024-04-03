@@ -15,14 +15,8 @@ int main()
 	cin>>n;
 	for(i=0;i<n;i++)
     {
-		if(i==0)
-        {
-			cin>>s>>m;
-		}
-		else
-        {
-			cin>>r>>c>>m;	
-		}
+		if(i==0) cin>>s>>m;
+		else cin>>r>>c>>m;	
 		s=s+r+(3*c);
 		if(s==1)
         {
