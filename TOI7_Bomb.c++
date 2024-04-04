@@ -30,11 +30,6 @@ int main()
                 k=j;
             }
         }
-        if(bombx[k]!=a && bomby[k]!=b)
-        {
-            cout << a << " " << b << endl;
-            bombx[k]=a;
-            bomby[k]=b;
-        }
+        
     }
 }
