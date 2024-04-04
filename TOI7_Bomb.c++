@@ -21,15 +21,7 @@ int main()
     {
         int a=x[i],b=y[i];
         k=i;
-        for(j=0;j<n;j++)
-        {
-            if(a<x[j] && b<y[j])
-            {
-                a=x[j];
-                b=y[j];
-                k=j;
-            }
-        }
+        
         
     }
 }
