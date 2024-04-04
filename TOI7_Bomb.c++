@@ -17,11 +17,5 @@ int main()
         bombx[i]=0;
         bomby[i]=0;
     }
-    for(i=0;i<n;i++)
-    {
-        int a=x[i],b=y[i];
-        k=i;
-        
-        
-    }
+    
 }
