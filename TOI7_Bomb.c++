@@ -26,11 +26,13 @@ int main(){
   }
   sort(v.begin(),v.end(),cmp);
   int mx=0;
-  for(auto [x,y]:v){
-    if(y>=mx){
-      mx=y;
-      cout << x << " " << y << "\n";
+    for(auto [x,y]:v)
+    {
+        if(y>=mx)
+        {
+            mx=y;
+            cout << x << " " << y << "\n";
+        }
     }
-  }
-  return 0;
+    return 0;
 }
