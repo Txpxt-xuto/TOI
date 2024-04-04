@@ -8,9 +8,9 @@ CENTER: Home
 #include<bits/stdc++.h>
 using namespace std;
 #define pii pair<int,int>
-
-bool cmp(pii a, pii b){
-    if(a.first==b.first){return a.second<b.second;}
+bool cmp(pii a, pii b)
+{
+    if(a.first==b.first) return a.second<b.second;
     return a.first>b.first;
 }
 int main()
