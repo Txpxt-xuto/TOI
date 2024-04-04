@@ -5,6 +5,8 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <stdio.h>
+double sum=0,fw[100001];
+int n;
 void createtree(double *fwtree,int n)
 {
     for(int i=1; i<=n; i++)
@@ -39,8 +41,6 @@ void update(double *fwtree,int n,int i,int val)
     int d=val-rangesum(fwtree,i,i);
     add(fwtree,n,i,d);
 }
-double sum=0,fw[100001];
-int n;
 void merge(int *arr,int l,int m,int r)
 {
     int n1=m-l+1;
