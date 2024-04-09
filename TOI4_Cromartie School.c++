@@ -11,17 +11,16 @@ int n,m;
 int sum[mxN][mxN];
 char mp[mxN][mxN];
 bool vis[mxN][mxN];
-int di[] = {0,-1,0,1} , dj[] = {1,0,-1,0};
-
-void bfs(int ssi,int ssj){
+int di[] = {0,-1,0,1} ,dj[] = {1,0,-1,0};
+void bfs(int ssi,int ssj)
+{
     queue<pair<int,int>> q;
     q.push({ssi,ssj});
-
-    while(!q.empty()){
+    while(!q.empty())
+    {
         int si = q.front().first;
         int sj = q.front().second;
         q.pop();
-
         if(vis[si][sj])continue;
         
         vis[si][sj] = 1;
