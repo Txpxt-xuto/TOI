@@ -38,7 +38,6 @@ int main()
             swap(a[x][y],a[x+1][y]);
             x++;
         }
-//cout<<"\n";cout<<co<<"\n";for(int i=0;i<n;i++){for(int j=0;j<m;j++){cout<<a[i][j]<<" ";}cout<<"\n";}cout<<"\n";
         qq.push(make_pair(x,y));
         while(!qq.empty())
         {
