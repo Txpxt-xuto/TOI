@@ -60,7 +60,7 @@ int main()
             {
                 x=q.front().first; y= q.front().second;
                 q.pop();
-                if(a[x][y]=='-')continue;
+                if(a[x][y]=='-') continue;
                 a[x][y]='-';
                 for(int i=0;i<4;i++)
                 {
@@ -89,7 +89,7 @@ int main()
     cout << co << "\n";
     for(int i=0;i<n;i++)
     {
-        for(int j=0;j<m;j++) cout<<a[i][j]<<" ";
+        for(int j=0;j<m;j++) cout << a[i][j] << " ";
         cout<<"\n";
     }
 }
