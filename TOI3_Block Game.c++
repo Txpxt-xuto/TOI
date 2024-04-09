@@ -101,13 +101,5 @@ int main()
             }
         }
     }
-    //ผลลัพธ์
-    for(i=0;i<m;i++)
-    {
-        for(j=0;j<n;j++)
-        {
-            cout << block[i][j] << " ";
-        }
-        cout << endl;
-    }
+
 }
