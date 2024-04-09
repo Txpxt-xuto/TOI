@@ -7,31 +7,37 @@ CENTER: Home
 #include<bits/stdc++.h>
 using namespace std;
 int dx[4] = {0,0,-1,1},dy[4] = {-1,1,0,0};
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0); cin.tie(0); 
     int n,m,k,x,y;
-    cin>>n>>m;
+    cin >> n >> m;
     char a[n][m],aa;
     for(int i=0;i<n;i++){for(int j=0;j<m;j++){cin>>a[i][j];}}
     int co=0;
     queue <pair<int,int> > q,qq;
-cin>>k;
-    while(k--){
-        cin>>x>>y>>aa;
-        if(x<0||y<0||x>=n||y>=m||a[x][y]=='#'||a[x][y]=='-'){co-=5; continue;}
-        if(aa=='L'){
-            if(y-1==-1 || a[x][y-1]!='-') {co-=5; continue;}
+    cin >> k;
+    while(k--)
+    {
+        cin >> x >> y >> aa;
+        if(x<0||y<0||x>=n||y>=m||a[x][y]=='#'||a[x][y]=='-') co-=5; continue;
+        if(aa=='L')
+        {
+            if(y-1==-1 || a[x][y-1]!='-') co-=5; continue;
             swap(a[x][y],a[x][y-1]);
             y--;
-        }else{
-            if(y+1==m || a[x][y+1]!='-') {co-=5; continue;}
+        }
+        else
+        {
+            if(y+1==m || a[x][y+1]!='-') co-=5; continue;
             swap(a[x][y],a[x][y+1]);
             y++;
         }
-            while (x+1<n && a[x+1][y]=='-'){
-                swap(a[x][y],a[x+1][y]);
-                x++;
-            }
+        while (x+1<n && a[x+1][y]=='-')
+        {
+            swap(a[x][y],a[x+1][y]);
+            x++;
+        }
 //cout<<"\n";cout<<co<<"\n";for(int i=0;i<n;i++){for(int j=0;j<m;j++){cout<<a[i][j]<<" ";}cout<<"\n";}cout<<"\n";
 qq.push(make_pair(x,y));
     while(!qq.empty()){
