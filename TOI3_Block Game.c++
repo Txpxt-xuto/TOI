@@ -58,33 +58,5 @@ int main()
             }
             block[a][b]='-';
         }
-        else if(codeLR[i]=='R' && block[a][b+1]!='#')//กรณีไปขวา
-        {
-            k=block[a][b+1];
-            block[a][b+1]=block[a][b];
-            block[a][b]=k;
-            b+=1;
-            //ระบบอักษรตก
-            while (block[a+1][b]=='-')
-            {
-                k=block[a][b];
-                block[a][b]=block[a+1][b];
-                block[a+1][b]=k;
-                a++;
-            }
-            //ระบบระเบิดอักษร
-            if(block[a][b]==block[a+1][b])
-            {
-                block[a+1][b]='-';
-            }
-            if(block[a][b]==block[a][b+1])
-            {
-                block[a][b+1]='-';
-            }
-            if(block[a][b]==block[a][b-1])
-            {
-                block[a][b-1]='-';
-            }
-            block[a][b]='-';
-        }
+        
 }
