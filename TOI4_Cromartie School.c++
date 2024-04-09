@@ -35,29 +35,19 @@ void bfs(int ssi,int ssj)
 }
 int main()
 {
-
-    cin>> m >> n;
-
-    for(int i=1;i<=n;i++){
+    cin >> m >> n;
+    for(int i=1;i<=n;i++)
+    {
         string s;
         cin>> s;
-        for(int j=1;j<=m;j++){
+        for(int j=1;j<=m;j++)
+        {
             mp[i][j] = s[j-1];
-
             int a = (s[j-1] == 'T');
             sum[i][j] = sum[i-1][j] + sum[i][j-1] - sum[i-1][j-1] + a;
         }
     }
-
-    // for(int i=1;i<=n;i++){
-    //     for(int j=1;j<=m;j++){
-    //         cout<< sum[i][j] << " ";
-    //     }
-    //     cout<<"\n";
-    // }
-
     int mx = 0 , wt = 1e5;
-
     for(int sz=min(n,m);sz>0;sz--){
         bool d = 0;
         for(int i=sz;i<=n;i++){
