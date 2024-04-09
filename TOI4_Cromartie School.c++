@@ -1,6 +1,6 @@
 /*
 TASK: SCHOOL
-LANG: C
+LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
