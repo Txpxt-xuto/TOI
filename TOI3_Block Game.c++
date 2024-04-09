@@ -40,8 +40,8 @@ int main()
         }
 //cout<<"\n";cout<<co<<"\n";for(int i=0;i<n;i++){for(int j=0;j<m;j++){cout<<a[i][j]<<" ";}cout<<"\n";}cout<<"\n";
         qq.push(make_pair(x,y));
-            while(!qq.empty())
-            {
+        while(!qq.empty())
+        {
             x=qq.front().first; y= qq.front().second;
             qq.pop();
             if(a[x][y]=='-') continue;
@@ -74,17 +74,17 @@ int main()
                     }
                 }
             }
-        for(int i=n-1;i>0;i--)
-        {
-            for(int j=0;j<m;j++)
+            for(int i=n-1;i>0;i--)
             {
-                if(a[i][j]=='-'&&a[i-1][j]!='#'&&a[i-1][j]!='-')
+                for(int j=0;j<m;j++)
                 {
-                    swap(a[i][j],a[i-1][j]); 
-                    qq.push(make_pair(i,j));
-                }
-            } 
-        }
+                    if(a[i][j]=='-'&&a[i-1][j]!='#'&&a[i-1][j]!='-')
+                    {
+                        swap(a[i][j],a[i-1][j]); 
+                        qq.push(make_pair(i,j));
+                    }
+                } 
+            }
         }
     }
     cout << co << "\n";
