@@ -67,12 +67,13 @@ int main()
                 {
                     int xx=x+dx[i],yy=y+dy[i];
                     if(xx<0||yy<0||xx==n||yy==m||a[xx][yy]=='#'||a[xx][yy]=='-') continue;
-                    if(c == a[xx][yy]){
-                        co+=5; q.push(make_pair(xx,yy));
+                    if(c == a[xx][yy])
+                    {
+                        co+=5; 
+                        q.push(make_pair(xx,yy));
                     }
                 }
             }
-    
         for(int i=n-1;i>0;i--)
         {
             for(int j=0;j<m;j++)
