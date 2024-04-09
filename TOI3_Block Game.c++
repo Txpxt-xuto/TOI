@@ -39,44 +39,57 @@ int main()
             x++;
         }
 //cout<<"\n";cout<<co<<"\n";for(int i=0;i<n;i++){for(int j=0;j<m;j++){cout<<a[i][j]<<" ";}cout<<"\n";}cout<<"\n";
-qq.push(make_pair(x,y));
-    while(!qq.empty()){
+        qq.push(make_pair(x,y));
+            while(!qq.empty())
+            {
             x=qq.front().first; y= qq.front().second;
             qq.pop();
             if(a[x][y]=='-') continue;
             char c = a[x][y];
-            for(int i=0;i<4;i++){
+            for(int i=0;i<4;i++)
+            {
                 int xx=x+dx[i],yy=y+dy[i];
-                if(xx<0||yy<0||xx==n||yy==m||a[xx][yy]=='#'||a[xx][yy]=='-')continue;
-                if(c == a[xx][yy]){
-                    co+=5; q.push(make_pair(xx,yy));
+                if(xx<0||yy<0||xx==n||yy==m||a[xx][yy]=='#'||a[xx][yy]=='-') continue;
+                if(c == a[xx][yy])
+                {
+                    co+=5; 
+                    q.push(make_pair(xx,yy));
                 }
-            } if(!q.empty()) {co+=5; a[x][y]='-';}
-
-            while (!q.empty()){
+            } 
+            if(!q.empty()) co+=5; a[x][y]='-';
+            while (!q.empty())
+            {
                 x=q.front().first; y= q.front().second;
                 q.pop();
                 if(a[x][y]=='-')continue;
                 a[x][y]='-';
-                for(int i=0;i<4;i++){
+                for(int i=0;i<4;i++)
+                {
                     int xx=x+dx[i],yy=y+dy[i];
-                    if(xx<0||yy<0||xx==n||yy==m||a[xx][yy]=='#'||a[xx][yy]=='-')continue;
+                    if(xx<0||yy<0||xx==n||yy==m||a[xx][yy]=='#'||a[xx][yy]=='-') continue;
                     if(c == a[xx][yy]){
                         co+=5; q.push(make_pair(xx,yy));
                     }
                 }
             }
     
-        for(int i=n-1;i>0;i--){
-            for(int j=0;j<m;j++){
-                if(a[i][j]=='-'&&a[i-1][j]!='#'&&a[i-1][j]!='-'){swap(a[i][j],a[i-1][j]); qq.push(make_pair(i,j));}
-            } }
+        for(int i=n-1;i>0;i--)
+        {
+            for(int j=0;j<m;j++)
+            {
+                if(a[i][j]=='-'&&a[i-1][j]!='#'&&a[i-1][j]!='-')
+                {
+                    swap(a[i][j],a[i-1][j]); 
+                    qq.push(make_pair(i,j));
+                }
+            } 
+        }
         }
     }
-    cout<<co<<"\n";
-    for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++){
-            cout<<a[i][j]<<" ";
-        }cout<<"\n";
+    cout << co << "\n";
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++) cout<<a[i][j]<<" ";
+        cout<<"\n";
     }
 }
