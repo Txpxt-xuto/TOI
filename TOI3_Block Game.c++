@@ -87,19 +87,4 @@ int main()
             }
             block[a][b]='-';
         }
-        //ระบบอักษรตกของอักษรอื่นๆ
-        for(o=0;o<m;o++)
-        {
-            for(j=0;j<n;j++)
-            {
-                if(block[o][j]!='#' && block[o][j]!='-' && block[o+1][j]=='-')
-                {
-                    k=block[o][j];
-                    block[o][j]=block[o+1][j];
-                    block[o+1][j]=k;
-                }
-            }
-        }
-    }
-
 }
