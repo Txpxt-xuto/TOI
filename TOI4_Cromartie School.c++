@@ -21,23 +21,20 @@ void bfs(int ssi,int ssj)
         int si = q.front().first;
         int sj = q.front().second;
         q.pop();
-        if(vis[si][sj])continue;
-        
+        if(vis[si][sj]) continue;
         vis[si][sj] = 1;
-
-        for(int k=0;k<4;k++){
+        for(int k=0;k<4;k++)
+        {
             int ni = si + di[k];
             int nj = sj + dj[k];
-            
-            if(ni<=0 || ni>n || nj<=0 || nj>m)continue;
-            if(vis[ni][nj] || mp[ni][nj]!='P')continue;
-
+            if(ni<=0 || ni>n || nj<=0 || nj>m)  continue;
+            if(vis[ni][nj] || mp[ni][nj]!='P')  continue;
             q.push({ni,nj});
         }
     }
 }
-
-int main(){
+int main()
+{
 
     cin>> m >> n;
 
