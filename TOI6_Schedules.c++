@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 bool ans[500009];
 vector<tuple<int,int,int>> e;
-
 int main()
 {
 	ios_base::sync_with_stdio(false); cin.tie(NULL);
