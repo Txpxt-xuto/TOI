@@ -5,10 +5,11 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include<bits/stdc++.h>
-using namespace std ;
+using namespace std;
 int main()
 {
-	ios_base::sync_with_stdio(false) ; cin.tie(NULL) ;
+	ios_base::sync_with_stdio(false); 
+    cin.tie(NULL) ;
 	int num,i,j;
 	for(i=1;i<=5;i++)
     {
