@@ -11,7 +11,7 @@ void recer(int x,string s)
 {
     if(x==n)
     {
-        cout<<s<<"E\n";
+        cout << s << "E\n";
         return;
     }
     if(x<n) recer(x+1,s+"--\n");
@@ -20,6 +20,6 @@ void recer(int x,string s)
 int main()
 {
     cin.tie(nullptr)->sync_with_stdio(0);
-    cin>>n;
+    cin >> n;
     recer(0,"");
 }
