@@ -7,17 +7,15 @@ vector<tuple<int,int,int>> e;
 int main()
 {
 	ios_base::sync_with_stdio(false); cin.tie(NULL);
-	int n, k, m;
+	int n,k,m,cnt=0,s,f;
 	cin >> n >> k >> m;
 	for (int i = 1; i <= n; i++)
     {
-		int s, f;
 		cin >> s >> f;
 		e.push_back({s, 1, i});
 		e.push_back({f+1, -1, i});
 	}
 	sort(e.begin(), e.end());
-	int cnt=0;
 	for (auto [t,status,i] : e)
     {
 		if (status == 1 && cnt < k)
