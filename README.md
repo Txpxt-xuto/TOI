@@ -1,4 +1,4 @@
-![image](https://i.imgur.com/vzYVGZP.jpg)
+![image](https://imgur.com/0mhIxOk.png)
 # TOI 🏆
 Project for TOI problem solving in C,C++ or Python language.
 By Tapat Toungsakul (auto)
