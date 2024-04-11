@@ -17,7 +17,6 @@ void recer(int x,string s)
     if(x<n) recer(x+1,s+"--\n");
     if(x+1<n) recer(x+2,s+"||\n");
 }
-
 int main()
 {
     cin.tie(nullptr)->sync_with_stdio(0);
