@@ -4,51 +4,48 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define endl '\n'
-#define MOD 1e9 + 7
-int m,n,i,j,k,l;
-vector<vector<double> > a;
-double mn = INT_MAX;
-void solve(vector<vector<double> > b,int lv,double val)
+int i,j,m,n;
+double a[5][5]={},mini=INT_MAX;
+bool vis[10]={};
+void land(int deep,double cur)
 {
-    if(lv==m*n)
-    { 
-        if(val<mn) mn = val; return; 
-    }
-    vector<vector<double> > c;
-    c = b;
-    for(i=0;i<m;i++) for(j=0;j<n;j++)
+    if(deep==m*n)
     {
-        if(b[i][j]==0) continue;
-        int x = i,y = j;
-        for(k=-1;k<=1;k++) for(l=-1;l<=1;l++)
-        {
-            if(k==0 and l==0) continue;
-            int ax = x+k,ay = y+l;
-            if(ax<0 or ax>=m or ay<0 or ay>=n) continue;
-            if(b[ax][ay]==0) continue;
-            b[ax][ay]+=(b[i][j]/10.0);
-        }
-        double tmp = b[i][j];
-        b[i][j] = 0;
-        solve(b,lv+1,val+tmp);
-        b = c;
+        mini=min(cur,mini);
+        return;
+    }
+    for(int i=0;i<m*n;i++)
+    {
+        if(vis[i]) continue;
+        int r=(i/n)+1,c=(i%n)+1;
+        double add=a[r][c]*0.1;
+        vis[i]=1;
+        a[r+1][c]+=add;
+        a[r-1][c]+=add;
+        a[r][c+1]+=add;
+        a[r][c-1]+=add;
+        a[r+1][c-1]+=add;
+        a[r+1][c+1]+=add;
+        a[r-1][c-1]+=add;
+        a[r-1][c+1]+=add;
+        land(deep+1,cur+a[r][c]);
+        vis[i]=0;
+        a[r+1][c]-=add;
+        a[r-1][c]-=add;
+        a[r][c+1]-=add;
+        a[r][c-1]-=add;
+        a[r+1][c-1]-=add;
+        a[r+1][c+1]-=add;
+        a[r-1][c-1]-=add;
+        a[r-1][c+1]-=add;
     }
 }
 int main()
 {
-    ios_base::sync_with_stdio(0); 
-    cin.tie(0);
-    cin >> m >> n;
-    a.resize(m);
-    for(i=0;i<m;i++)
-    {
-        a[i].resize(n);
-        for(j=0;j<n;j++) cin >> a[i][j];
-    }
-    solve(a,0,0.0);
-    cout << fixed;
-    cout << setprecision(2) << mn;
+    cin>>m>>n;
+    for(i=1;i<=m;i++)for(j=1;j<=n;j++) cin>>a[i][j];
+    land(0,0);
+    cout<<fixed<<setprecision(2)<<mini;
 }
