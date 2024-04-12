@@ -6,21 +6,22 @@ CENTER: Home
 */ 
 #include <bits/stdc++.h>
 using namespace std;
-int main()
-{
-    int n,m,k,l,i,j,itr=0,cnt=0,x;
+int main(){
+    cin.tie(nullptr)->sync_with_stdio(false);
+    int n,m,k,l,x;
     cin >> n >> m >> k >> l;
     vector<int> cannon(n);
     for(int &x:cannon) cin >> x;
     while(k--)
     {
+        int itr=0,cnt=0;
         for(int i=0;i<m;i++)
         {
-            cin >> x;
-            while(itr<n&&cannon[itr]<x-l) itr++;
-            while(itr<n&&cannon[itr]<=x+l) cnt++, itr++;
+            cin>>x;
+            while(itr<n&&cannon[itr]<x-l)itr++;
+            while(itr<n&&cannon[itr]<=x+l)cnt++,itr++;
         }
-        cout<<cnt<<'\n';
+        cout << cnt << '\n';
     }
     return 0;
 }
