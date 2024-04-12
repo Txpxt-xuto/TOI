@@ -19,8 +19,8 @@ void land(int deep,double cur)
     for(int i=0;i<m*n;i++)
     {
         if(vis[i]) continue;
-        int r=(i/n)+1,c=(i%n)+1;
-        double add=a[r][c]*0.1;
+        int r = (i/n)+1,c = (i%n)+1;
+        double add = a[r][c]*0.1;
         vis[i]=1;
         a[r+1][c]+=add;
         a[r-1][c]+=add;
@@ -47,5 +47,5 @@ int main()
     cin>>m>>n;
     for(i=1;i<=m;i++)for(j=1;j<=n;j++) cin>>a[i][j];
     land(0,0);
-    cout<<fixed<<setprecision(2)<<mini;
+    cout << fixed<<setprecision(2) << mini;
 }
