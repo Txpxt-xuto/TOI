@@ -4,18 +4,17 @@ using namespace std;
 #define s second
 int main()
 {
-    int n,x,y;
+    int n,x,y,z,i,j;
     cin >> n >> x >> y;
     vector<vector<int>> dist(n+2,vector<int>(n+2,-6));
     vector<vector<int>> vis(n+2,vector<int>(n+2,0));
     queue<pair<pair<int,int>,int>> q;
     int row[]={0,-1,0,1},collumn[]={-1,0,1,0};
-    for(int i=1;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
-        for(int j=1;j<=n;j++)
+        for(j=1;j<=n;j++)
         {
-            int z;
-            cin>>z;
+            cin >> z;
             if(z!=100)dist[i][j]=z;
         }
     }
@@ -27,7 +26,7 @@ int main()
         int cx=q.front().f.s;
         int cattempt=q.front().s;
         q.pop();
-        for(int i=0;i<=3;i++)
+        for(i=0;i<=3;i++)
         {
             int ny=cy+row[i];
             int nx=cx+collumn[i];
