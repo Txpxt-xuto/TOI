@@ -6,27 +6,21 @@ CENTER: Home
 */ 
 #include <bits/stdc++.h>
 using namespace std;
-int main() 
+int main()
 {
-    int N,M,K,L;
-    int i,j,Cannons[N+1],Fort[M+1][K+1];
-    cin >> N >> M >> K >> L;
-    for(i=1;i<N;i++) cin >> Cannons[i];
-    for(i=1;i<M;i++)
+    int n,x,m,k,l;cin>>n>>m>>k>>l;
+    vector<int> cannon(n);
+    for(int &x:cannon) cin>>x;
+    while(k--)
     {
-        for(j=1;j<K;j++) 
+        int itr=0,cnt=0;
+        for(int i=0;i<m;i++)
         {
-            cin >> Fort[i][j];
+            cin>>x;
+            while(itr<n&&cannon[itr]<x-l) itr++;
+            while(itr<n&&cannon[itr]<=x+l) cnt++, itr++;
         }
+        cout<<cnt<<'\n';
     }
-    for(i=1;i<N;i++) cout << Cannons[i];
-    cout << endl;
-    for(i=1;i<M;i++)
-    {
-        for(j=1;j<K;j++) 
-        {
-            cout << Fort[i][j];
-        }
-        cout << endl;
-    }
+    return 0;
 }
