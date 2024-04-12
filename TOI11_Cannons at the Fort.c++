@@ -18,4 +18,14 @@ int main()
             cin >> Fort[i][j];
         }
     }
+    for(i=1;i<N;i++) cout << Cannons[i];
+    cout << endl;
+    for(i=1;i<N;i++)
+    {
+        for(j=1;j<N;j++) 
+        {
+            cout << Fort[i][j];
+        }
+        cout << endl;
+    }
 }
