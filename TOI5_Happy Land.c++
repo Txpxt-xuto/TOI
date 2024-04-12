@@ -8,21 +8,22 @@ CENTER: Home
 using namespace std;
 #define endl '\n'
 #define MOD 1e9 + 7
-
-int m,n;
+int m,n,i,j,k,l;
 vector<vector<double> > a;
 double mn = INT_MAX;
-
 void solve(vector<vector<double> > b,int lv,double val)
 {
-    if(lv==m*n){ if(val<mn) mn = val; return; }
+    if(lv==m*n)
+    { 
+        if(val<mn) mn = val; return; 
+    }
     vector<vector<double> > c;
     c = b;
-    for(int i = 0;i < m;i++) for(int j = 0;j < n;j++)
+    for(i=0;i<m;i++) for(j=0;j<n;j++)
     {
         if(b[i][j]==0) continue;
         int x = i,y = j;
-        for(int k = -1;k <= 1;k++) for(int l = -1;l <= 1;l++)
+        for(k=-1;k<=1;k++) for(l=-1;l<=1;l++)
         {
             if(k==0 and l==0) continue;
             int ax = x+k,ay = y+l;
@@ -36,23 +37,18 @@ void solve(vector<vector<double> > b,int lv,double val)
         b = c;
     }
 }
-
 int main()
 {
-    ios_base::sync_with_stdio(0); cin.tie(0);
-
+    ios_base::sync_with_stdio(0); 
+    cin.tie(0);
     cin >> m >> n;
-
     a.resize(m);
-
-    for(int i = 0;i < m;i++)
+    for(i=0;i<m;i++)
     {
         a[i].resize(n);
-        for(int j = 0;j < n;j++) cin >> a[i][j];
+        for(j=0;j<n;j++) cin >> a[i][j];
     }
-
     solve(a,0,0.0);
-
     cout << fixed;
     cout << setprecision(2) << mn;
 }
