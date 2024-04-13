@@ -7,7 +7,7 @@ CENTER: Home
 #include<bits/stdc++.h>
 using namespace std;
 const int mxN = 70;
-int n,m;
+int n,m,a,b,i,j,sz;
 int sum[mxN][mxN];
 char mp[mxN][mxN];
 bool vis[mxN][mxN];
@@ -36,11 +36,11 @@ void bfs(int ssi,int ssj)
 int main()
 {
     cin >> m >> n;
-    for(int i=1;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
         string s;
         cin>> s;
-        for(int j=1;j<=m;j++)
+        for(j=1;j<=m;j++)
         {
             mp[i][j] = s[j-1];
             int a = (s[j-1] == 'T');
@@ -48,12 +48,12 @@ int main()
         }
     }
     int mx = 0 , wt = 1e5;
-    for(int sz=min(n,m);sz>0;sz--)
+    for(sz=min(n,m);sz>0;sz--)
     {
         bool d = 0;
-        for(int i=sz;i<=n;i++)
+        for(i=sz;i<=n;i++)
         {
-            for(int j=sz;j<=m;j++)
+            for(j=sz;j<=m;j++)
             {
                 int tmp = sum[i][j] - sum[i-sz][j] - sum[i][j-sz] + sum[i-sz][j-sz];
                 if(tmp == 0)
@@ -61,9 +61,9 @@ int main()
                     mx = sz;
                     int cnt = 0;
                     memset(vis,0,sizeof(vis));
-                    for(int a=i-sz+1;a<=i;a++)
+                    for(a=i-sz+1;a<=i;a++)
                     {
-                        for(int b=j-sz+1;b<=j;b++)
+                        for(b=j-sz+1;b<=j;b++)
                         {
                             if(!vis[a][b] && mp[a][b]=='P')
                             {
