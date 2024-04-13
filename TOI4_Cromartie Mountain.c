@@ -1,3 +1,9 @@
+/*
+TASK: MOUNTAIN
+LANG: C++
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/
 #include <stdio.h>
 int main() 
 {
