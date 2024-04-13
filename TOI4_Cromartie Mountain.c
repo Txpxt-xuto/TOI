@@ -16,7 +16,7 @@ int main()
     for(i=0;i<n;i++) 
     {
         int m = s[i], p = hei-1;
-        while (m <= s[i] + h[i] - 1) 
+        while(m <= s[i] + h[i] - 1) 
         {
             if (map[p][m] == '.') map[p][m] = '/';
             else if (map[p][m] == '\\') map[p][m] = 'v';
@@ -25,7 +25,7 @@ int main()
             p--;
         }
         p++;
-        while (m <= s[i] + 2*(h[i]) - 1) 
+        while(m <= s[i] + 2*(h[i]) - 1) 
         {
             if (map[p][m] == '.') map[p][m] = '\\';
             else if (map[p][m] == '/') map[p][m] = 'v';
@@ -34,9 +34,9 @@ int main()
             p++;
         }
     }
-    for (i = 0; i < hei; i++) 
+    for(i=0;i<hei;i++) 
     {
-        for (j = 0; j < len; j++) printf("%c", map[i][j]);
+        for(j=0;j<len;j++) printf("%c", map[i][j]);
         printf("\n");
     }
 }
