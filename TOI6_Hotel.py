@@ -1,6 +1,6 @@
 """
 TASK: hotel
-LANG: C
+LANG: Python
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 """
