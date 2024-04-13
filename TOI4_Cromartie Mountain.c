@@ -12,7 +12,8 @@ int main() {
     }
     len++;
     char map[hei][len];
-    for (int i = 0; i < hei; i++) {
+    for (int i = 0; i < hei; i++) 
+    {
         for (int j = 0; j < len; j++) map[i][j] = '.';
     }
     for (int i = 0; i < n; i++) {
