@@ -31,8 +31,7 @@ int main()
             p++;
         }
     }
-    for (int i = 0; i < hei; i++) {
-        for (int j = 0; j < len; j++) printf("%c", map[i][j]);
+    for (int i = 0; i < hei; i++) for (int j = 0; j < len; j++) printf("%c", map[i][j]);
         printf("\n");
     }
 }
