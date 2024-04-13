@@ -1,5 +1,5 @@
 """
-TASK: hotel
+TASK: TEMP
 LANG: Python
 AUTHOR: Tapat Toungsakul
 CENTER: Home
