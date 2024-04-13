@@ -1,8 +1,8 @@
 /*
 TASK: MOUNTAIN
 LANG: C++
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
+AUTHOR: Tapat Toungsakul
+CENTER: Home
 */
 #include <stdio.h>
 int main() 
