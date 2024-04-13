@@ -6,12 +6,14 @@ CENTER: Home
 */
 #include<bits/stdc++.h>
 using namespace std;
+
 const int mxN = 70;
 int n,m,a,b,i,j,sz;
 int sum[mxN][mxN];
 char mp[mxN][mxN];
 bool vis[mxN][mxN];
 int di[] = {0,-1,0,1} ,dj[] = {1,0,-1,0};
+
 void bfs(int ssi,int ssj)
 {
     queue<pair<int,int>> q;
@@ -33,6 +35,7 @@ void bfs(int ssi,int ssj)
         }
     }
 }
+
 int main()
 {
     cin >> m >> n;
