@@ -8,9 +8,9 @@ CENTER: Home
 int main() 
 {
     int n,i,j;
-    char map[hei][len];
     scanf("%d",&n);
     int len = 0, hei = 0, s[n], h[n];
+    char map[hei][len];
     for(i=0;i<n;i++) {
         scanf("%d%d",&s[i],&h[i]);
         s[i]--;
