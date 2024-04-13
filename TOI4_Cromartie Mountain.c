@@ -1,6 +1,6 @@
 #include <stdio.h>
-
-int main() {
+int main() 
+{
     int n;
     scanf("%d", &n);
     int len = 0, hei = 0, s[n], h[n];
@@ -32,9 +32,7 @@ int main() {
         }
     }
     for (int i = 0; i < hei; i++) {
-        for (int j = 0; j < len; j++) {
-            printf("%c", map[i][j]);
-        }
+        for (int j = 0; j < len; j++) printf("%c", map[i][j]);
         printf("\n");
     }
 }
