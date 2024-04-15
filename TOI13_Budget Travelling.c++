@@ -71,4 +71,3 @@ int main ()
         cout << ans << " " << ans2 << " " << ans3;
     }
 }
-
