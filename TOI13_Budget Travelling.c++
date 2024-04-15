@@ -13,6 +13,18 @@ priority_queue<pair<int,int>> pq;
 
 int main ()
 {
+    cin>>n>>m;
+    cin>>x>>y>>z;
+    for(i=1;i<=m;i++)
+    {
+        cin>>a>>b>>w;
+        v[a].push_back({w,b});
+        v[b].push_back({w,a});
+    }
+    for(i=0;i<n;i++) dis1[i]=1e9;
+    for(i=0;i<n;i++) dis2[i]=1e9;
+    dis1[x]=0;
+    pq.push({0,x});
     
 }
 
