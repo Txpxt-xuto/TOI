@@ -55,13 +55,13 @@ int main ()
             }
         }
     }
-    if(dis1[y]<=z) cout<<y<<" "<<dis1[y]<<" 0";
+    if(dis1[y]<=z) cout << y << " " << dis1[y] << " 0";
     else
     {
         int ans,ans2,ans3=1e9;
         for(i=0;i<n;i++)
         {
-            if(dis1[i]<=z&&dis2[i]<ans3)
+            if(dis1[i]<=z && dis2[i]<ans3)
             {
                 ans=i;
                 ans2=dis1[i];
