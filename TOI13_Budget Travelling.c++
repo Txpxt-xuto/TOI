@@ -25,6 +25,20 @@ int main ()
     for(i=0;i<n;i++) dis2[i]=1e9;
     dis1[x]=0;
     pq.push({0,x});
+    while(!pq.empty())
+    {
+        cost=-pq.top().first;
+        ver=pq.top().second;
+        pq.pop();
+        for(i=0;i<v[ver].size();i++)
+        {
+            if(dis1[v[ver][i].second]>dis1[ver]+v[ver][i].first)
+            {
+                dis1[v[ver][i].second]=dis1[ver]+v[ver][i].first;
+                pq.push({-dis1[v[ver][i].second],v[ver][i].second});
+            }
+        }
+    }
     
 }
 
