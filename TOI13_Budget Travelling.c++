@@ -13,8 +13,8 @@ priority_queue<pair<int,int>> pq;
 
 int main ()
 {
-    cin>>n>>m;
-    cin>>x>>y>>z;
+    cin >> n >> m;
+    cin >> x >> y >> z;
     for(i=1;i<=m;i++)
     {
         cin>>a>>b>>w;
