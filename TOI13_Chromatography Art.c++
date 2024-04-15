@@ -21,12 +21,12 @@ int fw[N]{0};
 
 void add(int i,int amt)
 {
-    for(;i<N;i+=i&-i)fw[i]+=amt;
+    for(;i<N;i+=i&-i) fw[i]+=amt;
 }
 
 int qr(int i,int res=0)
 {
-    for(;i;i-=i&-i)res+=fw[i];
+    for(;i;i-=i&-i) res+=fw[i];
     return res;
 }
 
@@ -36,9 +36,10 @@ int getl(int t)
     while(l<r)
     {
         int m=(l+r)>>1;
-        if(qr(m)<=t)r=m;
+        if(qr(m)<=t) r=m;
         else l=m+1;
-    }return l;
+    }
+    return l;
 }
 
 int getr(int t)
@@ -47,9 +48,10 @@ int getr(int t)
     while(l<r)
     {
         int m=(l+r)>>1;
-        if(qr(m)<t)r=m;
+        if(qr(m)<t) r=m;
         else l=m+1;
-    }return l;
+    }
+    return l;
 }
 
 int main()
