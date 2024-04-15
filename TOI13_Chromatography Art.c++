@@ -33,7 +33,8 @@ int qr(int i,int res=0)
 int getl(int t)
 {
     int l=1,r=N-1;
-    while(l<r){
+    while(l<r)
+    {
         int m=(l+r)>>1;
         if(qr(m)<=t)r=m;
         else l=m+1;
@@ -43,7 +44,8 @@ int getl(int t)
 int getr(int t)
 {
     int l=1,r=N-1;
-    while(l<r){
+    while(l<r)
+    {
         int m=(l+r)>>1;
         if(qr(m)<t)r=m;
         else l=m+1;
@@ -53,7 +55,8 @@ int getr(int t)
 int main()
 {
     ios_base::sync_with_stdio(0);cin.tie(0);
-    int n,t;cin>>n>>t;
+    int n,t;
+    cin >> n >> t;
     vector<pair<int,pii>>v;
     for(int i=0;i<n;i++)
     {
