@@ -68,7 +68,7 @@ int main ()
                 ans3=dis2[i];
             }
         }
-        cout<<ans<<" "<<ans2<<" "<<ans3;
+        cout << ans << " " << ans2 << " " << ans3;
     }
 }
 
