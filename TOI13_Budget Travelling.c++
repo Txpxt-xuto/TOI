@@ -39,6 +39,22 @@ int main ()
             }
         }
     }
+    dis2[y]=0;
+    pq.push({0,y});
+    while(!pq.empty())
+    {
+        cost=-pq.top().first;
+        ver=pq.top().second;
+        pq.pop();
+        for(i=0;i<v[ver].size();i++)
+        {
+            if(dis2[v[ver][i].second]>dis2[ver]+v[ver][i].first)
+            {
+                dis2[v[ver][i].second]=dis2[ver]+v[ver][i].first;
+                pq.push({-dis2[v[ver][i].second],v[ver][i].second});
+            }
+        }
+    }
     
 }
 
