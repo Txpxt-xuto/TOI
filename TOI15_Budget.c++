@@ -1,7 +1,13 @@
+/*
+TASK: budget.cpp
+LANG: C++
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/
 #include<bits/stdc++.h>
-
 using namespace std;
 vector<int> memo;
+
 int find(int n) 
 {
     if (memo[n] == n) return n;
