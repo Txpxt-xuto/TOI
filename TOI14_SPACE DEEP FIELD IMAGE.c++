@@ -1,10 +1,8 @@
 #include<bits/stdc++.h>      
 using namespace std;
-int n,m,i,j;
+int n,m,i,j,sqa,dia,tri;
 char a[1001][1001];
-int sqa,dia,tri;
 queue< pair<int,int> > q;
-
 int main()
 {
     ios::sync_with_stdio(0);cin.tie(0);
