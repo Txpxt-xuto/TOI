@@ -55,18 +55,13 @@ int main(){
                 }
                 int h=maxx-minx+1;
                 int w=maxy-miny+1;
-                if(h==w && h*w==cnt){// square
-                sqa+=1;
-                    }
-                    else if(h==w && h*w!=cnt){//diamond
-                dia+=1;
-                }
+                if(h==w && h*w==cnt) sqa+=1;
+                else if(h==w && h*w!=cnt) dia+=1;
                 else tri+=1;
-      }//if
-      
-    }//for j
-  }//for i
-  cout<<sqa<<" "<<dia<<" "<<tri;
-  
-  return 0;  
+            }
+        }
+    }
+    
+    cout << sqa << " " << dia << " " << tri;
+    return 0;  
 }
