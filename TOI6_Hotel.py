@@ -6,6 +6,7 @@ CENTER: Home
 """
 n=int(input())
 sum=0
+
 while n>0 :
     if n>=9 :
         n-=15
@@ -19,4 +20,5 @@ while n>0 :
     elif n==1 :
         n-=1
         sum=sum+500
+
 print(sum)
