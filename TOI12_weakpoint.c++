@@ -5,10 +5,11 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <bits/stdc++.h>
+using namespace std;
+
 #define f first
 #define s second
 #define MAXN 500005
-using namespace std;
 vector<int> graph[MAXN];
 int visited[MAXN],cycroot,maxch=0,maxv=1000000,found=0;
 
