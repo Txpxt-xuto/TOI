@@ -1,15 +1,16 @@
 #include<bits/stdc++.h>      
 using namespace std;
-int n,m;
+int n,m,i,j;
 char a[1001][1001];
 int sqa,dia,tri;
 queue< pair<int,int> > q;
 
-int main(){
+int main()
+{
     ios::sync_with_stdio(0);cin.tie(0);
     cin>>n>>m;
-    for(int i=0; i<m;i++) for(int j=0;j<n;j++) cin>>a[i][j];
-    for(int i=0; i<m;i++)
+    for(i=0;i<m;i++){ for(j=0;j<n;j++) cin>>a[i][j];} 
+    for(i=0;i<m;i++)
     {
         for(int j=0;j<n;j++)
         {
@@ -61,7 +62,6 @@ int main(){
             }
         }
     }
-    
     cout << sqa << " " << dia << " " << tri;
     return 0;  
 }
