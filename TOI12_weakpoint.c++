@@ -1,4 +1,9 @@
-
+/*
+TASK: weakpoint.cpp
+LANG: C++
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/
 #include <bits/stdc++.h>
 #define f first
 #define s second
