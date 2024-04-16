@@ -11,10 +11,13 @@ pair<int,int> dfs(int i,int prev)
 {
     int sum=0,ignore=0,cycsum=0;
     visited[i]=1;
-    for(auto v: graph[i]){
+    for(auto v: graph[i])
+    {
         if(v==prev) continue;
-        if(visited[v]){
-            if(!found){
+        if(visited[v])
+        {
+            if(!found)
+            {
                 cycroot=v;
                 ignore=1;
                 found=1;
@@ -23,12 +26,14 @@ pair<int,int> dfs(int i,int prev)
         }
         pair<int,int> ch=dfs(v,i);
         sum+=ch.f;
-        if(ch.s){
+        if(ch.s)
+        {
             ignore=1;
             cycsum=ch.f;
         }
     }
-    if(prev && (maxch<sum-cycsum || (maxch==sum-cycsum && maxv>i))){
+    if(prev && (maxch<sum-cycsum || (maxch==sum-cycsum && maxv>i)))
+    {
         maxch=sum-cycsum;
         maxv=i;
     }
