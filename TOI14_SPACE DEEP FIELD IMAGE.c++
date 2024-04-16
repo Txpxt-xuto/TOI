@@ -6,24 +6,21 @@ int sqa,dia,tri;
 queue< pair<int,int> > q;
 
 int main(){
-  ios::sync_with_stdio(0);cin.tie(0);
-  cin>>n>>m;
-  for(int i=0; i<m;i++){
-    for(int j=0;j<n;j++){
-      cin>>a[i][j];
-    }
-  }
-
-  for(int i=0; i<m;i++){
-    for(int j=0;j<n;j++){
-      if(a[i][j]=='1'){
-        a[i][j]='0';
-        q.push({i,j});
-        int cnt=0;
-        int minx=i;
-        int maxx=i;
-        int miny=j;
-        int maxy=j;
+    ios::sync_with_stdio(0);cin.tie(0);
+    cin>>n>>m;
+    for(int i=0; i<m;i++) for(int j=0;j<n;j++) cin>>a[i][j];
+    for(int i=0; i<m;i++){
+        for(int j=0;j<n;j++)
+        {
+            if(a[i][j]=='1')
+            {
+                a[i][j]='0';
+                q.push({i,j});
+                int cnt=0;
+                int minx=i;
+                int maxx=i;
+                int miny=j;
+                int maxy=j;
         
         while(!q.empty()){
           int x=q.front().first;
