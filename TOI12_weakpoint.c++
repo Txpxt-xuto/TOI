@@ -6,13 +6,11 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-
 #define f first
 #define s second
 #define MAXN 500005
 vector<int> graph[MAXN];
 int visited[MAXN],cycroot,maxch=0,maxv=1000000,found=0;
-
 pair<int,int> dfs(int i,int prev)
 {
     int sum=0,ignore=0,cycsum=0;
@@ -49,11 +47,10 @@ pair<int,int> dfs(int i,int prev)
 }
 int main()
 {
-    int N,M,a,b,i;
-    cin >> N >> M;
-    for(i=0;i<N;i++)
-    {
-        cin >> a >> b;
+    int N,M,a,b;
+    scanf("%d %d",&N,&M);
+    for(int i=0; i<N; i++){
+        scanf("%d %d",&a,&b);
         graph[a].push_back(b);
         graph[b].push_back(a);
     }
