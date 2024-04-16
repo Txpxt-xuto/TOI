@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 #define f first
 #define s second
@@ -5,7 +6,9 @@
 using namespace std;
 vector<int> graph[MAXN];
 int visited[MAXN],cycroot,maxch=0,maxv=1000000,found=0;
-pair<int,int> dfs(int i,int prev){
+
+pair<int,int> dfs(int i,int prev)
+{
     int sum=0,ignore=0,cycsum=0;
     visited[i]=1;
     for(auto v: graph[i]){
@@ -33,7 +36,8 @@ pair<int,int> dfs(int i,int prev){
     pair<int,int> res(sum+1,ignore);
     return res;
 }
-int main(){
+int main()
+{
     int N,M,a,b;
     scanf("%d %d",&N,&M);
     for(int i=0; i<N; i++){
