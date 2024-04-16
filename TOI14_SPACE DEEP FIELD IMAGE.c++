@@ -1,3 +1,9 @@
+/*
+TASK: space.cpp
+LANG: C++
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/
 #include<bits/stdc++.h>      
 using namespace std;
 int n,m,i,j,sqa,dia,tri;
