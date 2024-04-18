@@ -3,7 +3,7 @@ TASK: pipe.cpp
 LANG: C++
 COMPILER: WCB
 AUTHOR: Tapat Toungkul
-ID: 123456
+ID: none
 */
 #include <bits/stdc++.h>
 using namespace std;
