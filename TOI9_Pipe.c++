@@ -2,8 +2,8 @@
 TASK: pipe.cpp
 LANG: C++
 COMPILER: WCB
-AUTHOR: YourFirstName YourLastName
-ID: YourCenterID
+AUTHOR: Tapat Toungkul
+ID: 123456
 */
 #include <bits/stdc++.h>
 using namespace std;
