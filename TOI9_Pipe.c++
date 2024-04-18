@@ -74,6 +74,6 @@ int main()
     for(int i=1;i<=r;i++)if((a[i][1]==11||a[i][1]==13||a[i][1]==22||a[i][1]==31)&&!v[i][1])solve(0,i,1,4);
     for(int i=1;i<=r;i++)if((a[i][c]==12||a[i][c]==14||a[i][c]==22||a[i][c]==31)&&!v[i][c])solve(0,i,c,2);
     cout << ans.size() << '\n';
-    for(int i=0;i<ans.size();i++)cout << ans[i] << ' ';
+    for(int i=0;i<ans.size();i++) cout << ans[i] << ' ';
     return 0;
 }
