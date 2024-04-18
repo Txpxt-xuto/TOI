@@ -60,17 +60,18 @@ void solve(int p,int x,int y,int d)
 }
 int main()
 {
-    int r,c;
+    int r,c,i,j;
     cin >> r >> c;
     a=vector<vector<int> > (r+2,vector<int> (c+2,-1));
     v=vector<vector<int> > (r+2,vector<int> (c+2,0));
-    for(int i=1;i<=r;i++){
-        for(int j=1;j<=c;j++) cin >> a[i][j];
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++) cin >> a[i][j];
     }
-    for(int i=1;i<=c;i++) if((a[1][i]==11||a[1][i]==12||a[1][i]==21||a[1][i]==31)&&!v[1][i]) solve(0,1,i,1);
-    for(int i=1;i<=c;i++) if((a[r][i]==13||a[r][i]==14||a[r][i]==21||a[r][i]==31)&&!v[r][i]) solve(0,r,i,3);
-    for(int i=1;i<=r;i++) if((a[i][1]==11||a[i][1]==13||a[i][1]==22||a[i][1]==31)&&!v[i][1]) solve(0,i,1,4);
-    for(int i=1;i<=r;i++) if((a[i][c]==12||a[i][c]==14||a[i][c]==22||a[i][c]==31)&&!v[i][c]) solve(0,i,c,2);
+    for(i=1;i<=c;i++) if((a[1][i]==11||a[1][i]==12||a[1][i]==21||a[1][i]==31)&&!v[1][i]) solve(0,1,i,1);
+    for(i=1;i<=c;i++) if((a[r][i]==13||a[r][i]==14||a[r][i]==21||a[r][i]==31)&&!v[r][i]) solve(0,r,i,3);
+    for(i=1;i<=r;i++) if((a[i][1]==11||a[i][1]==13||a[i][1]==22||a[i][1]==31)&&!v[i][1]) solve(0,i,1,4);
+    for(i=1;i<=r;i++) if((a[i][c]==12||a[i][c]==14||a[i][c]==22||a[i][c]==31)&&!v[i][c]) solve(0,i,c,2);
     cout << ans.size() << '\n';
     for(int i=0;i<ans.size();i++) cout << ans[i] << ' ';
     return 0;
