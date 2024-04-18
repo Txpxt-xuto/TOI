@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<vector<int> > a,v;
 vector<int> ans;
 void solve(int p,int x,int y,int d)
