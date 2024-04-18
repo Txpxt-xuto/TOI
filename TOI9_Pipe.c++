@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 vector<vector<int> > a,v;
 vector<int> ans;
