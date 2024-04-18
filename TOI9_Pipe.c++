@@ -65,9 +65,7 @@ int main()
     a=vector<vector<int> > (r+2,vector<int> (c+2,-1));
     v=vector<vector<int> > (r+2,vector<int> (c+2,0));
     for(int i=1;i<=r;i++){
-        for(int j=1;j<=c;j++) c32rtomb >> a[i][j];
-            
-        }
+        for(int j=1;j<=c;j++) cin >> a[i][j];
     }
     for(int i=1;i<=c;i++) if((a[1][i]==11||a[1][i]==12||a[1][i]==21||a[1][i]==31)&&!v[1][i]) solve(0,1,i,1);
     for(int i=1;i<=c;i++) if((a[r][i]==13||a[r][i]==14||a[r][i]==21||a[r][i]==31)&&!v[r][i]) solve(0,r,i,3);
