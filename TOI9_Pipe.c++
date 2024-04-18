@@ -1,3 +1,10 @@
+/*
+TASK: pipe.cpp
+LANG: C++
+COMPILER: WCB
+AUTHOR: YourFirstName YourLastName
+ID: YourCenterID
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
