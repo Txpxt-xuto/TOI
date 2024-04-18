@@ -5,7 +5,6 @@ vector<vector<int> > a,v;
 vector<int> ans;
 void solve(int p,int x,int y,int d)
 {
-    //cout << x << ' ' << y << ' ' << d << '\n';
     int tmp=a[x][y];
     if(tmp==-1){
         ans.push_back(p);
