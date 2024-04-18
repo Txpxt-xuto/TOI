@@ -6,48 +6,60 @@ vector<int> ans;
 void solve(int p,int x,int y,int d)
 {
     int tmp=a[x][y];
-    if(tmp==-1){
+    if(tmp==-1)
+    {
         ans.push_back(p);
         return;
     }
-    if(tmp==11){
+    if(tmp==11)
+    {
         v[x][y]=1;
         if(d==1)solve(p+1,x,y-1,2);
         else solve(p+1,x-1,y,3);
     }
-    if(tmp==12){
+    if(tmp==12)
+    {
         v[x][y]=1;
         if(d==1)solve(p+1,x,y+1,4);
         else solve(p+1,x-1,y,3);
     }
-    if(tmp==13){
+    if(tmp==13)
+    {
         v[x][y]=1;
         if(d==3)solve(p+1,x,y-1,2);
         else solve(p+1,x+1,y,1);
     }
-    if(tmp==14){
+    if(tmp==14)
+    {
         v[x][y]=1;
         if(d==3)solve(p+1,x,y+1,4);
         else solve(p+1,x+1,y,1);
     }
-    if(tmp==21){
+    if(tmp==21)
+    {
         v[x][y]=1;
         if(d==1)solve(p+1,x+1,y,1);
         else solve(p+1,x-1,y,3);
     }
-    if(tmp==22){
+    if(tmp==22)
+    {
         v[x][y]=1;
         if(d==2)solve(p+1,x,y-1,2);
         else solve(p+1,x,y+1,4);
     }
-    if(tmp==31){
-        if(d==1){
+    if(tmp==31)
+    {
+        if(d==1)
+        {
             a[x][y]=22;
             solve(p+1,x+1,y,1);
-        } else if(d==3){
+        } 
+        else if(d==3)
+        {
             a[x][y]=22;
             solve(p+1,x-1,y,3);
-        } else if(d==2){
+        } else if(d==2)
+        {
             a[x][y]=21;
             solve(p+1,x,y-1,2);
         } else {
