@@ -58,16 +58,18 @@ void solve(int p,int x,int y,int d)
         {
             a[x][y]=22;
             solve(p+1,x-1,y,3);
-        } else if(d==2)
+        } 
+        else if(d==2)
         {
             a[x][y]=21;
             solve(p+1,x,y-1,2);
-        } else {
+        } 
+        else 
+        {
             a[x][y]=21;
             solve(p+1,x,y+1,4);
         }
     }
-
 }
 int main()
 {
