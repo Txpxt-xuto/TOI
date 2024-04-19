@@ -18,14 +18,11 @@ long long eat(int l,int r)
 int main(){
     int n;
     cin>>n;
-    for(int i=0;i<n;i++){
-        cin>>sausage[i];
-    }
+    for(int i=0;i<n;i++) cin>>sausage[i];
     eat(0,n-1);
-    for(int c=1;c<n-1;c++){
-        for(int r=0;r<n;r++){
-            dp[0][r] = max(dp[0][r],dp[0][c]+dp[c+1][r]);
-        }
+    for(int c=1;c<n-1;c++)
+    {
+        for(int r=0;r<n;r++) dp[0][r] = max(dp[0][r],dp[0][c]+dp[c+1][r]);
     }
     cout<<dp[0][n-1];
 }
