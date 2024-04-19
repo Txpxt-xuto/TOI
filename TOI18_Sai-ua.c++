@@ -7,13 +7,7 @@ int n;
 long long eat(int l,int r)
 {
     if(l>=r) return sausage[l];
-    {
-        
-    }
-    else if(dp[l][r]!=0)
-    {
-        return dp[l][r];
-    }
+    else if(dp[l][r]!=0) return dp[l][r];
     else
     {
         dp[l][r] = max(eat(l+1,r)+sausage[l],eat(l,r-1)+sausage[r])+abs(sausage[l]-sausage[r]);
