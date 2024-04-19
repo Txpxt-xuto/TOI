@@ -2,16 +2,14 @@
 using namespace std;
 int main()
 {
-    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);cout.tie(0);
     int n,q,x,idx;
     cin >> n >> q;
     int A[n],ansl[n],ansr[n];
     vector <int> L;
     vector <int> R;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> A[i];
-    }
+    for (int i = 0; i < n; i++) cin >> A[i];
     for (int i = 0; i < n; i++)
     {
         idx = lower_bound(L.begin(),L.end(),A[i])-L.begin();
