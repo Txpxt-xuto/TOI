@@ -4,13 +4,13 @@ int main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);cout.tie(0);
-    int n,q,x,idx;
+    int n,q,x,idx,i;
     cin >> n >> q;
     int A[n],ansl[n],ansr[n];
     vector <int> L;
     vector <int> R;
-    for (int i = 0; i < n; i++) cin >> A[i];
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++) cin >> A[i];
+    for (i = 0; i < n; i++)
     {
         idx = lower_bound(L.begin(),L.end(),A[i])-L.begin();
         if (idx == L.size())
@@ -23,7 +23,7 @@ int main()
         }
         ansl[i] = idx;
     }
-    for (int i = n-1; i >= 0; i--)
+    for (i = n-1; i >= 0; i--)
     {
         idx = lower_bound(R.begin(),R.end(),A[i])-R.begin();
         if (idx == R.size())
@@ -36,7 +36,7 @@ int main()
         }
         ansr[i] = idx;
     }
-    for (int i = 0; i < q; i++)
+    for (i = 0; i < q; i++)
     {
         cin >> x;
         cout << min(ansl[x],ansr[x]) << "\n";
