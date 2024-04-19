@@ -4,7 +4,7 @@ int n,q,h[200002],LIS[200002],LDS[200002],i,pos;
 vector<int> v;
 int main ()
 {
-    cin>>n>>q;
+    cin >> n >> q;
     for(i=1;i<=n;i++) cin>>h[i];
     for(i=1;i<=n;i++)
     {
@@ -19,7 +19,6 @@ int main ()
             v[idx]=h[i];
             LIS[i]=idx+1;
         }
-
     }
     v.clear();
     for(i=n;i>=1;i--)
@@ -38,7 +37,8 @@ int main ()
     }
     for(i=1;i<=q;i++)
     {
-        cin>>pos;
+        cin
+        >>pos;
         cout<<min(LIS[pos+1],LDS[pos+1])-1<<"\n";
     }
 }
