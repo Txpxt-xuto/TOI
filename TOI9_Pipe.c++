@@ -10,6 +10,7 @@ using namespace std;
 
 vector<vector<int> > a,v;
 vector<int> ans;
+
 void solve(int p,int x,int y,int d)
 {
     int tmp=a[x][y];
@@ -84,10 +85,9 @@ int main()
     cin >> r >> c;
     a=vector<vector<int> > (r+2,vector<int> (c+2,-1));
     v=vector<vector<int> > (r+2,vector<int> (c+2,0));
-    for(i=1;i<=r;i++)
-    {
-        for(j=1;j<=c;j++) cin >> a[i][j];
-    }
+    for(i=1;i<=r;i++){ for(j=1;j<=c;j++) cin >> a[i][j];}
+
+
     for(i=1;i<=c;i++) if((a[1][i]==11||a[1][i]==12||a[1][i]==21||a[1][i]==31)&&!v[1][i]) solve(0,1,i,1);
     for(i=1;i<=c;i++) if((a[r][i]==13||a[r][i]==14||a[r][i]==21||a[r][i]==31)&&!v[r][i]) solve(0,r,i,3);
     for(i=1;i<=r;i++) if((a[i][1]==11||a[i][1]==13||a[i][1]==22||a[i][1]==31)&&!v[i][1]) solve(0,i,1,4);
