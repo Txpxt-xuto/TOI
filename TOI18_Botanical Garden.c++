@@ -37,8 +37,7 @@ int main ()
     }
     for(i=1;i<=q;i++)
     {
-        cin
-        >>pos;
-        cout<<min(LIS[pos+1],LDS[pos+1])-1<<"\n";
+        cin >> pos;
+        cout << min(LIS[pos+1],LDS[pos+1])-1<<"\n";
     }
 }
