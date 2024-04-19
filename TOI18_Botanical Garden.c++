@@ -1,45 +1,44 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
+int n,q,h[200002],LIS[200002],LDS[200002],i,pos;
+vector<int> v;
+int main ()
 {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);cout.tie(0);
-    int n,q,x,idx,i;
-    cin >> n >> q;
-    int A[n],ansl[n],ansr[n];
-    vector <int> L;
-    vector <int> R;
-    for (i = 0; i < n; i++) cin >> A[i];
-    for (i = 0; i < n; i++)
+    cin>>n>>q;
+    for(i=1;i<=n;i++) cin>>h[i];
+    for(i=1;i<=n;i++)
     {
-        idx = lower_bound(L.begin(),L.end(),A[i])-L.begin();
-        if (idx == L.size())
+        if(v.size()==0||v[v.size()-1]<=h[i])
         {
-            L.push_back(A[i]);
+            v.push_back(h[i]);
+            LIS[i]=v.size();
         }
         else
         {
-            A[i] = idx;
+            auto idx=upper_bound(v.begin(),v.end(),h[i])-v.begin();
+            v[idx]=h[i];
+            LIS[i]=idx+1;
         }
-        ansl[i] = idx;
+
     }
-    for (i = n-1; i >= 0; i--)
+    v.clear();
+    for(i=n;i>=1;i--)
     {
-        idx = lower_bound(R.begin(),R.end(),A[i])-R.begin();
-        if (idx == R.size())
+        if(v.size()==0||v[v.size()-1]<=(h[i]))
         {
-            R.push_back(A[i]);
+            v.push_back(h[i]);
+            LDS[i]=v.size();
         }
         else
         {
-            A[i] = idx;
+            auto idx=upper_bound(v.begin(),v.end(),h[i])-v.begin();
+            v[idx]=h[i];
+            LDS[i]=idx+1;
         }
-        ansr[i] = idx;
     }
-    for (i = 0; i < q; i++)
+    for(i=1;i<=q;i++)
     {
-        cin >> x;
-        cout << min(ansl[x],ansr[x]) << "\n";
+        cin>>pos;
+        cout<<min(LIS[pos+1],LDS[pos+1])-1<<"\n";
     }
-    return 0;
 }
