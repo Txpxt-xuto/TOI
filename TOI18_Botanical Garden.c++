@@ -5,7 +5,7 @@ vector<int> v;
 int main ()
 {
     cin >> n >> q;
-    for(i=1;i<=n;i++) cin>>h[i];
+    for(i=1;i<=n;i++) cin >> h[i];
     for(i=1;i<=n;i++)
     {
         if(v.size()==0||v[v.size()-1]<=h[i])
