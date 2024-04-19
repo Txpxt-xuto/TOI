@@ -15,6 +15,8 @@ long long eat(int l,int r)
 }
 int main()
 {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
     cin >> n;
     for(int i=0;i<n;i++) cin>>sausage[i];
     eat(0,n-1);
