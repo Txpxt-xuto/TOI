@@ -6,8 +6,9 @@ int n;
 
 long long eat(int l,int r)
 {
-    if(l>=r){
-        return sausage[l];
+    if(l>=r) return sausage[l];
+    {
+        
     }
     else if(dp[l][r]!=0)
     {
