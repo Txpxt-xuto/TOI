@@ -1,34 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-const ll N = 5005;
-ll dp[N][N];
-bool check(int start,int end) {
-    if (end - start == 1) {
-        return true;
-    }
-    return abs(dp[start+1][start+1]-dp[end][end]) > abs(dp[start][start]-dp[end-1][end-1]);
+int a[5001],ans=0,n,dp[5001][5001],eatt[5001][5001];
+int eat(int l,int r){
+   if(l==r){return a[l];}
+   if(eatt[l][r]>0){return eatt[l][r];}
+   return eatt[l][r] =  abs(a[l]-a[r]) + max(a[l]+eat(l+1,r),a[r]+eat(l,r-1));
 }
-int main()
-{
-    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int n;
-    cin >> n;
-    for (int i=0;i<n;i++) {
-        cin >> dp[i][i];
+int cut(int l,int r){
+    if(l>=r)return 0;
+    if(dp[l][r]>0)return dp[l][r];
+    
+    int mx=eat(l,r);
+    for(int k=l;k<r;k++){
+        mx = max(mx, cut(l,k) + cut(k+1,r));
     }
-    for(int i=n-2;i>=0;i--) {
-        for (int j=i+1;j<n;j++) {
-            dp[i][j] = max(dp[i][j-1]+dp[j][j],dp[i+1][j]+dp[i][i])+abs(dp[i][i]-dp[j][j]);
-        }
-    }
-    for (int i=0;i<n;i++) {
-        for (int j=i+1;j<n;j++) {
-            for (int k=i;k<j;k++) {
-                dp[i][j] = max(dp[i][j],dp[i][k]+dp[k+1][j]);
-            }
-        }
-    }
-    cout<<dp[0][n-1];
-    return 0;
+    return dp[l][r]=mx;
+}
+int main(){
+    ios_base::sync_with_stdio(0),cin.tie(0);
+    cin>>n;
+    for(int i=1;i<=n;i++){cin>>a[i];}
+    cout<<cut(1,n);
 }
