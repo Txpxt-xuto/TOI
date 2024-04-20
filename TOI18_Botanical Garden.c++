@@ -1,8 +1,4 @@
-/*
-Neetcode: "If in a coding interview they ask you to find the N*log N solution to increasing
-              subsequence then just walk out of the room"
-This competitive programming problem: monotonic stack + LIS + LDS
-*/
+
 #include<bits/stdc++.h>
 using namespace std;
 int r[200001],l[200001],arr[200001];
