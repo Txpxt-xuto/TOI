@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-int r[200001],l[200001],arr[200001];
-int n,q,t1;
-    vector<int> vr,vl;
+int r[200001],l[200001],arr[200001],n,q,t1;
+
+vector<int> vr,vl;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
