@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 int r[200001],l[200001],arr[200001],n,q,t1,i,temp;
 vector<int> vr,vl;
+
 int main()
 {
     cin >> n >> q ;
