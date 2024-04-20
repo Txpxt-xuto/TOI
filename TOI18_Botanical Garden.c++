@@ -11,9 +11,9 @@ int main()
     {
         cin >> arr[i];
         int idx=lower_bound(vl.begin(),vl.end(),arr[i])-vl.begin();
-        if(idx==vl.size())vl.push_back(arr[i]);
-        vl[idx]=arr[i];
-        l[i]=idx;
+        if(idx == vl.size())vl.push_back(arr[i]);
+        vl[idx] = arr[i];
+        l[i] = idx;
     }
     for(i=n-1;i>=0;i--)
     {
