@@ -1,4 +1,3 @@
-
 #include<bits/stdc++.h>
 using namespace std;
 int r[200001],l[200001],arr[200001];
