@@ -18,9 +18,9 @@ int main()
     for(i=n-1;i>=0;i--)
     {
         int idx=lower_bound(vr.begin(),vr.end(),arr[i])-vr.begin();
-        if(idx==vr.size())vr.push_back(arr[i]);
-        vr[idx]=arr[i];
-        r[i]=idx;
+        if(idx == vr.size())vr.push_back(arr[i]);
+        vr[idx] = arr[i];
+        r[i] = idx;
     }
     while(q--)
     {
