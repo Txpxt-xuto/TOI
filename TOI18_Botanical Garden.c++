@@ -1,43 +1,33 @@
+/*
+Neetcode: "If in a coding interview they ask you to find the N*log N solution to increasing
+              subsequence then just walk out of the room"
+This competitive programming problem: monotonic stack + LIS + LDS
+*/
 #include<bits/stdc++.h>
 using namespace std;
-int n,q,h[200002],LIS[200002],LDS[200002],i,pos;
-vector<int> v;
-int main ()
-{
-    cin >> n >> q;
-    for(i=1;i<=n;i++) cin >> h[i];
-    for(i=1;i<=n;i++)
-    {
-        if(v.size()==0||v[v.size()-1]<=h[i])
-        {
-            v.push_back(h[i]);
-            LIS[i]=v.size();
-        }
-        else
-        {
-            auto idx=upper_bound(v.begin(),v.end(),h[i])-v.begin();
-            v[idx]=h[i];
-            LIS[i]=idx+1;
-        }
+int r[200001],l[200001],arr[200001];
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    int n,q,t1;
+    vector<int> vr,vl;
+    cin >> n >> q ;
+    for(int i=0;i<n;i++){
+        cin >> arr[i];
+        int idx=lower_bound(vl.begin(),vl.end(),arr[i])-vl.begin();
+        if(idx==vl.size())vl.push_back(arr[i]);
+        vl[idx]=arr[i];
+        l[i]=idx;
     }
-    v.clear();
-    for(i=n;i>=1;i--)
-    {
-        if(v.size()==0||v[v.size()-1]<=(h[i]))
-        {
-            v.push_back(h[i]);
-            LDS[i]=v.size();
-        }
-        else
-        {
-            auto idx=upper_bound(v.begin(),v.end(),h[i])-v.begin();
-            v[idx]=h[i];
-            LDS[i]=idx+1;
-        }
+    for(int i=n-1;i>=0;i--){
+        int idx=lower_bound(vr.begin(),vr.end(),arr[i])-vr.begin();
+        if(idx==vr.size())vr.push_back(arr[i]);
+        vr[idx]=arr[i];
+        r[i]=idx;
     }
-    for(i=1;i<=q;i++)
-    {
-        cin >> pos;
-        cout << min(LIS[pos+1],LDS[pos+1])-1<<"\n";
+    while(q--){
+        int temp;
+        cin >> temp;
+        cout << min(r[temp],l[temp]) << " ";
     }
 }
