@@ -4,7 +4,6 @@ int r[200001],l[200001],arr[200001],n,q,t1,i;
 vector<int> vr,vl;
 int main()
 {
-    
     cin >> n >> q ;
     for(i=0;i<n;i++)
     {
