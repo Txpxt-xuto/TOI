@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 int r[200001],l[200001],arr[200001];
+int n,q,t1;
+    vector<int> vr,vl;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n,q,t1;
-    vector<int> vr,vl;
     cin >> n >> q ;
     for(int i=0;i<n;i++)
     {
