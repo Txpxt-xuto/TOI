@@ -35,9 +35,9 @@ int main()
             if(!vec[i][j].empty()){
                 sort(vec[i][j].begin(),vec[i][j].end());
                 int sz=vec[i][j].size();
-                if(vec[i][j].size()%2==1){
-                    dis[i][j]=vec[i][j][sz/2];
-                }
+                if(vec[i][j].size()%2==1) dis[i][j]=vec[i][j][sz/2];
+                    
+                
                 else dis[i][j]=(vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
             }
         }
