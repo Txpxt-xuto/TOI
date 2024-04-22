@@ -14,7 +14,8 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin >> n;
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         char c1,c2;
         double d;
         cin >> c1 >> c2 >> d;
@@ -30,14 +31,18 @@ int main()
         adj[a].push_back(b);
         adj[b].push_back(a);
     }
-    for(int i=0;i<100;i++){
-        for(int j=0;j<100;j++){
-            if(!vec[i][j].empty()){
+    for(int i=0;i<100;i++)
+    {
+        for(int j=0;j<100;j++)
+        {
+            if(!vec[i][j].empty())
+            {
                 sort(vec[i][j].begin(),vec[i][j].end());
                 int sz=vec[i][j].size();
-                if(vec[i][j].size()%2==1) dis[i][j]=vec[i][j][sz/2];
-                    
-                
+                if(vec[i][j].size()%2==1) 
+                {
+                    dis[i][j]=vec[i][j][sz/2];
+                }
                 else dis[i][j]=(vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
             }
         }
