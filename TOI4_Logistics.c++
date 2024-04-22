@@ -38,24 +38,24 @@ int main()
             {
                 sort(vec[i][j].begin(),vec[i][j].end());
                 int sz=vec[i][j].size();
-                if(vec[i][j].size()%2==1) dis[i][j]=vec[i][j][sz/2];
-                else dis[i][j]=(vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
+                if(vec[i][j].size()%2==1) dis[i][j] = vec[i][j][sz/2];
+                else dis[i][j] = (vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
             }
         }
     }
     queue <int> q;
     q.push(0);
-    par[0]=-1;
+    par[0] = -1;
     while(!q.empty())
     {
-        int u=q.front();
+        int u = q.front();
         q.pop();
         if(vis[u]) continue;
-        vis[u]=true;
+        vis[u] = true;
         for(int v:adj[u])
         {
             if(vis[v]) continue;
-            par[v]=u;
+            par[v] = u;
             q.push(v);
         }
     }
