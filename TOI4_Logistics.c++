@@ -19,12 +19,12 @@ int main()
         double d;
         cin >> c1 >> c2 >> d;
         int a,b;
-        if(c1=='X') a=0;
-        if(c1=='Y') a=1;
-        if(c2=='X') b=0;
-        if(c2=='Y') b=1;
-        if(c1>='a' && c1<='z') a=c1-'a'+2;
-        if(c2>='a' && c2<='z') b=c2-'a'+2;
+        if(c1=='X') a = 0;
+        if(c1=='Y') a = 1;
+        if(c2=='X') b = 0;
+        if(c2=='Y') b = 1;
+        if(c1>='a' && c1<='z') a = c1-'a'+2;
+        if(c2>='a' && c2<='z') b = c2-'a'+2;
         vec[a][b].push_back(d);
         vec[b][a].push_back(d);
         adj[a].push_back(b);
