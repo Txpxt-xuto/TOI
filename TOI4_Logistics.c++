@@ -61,10 +61,7 @@ int main()
             q.push(v);
         }
     }
-    //for(auto a:vec) cout << a << " ";
-    //cout << vec.size();
     int aa=1;
-    //cout << par[1];
     while(par[aa]!=-1){
         order.push_back(aa);
         aa=par[aa];
@@ -75,7 +72,6 @@ int main()
         cout << "broken";
         return 0;
     }
-    //cout << order.size();
 
     for(int i=0;i<order.size()-1;i++){
         int a=order[i],b=order[i+1];
