@@ -17,18 +17,18 @@ int main()
 	int lis = 0;
 	for(i=1;i<=n;i++)
     {
-		int idx = lower_bound(dpl,dpl+lis,a[i])-dpl;
-		if(idx == lis) lis++;
-		dpl[idx] = a[i];
-		l[i] = idx;
+		int dp = lower_bound(dpl,dpl+lis,a[i])-dpl;
+		if(dp == lis) lis++;
+		dpl[dp] = a[i];
+		l[i] = dp;
 	}
 	lis = 0;
 	for(i=n;i>=1;i--)
     {
-		int idx = lower_bound(dpr,dpr+lis,a[i])-dpr;
-		if(idx == lis) lis++;
-		dpr[idx] = a[i];
-		r[i] = idx;
+		int dp = lower_bound(dpr,dpr+lis,a[i])-dpr;
+		if(dp == lis) lis++;
+		dpr[dp] = a[i];
+		r[i] = dp;
 	}
 	while(q--)
     {
