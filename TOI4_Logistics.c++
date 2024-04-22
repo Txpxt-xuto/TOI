@@ -2,9 +2,8 @@
 using namespace std;
 int n;
 double dis[100][100];
-vector <int> adj[100];
+vector <int> adj[100], order;
 vector <double> vec[100][100];
-vector <int> order;
 int par[100];
 bool vis[100];
 double ans=0;
@@ -39,10 +38,10 @@ int main()
             {
                 sort(vec[i][j].begin(),vec[i][j].end());
                 int sz=vec[i][j].size();
-                if(vec[i][j].size()%2==1) 
-                {
-                    dis[i][j]=vec[i][j][sz/2];
-                }
+                if(vec[i][j].size()%2==1) dis[i][j]=vec[i][j][sz/2];
+                
+                    
+    
                 else dis[i][j]=(vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
             }
         }
