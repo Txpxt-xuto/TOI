@@ -1,29 +1,42 @@
 #include<bits/stdc++.h>
+#define F first
+#define S second
+#define ll long long
+#define pii pair<ll,ll>
+#define pipi pair<pii,pii>
 using namespace std;
-int r[200001],l[200001],arr[200001],n,q,t1,i,temp;
-vector<int> vr,vl;
 
-int main()
-{
-    cin >> n >> q ;
-    for(i=0;i<n;i++)
-    {
-        cin >> arr[i];
-        int idx = lower_bound(vl.begin(),vl.end(),arr[i])-vl.begin();
-        if(idx == vl.size())vl.push_back(arr[i]);
-        vl[idx] = arr[i];
-        l[i] = idx;
-    }
-    for(i=n-1;i>=0;i--)
-    {
-        int idx = lower_bound(vr.begin(),vr.end(),arr[i])-vr.begin();
-        if(idx == vr.size())vr.push_back(arr[i]);
-        vr[idx] = arr[i];
-        r[i] = idx;
-    }
-    while(q--)
-    {
-        cin >> temp;
-        cout << min(r[temp],l[temp]) << " ";
-    }
+const int N = 2e5;
+
+ll dpl[N+5], dpr[N+5], a[N+5], l[N+5], r[N+5];
+int n, q;
+
+int main(){
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+	cin>>n>>q;
+	for(int i=1;i<=n;i++) cin>>a[i];
+	int lis = 0;
+	for(int i=1;i<=n;i++){
+		int idx = lower_bound(dpl,dpl+lis,a[i])-dpl;
+		if(idx == lis) lis++;
+		dpl[idx] = a[i];
+		l[i] = idx;
+	}
+	lis = 0;
+	for(int i=n;i>=1;i--){
+		int idx = lower_bound(dpr,dpr+lis,a[i])-dpr;
+		if(idx == lis) lis++;
+		dpr[idx] = a[i];
+		r[i] = idx;
+	}
+//	for(int i=1;i<=n;i++) cout<<i-1<<' '; cout<<'\n';
+//	for(int i=1;i<=n;i++) cout<<a[i]<<' '; cout<<'\n';
+//	for(int i=1;i<=n;i++) cout<<l[i]<<' '; cout<<'\n';
+//	for(int i=1;i<=n;i++) cout<<r[i]<<' '; cout<<'\n';
+	while(q--){
+		int x;
+		cin>>x;
+		x++;
+		cout<<min(l[x],r[x])<<'\n';
+	}
 }
