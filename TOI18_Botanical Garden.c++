@@ -7,7 +7,7 @@ using namespace std;
 #define pipi pair<pii,pii>
 const int N = 2e5;
 ll dpl[N+5], dpr[N+5], a[N+5], l[N+5], r[N+5];
-int n, q, i,j;
+int n, q, i, j, x;
 
 int main()
 {
@@ -32,8 +32,7 @@ int main()
 	}
 	while(q--)
     {
-		int x;
-		cin>>x;
+		cin >> x;
 		x++;
 		cout<<min(l[x],r[x])<<'\n';
 	}
