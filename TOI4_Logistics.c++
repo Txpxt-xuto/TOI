@@ -6,13 +6,13 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
+
 int n, i, j, par[100];
 double dis[100][100];
 vector <int> adj[100], order;
 vector <double> vec[100][100];
 bool vis[100];
 double ans = 0;
-
 int main()
 {
     ios::sync_with_stdio(0);
