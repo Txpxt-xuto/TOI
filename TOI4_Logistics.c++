@@ -59,7 +59,7 @@ int main()
             q.push(v);
         }
     }
-    int aa=1;
+    int aa = 1;
     while(par[aa]!=-1)
     {
         order.push_back(aa);
