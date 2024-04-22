@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 int n;
-// X=0, Y=1, a=2 ,...
 double dis[100][100];
 vector <int> adj[100];
 vector <double> vec[100][100];
@@ -9,6 +8,7 @@ vector <int> order;
 int par[100];
 bool vis[100];
 double ans=0;
+
 int main()
 {
     ios::sync_with_stdio(0);
@@ -38,8 +38,8 @@ int main()
                 if(vec[i][j].size()%2==1){
                     dis[i][j]=vec[i][j][sz/2];
                 }
-                else{
-                    dis[i][j]=(vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
+                else{dis[i][j]=(vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
+                    
                 }
             }
         }
@@ -47,30 +47,34 @@ int main()
     queue <int> q;
     q.push(0);
     par[0]=-1;
-    while(!q.empty()){
+    while(!q.empty())
+    {
         int u=q.front();
         q.pop();
         if(vis[u]) continue;
         vis[u]=true;
-        for(int v:adj[u]){
+        for(int v:adj[u])
+        {
             if(vis[v]) continue;
             par[v]=u;
             q.push(v);
         }
     }
     int aa=1;
-    while(par[aa]!=-1){
+    while(par[aa]!=-1)
+    {
         order.push_back(aa);
         aa=par[aa];
     }
     order.push_back(0);
     reverse(order.begin(),order.end());
-    if(!vis[1]){
+    if(!vis[1])
+    {
         cout << "broken";
         return 0;
     }
-
-    for(int i=0;i<order.size()-1;i++){
+    for(int i=0;i<order.size()-1;i++)
+    {
         int a=order[i],b=order[i+1];
         char cc1,cc2;
         if(a==0) cc1='X';
