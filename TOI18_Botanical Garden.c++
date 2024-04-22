@@ -30,7 +30,7 @@ int main(){
 		r[i] = idx;
 	}
 //	for(int i=1;i<=n;i++) cout<<i-1<<' '; cout<<'\n';
-//	for(int i=1;i<=n;i++) cout<<a[i]<<' '; cout<<'\n';
+
 
 
 	while(q--){
