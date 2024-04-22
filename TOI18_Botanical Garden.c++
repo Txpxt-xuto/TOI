@@ -29,7 +29,6 @@ int main(){
 		dpr[idx] = a[i];
 		r[i] = idx;
 	}
-//	for(int i=1;i<=n;i++) cout<<i-1<<' '; cout<<'\n';
 
 
 
