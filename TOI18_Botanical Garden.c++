@@ -29,9 +29,6 @@ int main(){
 		dpr[idx] = a[i];
 		r[i] = idx;
 	}
-
-
-
 	while(q--){
 		int x;
 		cin>>x;
