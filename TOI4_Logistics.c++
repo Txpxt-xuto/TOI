@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n;
+int n, i, j;
 double dis[100][100];
 vector <int> adj[100], order;
 vector <double> vec[100][100];
@@ -13,7 +13,7 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin >> n;
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
         char c1,c2;
         double d;
@@ -30,18 +30,15 @@ int main()
         adj[a].push_back(b);
         adj[b].push_back(a);
     }
-    for(int i=0;i<100;i++)
+    for(i=0;i<100;i++)
     {
-        for(int j=0;j<100;j++)
+        for(j=0;j<100;j++)
         {
             if(!vec[i][j].empty())
             {
                 sort(vec[i][j].begin(),vec[i][j].end());
                 int sz=vec[i][j].size();
                 if(vec[i][j].size()%2==1) dis[i][j]=vec[i][j][sz/2];
-                
-                    
-    
                 else dis[i][j]=(vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
             }
         }
@@ -66,7 +63,7 @@ int main()
     while(par[aa]!=-1)
     {
         order.push_back(aa);
-        aa=par[aa];
+        aa = par[aa];
     }
     order.push_back(0);
     reverse(order.begin(),order.end());
@@ -75,9 +72,9 @@ int main()
         cout << "broken";
         return 0;
     }
-    for(int i=0;i<order.size()-1;i++)
+    for(i=0;i<order.size()-1;i++)
     {
-        int a=order[i],b=order[i+1];
+        int a= order[i],b=order[i+1];
         char cc1,cc2;
         if(a==0) cc1='X';
         if(a==1) cc1='Y';
