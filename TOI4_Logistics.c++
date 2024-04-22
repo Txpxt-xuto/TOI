@@ -23,10 +23,8 @@ int main()
         if(c1=='Y') a=1;
         if(c2=='X') b=0;
         if(c2=='Y') b=1;
-        //else a=c1-'a'+2,b=c2-'a'+2;
         if(c1>='a' && c1<='z') a=c1-'a'+2;
         if(c2>='a' && c2<='z') b=c2-'a'+2;
-        //cout << a << "  " << b << "\n";
         vec[a][b].push_back(d);
         vec[b][a].push_back(d);
         adj[a].push_back(b);
@@ -46,7 +44,6 @@ int main()
             }
         }
     }
-    //cout << "pp";
     queue <int> q;
     q.push(0);
     par[0]=-1;
