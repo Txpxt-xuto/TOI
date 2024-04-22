@@ -1,3 +1,9 @@
+/*
+TASK: LOGISTICS
+LANG: C++
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/
 #include <bits/stdc++.h>
 using namespace std;
 int n, i, j;
