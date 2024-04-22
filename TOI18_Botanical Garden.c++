@@ -32,7 +32,7 @@ int main(){
 //	for(int i=1;i<=n;i++) cout<<i-1<<' '; cout<<'\n';
 //	for(int i=1;i<=n;i++) cout<<a[i]<<' '; cout<<'\n';
 //	for(int i=1;i<=n;i++) cout<<l[i]<<' '; cout<<'\n';
-//	for(int i=1;i<=n;i++) cout<<r[i]<<' '; cout<<'\n';
+
 	while(q--){
 		int x;
 		cin>>x;
