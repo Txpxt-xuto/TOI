@@ -74,14 +74,14 @@ int main()
     }
     for(i=0;i<order.size()-1;i++)
     {
-        int a= order[i],b=order[i+1];
+        int a = order[i],b=order[i+1];
         char cc1,cc2;
-        if(a==0) cc1='X';
-        if(a==1) cc1='Y';
-        if(a>=2) cc1='a'+a-2;
-        if(b==0) cc2='X';
-        if(b==1) cc2='Y';
-        if(b>=2) cc2='a'+b-2;
+        if(a==0) cc1 = 'X';
+        if(a==1) cc1 = 'Y';
+        if(a>=2) cc1 = 'a'+a-2;
+        if(b==0) cc2 = 'X';
+        if(b==1) cc2 = 'Y';
+        if(b>=2) cc2 = 'a'+b-2;
         cout << cc1 << " " << cc2 << " " << fixed << setprecision(1) << dis[a][b] << "\n";
         ans+=dis[a][b];
     }
