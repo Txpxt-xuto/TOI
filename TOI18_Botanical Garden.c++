@@ -34,6 +34,6 @@ int main()
     {
 		cin >> x;
 		x++;
-		cout<<min(l[x],r[x])<<'\n';
+		cout << min(l[x],r[x]) << '\n';
 	}
 }
