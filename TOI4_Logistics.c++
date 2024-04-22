@@ -38,9 +38,7 @@ int main()
                 if(vec[i][j].size()%2==1){
                     dis[i][j]=vec[i][j][sz/2];
                 }
-                else{dis[i][j]=(vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
-                    
-                }
+                else dis[i][j]=(vec[i][j][sz/2]+vec[i][j][(sz/2)-1])/2;
             }
         }
     }
