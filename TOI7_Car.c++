@@ -41,17 +41,8 @@ int main ()
             if(arr[i][j] == 0 && mem[i][j] == i)
             {
                 if(arr[i+1][j] == 0) mem[i+1][j] = i+1;
-                {
-                    
-                }
                 if(arr[i+1][j-1] == 0) mem[i+1][j-1] = i+1;
-                {
-                    
-                }
                 if(arr[i+1][j+1] == 0) mem[i+1][j+1] = i+1;
-                {
-                    
-                }
             }
         }
     }
