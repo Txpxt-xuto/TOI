@@ -12,7 +12,7 @@ int main ()
     cin.tie(0);
     cout.tie(0);
     int m,n,t,memx,memy;
-    cin>>m>>n>>t;
+    cin >> m >> n >> t;
     int arr[t+2][m+2];
     int mem[t+2][m+2];
     for(int i=0;i<=t+1;i++)
@@ -23,8 +23,9 @@ int main ()
             if(i == 0 || j == 0 || i == t+1 || j == m+1)
             {
                 arr[i][j] = 1;
-            }else{
-                cin>>arr[i][j];
+            }
+            else{
+                cin >> arr[i][j];
                 if(i == t && arr[i][j] == 0)
                 {
                     memx = i;
@@ -72,9 +73,6 @@ int main ()
             v.push_back(1);
         }
     }
-    for(int i=v.size()-1;i>=0;i--)
-    {
-        cout<<v[i]<<"\n";
-    }
+    for(int i=v.size()-1;i>=0;i--) cout<<v[i]<<"\n";
     return 0;
 }
