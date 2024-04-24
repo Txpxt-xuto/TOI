@@ -15,9 +15,9 @@ int main()
     {
         cin >> j;
         k=upper_bound(L.begin(),L.end(),j)-L.begin();
-        if(k==L.size())
+        if(k==L.size())L.push_back(j);
         {
-            L.push_back(j);
+            
         } 
         else L[k]=j;
     }
