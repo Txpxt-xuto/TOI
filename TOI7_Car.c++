@@ -81,15 +81,6 @@ int main ()
             v.push_back(1);
         }
     }
-//    for(int i=0;i<=t;i++)
-//    {
-//        for(int j=1;j<=m;j++)
-//        {
-//
-//            cout<<mem[i][j]<<" ";
-//        }
-//    cout<<"\n";
-//    }
     for(int i=v.size()-1;i>=0;i--)
     {
         cout<<v[i]<<"\n";
