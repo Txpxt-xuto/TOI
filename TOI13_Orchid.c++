@@ -20,9 +20,6 @@ int main()
             L.push_back(j);
         } 
         else L[k]=j;
-        {
-            
-        
     }
     cout << n-L.size();
 }
