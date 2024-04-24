@@ -6,7 +6,8 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-char c1,c2;
+
+char c1,c2,cc1,cc2;
 int n, i, j, par[100], a, b;
 double dis[100][100];
 vector <int> adj[100], order;
@@ -77,7 +78,6 @@ int main()
     for(i=0;i<order.size()-1;i++)
     {
         int a = order[i],b=order[i+1];
-        char cc1,cc2;
         if(a==0) cc1 = 'X';
         if(a==1) cc1 = 'Y';
         if(a>=2) cc1 = 'a'+a-2;
