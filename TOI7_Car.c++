@@ -60,7 +60,6 @@ int main ()
     vector<int> v;
     while(1)
     {
-        //cout<<i<<"-\n";
         if(i == 0)
         {
             break;
