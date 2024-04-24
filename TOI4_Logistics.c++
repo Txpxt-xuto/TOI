@@ -12,7 +12,7 @@ double dis[100][100];
 vector <int> adj[100], order;
 vector <double> vec[100][100];
 bool vis[100];
-double ans = 0;
+double ans = 0, d;
 int main()
 {
     ios::sync_with_stdio(0);
@@ -20,8 +20,6 @@ int main()
     cin >> n;
     for(i=0;i<n;i++)
     {
-        
-        double d;
         cin >> c1 >> c2 >> d;
         if(c1=='X') a = 0;
         if(c1=='Y') a = 1;
