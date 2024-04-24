@@ -7,7 +7,7 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, i, j, par[100];
+int n, i, j, par[100], a, b;
 double dis[100][100];
 vector <int> adj[100], order;
 vector <double> vec[100][100];
@@ -23,7 +23,7 @@ int main()
         char c1,c2;
         double d;
         cin >> c1 >> c2 >> d;
-        int a,b;
+        int ;
         if(c1=='X') a = 0;
         if(c1=='Y') a = 1;
         if(c2=='X') b = 0;
