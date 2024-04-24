@@ -35,9 +35,9 @@ int main ()
         }
     }
     arr[0][n] = 0;
-    for(int i=0;i<t;i++)
+    for(i=0;i<t;i++)
     {
-        for(int j=1;j<=m;j++)
+        for(j=1;j<=m;j++)
         {
             if(arr[i][j] == 0 && mem[i][j] == i)
             {
@@ -51,9 +51,9 @@ int main ()
     vector<int> v;
     while(1)
     {
-        if(i == 0)
+        if(i == 0) break;
         {
-            break;
+            
         }
         if(mem[i-1][j] == mem[i][j]-1 && arr[i-1][j] == 0)
         {
