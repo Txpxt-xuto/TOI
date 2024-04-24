@@ -58,12 +58,14 @@ int main ()
         {
             i--;
             v.push_back(3);
-        }else if(mem[i-1][j-1] == mem[i][j]-1 && arr[i-1][j-1] == 0)
+        }
+        else if(mem[i-1][j-1] == mem[i][j]-1 && arr[i-1][j-1] == 0)
         {
             i--;
             j--;
             v.push_back(2);
-        }else if(mem[i-1][j+1] == mem[i][j]-1 && arr[i-1][j+1] == 0)
+        }
+        else if(mem[i-1][j+1] == mem[i][j]-1 && arr[i-1][j+1] == 0)
         {
             i--;
             j++;
