@@ -19,9 +19,9 @@ int main()
         {
             L.push_back(j);
         } 
-        else 
+        else L[k]=j;
         {
-            L[k]=j;
+            
         }
     }
     cout << n-L.size();
