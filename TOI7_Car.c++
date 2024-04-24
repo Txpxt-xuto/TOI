@@ -11,13 +11,13 @@ int main ()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    int m,n,t,memx,memy;
+    int m,n,t,memx,memy,i,j;
     cin >> m >> n >> t;
     int arr[t+2][m+2];
     int mem[t+2][m+2];
-    for(int i=0;i<=t+1;i++)
+    for(i=0;i<=t+1;i++)
     {
-        for(int j=0;j<=m+1;j++)
+        for(j=0;j<=m+1;j++)
         {
             mem[i][j] = 0;
             if(i == 0 || j == 0 || i == t+1 || j == m+1)
