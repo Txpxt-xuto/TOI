@@ -40,7 +40,6 @@ int main ()
         {
             if(arr[i][j] == 0 && mem[i][j] == i)
             {
-                //cout<<j<<"+++\n";
                 if(arr[i+1][j] == 0)
                 {
                     mem[i+1][j] = i+1;
