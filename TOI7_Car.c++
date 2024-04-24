@@ -52,9 +52,6 @@ int main ()
     while(1)
     {
         if(i == 0) break;
-        {
-            
-        }
         if(mem[i-1][j] == mem[i][j]-1 && arr[i-1][j] == 0)
         {
             i--;
