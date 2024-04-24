@@ -22,7 +22,7 @@ int main()
         else L[k]=j;
         {
             
-        }
+        
     }
     cout << n-L.size();
 }
