@@ -10,8 +10,10 @@ signed main(){
     cin >> n >> k;
     deque<int> dq;
     dq.push_back(0);
-    for(int i=1;i<=n;i++){
-        int temp; cin >> temp;
+    for(int i=1;i<=n;i++)
+    {
+        int temp; 
+        cin >> temp;
         while(dq.front()<=i-k)dq.pop_front();
         arr[i]=temp+arr[dq.front()];
         while(arr[dq.back()]>=arr[i])dq.pop_back();
