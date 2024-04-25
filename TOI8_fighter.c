@@ -1,7 +1,7 @@
 /*
 TASK: fighter.c
 LANG: C
-COMPILER: WDC
+COMPILER: VS code
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */ 
