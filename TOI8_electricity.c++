@@ -31,7 +31,6 @@ int main()
             }
             dp[i]=temp;
         }
-        //cout<<dp[i]<<" ";
     }
     cout<<dp[n-1];
 }
