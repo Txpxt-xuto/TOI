@@ -1,4 +1,10 @@
-
+/*
+TASK: electricity.cpp
+LANG: C++
+COMPILER: WCB
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/ 
 #pragma GCC optimize("O3,unroll-loops")
 #include<bits/stdc++.h>
 #define int long long
