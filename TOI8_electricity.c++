@@ -29,7 +29,7 @@ int main()
                 continue;
                 temp=min(temp,dp[i-j]+m);
             }
-            dp[i]=temp;
+            dp[i] = temp;
         }
     }
     cout<<dp[n-1];
