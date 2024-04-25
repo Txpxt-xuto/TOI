@@ -12,9 +12,9 @@ int main()
 {
     ios_base::sync_with_stdio(0);
     cout.tie(0);
-    int n,k,m;
+    int n,m,i,j,k;
     cin >> n >> k;
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
         cin >> m;
         if(i==0)
@@ -22,7 +22,7 @@ int main()
         else
         {
             int temp=INT_MAX;
-            for(int j=1;j<=k;j++)
+            for(j=1;j<=k;j++)
             {
                 if(i-j<0)
                 continue;
