@@ -17,7 +17,7 @@ int main()
     for(int i=0;i<n;i++)
     {
         int m;
-        cin>>m;
+        cin >> m;
         if(i==0)
         dp[i]=m;
         else
@@ -32,5 +32,5 @@ int main()
             dp[i] = temp;
         }
     }
-    cout<<dp[n-1];
+    cout << dp[n-1];
 }
