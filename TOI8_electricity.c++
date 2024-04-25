@@ -1,8 +1,8 @@
 /*
 TASK: electricity.cpp
 LANG: C++
-COMPILER: WCB
-AUTHOR: Tapatu Toungsakul
+COMPILER: VS code
+AUTHOR: Tapat Toungsakul
 CENTER: Home
 */ 
 #pragma GCC optimize("O3,unroll-loops")
