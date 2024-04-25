@@ -12,11 +12,10 @@ int main()
 {
     ios_base::sync_with_stdio(0);
     cout.tie(0);
-    int n,k;
+    int n,k,m;
     cin >> n >> k;
     for(int i=0;i<n;i++)
     {
-        int m;
         cin >> m;
         if(i==0)
         dp[i]=m;
