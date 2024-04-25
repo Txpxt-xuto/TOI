@@ -3,7 +3,8 @@
 #define int long long
 using namespace std;
 int arr[500100];
-signed main(){
+signed main()
+{
     ios::sync_with_stdio(0);
     cin.tie(NULL); cout.tie(NULL);
     int n,k;
