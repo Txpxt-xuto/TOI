@@ -2,8 +2,7 @@
 TASK: electricity.cpp
 LANG: C++
 COMPILER: WCB
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
+AUTHOR: YourName YourLastNameTap[aome
 */ 
 #pragma GCC optimize("O3,unroll-loops")
 #include<bits/stdc++.h>
