@@ -4,45 +4,42 @@ LANG: C++
 AUTHOR: Tapt Toungsakul
 CENTER: Home
 */
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define ll long long
-int arr[44][44];
-int ans[44];
-int n , m , s;
-void solve(int nowi , int nowj)
+char arr[100][100];
+int k[1000];
+int m,n,t,i,j;
+void recur(int row,int col)
 {
-    if(nowi == n)
+    if(row == t)
     {
-        for(int i=0;i<nowi;i++) cout << ans[i] << "\n";
-        exit(0);
+        for(int i = 0; i<t; i++) cout << k[i] << "\n";
     }
-    if(nowj > 1 && arr[nowi+1][nowj-1] == 0)
+    if(arr[row+1][col-1]=='0')
     {
-        ans[nowi] = 1;
-        solve(nowi+1,nowj-1);
+        k[row] = 1;
+        recur(row+1,col-1);
     }
-    if(nowj < m && arr[nowi+1][nowj+1] == 0)
+    if(arr[row+1][col]=='0')
     {
-        ans[nowi] = 2;
-        solve(nowi+1,nowj+1);
+        k[row] = 3;
+        recur(row+1,col);
     }
-    if(arr[nowi+1][nowj] == 0)
+    if(arr[row+1][col+1]=='0')
     {
-        ans[nowi] = 3;
-        solve(nowi+1,nowj);
+        k[row] = 2;
+        recur(row+1,col+1);
     }
-    return;
 }
 
 int main()
 {
-    cin.tie(0)->sync_with_stdio(0);
-    cin >> m >> s >> n;
-    for(int i=1;i<=n;i++)
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cin >> m >> n >> t;
+    for(i =1 ; i<=t; i++)
     {
-        for(int j=1;j<=m;j++) cin >> arr[i][j];
+        for(j=0; j<m; j++) cin>>arr[i][j];
     }
-    solve(0,s);
-    return 0;
+    recur(0,n-1);
 }
