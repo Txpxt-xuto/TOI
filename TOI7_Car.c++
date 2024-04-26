@@ -19,15 +19,18 @@ void solve(int nowi , int nowj){
         }
         exit(0);
     }
-    if(nowj > 1 && arr[nowi+1][nowj-1] == 0){
+    if(nowj > 1 && arr[nowi+1][nowj-1] == 0)
+    {
         ans[nowi] = 1;
         solve(nowi+1,nowj-1);
     }
-    if(nowj < m && arr[nowi+1][nowj+1] == 0){
+    if(nowj < m && arr[nowi+1][nowj+1] == 0)
+    {
         ans[nowi] = 2;
         solve(nowi+1,nowj+1);
     }
-    if(arr[nowi+1][nowj] == 0){
+    if(arr[nowi+1][nowj] == 0)
+    {
         ans[nowi] = 3;
         solve(nowi+1,nowj);
     }
@@ -37,8 +40,10 @@ void solve(int nowi , int nowj){
 int main(){
     cin.tie(0)->sync_with_stdio(0);
     cin >> m >> s >> n;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=m;j++){
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=m;j++)
+        {
             cin >> arr[i][j];
         }
     }
