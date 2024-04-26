@@ -16,8 +16,5 @@ int main()
             k++;
         }
     }
-    if(k==0) 
-    {
-        printf("no");
-    }
+    if(k==0) printf("no");
 }
