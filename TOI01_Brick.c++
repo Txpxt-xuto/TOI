@@ -8,7 +8,7 @@ CENTER: Home
 using namespace std;
 int main()
 {
-    int M,N,i,j,k,a;
+    int M, N, i, j, k, a;
     cin >> M >> N;
     vector<string> Brick(M);
     for(i=0;i<M;i++) cin >> Brick[i];
