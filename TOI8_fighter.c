@@ -11,7 +11,8 @@ int main()
     int n;
     scanf("%d", &n);
     int ca = 1, cb = 1, a = n, b = n, i = 0, t;
-    while (a > 0 && b > 0 && i < 2*n) {
+    while (a > 0 && b > 0 && i < 2*n) 
+    {
         scanf("%d", &t);
         if (t%2==0)
         {
