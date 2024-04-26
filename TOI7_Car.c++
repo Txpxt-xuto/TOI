@@ -1,8 +1,8 @@
 /*
 TASK: TOI07_car
 LANG: C++
-AUTHOR: Hattakorn Hattakarn(Karnhh._.)
-CENTER: WU
+AUTHOR: Tapt Toungsakul
+CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
