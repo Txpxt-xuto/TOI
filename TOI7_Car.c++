@@ -12,7 +12,8 @@ int arr[44][44];
 int ans[44];
 int n , m , s;
 
-void solve(int nowi , int nowj){
+void solve(int nowi , int nowj)
+{
     if(nowi == n)
     {
         for(int i=0;i<nowi;i++)
