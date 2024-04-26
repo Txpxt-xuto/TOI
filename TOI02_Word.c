@@ -10,7 +10,7 @@ CENTER: Home
 char a[30][30],b[20];
 int main()
 {
-    int m,n,k,i,j,x,y,len,ch=0;
+    int m, n, k, i, j, x, y, len, ch=0;
     scanf("%d %d",&m,&n);
     for(i=0;i<m;i++)
     {
