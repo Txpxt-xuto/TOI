@@ -40,7 +40,8 @@ void solve(int nowi , int nowj)
     return;
 }
 
-int main(){
+int main()
+{
     cin.tie(0)->sync_with_stdio(0);
     cin >> m >> s >> n;
     for(int i=1;i<=n;i++)
