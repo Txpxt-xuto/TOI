@@ -11,7 +11,7 @@ map<char,bool> probability;
 int main()
 {
     int n,m,i;
-    cin>>n>>m;
+    cin >> n >> m;
     for(i=1;i<=n;i++) order.push_back(i+'0');
     for(i=0;i<m;i++)
     {
