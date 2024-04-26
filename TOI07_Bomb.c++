@@ -11,6 +11,7 @@ bool cmp(pii a, pii b)
 {
     if(a.first==b.first) return a.second<b.second;
     return a.first>b.first;
+    
 }
 int main()
 {
