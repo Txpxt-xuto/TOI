@@ -13,8 +13,10 @@ int ans[44];
 int n , m , s;
 
 void solve(int nowi , int nowj){
-    if(nowi == n){
-        for(int i=0;i<nowi;i++){
+    if(nowi == n)
+    {
+        for(int i=0;i<nowi;i++)
+        {
             cout << ans[i] << "\n";
         }
         exit(0);
