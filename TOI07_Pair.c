@@ -45,9 +45,7 @@ void update(double *fwtree,int n,int i,int val)
 
 void merge(int *arr,int l,int m,int r)
 {
-    int n1=m-l+1;
-    int n2=r-m;
-    int p[n1],q[n2];
+    int n1=m-l+1,n2=r-m,p[n1],q[n2];
     for(int i=0; i<n1; i++) p[i]=arr[l+i];
     for(int i=0; i<n2; i++) q[i]=arr[m+1+i];
     int i=0,j=0,k=0;
