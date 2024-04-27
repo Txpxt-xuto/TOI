@@ -6,7 +6,6 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-
 char c1,c2,cc1,cc2;
 int n, i, j, par[100], a, b;
 double dis[100][100];

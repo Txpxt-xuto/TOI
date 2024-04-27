@@ -9,7 +9,6 @@ using namespace std;
 string treasure;
 int main()
 {
-
     double x=0,y=0,dis;
     while(true)
     {

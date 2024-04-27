@@ -11,10 +11,7 @@ int main()
     scanf("%d",&n);
     if(n<=10 && n>=1)
     {int a[n],b[n],c[n],d[n],e[n];
-        for(i=0;i<n;i++)
-        {
-            scanf("%d %d %d %d %d",&a[i],&b[i],&c[i],&d[i],&e[i]);
-        }
+        for(i=0;i<n;i++) scanf("%d %d %d %d %d",&a[i],&b[i],&c[i],&d[i],&e[i]);
         for(i=0;i<n;i++)
         {
             A+=a[i];
@@ -29,13 +26,7 @@ int main()
         D*=250;
         E*=125;
         cake=A+B+C+D+E;
-        if((cake%1000)!=0)
-        {
-            printf("%d",(cake/1000)+1);
-        }
-        else
-        {
-            printf("%d",(cake/1000));
-        }
+        if((cake%1000)!=0) printf("%d",(cake/1000)+1);
+        else printf("%d",(cake/1000));
     }
 }

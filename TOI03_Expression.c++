@@ -12,13 +12,10 @@ using namespace std;
 int main()
 {
     ios_base::sync_with_stdio(0); cin.tie(0);
-
     string s;
     int n;
     vector<int> a;
-
     cin >> s >> n;
-
     while(n--)
     {
         int l = 0,r = s.length()-1,x;
@@ -66,7 +63,11 @@ int main()
                 {
                     if(s[i]=='(') o++;
                     if(s[i]==')') c++;
-                    if(cnt>=x and s[i]=='+' and c==o){ nr = i-1; break; }
+                    if(cnt>=x and s[i]=='+' and c==o)
+                    {   
+                        nr = i-1; 
+                        break; 
+                    }
                     if(cnt==x) nr = i;
                     if(s[i]=='+' and c==o)
                     {
@@ -81,7 +82,11 @@ int main()
                 {
                     if(s[i]=='(') o++;
                     if(s[i]==')') c++;
-                    if(cnt>=x and s[i]=='*' and c==o){ nr = i-1; break; }
+                    if(cnt>=x and s[i]=='*' and c==o)
+                    {   
+                        nr = i-1; 
+                        break; 
+                    }
                     if(cnt==x) nr = i;
                     if(s[i]=='*' and c==o)
                     {
@@ -96,7 +101,11 @@ int main()
                 {
                     if(s[i]=='(') o++;
                     if(s[i]==')') c++;
-                    if(cnt>=x and s[i]=='^' and c==o){ nr = i-1; break; }
+                    if(cnt>=x and s[i]=='^' and c==o)
+                    {   
+                        nr = i-1; 
+                        break; 
+                    }
                     if(cnt==x) nr = i;
                     if(s[i]=='^' and c==o)
                     {

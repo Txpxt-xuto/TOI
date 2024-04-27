@@ -24,10 +24,7 @@ int main()
         for(j=0;j<3;j++)
         {
             k = (input[j]+k-2)%9 + 1;
-            if(j==0 || j==2)
-            {
-                input[j]= ((input[j])+code[j]-1)%9+1;
-            }
+            if(j==0 || j==2) input[j]= ((input[j])+code[j]-1)%9+1;
         }
         input[1] = input[1]==1?9:input[1]-1;
         printf("%d",k);

@@ -44,8 +44,8 @@ void land(int deep,double cur)
 }
 int main()
 {
-    cin>>m>>n;
-    for(i=1;i<=m;i++)for(j=1;j<=n;j++) cin>>a[i][j];
+    cin >> m >> n;
+    for(i=1;i<=m;i++)for(j=1;j<=n;j++) cin >> a[i][j];
     land(0,0);
     cout << fixed<<setprecision(2) << mini;
 }

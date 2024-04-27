@@ -9,7 +9,6 @@ CENTER: Home
 #include <string>
 using namespace std;
 string bit,input,p;
-
 char check(string s)
 {
     if(s=="01000001") cout << 'A';
@@ -38,10 +37,8 @@ char check(string s)
     else if(s=="01011000")cout << 'X';
     else if(s=="01011001")cout << 'Y';
     else if(s=="01011010")cout << 'Z';
-
     return 0;
 }
-
 int main()
 {
     int N,i,j;
@@ -99,10 +96,7 @@ int main()
     for(j=0;j<input.length();j+=8)
     {
         p={};
-        for(i=0;i<8;i++)
-        {
-            p+=input[i+j];
-        }
+        for(i=0;i<8;i++) p+=input[i+j];
         check(p);
     }
 }

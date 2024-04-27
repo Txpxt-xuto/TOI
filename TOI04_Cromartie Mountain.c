@@ -11,7 +11,8 @@ int main()
     scanf("%d",&n);
     int len = 0, hei = 0, s[n], h[n];
     char map[hei][len];
-    for(i=0;i<n;i++) {
+    for(i=0;i<n;i++) 
+    {
         scanf("%d%d",&s[i],&h[i]);
         s[i]--;
         len = len > s[i] - 1 + 2*h[i] ? len : s[i] - 1 + 2*h[i];
