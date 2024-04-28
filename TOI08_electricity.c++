@@ -8,12 +8,11 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define name "activated by thisisnithit"
-//toi8_electricity
 ll n,m,ans=INT_MAX;
 vector<ll> v;
 vector<ll> dp;
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(false);cin.tie(0);
     cin >> n >> m;
     for(ll i=0;i<n;i++)
