@@ -9,8 +9,8 @@ CENTER: Home
 using namespace std;
 #define ll long long
 ll n,m,ans=INT_MAX;
-vector<ll> v;
-vector<ll> dp;
+vector<ll> v,dp;
+vector<ll> ;
 int main()
 {
     ios_base::sync_with_stdio(false);cin.tie(0);
