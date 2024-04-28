@@ -7,24 +7,28 @@ CENTER: Home
 */ 
 #include <bits/stdc++.h>
 using namespace std;
-
-int main()
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    int n,m;
+#define ll long long
+#define name "activated by thisisnithit"
+//toi8_electricity
+ll n,m,ans=INT_MAX;
+vector<ll> v;
+vector<ll> dp;
+int main(){
+    ios_base::sync_with_stdio(false);cin.tie(0);
     cin >> n >> m;
-    vector<int> a(n),v(n,INT_MAX);
-    priority_queue<pair<int,int>,vector<pair<int,int> >,greater<pair<int,int> > > pq;
-    for(int i=0;i<n;i++)cin >> a[i];
-    pq.push({a[0],0});
-    while(v[n-1]==INT_MAX)
-    {
-        int cost=pq.top().first,pos=pq.top().second;
-        pq.pop();
-        v[pos]=cost;
-        for(int i=1;i<=m;i++)if(pos+i<n&&cost+a[pos+i]<v[pos+i])pq.push({cost+a[pos+i],pos+i});
+    for(ll i=0;i<n;i++){
+        ll x;cin >> x;
+        v.push_back(x);
     }
-    cout << v[n-1];
+    dp.assign(n+9,INT_MAX);
+    dp[0]=v[0];
+    for(int i=1;i<n;i++){
+        for(int j=1;j<=m;j++){
+            if(i-j>=0){
+                dp[i]=min(dp[i],v[i]+dp[i-j]);
+            }
+        }
+    }
+    cout << dp[n-1];
     return 0;
 }
