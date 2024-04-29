@@ -8,7 +8,7 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-ll n,m,ans=INT_MAX;
+ll n,m,x,ans=INT_MAX;
 vector<ll> v,dp;
 int main()
 {
@@ -17,7 +17,6 @@ int main()
     cin >> n >> m;
     for(ll i=0;i<n;i++)
     {
-        ll x;
         cin >> x;
         v.push_back(x);
     }
