@@ -2,15 +2,16 @@
 #include <math.h>
 int generatebit(int d, int arr[], int i, int memory[])
 {
-    int k;
+    
     if(i == d) 
     {
         for(int j = 0; j < d-1; j++) 
         {
-            return memory[k];
+            return memory;
         }
         return;
     }
+    int k;
     arr[i] = 0;
     generatebit(d, arr, i + 1, memory);
     k++;
