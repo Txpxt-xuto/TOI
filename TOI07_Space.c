@@ -2,7 +2,7 @@
 int main()
 {
     int d,i,j,k;
-    int arr[d];
+    int arrtogenerate[d],arrtostock[d];
     scanf("%d",&d);
-    generateAllBinaryStrings(n, arr, 0);
+    (d, arrgenerate, 0);
 }
