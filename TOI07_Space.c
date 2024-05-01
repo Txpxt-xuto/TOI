@@ -6,9 +6,9 @@ void stock(int arr[], int d)
     {
         for(int j = 0; j < d; j++) 
         {
-            if(arr[i+1]-arr[i]==10)
+            if(arr[i+1]-arr[i]==pow(10, j))
             {
-
+                printf("%d %d\n",arr[i],arr[i+1]);
             }
         }
     }
