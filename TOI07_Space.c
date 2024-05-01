@@ -1,7 +1,12 @@
 #include <stdio.h>
+int d;
+int memory[d];
 void stock(int arr[], int n)
 {
-    
+    for (int i = 0; i < n; i++) 
+    {
+        cout << arr[i] << " ";
+    }
 }
 void generatebit(int n, int arr[], int i)
 {
@@ -17,7 +22,6 @@ void generatebit(int n, int arr[], int i)
 }
 int main()
 {
-    int d;
     int arr[d];
     scanf("%d",&d);
     generatebit(d, arr, 0);
