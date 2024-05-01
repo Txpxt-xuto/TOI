@@ -1,21 +1,21 @@
 #include <stdio.h>
-void generatebit(int n, int arrtogenerate[], int i)
+void generatebit(int n, int arr[], int i)
 {
     if (i == n) 
     {
-        printTheArray(arrtogenerate, n);
+        printTheArray(arr, n);
         return;
     }
-    arrtogenerate[i] = 0;
-    generatebit(n, arrtogenerate, i + 1);
+    arr[i] = 0;
+    generatebit(n, arr, i + 1);
     arr[i] = 1;
-    generatebit(n, arrtogenerate, i + 1);
+    generatebit(n, arr, i + 1);
 }
 int main()
 {
     int d;
     int arrtogenerate[d],arrtostock[d];
     scanf("%d",&d);
-    generatebit(d, arrgenerate, 0);
+    generatebit(d, arrtogenerate, 0);
     return 0;
 }
