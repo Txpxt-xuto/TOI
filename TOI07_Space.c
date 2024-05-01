@@ -1,9 +1,13 @@
 #include <stdio.h>
+void stock(int arr[], int n)
+{
+    
+}
 void generatebit(int n, int arr[], int i)
 {
     if (i == n) 
     {
-        printTheArray(arr, n);
+        stock(arr, n);
         return;
     }
     arr[i] = 0;
@@ -14,8 +18,8 @@ void generatebit(int n, int arr[], int i)
 int main()
 {
     int d;
-    int arrtogenerate[d],arrtostock[d];
+    int arr[d];
     scanf("%d",&d);
-    generatebit(d, arrtogenerate, 0);
+    generatebit(d, arr, 0);
     return 0;
 }
