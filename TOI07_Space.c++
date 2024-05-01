@@ -1,29 +1,35 @@
+/*
+TASK: space
+LANG: C++
+AUTHOR: Tapat Toungsakul
+CENTER: home
+*/
 #include <iostream>
 using namespace std;
-int d;
-void generatebit(int n, char s[])
+int d,i;
+void generatebit(int n, string m)
 {
     if(n==d) 
     {
-        for(int i=d-1;i>=0;i--) 
+        for(i=d-1;i>=0;i--) 
         {
-            if(s[i]=='0') 
+            if(m[i]=='0') 
             {
-                cout << s << " "; 
-                s[i]='1'; 
-                cout << s << endl; 
-                s[i]='0';
+                cout << m << " "; 
+                m[i]='1'; 
+                cout << m << endl; 
+                m[i]='0';
             }
         }
     }
     else
     {
-        generatebit(n+1,s+'0');
-        generatebit(n+1,s+'1');
+        generatebit(n+1,m+'0');
+        generatebit(n+1,m+'1');
     }
 }
 int main()
 {
     cin >> d;
-    generatebit(d,"");
+    generatebit(0,"");
 }
