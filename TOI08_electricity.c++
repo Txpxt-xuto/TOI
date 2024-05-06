@@ -20,8 +20,6 @@ int main()
         cin >> x;
         v.push_back(x);
     }
-    dp.assign(n+9,INT_MAX);
-    dp[0]=v[0];
 
 
 }
