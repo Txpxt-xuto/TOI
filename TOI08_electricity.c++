@@ -21,11 +21,13 @@ int main(){
     int n, k;
     cin >> n >> k;
     int arr[n];
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++)
+    {
         cin >> arr[i];
     }
     pq.push(make_pair(0, arr[0]));
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         pair<int, int> cell = pq.top();
         pq.pop();
         if(cell.first == n-1)
