@@ -28,12 +28,15 @@ int main(){
     while(!pq.empty()){
         pair<int, int> cell = pq.top();
         pq.pop();
-        if(cell.first == n-1){
+        if(cell.first == n-1)
+        {
             cout << cell.second;
             break;
         }
-        for(int i = 1; i <= k; i++){
-            if(cell.first + i < n){
+        for(int i = 1; i <= k; i++)
+        {
+            if(cell.first + i < n)
+            {
                 pq.push(make_pair(cell.first + i, cell.second + arr[cell.first + i]));
             }
         }
