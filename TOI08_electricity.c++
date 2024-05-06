@@ -8,7 +8,6 @@ CENTER: Home
 #include<bits/stdc++.h>
 using namespace std;
 const int N=5e5+10;
-
 int main()
 {
 	ios_base::sync_with_stdio(0);
