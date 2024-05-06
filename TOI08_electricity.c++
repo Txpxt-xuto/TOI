@@ -7,14 +7,12 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-
 struct cmp
 {
     bool operator()(const pair<int, int> &l, const pair<int,int> &r) const{
         return l.second > r.second;
     }
 };
-
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -36,10 +34,7 @@ int main()
         }
         for(int i = 1; i <= k; i++)
         {
-            if(cell.first + i < n)
-            {
-                pq.push(make_pair(cell.first + i, cell.second + arr[cell.first + i]));
-            }
+            if(cell.first + i < n) pq.push(make_pair(cell.first + i, cell.second + arr[cell.first + i]));
         }
     }
 }
