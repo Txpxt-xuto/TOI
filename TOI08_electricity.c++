@@ -16,9 +16,10 @@ int main()
 	cin.tie(0);
 	int n, k;
 	cin >> n >> k;
-	for(int i=1;i<=n;i++) cin>>arr[i];
+	for(int i=1;i<=n;i++) cin >> arr[i];
 	dq.push_back(make_pair(arr[1],1));
-	for(int i=2;i<=n;i++){
+	for(int i=2;i<=n;i++)
+    {
 		while(!dq.empty() && dq.front().second<=i-k-1) dq.pop_front();
 		while(!dq.empty() && dq.back().first>dq.front().first+arr[i]) dq.pop_back();
 		dq.push_back(make_pair(dq.front().first+arr[i],i));
