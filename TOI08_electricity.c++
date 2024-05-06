@@ -14,7 +14,7 @@ struct cmp
         return l.second > r.second;
     }
 };
-int main()
+int main()//this code is not work
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
