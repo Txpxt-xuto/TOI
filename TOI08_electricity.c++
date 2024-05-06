@@ -22,10 +22,6 @@ int main()
     }
     dp.assign(n+9,INT_MAX);
     dp[0]=v[0];
-    for(int i=1;i<n;i++)
-    {
-        for(int j=1;j<=m;j++) if(i-j>=0) dp[i]=min(dp[i],v[i]+dp[i-j]);
-    }
-    cout << dp[n-1];
+
 
 }
