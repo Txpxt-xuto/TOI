@@ -7,7 +7,7 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-struct cmp
+struct cmpint n, k;
 {
     bool operator()(const pair<int, int> &l, const pair<int,int> &r) const{
         return l.second > r.second;
@@ -18,7 +18,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     priority_queue<pair<int,int>, vector<pair<int,int>>, cmp> pq;
-    int n, k;
+    
     cin >> n >> k;
     int arr[n];
     for(int i = 0; i < n; i++) cin >> arr[i];
