@@ -32,9 +32,6 @@ int main()
             cout << cell.second;
             break;
         }
-        for(int i = 1; i <= k; i++)
-        {
-            if(cell.first + i < n) pq.push(make_pair(cell.first + i, cell.second + arr[cell.first + i]));
-        }
+        for(int i = 1; i <= k; i++) if(cell.first + i < n) pq.push(make_pair(cell.first + i, cell.second + arr[cell.first + i]));
     }
 }
