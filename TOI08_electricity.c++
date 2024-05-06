@@ -27,5 +27,5 @@ int main()
         for(int j=1;j<=m;j++) if(i-j>=0) dp[i]=min(dp[i],v[i]+dp[i-j]);
     }
     cout << dp[n-1];
-    return 0;
+
 }
