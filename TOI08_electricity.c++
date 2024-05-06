@@ -8,7 +8,8 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 
-struct cmp{
+struct cmp
+{
     bool operator()(const pair<int, int> &l, const pair<int,int> &r) const{
         return l.second > r.second;
     }
