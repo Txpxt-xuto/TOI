@@ -20,7 +20,7 @@ int main()
     {
         for(j=0;j<N-K+1;j++) 
         {
-            for(int x=i0;x<K;x++)
+            for(int x=i;x<K;x++)
             {
                 for(int y=j;y<K;y++) 
                 {
