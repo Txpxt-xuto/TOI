@@ -24,7 +24,7 @@ int main()
             {
                 for(int y=0;y<K;y++) 
                 {
-                    sum[x][yj]
+                    max+=sum[]
                 }
             }
         }
