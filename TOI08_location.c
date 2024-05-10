@@ -31,10 +31,7 @@ int main()
                     max+=arr[x][y];
                 }
             }
-            if(max>k)
-            {
-                k=max;
-            }
+            if(max>k) k=max;
         }
     }
     printf("%d",k);
