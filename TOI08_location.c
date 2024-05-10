@@ -14,9 +14,6 @@ int main()
     int arr[M][N];
     for(i=0;i<M;i++)
     {
-        for(j=0;j<N;j++)
-        {
-            scanf("%d",&arr[i][j]);
-        }
+        for(j=0;j<N;j++) scanf("%d",&arr[i][j]);
     }
 }
