@@ -19,13 +19,5 @@ int main()
             scanf("%d",&arr[i][j]);
         }
     }
-    for(i=0;i<M;i++)
-    {
-        for(j=0;j<N;j++)
-        {
-            printf("%d ",arr[i][j]);
-        }
-        printf("\n");
-    }
 
 }
