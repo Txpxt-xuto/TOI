@@ -16,11 +16,15 @@ int main()
     {
         for(j=0;j<N;j++) scanf("%d",&arr[i][j]);
     }
-    for(i=0;i<M;i++)
+    for(i=0;i<M-K+1;i++)
     {
-        for(j=0;j<N;j++) 
+        for(j=0;j<N-K+1;j++) 
         {
-            scanf("%d",&arr[i][j]);
+            if()
+            {
+                
+            }
         }
+
     }
 }
