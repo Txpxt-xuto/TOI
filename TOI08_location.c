@@ -8,6 +8,7 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int M,N;
+    int M,N,K;
     scanf("%d %d",&M,&N);
+    scanf("%d",&K);
 }
