@@ -20,11 +20,11 @@ int main()
     {
         for(j=0;j<N-K+1;j++) 
         {
-            for(int x=0;x<K;x++)
+            for(int x=i0;x<K;x++)
             {
-                for(int y=0;y<K;y++) 
+                for(int y=j;y<K;y++) 
                 {
-                    max+=sum[]
+                    max+=sum[i][j];
                 }
             }
         }
