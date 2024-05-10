@@ -8,10 +8,10 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int M,N,K,i,j;
+    int M,N,K,i,j,k;
     scanf("%d %d",&M,&N);
     scanf("%d",&K);
-    int arr[M][N],sum[K][K];
+    int arr[M][N];
     for(i=0;i<M;i++)
     {
         for(j=0;j<N;j++) 
@@ -28,10 +28,14 @@ int main()
             {
                 for(int y=j;y<j+K;y++) 
                 {
-                    max+=sum[x][y];
+                    max+=arr[x][y];
                 }
             }
-            printf("%d\n",max);
+            if(max>k)
+            {
+                k=max;
+            }
         }
     }
+    printf("%d",k);
 }
