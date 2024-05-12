@@ -42,9 +42,9 @@ void play(int mocnt,int kecnt,int cacnt,int store,int cntall)
 int main(){ 
     scanf("%d %d %d %d %d",&n,&arr[0].x,&arr[0].y,&arr[0].z,&m);
     int i;
-    for(i=1;i<=m;i++)
+    for(i=1;i<=m;i++) scanf("%d %d %d %d %d %d",&arr[i].x,&arr[i].y,&arr[i].z,&arr[i].mo,&arr[i].ke,&arr[i].ca);
     {
-        scanf("%d %d %d %d %d %d",&arr[i].x,&arr[i].y,&arr[i].z,&arr[i].mo,&arr[i].ke,&arr[i].ca);
+        
     }
     for(i=1;i<=m;i++)
     {
