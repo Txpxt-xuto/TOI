@@ -21,15 +21,17 @@ void play(int mocnt,int kecnt,int cacnt,int store,int cntall){
     mocnt += arr[store].mo;
     kecnt += arr[store].ke;
     cacnt += arr[store].ca;
-    if(mocnt >= n && kecnt >= n && cacnt >= n){
-        if(cntall < mnn){
+    if(mocnt >= n && kecnt >= n && cacnt >= n)
+    {
+        if(cntall < mnn)
+        {
             mnn = cntall;
         }
         return ;
     }
     int i;
-    
-    for(i=1;i<=m;i++){
+    for(i=1;i<=m;i++)
+    {
         if(ch[i] == 1) continue;
         ch[i] = 1;
         play(mocnt,kecnt,cacnt,i,cntall+dis(i,store));
