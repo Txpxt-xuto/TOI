@@ -9,9 +9,6 @@ int main()
     {
       scanf("%d %d",&z[i],&n[i]);
       if(n[i]*2>z[i]||z[i]%2!=0||n[i]==0||z[i]==0||n[i]<(z[i]-n[i]*2)/2) printf("%d\n",0);
-      {
-
-      }
       else printf("%d\n",n[i]-((z[i]-n[i]*2)/2)+1);
     }
   }
