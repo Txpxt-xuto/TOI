@@ -12,7 +12,7 @@ struct store
 {
     int x,y,z;
     int mo,ke,ca;
-} arr[15];
+}arr[15];
 
 int dis(int i,int j)
 {
