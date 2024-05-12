@@ -1,7 +1,7 @@
 /*
 TASK: pipe.cpp
 LANG: C++
-COMPILER: WCB
+COMPILER: VS code
 AUTHOR: Tapat Toungkul
 ID: none
 */
