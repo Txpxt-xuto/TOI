@@ -14,6 +14,6 @@ def sport(n,w,l,str):
     sport(n,w,l+1,str+'L')
 
 k=int(input())
-a=int(input())
-b=int(input())
-sport(k,a,b,"")
+teama=int(input())
+teamb=int(input())
+sport(k,teama,teamb,"")
