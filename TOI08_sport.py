@@ -1,7 +1,7 @@
 """
 TASK: sport.c
-LANG: C
-COMPILER: WCB
+LANG: Python
+COMPILER: VS code
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 """
