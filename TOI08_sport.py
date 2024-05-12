@@ -3,7 +3,7 @@ TASK: sport.c
 LANG: C
 COMPILER: WCB
 AUTHOR: YourName YourLastName
-CENTER: 
+CENTER: Home
 """
 def sport(n,w,l,str):
     if(w==n or l==n): 
