@@ -1,5 +1,5 @@
 """
-TASK: sport.c
+TASK: sport.py
 LANG: Python
 COMPILER: VS code
 AUTHOR: Tapat Toungsakul
