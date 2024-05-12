@@ -1,8 +1,8 @@
 /*
 TASK: fortress.c
 LANG: C
-AUTHOR: 
-CENTER: Center
+AUTHOR: Tapat Toungsakul
+CENTER: Home
 */
 #include <stdio.h>
 int main() 
