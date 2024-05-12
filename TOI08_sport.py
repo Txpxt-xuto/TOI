@@ -2,7 +2,7 @@
 TASK: sport.c
 LANG: C
 COMPILER: WCB
-AUTHOR: YourName YourLastName
+AUTHOR: Tapat Toungsakul
 CENTER: Home
 """
 def sport(n,w,l,str):
