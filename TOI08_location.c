@@ -9,8 +9,7 @@ CENTER: Home
 int main()
 {
     int M,N,K,i,j,k;
-    scanf("%d %d",&M,&N);
-    scanf("%d",&K);
+    scanf("%d %d\n%d",&M,&N,&K);
     int arr[M][N];
     for(i=0;i<M;i++)
     {
