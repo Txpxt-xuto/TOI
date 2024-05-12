@@ -14,10 +14,7 @@ int main()
     int arr[M][N];
     for(i=0;i<M;i++)
     {
-        for(j=0;j<N;j++) 
-        {
-            scanf("%d",&arr[i][j]);
-        }
+        for(j=0;j<N;j++) scanf("%d",&arr[i][j]);
     }
     for(i=0;i<M-K+1;i++)
     {
@@ -26,10 +23,7 @@ int main()
             int max=0;
             for(int x=i;x<i+K;x++)
             {
-                for(int y=j;y<j+K;y++) 
-                {
-                    max+=arr[x][y];
-                }
+                for(int y=j;y<j+K;y++) max+=arr[x][y];
             }
             if(max>k) k=max;
         }
