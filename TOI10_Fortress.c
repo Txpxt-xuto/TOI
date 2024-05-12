@@ -1,7 +1,7 @@
 /*
 TASK: fortress.c
 LANG: C
-AUTHOR: YourName YourLastName
+AUTHOR: 
 CENTER: YourCenter
 */
 #include <stdio.h>
