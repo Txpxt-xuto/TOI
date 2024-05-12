@@ -1,7 +1,7 @@
 /*
 TASK: spaceship.c
 LANG: C
-COMPILER: 
+COMPILER: VS code
 AUTHOR: Tapat Toungkul
 ID: none
 */
