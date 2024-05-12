@@ -2,7 +2,7 @@
 TASK: fortress.c
 LANG: C
 AUTHOR: 
-CENTER: YourCenter
+CENTER: 
 */
 #include <stdio.h>
 int main() 
