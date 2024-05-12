@@ -3,7 +3,7 @@ TASK: spaceship.c
 LANG: C
 COMPILER: 
 AUTHOR: 
-ID: YourCenterID
+ID: 
 */
 #include <stdio.h>
 #include <math.h>
