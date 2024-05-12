@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main() 
 {
   int z[20],n[20];
