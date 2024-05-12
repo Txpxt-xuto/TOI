@@ -2,7 +2,7 @@
 TASK: spaceship.c
 LANG: C
 COMPILER: 
-AUTHOR: YourFirstName YourLastName
+AUTHOR: 
 ID: YourCenterID
 */
 #include <stdio.h>
