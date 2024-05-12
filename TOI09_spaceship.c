@@ -8,16 +8,18 @@
 #define MIN(x,y) x<y?x:y
 
 int n,m,mnn=2e9,ch[15];
-struct store{
+struct stor{
     int x,y,z;
     int mo,ke,ca;
 } arr[15];
 
-int dis(int i,int j){
+int dis(int i,int j)
+{
     return (arr[i].x-arr[j].x)*(arr[i].x-arr[j].x)+(arr[i].y-arr[j].y)*(arr[i].y-arr[j].y)+(arr[i].z-arr[j].z)*(arr[i].z-arr[j].z);
 }
 
-void play(int mocnt,int kecnt,int cacnt,int store,int cntall){
+void play(int mocnt,int kecnt,int cacnt,int store,int cntall)
+{
     mocnt += arr[store].mo;
     kecnt += arr[store].ke;
     cacnt += arr[store].ca;
