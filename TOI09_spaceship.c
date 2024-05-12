@@ -8,7 +8,8 @@
 #define MIN(x,y) x<y?x:y
 
 int n,m,mnn=2e9,ch[15];
-struct stor{
+struct store
+{
     int x,y,z;
     int mo,ke,ca;
 } arr[15];
