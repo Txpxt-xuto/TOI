@@ -1,3 +1,10 @@
+/*
+TASK: spaceship.c
+LANG: C
+COMPILER: 
+AUTHOR: YourFirstName YourLastName
+ID: YourCenterID
+*/
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
