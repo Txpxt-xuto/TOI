@@ -26,10 +26,7 @@ void play(int mocnt,int kecnt,int cacnt,int store,int cntall)
     cacnt += arr[store].ca;
     if(mocnt >= n && kecnt >= n && cacnt >= n)
     {
-        if(cntall < mnn)
-        {
-            mnn = cntall;
-        }
+        if(cntall < mnn) mnn = cntall;
         return ;
     }
     int i;
