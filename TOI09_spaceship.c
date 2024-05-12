@@ -2,8 +2,8 @@
 TASK: spaceship.c
 LANG: C
 COMPILER: 
-AUTHOR: 
-ID: 
+AUTHOR: Tapat Toungkul
+ID: none
 */
 #include <stdio.h>
 #include <math.h>
