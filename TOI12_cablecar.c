@@ -1,41 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #define MAX_SIZE 200005
-
-typedef struct {
+typedef struct 
+{
     int first;
     int second;
 } Pair;
-
-typedef struct {
+typedef struct 
+{
     int first;
     Pair second;
 } Triple;
-
-typedef struct {
+typedef struct 
+{
     Triple *array;
     int size;
 } PriorityQueue;
 
-PriorityQueue* createPriorityQueue(int capacity) {
+PriorityQueue* createPriorityQueue(int capacity) 
+{
     PriorityQueue* pq = (PriorityQueue*)malloc(sizeof(PriorityQueue));
     pq->array = (Triple*)malloc(capacity * sizeof(Triple));
     pq->size = 0;
     return pq;
 }
 
-void swap(Triple* a, Triple* b) {
+void swap(Triple* a, Triple* b) 
+{
     Triple temp = *a;
     *a = *b;
     *b = temp;
 }
 
-void push(PriorityQueue* pq, Triple item) {
+void push(PriorityQueue* pq, Triple item) 
+{
     pq->array[pq->size] = item;
     int i = pq->size;
     pq->size++;
-    while (i > 0 && pq->array[i].first > pq->array[(i - 1) / 2].first) {
+    while (i > 0 && pq->array[i].first > pq->array[(i - 1) / 2].first) 
+    {
         swap(&pq->array[i], &pq->array[(i - 1) / 2]);
         i = (i - 1) / 2;
     }
