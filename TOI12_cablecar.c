@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_SIZE 200005
+int head[MAX_SIZE];
 typedef struct 
 {
     int first;
@@ -70,7 +71,6 @@ void freePriorityQueue(PriorityQueue* pq)
     free(pq);
 }
 
-int head[MAX_SIZE];
 int findhead(int p) 
 {
     if (head[p] == p) return p;
@@ -118,7 +118,6 @@ int main()
             break;
         }
     }
-
     if (passenger % minimum == 0) printf("%lld", passenger / minimum);
     else printf("%lld", passenger / minimum + 1);
     return 0;
