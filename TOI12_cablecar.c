@@ -44,12 +44,14 @@ void push(PriorityQueue* pq, Triple item)
     }
 }
 
-Triple pop(PriorityQueue* pq) {
+Triple pop(PriorityQueue* pq) 
+{
     Triple item = pq->array[0];
     pq->size--;
     pq->array[0] = pq->array[pq->size];
     int i = 0;
-    while (2 * i + 1 < pq->size) {
+    while (2 * i + 1 < pq->size) 
+    {
         int leftChild = 2 * i + 1;
         int rightChild = 2 * i + 2;
         int maxIndex = i;
