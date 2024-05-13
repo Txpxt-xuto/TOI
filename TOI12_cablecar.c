@@ -1,3 +1,9 @@
+/*
+TASK: cablecar.c
+LANG: C
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_SIZE 200005
