@@ -62,8 +62,6 @@ Triple pop(PriorityQueue* pq)
             maxIndex = rightChild;
         }
         if (maxIndex == i) break;
-            
-        }
         swap(&pq->array[i], &pq->array[maxIndex]);
         i = maxIndex;
     }
