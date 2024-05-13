@@ -55,12 +55,8 @@ Triple pop(PriorityQueue* pq)
         int leftChild = 2 * i + 1;
         int rightChild = 2 * i + 2;
         int maxIndex = i;
-        if (pq->array[leftChild].first > pq->array[maxIndex].first) {
-            maxIndex = leftChild;
-        }
+        if (pq->array[leftChild].first > pq->array[maxIndex].first) maxIndex = leftChild;
         if (rightChild < pq->size && pq->array[rightChild].first > pq->array[maxIndex].first) maxIndex = rightChild;
-
-        }
         if (maxIndex == i) break;
         swap(&pq->array[i], &pq->array[maxIndex]);
         i = maxIndex;
