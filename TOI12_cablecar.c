@@ -64,33 +64,34 @@ Triple pop(PriorityQueue* pq)
     return item;
 }
 
-void freePriorityQueue(PriorityQueue* pq) {
+void freePriorityQueue(PriorityQueue* pq) 
+{
     free(pq->array);
     free(pq);
 }
 
 int head[MAX_SIZE];
-
-int findhead(int p) {
+int findhead(int p) 
+{
     if (head[p] == p) return p;
     return head[p] = findhead(head[p]);
 }
 
-void unionhead(int ip, int fp) {
+void unionhead(int ip, int fp) 
+{
     ip = findhead(ip);
     fp = findhead(fp);
     head[fp] = ip;
 }
 
-int main() {
-    int n, m;
+int main() 
+{
+    int n, m, i;
     scanf("%d%d", &n, &m);
-
-    for (int i = 1; i <= n; i++) head[i] = i;
-
+    for(i = 1; i <= n; i++) head[i] = i;
     PriorityQueue* pq = createPriorityQueue(m);
-
-    for (int i = 0; i < m; i++) {
+    for(i = 0; i < m; i++) 
+    {
         int x, y, z;
         scanf("%d%d%d", &x, &y, &z);
         Triple trip;
