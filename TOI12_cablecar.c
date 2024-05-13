@@ -100,20 +100,20 @@ int main()
         trip.second.second = y;
         push(pq, trip);
     }
-
     int s, d;
     long long passenger;
     scanf("%d%d%lld", &s, &d, &passenger);
-
     int minimum;
-    while (1) {
+    while (1) 
+    {
         Triple trip = pop(pq);
         int ip = trip.second.first;
         int fp = trip.second.second;
         int w = trip.first;
         if (findhead(ip) == findhead(fp)) continue;
         unionhead(ip, fp);
-        if (findhead(s) == findhead(d)) {
+        if (findhead(s) == findhead(d)) 
+        {
             minimum = w - 1;
             break;
         }
