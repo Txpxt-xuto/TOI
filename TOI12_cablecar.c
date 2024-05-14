@@ -92,13 +92,13 @@ void unionhead(int ip, int fp)
 
 int main() 
 {
-    int n, m, i, s, d;
+    int n, m, i, s, d, x, y, z;
     scanf("%d%d", &n, &m);
     for(i = 1; i <= n; i++) head[i] = i;
     PriorityQueue* pq = createPriorityQueue(m);
     for(i = 0; i < m; i++) 
     {
-        int x, y, z;
+        int ;
         scanf("%d%d%d", &x, &y, &z);
         Triple trip;
         trip.first = z;
