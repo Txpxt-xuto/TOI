@@ -79,6 +79,7 @@ void solve(int p,int x,int y,int d)
         }
     }
 }
+
 int main()
 {
     int r,c,i,j;
