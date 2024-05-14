@@ -106,7 +106,7 @@ int main()
         trip.second.second = y;
         push(pq, trip);
     }
-    int ;    long long passenger;
+    long long passenger;
     scanf("%d%d%lld", &s, &d, &passenger);
     int minimum;
     while (1) 
