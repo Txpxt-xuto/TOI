@@ -92,7 +92,7 @@ void unionhead(int ip, int fp)
 
 int main() 
 {
-    int n, m, i;
+    int n, m, i, s, d;
     scanf("%d%d", &n, &m);
     for(i = 1; i <= n; i++) head[i] = i;
     PriorityQueue* pq = createPriorityQueue(m);
@@ -106,8 +106,7 @@ int main()
         trip.second.second = y;
         push(pq, trip);
     }
-    int s, d;
-    long long passenger;
+    int ;    long long passenger;
     scanf("%d%d%lld", &s, &d, &passenger);
     int minimum;
     while (1) 
