@@ -14,7 +14,7 @@ ID: none
 #define MAX(x,y) x>y?x:y
 #define MIN(x,y) x<y?x:y
 
-int n,m,mnn=2e9,ch[15];
+int i,n,m,mnn=2e9,ch[15];
 struct store
 {
     int x,y,z;
@@ -36,7 +36,6 @@ void play(int mocnt,int kecnt,int cacnt,int store,int cntall)
         if(cntall < mnn) mnn = cntall;
         return ;
     }
-    int i;
     for(i=1;i<=m;i++)
     {
         if(ch[i] == 1) continue;
