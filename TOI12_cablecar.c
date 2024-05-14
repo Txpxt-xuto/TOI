@@ -98,7 +98,6 @@ int main()
     PriorityQueue* pq = createPriorityQueue(m);
     for(i = 0; i < m; i++) 
     {
-        int ;
         scanf("%d%d%d", &x, &y, &z);
         Triple trip;
         trip.first = z;
