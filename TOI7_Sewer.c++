@@ -17,7 +17,6 @@ int n,m,mi=INT_MAX;
 queue<pair<pii,int>> q;
 int mii,mij;
 const int di[]={1,0,-1,0},dj[]={0,1,0,-1};
-
 int main()
 {
     cin >> n >> m;
