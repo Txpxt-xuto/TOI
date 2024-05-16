@@ -14,7 +14,8 @@ queue<pair<pii,int>> q;
 int mii,mij;
 const int di[]={1,0,-1,0},dj[]={0,1,0,-1};
 
-int main(){android
+int main()
+{
     cin >> n >> m;
     for(int i=1;i<=n;i++)for(int j=1;j<=m;j++) cin >> a[i][j],visited[i][j]=1e9;
     q.push({{1,1},visited[1][1]=1});
