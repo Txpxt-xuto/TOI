@@ -5,8 +5,6 @@ using namespace std;
 typedef long long ll;
 #define android ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 #define pii pair<int,int>
-
-
 char a[110][110];
 int visited[110][110];
 int n,m,mi=INT_MAX;
