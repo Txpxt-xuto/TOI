@@ -1,4 +1,9 @@
-
+/*
+TASK: sewer
+LANG: C++
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/ 
 #include <bits/stdc++.h>
 using namespace std;
 #define  en '\n'
