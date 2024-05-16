@@ -1,7 +1,7 @@
 /*
 TASK: sewer
 LANG: C++
-AUTHOR: YourName YourLastName
+AUTHOR: Tapat Toungsakul
 CENTER: Home
 */ 
 #include <bits/stdc++.h>
