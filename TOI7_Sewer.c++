@@ -23,8 +23,8 @@ int main(){android
         int i=q.front().first.first,j=q.front().first.second,d=q.front().second;
         q.pop();
         
-        for(int k=0;k<4;k++){
-            
+        for(int k=0;k<4;k++)
+        {
             int ik=i+di[k];
             int jk=j+dj[k];
             if(ik<1||jk<1||ik>n||jk>m)continue;
