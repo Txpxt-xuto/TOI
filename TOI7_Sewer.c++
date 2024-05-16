@@ -40,6 +40,5 @@ int main(){android
             q.push({{ik,jk},d+1});
         }
     }
-
     return 0;
 }
