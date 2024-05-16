@@ -16,21 +16,20 @@ const int di[]={1,0,-1,0},dj[]={0,1,0,-1};
 
 int main(){android
     cin >> n >> m;
-    for(int i=1;i<=n;i++)for(int j=1;j<=m;j++)cin >> a[i][j],visited[i][j]=1e9;
+    for(int i=1;i<=n;i++)for(int j=1;j<=m;j++) cin >> a[i][j],visited[i][j]=1e9;
     q.push({{1,1},visited[1][1]=1});
     while (!q.empty())
     {
         int i=q.front().first.first,j=q.front().first.second,d=q.front().second;
         q.pop();
-        
         for(int k=0;k<4;k++)
         {
             int ik=i+di[k],jk=j+dj[k];
             if(ik<1||jk<1||ik>n||jk>m)continue;
-            if(di[k]==1&&(a[i][j]!='D'&&a[i][j]!='B'))continue;
-            if(di[k]==-1&&(a[ik][jk]!='D'&&a[ik][jk]!='B'))continue;
-            if(dj[k]==1&&(a[i][j]!='R'&&a[i][j]!='B'))continue;
-            if(dj[k]==-1&&(a[ik][jk]!='R'&&a[ik][jk]!='B'))continue;
+            if(di[k]==1&&(a[i][j]!='D'&&a[i][j]!='B')) continue;
+            if(di[k]==-1&&(a[ik][jk]!='D'&&a[ik][jk]!='B')) continue;
+            if(dj[k]==1&&(a[i][j]!='R'&&a[i][j]!='B')) continue;
+            if(dj[k]==-1&&(a[ik][jk]!='R'&&a[ik][jk]!='B')) continue;
             if(visited[ik][jk]<d+1)continue;
             if(visited[ik][jk]==d+1)
             {
