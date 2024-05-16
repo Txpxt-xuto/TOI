@@ -25,8 +25,7 @@ int main(){android
         
         for(int k=0;k<4;k++)
         {
-            int ik=i+di[k];
-            int jk=j+dj[k];
+            int ik=i+di[k],jk=j+dj[k];
             if(ik<1||jk<1||ik>n||jk>m)continue;
             if(di[k]==1&&(a[i][j]!='D'&&a[i][j]!='B'))continue;
             if(di[k]==-1&&(a[ik][jk]!='D'&&a[ik][jk]!='B'))continue;
