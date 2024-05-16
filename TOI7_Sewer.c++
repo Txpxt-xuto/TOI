@@ -32,7 +32,8 @@ int main(){android
             if(dj[k]==1&&(a[i][j]!='R'&&a[i][j]!='B'))continue;
             if(dj[k]==-1&&(a[ik][jk]!='R'&&a[ik][jk]!='B'))continue;
             if(visited[ik][jk]<d+1)continue;
-            if(visited[ik][jk]==d+1){
+            if(visited[ik][jk]==d+1)
+            {
                 cout << d+1 << en << ik << sp << jk;
                 return 0;
             }
