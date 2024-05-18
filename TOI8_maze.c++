@@ -27,7 +27,7 @@ void bfs(int sy, int sx, vector<vector<int>> &dist)
 				dist[yy][xx] = min(dist[yy][xx], dist[y][x]);
 				continue;	
 			}
-			if(dist[y][x]+1 < dist[yy][xx]) 
+			if(dist[y][x]+1<dist[yy][xx]) 
             {
 				dist[yy][xx] = dist[y][x]+1;
 				q.push({yy, xx});
