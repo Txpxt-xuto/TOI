@@ -49,7 +49,7 @@ int main()
 	bfs(sy, sx, dist1);
 	bfs(ey, ex, dist2);
 	int cnt=0, ans=INF;
-	for(i = 1; i <= m; i++)
+	for(i=1;i<=m;i++)
     {
 		for(j=1;j<=n;j++) 
         {
