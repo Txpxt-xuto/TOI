@@ -10,14 +10,17 @@ void bfs(int sy, int sx, vector<vector<int>> &dist) {
 	q.push({sy, sx});
 	while (!q.empty()) {
 		auto [y, x]=q.front(); q.pop();
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 4; i++) 
+        {
 			int yy=y+dy[i], xx=x+dx[i];
 			if (yy < 1 || yy > m || xx < 1 || x > n) continue;
-			if (!v[yy][xx]) {
+			if (!v[yy][xx]) 
+            {
 				dist[yy][xx] = min(dist[yy][xx], dist[y][x]);
 				continue;	
 			}
-			if (dist[y][x]+1 < dist[yy][xx]) {
+			if (dist[y][x]+1 < dist[yy][xx]) 
+            {
 				dist[yy][xx] = dist[y][x]+1;
 				q.push({yy, xx});
 			}
