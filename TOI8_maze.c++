@@ -1,4 +1,10 @@
-
+/*
+TASK: maze.cpp
+LANG: C++
+COMPILER: VS code
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/ 
 #include <bits/stdc++.h>
 using namespace std;
 const int INF=1e9;
