@@ -43,7 +43,7 @@ int main()
 	cin >> m >> n >> sy >> sx >> ey >> ex;	
 	for(i=1;i<=m;i++) 
     {
-		for(j=1; j<=n;j++) cin >> v[i][j];
+		for(j=1;j<=n;j++) cin >> v[i][j];
 	}
 	dist1[sy][sx] = dist2[ey][ex] = 1;
 	bfs(sy, sx, dist1);
