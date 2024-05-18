@@ -53,7 +53,7 @@ int main()
     {
 		for(j = 1; j <= n; j++) 
         {
-			if (dist1[i][j] == INF || dist2[i][j] == INF) continue;
+			if(dist1[i][j]==INF || dist2[i][j]==INF) continue;
 			cnt++;
 			ans = min(ans, dist1[i][j]+dist2[i][j]);
 		}
