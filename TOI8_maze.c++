@@ -51,7 +51,7 @@ int main()
 	int cnt=0, ans=INF;
 	for(i = 1; i <= m; i++)
     {
-		for(j = 1; j <= n; j++) 
+		for(j=1;j<=n;j++) 
         {
 			if(dist1[i][j]==INF || dist2[i][j]==INF) continue;
 			cnt++;
