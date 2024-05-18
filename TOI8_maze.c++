@@ -10,7 +10,7 @@ using namespace std;
 const int INF=1e9;
 vector<vector<int>> dist1(159, vector<int>(159, INF)), dist2(159, vector<int>(159, INF));
 queue<pair<int,int>> q;
-int i, n, m, sy, sx, ey, ex, v[159][159], dy[]={0,-1,0,1}, dx[]={-1,0,1,0};
+int i, j, n, m, sy, sx, ey, ex, v[159][159], dy[]={0,-1,0,1}, dx[]={-1,0,1,0};
 
 void bfs(int sy, int sx, vector<vector<int>> &dist) 
 {
@@ -18,7 +18,7 @@ void bfs(int sy, int sx, vector<vector<int>> &dist)
 	while (!q.empty()) 
     {
 		auto [y, x]=q.front(); q.pop();
-		for (int i = 0; i < 4; i++) 
+		for(int i = 0; i < 4; i++) 
         {
 			int yy=y+dy[i], xx=x+dx[i];
 			if(yy < 1 || yy > m || xx < 1 || x > n) continue;
@@ -41,9 +41,9 @@ int main()
 	ios_base::sync_with_stdio(false); 
     cin.tie(NULL);
 	cin >> m >> n >> sy >> sx >> ey >> ex;	
-	for (int i = 1; i <= m; i++) 
+	for(i = 1; i <= m; i++) 
     {
-		for (int j = 1; j <= n; j++) cin >> v[i][j];
+		for(j = 1; j <= n; j++) cin >> v[i][j];
 	}
 	dist1[sy][sx] = dist2[ey][ex] = 1;
 	bfs(sy, sx, dist1);
