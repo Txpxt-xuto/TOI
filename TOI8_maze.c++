@@ -38,7 +38,8 @@ void bfs(int sy, int sx, vector<vector<int>> &dist)
 
 int main() 
 {
-	ios_base::sync_with_stdio(false); cin.tie(NULL);
+	ios_base::sync_with_stdio(false); 
+    cin.tie(NULL);
 	cin >> m >> n >> sy >> sx >> ey >> ex;	
 	for (int i = 1; i <= m; i++) 
     {
