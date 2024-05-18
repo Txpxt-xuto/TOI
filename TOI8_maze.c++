@@ -18,7 +18,7 @@ void bfs(int sy, int sx, vector<vector<int>> &dist)
 	while(!q.empty()) 
     {
 		auto [y, x]=q.front(); q.pop();
-		for(i = 0; i < 4; i++) 
+		for(i=0;i<4;i++) 
         {
 			int yy=y+dy[i], xx=x+dx[i];
 			if(yy < 1 || yy > m || xx < 1 || x > n) continue;
