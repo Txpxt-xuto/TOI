@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 const int INF=1e9;
 vector<vector<int>> dist1(159, vector<int>(159, INF)), dist2(159, vector<int>(159, INF));
 queue<pair<int,int>> q;
