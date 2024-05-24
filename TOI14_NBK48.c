@@ -8,10 +8,10 @@ CENTER: Home
 int main() 
 {
     int n, q, i;
-    scanf("%d%d", &n, &q);
+    scanf("%d %d", &n, &q);
     int a[n], b[q];
-    for(i=0; i<n;i++) scanf("%d", &a[i]);
-    for(i=0; i<q;i++) 
+    for(i=0;i<n;i++) scanf("%d", &a[i]);
+    for(i=0;i<q;i++) 
     {
         int count = 0, money;
         scanf("%d", &money);
