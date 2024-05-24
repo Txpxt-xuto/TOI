@@ -14,7 +14,7 @@ int main()
     cin.tie(NULL);
     int n, q, i;
     cin >> n >> q;
-    for(i = 1; i <= n; i++) 
+    for(i=1;i<=n;i++) 
     {
         cin >> adj[i].first;
         adj[i].first += adj[i - 1].first;
