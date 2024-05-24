@@ -6,7 +6,8 @@ CENTER: Home
 */
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int n, q;
     scanf("%d%d", &n, &q);
     int a[n], b[q];
