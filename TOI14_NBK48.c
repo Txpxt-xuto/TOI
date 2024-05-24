@@ -7,13 +7,13 @@ CENTER: Home
 #include <stdio.h>
 int main() 
 {
-    int n, q, i, j;
+    int n, q, i, j, money;
     scanf("%d %d", &n, &q);
     int a[n], b[q];
     for(i=0;i<n;i++) scanf("%d", &a[i]);
     for(i=0;i<q;i++) 
     {
-        int count = 0, money;
+        int count = 0;
         scanf("%d", &money);
         for(j=0;j<n;j++) 
         {
