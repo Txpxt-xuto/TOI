@@ -8,7 +8,8 @@ CENTER: Home
 using namespace std;
 int num[100010];
 pair<int, int> adj[100010];
-int main() {
+int main() 
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int n, q;
