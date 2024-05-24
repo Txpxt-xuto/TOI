@@ -7,7 +7,7 @@ CENTER: Home
 #include <stdio.h>
 int main() 
 {
-    int n, q, i;
+    int n, q, i, j;
     scanf("%d %d", &n, &q);
     int a[n], b[q];
     for(i=0;i<n;i++) scanf("%d", &a[i]);
@@ -15,7 +15,7 @@ int main()
     {
         int count = 0, money;
         scanf("%d", &money);
-        for(j = 0; j < n; j++) 
+        for(j=0;j<n;j++) 
         {
             if(money - a[j] >= 0) count = j+1;
             money -= a[j];
