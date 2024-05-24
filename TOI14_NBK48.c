@@ -21,7 +21,7 @@ int main()
         adj[i].second = i;
     }
     sort(adj + 1, adj + 1 + n);
-    for(i = 1; i <= n; i++) 
+    for(i=1;i<=n;i++) 
     {
         num[i] = adj[i].first;
         adj[i].second = max(adj[i - 1].second, adj[i].second);
