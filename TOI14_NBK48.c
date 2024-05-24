@@ -19,7 +19,8 @@ int main()
 
         for (int j = 0; j < n; j++) 
         {
-            if (money - a[j] >= 0) {
+            if (money - a[j] >= 0) 
+            {
                 count = j+1;
             }
             money -= a[j];
