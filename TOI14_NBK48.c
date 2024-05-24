@@ -4,22 +4,30 @@ LANG: C
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include <stdio.h>
-int main() 
-{
-    int n, q, i, j, money, count;
-    scanf("%d %d", &n, &q);
-    int a[n], b[q];
-    for(i=0;i<n;i++) scanf("%d", &a[i]);
-    for(i=0;i<q;i++) 
-    {
-        count = 0;
-        scanf("%d", &money);
-        for(j=0;j<n;j++) 
-        {
-            if(money - a[j] >= 0) count = j+1;
-            money -= a[j];
-        }
-        printf("%d\n", count);
-    }
+#include <bits/stdc++.h>
+using namespace std;
+int num[100010];
+pair<int, int> adj[100010];
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n, q;
+    cin >> n >> q;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> adj[i].first;
+    adj[i].first += adj[i - 1].first;
+    adj[i].second = i;
+  }
+  sort(adj + 1, adj + 1 + n);
+  for (int i = 1; i <= n; i++) {
+    num[i] = adj[i].first;
+    adj[i].second = max(adj[i - 1].second, adj[i].second);
+  }
+  for (int i = 1; i <= q; i++) {
+    int bud;
+    cin >> bud;
+    int upper = upper_bound(num + 1, num + 1 + n, bud) - (num + 1);
+    cout << adj[upper].second << "\n";
+  }
 }
