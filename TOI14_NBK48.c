@@ -27,9 +27,9 @@ int main() {
     }
     for (int i = 1; i <= q; i++) 
     {
-    int bud;
-    cin >> bud;
-    int upper = upper_bound(num + 1, num + 1 + n, bud) - (num + 1);
-    cout << adj[upper].second << "\n";
+        int bud;
+        cin >> bud;
+        int upper = upper_bound(num + 1, num + 1 + n, bud) - (num + 1);
+        cout << adj[upper].second << "\n";
     }
 }
