@@ -13,7 +13,7 @@ int main()
     for(i=0;i<n;i++) scanf("%d", &a[i]);
     for(i=0;i<q;i++) 
     {
-        int count = 0;
+        count = 0;
         scanf("%d", &money);
         for(j=0;j<n;j++) 
         {
