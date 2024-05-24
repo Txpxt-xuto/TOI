@@ -17,7 +17,8 @@ int main()
         int count = 0, money;
         scanf("%d", &money);
 
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < n; j++) 
+        {
             if (money - a[j] >= 0) {
                 count = j+1;
             }
