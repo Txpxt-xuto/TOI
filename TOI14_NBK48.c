@@ -14,19 +14,19 @@ int main()
     cin.tie(NULL);
     int n, q;
     cin >> n >> q;
-    for (int i = 1; i <= n; i++) 
+    for(i = 1; i <= n; i++) 
     {
         cin >> adj[i].first;
         adj[i].first += adj[i - 1].first;
         adj[i].second = i;
     }
     sort(adj + 1, adj + 1 + n);
-    for (int i = 1; i <= n; i++) 
+    for(i = 1; i <= n; i++) 
     {
         num[i] = adj[i].first;
         adj[i].second = max(adj[i - 1].second, adj[i].second);
     }
-    for (int i = 1; i <= q; i++) 
+    for(i = 1; i <= q; i++) 
     {
         int bud;
         cin >> bud;
