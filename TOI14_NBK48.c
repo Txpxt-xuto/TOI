@@ -12,7 +12,7 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int n, q;
+    int n, q, i;
     cin >> n >> q;
     for(i = 1; i <= n; i++) 
     {
@@ -26,7 +26,7 @@ int main()
         num[i] = adj[i].first;
         adj[i].second = max(adj[i - 1].second, adj[i].second);
     }
-    for(i = 1; i <= q; i++) 
+    for(i=1;i<=q;i++) 
     {
         int bud;
         cin >> bud;
