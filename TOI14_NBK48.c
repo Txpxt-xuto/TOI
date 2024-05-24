@@ -17,7 +17,6 @@ int main() {
 
     for (int i = 0; i < q; i++) {
         int count = 0, money;
-        
         scanf("%d", &money);
 
         for (int j = 0; j < n; j++) {
