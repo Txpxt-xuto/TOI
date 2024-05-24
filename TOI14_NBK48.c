@@ -25,7 +25,6 @@ int main() {
             }
             money -= a[j];
         }
-
         printf("%d\n", count);
     }
 }
