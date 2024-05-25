@@ -48,9 +48,9 @@ int main()
                             x=N-1;
                             i=N-1;
                         }
-                        else if(q[x][y]==q[i][j])
+                        else if(q[x][y]==q[i][j]) T+=-1;
                         {
-                            T+=-1;
+                            
                         }
                     }
                 }
