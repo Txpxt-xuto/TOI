@@ -14,7 +14,7 @@ int main()
     for(i=0;i<N;i++)
     {
         scanf("%d %d",&L[i],&P[i]);
-        for(j=0;j<P[i];j++)scanf("%d",&q[i][j]);
+        for(j=0;j<P[i];j++) scanf("%d",&q[i][j]);
     }
     for(i=0;i<N;i++)
     {
