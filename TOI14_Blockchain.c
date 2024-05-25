@@ -22,7 +22,6 @@ int main()//BLOCKCHAIN//
     {
         scanf("%d",&m[i]);
         for(j=0;j<m[i]-1;j++) scanf("%d %d",&Q[i][j][0],&Q[i][j][1]);
-
     }
     for(x=0;x<q;x++)//ตัวตรวจสอบ ตรวจ ตัวถูกตรวจสอบ//
     {
