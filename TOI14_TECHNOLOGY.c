@@ -26,9 +26,9 @@ int main()
             z++;
             break;
         }
-        else if(L[i]==1&&P[i]!=0)
+        else if(L[i]==1&&P[i]!=0) printf("-1");
         {
-            printf("-1");
+            
         }
     }
     if(z==1)
@@ -49,9 +49,6 @@ int main()
                             i=N-1;
                         }
                         else if(q[x][y]==q[i][j]) T+=-1;
-                        {
-                            
-                        }
                     }
                 }
             }
