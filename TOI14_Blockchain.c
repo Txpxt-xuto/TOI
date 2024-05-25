@@ -14,7 +14,6 @@ int main()//BLOCKCHAIN//
     {
         scanf("%d",&n[i]);
         for(j=0;j<n[i]-1;j++) scanf("%d %d",&T[i][j][0],&T[i][j][1]);
-
     }
     for(i=0;i<q;i++)//ตัวตรวจสอบ//
     {
