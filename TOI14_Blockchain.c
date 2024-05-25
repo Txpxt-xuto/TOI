@@ -5,7 +5,7 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <stdio.h>
-int main()//BLOCKCHAIN//
+int main()
 {
     int a,b,x,y,i,j,k,l,t,q;
     scanf("%d %d",&t,&q);
