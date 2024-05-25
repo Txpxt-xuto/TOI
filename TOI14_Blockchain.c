@@ -21,9 +21,9 @@ int main()//BLOCKCHAIN//
     for(i=0;i<q;i++)//ตัวตรวจสอบ//
     {
         scanf("%d",&m[i]);
-        for(j=0;j<m[i]-1;j++)
+        for(j=0;j<m[i]-1;j++) scanf("%d %d",&Q[i][j][0],&Q[i][j][1]);
         {
-            scanf("%d %d",&Q[i][j][0],&Q[i][j][1]);
+            
         }
 
     }
