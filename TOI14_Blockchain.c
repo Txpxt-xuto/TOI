@@ -40,9 +40,6 @@ int main()//BLOCKCHAIN//
                     }
                 }
                 if(k==m[x]-1) l++;
-                {
-                    
-                }
             }
         }
         printf("\n%d",l);
