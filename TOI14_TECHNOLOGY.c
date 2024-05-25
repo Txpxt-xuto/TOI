@@ -27,9 +27,7 @@ int main()
             break;
         }
         else if(L[i]==1&&P[i]!=0) printf("-1");
-        {
-            
-        }
+
     }
     if(z==1)
     {
