@@ -13,10 +13,8 @@ int main()//BLOCKCHAIN//
     for(i=0;i<t;i++)//ถูกตรวจสอบ//
     {
         scanf("%d",&n[i]);
-        for(j=0;j<n[i]-1;j++)
-        {
-            scanf("%d %d",&T[i][j][0],&T[i][j][1]);
-        }
+        for(j=0;j<n[i]-1;j++) scanf("%d %d",&T[i][j][0],&T[i][j][1]);
+
     }
     for(i=0;i<q;i++)//ตัวตรวจสอบ//
     {
