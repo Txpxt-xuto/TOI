@@ -14,10 +14,7 @@ int main()
     for(i=0;i<N;i++)
     {
         scanf("%d %d",&L[i],&P[i]);
-        for(j=0;j<P[i];j++)
-        {
-            scanf("%d",&q[i][j]);
-        }
+        for(j=0;j<P[i];j++)scanf("%d",&q[i][j]);
     }
     for(i=0;i<N;i++)
     {
@@ -27,7 +24,6 @@ int main()
             break;
         }
         else if(L[i]==1&&P[i]!=0) printf("-1");
-
     }
     if(z==1)
     {
