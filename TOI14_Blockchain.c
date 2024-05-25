@@ -39,9 +39,9 @@ int main()//BLOCKCHAIN//
                         }
                     }
                 }
-                if(k==m[x]-1)
+                if(k==m[x]-1) l++;
                 {
-                    l++;
+                    
                 }
             }
         }
