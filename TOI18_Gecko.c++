@@ -11,7 +11,6 @@ int n,m,k,p,cnt = 1;
 int dist[N],gecko[N],to[N];
 iii edge[M];
 bool vis[M];
-int ;
 set<pii> ss;
 
 int main()
