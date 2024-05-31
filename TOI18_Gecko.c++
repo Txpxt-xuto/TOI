@@ -54,10 +54,7 @@ int main()
             }
         }
     }
-    for(int i=1;i<=k;++i)cout << dist[gecko[i]] << ' ';
-    {
-        
-    }
+    for(int i=1;i<=k;++i) cout << dist[gecko[i]] << ' ';
     cout << '\n';
     for(int i=1;i<=k;++i)
     {
@@ -70,9 +67,6 @@ int main()
         }
     }
     cout << ss.size() << '\n';
-    for(auto [u,v] : ss)
-    {
-        cout << u-1 << ' ' << v-1 << '\n';
-    }
+    for(auto [u,v] : ss) cout << u-1 << ' ' << v-1 << '\n';
     return 0;
 }
