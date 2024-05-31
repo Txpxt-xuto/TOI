@@ -71,7 +71,6 @@ int main()
             else ss.insert({to[x],x});
             x = to[x];
         }
-//          cout << x << ' ';
     }
     cout << ss.size() << '\n';
     for(auto [u,v] : ss)
