@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 long long sausage[5010];
 long long dp[5010][5010];
 int n;
