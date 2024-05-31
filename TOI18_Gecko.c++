@@ -54,9 +54,9 @@ int main()
             }
         }
     }
-    for(int i=1;i<=k;++i)
+    for(int i=1;i<=k;++i)cout << dist[gecko[i]] << ' ';
     {
-        cout << dist[gecko[i]] << ' ';
+        
     }
     cout << '\n';
     for(int i=1;i<=k;++i)
