@@ -17,7 +17,6 @@ int main()
 		point[i] += point[i - 1];
 		cost[i] += cost[i - 1];
 	}
-	int 
 	while(q--)
     {
 		cin >> k >> x;
