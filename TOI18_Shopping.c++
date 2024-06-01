@@ -7,7 +7,7 @@ ll a[shop], cost[shop], point[shop];
 int main()
 {
 	cin.tie(nullptr)->ios::sync_with_stdio(false);
-	int n,q,i;
+	int n,q,i,k,x;
 	cin >> n >> q;
 	for(i=1; i<=n; ++i)
     {
@@ -17,7 +17,7 @@ int main()
 		point[i] += point[i - 1];
 		cost[i] += cost[i - 1];
 	}
-	int k,x;
+	int 
 	while(q--)
     {
 		cin >> k >> x;
