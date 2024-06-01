@@ -15,7 +15,6 @@ int main()
 		if(a[i] >= 0) point[i] += a[i];
 		else cost[i] -= a[i];
 			
-		}
 		point[i] += point[i - 1];
 		cost[i] += cost[i - 1];
 	}
