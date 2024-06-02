@@ -1,5 +1,5 @@
 /*
-TASK: TaskName
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
+TASK: mountain.cpp
+AUTHOR: Tapat Toungsakul
+CENTER: Home
 */
