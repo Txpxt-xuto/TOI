@@ -6,6 +6,8 @@ CENTER: Home
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
+const int N = 501, M = 200001;
+ll n, m, x[N], y[N], s[M];
 
 struct Data 
 {
@@ -16,9 +18,6 @@ struct Data
         return c > other.c;
     }
 };
-
-const int N = 501, M = 200001;
-ll n, m, x[N], y[N], s[M];
 
 ll distance(int i, int j) 
 {
