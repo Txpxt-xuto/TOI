@@ -33,9 +33,7 @@ Data dijkstra(ll dis)
     pq.push({0, 1, 0});
     while (!pq.empty()) 
     {
-        ll cc = pq.top().c;
-        ll cu = pq.top().u;
-        ll cd = pq.top().d;
+        ll cc = pq.top().c, cu = pq.top().u, cd = pq.top().d;
         pq.pop();
         if (cu == n) return {cc, cu, cd};
         if (d[cu] != cc) continue;
