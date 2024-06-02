@@ -57,9 +57,9 @@ int main()
     for (int i = 1; i <= m; i++) scanf("%lld", &s[i]);
     sort(s + 1, s + m + 1, greater<ll>());
     Data data = dijkstra(s[1]);
-    ll dist = data.d;
-    ll ans = data.c;
-    ll total = 0;
+    ll dist = data.d, ans = data.c, total = 0;
+    ll ;
+    ll ;
     for (int i = 1; i <= m;) 
     {
         if (dist <= s[i]) 
