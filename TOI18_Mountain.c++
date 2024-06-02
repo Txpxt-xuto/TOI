@@ -57,25 +57,24 @@ int main()
     scanf("%lld %lld", &n, &m);
     for (int i = 1; i <= n; i++) scanf("%lld %lld", &x[i], &y[i]);
     for (int i = 1; i <= m; i++) scanf("%lld", &s[i]);
-
     sort(s + 1, s + m + 1, greater<ll>());
-    
     Data data = dijkstra(s[1]);
     ll dist = data.d;
     ll ans = data.c;
     ll total = 0;
-
-    for (int i = 1; i <= m;) {
-        if (dist <= s[i]) {
+    for (int i = 1; i <= m;) 
+    {
+        if (dist <= s[i]) 
+        {
             total += ans;
             i++;
         }
-        else {
+        else 
+        {
             data = dijkstra(s[i]);
             dist = data.d;
             ans = data.c;
         }
     }
-
     printf("%lld", total);
 }
