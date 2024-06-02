@@ -56,9 +56,7 @@ int main()
 {
     scanf("%lld %lld", &n, &m);
     for (int i = 1; i <= n; i++) scanf("%lld %lld", &x[i], &y[i]);
-    for (int i = 1; i <= m; i++) {
-        
-    }
+    for (int i = 1; i <= m; i++) scanf("%lld", &s[i]);
 
     sort(s + 1, s + m + 1, greater<ll>());
     
