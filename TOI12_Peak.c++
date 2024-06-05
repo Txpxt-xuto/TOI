@@ -12,13 +12,13 @@ int main()
     for(int i=1;i<=n;++i) cin >> h[i];
     vector <int> gm;
     int i=0;
-    while(i++ <=n) 
+    while(i++<=n) 
     {
         if(h[i]>h[i-1] && h[i]>h[i+1])
         { 
             gm.push_back(h[i]); 
             i++;
-            }
+        }
     }
     if(gm.empty()) 
     {
