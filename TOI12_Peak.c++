@@ -1,4 +1,10 @@
-#include <iostream>
+
+/*
+TASK: peak.cpp
+LANG: C++
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/#include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
