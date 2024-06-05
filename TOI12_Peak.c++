@@ -16,7 +16,8 @@ int main()
         if(h[i]>h[i-1] && h[i]>h[i+1]){ gm.push_back(h[i]); 
         i++;}
     }
-    if(gm.empty()) {cout << "-1"; return 0;}
+    if(gm.empty()) 
+    {cout << "-1"; return 0;}
     sort(gm.begin(),gm.end());
     vector<int> rea;
     for(auto &x:gm) 
