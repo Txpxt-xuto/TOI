@@ -11,7 +11,6 @@ int main()
     vector <int> h(n+2,0);
     for(int i=1;i<=n;++i) cin >> h[i];
     vector <int> gm;
-    int ;
     while(i++<=n) 
     {
         if(h[i]>h[i-1] && h[i]>h[i+1])
