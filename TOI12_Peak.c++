@@ -2,7 +2,7 @@
 TASK: peak.cpp
 LANG: C++
 AUTHOR: Tapat Toungsakul
-CENTER: YourCenter
+CENTER: Home
 */
 #include <iostream>
 #include <algorithm>
