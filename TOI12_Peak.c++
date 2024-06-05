@@ -6,7 +6,7 @@ int main()
 {
     ios::sync_with_stdio(0); 
     cin.tie(0);
-    int n,ki=0; 
+    int n,k,i=0; 
     cin >> n >> k;
     vector <int> h(n+2,0);
     for(int i=1;i<=n;++i) cin >> h[i];
