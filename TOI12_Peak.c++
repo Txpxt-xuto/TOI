@@ -30,6 +30,4 @@ int main() {
         cout << rea.back() << '\n';
         rea.pop_back();
     }
-    
-    
 }
