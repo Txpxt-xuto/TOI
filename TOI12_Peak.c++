@@ -17,8 +17,8 @@ int main()
         if(h[i]>h[i-1] && h[i]>h[i+1])
         { 
             gm.push_back(h[i]); 
-        
-        i++;}
+            i++;
+            }
     }
     if(gm.empty()) 
     {
