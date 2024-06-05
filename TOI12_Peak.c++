@@ -8,9 +8,9 @@ int main()
     cin.tie(0);
     int n,k; cin >> n >> k;
     vector <int> h(n+2,0);
-    for(int i=1;i<=n;++i)
+    for(int i=1;i<=n;++i)cin >> h[i];
      {
-        cin >> h[i];
+        
     }
     vector <int> gm;
     int i=0;
