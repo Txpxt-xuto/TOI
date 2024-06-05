@@ -17,7 +17,9 @@ int main()
         i++;}
     }
     if(gm.empty()) 
-    {cout << "-1"; return 0;}
+    {
+        cout << "-1"; return 0;
+        }
     sort(gm.begin(),gm.end());
     vector<int> rea;
     for(auto &x:gm) 
