@@ -20,7 +20,7 @@ int main()
     {
         cout << "-1"; 
         return 0;
-        }
+    }
     sort(gm.begin(),gm.end());
     vector<int> rea;
     for(auto &x:gm) 
