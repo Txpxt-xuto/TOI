@@ -22,11 +22,13 @@ int main() {
         if(!rea.empty() && x==rea.back()) continue;
         rea.push_back(x);
     }
-    if(k>rea.size()) {
+    if(k>rea.size()) 
+    {
         for(auto &x:rea) cout << x << '\n';
         return 0;
     }
-    for(int i=0;i<k;++i) {
+    for(int i=0;i<k;++i) 
+    {
         cout << rea.back() << '\n';
         rea.pop_back();
     }
