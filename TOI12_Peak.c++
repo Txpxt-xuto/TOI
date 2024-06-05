@@ -1,7 +1,7 @@
 /*
 TASK: peak.cpp
 LANG: C++
-AUTHOR: YourName YourLastName
+AUTHOR: Tapat Toungsakul
 CENTER: YourCenter
 */
 #include <iostream>
