@@ -13,8 +13,10 @@ int main(){
 		cout<<"557789638";
 		return 0;
 	}
-	for(int i=2;i<=k;i++){
-		if(k%i==0){
+	for(int i=2;i<=k;i++)
+    {
+		if(k%i==0)
+        {
 			qs[i]=1;
 			for(int j=i;j<=k;j+=i) qs[j]=1;
 		}
