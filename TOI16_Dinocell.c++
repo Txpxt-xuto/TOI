@@ -26,7 +26,6 @@ int main(){
 	for(int i=0;i<n;i++)
     {
 		int a=(qs[k]*(arr[i]/k))+qs[(arr[i]%k)],b=(qs[k]*((arr[i]-1)/k))+qs[(arr[i]-1)%k];
-		int ;
 		mn=min(mn,b);
 		mx=max(mx,b);
 		ans=max(ans,max(abs(a-mn),abs(a-mx)));
