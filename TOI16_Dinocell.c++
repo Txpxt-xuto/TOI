@@ -2,9 +2,8 @@
 TASK: cell.cpp
 LANG: C++
 AUTHOR: YourName YourLastName
-Center: YourCenter
+Center: Home
 */
-
 #include<bits/stdc++.h>
 using namespace std;
 const int N=1e7+10;
