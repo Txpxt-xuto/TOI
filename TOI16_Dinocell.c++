@@ -25,12 +25,12 @@ int main()
     {
 		if(k%i==0)
         {
-			dp[i]=1;
-			for(j=i;j<=k;j+=i) dp[j]=1;
+			dp[i] = 1;
+			for(j=i;j<=k;j+=i) dp[j] = 1;
 		}
 	}
-	for(i=1;i<=k;i++) if(!dp[i]) dp[i]=-1;
-	for(i=2;i<=k;i++) dp[i]+=dp[i-1];
+	for(i=1;i<=k;i++) if(!dp[i]) dp[i] = -1;
+	for(i=2;i<=k;i++) dp[i] += dp[i-1];
 	int mx=INT_MIN,mn=INT_MAX,ans=0;
 	for(i=0;i<n;i++)
     {
