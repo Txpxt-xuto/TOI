@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 using ll = long long;
 const int shop = 500050;
 ll a[shop], cost[shop], point[shop];
