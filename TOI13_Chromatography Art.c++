@@ -50,10 +50,10 @@ int getr(int t)
     }
     return l;
 }
-
 int main()
 {
-    ios_base::sync_with_stdio(0);cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int n,t;
     cin >> n >> t;
     vector<pair<int,pii>>v;
