@@ -7,13 +7,11 @@ CENTER: Home
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> memo;
-
 int find(int n) 
 {
     if (memo[n] == n) return n;
     return memo[n] = find(memo[n]);
 }
-
 int main() 
 {
     ios::sync_with_stdio(false);
@@ -24,14 +22,16 @@ int main()
     for (int i = 0 ; i < b ; i++) memo[i] = i;
     int count = 0;
     priority_queue<vector<int>,vector<vector<int>>,greater<vector<int>>> pq;
-    for (int i = 0 ; i < e ; i++) {
+    for (int i = 0 ; i < e ; i++) 
+    {
         int src,dest,w,status;
         cin >> src >> dest >> w >> status;
         if (status == 0) pq.push({w,src,dest});
         else {
             int a = find(src);
             int b = find(dest);
-            if (a != b) {
+            if (a != b) 
+            {
                 memo[a] = b;
                 count++;
             }

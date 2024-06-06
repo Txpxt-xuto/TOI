@@ -12,7 +12,7 @@ int main()
 {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 	cin >> n >> q;
-	for(i=1;i<=n;i++) cin>>a[i];
+	for(i=1;i<=n;i++) cin >> a[i];
 	int lis = 0;
 	for(i=1;i<=n;i++)
     {
