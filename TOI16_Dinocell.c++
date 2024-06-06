@@ -1,7 +1,7 @@
 /*
 TASK: cell.cpp
 LANG: C++
-AUTHOR: YourName YourLastName
+AUTHOR: Tapat Toungsakul
 Center: Home
 */
 #include<bits/stdc++.h>
