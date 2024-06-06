@@ -49,7 +49,8 @@ int main()
 {
     int N,M,a,b;
     scanf("%d %d",&N,&M);
-    for(int i=0; i<N; i++){
+    for(int i=0; i<N; i++)
+    {
         scanf("%d %d",&a,&b);
         graph[a].push_back(b);
         graph[b].push_back(a);
