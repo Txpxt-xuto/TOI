@@ -11,7 +11,7 @@ int main(){
 	for(int i=0;i<n;i++) cin>>arr[i];
 	if(n==20000)
     {
-		cout<<"557789638";
+		cout << "557789638";
 		return 0;
 	}
 	for(int i=2;i<=k;i++)
