@@ -7,7 +7,7 @@ Center: Home
 #include<bits/stdc++.h>
 using namespace std;
 const int N=1e7+10;
-int qs[N];
+int dp[N];
 int arr[N];
 int main()
 {
@@ -25,16 +25,16 @@ int main()
     {
 		if(k%i==0)
         {
-			qs[i]=1;
-			for(int j=i;j<=k;j+=i) qs[j]=1;
+			dp[i]=1;
+			for(int j=i;j<=k;j+=i) dp[j]=1;
 		}
 	}
-	for(int i=1;i<=k;i++) if(!qs[i]) qs[i]=-1;
-	for(int i=2;i<=k;i++) qs[i]+=qs[i-1];
+	for(int i=1;i<=k;i++) if(!dp[i]) dp[i]=-1;
+	for(int i=2;i<=k;i++) dp[i]+=dp[i-1];
 	int mx=INT_MIN,mn=INT_MAX,ans=0;
 	for(int i=0;i<n;i++)
     {
-		int a=(qs[k]*(arr[i]/k))+qs[(arr[i]%k)],b=(qs[k]*((arr[i]-1)/k))+qs[(arr[i]-1)%k];
+		int a=(dp[k]*(arr[i]/k))+dp[(arr[i]%k)],b=(dp[k]*((arr[i]-1)/k))+dp[(arr[i]-1)%k];
 		mn=min(mn,b);
 		mx=max(mx,b);
 		ans=max(ans,max(abs(a-mn),abs(a-mx)));
