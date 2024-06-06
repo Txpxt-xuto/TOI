@@ -8,7 +8,6 @@ using namespace std;
 const int N = 2e5;
 ll dpl[N+5], dpr[N+5], a[N+5], l[N+5], r[N+5];
 int n, q, i, j, x;
-
 int main()
 {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
