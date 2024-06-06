@@ -9,7 +9,8 @@ int main(){
 	int z,k,n;
 	cin>>z >>k >>n;
 	for(int i=0;i<n;i++) cin>>arr[i];
-	if(n==20000){
+	if(n==20000)
+    {
 		cout<<"557789638";
 		return 0;
 	}
