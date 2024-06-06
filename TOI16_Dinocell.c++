@@ -21,8 +21,7 @@ int main(){
 	}
 	for(int i=1;i<=k;i++) if(!qs[i]) qs[i]=-1;
 	for(int i=2;i<=k;i++) qs[i]+=qs[i-1];
-	int mx=INT_MIN,mn=INT_MAX;
-	int ans=0;
+	int mx=INT_MIN,mn=INT_MAX,ans=0;
 	for(int i=0;i<n;i++)
     {
 		int a=(qs[k]*(arr[i]/k))+qs[(arr[i]%k)],b=(qs[k]*((arr[i]-1)/k))+qs[(arr[i]-1)%k];
