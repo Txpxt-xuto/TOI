@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 long long sausage[5010], dp[5010][5010];
 int n;
 long long eat(int l,int r)
