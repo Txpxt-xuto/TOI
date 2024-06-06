@@ -34,7 +34,7 @@ int main()
 	int mx=INT_MIN,mn=INT_MAX,ans=0;
 	for(i=0;i<n;i++)
     {
-		int a=(dp[k]*(arr[i]/k))+dp[(arr[i]%k)],b=(dp[k]*((arr[i]-1)/k))+dp[(arr[i]-1)%k];
+		int a = (dp[k]*(arr[i]/k))+dp[(arr[i]%k)],b = (dp[k]*((arr[i]-1)/k))+dp[(arr[i]-1)%k];
 		mn=min(mn,b);
 		mx=max(mx,b);
 		ans=max(ans,max(abs(a-mn),abs(a-mx)));
