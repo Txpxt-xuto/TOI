@@ -3,7 +3,8 @@ using namespace std;
 const int N=1e7+10;
 int qs[N];
 int arr[N];
-int main(){
+int main()
+{
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	int z,k,n;
