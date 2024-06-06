@@ -1,4 +1,9 @@
-
+/*
+TASK: cell.cpp
+LANG: C++
+AUTHOR: YourName YourLastName
+Center: YourCenter
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
