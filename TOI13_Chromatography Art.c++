@@ -18,7 +18,6 @@ Center: Home
 using namespace std;
 const int N=1e6+5;
 int fw[N]{0};
-
 void add(int i,int amt)
 {
     for(;i<N;i+=i&-i) fw[i]+=amt;
@@ -29,7 +28,6 @@ int qr(int i,int res=0)
     for(;i;i-=i&-i) res+=fw[i];
     return res;
 }
-
 int getl(int t)
 {
     int l=1,r=N-1;
@@ -41,7 +39,6 @@ int getl(int t)
     }
     return l;
 }
-
 int getr(int t)
 {
     int l=1,r=N-1;
