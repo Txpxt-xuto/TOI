@@ -15,7 +15,7 @@ int main()
 	cin.tie(0);
 	int z,k,n,i,j;
 	cin >> z >> k >> n;
-	for(i=0;i<n;i++) cin>>arr[i];
+	for(i=0;i<n;i++) cin >> arr[i];
 	if(n==20000)
     {
 		cout << "557789638";
