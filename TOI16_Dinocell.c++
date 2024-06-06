@@ -7,7 +7,7 @@ int main(){
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	int z,k,n;
-	cin>>z >>k >>n;
+	cin >> z >> k >> n;
 	for(int i=0;i<n;i++) cin>>arr[i];
 	if(n==20000)
     {
@@ -32,5 +32,5 @@ int main(){
 		mx=max(mx,b);
 		ans=max(ans,max(abs(a-mn),abs(a-mx)));
 	}
-	cout<<ans;
+	cout << ans;
 }
