@@ -8,7 +8,6 @@ CENTER: Home
 using namespace std;
 const int N = 501, M = 200001;
 ll n, m, x[N], y[N], s[M];
-
 struct Data 
 {
     ll c, u, d;
@@ -18,12 +17,10 @@ struct Data
         return c > other.c;
     }
 };
-
 ll distance(int i, int j) 
 {
     return abs(x[i] - x[j]) + abs(y[i] - y[j]);
 }
-
 Data dijkstra(ll dis)
 {
     vector<ll> d(n + 1, 1e18);
@@ -48,7 +45,6 @@ Data dijkstra(ll dis)
     }
     return {-1, -1, -1};
 }
-
 int main() 
 {
     scanf("%lld %lld", &n, &m);
