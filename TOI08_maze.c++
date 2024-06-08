@@ -11,7 +11,6 @@ const int INF=1e9;
 vector<vector<int>> dist1(159, vector<int>(159, INF)), dist2(159, vector<int>(159, INF));
 queue<pair<int,int>> q;
 int i, j, n, m, sy, sx, ey, ex, v[159][159], dy[]={0,-1,0,1}, dx[]={-1,0,1,0};
-
 void bfs(int sy, int sx, vector<vector<int>> &dist) 
 {
 	q.push({sy, sx});
