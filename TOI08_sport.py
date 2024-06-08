@@ -12,7 +12,6 @@ def sport(n,w,l,str):
         return
     sport(n,w+1,l,str+'W')
     sport(n,w,l+1,str+'L')
-
 k=int(input())
 teama=int(input())
 teamb=int(input())
