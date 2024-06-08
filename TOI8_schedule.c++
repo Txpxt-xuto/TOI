@@ -1,4 +1,10 @@
-
+/*
+TASK: schedule.cpp
+LANG: C++
+COMPILER: VS code
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/ 
 #include <bits/stdc++.h>
 #define newline cout << "\n";
 #define ll long long
