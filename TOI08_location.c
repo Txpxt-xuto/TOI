@@ -17,13 +17,12 @@ int main()
     int ans = 0;
     for (int i = 0; i <= m-k; i++) 
     {
-        for (int j = 0; j <= n-k; j++) {
+        for (int j = 0; j <= n-k; j++) 
+        {
             int temp = 0;
 
             for (int a = i; a < i+k; a++) {
-                for (int b = j; b < j+k; b++) {
-                    temp += map[a][b];
-                }
+                for (int b = j; b < j+k; b++) temp += map[a][b];
             }
 
             if (temp > ans) {
