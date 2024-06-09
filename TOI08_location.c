@@ -24,6 +24,5 @@ int main()
             if (temp > ans) ans = temp;
         }
     }
-
     printf("%d", ans);
 }
