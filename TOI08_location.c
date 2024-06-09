@@ -20,11 +20,7 @@ int main()
         for (int j = 0; j <= n-k; j++) 
         {
             int temp = 0;
-
-            for (int a = i; a < i+k; a++) {
-                for (int b = j; b < j+k; b++) temp += map[a][b];
-            }
-
+            for (int a = i; a < i+k; a++) for (int b = j; b < j+k; b++) temp += map[a][b];
             if (temp > ans) ans = temp;
         }
     }
