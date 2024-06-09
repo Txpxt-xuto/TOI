@@ -6,7 +6,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */ 
 #include <stdio.h>
-
 int main()
 {
     int m, n, k;
