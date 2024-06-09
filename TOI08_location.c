@@ -11,12 +11,12 @@ int main()
 {
     int m, n, k;
     scanf("%d%d", &m, &n);
-
     scanf("%d", &k);
     int map[m][n];
     for (int i = 0; i < m; i++) for (int j = 0; j < n; j++) scanf("%d", &map[i][j]);
     int ans = 0;
-    for (int i = 0; i <= m-k; i++) {
+    for (int i = 0; i <= m-k; i++) 
+    {
         for (int j = 0; j <= n-k; j++) {
             int temp = 0;
 
