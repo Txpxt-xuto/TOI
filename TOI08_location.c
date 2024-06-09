@@ -7,11 +7,11 @@ CENTER: Home
 */ 
 #include <stdio.h>
 
-int main( )
+int main()
 {
-    int m, n;
+    int m, n, k;
     scanf("%d%d", &m, &n);
-    int k;
+
     scanf("%d", &k);
     int map[m][n];
     for (int i = 0; i < m; i++) for (int j = 0; j < n; j++) scanf("%d", &map[i][j]);
