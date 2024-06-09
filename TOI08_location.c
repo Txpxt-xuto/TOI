@@ -25,9 +25,7 @@ int main()
                 for (int b = j; b < j+k; b++) temp += map[a][b];
             }
 
-            if (temp > ans) {
-                ans = temp;
-            }
+            if (temp > ans) ans = temp;
         }
     }
 
