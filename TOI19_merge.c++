@@ -18,7 +18,7 @@ int main()
     while(q--)
     {
         l=-1e9,r=1e9;
-        cin>>a>>b>>k;
+        cin >> a >> b >> k;
         while(l<r)
         {
             long long mid=(l+r)>>1;
