@@ -15,12 +15,13 @@ int main()
     for(int i=0;i<m;i++) cin>>a,y.pb(a);
     for(int i=1;i<=m;i++) cin>>a,t.pb(a),t[i]+=t[i-1];
     long long l,r;
-    while(q--){
+    while(q--)
+    {
         l=-1e9,r=1e9;
         cin>>a>>b>>k;
-        while(l<r){
+        while(l<r)
+        {
             long long mid=(l+r)>>1;
-            // cout<<l<<" "<<mid<<" "<<r<<"\n";
             int k1=upper_bound(x.begin(),x.end(),mid)-x.begin()-1;
             int k2=upper_bound(y.begin(),y.end(),(mid-b)/a)-y.begin()-1;
             if(s[k1]+t[k2]<k) l=mid+1;
