@@ -8,13 +8,13 @@ int main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int n,m,q;
+    int i,n,m,q;
     cin >> n >> m >> q;
     x.pb(-1e9-10),y.pb(-1e9-10),s.pb(0),t.pb(0);
-    for(int i=0;i<n;i++) cin>>a,x.pb(a);
-    for(int i=1;i<=n;i++) cin>>a,s.pb(a),s[i]+=s[i-1];
-    for(int i=0;i<m;i++) cin>>a,y.pb(a);
-    for(int i=1;i<=m;i++) cin>>a,t.pb(a),t[i]+=t[i-1];
+    for(i=0;i<n;i++) cin>>a,x.pb(a);
+    for(i=1;i<=n;i++) cin>>a,s.pb(a),s[i]+=s[i-1];
+    for(i=0;i<m;i++) cin>>a,y.pb(a);
+    for(i=1;i<=m;i++) cin>>a,t.pb(a),t[i]+=t[i-1];
     long long l,r;
     while(q--)
     {
