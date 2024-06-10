@@ -4,7 +4,8 @@ const int NN=1e5+1;
 #define pb push_back
 vector<int> x,s,t,y;
 int a,b,k;
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0); cin.tie(0);
     int n,m,q;
     cin>>n>>m>>q;
