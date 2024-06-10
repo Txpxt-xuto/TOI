@@ -8,7 +8,7 @@ int main()
 {
     ios_base::sync_with_stdio(0); cin.tie(0);
     int n,m,q;
-    cin>>n>>m>>q;
+    cin >> n >> m >> q;
     x.pb(-1e9-10),y.pb(-1e9-10),s.pb(0),t.pb(0);
     for(int i=0;i<n;i++) cin>>a,x.pb(a);
     for(int i=1;i<=n;i++) cin>>a,s.pb(a),s[i]+=s[i-1];
