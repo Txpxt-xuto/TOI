@@ -12,7 +12,7 @@ int main()
     scanf("%d%d", &m, &n);
     scanf("%d", &k);
     int map[m][n];
-    for(i=0;i<m;i++) for(int j = 0; j < n; j++) scanf("%d", &map[i][j]);
+    for(i=0;i<m;i++) for(j=0;j<n;j++) scanf("%d", &map[i][j]);
     int ans = 0;
     for(i=0;i<=m-k;i++) 
     {
