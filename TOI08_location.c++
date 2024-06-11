@@ -1,6 +1,6 @@
 /*
-TASK: location.c
-LANG: C
+TASK: location.cpp
+LANG: C++
 COMPILER: VS code
 AUTHOR: Tapat Toungsakul
 CENTER: Home
