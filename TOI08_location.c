@@ -8,7 +8,7 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int m, n, k, a, i, j;
+    int m, n, k, a, b, i, j;
     scanf("%d%d", &m, &n);
     scanf("%d", &k);
     int map[m][n];
