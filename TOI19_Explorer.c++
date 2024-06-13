@@ -2,6 +2,7 @@
 #define ll long long
 using namespace std;
 const int N = 500001, MOD = 1e9 + 7;
+int i, j;
 vector<vector<int>> graph(N);
 ll parent[500001];
 ll child[500001];
@@ -22,7 +23,7 @@ int main()
     int n , start, currentnode;
     cin >> n >> currentnode;
     start = currentnode;
-    for(int i = 1 ; i < 2*n - 1 ; i++)
+    for(i=1;i<(2*n-1);i++)
     {
         int u;
         cin >> u;
