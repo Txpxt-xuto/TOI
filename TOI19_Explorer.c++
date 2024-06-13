@@ -5,12 +5,12 @@ const int N = 500001, MOD = 1e9 + 7;
 int i, j;
 vector<vector<int>> graph(N);
 ll parent[500001];
-ll child[500001];
+ll child[500001], total;
 ll dfs(int u) {
-    ll total = 1;
+    total = 1;
     for(int v : graph[u])
     {
-        total *= child[u] * dfs(v);
+        total *= child[u]*dfs(v);
         child[u]--;
         total %= MOD;
     }
