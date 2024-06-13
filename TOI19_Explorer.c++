@@ -19,9 +19,9 @@ ll dfs(int u) {
 int main() 
 {
     std::ios_base::sync_with_stdio(false) , cin.tie(NULL);
-    int n , start;
+    int n , start, currentnode;
     cin >> n;
-    int currentnode;
+    int ;
     cin >> currentnode;
     start = currentnode;
     for(int i = 1 ; i < 2*n - 1 ; i++)
