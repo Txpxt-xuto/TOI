@@ -19,12 +19,11 @@ ll dfs(int u) {
 int main() 
 {
     std::ios_base::sync_with_stdio(false) , cin.tie(NULL);
-    int n , start, currentnode;
+    int n , u, start, currentnode;
     cin >> n >> currentnode;
     start = currentnode;
     for(i=1;i<(2*n-1);i++)
     {
-        int u;
         cin >> u;
         if(u == parent[currentnode])
         {
