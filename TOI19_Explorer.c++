@@ -16,7 +16,6 @@ ll dfs(int u) {
     }
     return total;
 }
-
 int main() 
 {
     std::ios_base::sync_with_stdio(false) , cin.tie(NULL);
