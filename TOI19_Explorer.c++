@@ -1,16 +1,14 @@
 #include <bits/stdc++.h>
 #define ll long long
-
 using namespace std;
-
 const int N = 500001, MOD = 1e9 + 7;
 vector<vector<int>> graph(N);
 ll parent[500001];
 ll child[500001];
-
 ll dfs(int u) {
     ll total = 1;
-    for(int v : graph[u]){
+    for(int v : graph[u])
+    {
         total *= child[u] * dfs(v);
         child[u]--;
         total %= MOD;
@@ -18,7 +16,8 @@ ll dfs(int u) {
     return total;
 }
 
-int main() {
+int main() 
+{
     std::ios_base::sync_with_stdio(false) , cin.tie(NULL);
     int n , start;
     cin >> n;
