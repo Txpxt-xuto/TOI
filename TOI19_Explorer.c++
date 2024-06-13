@@ -25,10 +25,12 @@ int main() {
     int currentnode;
     cin >> currentnode;
     start = currentnode;
-    for(int i = 1 ; i < 2*n - 1 ; i++){
+    for(int i = 1 ; i < 2*n - 1 ; i++)
+    {
         int u;
         cin >> u;
-        if(u == parent[currentnode]){
+        if(u == parent[currentnode])
+        {
             currentnode = u;
             continue;
         }
