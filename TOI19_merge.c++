@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0),cin.tie(NULL);
-    int n,m,q;
-    cin>>n>>m>>q;
+    int n,m,q,i;
+    cin >> n >> m >> q;
     int a[n],y[n],b[m],z[m];
     for(i=0;i<n;i++) cin >> a[i];
     cin >> y[0];
