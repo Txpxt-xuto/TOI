@@ -1,39 +1,44 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 int main()
-{
-    ios_base::sync_with_stdio(0),cin.tie(NULL);
-    int n,m,q,i;
+{	
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+	int n,m,q;
     cin >> n >> m >> q;
-    int a[n],y[n],b[m],z[m];
-    for(i=0;i<n;i++) cin >> a[i];
-    cin >> y[0];
-    for(i=1;i<n;i++)
+    vector<int> x(n),y(m),s(n+1),t(m+1);
+    for (int i=0;i<n;i++) 
+    {
+        cin >> x[i];
+    }
+    for (int i=1;i<=n;i++) 
+    {
+        cin >> s[i];
+        s[i]+=s[i-1];
+    }
+    for (int i=0;i<m;i++) 
     {
         cin >> y[i];
-        y[i]+=y[i-1];
     }
-    for(i=0;i<m;i++) cin >> b[i];
-    cin >> z[0];
-    for(i=1;i<m;i++)
+    for (int i=1;i<=m;i++) 
     {
-        cin >> z[i];
-        z[i]+=z[i-1];
+        cin >> t[i];
+        t[i]+=t[i-1];
     }
-    for(i=0;i<q;i++)
-    {
-        int aa,bb,k;
-        cin >> aa >> bb >> k;
-        long long int l=-1e18,r=1e18;
-        while(l<r)
+    int p,b,a;
+    while (q--){
+        cin >> a >> b>>p;
+        int l=-1e9,r=1e9,md;
+        while (l<r)
         {
-            long long int mid=l+(r-l)/2,sum=0;
-            auto it=upper_bound(a,a+n,mid)-a-1,it2=upper_bound(b,b+m,double(mid-bb)/double(aa))-b-1;
-            if(it!=-1)sum+=y[it];
-            if(it2!=-1)sum+=z[it2];
-            if(sum>=k) r=mid;
-            else l=mid+1;
+            md=(l+r)>>1;
+            int i=s[upper_bound(x.begin(),x.end(),md)-x.begin()];
+            int j=t[upper_bound(y.begin(),y.end(),(md-b)/a)-y.begin()];
+            if(i+j < p) l=md+1;
+            else r=md;
         }
-        cout << l << "\n";
+        cout << l << '\n';
     }
+	return 0;
 }
