@@ -5,9 +5,7 @@ int main(){
     int n,m,q;
     cin>>n>>m>>q;
     int a[n],y[n],b[m],z[m];
-    for(int i=0;i<n;i++){cin >> a[i];
-        
-    }
+    for(i=0;i<n;i++) cin >> a[i];
     cin >> y[0];
     for(i=1;i<n;i++)
     {
