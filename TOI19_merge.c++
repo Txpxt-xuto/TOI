@@ -1,39 +1,33 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define ll long long
+const int NN=1e5+1;
+#define pb push_back
+vector<int> x,s,t,y;
+int a,b,k;
 int main()
-{	
-	ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-	int i,n,m,q;
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int i,n,m,q;
     cin >> n >> m >> q;
-    vector<int> x(n),y(m),s(n+1),t(m+1);
-    for(i=0;i<n;i++) cin >> x[i];
-    for(i=1;i<=n;i++) 
-    {
-        cin >> s[i];
-        s[i]+=s[i-1];
-    }
-    for(i=0;i<m;i++) cin >> y[i];
-    for(i=1;i<=m;i++) 
-    {
-        cin >> t[i];
-        t[i]+=t[i-1];
-    }
-    int p,b,a;
+    x.pb(-1e9-10),y.pb(-1e9-10),s.pb(0),t.pb(0);
+    for(i=0;i<n;i++) cin>>a,x.pb(a);
+    for(i=1;i<=n;i++) cin>>a,s.pb(a),s[i]+=s[i-1];
+    for(i=0;i<m;i++) cin>>a,y.pb(a);
+    for(i=1;i<=m;i++) cin>>a,t.pb(a),t[i]+=t[i-1];
+    long long l,r;
     while(q--)
     {
-        cin >> a >> b >> p;
-        int l=-1e9,r=1e9,md;
-        while (l<r)
+        l=-1e9,r=1e9;
+        cin >> a >> b >> k;
+        while(l<r)
         {
-            md=(l+r)>>1;
-            int i=s[upper_bound(x.begin(),x.end(),md)-x.begin()];
-            int j=t[upper_bound(y.begin(),y.end(),(md-b)/a)-y.begin()];
-            if(i+j<p) l=md+1;
-            else r=md;
+            long long mid=(l+r)>>1;
+            int k1=upper_bound(x.begin(),x.end(),mid)-x.begin()-1;
+            int k2=upper_bound(y.begin(),y.end(),(mid-b)/a)-y.begin()-1;
+            if(s[k1]+t[k2]<k) l=mid+1;
+            else r=mid;
         }
-        cout << l << '\n';
+        cout<<l<<"\n";
     }
-	return 0;
 }
