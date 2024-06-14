@@ -22,12 +22,12 @@ int main()
         cin >> a >> b >> k;
         while(l<r)
         {
-            long long mid=(l+r)>>1;
+            long long mid=(l+r) >> 1;
             int k1=upper_bound(x.begin(),x.end(),mid)-x.begin()-1;
             int k2=upper_bound(y.begin(),y.end(),(mid-b)/a)-y.begin()-1;
             if(s[k1]+t[k2]<k) l=mid+1;
             else r=mid;
         }
-        cout<<l<<"\n";
+        cout << l << "\n";
     }
 }
