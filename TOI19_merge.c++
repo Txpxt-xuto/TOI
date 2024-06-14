@@ -8,10 +8,10 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
-    cin>>y[0];
-    for(int i=1;i<n;i++)
+    cin >> y[0];
+    for(i=1;i<n;i++)
     {
-        cin>>y[i];
+        cin >> y[i];
         y[i]+=y[i-1];
     }
     for(i=0;i<m;i++)cin >> b[i];
