@@ -30,9 +30,6 @@ int main(){
             if(it2!=-1)sum+=z[it2];
             if(sum>=k) r=mid;
             else l=mid+1;
-
-            //cout<<it<<" "<<it2<<" "<<l<<" "<<r<<" "<<sum<<"\n";
-            //cout<<l<<" "<<r<<"\n";
         }
         cout<<l<<"\n";
     }
