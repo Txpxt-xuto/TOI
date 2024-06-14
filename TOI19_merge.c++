@@ -15,15 +15,18 @@ int main(){
     }
     for(int i=0;i<m;i++)cin>>b[i];
     cin>>z[0];
-    for(int i=1;i<m;i++){
+    for(int i=1;i<m;i++)
+    {
         cin>>z[i];
         z[i]+=z[i-1];
     }
-    for(int i=0;i<q;i++){
+    for(i=0;i<q;i++)
+    {
         int aa,bb,k;
-        cin>>aa>>bb>>k;
+        cin >> aa >> bb >> k;
         long long int l=-1e18,r=1e18;
-        while(l<r){
+        while(l<r)
+        {
             long long int mid=l+(r-l)/2,sum=0;
             auto it=upper_bound(a,a+n,mid)-a-1,it2=upper_bound(b,b+m,double(mid-bb)/double(aa))-b-1;
             if(it!=-1)sum+=y[it];
