@@ -21,8 +21,9 @@ int main()
         t[i]+=t[i-1];
     }
     int p,b,a;
-    while(q--){
-        cin >> a >> b>>p;
+    while(q--)
+    {
+        cin >> a >> b >> p;
         int l=-1e9,r=1e9,md;
         while (l<r)
         {
