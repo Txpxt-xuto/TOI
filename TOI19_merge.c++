@@ -15,9 +15,9 @@ int main(){
     }
     for(int i=0;i<m;i++)cin>>b[i];
     cin>>z[0];
-    for(int i=1;i<m;i++)
+    for(i=1;i<m;i++)
     {
-        cin>>z[i];
+        cin >> z[i];
         z[i]+=z[i-1];
     }
     for(i=0;i<q;i++)
