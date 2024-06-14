@@ -8,19 +8,13 @@ int main()
 	int n,m,q;
     cin >> n >> m >> q;
     vector<int> x(n),y(m),s(n+1),t(m+1);
-    for (int i=0;i<n;i++) 
-    {
-        cin >> x[i];
-    }
+    for (int i=0;i<n;i++) cin >> x[i];
     for (int i=1;i<=n;i++) 
     {
         cin >> s[i];
         s[i]+=s[i-1];
     }
     for (int i=0;i<m;i++) cin >> y[i];
-    {
-        
-    }
     for (int i=1;i<=m;i++) 
     {
         cin >> t[i];
