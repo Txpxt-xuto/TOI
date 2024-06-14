@@ -1,40 +1,32 @@
 #include <bits/stdc++.h>
-#define ll long long
 using namespace std;
-const int N = 500001, MOD = 1e9 + 7;
-int i, j;
-vector<vector<int>> graph(N);
-ll parent[500001];
-ll child[500001], total;
-ll dfs(int u) {
-    total = 1;
-    for(int v : graph[u])
-    {
-        total *= child[u]*dfs(v);
-        child[u]--;
-        total %= MOD;
-    }
-    return total;
-}
-int main() 
+#define int long long
+const int MOD = 1e9 + 7;
+int a[500500], fac[500500];
+signed main()
 {
-    std::ios_base::sync_with_stdio(false) , cin.tie(NULL);
-    int n , u, start, currentnode;
-    cin >> n >> currentnode;
-    start = currentnode;
-    for(i=1;i<(2*n-1);i++)
+    ios_base::sync_with_stdio(false); 
+    cin.tie(0);
+    int n,i; 
+    cin >> n;
+    for(i=1; i<=n*2-1; i++)
     {
-        cin >> u;
-        if(u == parent[currentnode])
-        {
-            currentnode = u;
-            continue;
-        }
-        parent[u] = currentnode;
-        child[currentnode]++;
-        graph[currentnode].push_back(u);
-        currentnode = u;
+        int x; 
+        cin >> x;
+        a[x]++;
     }
-    cout << dfs(start);
+    fac[0] = fac[1] = 1;
+    for(i=2; i<=500000; i++)
+    {
+        fac[i] = fac[i-1] * i;
+        fac[i] %= MOD;
+    }
+    int ans = 1;
+    for(i=1; i<=n; i++)
+    {
+        ans = ans * fac[a[i] - 1];
+        ans %= MOD;
+    }
+    cout << ans << '\n';
     return 0;
 }
