@@ -6,10 +6,12 @@ int a[N][N],b[N][N];
 int main(){
 	ios::sync_with_stdio(0); cin.tie(0);
 	int t=2;
-	while(t--){
+	while(t--)
+	{
 		int n,m,k;
 		cin >> n >> m >> k;
-		for(int i=1;i<=k;i++){
+		for(int i=1;i<=k;i++)
+		{
 			int x,y;
 			cin >> x >> y;
 			x++,y++;
