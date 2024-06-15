@@ -33,8 +33,10 @@ int main(){
 			for(int j=1;j<=m;j++){
 				if(a[i][j]==0 || b[i][j]==0) continue;
 				mx=min({a[i][j],b[i][j]});
-				for(int k=mx;k>ans;k--){
-					if(a[i][j-k+1]>=k && b[i-k+1][j]>=k){
+				for(int k=mx;k>ans;k--)
+				{
+					if(a[i][j-k+1]>=k && b[i-k+1][j]>=k)
+					{
 						ans=max(ans,k);
 						break;
 					}
