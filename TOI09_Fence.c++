@@ -2,9 +2,10 @@
 using namespace std;
 const int N=505;
 int a[N][N],b[N][N];
-
-int main(){
-	ios::sync_with_stdio(0); cin.tie(0);
+int main()
+{
+	ios::sync_with_stdio(0); 
+	cin.tie(0);
 	int t=2;
 	while(t--)
 	{
