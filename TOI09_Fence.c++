@@ -42,7 +42,7 @@ int main()
 			{
 				if(a[i][j]==0 || b[i][j]==0) continue;
 				mx=min({a[i][j],b[i][j]});
-				for(int k=mx;k>ans;k--)
+				for(k=mx;k>ans;k--)
 				{
 					if(a[i][j-k+1]>=k && b[i-k+1][j]>=k)
 					{
