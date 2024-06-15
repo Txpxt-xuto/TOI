@@ -16,14 +16,18 @@ int main(){
 			a[x][y]=-1;
 			b[x][y]=-1;
 		}
-		for(int i=1;i<=n;i++){
-			for(int j=1;j<=m;j++){
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=m;j++)
+			{
 				if(a[i][j]==-1) a[i][j]=0;
 				else a[i][j]=a[i-1][j]+1;
 			}
 		}
-		for(int i=1;i<=n;i++){
-			for(int j=1;j<=m;j++){
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=m;j++)
+			{
 				if(b[i][j]==-1) b[i][j]=0;
 				else b[i][j]=b[i][j-1]+1;
 			}
