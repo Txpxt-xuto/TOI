@@ -29,8 +29,10 @@ int main(){
 			}
 		}
 		int mx=0,ans=0;
-		for(int i=1;i<=n;i++){
-			for(int j=1;j<=m;j++){
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=m;j++)
+			{
 				if(a[i][j]==0 || b[i][j]==0) continue;
 				mx=min({a[i][j],b[i][j]});
 				for(int k=mx;k>ans;k--)
