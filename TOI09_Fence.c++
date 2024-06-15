@@ -6,10 +6,9 @@ int main()
 {
 	ios::sync_with_stdio(0); 
 	cin.tie(0);
-	int t=2,i,j,k;
+	int t=2,i,j,k,n,m;
 	while(t--)
 	{
-		int n,m,k;
 		cin >> n >> m >> k;
 		for(i=1;i<=k;i++)
 		{
