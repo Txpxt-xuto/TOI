@@ -1,4 +1,10 @@
-
+/*
+TASK: spaceship.cpp
+LANG: C++
+COMPILER: WCB
+AUTHOR: YourFirstName YourLastName
+ID: YourCenterID
+*/
 #include <bits/stdc++.h>
 using namespace std;
 int i,n,m;
@@ -32,7 +38,13 @@ int main()
     for(i=1;i<=m;i++)
     {
         scanf("%d %d %d",&x[i],&y[i],&z[i]);
-        scanf("%d %d %d",&M[i],&K[i],&C[i]);
+        scanf("%d %d %d",&M[i],&K[i],&C[i]);/*
+TASK: spaceship.cpp
+LANG: C++
+COMPILER: WCB
+AUTHOR: YourFirstName YourLastName
+ID: YourCenterID
+*/
         use[i] = 0;
     }
     solve(0,n,n,n,0);
