@@ -29,7 +29,6 @@ void solve(int now,int Mleft,int Kleft,int Cleft,int total)
         use[i] = 0;
     }
 }
-
 int main()
 {
     scanf("%d",&n);
