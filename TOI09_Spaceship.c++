@@ -28,7 +28,7 @@ int main()
     scanf("%d",&n);
     scanf("%d %d %d",&x[0],&y[0],&z[0]);
     scanf("%d",&m);
-    for(int i = 1 ; i <= m ; i++)
+    for(i=1;i<=m;i++)
     {
         scanf("%d %d %d",&x[i],&y[i],&z[i]);
         scanf("%d %d %d",&M[i],&K[i],&C[i]);
