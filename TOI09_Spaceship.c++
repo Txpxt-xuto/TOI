@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n,m;
+int i,n,m;
 int ans = 1e9;
 int use[15];
 int x[15],y[15],z[15],M[15],K[15],C[15];
@@ -13,7 +13,7 @@ void solve(int now,int Mleft,int Kleft,int Cleft,int total)
         return;
     }
 
-    for(int i = 1 ; i <= m; i++)
+    for(i=1 ; i <= m; i++)
     {
         if(use[i] == 1) continue;
         use[i] = 1;
