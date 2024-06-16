@@ -14,7 +14,8 @@ void solve(int now,int Mleft,int Kleft,int Cleft,int total){
         return;
     }
 
-    for(int i = 1 ; i <= m; i++){
+    for(int i = 1 ; i <= m; i++)
+    {
         if(use[i] == 1)continue;
         use[i] = 1;
         int cost = (x[i]-x[now])*(x[i]-x[now]) + (y[i]-y[now])*(y[i]-y[now]) + (z[i]-z[now])*(z[i]-z[now]);
