@@ -13,13 +13,12 @@ int use[15];
 int x[15],y[15],z[15],M[15],K[15],C[15];
 void solve(int now,int Mleft,int Kleft,int Cleft,int total)
 {
-    if(ans < total)return;
+    if(ans < total) return;
     if(Mleft <= 0 && Kleft <= 0 && Cleft <= 0)
     {
         ans = total;
         return;
     }
-
     for(i=1;i<=m;i++)
     {
         if(use[i] == 1) continue;
