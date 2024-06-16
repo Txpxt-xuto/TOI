@@ -38,13 +38,7 @@ int main()
     for(i=1;i<=m;i++)
     {
         scanf("%d %d %d",&x[i],&y[i],&z[i]);
-        scanf("%d %d %d",&M[i],&K[i],&C[i]);/*
-TASK: spaceship.cpp
-LANG: C++
-COMPILER: WCB
-AUTHOR: YourFirstName YourLastName
-ID: YourCenterID
-*/
+        scanf("%d %d %d",&M[i],&K[i],&C[i]);
         use[i] = 0;
     }
     solve(0,n,n,n,0);
