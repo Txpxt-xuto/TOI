@@ -1,39 +1,34 @@
 #include <bits/stdc++.h>
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 using namespace std;
-#define ll long long
-ll b,c,d,e,f,g,h,i,j,k,l,m,a,x,z,y,n,o,p,q,r,s,t,u,v,w;
-ll Mn = LLONG_MAX;
-ll inX[20002], outX[20002];
-ll inY[20002], outY[20002];
-ll BU[18][20002];
-ll _abs(ll n)
-{
-    return (n<0)*-n + (n>0)*n;
-}
+#define pii pair <int,int>
+#define f first
+#define s second
+const int N=2e4+5;
+const int K=20;
+const int INF=2e9;
+int n,tk,d[K][N],mn=INF,cnt;
+pii st={1,1},en,pos1[N],pos2[N];
 int main()
 {
-    cin >> n >> m >> w >> p;
-    while(i++<w) cin >> inX[i] >> inY[i] >> outX[i] >> outY[i];
-    fill_n(BU[0],18*20002,Mn);
-    inX[0] = outX[0] = inY[0] = outY[0] = 1;
-    inX[w+1] = outX[w+1] = n;
-    inY[w+1] = outY[w+1] = m;
-    for(u=0;u<=p;u++)
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    fill_n(d[0],K*N,INF);
+    cin >> en.f >> en.s >> n >> tk;
+    for(int i=1;i<=n;i++) cin >> pos1[i].f >> pos1[i].s >> pos2[i].f >> pos2[i].s;
+    pos1[n+1]=en;
+    for(int i=1;i<=n+1;i++) d[0][i]=abs(1-pos1[i].f)+abs(1-pos1[i].s);
+    for(int t=1;t<=tk;t++)
     {
-        for(f=0;f<=w+1;f++)
+        for(int k=1;k<=n;k++)
         {
-            BU[0][f] = _abs(inX[0] - inX[f]) + _abs(inY[0] - inY[f]);
-            for(t=0;t<=w+1;t++) BU[u][t] = min(BU[u][t], BU[u-1][f] + _abs(outX[f] - inX[t]) + _abs(outY[f] - inY[t]));
+            for(int j=1;j<=n+1;j++)
+            {
+                d[t][j]=min(d[t][j],d[t-1][k]+abs(pos1[j].f-pos2[k].f)+abs(pos1[j].s-pos2[k].s));
+            }
         }
     }
-    for(i=0;i<=p;i++)
-    {
-        if(BU[i][w+1] < Mn)
-        {
-            Mn = BU[i][w+1];
-            a = i;
-        }
-    }
-    cout << Mn << " " << a;
-    return 0;
-} 
+    for(int i=0;i<=tk;i++) if(d[i][n+1]<mn) mn=d[i][n+1],cnt=i;
+    cout << mn << " " << cnt;
+}
