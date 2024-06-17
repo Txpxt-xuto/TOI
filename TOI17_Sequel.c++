@@ -2,20 +2,18 @@
 
 using namespace std;
 const int B=400;
-int niza[100002],i,j;
+int niza[100002],i,j,n,q;
 int dp[100002][B+4];
 int main()
 {
-    int n,q;
     cin >> n >> q;
-    for (int i=0;i<n;i++) cin>>niza[i];
-
+    for (int i=0;i<n;i++) cin >> niza[i];
     for (i=n-1;i>=0;i--)
     {
-        for (skok=1;skok<B;skok++)
+        for (j=1;j<B;j++)
         {
-            dp[i][skok]=niza[i];
-            if (skok+i<n) dp[i][skok]+=dp[i+skok][skok];
+            dp[i][j]=niza[i];
+            if (j+i<n) dp[i][j]+=dp[i+j][j];
         }
     }
     while(q--)
