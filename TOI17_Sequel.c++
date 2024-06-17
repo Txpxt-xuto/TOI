@@ -31,10 +31,8 @@ int main()
         if (m<B)
         {
             odg=dp[l][m];
-            if (desno+m<n)
-            {
-                odg-=dp[desno+m][m];
-            }
+            if (desno+m<n) odg-=dp[desno+m][m];
+
         }
         else
         {
