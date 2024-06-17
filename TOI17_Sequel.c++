@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 const int B=400;
 int arr[100002],i,j,n,q;
@@ -23,7 +22,6 @@ int main()
         l--;
         r--;
         int pd=0,x=(r-l)/m,num = l+x*m;
-        int ;
         if (m<B)
         {
             pd=dp[l][m];
