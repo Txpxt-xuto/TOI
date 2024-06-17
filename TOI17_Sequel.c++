@@ -36,6 +36,5 @@ int main()
         else for (int i=l;i<=r;i+=m) odg+=niza[i];
         cout<<odg<<" ";
     }
-
     return 0;
 }
