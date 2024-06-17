@@ -8,7 +8,7 @@ int dp[100002][B+4];
 int main()
 {
     int n,q;
-    cin>>n>>q;
+    cin >> n >> q;
     for (int i=0;i<n;i++) cin>>niza[i];
 
     for (int i=n-1;i>=0;i--)
@@ -26,11 +26,11 @@ int main()
         cin >> l >> m >> r;
         l--;
         r--;
-        int odg=0,x=(r-l)/m;
-        int desno = l+x*m;
+        int dp=0,x=(r-l)/m,desno = l+x*m;
+        int ;
         if (m<B)
         {
-            odg=dp[l][m];
+            dp=dp[l][m];
             if (desno+m<n) odg-=dp[desno+m][m];
         }
         else for (int i=l;i<=r;i+=m) odg+=niza[i];
