@@ -26,15 +26,15 @@ int main()
         cin >> l >> m >> r;
         l--;
         r--;
-        int dp=0,x=(r-l)/m,desno = l+x*m;
+        int pd=0,x=(r-l)/m,desno = l+x*m;
         int ;
         if (m<B)
         {
-            dp=dp[l][m];
-            if (desno+m<n) odg-=dp[desno+m][m];
+            pd=dp[l][m];
+            if (desno+m<n) pd-=dp[desno+m][m];
         }
-        else for (int i=l;i<=r;i+=m) odg+=niza[i];
-        cout << odg << " ";
+        else for(i=l;i<=r;i+=m) pd+=niza[i];
+        cout << pd << " ";
     }
     return 0;
 }
