@@ -13,7 +13,7 @@ using namespace std;
 const int N=2e4+5;
 const int K=20;
 const int INF=2e9;
-int n,tk,d[K][N],mn=INF,cnti,j,k,t;
+int n,tk,d[K][N],mn=INF,cnt,i,j,k,t;
 pii st={1,1},en,pos1[N],pos2[N];
 int main()
 {
@@ -30,7 +30,7 @@ int main()
         {
             for(j=1;j<=n+1;j++)
             {
-                d[t][j]=min(d[t][j],d[t-1][k]+abs(pos1[j].f-pos2[k].f)+abs(pos1[j].s-pos2[k].s));
+                d[t][j] = min(d[t][j],d[t-1][k]+abs(pos1[j].f-pos2[k].f)+abs(pos1[j].s-pos2[k].s));
             }
         }
     }
