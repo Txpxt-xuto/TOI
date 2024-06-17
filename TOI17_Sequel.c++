@@ -30,15 +30,10 @@ int main()
         int desno = l+x*m;
         if (m<B)
         {
-            //cout<< "levo = "<<l<<" desno = "<<desno<<endl;
-            //cout<< "dodava "<<dp[l][m]<<endl;
             odg=dp[l][m];
             if (desno+m<n)
             {
-                //cout<< "odzema "<<dp[desno+m][m]<<endl;
                 odg-=dp[desno+m][m];
-                //cout<< "ali dodava "<<niza[desno]<<endl;
-                //odg+=niza[desno];
             }
         }
         else
