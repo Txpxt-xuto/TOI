@@ -14,32 +14,25 @@ int main()
 {
     cin >> n >> m >> w >> p;
 
-    while(i++<w)
-        cin >> inX[i] >> inY[i] >> outX[i] >> outY[i];
-
+    while(i++<w) cin >> inX[i] >> inY[i] >> outX[i] >> outY[i];
     fill_n(BU[0],18*20002,Mn);
-
     inX[0] = outX[0] = inY[0] = outY[0] = 1;
     inX[w+1] = outX[w+1] = n;
     inY[w+1] = outY[w+1] = m;
-
     for(u=0;u<=p;u++)
+    {
         for(f=0;f<=w+1;f++)
         {
             BU[0][f] = _abs(inX[0] - inX[f]) + _abs(inY[0] - inY[f]);
-            for(t=0;t<=w+1;t++)
-            {
-                BU[u][t] = min(BU[u][t], BU[u-1][f] + _abs(outX[f] - inX[t]) + _abs(outY[f] - inY[t]));
-            }
+            for(t=0;t<=w+1;t++) BU[u][t] = min(BU[u][t], BU[u-1][f] + _abs(outX[f] - inX[t]) + _abs(outY[f] - inY[t]));
         }
-
+    }
     for(i=0;i<=p;i++)
         if(BU[i][w+1] < Mn)
         {
             Mn = BU[i][w+1];
             a = i;
         }
-
     cout << Mn << " " << a;
 
     return 0;
