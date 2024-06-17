@@ -13,7 +13,6 @@ ll _abs(ll n)
 int main()
 {
     cin >> n >> m >> w >> p;
-
     while(i++<w) cin >> inX[i] >> inY[i] >> outX[i] >> outY[i];
     fill_n(BU[0],18*20002,Mn);
     inX[0] = outX[0] = inY[0] = outY[0] = 1;
@@ -28,12 +27,13 @@ int main()
         }
     }
     for(i=0;i<=p;i++)
+    {
         if(BU[i][w+1] < Mn)
         {
             Mn = BU[i][w+1];
             a = i;
         }
+    }
     cout << Mn << " " << a;
-
     return 0;
 } 
