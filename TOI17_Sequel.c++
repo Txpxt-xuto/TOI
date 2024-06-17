@@ -34,7 +34,6 @@ int main()
             if (desno+m<n) odg-=dp[desno+m][m];
         }
         else for (int i=l;i<=r;i+=m) odg+=niza[i];
-
         cout<<odg<<" ";
     }
 
