@@ -23,7 +23,7 @@ int main()
     while(q--)
     {
         int l,m,r;
-        cin>>l>>m>>r;
+        cin >> l >> m >> r;
         l--;
         r--;
         int odg=0,x=(r-l)/m;
@@ -34,7 +34,7 @@ int main()
             if (desno+m<n) odg-=dp[desno+m][m];
         }
         else for (int i=l;i<=r;i+=m) odg+=niza[i];
-        cout<<odg<<" ";
+        cout << odg << " ";
     }
     return 0;
 }
