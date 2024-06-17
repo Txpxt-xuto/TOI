@@ -1,28 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-// #pragma GCC optimize("O3,unroll-loops")
-// #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
-
 #define ll long long
-
 ll b,c,d,e,f,g,h,i,j,k,l,m,a,x,z,y,n,o,p,q,r,s,t,u,v,w;
 ll Mn = LLONG_MAX;
-
 ll inX[20002], outX[20002];
 ll inY[20002], outY[20002];
-
 ll BU[18][20002];
-
 ll _abs(ll n)
 {
     return (n<0)*-n + (n>0)*n;
 }
-
 int main()
 {
-   // cin.tie(0)->sync_with_stdio(0);
-
     cin >> n >> m >> w >> p;
 
     while(i++<w)
