@@ -49,35 +49,36 @@ int32_t main()
     }
     NCR[c] = 1;
     for(i=c+1;i<700;i++) NCR[i] = pascal[i][c];
-
-    auto SE=[&ps1,&a,&b](int i1,int j1,int i2,int j2) {
-        if (i1-j1>=a||j1-i1>=b) {
-            return (int)0;
-        }
-
-        if (i1>a) {
+    auto SE=[&ps1,&a,&b](int i1,int j1,int i2,int j2) 
+    {
+        if (i1-j1>=a||j1-i1>=b) return (int)0;
+        if (i1>a) 
+        {
             j1-=i1-a;
             i1=a;
         }
-        else if (j1>b) {
+        else if (j1>b) 
+        {
             i1-=j1-b;
             j1=b;
         }
-
-        if (i2<0) {
+        if (i2<0) 
+        {
             j2-=i2;
             i2=0;
         }
-        else if (j2<0) {
+        else if (j2<0) 
+        {
             i2-=j2;
             j2=0;
         }
-
         return ps1[i1][j1]-ps1[i2][j2];
-        };
-    auto SW=[&ps2,&a,&b](int i1,int j1,int i2,int j2) {
-        if (i1+j1<2||i1+j1 >a+b) {
-            return (int)0;
+    };
+    auto SW=[&ps2,&a,&b](int i1,int j1,int i2,int j2) 
+    {
+        if (i1+j1<2||i1+j1 >a+b)return (int)0;
+        {
+            
         }
         // cout<<'a'<<i1<<'a'<<j1<<'a'<<i2<<'a'<<j2<<'a'<<'\n';
         if (i1>a) {
