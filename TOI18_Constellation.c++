@@ -12,10 +12,10 @@ int32_t main()
     cin.tie(0);
     ios_base::sync_with_stdio(0);
     int a,b,c,i,j,k;
-    cin>>a>>b>>c;
+    cin >> a >> b >> c;
     int ps1[310][310]={},ps2[310][310]={};
     char arr[310][310];
-    for (i=1;i<=a;i++) 
+    for(i=1;i<=a;i++) 
     {
         for(j=1;j<=b;j++) cin >> arr[i][j];
     }
@@ -37,18 +37,20 @@ int32_t main()
     }
     int NCR[1000]={};
     
-    for(i=1;i<700;i++){
+    for(i=1;i<700;i++)
+    {
         pascal[i][0] = 1;
         pascal[i][i] = 1;
-        for(j=1;j<i;j++){
+        for(j=1;j<i;j++)
+        {
             pascal[i][j] = pascal[i-1][j] + pascal[i-1][j-1];
             pascal[i][j] %= 1000003;
         }
     }
     NCR[c] = 1;
-    for(i=c+1;i<700;i++){
+    for(i=c+1;i<700;i++)
+    {
         NCR[i] = pascal[i][c];
-        // cout<<NCR[i]<<' ';
     }
 
     auto SE=[&ps1,&a,&b](int i1,int j1,int i2,int j2) {
