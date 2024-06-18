@@ -105,9 +105,9 @@ int32_t main()
     i = 5;
     j = 4;
     k = 4;
-    for (i=1;i<=a;i++) 
+    for(i=1;i<=a;i++) 
     {
-        for (j=1;j<=b;j++) 
+        for(j=1;j<=b;j++) 
         {
             for(k=1;k<cap;k++)
             {
