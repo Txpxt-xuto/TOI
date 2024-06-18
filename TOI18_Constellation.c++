@@ -3,7 +3,7 @@ TASK: TaskName
 AUTHOR: YourName YourLastName
 CENTER: YourCenter
 */
-include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define int int64_t
 int pascal[800][800]={};
