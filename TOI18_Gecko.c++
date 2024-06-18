@@ -11,7 +11,6 @@ int dist[N],gecko[N],to[N];
 iii edge[M];
 bool vis[M];
 set<pii> ss;
-
 int main()
 {
     ios_base::sync_with_stdio(0); 
