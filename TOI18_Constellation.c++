@@ -15,20 +15,22 @@ int32_t main()
     cin>>a>>b>>c;
     int ps1[310][310]={},ps2[310][310]={};
     char arr[310][310];
-    for (i=1;i<=a;i++) {
-        for (j=1;j<=b;j++) {
-            cin>>arr[i][j];
-        }
-
+    for (i=1;i<=a;i++) 
+    {
+        for(j=1;j<=b;j++) cin >> arr[i][j];
     }
-    for (i=1;i<=a;i++) {
-        for (j=1;j<=b;j++) {
-            if (arr[i][j]=='#') {
+    for(i=1;i<=a;i++) 
+    {
+        for(j=1;j<=b;j++) 
+        {
+            if (arr[i][j]=='#') 
+            {
                 ps1[i][j]++;
                 ps2[i][j]++;
             }
         }
-        for (j=1;j<=b;j++) {
+        for(j=1;j<=b;j++) 
+        {
             ps1[i][j]+=ps1[i-1][j-1];
             ps2[i][j]+=ps2[i-1][j+1];
         }
