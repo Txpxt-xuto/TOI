@@ -76,31 +76,30 @@ int32_t main()
     };
     auto SW=[&ps2,&a,&b](int i1,int j1,int i2,int j2) 
     {
-        if (i1+j1<2||i1+j1 >a+b)return (int)0;
+        if (i1+j1<2||i1+j1 >a+b) return (int)0;
+        if (i1>a) 
         {
-            
-        }
-        // cout<<'a'<<i1<<'a'<<j1<<'a'<<i2<<'a'<<j2<<'a'<<'\n';
-        if (i1>a) {
             j1+=i1-a;
             i1=a;
         }
-        else if (j1<1) {
+        else if (j1<1) 
+        {
             i1+=j1-1;
             j1=1;
         }
 
-        if (i2<0) {
+        if (i2<0) 
+        {
             j2+=i2;
             i2=0;
         }
-        else if (j2>b+1) {
+        else if (j2>b+1) 
+        {
             i2+=j2-b-1;
             j2=b+1;
         }
-        // cout<<'a'<<i1<<'a'<<j1<<'a'<<i2<<'a'<<j2<<'a';
         return ps2[i1][j1]-ps2[i2][j2];
-        };
+    };
     
     int cnt = 0,cur,cap = a+b;
     i = 5;
