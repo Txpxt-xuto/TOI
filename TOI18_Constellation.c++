@@ -105,20 +105,17 @@ int32_t main()
     i = 5;
     j = 4;
     k = 4;
-    // cout<< SE(i+k,j,i,j-k)<<' ';
-    // cout<< SW(i+k-1,j+1,i,j+k) <<' ';
-    // cout<< SE(i,j+k,i-k,j) <<' ';
-    // cout<< SW(i,j-k,i-k-1,j+1);
-    for (i=1;i<=a;i++) {
-        for (j=1;j<=b;j++) {
-            for(k=1;k<cap;k++){
+    for (i=1;i<=a;i++) 
+    {
+        for (j=1;j<=b;j++) 
+        {
+            for(k=1;k<cap;k++)
+            {
                 cur = SE(i+k,j,i,j-k)+SW(i+k-1,j+1,i,j+k) + SE(i,j+k,i-k,j) + SW(i,j-k,i-k-1,j+1);
                 cnt+=NCR[cur];
                 cnt%=1000003;
             }
-            // cout<<cnt<<' ';
         }
-        // cout<<'\n';
     }
-    cout<<cnt;
+    cout << cnt;
 }
