@@ -51,8 +51,8 @@ int32_t main()
     for(i=c+1;i<700;i++) NCR[i] = pascal[i][c];
     auto SE=[&ps1,&a,&b](int i1,int j1,int i2,int j2) 
     {
-        if (i1-j1>=a||j1-i1>=b) return (int)0;
-        if (i1>a) 
+        if(i1-j1>=a||j1-i1>=b) return (int)0;
+        if(i1>a) 
         {
             j1-=i1-a;
             i1=a;
