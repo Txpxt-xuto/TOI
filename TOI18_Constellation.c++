@@ -23,7 +23,7 @@ int32_t main()
     {
         for(j=1;j<=b;j++) 
         {
-            if (arr[i][j]=='#') 
+            if(arr[i][j]=='#') 
             {
                 ps1[i][j]++;
                 ps2[i][j]++;
