@@ -57,12 +57,12 @@ int32_t main()
             j1-=i1-a;
             i1=a;
         }
-        else if (j1>b) 
+        else if(j1>b) 
         {
             i1-=j1-b;
             j1=b;
         }
-        if (i2<0) 
+        if(i2<0) 
         {
             j2-=i2;
             i2=0;
