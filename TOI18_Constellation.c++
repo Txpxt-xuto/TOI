@@ -58,8 +58,8 @@ int32_t main()
         }
         else if(j1>b) 
         {
-            i1-=j1-b;
-            j1=b;
+            i1 -= j1-b;
+            j1 = b;
         }
         if(i2<0) 
         {
