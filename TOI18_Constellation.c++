@@ -53,8 +53,8 @@ int32_t main()
         if(i1-j1>=a||j1-i1>=b) return (int)0;
         if(i1>a) 
         {
-            j1-=i1-a;
-            i1=a;
+            j1 -= i1-a;
+            i1 = a;
         }
         else if(j1>b) 
         {
