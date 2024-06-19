@@ -31,8 +31,8 @@ int32_t main()
         }
         for(j=1;j<=b;j++) 
         {
-            ps1[i][j]+=ps1[i-1][j-1];
-            ps2[i][j]+=ps2[i-1][j+1];
+            ps1[i][j] += ps1[i-1][j-1];
+            ps2[i][j] += ps2[i-1][j+1];
         }
     }
     int NCR[1000]={};
