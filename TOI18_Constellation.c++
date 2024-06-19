@@ -76,8 +76,8 @@ int32_t main()
     };
     auto SW=[&ps2,&a,&b](int i1,int j1,int i2,int j2) 
     {
-        if (i1+j1<2||i1+j1 >a+b) return (int)0;
-        if (i1>a) 
+        if(i1+j1<2||i1+j1 >a+b) return (int)0;
+        if(i1>a) 
         {
             j1+=i1-a;
             i1=a;
