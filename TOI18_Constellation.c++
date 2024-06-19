@@ -78,23 +78,23 @@ int32_t main()
         if(i1+j1<2||i1+j1 >a+b) return (int)0;
         if(i1>a) 
         {
-            j1+=i1-a;
-            i1=a;
+            j1 += i1-a;
+            i1= a;
         }
         else if(j1<1) 
         {
-            i1+=j1-1;
-            j1=1;
+            i1 += j1-1;
+            j1 = 1;
         }
         if(i2<0) 
         {
-            j2+=i2;
-            i2=0;
+            j2 += i2;
+            i2 = 0;
         }
         else if(j2>b+1) 
         {
-            i2+=j2-b-1;
-            j2=b+1;
+            i2 += j2-b-1;
+            j2 = b+1;
         }
         return ps2[i1][j1]-ps2[i2][j2];
     };
