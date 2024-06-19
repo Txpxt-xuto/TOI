@@ -67,7 +67,7 @@ int32_t main()
             j2-=i2;
             i2=0;
         }
-        else if (j2<0) 
+        else if(j2<0) 
         {
             i2-=j2;
             j2=0;
