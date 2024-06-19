@@ -36,7 +36,6 @@ int32_t main()
         }
     }
     int NCR[1000]={};
-    
     for(i=1;i<700;i++)
     {
         pascal[i][0] = 1;
