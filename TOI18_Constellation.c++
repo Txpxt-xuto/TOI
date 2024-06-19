@@ -68,8 +68,8 @@ int32_t main()
         }
         else if(j2<0) 
         {
-            i2-=j2;
-            j2=0;
+            i2 -= j2;
+            j2 = 0;
         }
         return ps1[i1][j1]-ps1[i2][j2];
     };
