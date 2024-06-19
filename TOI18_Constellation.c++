@@ -63,8 +63,8 @@ int32_t main()
         }
         if(i2<0) 
         {
-            j2-=i2;
-            i2=0;
+            j2 -= i2;
+            i2 = 0;
         }
         else if(j2<0) 
         {
@@ -79,7 +79,7 @@ int32_t main()
         if(i1>a) 
         {
             j1 += i1-a;
-            i1= a;
+            i1 = a;
         }
         else if(j1<1) 
         {
