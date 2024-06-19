@@ -82,13 +82,13 @@ int32_t main()
             j1+=i1-a;
             i1=a;
         }
-        else if (j1<1) 
+        else if(j1<1) 
         {
             i1+=j1-1;
             j1=1;
         }
 
-        if (i2<0) 
+        if(i2<0) 
         {
             j2+=i2;
             i2=0;
