@@ -2,10 +2,8 @@
 using namespace std;
 #define int long long
 const int N=1e6+6;
-
 int n,cnt,ans,dp[N];
 string s;
-
 signed main()
 {
     ios::sync_with_stdio(0);
