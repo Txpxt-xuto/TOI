@@ -2,7 +2,7 @@
 using namespace std;
 #define int long long
 const int N=1e6+6;
-int n,cnt,ans,dp[N];
+int n,cnt,ans,mid,dp[N];
 string s;
 signed main()
 {
@@ -16,7 +16,7 @@ signed main()
         {
             int r=l;
             while(r<n && s[r]=='T') r++;
-            for(int mid=l;mid<=r;mid++)
+            for(mid=l;mid<=r;mid++)
             {
                 cnt+=mid-dp[mid-l+1];
                 ans+=cnt;
