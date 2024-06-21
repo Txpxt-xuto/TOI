@@ -30,9 +30,6 @@ int main() {
         }
     }
     cout << mx << '\n';
-    for(int i=0;i<n;i++)
-    {
-        cout << ans1[i] << " ";
-    }
+    for(int i=0;i<n;i++) cout << ans1[i] << " ";
     return 0;
 }
