@@ -11,12 +11,15 @@ signed main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin >> n >> s;
-    for(int l=1;l<=n;l++){
+    for(int l=1;l<=n;l++)
+    {
         if(s[l-1]=='F') ans+=cnt;
-        else{
+        else
+        {
             int r=l;
             while(r<n && s[r]=='T') r++;
-            for(int mid=l;mid<=r;mid++){
+            for(int mid=l;mid<=r;mid++)
+            {
                 cnt+=mid-dp[mid-l+1];
                 ans+=cnt;
                 dp[mid-l+1]=r-(mid-l);
