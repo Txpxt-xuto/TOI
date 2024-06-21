@@ -4,7 +4,7 @@ vector<vector<long long>> mount1;
 vector<long long> ans,ans1;
 int main() {
     ios::sync_with_stdio(0),cin.tie(0);
-    int n,mx=-1;
+    int n,mx=-1,i;
     cin >> n;
     mount1.resize(n);
     ans1.resize(n);
@@ -17,7 +17,7 @@ int main() {
         mount1[i].push_back(i);
     }
     sort(mount1.begin(), mount1.end());
-    for (int i = 0; i < n; i++) 
+    for(i=0;i<n;i++) 
     {
         int x=upper_bound(ans.begin(),ans.end(),mount1[i][1])-ans.begin();
         if(x==ans.size()) 
