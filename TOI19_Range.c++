@@ -24,10 +24,7 @@ int main() {
         else
         ans[x]=mount1[i][1];
         ans1[mount1[i][2]]=x+1;
-        if(ans1[mount1[i][2]]>mx)
-        {
-            mx=ans1[mount1[i][2]];
-        }
+        if(ans1[mount1[i][2]]>mx) mx=ans1[mount1[i][2]];
     }
     cout << mx << '\n';
     for(int i=0;i<n;i++) cout << ans1[i] << " ";
