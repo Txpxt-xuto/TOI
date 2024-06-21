@@ -17,7 +17,8 @@ int main() {
         mount1[i].push_back(i);
     }
     sort(mount1.begin(), mount1.end());
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+    {
         int x=upper_bound(ans.begin(),ans.end(),mount1[i][1])-ans.begin();
         if(x==ans.size()) 
         ans.push_back(mount1[i][1]);
