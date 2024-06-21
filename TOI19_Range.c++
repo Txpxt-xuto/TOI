@@ -8,7 +8,8 @@ int main() {
     cin >> n;
     mount1.resize(n);
     ans1.resize(n);
-    for (int i = 0; i < n; i++) {
+    for(i = 0; i < n; i++)
+    {
         int x,y;
         cin >> x >> y;
         x=x*-1;
@@ -28,6 +29,6 @@ int main() {
         if(ans1[mount1[i][2]]>mx) mx=ans1[mount1[i][2]];
     }
     cout << mx << '\n';
-    for(int i=0;i<n;i++) cout << ans1[i] << " ";
+    for(i=0;i<n;i++) cout << ans1[i] << " ";
     return 0;
 }
