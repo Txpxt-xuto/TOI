@@ -22,7 +22,7 @@ signed main()
                 ans+=cnt;
                 dp[mid-l+1]=r-(mid-l);
             }
-            l=r;
+            l = r;
         }
     }
     cout << ans;
