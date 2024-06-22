@@ -32,7 +32,7 @@ int main()
         }
         printf("\n");
     }*/
-    for(int i=0;i<=1100000;i++)d[i]=1e9;
+    for(i=0;i<=1100000;i++)d[i]=1e9;
     d[0]=0;
     pq.push({0,0});
     while(!pq.empty())
