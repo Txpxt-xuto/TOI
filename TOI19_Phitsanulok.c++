@@ -63,6 +63,6 @@ int main()
         }
     }
     int mx=-1e9;
-    for(auto node:blue)if(d[node]!=1e9)mx=max(mx,d[node]);
+    for(auto node:blue) if(d[node]!=1e9) mx=max(mx,d[node]);
     printf("%d\n",mx);
 }
