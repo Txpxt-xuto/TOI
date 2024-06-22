@@ -18,10 +18,10 @@ int main()
         {
             scanf("%d",&k);
             if(k==-1) poison|=(1<<j);
-            if(k==1) potion|=(1<<j);
+            if(k==1) j|=(1<<j);
         }
         blue.pb(poison);
-        v[poison].pb({potion,m});
+        v[poison].pb({j,m});
     }
     for(i=0;i<=1100000;i++)d[i]=1e9;
     d[0]=0;
