@@ -14,7 +14,7 @@ int main()
     {
         scanf("%d",&m);
         j=0,z=0;
-        for(int j=0;j<s;j++)
+        for(q=0;q<s;q++)
         {
             scanf("%d",&k);
             if(k==-1) z|=(1<<j);
