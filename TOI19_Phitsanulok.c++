@@ -21,7 +21,7 @@ int main()
             if(bit==1) potion|=(1<<j);
         }
         blue.pb(poison);
-        v[poison].pb({potion,power});
+        v[poison].pb({potion,m});
     }
     for(i=0;i<=1100000;i++)d[i]=1e9;
     d[0]=0;
