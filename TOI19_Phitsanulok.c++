@@ -3,7 +3,7 @@ using namespace std;
 #define pb push_back
 #define X first
 #define Y second
-int n,i,s,m,k,potion,poison,d[1100005],u,mx=-1e9;
+int n,i,s,m,k,j,poison,d[1100005],u,mx=-1e9;
 vector<pair<int,int> > v[1100005];
 vector<int> blue;
 priority_queue<pair<int,int> > pq;
@@ -13,7 +13,7 @@ int main()
     for(i=1;i<=n;i++)
     {
         scanf("%d",&m);
-        potion=0,poison=0;
+        j=0,poison=0;
         for(int j=0;j<s;j++)
         {
             scanf("%d",&k);
