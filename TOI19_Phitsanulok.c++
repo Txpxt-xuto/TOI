@@ -17,8 +17,8 @@ int main()
         for(int j=0;j<s;j++)
         {
             scanf("%d",&bit);
-            if(bit==-1)poison|=(1<<j);
-            if(bit==1)potion|=(1<<j);
+            if(bit==-1) poison|=(1<<j);
+            if(bit==1) potion|=(1<<j);
         }
         blue.pb(poison);
         v[poison].pb({potion,power});
