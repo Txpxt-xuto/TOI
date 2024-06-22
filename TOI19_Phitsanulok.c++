@@ -23,15 +23,6 @@ int main()
         blue.pb(poison);
         v[poison].pb({potion,power});
     }
-    /*for(int i=0;i<=3;i++)
-    {
-        printf("%d\n",i);
-        for(int j=0;j<v[i].size();j++)
-        {
-            printf("%d %d\n",v[i][j].X,v[i][j].Y);
-        }
-        printf("\n");
-    }*/
     for(i=0;i<=1100000;i++)d[i]=1e9;
     d[0]=0;
     pq.push({0,0});
