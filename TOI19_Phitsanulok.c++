@@ -49,7 +49,7 @@ int main()
                 pq.push({-d[y],y});
             }
         }
-        for(int i=0;i<s;i++)
+        for(i=0;i<s;i++)
         {
             if(((1<<i)|u)==u)
             {
