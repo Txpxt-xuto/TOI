@@ -8,7 +8,7 @@ struct A{
         return w>o.w;
     }
 };
-vector<pair<int,int>> adj[1<<20];
+vector<pair<int,int>> dp[1<<20];
 int dist[1<<20];
 int32_t main()
 {
@@ -31,7 +31,7 @@ int32_t main()
             if(x==-1) p|=1<<i;
             else if(x==1) a|=1<<i;
         }
-        adj[p].push_back({a,w});
+        dp[p].push_back({a,w});
     }
     int ans=0;
     while(!pq.empty())
@@ -40,7 +40,7 @@ int32_t main()
         int w =pq.top().w;
         pq.pop();
         if(dist[u]<w) continue;
-        for(auto e : adj[u])
+        for(auto e : dp[u])
         {
         ans = max(ans,w);
             if(dist[e.first]>e.second+w)
