@@ -24,7 +24,7 @@ int32_t main()
         int a=0,w;
         cin >> w;
         int p=0;
-        for(i = 0;i<s;i++)
+        for(i=0;i<s;i++)
         {
             int x;
             cin >> x;
