@@ -6,7 +6,7 @@ ll arr[301];
 ll qs[301];
 ll dp[10][301][301];
 bool vis[10][301][301];
-ll n , k , d;
+ll n , k , d , i;
 ll dfs(ll l,ll r,ll state)
 {
     if(vis[state][l][r]) return dp[state][l][r];    
