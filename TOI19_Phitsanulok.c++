@@ -14,7 +14,7 @@ int32_t main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-    int n,s,i;
+    int n,s,i,x;
     cin >> n >> s;
     memset(qwerty,0x3f,sizeof qwerty);
     priority_queue<A> pq;
@@ -27,7 +27,6 @@ int32_t main()
         int p=0;
         for(i=0;i<s;i++)
         {
-            int x;
             cin >> x;
             if(x==-1) p|=1<<i;
             else if(x==1) a|=1<<i;
@@ -54,7 +53,7 @@ int32_t main()
         {
             if(u&(1<<i) && qwerty[u^(1<<i)]>w)
             {
-                dist[u^(1<<i)]=w;
+                qwerty[u^(1<<i)] = w;
                 pq.push({u^(1<<i),w});
             }
         }
