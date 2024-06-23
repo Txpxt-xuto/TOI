@@ -47,7 +47,8 @@ int32_t main(){
             }
         }
         for(int i = 0;i<s;i++){
-            if(u&(1<<i) && dist[u^(1<<i)]>w){
+            if(u&(1<<i) && dist[u^(1<<i)]>w)
+            {
                 dist[u^(1<<i)]=w;
                 pq.push({u^(1<<i),w});
             }
