@@ -33,7 +33,7 @@ int32_t main()
         }
         adj[p].push_back({a,w});
     }
-    int ans = 0;
+    int ans=0;
     while(!pq.empty())
     {
         int u = pq.top().u;
