@@ -26,7 +26,8 @@ int main()
 {
     cin.tie(0)->sync_with_stdio(0);
     cin >> n >> k >> d;
-    for(int i=1;i<=n;i++){
+    for(i=1;i<=n;i++)
+    {
         cin >> arr[i];
         qs[i] = qs[i-1] + arr[i]; 
     }
