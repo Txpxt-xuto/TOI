@@ -39,14 +39,17 @@ int32_t main(){
         int w =pq.top().w;
         pq.pop();
         if(dist[u]<w)continue;
-        for(auto e : adj[u]){
+        for(auto e : adj[u])
+        {
         ans = max(ans,w);
-            if(dist[e.first]>e.second+w){
+            if(dist[e.first]>e.second+w)
+            {
                 dist[e.first]=w+e.second;
                 pq.push({e.first,e.second+w});
             }
         }
-        for(int i = 0;i<s;i++){
+        for(i=0;i<s;i++)
+        {
             if(u&(1<<i) && dist[u^(1<<i)]>w)
             {
                 dist[u^(1<<i)]=w;
