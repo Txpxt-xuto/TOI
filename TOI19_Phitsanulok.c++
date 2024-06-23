@@ -9,17 +9,17 @@ struct A{
     }
 };
 vector<pair<int,int>> dp[1<<20];
-int dist[1<<20];
+int qwerty[1<<20];
 int32_t main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int n,s,i;
     cin >> n >> s;
-    memset(dist,0x3f,sizeof dist);
+    memset(qwerty,0x3f,sizeof qwerty);
     priority_queue<A> pq;
     pq.push({0,0});
-    dist[0]=0;
+        qwerty[0]=0;
     for(int z= 1;z<=n;z++)
     {
         int a=0,w;
@@ -40,19 +40,19 @@ int32_t main()
         int u = pq.top().u;
         int w =pq.top().w;
         pq.pop();
-        if(dist[u]<w) continue;
+        if(qwerty[u]<w) continue;
         for(auto e : dp[u])
         {
         ans = max(ans,w);
-            if(dist[e.first]>e.second+w)
+            if(qwerty[e.first]>e.second+w)
             {
-                dist[e.first]=w+e.second;
+                qwerty[e.first]=w+e.second;
                 pq.push({e.first,e.second+w});
             }
         }
         for(i=0;i<s;i++)
         {
-            if(u&(1<<i) && dist[u^(1<<i)]>w)
+            if(u&(1<<i) && qwerty[u^(1<<i)]>w)
             {
                 dist[u^(1<<i)]=w;
                 pq.push({u^(1<<i),w});
