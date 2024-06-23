@@ -13,7 +13,7 @@ ll dfs(ll l,ll r,ll state)
     vis[state][l][r] = 1;
     if(state == k) return dp[state][l][r] = 1;
     ll sum = 0;
-    for(int i=l;i<r;i++)
+    for(i=l;i<r;i++)
     {
         if(abs( (qs[i] - qs[l-1]) - (qs[r] - qs[i]) ) <= d)
         {
