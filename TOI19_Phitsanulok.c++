@@ -14,13 +14,13 @@ int32_t main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-    int n,s,i,x;
+    int n,s,i,j,x;
     cin >> n >> s;
     memset(qwerty,0x3f,sizeof qwerty);
     priority_queue<A> pq;
     pq.push({0,0});
         qwerty[0]=0;
-    for(int z= 1;z<=n;z++)
+    for(j=1;j<=n;j++)
     {
         int a=0,w;
         cin >> w;
