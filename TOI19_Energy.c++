@@ -15,14 +15,15 @@ ll dfs(ll l,ll r,ll state)
     ll sum = 0;
     for(int i=l;i<r;i++)
     {
-        if(abs( (qs[i] - qs[l-1]) - (qs[r] - qs[i]) ) <= d){
+        if(abs( (qs[i] - qs[l-1]) - (qs[r] - qs[i]) ) <= d)
+        {
             sum = (sum + (dfs(l,i,state+1) * dfs(i+1,r,state+1))%MD)%MD;
         }
     }
     return dp[state][l][r] = sum;
 }
-
-int main(){
+int main()
+{
     cin.tie(0)->sync_with_stdio(0);
     cin >> n >> k >> d;
     for(int i=1;i<=n;i++){
