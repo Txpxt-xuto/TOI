@@ -51,16 +51,19 @@ const int MX = 1e5 + 10;
 int e[MX];
 void solve() 
 {
-  int n, m, k ;cin >> n >> m >> k;
+  int n, m, k ;
+  cin >> n >> m >> k;
   rep(i, 1, n) cin >> e[i];
   ll l = 0, r = 5e10;
-  while (l < r) {
+  while (l < r) 
+  {
     ll mid = (l+r+1)/2, sum = 0, cnt = 0;
     pqg<int> pq;
     rep(i, 1, n) {
       pq.push(e[i]), sum += e[i];
       if (sz(pq) > k) sum -= pq.top(), pq.pop(); 
-      if (sz(pq) == k && sum >= mid) {
+      if (sz(pq) == k && sum >= mid) 
+      {
         sum = 0;
         cnt++;
         while (!pq.empty()) pq.pop();
