@@ -40,20 +40,17 @@ template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 #define ub upper_bound
 #define all(x) (x).begin(), (x).end()
 #define ins insert
-
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
-
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-
 const int MOD = 1e9 + 7;
 const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
 const char nl = '\n';
 const int MX = 1e5 + 10;
 int e[MX];
-
-void solve() {
+void solve() 
+{
   int n, m, k ;cin >> n >> m >> k;
   rep(i, 1, n) cin >> e[i];
   ll l = 0, r = 5e10;
