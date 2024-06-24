@@ -1,3 +1,8 @@
+/*
+TASK: TaskName
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
