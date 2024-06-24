@@ -52,6 +52,7 @@ const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
 const char nl = '\n';
 const int MX = 1e5 + 10;
+pqg<int> pq;
 int e[MX];
 void solve() 
 {
@@ -62,8 +63,8 @@ void solve()
   while (l < r) 
   {
     ll mid = (l+r+1)/2, sum = 0, cnt = 0;
-    pqg<int> pq;
-    rep(i, 1, n) {
+    rep(i, 1, n)
+    {
       pq.push(e[i]), sum += e[i];
       if (sz(pq) > k) sum -= pq.top(), pq.pop(); 
       if (sz(pq) == k && sum >= mid) 
