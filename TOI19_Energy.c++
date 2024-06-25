@@ -17,10 +17,10 @@ int play(int lv,int l,int r)
     {
         if(abs(qs[r]-qs[i]*2+qs[l-1])<=d)
         {
-            cnt=(cnt+(play(lv+1,l,i)*play(lv+1,i+1,r))%MOD)%MOD;
+            cnt = (cnt+(play(lv+1,l,i)*play(lv+1,i+1,r))%MOD)%MOD;
         }
     }
-    dp[lv][l][r]=cnt;
+    dp[lv][l][r] = cnt;
     return cnt;
 }
 int32_t main()
