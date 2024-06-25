@@ -28,7 +28,7 @@ int32_t main()
     cin.tie(nullptr)->sync_with_stdio(false);
     int n;
     cin >> n >> k >> d;
-    for(i = 1;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
         cin >> qs[i];
         qs[i]+=qs[i-1];
