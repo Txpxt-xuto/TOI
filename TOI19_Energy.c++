@@ -1,36 +1,35 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define ll long long
-const ll MD = 1e9 + 7;
-ll arr[301];
-ll qs[301];
-ll dp[10][301][301];
-bool vis[10][301][301];
-ll n , k , d , i;
-ll dfs(ll l,ll r,ll state)
-{
-    if(vis[state][l][r]) return dp[state][l][r];    
-    vis[state][l][r] = 1;
-    if(state == k) return dp[state][l][r] = 1;
-    ll sum = 0;
-    for(i=l;i<r;i++)
-    {
-        if(abs( (qs[i] - qs[l-1]) - (qs[r] - qs[i]) ) <= d)
-        {
-            sum = (sum + (dfs(l,i,state+1) * dfs(i+1,r,state+1))%MD)%MD;
-        }
+#define int long long
+int qs[310];
+int dp[10][310][310];
+int vis[10][310][310];
+int k,d;
+int MOD = 1e9+7;
+int play(int lv,int l,int r){
+    if(l>r)return 0;
+    if(lv==k)return 1;
+    if(l==r)return 0;
+    if(vis[lv][l][r]){
+        return dp[lv][l][r];
     }
-    return dp[state][l][r] = sum;
+    vis[lv][l][r]=1;
+    int cnt = 0;
+    for(int  i= l;i<=r;i++){
+        if(abs(qs[r]-qs[i]*2+qs[l-1])<=d){
+            cnt=(cnt+(play(lv+1,l,i)*play(lv+1,i+1,r))%MOD)%MOD;
+         }
+    }
+    dp[lv][l][r]=cnt;
+    return cnt;
 }
-int main()
-{
-    cin.tie(0)->sync_with_stdio(0);
-    cin >> n >> k >> d;
-    for(i=1;i<=n;i++)
-    {
-        cin >> arr[i];
-        qs[i] = qs[i-1] + arr[i]; 
+int32_t main(){
+    cin.tie(nullptr)->sync_with_stdio(false);
+    int n;
+    cin >> n>> k >> d;
+    for(int i = 1;i<=n;i++){
+        cin>>qs[i];
+        qs[i]+=qs[i-1];
     }
-    cout << dfs(1,n,1);
-    return 0;
+    cout << play(1,1,n);
 }
