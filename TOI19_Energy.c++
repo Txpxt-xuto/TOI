@@ -25,7 +25,8 @@ int play(int lv,int l,int r){
     dp[lv][l][r]=cnt;
     return cnt;
 }
-int32_t main(){
+int32_t main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     int n;
     cin >> n >> k >> d;
