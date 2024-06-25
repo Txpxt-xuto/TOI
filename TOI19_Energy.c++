@@ -12,8 +12,7 @@ int play(int lv,int l,int r)
     if(lv==k)return 1;
     if(l==r)return 0;
     if(vis[lv][l][r]) return dp[lv][l][r];
-        
-    }
+
     vis[lv][l][r]=1;
     int cnt = 0;
     for(i= l;i<=r;i++)
