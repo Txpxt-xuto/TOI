@@ -2,8 +2,7 @@
 using namespace std;
 #define int long long
 int qs[310];
-int dp[10][310][310];
-int vis[10][310][310];
+int dp[10][310][310],vis[10][310][310];
 int k,d,i;
 int MOD = 1e9+7;
 int play(int lv,int l,int r)
