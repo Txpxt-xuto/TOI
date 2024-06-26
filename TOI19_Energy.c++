@@ -18,6 +18,6 @@ int32_t main(){
     cin>>n>>k>>d;
     memset(dp,-1,sizeof dp);
     for(int i=1;i<=n;i++)cin>>qs[i],qs[i]+=qs[i-1];
-    cout<<cal(1,n,k-1);
+    cout << cal(1,n,k-1);
     return 0;
 }
