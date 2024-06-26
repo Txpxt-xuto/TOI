@@ -16,7 +16,7 @@ int cal(int l,int r,int K){
 int32_t main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
-    cin >> n >> k > >d;
+    cin >> n >> k >> d;
     memset(dp,-1,sizeof dp);
     for(i=1;i<=n;i++) cin >> qs[i],qs[i]+=qs[i-1];
     cout << cal(1,n,k-1);
