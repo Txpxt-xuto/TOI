@@ -6,7 +6,7 @@ const int md = 1e9+7;
 int cal(int l,int r,int K)
 {
     if(dp[l][r][K]!=-1) return dp[l][r][K];
-    if(!K)return dp[l][r][K]=1;
+    if(!K) return dp[l][r][K]=1;
     int cnt=0,cut;
     for(cut=l;cut<r;cut++)
     {
