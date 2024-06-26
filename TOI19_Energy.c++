@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
-int qs[330],dp[330][330][15],n,k,d;
+int qs[330],dp[330][330][15],n,k,d,i;
 const int md = 1e9+7;
 int cal(int l,int r,int K)
 {
