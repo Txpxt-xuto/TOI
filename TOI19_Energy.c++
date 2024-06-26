@@ -22,5 +22,4 @@ int32_t main()
     memset(dp,-1,sizeof dp);
     for(i=1;i<=n;i++) cin >> qs[i],qs[i]+=qs[i-1];
     cout << cal(1,n,k-1);
-    return 0;
 }
