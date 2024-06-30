@@ -12,7 +12,7 @@ int main(){
         scanf("%d",&layer[i]);
         mnlayer=min(mnlayer,layer[i]);
     }
-    for(int i=0;i<n;i++) scanf("%d",&hole[i]);
+    for(i=0;i<n;i++) scanf("%d",&hole[i]);
     int count,ans=INT_MAX,real;
     for(i=1;i<mnlayer;i++)
     {
