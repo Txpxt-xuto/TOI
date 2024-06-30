@@ -22,7 +22,8 @@ int main(){
             if(hole[j]>i){
                 count+=hole[j]-i;
             }
-            else if(hole[j]<i){
+            else if(hole[j]<i)
+            {
                 count+=hole[j]+layer[j]-i+1;
             }
         }
