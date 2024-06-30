@@ -19,8 +19,8 @@ int main(){
     for(int i=1;i<mnlayer;i++){
         count=0;
         for(int j=0;j<n;j++){
-            if(hole[j]>i){
-                count+=hole[j]-i;
+            if(hole[j]>i){count+=hole[j]-i;
+                
             }
             else if(hole[j]<i) count+=hole[j]+layer[j]-i+1;
         }
@@ -31,4 +31,4 @@ int main(){
         }
     }
     printf("%d %d",real,ans);
-}
+} 
