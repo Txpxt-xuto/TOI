@@ -16,7 +16,7 @@ int main(){
         scanf("%d",&hole[i]);
     }
     int count,ans=INT_MAX,real;
-    for(int i=1;i<mnlayer;i++)
+    for(i=1;i<mnlayer;i++)
     {
         count=0;
         for(int j=0;j<n;j++)
