@@ -1,14 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-    int n;
+    int n,i;
     scanf("%d",&n);
     vector <int> layer(n);
     vector <int> hole(n);
     int mnlayer=INT_MAX;
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         scanf("%d",&layer[i]);
         mnlayer=min(mnlayer,layer[i]);
     }
