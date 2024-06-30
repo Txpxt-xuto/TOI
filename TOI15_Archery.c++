@@ -26,7 +26,8 @@ int main(){
                 count+=hole[j]+layer[j]-i+1;
             }
         }
-        if(count<ans){
+        if(count<ans)
+        {
             ans=count;
             real=i;
         }
