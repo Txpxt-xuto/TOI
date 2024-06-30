@@ -18,7 +18,8 @@ int main(){
     int count,ans=INT_MAX,real;
     for(int i=1;i<mnlayer;i++){
         count=0;
-        for(int j=0;j<n;j++){
+        for(int j=0;j<n;j++)
+        {
             if(hole[j]>i) count+=hole[j]-i;
             else if(hole[j]<i) count+=hole[j]+layer[j]-i+1;
         }
