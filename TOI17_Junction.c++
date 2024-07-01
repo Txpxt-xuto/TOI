@@ -43,8 +43,6 @@ signed main()
             break;
         }
     }
-    /*for(int i=0;i<=n;i++)
-    cout<<dp[i]<<" ";*/
     int l=0,r=dp[n];
     while(l<r)
     {
@@ -59,10 +57,10 @@ signed main()
             sum=dp[i];
             cnt++;
         }
-        if(cnt>=3)
-        l=mid;
-        else
-        r=mid-1;
+        if(cnt>=3) l=mid;
+        
+        else r=mid-1;
+        
     }
     cout<<l;
 }
