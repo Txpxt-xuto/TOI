@@ -28,14 +28,14 @@ void dfs(int i)
 signed main()
 {
     cin>>n;
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
         int u,v,w;
         cin>>u>>v>>w;
         ad[u].push_back({v,w});
         ad[v].push_back({u,w});
     }
-    for(int i=0;i<=n;i++)
+    for(i=0;i<=n;i++)
     {
         if(ad[i].size()==1)
         {
