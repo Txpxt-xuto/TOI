@@ -87,3 +87,4 @@ int main(int argc, char* argv[])
   while (t--) solve(); 
   return 0;
 }
+//ผิด
