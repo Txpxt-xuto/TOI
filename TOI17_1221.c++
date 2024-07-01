@@ -24,11 +24,11 @@ int main(void)
         a[te][mp]=min(a[te][mp],temp);
         a[mp][te]=min(a[mp][te],temp);
     }
-    for(int u=1;u<=n;u++)
+    for(u=1;u<=n;u++)
     {
-        for(int i=1;i<=n;i++)
+        for(i=1;i<=n;i++)
         {
-            for(int j=1;j<=n;j++)
+            for(j=1;j<=n;j++)
             {
                 if(a[i][u]+a[u][j]<a[i][j])
                 {
@@ -42,7 +42,7 @@ int main(void)
             }
         }
     }
-    for(int i=0;i<q;i++)
+    for(i=0;i<q;i++)
     {
         cin>>te>>mp;
         cout<<a[te][mp]<<" "<<b[te][mp]<<"\n";
