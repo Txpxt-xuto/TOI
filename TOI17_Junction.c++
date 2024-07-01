@@ -8,11 +8,10 @@ using namespace std;
 #define int long long
 #define f first
 #define s second
-int n;
+int n,id=1,i;
 int dp[80010];
 vector<pair<int,int>> ad[80010];
 bool vis[80010];
-int id=1;
 void dfs(int i)
 {
     vis[i]=1;
@@ -21,7 +20,7 @@ void dfs(int i)
         if(vis[x.f])
         continue;
         dfs(x.f);
-        dp[id]=dp[id-1]+x.s;
+        dp[id] = dp[id-1]+x.s;
         id++;
     }
 }
