@@ -46,9 +46,7 @@ signed main()
     int l=0,r=dp[n];
     while(l<r)
     {
-        int mid=(l+r+1)/2;
-        int cnt=0;
-        int sum=0;
+        int mid=(l+r+1)/2,cnt=0,sum=0;
         while(cnt<3)
         {
             int i=lower_bound(dp,dp+n+1,sum+mid)-dp;
