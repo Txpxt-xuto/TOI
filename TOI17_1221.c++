@@ -20,7 +20,7 @@ int main(void)
         }
     }
     int z,mp,dp,u;
-    for(int i=0;i<m;i++)
+    for(i=0;i<m;i++)
     {
         cin >> z >> mp >> dp;
         a[z][mp]=min(a[z][mp],dp);
