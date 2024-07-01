@@ -3,7 +3,7 @@ using namespace std;
 int main(void)
 {
     int n,m,q;
-    cin>>n >>m>>q;
+    cin >> n >> m >> q;
     int a[n+1][n+1],b[n+1][n+1],keb[n+1];
     for(i=1;i<=n;i++) cin >> keb[i];
     for(i=1;i<=n;i++)
