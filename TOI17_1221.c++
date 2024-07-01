@@ -20,7 +20,7 @@ int main(void)
     int te,mp,temp;
     for(int i=0;i<m;i++)
     {
-        cin>>te>>mp>>temp;
+        cin >> te>>mp>>temp;
         a[te][mp]=min(a[te][mp],temp);
         a[mp][te]=min(a[mp][te],temp);
     }
