@@ -59,7 +59,7 @@ void solve()
   int n, m, k ;
   cin >> n >> m >> k;
   rep(i, 1, n) cin >> e[i];
-  ll l = 0, r = 5e10;
+  ll l = 0,r = 5e10;
   while (l < r) 
   {
     ll mid = (l+r+1)/2, sum = 0, cnt = 0;
