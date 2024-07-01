@@ -31,7 +31,7 @@ signed main()
     for(i=0;i<n;i++)
     {
         int u,v,w;
-        cin>>u>>v>>w;
+        cin >> u >> v >> w;
         ad[u].push_back({v,w});
         ad[v].push_back({u,w});
     }
