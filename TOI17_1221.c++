@@ -14,12 +14,12 @@ int main(void)
             b[i][j]=2;
         }
     }
-    int te,mp,dp,u;
+    int z,mp,dp,u;
     for(int i=0;i<m;i++)
     {
-        cin >> te >> mp >> dp;
-        a[te][mp]=min(a[te][mp],dp);
-        a[mp][te]=min(a[mp][te],dp);
+        cin >> z >> mp >> dp;
+        a[z][mp]=min(a[z][mp],dp);
+        a[mp][z]=min(a[mp][z],dp);
     }
     for(u=1;u<=n;u++)
     {
@@ -38,7 +38,7 @@ int main(void)
     }
     for(i=0;i<q;i++)
     {
-        cin >> te >> mp;
-        cout << a[te][mp] << " " << b[te][mp] << "\n";
+        cin >> z >> mp;
+        cout << a[z][mp] << " " << b[z][mp] << "\n";
     }
 }
