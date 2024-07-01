@@ -27,7 +27,7 @@ void dfs(int i)
 }
 signed main()
 {
-    cin>>n;
+    cin >> n;
     for(i=0;i<n;i++)
     {
         int u,v,w;
