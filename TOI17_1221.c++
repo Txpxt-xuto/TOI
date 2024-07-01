@@ -14,12 +14,12 @@ int main(void)
             b[i][j]=2;
         }
     }
-    int te,mp,temp,u;
+    int te,mp,dp,u;
     for(int i=0;i<m;i++)
     {
-        cin >> te >> mp >> temp;
-        a[te][mp]=min(a[te][mp],temp);
-        a[mp][te]=min(a[mp][te],temp);
+        cin >> te >> mp >> dp;
+        a[te][mp]=min(a[te][mp],dp);
+        a[mp][te]=min(a[mp][te],dp);
     }
     for(u=1;u<=n;u++)
     {
