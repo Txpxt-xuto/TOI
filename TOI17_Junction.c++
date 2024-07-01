@@ -59,7 +59,6 @@ signed main()
         }
         if(cnt>=3) l=mid;
         else r=mid-1;
-        
     }
-    cout<<l;
+    cout << l;
 }
