@@ -58,7 +58,6 @@ signed main()
             cnt++;
         }
         if(cnt>=3) l=mid;
-        
         else r=mid-1;
         
     }
