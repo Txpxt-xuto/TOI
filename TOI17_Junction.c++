@@ -8,8 +8,7 @@ using namespace std;
 #define int long long
 #define f first
 #define s second
-int n,id=1,i;
-int dp[80010];
+int n,id=1,i,dp[80010];
 vector<pair<int,int>> ad[80010];
 bool vis[80010];
 void dfs(int i)
