@@ -44,7 +44,7 @@ int main(void)
     }
     for(i=0;i<q;i++)
     {
-        cin >> te>>mp;
+        cin >> te >> mp;
         cout<<a[te][mp]<<" "<<b[te][mp]<<"\n";
     }
 }
