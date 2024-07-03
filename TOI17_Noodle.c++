@@ -33,9 +33,11 @@ int32_t main(){
     }
     int l=0,r=1e18;
     int ans;
-    while(l<=r){
+    while(l<=r)
+    {
         int mid=(l+r)/2;
-        if(solve(mid)){
+        if(solve(mid))
+        {
             ans=mid;
             l=mid+1;
         }
