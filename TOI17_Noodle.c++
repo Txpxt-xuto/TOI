@@ -24,10 +24,12 @@ bool solve(int mid){
     }
     return cnt>=m;
 }
-int32_t main(){
-    ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+int32_t main()
+{
+    ios_base::sync_with_stdio(false); cin.tie(nullptr); 
+    cout.tie(nullptr);
     cin >> n >> m >> k;
-    for(int i=0;i<n;++i)
+    for(i=0;i<n;++i)
     {
         cin >> tmp;
         e.push_back(tmp);
