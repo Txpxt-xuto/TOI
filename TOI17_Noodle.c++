@@ -4,13 +4,14 @@
 using namespace std;
 
 #define int long long
-int n,m,k,tmp;
+int n,m,k,tmp,i;
 vector<int> e;
 
 bool solve(int mid){
     priority_queue<int, vector<int>, greater<int>> pq;
     int sum=0,cnt=0;
-    for(int i=0;i<n;++i){
+    for(int i=0;i<n;++i)
+    {
         sum+=e[i];
         pq.push(e[i]);
         if(pq.size()>k){
