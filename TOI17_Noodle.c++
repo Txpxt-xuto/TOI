@@ -39,8 +39,8 @@ int32_t main(){
             ans=mid;
             l=mid+1;
         }
-        else{
-            r=mid-1;
+        else r=mid-1;
+            
         }
   }
   cout << ans;
