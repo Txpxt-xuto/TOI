@@ -14,10 +14,13 @@ bool solve(int mid){
     {
         sum+=e[i];
         pq.push(e[i]);
-        if(pq.size()>k){
-            sum-=pq.top(); pq.pop();
+        if(pq.size()>k)
+        {
+            sum-=pq.top(); 
+            pq.pop();
         }
-        if(sum>=mid && pq.size()==k){
+        if(sum>=mid && pq.size()==k)
+        {
             ++cnt;
             sum=0;
             while(!pq.empty()) pq.pop();
