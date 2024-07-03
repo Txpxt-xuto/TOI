@@ -2,11 +2,9 @@
 #include<vector>
 #include<queue>
 using namespace std;
-
 #define int long long
 int n,m,k,tmp,i;
 vector<int> e;
-
 bool solve(int mid)
 {
     priority_queue<int, vector<int>, greater<int>> pq;
