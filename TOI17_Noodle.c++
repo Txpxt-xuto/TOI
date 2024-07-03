@@ -42,6 +42,6 @@ int32_t main(){
         else{
             r=mid-1;
         }
-   }
-   cout << ans;
+  }
+  cout << ans;
 }
