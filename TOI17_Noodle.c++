@@ -7,7 +7,8 @@ using namespace std;
 int n,m,k,tmp,i;
 vector<int> e;
 
-bool solve(int mid){
+bool solve(int mid)
+{
     priority_queue<int, vector<int>, greater<int>> pq;
     int sum=0,cnt=0;
     for(i=0;i<n;++i)
