@@ -34,7 +34,8 @@ int main(){
     int mn=INT_MAX,mxt;
     for(int i=p;i>=0;i--)
     {
-        if(ans[i][k+1]<=mn){
+        if(ans[i][k+1]<=mn)
+        {
             mxt=i;
             mn=ans[i][k+1];
         }
