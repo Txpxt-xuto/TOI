@@ -25,12 +25,12 @@ int main(){
     for(int i=1;i<=p;i++){
         for(int j=0;j<=k+1;j++){
             ans[i][j]=ans[i-1][j];
-            for(int temp=0;temp<=k+1;temp++){
+            for(int temp=0;temp<=k+1;temp++)
+            {
                 ans[i][j]=min(ans[i][j],ans[i-1][temp]+cal(ed[temp],tt[j]));
             }
         }
     }
-    // cout<<-1;
     int mn=INT_MAX,mxt;
     for(int i=p;i>=0;i--){
         // cout<<i<<" "<<ans[i][k+1]<<"\n";
