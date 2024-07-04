@@ -21,15 +21,17 @@ int main(){
     for(int i=1;i<=k;i++){
         cin>>tt[i].st>>tt[i].nd>>ed[i].st>>ed[i].nd;
     }
-    for(int i=0;i<=k+1;i++) ans[0][i]=cal(tt[0],tt[i]);
-    for(int i=1;i<=p;i++){
-        for(int j=0;j<=k+1;j++){
+    for(i=0;i<=k+1;i++) ans[0][i]=cal(tt[0],tt[i]);
+    for(i=1;i<=p;i++){
+
+        for(int j=0;j<=k+1;j++)
+        {
             ans[i][j]=ans[i-1][j];
             for(int temp=0;temp<=k+1;temp++) ans[i][j]=min(ans[i][j],ans[i-1][temp]+cal(ed[temp],tt[j]));
         }
     }
     int mn=INT_MAX,mxt;
-    for(int i=p;i>=0;i--)
+    for(i=p;i>=0;i--)
     {
         if(ans[i][k+1]<=mn)
         {
