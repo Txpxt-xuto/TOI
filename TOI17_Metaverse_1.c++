@@ -24,8 +24,8 @@ int main()
     ed[k+1]={n,m};
     for(int i=1;i<=k;i++) cin >> tt[i].st >> tt[i].nd >> ed[i].st >> ed[i].nd;
     for(i=0;i<=k+1;i++) ans[0][i]=cal(tt[0],tt[i]);
-    for(i=1;i<=p;i++){
-
+    for(i=1;i<=p;i++)
+    {
         for(int j=0;j<=k+1;j++)
         {
             ans[i][j]=ans[i-1][j];
@@ -41,5 +41,5 @@ int main()
             mn=ans[i][k+1];
         }
     }
-    cout<<mn<<" "<<mxt;
+    cout << mn << " " << mxt;
 }
