@@ -15,7 +15,7 @@ int cal(pii a,pii b){
     return abs(a.st-b.st)+abs(a.nd-b.nd);
 }
 int main(){
-    int n,m,k,p;
+    int n,m,k,p,i;
     cin >> n >> m >> k >> p;
     tt[0]={1,1},ed[0]={1,1}; tt[k+1]={n,m},ed[k+1]={n,m};
     for(int i=1;i<=k;i++) cin >> tt[i].st >> tt[i].nd >> ed[i].st >> ed[i].nd;
