@@ -11,10 +11,12 @@ using namespace std;
 const int NN=2e5+10;
 pii tt[NN],ed[NN];
 int ans[18][NN];
-int cal(pii a,pii b){
+int cal(pii a,pii b)
+{
     return abs(a.st-b.st)+abs(a.nd-b.nd);
 }
-int main(){
+int main()
+{
     int n,m,k,p,i;
     cin >> n >> m >> k >> p;
     tt[0]={1,1},ed[0]={1,1}; tt[k+1]={n,m},ed[k+1]={n,m};
