@@ -22,12 +22,13 @@ int main() {
         scanf("%lld %lld %lld %lld", &wrow[i], &wcol[i], &orow[i], &ocol[i]);
     }
 
-    for (int l = 1; l <= p; l++) {
-        for (int i = 1; i <= k; i++) {
+    for (int l = 1; l <= p; l++) 
+    {
+        for (int i = 1; i <= k; i++) 
+        {
             dp[l][i] = inf;
         }
     }
-
     for (int i = 1; i <= k; i++) 
     {
         dp[1][i] = abs(wrow[i] - 1) + abs(wcol[i] - 1);
