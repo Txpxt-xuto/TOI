@@ -10,27 +10,27 @@ using namespace std;
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 const ll inf = 1e18;
 const int K = 20001, P = 20;
-ll n, m, k, p, ans, tic, wrow[K], wcol[K], orow[K], ocol[K], dp[P][K];
+ll i, j, n, m, k, p, ans, tic, wrow[K], wcol[K], orow[K], ocol[K], dp[P][K];
 int main() 
 {
     scanf("%lld %lld %lld %lld", &n, &m, &k, &p);
-    for (i = 1; i <= k; i++) scanf("%lld %lld %lld %lld", &wrow[i], &wcol[i], &orow[i], &ocol[i]);
-    for (l = 1; l <= p; l++) 
+    for(i = 1; i <= k; i++) scanf("%lld %lld %lld %lld", &wrow[i], &wcol[i], &orow[i], &ocol[i]);
+    for(l = 1; l <= p; l++) 
     {
         for (i = 1; i <= k; i++) dp[l][i] = inf;
     }
-    for (i = 1; i <= k; i++) dp[1][i] = abs(wrow[i] - 1) + abs(wcol[i] - 1);
-    for (l = 2; l <= p; l++) 
+    for(i = 1; i <= k; i++) dp[1][i] = abs(wrow[i] - 1) + abs(wcol[i] - 1);
+    for(l = 2; l <= p; l++) 
     {
-        for (i = 1; i <= k; i++) 
+        for(i = 1; i <= k; i++) 
         {
-            for (j = 1; j <= k; j++) dp[l][i] = min(dp[l][i], dp[l-1][j] + abs(orow[j] - wrow[i]) + abs(ocol[j] - wcol[i]));
+            for(j = 1; j <= k; j++) dp[l][i] = min(dp[l][i], dp[l-1][j] + abs(orow[j] - wrow[i]) + abs(ocol[j] - wcol[i]));
         }
     }
     ans = n + m - 2;
-    for (l = 1; l <= p; l++) 
+    for(l = 1; l <= p; l++) 
     {
-        for (i = 1; i <= k; i++) 
+        for(i = 1; i <= k; i++) 
         {
             ll dist = dp[l][i] + abs(orow[i] - n) + abs(ocol[i] - m);
             if (ans > dist) 
