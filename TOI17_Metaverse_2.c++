@@ -17,10 +17,7 @@ int main()
     for (int i = 1; i <= k; i++) scanf("%lld %lld %lld %lld", &wrow[i], &wcol[i], &orow[i], &ocol[i]);
     for (int l = 1; l <= p; l++) 
     {
-        for (int i = 1; i <= k; i++) 
-        {
-            dp[l][i] = inf;
-        }
+        for (int i = 1; i <= k; i++) dp[l][i] = inf;
     }
     for (int i = 1; i <= k; i++) 
     {
