@@ -19,10 +19,7 @@ int main()
     {
         for (int i = 1; i <= k; i++) dp[l][i] = inf;
     }
-    for (int i = 1; i <= k; i++) 
-    {
-        dp[1][i] = abs(wrow[i] - 1) + abs(wcol[i] - 1);
-    }
+    for (int i = 1; i <= k; i++) dp[1][i] = abs(wrow[i] - 1) + abs(wcol[i] - 1);
     for (int l = 2; l <= p; l++) 
     {
         for (int i = 1; i <= k; i++) 
