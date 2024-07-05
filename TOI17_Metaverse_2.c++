@@ -52,6 +52,5 @@ int main() {
             }
         }
     }
-
     printf("%lld %lld", ans, tic);
 }
