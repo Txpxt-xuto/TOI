@@ -32,9 +32,12 @@ int main() {
         dp[1][i] = abs(wrow[i] - 1) + abs(wcol[i] - 1);
     }
 
-    for (int l = 2; l <= p; l++) {
-        for (int i = 1; i <= k; i++) {
-            for (int j = 1; j <= k; j++) {
+    for (int l = 2; l <= p; l++) 
+    {
+        for (int i = 1; i <= k; i++) 
+        {
+            for (int j = 1; j <= k; j++) 
+            {
                 dp[l][i] = min(dp[l][i], dp[l-1][j] + abs(orow[j] - wrow[i]) + abs(ocol[j] - wcol[i]));
             }
         }
