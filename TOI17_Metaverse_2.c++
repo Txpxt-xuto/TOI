@@ -33,7 +33,7 @@ int main()
         for(i=1;i<=k;i++) 
         {
             ll dist = dp[l][i] + abs(orow[i] - n) + abs(ocol[i] - m);
-            if (ans > dist) 
+            if(ans>dist) 
             {
                 ans = dist;
                 tic = l;
