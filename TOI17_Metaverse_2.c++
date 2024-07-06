@@ -27,12 +27,11 @@ int main(){
 		st[i]=make_pair(a,b);
 		ed[i]=make_pair(c,d);
 	}
-	for(int i=0;i<=p;i++){
+	for(int i=0;i<=p;i++)
+    {
 		for(int j=0;j<=k+1;j++) dp[i][j]=INT_MAX;
 	}
-	for(int i=0;i<=k+1;i++){
-		dp[0][i]=dis(ed[0],st[i]);
-	}
+	for(int i=0;i<=k+1;i++) dp[0][i]=dis(ed[0],st[i]);
 	for(int i=1;i<=p;i++){
 		for(int j=0;j<=k+1;j++){
 			dp[i][j]=dp[i-1][j];
