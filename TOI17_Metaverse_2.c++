@@ -27,8 +27,8 @@ int main()
     {
 		int a,b,c,d;
 		cin >> a >> b >> c >> d;
-		st[i]=make_pair(a,b);
-		ed[i]=make_pair(c,d);
+		st[i] = make_pair(a,b);
+		ed[i] = make_pair(c,d);
 	}
 	for(i=0;i<=p;i++)
     {
