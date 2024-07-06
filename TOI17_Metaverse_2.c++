@@ -28,9 +28,9 @@ int main()
         }
     }
     ans = n + m - 2;
-    for(l = 1; l <= p; l++) 
+    for(l=1;l<=p;l++) 
     {
-        for(i = 1; i <= k; i++) 
+        for(i=1;i<=k;i++) 
         {
             ll dist = dp[l][i] + abs(orow[i] - n) + abs(ocol[i] - m);
             if (ans > dist) 
