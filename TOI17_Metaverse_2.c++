@@ -11,17 +11,19 @@ using namespace std;
 const int N=2e4+10;
 pii st[N],ed[N];
 int dp[20][N];
-int dis(pii a,pii b){
+int dis(pii a,pii b)
+{
 	return abs(a.first-b.first)+abs(a.second-b.second);
 }
-int main(){
+int main()
+{
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	int n,m,k,p,i,j;
 	cin >> n >> m >> k >> p;
 	st[0]=ed[0]=make_pair(1,1);
 	st[k+1]=ed[k+1]=make_pair(n,m);
-	for(int i=1;i<=k;i++)
+	for(i=1;i<=k;i++)
     {
 		int a,b,c,d;
 		cin >> a >> b >> c >> d;
