@@ -24,7 +24,7 @@ int main()
     {
         for(i=1;i<=k;i++) 
         {
-            for(j=1;j<= k; j++) dp[l][i] = min(dp[l][i], dp[l-1][j] + abs(orow[j] - wrow[i]) + abs(ocol[j] - wcol[i]));
+            for(j=1;j<=k;j++) dp[l][i] = min(dp[l][i], dp[l-1][j] + abs(orow[j] - wrow[i]) + abs(ocol[j] - wcol[i]));
         }
     }
     ans = n + m - 2;
