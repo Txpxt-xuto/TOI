@@ -32,16 +32,16 @@ int main(){
 		for(int j=0;j<=k+1;j++) dp[i][j]=INT_MAX;
 	}
 	for(int i=0;i<=k+1;i++) dp[0][i]=dis(ed[0],st[i]);
-	for(int i=1;i<=p;i++){
-		for(int j=0;j<=k+1;j++){
+	for(i=1;i<=p;i++)
+    {
+		for(j=0;j<=k+1;j++)
+        {
 			dp[i][j]=dp[i-1][j];
-			for(int ii=0;ii<=k+1;ii++){
-				dp[i][j]=min(dp[i][j],dp[i-1][ii]+dis(ed[ii],st[j]));
-			}
+			for(int ii=0;ii<=k+1;ii++) dp[i][j]=min(dp[i][j],dp[i-1][ii]+dis(ed[ii],st[j]));
 		}
 	}
 	int mn=INT_MAX,mntk=INT_MAX;
-	for(int i=0;i<=p;i++)
+	for(i=0;i<=p;i++)
     {
 		if(dp[i][k+1]<mn)
         {
