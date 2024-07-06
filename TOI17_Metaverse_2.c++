@@ -41,11 +41,13 @@ int main(){
 		}
 	}
 	int mn=INT_MAX,mntk=INT_MAX;
-	for(int i=0;i<=p;i++){
-		if(dp[i][k+1]<mn){
+	for(int i=0;i<=p;i++)
+    {
+		if(dp[i][k+1]<mn)
+        {
 			mn=dp[i][k+1];
 			mntk=i;
 		}
 	}
-	cout<<mn <<" " <<mntk;
+	cout << mn << " " << mntk;
 }
