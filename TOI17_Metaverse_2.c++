@@ -17,13 +17,14 @@ int dis(pii a,pii b){
 int main(){
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
-	int n,m,k,p;
-	cin>>n >>m >>k >>p;
+	int n,m,k,p,i,j;
+	cin >> n >> m >> k >> p;
 	st[0]=ed[0]=make_pair(1,1);
 	st[k+1]=ed[k+1]=make_pair(n,m);
-	for(int i=1;i<=k;i++){
+	for(int i=1;i<=k;i++)
+    {
 		int a,b,c,d;
-		cin>>a >>b >>c >>d;
+		cin >> a >> b >> c >> d;
 		st[i]=make_pair(a,b);
 		ed[i]=make_pair(c,d);
 	}
