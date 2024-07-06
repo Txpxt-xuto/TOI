@@ -17,12 +17,12 @@ int main()
     for(i=1;i<=k;i++) scanf("%lld %lld %lld %lld", &wrow[i], &wcol[i], &orow[i], &ocol[i]);
     for(l=1;l<=p;l++) 
     {
-        for (i=1;i<=k;i++) dp[l][i] = inf;
+        for(i=1;i<=k;i++) dp[l][i] = inf;
     }
-    for(i = 1; i <= k; i++) dp[1][i] = abs(wrow[i] - 1) + abs(wcol[i] - 1);
-    for(l = 2; l <= p; l++) 
+    for(i=1;i<=k;i++) dp[1][i] = abs(wrow[i] - 1) + abs(wcol[i] - 1);
+    for(l=2;l<=p;l++) 
     {
-        for(i = 1; i <= k; i++) 
+        for(i=1;i<=k;i++) 
         {
             for(j = 1; j <= k; j++) dp[l][i] = min(dp[l][i], dp[l-1][j] + abs(orow[j] - wrow[i]) + abs(ocol[j] - wcol[i]));
         }
