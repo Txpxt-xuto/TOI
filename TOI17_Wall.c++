@@ -198,9 +198,7 @@ int main() {
 						}
 					}
 				}
-				if (sum>mx) {
-					mx=sum;
-				}
+				if (sum>mx) mx=sum;
 			}
 		}
 	}
