@@ -159,7 +159,7 @@ int main() {
 	queue<pair<int, int> > q;
 	q.push({0, 0});
 	t[0][0]=1;
-	while (!q.empty()) 
+	while(!q.empty()) 
     {
 		y=q.front().first;
 		x=q.front().second;
