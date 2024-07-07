@@ -159,27 +159,30 @@ int main() {
 	queue<pair<int, int> > q;
 	q.push({0, 0});
 	t[0][0]=1;
-	while (!q.empty()) {
+	while (!q.empty()) 
+    {
 		y=q.front().first;
 		x=q.front().second;
 		q.pop();
-		for (i=0; i<4; i++) {
-			if (y+d[i][0]>=0 && y+d[i][0]<r && x+d[i][1]>=0 && x+d[i][1]<c && chr[y+d[i][0]][x+d[i][1]]=='.' && !t[y+d[i][0]][x+d[i][1]]) {
+		for(i=0; i<4; i++) 
+        {
+			if(y+d[i][0]>=0 && y+d[i][0]<r && x+d[i][1]>=0 && x+d[i][1]<c && chr[y+d[i][0]][x+d[i][1]]=='.' && !t[y+d[i][0]][x+d[i][1]]) 
+            {
 				t[y+d[i][0]][x+d[i][1]]=1;
 				q.push({y+d[i][0], x+d[i][1]});
 			}
 		}
 	}
 	bool v[r][c]={};
-	for (i=0; i<r; i++) {
-		for (j=0; j<c; j++) {
-			if (chr[i][j]=='X' && !v[i][j]) 
+	for(i=0; i<r; i++) {
+		for(j=0; j<c; j++) {
+			if(chr[i][j]=='X' && !v[i][j]) 
             {
 				sum=0;
 				queue<pair<int, int> > p;
 				p.push({i, j});
 				v[i][j]=1;
-				while (!p.empty()) 
+				while(!p.empty()) 
                 {
 					y=p.front().first;
 					x=p.front().second;
