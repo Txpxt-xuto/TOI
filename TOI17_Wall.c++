@@ -1,157 +1,17 @@
-Completed
-
-70 ms
-
-3236 kB
-
-
-open
-
-in new tab
-
-Subtasks
-
-#
-
-Time
-
-Memory
-
-Message
-
-1
-
-3 ms
-
-512 kB
-
-Correct
-
-2
-
-3 ms
-
-452 kB
-
-Correct
-
-3
-
-3 ms
-
-512 kB
-
-Correct
-
-4
-
-3 ms
-
-452 kB
-
-Correct
-
-5
-
-3 ms
-
-452 kB
-
-Correct
-
-6
-
-3 ms
-
-452 kB
-
-Correct
-
-7
-
-3 ms
-
-468 kB
-
-Correct
-
-8
-
-3 ms
-
-452 kB
-
-Correct
-
-9
-
-3 ms
-
-452 kB
-
-Correct
-
-10
-
-4 ms
-
-452 kB
-
-Correct
-
-11
-
-6 ms
-
-512 kB
-
-Correct
-
-12
-
-55 ms
-
-3192 kB
-
-Correct
-
-13
-
-49 ms
-
-3212 kB
-
-Correct
-
-14
-
-60 ms
-
-3156 kB
-
-Correct
-
-15
-
-70 ms
-
-3236 kB
-
-Correct
 
 #include<iostream>
 #include<queue>
 using namespace std;
-
-int main() {
+int main() 
+{
 	ios_base::sync_with_stdio(0);
 	cin.tie(NULL);
 	int r, c, i, j, k, x, y, mx=0, sum=0;
-	cin>>r>>c;
+	cin >> r >> c;
 	char chr[r][c];
-	for (i=0; i<r; i++)
+	for(i=0; i<r; i++)
     {
-		for (j=0; j<c; j++) cin>>chr[i][j];
+		for(j=0; j<c; j++) cin>>chr[i][j];
 	}
 	short d[4][2]={{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 	bool t[r][c]={};
