@@ -198,13 +198,12 @@ int main() {
 						}
 					}
 				}
-				//cout<<i<<" "<<j<<" "<<sum<<"\n";
 				if (sum>mx) {
 					mx=sum;
 				}
 			}
 		}
 	}
-	cout<<mx;
+	cout << mx;
 	return 0;
 }
