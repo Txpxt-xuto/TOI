@@ -170,16 +170,11 @@ int main() {
 			}
 		}
 	}
-	/*for (i=0; i<r; i++) {
-		for (j=0; j<c; j++) {
-			cout<<t[i][j];
-		}
-		cout<<"\n";
-	}*/
 	bool v[r][c]={};
 	for (i=0; i<r; i++) {
 		for (j=0; j<c; j++) {
-			if (chr[i][j]=='X' && !v[i][j]) {
+			if (chr[i][j]=='X' && !v[i][j]) 
+            {
 				sum=0;
 				queue<pair<int, int> > p;
 				p.push({i, j});
