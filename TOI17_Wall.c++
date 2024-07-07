@@ -188,11 +188,11 @@ int main() {
 					y=p.front().first;
 					x=p.front().second;
 					p.pop();
-					for (k=0; k<4; k++) {
-						if (y+d[k][0]>=0 && y+d[k][0]<r && x+d[k][1]>=0 && x+d[k][1]<c && chr[y+d[k][0]][x+d[k][1]]=='.' && t[y+d[k][0]][x+d[k][1]]) {
-							sum++;
-						}
-						if (y+d[k][0]>=0 && y+d[k][0]<r && x+d[k][1]>=0 && x+d[k][1]<c && chr[y+d[k][0]][x+d[k][1]]=='X' && !v[y+d[k][0]][x+d[k][1]]) {
+					for (k=0; k<4; k++) 
+                    {
+						if (y+d[k][0]>=0 && y+d[k][0]<r && x+d[k][1]>=0 && x+d[k][1]<c && chr[y+d[k][0]][x+d[k][1]]=='.' && t[y+d[k][0]][x+d[k][1]]) sum++;
+						if (y+d[k][0]>=0 && y+d[k][0]<r && x+d[k][1]>=0 && x+d[k][1]<c && chr[y+d[k][0]][x+d[k][1]]=='X' && !v[y+d[k][0]][x+d[k][1]]) 
+                        {
 							v[y+d[k][0]][x+d[k][1]]=1;
 							p.push({y+d[k][0], x+d[k][1]});
 						}
