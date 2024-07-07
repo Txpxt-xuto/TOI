@@ -149,10 +149,9 @@ int main() {
 	int r, c, i, j, k, x, y, mx=0, sum=0;
 	cin>>r>>c;
 	char chr[r][c];
-	for (i=0; i<r; i++) {
-		for (j=0; j<c; j++) {
-			cin>>chr[i][j];
-		}
+	for (i=0; i<r; i++)
+    {
+		for (j=0; j<c; j++) cin>>chr[i][j];
 	}
 	short d[4][2]={{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 	bool t[r][c]={};
