@@ -34,7 +34,8 @@ bool solve(int mid)
 }
 int32_t main()
 {
-    ios_base::sync_with_stdio(false); cin.tie(nullptr); 
+    ios_base::sync_with_stdio(false); 
+    cin.tie(nullptr); 
     cout.tie(nullptr);
     cin >> n >> m >> k;
     for(i=0;i<n;++i)
@@ -54,5 +55,5 @@ int32_t main()
         }
         else r=mid-1;
     }
-cout << ans;
+    cout << ans;
 }
