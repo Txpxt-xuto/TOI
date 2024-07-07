@@ -29,10 +29,7 @@ int main(void)
 	}
 	sort(a,a+n);
 	ps[0]=a[0].second;
-	for(i=1;i<n;i++)
-	{
-		ps[i]=ps[i-1]+a[i].second;
-	}
+	for(i=1;i<n;i++) ps[i]=ps[i-1]+a[i].second;
 	ans=base-a[0].first*n;
 	pos=a[0].first;
 	for(i=1;i<n;i++)
