@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<queue>
 using namespace std;
@@ -9,9 +8,9 @@ int main()
 	int r, c, i, j, k, x, y, mx=0, sum=0;
 	cin >> r >> c;
 	char chr[r][c];
-	for(i=0; i<r; i++)
+	for(i=0;i<r;i++)
     {
-		for(j=0; j<c; j++) cin>>chr[i][j];
+		for(j=0;j<c;j++) cin>>chr[i][j];
 	}
 	short d[4][2]={{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 	bool t[r][c]={};
@@ -33,8 +32,8 @@ int main()
 		}
 	}
 	bool v[r][c]={};
-	for(i=0; i<r; i++) {
-		for(j=0; j<c; j++) {
+	for(i=0;i<r;i++) {
+		for(j=0;j<c;j++) {
 			if(chr[i][j]=='X' && !v[i][j]) 
             {
 				sum=0;
