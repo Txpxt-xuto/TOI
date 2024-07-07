@@ -1,9 +1,13 @@
+/*
+TASK: archery.cpp
+LANG: C++
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/
 #include <bits/stdc++.h>
 #define ll long long
 #define pll pair<long long,long long>
-
 using namespace std;
-
 int main(void)
 {
 	ios_base::sync_with_stdio(false);
