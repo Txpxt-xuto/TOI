@@ -14,7 +14,7 @@ int main()
     vector<int>dp[n];
     for(i=0;i<n;i++)
     {
-        cin>>a;
+        cin >> a;
         v.push_back(a);
     }
     for(int i=n-1;i>=0;i--)
