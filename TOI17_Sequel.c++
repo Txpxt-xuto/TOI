@@ -26,10 +26,7 @@ int main()
             {
                 dp[i].push_back(v[i]);
             }
-            else
-            {
-                dp[i].push_back(v[i]+dp[i+j][j]);
-            }
+            else dp[i].push_back(v[i]+dp[i+j][j]);
         }
     }
     for(i=0;i<q;i++)
