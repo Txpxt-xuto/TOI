@@ -56,7 +56,7 @@ int main()
             {
                 sum=sum-dp[k1][k];
             }
-            cout<<sum<<" ";
+            cout << sum << " ";
         }
     }
     return 0;
