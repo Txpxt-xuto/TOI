@@ -32,7 +32,7 @@ int main()
             }
         }
     }
-    for(int i=0;i<q;i++)
+    for(i=0;i<q;i++)
     {
         cin >> a >> k >> b;
         a--;
