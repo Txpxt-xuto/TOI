@@ -34,13 +34,12 @@ int main()
     }
     for(int i=0;i<q;i++)
     {
-        cin>>a>>k>>b;
+        cin >> a >> k >> b;
         a--;
         b--;
         if(k>mod)
         {
-            int l=a;
-            int sum=0;
+            int l=a,sum=0;
             while(l<=b)
             {
                 sum=sum+v[l];
