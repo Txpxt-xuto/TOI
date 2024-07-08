@@ -17,7 +17,7 @@ int main()
         cin >> a;
         v.push_back(a);
     }
-    for(int i=n-1;i>=0;i--)
+    for(i=n-1;i>=0;i--)
     {
         dp[i].push_back(0);
         for(j=1;j<=mod;j++)
