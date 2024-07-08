@@ -52,10 +52,7 @@ int main()
         {
             int sum=dp[a][k];
             int k1=a+((b-a)/k+1)*k;
-            if(k1<n)
-            {
-                sum=sum-dp[k1][k];
-            }
+            if(k1<n) sum = sum-dp[k1][k];
             cout << sum << " ";
         }
     }
