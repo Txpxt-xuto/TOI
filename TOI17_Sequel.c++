@@ -33,11 +33,11 @@ int main()
         b--;
         if(k>mod)
         {
-            int l=a,sum=0;
+            int l = a,sum = 0;
             while(l<=b)
             {
-                sum=sum+v[l];
-                l+=k;
+                sum = sum+v[l];
+                l += k;
             }
             cout << sum << " ";
         }
