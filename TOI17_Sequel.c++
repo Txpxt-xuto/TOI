@@ -9,10 +9,10 @@ int mod=250;
 int main()
 {
     int n,q,a,b,k,i,j;
-    cin>>n>>q;
+    cin >> n >> q;
     vector<int>v;
     vector<int>dp[n];
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
         cin>>a;
         v.push_back(a);
