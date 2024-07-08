@@ -8,7 +8,7 @@ using namespace std;
 int mod=250;
 int main()
 {
-    int n,q,a,b,k;
+    int n,q,a,b,k,i,j;
     cin>>n>>q;
     vector<int>v;
     vector<int>dp[n];
@@ -20,12 +20,9 @@ int main()
     for(int i=n-1;i>=0;i--)
     {
         dp[i].push_back(0);
-        for(int j=1;j<=mod;j++)
+        for(j=1;j<=mod;j++)
         {
-            if(i+j>=n)
-            {
-                dp[i].push_back(v[i]);
-            }
+            if(i+j>=n) dp[i].push_back(v[i]);
             else dp[i].push_back(v[i]+dp[i+j][j]);
         }
     }
