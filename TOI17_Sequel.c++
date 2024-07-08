@@ -46,7 +46,7 @@ int main()
                 sum=sum+v[l];
                 l+=k;
             }
-            cout<<sum<<" ";
+            cout << sum << " ";
         }
         else
         {
