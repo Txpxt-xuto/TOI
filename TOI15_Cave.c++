@@ -67,5 +67,4 @@ int main()
         for(j=0;j<ans.size();j++) tr = min(tr,ans[j].first+(ans[j].second-1)*h[i]);
         cout << tr << " " ;
     }
-
 }
