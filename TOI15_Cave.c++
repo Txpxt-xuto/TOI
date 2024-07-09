@@ -20,7 +20,7 @@ bool visited[N];
 
 int main(){
     
-    int n,m,s,o,lr;
+    int n,m,s,o,lr,i,j;
     long long int lw;
     lw = LLONG_MAX;
     lr = INT_MAX;
@@ -66,7 +66,8 @@ int main(){
             int v = adj[t][i].second;
             nw = dist[v].first , nr = dist[v].second ;
             //cout << "v :" << v << " " <<  nw << " " << nr << '\n';
-                if(u+w<nw||r+1<nr){
+                if(u+w<nw||r+1<nr)
+                {
                     q.push({u+w,v,r+1});
                     dist[v] = {u+w,r+1};
                 }
