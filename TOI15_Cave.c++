@@ -18,14 +18,13 @@ pii dist[N];
 vector <pii> ans;
 bool visited[N];
 
-int main(){
-    
+int main()
+{
     int n,m,s,o,lr,i,j;
     long long int lw;
     lw = LLONG_MAX;
     lr = INT_MAX;
     cin >> n >> s >> o >> m ;
-
     int a,b,d,c=0 ;
     for(int i=0;i<m;i++)
     {
