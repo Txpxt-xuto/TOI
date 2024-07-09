@@ -61,7 +61,7 @@ int main(){
             continue;
         }
 
-        for(int i=0;i<adj[t].size();i++)
+        for(i=0;i<adj[t].size();i++)
         {
             int w = adj[t][i].first,v = adj[t][i].second;
             nw = dist[v].first , nr = dist[v].second ;
