@@ -73,11 +73,10 @@ int main(){
         }
     }
     long long int tr;
-    for(int i=0;i<nh;i++){
+    for(i=0;i<nh;i++)
+    {
         tr = LLONG_MAX;
-        for(int j=0;j<ans.size();j++){
-            tr = min(tr,ans[j].first+(ans[j].second-1)*h[i]);
-        } 
+        for(j=0;j<ans.size();j++) tr = min(tr,ans[j].first+(ans[j].second-1)*h[i]);
         cout << tr << " " ;
     }
 
