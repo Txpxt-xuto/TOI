@@ -27,7 +27,8 @@ int main(){
     cin >> n >> s >> o >> m ;
 
     int a,b,d,c=0 ;
-    for(int i=0;i<m;i++){
+    for(int i=0;i<m;i++)
+    {
         cin >> a >> b >> d ;
         adj[a].push_back({d,b});
     }
