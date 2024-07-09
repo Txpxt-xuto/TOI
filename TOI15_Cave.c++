@@ -61,11 +61,10 @@ int main(){
             continue;
         }
 
-        for(int i=0;i<adj[t].size();i++){
-            int w = adj[t][i].first;
-            int v = adj[t][i].second;
+        for(int i=0;i<adj[t].size();i++)
+        {
+            int w = adj[t][i].first,v = adj[t][i].second;
             nw = dist[v].first , nr = dist[v].second ;
-            //cout << "v :" << v << " " <<  nw << " " << nr << '\n';
                 if(u+w<nw||r+1<nr)
                 {
                     q.push({u+w,v,r+1});
