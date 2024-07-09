@@ -57,10 +57,7 @@ int main(){
                 continue;
         }
     
-        if(dist[t].first<u&&dist[t].second<r){
-            continue;
-        }
-
+        if(dist[t].first<u&&dist[t].second<r) continue;
         for(i=0;i<adj[t].size();i++)
         {
             int w = adj[t][i].first,v = adj[t][i].second;
