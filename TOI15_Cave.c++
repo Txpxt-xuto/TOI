@@ -39,8 +39,6 @@ int main(){
     }
     
     for(int i=0;i<2005;i++) dist[i] = {LLONG_MAX,INT_MAX};
-       
-    }
     q.push({0,s,0});
     long long int u,nw,nr;
     int r,t;
