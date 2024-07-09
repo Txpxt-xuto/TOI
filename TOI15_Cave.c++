@@ -5,19 +5,15 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <bits/stdc++.h>
-
 #define tu tuple<long long int,int,int>
 #define pii pair<long long int,int>
 const int N = 2005 ;
-
 using namespace std;
-
 vector<pii> adj[N];
 priority_queue<tu,vector<tu>,greater<tu>> q;
 pii dist[N];
 vector <pii> ans;
 bool visited[N];
-
 int main()
 {
     int n,m,s,o,lr,i,j;
