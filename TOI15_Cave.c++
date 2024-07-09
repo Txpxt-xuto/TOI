@@ -45,10 +45,10 @@ int main(){
     q.push({0,s,0});
     long long int u,nw,nr;
     int r,t;
-    while(!q.empty()){
+    while(!q.empty())
+    {
         auto [u,t,r] = q.top(); 
         q.pop();
-
         if(t==o)
         {
             if(u<lw||r<lr)
