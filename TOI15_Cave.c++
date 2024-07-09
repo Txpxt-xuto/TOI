@@ -72,7 +72,6 @@ int main(){
                 }
         }
     }
-
     long long int tr;
     for(int i=0;i<nh;i++){
         tr = LLONG_MAX;
