@@ -49,14 +49,15 @@ int main(){
         auto [u,t,r] = q.top(); 
         q.pop();
 
-        if(t==o){
-                if(u<lw||r<lr){
-            ans.push_back({u,r});
-                    lw = u,lr = r;
-                }
-                continue;
+        if(t==o)
+        {
+            if(u<lw||r<lr)
+            {
+                ans.push_back({u,r});
+                lw = u,lr = r;
+            }
+            continue;
         }
-    
         if(dist[t].first<u&&dist[t].second<r) continue;
         for(i=0;i<adj[t].size();i++)
         {
