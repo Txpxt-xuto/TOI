@@ -5,7 +5,7 @@ int n, m, i, j ,c, r;
 int A[N], B[N];
 inline int get_x0(int x, char d)
 {
-    if (d == 'R')
+    if(d == 'R')
         return x;
     else
         return 2*m-x;
@@ -20,12 +20,12 @@ inline int get_pos(int x, int t)
 }
 inline bool ok(int r, int c, int t) 
 {
-    if (r == 0 || r == n+1)
+    if(r == 0 || r == n+1)
         return true;
     int L = get_pos(A[r], t);
     int R = get_pos(B[r], t);
-    if (L > R) swap(L, R);
-    if (c <= L || c >= R)
+    if(L > R) swap(L, R);
+    if(c <= L || c >= R)
         return false;
     return true;
 }
