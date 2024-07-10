@@ -80,8 +80,8 @@ int main()
                 inv[bi][itr2++]= {max(inv[1-bi][itr].st+1,temp[k].st),temp[k].nd};
             }
             if(itr2<=0) break;
-            sz[bi]=itr2;
-            bi=1-bi;
+            sz[bi] = itr2;
+            bi = 1-bi;
         }
         if(itr2>0) mi = min(inv[1-bi][0].st+1,mi);
     }
