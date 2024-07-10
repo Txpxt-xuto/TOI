@@ -25,27 +25,27 @@ int main()
     }
     for(i=1;i<col;i++)
     {
-        inv[0][0]= {0,2*col};
-        sz[0]=1;
-        bi=1;
+        inv[0][0] = {0,2*col};
+        sz[0] = 1;
+        bi = 1;
         for(j=1;j<=row;j++)
         {
             le = inv[1-bi][0].st+1;
             for(k=0;k<2;k++)
             {
-                val=(ea[j][k]+le)%mod;
-                x=(i-val)%mod;
+                val = (ea[j][k]+le)%mod;
+                x = (i-val)%mod;
                 if(x<0) x+=mod;
                 y=(mod-val-i)%mod;
                 if(y<0) y+=mod;
-                itr=0,itr2=0;
+                itr = 0,itr2 = 0;
                 if(x<y) 
                 {
-                    if(x>0) avi[k][0][itr++]= {le,le+x-1};
-                    avi[k][1][0]= {le+x+1,le+y-1};
-                    if(y!=2*col-1) avi[k][0][itr++]= {le+y+1,le+2*col-1};
-                    a[k][0]=itr;
-                    a[k][1]=1;
+                    if(x>0) avi[k][0][itr++] = {le,le+x-1};
+                    avi[k][1][0] = {le+x+1,le+y-1};
+                    if(y!=2*col-1) avi[k][0][itr++] = {le+y+1,le+2*col-1};
+                    a[k][0] = itr;
+                    a[k][1] = 1;
                 }
                 else
                 {
