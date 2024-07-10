@@ -71,7 +71,7 @@ int main()
             }
             sort(temp,temp+itr);
             n = unique(temp,temp+itr)-temp;
-            itr=0,itr2=0;
+            itr = 0,itr2 = 0;
             for(k=0;k<n;k++)
             {
                 while(itr<sz[1-bi]&&inv[1-bi][itr].nd<temp[k].st-1) itr++;
