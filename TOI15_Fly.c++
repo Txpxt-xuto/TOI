@@ -51,9 +51,9 @@ int main()
                 {
                     if(y>0) avi[k][1][itr++] = {le,le+y-1};
                     avi[k][0][0]= {le+y+1,le+x-1};
-                    if(x!=2*col-1||y!=0) avi[k][1][itr++]= {le+x+1,le+2*col-1};
-                    a[k][0]=1;
-                    a[k][1]=itr;
+                    if(x!=2*col-1||y!=0) avi[k][1][itr++] = {le+x+1,le+2*col-1};
+                    a[k][0] = 1;
+                    a[k][1] = itr;
                 }
             }
             itr=0;
