@@ -48,7 +48,7 @@ int main()
                 }
                 else
                 {
-                    if(y>0) avi[k][1][itr++]= {le,le+y-1};
+                    if(y>0) avi[k][1][itr++] = {le,le+y-1};
                     avi[k][0][0]= {le+y+1,le+x-1};
                     if(x!=2*col-1||y!=0) avi[k][1][itr++]= {le+x+1,le+2*col-1};
                     a[k][0]=1;
@@ -56,11 +56,11 @@ int main()
                 }
             }
             itr=0;
-            for(k=0; k<2; k++)
+            for(k=0;k<2;k++)
             {
-                for(l=0;l<a[0][k]; l++)
+                for(l=0;l<a[0][k];l++)
                 {
-                    for(m=0; m<a[1][1-k]; m++)
+                    for(m=0;m<a[1][1-k];m++)
                     {
                         x=max(avi[0][k][l].st,avi[1][1-k][m].st);
                         y=min(avi[0][k][l].nd,avi[1][1-k][m].nd);
