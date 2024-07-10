@@ -29,7 +29,8 @@ inline bool ok(int r, int c, int t) {
 int main()
 {
     scanf("%d%d", &n, &m);
-    for (int i = 1; i <= n; ++i) {
+    for(int i = 1; i <= n; ++i) 
+    {
         int a, c;
         char b, d;
         scanf("%d %c%d %c", &a, &b, &c, &d);
