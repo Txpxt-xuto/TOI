@@ -1,3 +1,4 @@
+
 #include<bits/stdc++.h>
 #define st first
 #define nd second
@@ -84,5 +85,5 @@ int main()
         }
         if(itr2>0) mi=min(inv[1-bi][0].st+1,mi);
     }
-    cout << mi;
+    cout >> mi;
 }
