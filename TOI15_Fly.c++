@@ -2,7 +2,7 @@
 #define st first
 #define nd second
 using namespace std;
-int i,j;
+int i,j,k,l,m;
 int ea[2005][2];
 pair<int,int>  inv[2][150],avi[20][20][50],temp[150];
 int a[30][30],sz[2],mi=1e9;
@@ -56,11 +56,11 @@ int main()
                 }
             }
             itr=0;
-            for(int k=0; k<2; k++)
+            for(k=0; k<2; k++)
             {
-                for(int l=0; l<a[0][k]; l++)
+                for(l=0; l<a[0][k]; l++)
                 {
-                    for(int m=0; m<a[1][1-k]; m++)
+                    for(m=0; m<a[1][1-k]; m++)
                     {
                         x=max(avi[0][k][l].st,avi[1][1-k][m].st);
                         y=min(avi[0][k][l].nd,avi[1][1-k][m].nd);
@@ -75,27 +75,16 @@ int main()
             itr=0,itr2=0;
             for(int k=0; k<n; k++)
             {
-                while(itr<sz[1-bi]&&inv[1-bi][itr].nd<temp[k].st-1) {
-                    itr++;
-                }
-                if(itr>=sz[1-bi]) {
-                    break;
-                }
-                if(inv[1-bi][itr].st>=temp[k].nd) {
-                    continue;
-                }
+                while(itr<sz[1-bi]&&inv[1-bi][itr].nd<temp[k].st-1) itr++;
+                if(itr>=sz[1-bi]) break;
+                if(inv[1-bi][itr].st>=temp[k].nd) continue;
                 inv[bi][itr2++]= {max(inv[1-bi][itr].st+1,temp[k].st),temp[k].nd};
             }
-            if(itr2<=0) {
-                break;
-            }
+            if(itr2<=0) break;
             sz[bi]=itr2;
             bi=1-bi;
         }
-        if(itr2>0)
-        {
-            mi=min(inv[1-bi][0].st+1,mi);
-        }
+        if(itr2>0) mi=min(inv[1-bi][0].st+1,mi);
     }
     cout << mi;
 }
