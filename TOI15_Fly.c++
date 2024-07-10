@@ -83,7 +83,7 @@ int main()
             sz[bi]=itr2;
             bi=1-bi;
         }
-        if(itr2>0) mi=min(inv[1-bi][0].st+1,mi);
+        if(itr2>0) mi = min(inv[1-bi][0].st+1,mi);
     }
-    cout >> mi;
+    cout << mi;
 }
