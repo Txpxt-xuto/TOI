@@ -11,7 +11,7 @@ inline int get_x0(int x, char d) {
 }
 inline int get_pos(int x, int t) {
     int y = (x+t)%(2*m);
-    if (y < m)
+    if(y < m)
         return y;
     else
         return 2*m-y;
@@ -62,19 +62,18 @@ int main()
             if (t > 2*m)
                 NR[0] = false;
             int cnt = 0;
-            for(int r = 0; r <= n+1; ++r)
+            for(r=0;r<=n+1;++r)
             {
                 R[r] = NR[r];
                 if (R[r])
                     ++cnt;
             }
-            if (cnt == 0 || R[n+1])
+            if(cnt == 0 || R[n+1])
                 break;
         }
         if (R[n+1])
             mnt = min(mnt, t);
     }
     printf("%d\n", mnt);
-    
     return 0;
 }
