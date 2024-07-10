@@ -3,13 +3,15 @@ using namespace std;
 const int N = 2010;
 int n, m, i, j ,c, r;
 int A[N], B[N];
-inline int get_x0(int x, char d) {
+inline int get_x0(int x, char d)
+{
     if (d == 'R')
         return x;
     else
         return 2*m-x;
 }
-inline int get_pos(int x, int t) {
+inline int get_pos(int x, int t) 
+{
     int y = (x+t)%(2*m);
     if(y < m)
         return y;
