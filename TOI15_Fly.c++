@@ -65,7 +65,7 @@ int main()
                     {
                         x=max(avi[0][k][l].st,avi[1][1-k][m].st);
                         y=min(avi[0][k][l].nd,avi[1][1-k][m].nd);
-                        if(x<=y) temp[itr++]= {x,y};
+                        if(x<=y) temp[itr++] = {x,y};
                     }
                 }
             }
