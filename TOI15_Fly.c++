@@ -24,7 +24,6 @@ int main()
             }
         }
     }
- 
     for(int i=1; i<col; i++)
     {
         inv[0][0]= {0,2*col};
@@ -68,7 +67,6 @@ int main()
                     a[k][0]=1;
                     a[k][1]=itr;
                 }
- 
             }
             itr=0;
             for(int k=0; k<2; k++)
