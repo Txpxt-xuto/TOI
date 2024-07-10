@@ -10,18 +10,15 @@ int main()
 {
     cin.tie(0)->sync_with_stdio(0);
     int row,col,val,x,y;
-    cin>>row>>col;
+    cin >> row >> col;
     int bi,le,itr,itr2,mod=2*col,n;
-    for(int i=1; i<=row; i++)
+    for(i=1;i<=row;i++)
     {
-        for(int j=0; j<2; j++)
+        for(j=0;j<2;j++)
         {
             cin>>val>>s;
-            if(s[0]=='R') {
-                ea[i][j]=val;
-            } else {
-                ea[i][j]=2*col-val;
-            }
+            if(s[0]=='R') ea[i][j]=val;
+            else ea[i][j]=2*col-val;
         }
     }
     for(int i=1; i<col; i++)
