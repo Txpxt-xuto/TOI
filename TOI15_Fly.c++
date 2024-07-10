@@ -2,6 +2,7 @@
 #define st first
 #define nd second
 using namespace std;
+int i,j;
 int ea[2005][2];
 pair<int,int>  inv[2][150],avi[20][20][50],temp[150];
 int a[30][30],sz[2],mi=1e9;
@@ -16,12 +17,12 @@ int main()
     {
         for(j=0;j<2;j++)
         {
-            cin>>val>>s;
+            cin >> val >> s;
             if(s[0]=='R') ea[i][j]=val;
             else ea[i][j]=2*col-val;
         }
     }
-    for(int i=1; i<col; i++)
+    for(i=1;i<col;i++)
     {
         inv[0][0]= {0,2*col};
         sz[0]=1;
