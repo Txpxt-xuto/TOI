@@ -58,22 +58,20 @@ int main()
             itr=0;
             for(k=0; k<2; k++)
             {
-                for(l=0; l<a[0][k]; l++)
+                for(l=0;l<a[0][k]; l++)
                 {
                     for(m=0; m<a[1][1-k]; m++)
                     {
                         x=max(avi[0][k][l].st,avi[1][1-k][m].st);
                         y=min(avi[0][k][l].nd,avi[1][1-k][m].nd);
-                        if(x<=y) {
-                            temp[itr++]= {x,y};
-                        }
+                        if(x<=y) temp[itr++]= {x,y};
                     }
                 }
             }
             sort(temp,temp+itr);
-            n=unique(temp,temp+itr)-temp;
+            n = unique(temp,temp+itr)-temp;
             itr=0,itr2=0;
-            for(int k=0; k<n; k++)
+            for(k=0; k<n; k++)
             {
                 while(itr<sz[1-bi]&&inv[1-bi][itr].nd<temp[k].st-1) itr++;
                 if(itr>=sz[1-bi]) break;
