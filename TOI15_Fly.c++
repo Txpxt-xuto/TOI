@@ -41,7 +41,7 @@ int main()
         B[i] = get_x0(c, d);
     }
     vector<int> cho;
-    for(c = 1; c <= m-1; ++c)
+    for(c=1;c<=m-1; ++c)
         cho.push_back(c);
     mt19937 RNG(31415926);
     shuffle(cho.begin(), cho.end(), RNG);
