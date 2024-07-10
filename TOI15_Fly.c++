@@ -39,18 +39,19 @@ int main()
         B[i] = get_x0(c, d);
     }
     vector<int> cho;
-    for (int c = 1; c <= m-1; ++c)
+    for(c = 1; c <= m-1; ++c)
         cho.push_back(c);
     mt19937 RNG(31415926);
     shuffle(cho.begin(), cho.end(), RNG);
     int mnt = 1e9;
-    for (auto c : cho)
+    for(auto c : cho)
     {
         bool R[N+2] = {};
         R[0] = true;
         int t;
         //printf("c = %d\n", c);
-        for (t = 1; t < mnt; ++t) {
+        for(t = 1; t < mnt; ++t) 
+        {
             bool NR[N+2] = {};
             for (int r = 0; r < n+1; ++r) {
                 if (R[r] && ok(r, c, t))
