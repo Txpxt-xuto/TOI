@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 2010;
-int n, m;
+int n, m, i, j ,c, r;
 int A[N], B[N];
 inline int get_x0(int x, char d) {
     if (d == 'R')
@@ -49,30 +49,28 @@ int main()
         bool R[N+2] = {};
         R[0] = true;
         int t;
-        //printf("c = %d\n", c);
-        for(t = 1; t < mnt; ++t) 
+        for(t=1;t<mnt;++t) 
         {
             bool NR[N+2] = {};
-            for (int r = 0; r < n+1; ++r) {
-                if (R[r] && ok(r, c, t))
+            for(r=0;r<n+1; ++r)
+            {
+                if(R[r] && ok(r, c, t))
                     NR[r] = true;
-                if (R[r] && ok(r+1, c, t))
+                if(R[r] && ok(r+1, c, t))
                     NR[r+1] = true;
             }
             if (t > 2*m)
                 NR[0] = false;
             int cnt = 0;
-            for (int r = 0; r <= n+1; ++r) {
+            for(int r = 0; r <= n+1; ++r)
+            {
                 R[r] = NR[r];
-                //printf("%c", R[r]?'T':'F');
                 if (R[r])
                     ++cnt;
             }
-            //printf("\n");
             if (cnt == 0 || R[n+1])
                 break;
         }
-        //printf("\n");
         if (R[n+1])
             mnt = min(mnt, t);
     }
