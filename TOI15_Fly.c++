@@ -16,7 +16,8 @@ inline int get_pos(int x, int t) {
     else
         return 2*m-y;
 }
-inline bool ok(int r, int c, int t) {
+inline bool ok(int r, int c, int t) 
+{
     if (r == 0 || r == n+1)
         return true;
     int L = get_pos(A[r], t);
@@ -43,7 +44,8 @@ int main()
     mt19937 RNG(31415926);
     shuffle(cho.begin(), cho.end(), RNG);
     int mnt = 1e9;
-    for (auto c : cho) {
+    for (auto c : cho)
+    {
         bool R[N+2] = {};
         R[0] = true;
         int t;
