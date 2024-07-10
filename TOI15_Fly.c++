@@ -20,7 +20,7 @@ int main()
         {
             cin >> val >> s;
             if(s[0]=='R') ea[i][j]=val;
-            else ea[i][j]=2*col-val;
+            else ea[i][j] = 2*col-val;
         }
     }
     for(i=1;i<col;i++)
@@ -34,10 +34,10 @@ int main()
             for(k=0;k<2;k++)
             {
                 val = (ea[j][k]+le)%mod;
-                x = (i-val)%mod;
-                if(x<0) x+=mod;
-                y=(mod-val-i)%mod;
-                if(y<0) y+=mod;
+                x = (i-val) % mod;
+                if(x<0) x += mod;
+                y = (mod-val-i) % mod;
+                if(y<0) y += mod;
                 itr = 0,itr2 = 0;
                 if(x<y) 
                 {
