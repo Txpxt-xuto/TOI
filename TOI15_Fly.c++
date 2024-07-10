@@ -1,81 +1,116 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
+#define st first
+#define nd second
 using namespace std;
-const int N = 2010;
-int n, m, i, j ,c, r;
-int A[N], B[N];
-inline int get_x0(int x, char d)
-{
-    if(d == 'R')
-        return x;
-    else
-        return 2*m-x;
-}
-inline int get_pos(int x, int t) 
-{
-    int y = (x+t)%(2*m);
-    if(y < m)
-        return y;
-    else
-        return 2*m-y;
-}
-inline bool ok(int r, int c, int t) 
-{
-    if(r == 0 || r == n+1)
-        return true;
-    int L = get_pos(A[r], t);
-    int R = get_pos(B[r], t);
-    if(L > R) swap(L, R);
-    if(c <= L || c >= R)
-        return false;
-    return true;
-}
+int ea[2005][2];
+pair<int,int>  inv[2][150],avi[20][20][50],temp[150];
+int a[30][30],sz[2],mi=1e9;
+char s[2];
 int main()
 {
-    scanf("%d%d", &n, &m);
-    for(i=1;i<=n;++i) 
+    cin.tie(0)->sync_with_stdio(0);
+    int row,col,val,x,y;
+    cin>>row>>col;
+    int bi,le,itr,itr2,mod=2*col,n;
+    for(int i=1; i<=row; i++)
     {
-        int a, c;
-        char b, d;
-        scanf("%d %c%d %c", &a, &b, &c, &d);
-        A[i] = get_x0(a, b);
-        B[i] = get_x0(c, d);
-    }
-    vector<int> cho;
-    for(c=1;c<=m-1;++c)
-        cho.push_back(c);
-    mt19937 RNG(31415926);
-    shuffle(cho.begin(), cho.end(), RNG);
-    int mnt = 1e9;
-    for(auto c : cho)
-    {
-        bool R[N+2] = {};
-        R[0] = true;
-        int t;
-        for(t=1;t<mnt;++t) 
+        for(int j=0; j<2; j++)
         {
-            bool NR[N+2] = {};
-            for(r=0;r<n+1; ++r)
-            {
-                if(R[r] && ok(r, c, t))
-                    NR[r] = true;
-                if(R[r] && ok(r+1, c, t))
-                    NR[r+1] = true;
+            cin>>val>>s;
+            if(s[0]=='R') {
+                ea[i][j]=val;
+            } else {
+                ea[i][j]=2*col-val;
             }
-            if (t > 2*m)
-                NR[0] = false;
-            int cnt = 0;
-            for(r=0;r<=n+1;++r)
-            {
-                R[r] = NR[r];
-                if (R[r])
-                    ++cnt;
-            }
-            if(cnt == 0 || R[n+1])
-                break;
         }
-        if (R[n+1])
-            mnt = min(mnt, t);
     }
-    printf("%d\n", mnt);
-    return 0;
+ 
+    for(int i=1; i<col; i++)
+    {
+        inv[0][0]= {0,2*col};
+        sz[0]=1;
+        bi=1;
+        for(int j=1; j<=row; j++)
+        {
+            le=inv[1-bi][0].st+1;
+            for(int k=0; k<2; k++)
+            {
+                val=(ea[j][k]+le)%mod;
+                x=(i-val)%mod;
+                if(x<0) {
+                    x+=mod;
+                }
+                y=(mod-val-i)%mod;
+                if(y<0) {
+                    y+=mod;
+                }
+                itr=0,itr2=0;
+                if(x<y) {
+                    if(x>0) {
+                        avi[k][0][itr++]= {le,le+x-1};
+                    }
+                    avi[k][1][0]= {le+x+1,le+y-1};
+                    if(y!=2*col-1) {
+                        avi[k][0][itr++]= {le+y+1,le+2*col-1};
+                    }
+                    a[k][0]=itr;
+                    a[k][1]=1;
+                }
+                else
+                {
+                    if(y>0) {
+                        avi[k][1][itr++]= {le,le+y-1};
+                    }
+                    avi[k][0][0]= {le+y+1,le+x-1};
+                    if(x!=2*col-1||y!=0) {
+                        avi[k][1][itr++]= {le+x+1,le+2*col-1};
+                    }
+                    a[k][0]=1;
+                    a[k][1]=itr;
+                }
+ 
+            }
+            itr=0;
+            for(int k=0; k<2; k++)
+            {
+                for(int l=0; l<a[0][k]; l++)
+                {
+                    for(int m=0; m<a[1][1-k]; m++)
+                    {
+                        x=max(avi[0][k][l].st,avi[1][1-k][m].st);
+                        y=min(avi[0][k][l].nd,avi[1][1-k][m].nd);
+                        if(x<=y) {
+                            temp[itr++]= {x,y};
+                        }
+                    }
+                }
+            }
+            sort(temp,temp+itr);
+            n=unique(temp,temp+itr)-temp;
+            itr=0,itr2=0;
+            for(int k=0; k<n; k++)
+            {
+                while(itr<sz[1-bi]&&inv[1-bi][itr].nd<temp[k].st-1) {
+                    itr++;
+                }
+                if(itr>=sz[1-bi]) {
+                    break;
+                }
+                if(inv[1-bi][itr].st>=temp[k].nd) {
+                    continue;
+                }
+                inv[bi][itr2++]= {max(inv[1-bi][itr].st+1,temp[k].st),temp[k].nd};
+            }
+            if(itr2<=0) {
+                break;
+            }
+            sz[bi]=itr2;
+            bi=1-bi;
+        }
+        if(itr2>0)
+        {
+            mi=min(inv[1-bi][0].st+1,mi);
+        }
+    }
+    cout << mi;
 }
