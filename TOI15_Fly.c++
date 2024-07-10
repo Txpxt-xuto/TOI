@@ -27,22 +27,19 @@ int main()
         inv[0][0]= {0,2*col};
         sz[0]=1;
         bi=1;
-        for(int j=1; j<=row; j++)
+        for(j=1;j<=row;j++)
         {
-            le=inv[1-bi][0].st+1;
-            for(int k=0; k<2; k++)
+            le = inv[1-bi][0].st+1;
+            for(k=0;k<2;k++)
             {
                 val=(ea[j][k]+le)%mod;
                 x=(i-val)%mod;
-                if(x<0) {
-                    x+=mod;
-                }
+                if(x<0) x+=mod;
                 y=(mod-val-i)%mod;
-                if(y<0) {
-                    y+=mod;
-                }
+                if(y<0) y+=mod;
                 itr=0,itr2=0;
-                if(x<y) {
+                if(x<y) 
+                {
                     if(x>0) {
                         avi[k][0][itr++]= {le,le+x-1};
                     }
