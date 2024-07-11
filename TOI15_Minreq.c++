@@ -40,7 +40,7 @@ int main()
             } 
             if(ckin)
             {
-                ck=1; 
+                ck = 1; 
                 break;
             }
         }
