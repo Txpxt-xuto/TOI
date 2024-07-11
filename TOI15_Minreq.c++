@@ -31,7 +31,6 @@ bool ck=0,ckin=1;
             if(wt > t[j]){ckin=0; break;}
             k++;
         } 
-        //cout<<wt<<" "; //for(auto x:h)cout<<x<<" ";
         if(ckin)
         {
             ck=1; 
