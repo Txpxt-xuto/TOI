@@ -1,6 +1,6 @@
 /*
 TASK: minreq.cpp
 LANG: C++
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
+AUTHOR: Tapat Toungsakul
+CENTER: Home
 */
