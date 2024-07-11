@@ -21,14 +21,20 @@ int main(){
     for(int i=1;i<=n;i++)cin>>r[i];
     for(int i=1;i<=n;i++)h[i]=i;
     r[n+1] = m+1;
-bool ck=0,ckin=1;
-    do{
+    bool ck=0,ckin=1;
+    do
+    {
         int k=1;
-        ckin=1;
-        for(int i=1;i<=n;i++){
+        ckin = 1;
+        for(i=1;i<=n;i++)
+        {
             wt = s[r[i+1]-1] - s[r[i]-1];
             wt = (wt/(l[i]-p[h[k]])) + !(wt%(l[i]-p[h[k]])==0); 
-            if(wt > t[j]){ckin=0; break;}
+            if(wt > t[j])
+            {
+                ckin=0; 
+                break;
+            }
             k++;
         } 
         if(ckin)
