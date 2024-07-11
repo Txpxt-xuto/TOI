@@ -16,7 +16,8 @@ int main(){
     for(int i=1;i<=m;i++)cin>>s[i],s[i]+=s[i-1];
     for(int j=1;j<=q;j++)cin>>t[j];
 
-for(int j=1;j<=q;j++){
+    for(int j=1;j<=q;j++)
+    {
     for(int i=1;i<=n;i++)cin>>r[i];
     for(int i=1;i<=n;i++)h[i]=i;
     r[n+1] = m+1;
@@ -36,7 +37,4 @@ bool ck=0,ckin=1;
     if(ck)cout<<"P\n";
     else cout<<"F\n";
 }
-    
-    
-
 }
