@@ -45,7 +45,7 @@ int main()
             }
         }
         while(next_permutation(h+1,h+n+1));
-    }
     if(ck) cout << "P\n";
     else cout << "F\n";
+    }
 }
