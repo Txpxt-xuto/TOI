@@ -32,8 +32,13 @@ bool ck=0,ckin=1;
             k++;
         } 
         //cout<<wt<<" "; //for(auto x:h)cout<<x<<" ";
-        if(ckin){ck=1; break;}
-    }while(next_permutation(h+1,h+n+1));
+        if(ckin)
+        {
+            ck=1; 
+            break;
+        }
+    }
+    while(next_permutation(h+1,h+n+1));
     if(ck) cout << "P\n";
     else cout << F\n";
 }
