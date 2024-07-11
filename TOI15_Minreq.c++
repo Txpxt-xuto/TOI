@@ -17,7 +17,7 @@ int main()
     for(i=1;i<=n;i++) cin >> p[i];
     for(i=1;i<=m;i++) cin >> s[i],s[i] += s[i-1];
     for(j=1;j<=q;j++) cin >> t[j];
-    for(int j=1;j<=q;j++)
+    for(j=1;j<=q;j++)
     {
         for(int i=1;i<=n;i++)cin>>r[i];
         for(int i=1;i<=n;i++)h[i]=i;
