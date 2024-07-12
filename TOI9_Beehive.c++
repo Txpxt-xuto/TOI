@@ -25,7 +25,7 @@ void make()
         cin >> x >> y;
         dp[x + 1][y + 1] = 1;
     }
-    int res = 1;
+    int z = 1;
     for(i=1;i<=n;i++) 
     {
         for(j=1;j<=m;j++) 
@@ -34,11 +34,11 @@ void make()
             for(k=min(i,j);k>0;k--) 
             {
                 if(imp(i, j, i - k, j - k) == 0)
-                    res = max(res, k);
+                    z = max(z, k);
             }
         }
     }
-    cout << res << '\n';
+    cout << z << '\n';
 }
 int main() 
 {
