@@ -98,8 +98,8 @@ int main()
             yy=yyy; 
             zz=zzz;
             a = max(0,a-d[index].a); 
-            b=max(0,b-d[index].b); 
-            c=max(0,c-d[index].c);
+            b = max(0,b-d[index].b); 
+            c = max(0,c-d[index].c);
             index++;
         }
         ans=min(ans,temp);
