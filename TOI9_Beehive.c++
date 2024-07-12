@@ -15,9 +15,10 @@ ID: none
 using namespace std;
 int main()
 {
-    int n, m, t, i, j ,k, d;
+    int d;
     for(d=0;d<2;d++)
     {
+        int n, m, t, i, j ,k;
         int mx = 1;
         cin >> n >> m >> t;
         vector<vector<int>> map(n + 1, (vector<int>(m + 1, 0)));
