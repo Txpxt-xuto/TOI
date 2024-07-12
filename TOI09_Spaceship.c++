@@ -71,17 +71,16 @@ int main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int n;
-    cin>>n;
+    int n,m;
+    cin >> n;
     long long x,y,z;
-    cin>>x>>y>>z;
-    long long ans=LLONG_MAX;
-    int m;
+    cin >> x >> y >> z;
+    long long ans = LLONG_MAX;
     cin >> m;
     dataa d[m];
     for(i=0;i<m;i++)
     {
-        cin >> d[i].x >> d[i].y >> d[i].z>>d[i].a>>d[i].b>>d[i].c;
+        cin >> d[i].x >> d[i].y >> d[i].z >> d[i].a >> d[i].b >> d[i].c;
         d[i].id = i;
     }
     do
