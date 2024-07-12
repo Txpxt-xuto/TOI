@@ -9,7 +9,7 @@ ID: none
 using namespace std;
 const int N = 501;
 int dp[N][N];
-int n, m, t;
+int n, m, t, i ,j ,k;
 int fence(int bx, int by, int tx, int ty) 
 {
     int outer = dp[bx][by] - dp[tx][by] - dp[bx][ty] + dp[tx][ty];
