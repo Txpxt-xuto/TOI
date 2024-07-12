@@ -92,8 +92,8 @@ int main()
         int a=n,b=n,c=n;
         while(!(a<=0&&b<=0&&c<=0))
         {
-            long long xxx=d[index].x,yyy=d[index].y,zzz=d[index].z;
-            temp+=(xx-xxx)*(xx-xxx)+(yy-yyy)*(yy-yyy)+(zz-zzz)*(zz-zzz);
+            long long xxx = d[index].x,yyy=d[index].y,zzz=d[index].z;
+            temp += (xx-xxx)*(xx-xxx)+(yy-yyy)*(yy-yyy)+(zz-zzz)*(zz-zzz);
             xx = xxx; 
             yy=yyy; 
             zz=zzz;
@@ -105,7 +105,5 @@ int main()
         ans = min(ans,temp);
     }
     while(next_permutation(d,d+m));
-    cout
-    <<
-    ans;
+    cout << ans;
 }
