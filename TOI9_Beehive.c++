@@ -10,28 +10,29 @@ using namespace std;
 const int N = 501;
 int dp[N][N];
 int n, m, t;
-
-int fence(int bx, int by, int tx, int ty) {
+int fence(int bx, int by, int tx, int ty) 
+{
     int outer = dp[bx][by] - dp[tx][by] - dp[bx][ty] + dp[tx][ty];
     int inner = dp[bx - 1][by - 1] - dp[tx + 1][by - 1] - dp[bx - 1][ty + 1] + dp[tx + 1][ty + 1];
-
     return outer - inner;
 }
-
-void solve() {
+void solve() 
+{
     cin >> n >> m >> t;
-    for(int i = 0; i < t; i++) {
+    for(i=0;i<t;i++) 
+    {
         int x, y;
         cin >> x >> y;
         dp[x + 1][y + 1] = 1;
     }
-
     int res = 1;
-    for(int i = 1; i <= n; i++) {
-        for(int j = 1; j <= m; j++) {
+    for(int i = 1; i <= n; i++) 
+    {
+        for(j=1;j<=m;j++) 
+        {
             dp[i][j] += dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1];
-
-            for(int k = min(i, j); k > 0; k--) {
+            for(k=min(i,j);k>0;k--) 
+            {
                 if(fence(i, j, i - k, j - k) == 0)
                     res = max(res, k);
             }
