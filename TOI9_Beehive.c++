@@ -40,9 +40,9 @@ int main()
         {
             for(j=mx;j<=m;j++)
             {
-                for(int k = mx; k <= n && k <= m; k++)
+                for(k = mx; k <= n && k <= m; k++)
                 {
-                    if(i - k < 0 || j - k < 0) break;
+                    if(i-k<0 || j-k<0) break;
                     int sqr = dp[i][j] - dp[i - 1][j - 1] + dp[i - 1][j - k + 1] + dp[i - k + 1][j - 1] - dp[i - k + 1][j - k + 1] - dp[i][j - k] - dp[i - k][j] + dp[i - k][j - k];
                     if(sqr == 0) mx = max(k, mx);
                 }
