@@ -41,7 +41,6 @@ void solve()
 
     cout << res << '\n';
 }
-
 int main() {
     solve();
     memset(dp, 0, sizeof(dp));
