@@ -94,7 +94,7 @@ int main()
         {
             long long xxx=d[index].x,yyy=d[index].y,zzz=d[index].z;
             temp+=(xx-xxx)*(xx-xxx)+(yy-yyy)*(yy-yyy)+(zz-zzz)*(zz-zzz);
-            xx= xxx; 
+            xx = xxx; 
             yy=yyy; 
             zz=zzz;
             a=max(0,a-d[index].a); 
