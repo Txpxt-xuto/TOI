@@ -33,8 +33,8 @@ void make()
             dp[i][j] += dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1];
             for(k=min(i,j);k>0;k--) 
             {
-                if(imp(i, j, i - k, j - k) == 0)
-                    z = max(z, k);
+                if(imp(i, j, i - k, j - k) == 0) z = max(z, k);
+                    
             }
         }
     }
