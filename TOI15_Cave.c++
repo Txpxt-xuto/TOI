@@ -21,7 +21,7 @@ int main()
     lw = LLONG_MAX;
     lr = INT_MAX;
     cin >> n >> s >> o >> m ;
-    int a,b,d,c=0 ;
+    int a,b,d,c=0;
     for(int i=0;i<m;i++)
     {
         cin >> a >> b >> d ;
@@ -44,7 +44,8 @@ int main()
             if(u<lw||r<lr)
             {
                 ans.push_back({u,r});
-                lw = u,lr = r;
+                lw = u;
+                lr = r;
             }
             continue;
         }
