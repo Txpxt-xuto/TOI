@@ -38,7 +38,6 @@ void solve()
             }
         }
     }
-
     cout << res << '\n';
 }
 int main() {
