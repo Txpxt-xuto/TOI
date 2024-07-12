@@ -41,6 +41,7 @@ void make()
 }
 int main() 
 {
+    
     make();
     memset(dp, 0, sizeof(dp));
     main();
