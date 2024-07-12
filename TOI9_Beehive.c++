@@ -44,10 +44,7 @@ int main()
                 {
                     if(i - k < 0 || j - k < 0) break;
                     int sqr = dp[i][j] - dp[i - 1][j - 1] + dp[i - 1][j - k + 1] + dp[i - k + 1][j - 1] - dp[i - k + 1][j - k + 1] - dp[i][j - k] - dp[i - k][j] + dp[i - k][j - k];
-                    if (sqr == 0)
-                    {
-                        mx = max(k, mx);
-                    }
+                    if(sqr == 0) mx = max(k, mx);
                 }
             }
         }
