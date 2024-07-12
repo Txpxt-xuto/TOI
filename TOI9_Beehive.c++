@@ -27,26 +27,4 @@ int main()
             int x, y;
             cin >> x >> y;
             map[x + 1][y + 1] = 1;
-        }
-        for(i=1;i<=n;i++)
-        {
-            for(j=1;j<=m;j++)
-            {
-                dp[i][j] = map[i][j] + dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1];
-            }
-        }
-        for(i=mx;i<=n;i++)
-        {
-            for(j=mx;j<=m;j++)
-            {
-                for(k=mx;k<=n && k<=m;k++)
-                {
-                    if(i-k<0 || j-k<0) break;
-                    int sqr = dp[i][j] - dp[i - 1][j - 1] + dp[i - 1][j - k + 1] + dp[i - k + 1][j - 1] - dp[i - k + 1][j - k + 1] - dp[i][j - k] - dp[i - k][j] + dp[i - k][j - k];
-                    if(sqr == 0) mx = max(k, mx);
-                }
-            }
-        }
-        cout << mx << endl;
-    }
-}
+   
