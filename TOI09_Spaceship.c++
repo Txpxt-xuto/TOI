@@ -35,10 +35,9 @@ int main()
     }
     do
     {
-        long long temp = 0;
-        long long xx = x,yy = y,zz = z;
-        int index = 0;
-        int a = n,b = n,c = n;
+        long long temp = 0,xx = x,yy = y,zz = z;
+        int ;
+        int a = n,b = n,c = n,index = 0;
         while(!(a<=0&&b<=0&&c<=0))
         {
             long long xxx = d[index].x,yyy=d[index].y,zzz=d[index].z;
