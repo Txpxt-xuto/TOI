@@ -10,13 +10,13 @@ using namespace std;
 const int N = 501;
 int dp[N][N];
 int n, m, t, i ,j ,k;
-int fence(int bx, int by, int tx, int ty) 
+int imp(int bx, int by, int tx, int ty) 
 {
     int out = dp[bx][by] - dp[tx][by] - dp[bx][ty] + dp[tx][ty];
     int in = dp[bx - 1][by - 1] - dp[tx + 1][by - 1] - dp[bx - 1][ty + 1] + dp[tx + 1][ty + 1];
     return out - in;
 }
-void solve() 
+void make() 
 {
     cin >> n >> m >> t;
     for(i=0;i<t;i++) 
@@ -33,7 +33,7 @@ void solve()
             dp[i][j] += dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1];
             for(k=min(i,j);k>0;k--) 
             {
-                if(fence(i, j, i - k, j - k) == 0)
+                if(imp(i, j, i - k, j - k) == 0)
                     res = max(res, k);
             }
         }
@@ -42,8 +42,8 @@ void solve()
 }
 int main() 
 {
-    solve();
+    make();
     memset(dp, 0, sizeof(dp));
-    solve();
+    main();
     return 0;
 }
