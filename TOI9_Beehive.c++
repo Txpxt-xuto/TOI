@@ -48,9 +48,7 @@ int32_t main(){
         if(dp[n][i].f>ans.f){
             ans=dp[n][i];
         }
-        else if(dp[n][i].f==ans.f){
-            ans.s+=dp[n][i].s;
-        }
+        else if(dp[n][i].f==ans.f) ans.s+=dp[n][i].s;
     }
     cout << ans.f << " " << ans.s;
     return 0;
