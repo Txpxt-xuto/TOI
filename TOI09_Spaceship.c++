@@ -21,11 +21,10 @@ int main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int n,m;
+    int n,m,i;
     cin >> n;
-    long long x,y,z;
+    long long x,y,z,ans = LLONG_MAX;
     cin >> x >> y >> z;
-    long long ans = LLONG_MAX;
     cin >> m;
     dataa d[m];
     for(i=0;i<m;i++)
@@ -36,7 +35,6 @@ int main()
     do
     {
         long long temp = 0,xx = x,yy = y,zz = z;
-        int ;
         int a = n,b = n,c = n,index = 0;
         while(!(a<=0&&b<=0&&c<=0))
         {
