@@ -34,7 +34,6 @@ void make()
             for(k=min(i,j);k>0;k--) 
             {
                 if(imp(i, j, i - k, j - k) == 0) z = max(z, k);
-                    
             }
         }
     }
