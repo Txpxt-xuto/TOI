@@ -12,9 +12,9 @@ int dp[N][N];
 int n, m, t, i ,j ,k;
 int fence(int bx, int by, int tx, int ty) 
 {
-    int outer = dp[bx][by] - dp[tx][by] - dp[bx][ty] + dp[tx][ty];
-    int inner = dp[bx - 1][by - 1] - dp[tx + 1][by - 1] - dp[bx - 1][ty + 1] + dp[tx + 1][ty + 1];
-    return outer - inner;
+    int out = dp[bx][by] - dp[tx][by] - dp[bx][ty] + dp[tx][ty];
+    int in = dp[bx - 1][by - 1] - dp[tx + 1][by - 1] - dp[bx - 1][ty + 1] + dp[tx + 1][ty + 1];
+    return out - in;
 }
 void solve() 
 {
