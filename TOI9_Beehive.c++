@@ -36,9 +36,9 @@ int main()
                 dp[i][j] = map[i][j] + dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1];
             }
         }
-        for(int i = mx; i <= n; i++)
+        for(i=mx;i<=n;i++)
         {
-            for(int j = mx; j <= m; j++)
+            for(j=mx;j<=m;j++)
             {
                 for(int k = mx; k <= n && k <= m; k++)
                 {
