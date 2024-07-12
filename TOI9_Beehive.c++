@@ -26,7 +26,7 @@ void solve()
         dp[x + 1][y + 1] = 1;
     }
     int res = 1;
-    for(int i = 1; i <= n; i++) 
+    for(i = 1; i <= n; i++) 
     {
         for(j=1;j<=m;j++) 
         {
