@@ -29,9 +29,9 @@ int main()
             cin >> x >> y;
             map[x + 1][y + 1] = 1;
         }
-        for(int i = 1; i <= n; i++)
+        for(i = 1; i <= n; i++)
         {
-            for(int j = 1; j <= m; j++)
+            for(j = 1; j <= m; j++)
             {
                 dp[i][j] = map[i][j] + dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1];
             }
@@ -40,7 +40,7 @@ int main()
         {
             for(j=mx;j<=m;j++)
             {
-                for(k = mx; k <= n && k <= m; k++)
+                for(k=mx;k<=n && k<=m;k++)
                 {
                     if(i-k<0 || j-k<0) break;
                     int sqr = dp[i][j] - dp[i - 1][j - 1] + dp[i - 1][j - k + 1] + dp[i - k + 1][j - 1] - dp[i - k + 1][j - k + 1] - dp[i][j - k] - dp[i - k][j] + dp[i - k][j - k];
