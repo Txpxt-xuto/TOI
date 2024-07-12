@@ -102,7 +102,10 @@ int main()
             c = max(0,c-d[index].c);
             index++;
         }
-        ans=min(ans,temp);
-    }while(next_permutation(d,d+m));
-    cout<<ans;
+        ans = min(ans,temp);
+    }
+    while(next_permutation(d,d+m));
+    cout
+    <<
+    ans;
 }
