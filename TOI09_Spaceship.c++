@@ -77,12 +77,12 @@ int main()
     cin>>x>>y>>z;
     long long ans=LLONG_MAX;
     int m;
-    cin>>m;
+    cin >> m;
     dataa d[m];
-    for(int i=0;i<m;i++)
+    for(i=0;i<m;i++)
     {
-        cin>>d[i].x>>d[i].y>>d[i].z>>d[i].a>>d[i].b>>d[i].c;
-        d[i].id=i;
+        cin >> d[i].x >> d[i].y >> d[i].z>>d[i].a>>d[i].b>>d[i].c;
+        d[i].id = i;
     }
     do
     {
