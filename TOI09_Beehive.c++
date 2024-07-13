@@ -38,9 +38,10 @@ int main()
         }
     }
     int ans = 0, co = 1;
-    for(int i=1; i<=c; i++)
+    for(i=1;i<=c;i++)
     {
-        if(arr[1][i]>ans){
+        if(arr[1][i]>ans)
+        {
             ans = arr[1][i];
             co = cnt[1][i];
         }
