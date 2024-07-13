@@ -44,7 +44,8 @@ int32_t main(){
         }
     }
     pair<int,int>ans={0,0};
-    for(int i=1;i<=m;i++){
+    for(int i=1;i<=m;i++)
+    {
         if(dp[n][i].f>ans.f) ans=dp[n][i];
         else if(dp[n][i].f==ans.f) ans.s+=dp[n][i].s;
     }
