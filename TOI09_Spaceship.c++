@@ -3,7 +3,7 @@ TASK: spaceship.cpp
 LANG: C++
 COMPILER: VS code
 AUTHOR: Tapat Toungkul
-ID: non
+ID: none
 */
 #include<bits/stdc++.h>
 using namespace std;
