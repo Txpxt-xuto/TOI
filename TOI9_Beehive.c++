@@ -23,7 +23,8 @@ int32_t main(){
             int ;
             cin >> x;
             if(i==1) dp[i][j]={x,1};
-            else{
+            else
+            {
                 if((i%2==1)&&j==1||(i%2==0)&&j==m) dp[i][j]=dp[i-1][j];
                 else
                 {
