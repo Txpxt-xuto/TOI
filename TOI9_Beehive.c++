@@ -10,10 +10,11 @@ using namespace std;
 #define int long long
 #define f first
 #define s second
-
 pair<int,int>dp[5050][5050];
-int32_t main(){
-    ios_base::sync_with_stdio(false);cin.tie(0);
+int32_t main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
     int n,m,x,i,j;
     cin >> n >> m;
     for(i=1;i<=n;i++)
@@ -59,3 +60,4 @@ int32_t main(){
     }
     cout << ans.f << " " << ans.s;
     return 0;
+}
