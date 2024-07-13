@@ -16,14 +16,14 @@ int main()
     cin >> r >> c;
     vector<vector<int>> arr(r+2, vector<int> (c+2));
     vector<vector<int>> cnt(r+2, vector<int> (c+2));
-    for(int i=1; i<=r; i++)
+    for(i=1;i<=r;i++)
     {
-        for(int j=1; j<=c; j++) cin >> arr[i][j];
+        for(j=1;j<=c;j++) cin >> arr[i][j];
     }
-    for(int i=1; i<=c; i++) cnt[r][i] = 1;
-    for(int i=r-1; i>=1; i--)
+    for(i=1; i<=c;i++) cnt[r][i] = 1;
+    for(i=r-1;i>=1;i--)
     {
-        for(int j=1; j<=c; j++)
+        for(j=1;j<=c;j++)
         {
             if(i%2)
             {
