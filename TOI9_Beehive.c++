@@ -14,26 +14,33 @@ using namespace std;
 pair<int,int>dp[5050][5050];
 int32_t main(){
     ios_base::sync_with_stdio(false);cin.tie(0);
-    int n,m;
+    int n,m,x,i,j;
     cin >> n >> m;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=m;j++){
-            int x;
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=m;j++)
+        {
+            int ;
             cin >> x;
-            if(i==1)dp[i][j]={x,1};
+            if(i==1) dp[i][j]={x,1};
             else{
-                if((i%2==1)&&j==1||(i%2==0)&&j==m)dp[i][j]=dp[i-1][j];
-                else{
-                    if(i%2==1){
-                        if(dp[i-1][j].f!=dp[i-1][j-1].f)dp[i][j]=max(dp[i-1][j],dp[i-1][j-1]);
-                        else {
+                if((i%2==1)&&j==1||(i%2==0)&&j==m) dp[i][j]=dp[i-1][j];
+                else
+                {
+                    if(i%2==1)
+                    {
+                        if(dp[i-1][j].f!=dp[i-1][j-1].f) dp[i][j]=max(dp[i-1][j],dp[i-1][j-1]);
+                        else 
+                        {
                             dp[i][j]=dp[i-1][j];
                             dp[i][j].s+=dp[i-1][j-1].s;
                         }
                     }
-                    else{
-                        if(dp[i-1][j].f!=dp[i-1][j+1].f)dp[i][j]=max(dp[i-1][j],dp[i-1][j+1]);
-                        else {
+                    else
+                    {
+                        if(dp[i-1][j].f!=dp[i-1][j+1].f) dp[i][j]=max(dp[i-1][j],dp[i-1][j+1]);
+                        else 
+                        {
                             dp[i][j]=dp[i-1][j];
                             dp[i][j].s+=dp[i-1][j+1].s;
                         }
