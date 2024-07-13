@@ -10,7 +10,8 @@ using namespace std;
 #define ll long long
 int main()
 {
-    ios_base::sync_with_stdio(0), cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int r, c;
     cin >> r >> c;
     vector<vector<int>> arr(r+2, vector<int> (c+2));
