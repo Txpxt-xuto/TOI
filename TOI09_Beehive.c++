@@ -72,10 +72,10 @@ int main()
                         dp[i][j].first=dp[i-1][j+1].first+v[i][j];
                         dp[i][j].second=dp[i-1][j+1].second+dp[i-1][j].second;
                     }
+                }
             }
         }
     }
-        }
     int mx=0, c=0;
     for(int j=0; j<m; j++) mx = max(mx, dp[n-1][j].first);
     for(int j=0; j<m; j++) if(dp[n-1][j].first == mx) c += dp[n-1][j].second;
