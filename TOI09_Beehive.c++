@@ -6,9 +6,7 @@ AUTHOR: Tapat Toungkul
 ID: none
 */
 #include <bits/stdc++.h>
-
 using namespace std;
-
 int main() 
 {
     int n, m;
@@ -19,10 +17,7 @@ int main()
     {
         for(int j=0; j<m; j++) cin >> v[i][j];
     }
-
-  for(int j=0; j<m; j++) {
-    dp[0][j] = pair<int, int>(v[0][j], 1);
-  }
+     for(int j=0; j<m; j++) dp[0][j] = pair<int, int>(v[0][j], 1);
 
   for(int i=1; i<n; i++) {
     for(int j=0; j<m; j++) {
