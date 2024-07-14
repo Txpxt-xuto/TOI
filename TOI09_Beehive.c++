@@ -67,11 +67,11 @@ int main()
                         dp[i][j].first=dp[i-1][j].first+v[i][j];
                         dp[i][j].second=dp[i-1][j].second;
                     }
-                else 
-                {
-                    dp[i][j].first=dp[i-1][j+1].first+v[i][j];
-                    dp[i][j].second=dp[i-1][j+1].second+dp[i-1][j].second;
-                }
+                    else 
+                    {
+                        dp[i][j].first=dp[i-1][j+1].first+v[i][j];
+                        dp[i][j].second=dp[i-1][j+1].second+dp[i-1][j].second;
+                    }
             }
         }
     }
