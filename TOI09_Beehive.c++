@@ -13,7 +13,7 @@ int main()
     cin >> n >> m;
     vector<vector<int>> v(n, vector<int>(m));
     vector<vector<pair<int, int>>> dp(n, vector<pair<int, int>>(m));
-    for(int i=0; i<n; i++) 
+    for(i=0;i<n;i++) 
     {
         for(j=0;j<m;j++) cin >> v[i][j];
     }
