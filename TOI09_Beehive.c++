@@ -53,7 +53,7 @@ int main()
             if(j==m-1) 
             {
                 dp[i][j].first = dp[i-1][j].first+v[i][j];
-            d   p[i][j].second = dp[i-1][j].second;
+                dp[i][j].second = dp[i-1][j].second;
             }
             else 
             {
@@ -62,9 +62,10 @@ int main()
                     dp[i][j].first=dp[i-1][j+1].first+v[i][j];
                     dp[i][j].second=dp[i-1][j+1].second;
                 }
-          else if(dp[i-1][j+1].first<dp[i-1][j].first) {
-              dp[i][j].first=dp[i-1][j].first+v[i][j];
-              dp[i][j].second=dp[i-1][j].second;
+          else if(dp[i-1][j+1].first<dp[i-1][j].first) 
+          {
+                    dp[i][j].first=dp[i-1][j].first+v[i][j];
+                    dp[i][j].second=dp[i-1][j].second;
           }
           else {
               dp[i][j].first=dp[i-1][j+1].first+v[i][j];
