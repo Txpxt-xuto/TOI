@@ -6,47 +6,71 @@ AUTHOR: Tapat Toungkul
 ID: none
 */
 #include <bits/stdc++.h>
+
 using namespace std;
-#define ll long long
-int main()
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    int r, c;
-    cin >> r >> c;
-    vector<vector<int>> arr(r+2, vector<int> (c+2));
-    vector<vector<int>> cnt(r+2, vector<int> (c+2));
-    for(i=1;i<=r;i++)
-    {
-        for(j=1;j<=c;j++) cin >> arr[i][j];
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  vector<vector<int>> v(n, vector<int>(m));
+  vector<vector<pair<int, int>>> dp(n, vector<pair<int, int>>(m));
+  for(int i=0; i<n; i++) {
+    for(int j=0; j<m; j++) {
+      cin >> v[i][j];
     }
-    for(i=1; i<=c;i++) cnt[r][i] = 1;
-    for(i=r-1;i>=1;i--)
-    {
-        for(j=1;j<=c;j++)
-        {
-            if(i%2)
-            {
-                arr[i][j] += max(arr[i+1][j], arr[i+1][j-1]);
-                cnt[i][j] = (arr[i+1][j] >= arr[i+1][j-1] ? cnt[i+1][j] : 0) + (arr[i+1][j-1] >= arr[i+1][j] ? cnt[i+1][j-1] : 0);
-            }
-            else 
-            {
-                arr[i][j] += max(arr[i+1][j], arr[i+1][j+1]);
-                cnt[i][j] = (arr[i+1][j] >= arr[i+1][j+1] ? cnt[i+1][j] : 0) + (arr[i+1][j+1] >= arr[i+1][j] ? cnt[i+1][j+1] : 0);
-            }
+  }
+
+  for(int j=0; j<m; j++) {
+    dp[0][j] = pair<int, int>(v[0][j], 1);
+  }
+
+  for(int i=1; i<n; i++) {
+    for(int j=0; j<m; j++) {
+      if(i%2==0){
+        if(j==0) {
+          dp[i][j].first=dp[i-1][j].first+v[i][j];
+          dp[i][j].second=dp[i-1][j].second;
         }
-    }
-    int ans = 0, co = 1;
-    for(i=1;i<=c;i++)
-    {
-        if(arr[1][i]>ans)
-        {
-            ans = arr[1][i];
-            co = cnt[1][i];
+        else {
+          if(dp[i-1][j-1].first>dp[i-1][j].first) {
+              dp[i][j].first=dp[i-1][j-1].first+v[i][j];
+              dp[i][j].second=dp[i-1][j-1].second;
+          }
+          else if(dp[i-1][j-1].first<dp[i-1][j].first){
+            dp[i][j].first=dp[i-1][j].first+v[i][j];
+            dp[i][j].second=dp[i-1][j].second;
+          }
+          else{
+            dp[i][j].first=dp[i-1][j-1].first+v[i][j];
+            dp[i][j].second=dp[i-1][j-1].second+dp[i-1][j].second;
+          }
         }
-        else if(arr[1][i]==ans) co += cnt[1][i];
+      }else {
+        if(j==m-1) {
+          dp[i][j].first=dp[i-1][j].first+v[i][j];
+          dp[i][j].second=dp[i-1][j].second;
+        }
+        else {
+          if(dp[i-1][j+1].first>dp[i-1][j].first) {
+              dp[i][j].first=dp[i-1][j+1].first+v[i][j];
+              dp[i][j].second=dp[i-1][j+1].second;
+          }
+          else if(dp[i-1][j+1].first<dp[i-1][j].first) {
+              dp[i][j].first=dp[i-1][j].first+v[i][j];
+              dp[i][j].second=dp[i-1][j].second;
+          }
+          else {
+              dp[i][j].first=dp[i-1][j+1].first+v[i][j];
+              dp[i][j].second=dp[i-1][j+1].second+dp[i-1][j].second;
+          }
+        }
+      }
     }
-    cout << ans << ' ' << co;
-    return 0;
+  }
+
+    int mx=0, c=0;
+    for(int j=0; j<m; j++) mx = max(mx, dp[n-1][j].first);
+    for(int j=0; j<m; j++) if(dp[n-1][j].first == mx) c += dp[n-1][j].second;
+    cout << mx << " " << c;
 }
