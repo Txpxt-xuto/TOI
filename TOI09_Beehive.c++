@@ -12,14 +12,12 @@ using namespace std;
 int main() {
   int n, m;
   cin >> n >> m;
-
-  vector<vector<int>> v(n, vector<int>(m));
-  vector<vector<pair<int, int>>> dp(n, vector<pair<int, int>>(m));
-  for(int i=0; i<n; i++) {
-    for(int j=0; j<m; j++) {
-      cin >> v[i][j];
+    vector<vector<int>> v(n, vector<int>(m));
+    vector<vector<pair<int, int>>> dp(n, vector<pair<int, int>>(m));
+    for(int i=0; i<n; i++) 
+    {
+        for(int j=0; j<m; j++) cin >> v[i][j];
     }
-  }
 
   for(int j=0; j<m; j++) {
     dp[0][j] = pair<int, int>(v[0][j], 1);
