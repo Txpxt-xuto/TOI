@@ -15,10 +15,10 @@ int main()
     vector<vector<pair<int, int>>> dp(n, vector<pair<int, int>>(m));
     for(int i=0; i<n; i++) 
     {
-        for(int j=0; j<m; j++) cin >> v[i][j];
+        for(j=0;j<m;j++) cin >> v[i][j];
     }
     for(j=0;j<m;j++) dp[0][j] = pair<int, int>(v[0][j], 1);
-    for(i=1; i<n;i++) 
+    for(i=1;i<n;i++) 
     {
         for(j=0; j<m;j++)  
         {
