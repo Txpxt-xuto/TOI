@@ -9,7 +9,7 @@ ID: none
 using namespace std;
 int main() 
 {
-    int n, m;
+    int n, m, i, j;
     cin >> n >> m;
     vector<vector<int>> v(n, vector<int>(m));
     vector<vector<pair<int, int>>> dp(n, vector<pair<int, int>>(m));
@@ -20,7 +20,7 @@ int main()
     for(j=0;j<m;j++) dp[0][j] = pair<int, int>(v[0][j], 1);
     for(i=1;i<n;i++) 
     {
-        for(j=0; j<m;j++)  
+        for(j=0;j<m;j++)  
         {
             if(i%2==0)
             {
@@ -77,7 +77,7 @@ int main()
         }
     }
     int mx=0, c=0;
-    for(int j=0; j<m; j++) mx = max(mx, dp[n-1][j].first);
-    for(int j=0; j<m; j++) if(dp[n-1][j].first == mx) c += dp[n-1][j].second;
+    for(j=0;j<m; j++) mx = max(mx, dp[n-1][j].first);
+    for(j=0;j<m; j++) if(dp[n-1][j].first == mx) c += dp[n-1][j].second;
     cout << mx << " " << c;
 }
