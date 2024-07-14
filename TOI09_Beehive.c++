@@ -76,8 +76,8 @@ int main()
             }
         }
     }
-    int mx=0, c=0;
-    for(j=0;j<m;j++) mx = max(mx, dp[n-1][j].first);
+    int max=0, c=0;
+    for(j=0;j<m;j++) max = max(mx, dp[n-1][j].first);
     for(j=0;j<m;j++) if(dp[n-1][j].first == mx) c += dp[n-1][j].second;
-    cout << mx << " " << c;
+    cout << max << " " << c;
 }
