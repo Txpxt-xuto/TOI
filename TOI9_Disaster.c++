@@ -1,14 +1,13 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int n;
+int n,j;
 bool visit[305]={}, tf=false;
 char ans[305];
 vector<vector<pair<char, int> > > v(26);
 void walk(int i, int cnt) 
 {
 	ans[cnt]=(char)(i+'A');
-	int j;
 	if(cnt==n) 
     {
 		for(j=0; j<=n; j++) cout << ans[j] << " ";
