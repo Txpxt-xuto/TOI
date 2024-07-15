@@ -49,8 +49,6 @@ int main()
 			break;
 		}
 	}
-	if (!tf) {
-		walk(0, 0);
-	}
+	if (!tf) walk(0,0);
 	return 0;
 }
