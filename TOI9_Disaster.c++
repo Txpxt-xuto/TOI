@@ -36,7 +36,8 @@ int main()
 	cin>>n;
 	int i;
 	char a, b;
-	for (int i=0; i<n; i++) {
+	for (int i=0; i<n; i++) 
+    {
 		cin>>a>>b;
 		v[a-'A'].push_back({b, i});
 		v[b-'A'].push_back({a, i});
