@@ -43,12 +43,12 @@ int main()
 	}
 	for(i=0;i<26;i++) 
     {
-		if (v[i].size()%2==1) 
+		if(v[i].size()%2==1) 
         {
 			walk(i,0);
 			break;
 		}
 	}
-	if (!tf) walk(0,0);
+	if(!tf) walk(0,0);
 	return 0;
 }
