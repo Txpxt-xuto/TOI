@@ -11,15 +11,15 @@ void walk(int i, int cnt)
 	int j;
 	if(cnt==n) 
     {
-		for (j=0; j<=n; j++) cout << ans[j] << " ";
+		for(j=0; j<=n; j++) cout << ans[j] << " ";
 		tf=true;
 		return ;
 	}
 	if(!tf) 
     {
-		for (j=0; j<v[i].size(); j++) 
+		for(j=0; j<v[i].size(); j++) 
         {
-			if (!visit[v[i][j].second]) 
+			if(!visit[v[i][j].second]) 
             {
 				visit[v[i][j].second]=1;
 				walk(v[i][j].first-'A', cnt+1);
