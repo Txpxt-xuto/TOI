@@ -9,13 +9,13 @@ void walk(int i, int cnt)
 {
 	ans[cnt]=(char)(i+'A');
 	int j;
-	if (cnt==n) 
+	if(cnt==n) 
     {
 		for (j=0; j<=n; j++) cout<<ans[j]<<" ";
 		tf=true;
 		return ;
 	}
-	if (!tf) 
+	if(!tf) 
     {
 		for (j=0; j<v[i].size(); j++) 
         {
