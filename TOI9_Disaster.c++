@@ -1,6 +1,9 @@
 /*
 TASK: disaster.cpp
 LANG: C++
+COMPILER: VS code
+AUTHOR: Tapat Toungkul
+ID: none
 */
 #include<iostream>
 #include<vector>
