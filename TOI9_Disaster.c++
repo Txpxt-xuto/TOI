@@ -42,7 +42,8 @@ int main()
 		v[a-'A'].push_back({b, i});
 		v[b-'A'].push_back({a, i});
 	}
-	for (i=0; i<26; i++) {
+	for(i=0; i<26; i++) 
+    {
 		if (v[i].size()%2==1) {
 			walk(i, 0);
 			break;
