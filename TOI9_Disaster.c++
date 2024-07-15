@@ -8,7 +8,7 @@ ID: none
 #include<iostream>
 #include<vector>
 using namespace std;
-int n,j;
+int n,j,i;
 bool visit[305]={}, tf=false;
 char ans[305];
 vector<vector<pair<char, int> > > v(26);
@@ -40,8 +40,7 @@ int main()
 	cin.tie(NULL); 
     cout.tie(NULL);
 	cin >> n;
-	int i;
-	char a, b;
+	char a,b;
 	for(i=0;i<n;i++) 
     {
 		cin >> a >> b;
