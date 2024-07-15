@@ -19,7 +19,8 @@ void walk(int i, int cnt)
     {
 		for (j=0; j<v[i].size(); j++) 
         {
-			if (!visit[v[i][j].second]) {
+			if (!visit[v[i][j].second]) 
+            {
 				visit[v[i][j].second]=1;
 				walk(v[i][j].first-'A', cnt+1);
 				visit[v[i][j].second]=0;
