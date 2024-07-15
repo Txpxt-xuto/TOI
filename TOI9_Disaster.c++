@@ -1,4 +1,7 @@
-
+/*
+TASK: disaster.cpp
+LANG: C++
+*/
 #include<iostream>
 #include<vector>
 using namespace std;
