@@ -10,13 +10,13 @@ void walk(int i, int cnt)
 	ans[cnt]=(char)(i+'A');
 	if(cnt==n) 
     {
-		for(j=0; j<=n; j++) cout << ans[j] << " ";
+		for(j=0;j<=n;j++) cout << ans[j] << " ";
 		tf=true;
 		return ;
 	}
 	if(!tf) 
     {
-		for(j=0; j<v[i].size(); j++) 
+		for(j=0;j<v[i].size();j++) 
         {
 			if(!visit[v[i][j].second]) 
             {
@@ -35,7 +35,7 @@ int main()
 	cin >> n;
 	int i;
 	char a, b;
-	for(int i=0; i<n; i++) 
+	for(i=0;i<n;i++) 
     {
 		cin >> a >> b;
 		v[a-'A'].push_back({b, i});
