@@ -43,8 +43,9 @@ int main()
 	}
 	for(i=0;i<26;i++) 
     {
-		if (v[i].size()%2==1) {
-			walk(i, 0);
+		if (v[i].size()%2==1) 
+        {
+			walk(i,0);
 			break;
 		}
 	}
