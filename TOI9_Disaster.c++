@@ -11,8 +11,7 @@ void walk(int i, int cnt)
 	int j;
 	if (cnt==n) 
     {
-		for (j=0; j<=n; j++) {cout<<ans[j]<<" ";
-			
+		for (j=0; j<=n; j++) cout<<ans[j]<<" ";
 		}
 		tf=true;
 		return ;
