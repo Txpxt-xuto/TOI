@@ -34,7 +34,8 @@ int main(){
         graph[s[1]-'A'].push_back({i,s[0]-'A'});
     }
     for(int i=0;i<26;i++){
-        if(al[i]%2==1){
+        if(al[i]%2==1)
+		{
             ans=true;
             dfs(i,0);
             return 0;
