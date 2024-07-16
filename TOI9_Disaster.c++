@@ -11,6 +11,8 @@ void dfs(int st,int cnt)
     rans[cnt]=char(st+'A');
     if(cnt==n)
 	{
+        for(int i=0;i<=n;i++) cout << rans[i] << " ";
+
         exit(0);
     }
     for(auto x:graph[st])
