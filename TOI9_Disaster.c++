@@ -41,8 +41,6 @@ int main(){
             return 0;
         }
     }
-    if(!ans){
-        dfs(0,0);
-    }
+    if(!ans) dfs(0,0);
     return 0;
 }
