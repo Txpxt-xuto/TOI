@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n,i;
-int al[30];
+int n,i,al[30];
+int;
 vector<pair<int,int>> graph[30];
 bool ans=false,visited[309];
 char rans[309];
