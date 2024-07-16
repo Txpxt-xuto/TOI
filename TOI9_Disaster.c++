@@ -1,9 +1,9 @@
 /*
 TASK: disaster.cpp
 LANG: C++
-COMPILER: WCB
-AUTHOR: YourFirstName YourLastName
-ID: YourCenterID
+COMPILER: VS code
+AUTHOR: Tapat Toungkul
+ID: none
 */
 #include <bits/stdc++.h>
 using namespace std;
