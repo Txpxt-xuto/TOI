@@ -1,15 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n;
+int n,i;
 int al[30];
 vector<pair<int,int>> graph[30];
 bool ans=false;
 char rans[309];
 bool visited[309];
-void dfs(int st,int cnt){
+void dfs(int st,int cnt)
+{
     rans[cnt]=char(st+'A');
-    if(cnt==n){
-        for(int i=0;i<=n;i++){
+    if(cnt==n)
+	{
+        for(int i=0;i<=n;i++)
+		{
             cout << rans[i] << " ";
         }
         exit(0);
@@ -33,7 +36,8 @@ int main(){
         graph[s[0]-'A'].push_back({i,s[1]-'A'});
         graph[s[1]-'A'].push_back({i,s[0]-'A'});
     }
-    for(int i=0;i<26;i++){
+    for(i=0;i<26;i++)
+	{
         if(al[i]%2==1)
 		{
             ans=true;
