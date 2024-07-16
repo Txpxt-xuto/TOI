@@ -11,7 +11,7 @@ void dfs(int st,int cnt)
     rans[cnt]=char(st+'A');
     if(cnt==n)
 	{
-        for(int i=0;i<=n;i++) cout << rans[i] << " ";
+        for(i=0;i<=n;i++) cout << rans[i] << " ";
         exit(0);
     }
     for(auto x:graph[st])
@@ -32,7 +32,8 @@ int main()
     cin >> n;
     for(int i=0;i<n;i++)
 	{
-        string s;cin >> s;
+        string s;
+		cin >> s;
         al[s[0]-'A']++;
         al[s[1]-'A']++;
         graph[s[0]-'A'].push_back({i,s[1]-'A'});
