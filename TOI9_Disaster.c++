@@ -1,3 +1,10 @@
+/*
+TASK: disaster.cpp
+LANG: C++
+COMPILER: WCB
+AUTHOR: YourFirstName YourLastName
+ID: YourCenterID
+*/
 #include <bits/stdc++.h>
 using namespace std;
 int n,i,al[30];
