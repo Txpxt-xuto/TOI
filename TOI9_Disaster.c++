@@ -11,14 +11,12 @@ void dfs(int st,int cnt)
     rans[cnt]=char(st+'A');
     if(cnt==n)
 	{
-        for(int i=0;i<=n;i++)
-		{
-            cout << rans[i] << " ";
-        }
         exit(0);
     }
-    for(auto x:graph[st]){
-        if(!visited[x.first]){
+    for(auto x:graph[st])
+	{
+        if(!visited[x.first])
+		{
             visited[x.first]=true;
             dfs(x.second,cnt+1);
             visited[x.first]=false;
