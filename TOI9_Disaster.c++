@@ -3,9 +3,9 @@ using namespace std;
 int n,i;
 int al[30];
 vector<pair<int,int>> graph[30];
-bool ans=false;
+bool ans=false,visited[309];
 char rans[309];
-bool visited[309];
+bool ;
 void dfs(int st,int cnt)
 {
     rans[cnt]=char(st+'A');
