@@ -26,7 +26,6 @@ void dfs(int st,int cnt){
 int main(){
     ios_base::sync_with_stdio(false);cin.tie(0);
     cin >> n;
-    //cin.ignore();
     for(int i=0;i<n;i++){
         string s;cin >> s;
         al[s[0]-'A']++;
