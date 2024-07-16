@@ -35,7 +35,6 @@ int main(){
     }
     for(int i=0;i<26;i++){
         if(al[i]%2==1){
-            //cout << i;
             ans=true;
             dfs(i,0);
             return 0;
