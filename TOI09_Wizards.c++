@@ -11,15 +11,15 @@ int main()
     cin >> n;
     vector<vector<pair<int, int>>> v(4);
     vector<tuple<ll, ll, int, int>> f, s;
-  for(int i=0; i<4; i++) 
-  {
-    for(int j=0; j<n; j++) 
+    for(int i=0; i<4; i++) 
     {
-      int x, y;
-      cin >> x >> y;
-      v[i].push_back({x, y});
+        for(int j=0; j<n; j++) 
+        {
+            int x, y;
+            cin >> x >> y;
+            v[i].push_back({x, y});
+        }
     }
-  }
 
   for(int i=0; i<n; i++) {
     for(int j=0; j<n; j++) {
