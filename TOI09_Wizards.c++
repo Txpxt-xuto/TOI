@@ -33,9 +33,8 @@ int main()
             s.push_back({v[2][i].first + v[3][j].first, v[2][i].second + v[3][j].second, i, j});
         }
     }
-
-  sort(f.begin(), f.end());
-  sort(s.begin(), s.end());
+    sort(f.begin(), f.end());
+    sort(s.begin(), s.end());
 
   for(int l=0, r=n*n-1;;) {
     ll temp_x = get<0>(f[l]) + get<0>(s[r]);
