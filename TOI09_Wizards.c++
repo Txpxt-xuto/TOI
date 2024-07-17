@@ -41,9 +41,7 @@ int main()
         ll temp_y = get<1>(f[l]) + get<1>(s[r]);
         if(temp_x < xt) l++;
         else if(temp_x > xt) r--;
-        else if(temp_y < yt) {
-        l++;
-    }   else if(temp_y > yt) r--;
+        else if(temp_y < yt) l++; else if(temp_y > yt) r--;
         else 
         {
             cout << v[0][get<2>(f[l])].first << " " << v[0][get<2>(f[l])].second << endl;
