@@ -6,16 +6,15 @@ int main()
     ios_base::sync_with_stdio(0); 
     cin.tie(0);
     cout.tie(0);
-    int xt, yt, n;
+    int xt, yt, n, x, y, i, j;
     cin >> xt >> yt;
     cin >> n;
     vector<vector<pair<int, int>>> v(4);
     vector<tuple<ll, ll, int, int>> f, s;
-    for(int i=0; i<4; i++) 
+    for(i=0; i<4; i++) 
     {
-        for(int j=0; j<n; j++) 
+        for(j=0; j<n; j++) 
         {
-            int x, y;
             cin >> x >> y;
             v[i].push_back({x, y});
         }
