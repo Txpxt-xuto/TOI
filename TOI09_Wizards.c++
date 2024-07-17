@@ -9,11 +9,11 @@ int main() {
   cin.tie(0);
   cout.tie(0);
 
-  int xt, yt, n;
-  cin >> xt >> yt;
-  cin >> n;
-  vector<vector<pair<int, int>>> v(4);
-  vector<tuple<ll, ll, int, int>> f, s;
+    int xt, yt, n;
+    cin >> xt >> yt;
+    cin >> n;
+    vector<vector<pair<int, int>>> v(4);
+    vector<tuple<ll, ll, int, int>> f, s;
 
   for(int i=0; i<4; i++) {
     for(int j=0; j<n; j++) {
