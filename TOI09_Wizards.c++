@@ -26,9 +26,9 @@ int main()
             f.push_back({v[0][i].first + v[1][j].first, v[0][i].second + v[1][j].second, i, j});
         }
     }
-    for(int i=0; i<n; i++) 
+    for(i=0; i<n; i++) 
     {
-        for(int j=0; j<n; j++) 
+        for(j=0; j<n; j++) 
         {
             s.push_back({v[2][i].first + v[3][j].first, v[2][i].second + v[3][j].second, i, j});
         }
