@@ -19,12 +19,13 @@ int main()
             v[i].push_back({x, y});
         }
     }
-
-  for(int i=0; i<n; i++) {
-    for(int j=0; j<n; j++) {
-      f.push_back({v[0][i].first + v[1][j].first, v[0][i].second + v[1][j].second, i, j});
-    }
-  }
+    for(i=0; i<n; i++) 
+    {
+        for(j=0; j<n; j++) 
+        {
+            f.push_back({v[0][i].first + v[1][j].first, v[0][i].second + v[1][j].second, i, j});
+        }
+     }
 
   for(int i=0; i<n; i++) {
     for(int j=0; j<n; j++) {
