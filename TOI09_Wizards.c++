@@ -60,5 +60,5 @@ int main() {
       cout << v[3][get<3>(s[r])].first << " " << v[3][get<3>(s[r])].second;
       return 0;
     }
-  }
+    }
 }
