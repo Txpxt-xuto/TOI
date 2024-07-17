@@ -9,12 +9,10 @@ int main() {
   cin.tie(0);
   cout.tie(0);
 
-  int xt, yt;
+  int xt, yt,n;
   cin >> xt >> yt;
-
-  int n;
+  int ;
   cin >> n;
-
   vector<vector<pair<int, int>>> v(4);
   vector<tuple<ll, ll, int, int>> f, s;
 
@@ -51,7 +49,7 @@ int main() {
       r--;
     }else if(temp_y < yt) {
       l++;
-    }else if(temp_y > yt) r--;
+    }   else if(temp_y > yt) r--;
         else 
         {
             cout << v[0][get<2>(f[l])].first << " " << v[0][get<2>(f[l])].second << endl;
