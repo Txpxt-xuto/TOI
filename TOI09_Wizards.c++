@@ -35,16 +35,13 @@ int main()
     }
     sort(f.begin(), f.end());
     sort(s.begin(), s.end());
-
-  for(int l=0, r=n*n-1;;) {
-    ll temp_x = get<0>(f[l]) + get<0>(s[r]);
-    ll temp_y = get<1>(f[l]) + get<1>(s[r]);
-
-    if(temp_x < xt) {
-      l++;
-    }else if(temp_x > xt) {
-      r--;
-    }else if(temp_y < yt) {
+    for(int l=0, r=n*n-1;;) 
+    {
+        ll temp_x = get<0>(f[l]) + get<0>(s[r]);
+        ll temp_y = get<1>(f[l]) + get<1>(s[r]);
+        if(temp_x < xt) l++;
+        else if(temp_x > xt) r--;
+    else if(temp_y < yt) {
       l++;
     }   else if(temp_y > yt) r--;
         else 
