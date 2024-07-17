@@ -28,10 +28,7 @@ int main()
     }
     for(i=0; i<n; i++) 
     {
-        for(j=0; j<n; j++) 
-        {
-            s.push_back({v[2][i].first + v[3][j].first, v[2][i].second + v[3][j].second, i, j});
-        }
+        for(j=0; j<n; j++) s.push_back({v[2][i].first + v[3][j].first, v[2][i].second + v[3][j].second, i, j});
     }
     sort(f.begin(), f.end());
     sort(s.begin(), s.end());
