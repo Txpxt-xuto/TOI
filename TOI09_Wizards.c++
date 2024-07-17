@@ -1,3 +1,10 @@
+/*
+TASK: wizard.cpp
+LANG: C++
+COMPILER: VS code
+AUTHOR: Tapat Toungkul
+ID: none
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
