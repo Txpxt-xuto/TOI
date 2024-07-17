@@ -53,7 +53,9 @@ int main() {
       l++;
     }else if(temp_y > yt) {
       r--;
-    }else {
+    }
+    else 
+    {
             cout << v[0][get<2>(f[l])].first << " " << v[0][get<2>(f[l])].second << endl;
             cout << v[1][get<3>(f[l])].first << " " << v[1][get<3>(f[l])].second << endl;
             cout << v[2][get<2>(s[r])].first << " " << v[2][get<2>(s[r])].second << endl;
