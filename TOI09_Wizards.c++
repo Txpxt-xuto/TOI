@@ -58,7 +58,7 @@ int main() {
       cout << v[1][get<3>(f[l])].first << " " << v[1][get<3>(f[l])].second << endl;
       cout << v[2][get<2>(s[r])].first << " " << v[2][get<2>(s[r])].second << endl;
       cout << v[3][get<3>(s[r])].first << " " << v[3][get<3>(s[r])].second;
-      return 0;
+            return 0;
         }
     }
 }
