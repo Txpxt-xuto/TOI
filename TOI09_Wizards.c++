@@ -4,7 +4,8 @@ using namespace std;
 
 #define ll long long
 
-int main() {
+int main() 
+{
     ios_base::sync_with_stdio(0); 
     cin.tie(0);
     cout.tie(0);
@@ -13,7 +14,6 @@ int main() {
     cin >> n;
     vector<vector<pair<int, int>>> v(4);
     vector<tuple<ll, ll, int, int>> f, s;
-
   for(int i=0; i<4; i++) {
     for(int j=0; j<n; j++) {
       int x, y;
