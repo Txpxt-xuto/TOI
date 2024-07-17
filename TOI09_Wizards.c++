@@ -9,9 +9,8 @@ int main() {
   cin.tie(0);
   cout.tie(0);
 
-  int xt, yt,n;
+  int xt, yt, n;
   cin >> xt >> yt;
-  int ;
   cin >> n;
   vector<vector<pair<int, int>>> v(4);
   vector<tuple<ll, ll, int, int>> f, s;
