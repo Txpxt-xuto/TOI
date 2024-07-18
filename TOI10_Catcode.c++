@@ -1,6 +1,6 @@
 /*
 TASK: catcodes.cpp
-LANG: C
+LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
