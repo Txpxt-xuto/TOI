@@ -78,7 +78,7 @@ int main(void)
 		cin>>d;
 		cin>>a;
 		c=0;
-		for(int j=0;j<k;j++)
+		for(j=0;j<k;j++)
 		{
 			if(search(a,j))
 			{
