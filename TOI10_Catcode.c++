@@ -87,9 +87,6 @@ int main(void)
 			}
 		}
 		if(c==1) cout<<"\n";
-		{
-			
-		}
 		else cout<<"OK\n";
 	}
 	return 0;
