@@ -83,7 +83,7 @@ int main(void)
 			if(search(a,j))
 			{
 				c=1;
-				cout<<j+1 << " ";
+				cout << j+1 << " ";
 			}
 		}
 		if(c==1) cout<<"\n";
