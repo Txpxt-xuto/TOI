@@ -71,7 +71,7 @@ int main(void)
 		cin>>b[i];
 		makelps(i);
 	}
-	cin>>n;
+	cin >> n;
 	for(int i=0;i<n;i++)
 	{
 		string a;
