@@ -75,8 +75,8 @@ int main(void)
 	for(int i=0;i<n;i++)
 	{
 		string a;
-		cin>>d;
-		cin>>a;
+		cin >> d;
+		cin >> a;
 		c=0;
 		for(j=0;j<k;j++)
 		{
