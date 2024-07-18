@@ -34,10 +34,9 @@ void makelps(int x)
 }
 bool search(string& a,int y)
 {
-	int asz=a.size();
-	int bsz=b[y].size();
+	int asz=a.size(),bsz=b[y].size();
+	int ;
     int i=0,j=0;
-    int ;
     while(asz-i>=bsz-j)
 	{
 		if(a[i]==b[y][j])
