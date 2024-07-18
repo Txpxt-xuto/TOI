@@ -5,13 +5,10 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <bits/stdc++.h>
-
 using namespace std;
-
 int k,m,n,c,d;
 string b[100001];
 int lps[100001][31];
-
 void makelps(int x)
 {
 	int l=0;
