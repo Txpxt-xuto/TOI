@@ -11,9 +11,8 @@ string b[100001];
 int lps[100001][31];
 void makelps(int x)
 {
-	int l=0;
+	int l=0,i=1;
     lps[x][0]=0;
-    int i=1;
     while(i<b[x].size())
 	{
 		if(b[x][i]==b[x][l])
@@ -24,10 +23,7 @@ void makelps(int x)
 		}
 		else
 		{
-			if(l!=0)
-			{
-				l=lps[x][l-1];
-			}
+			if(l!=0) l=lps[x][l-1];
 			else
 			{
 				lps[x][i]=0;
