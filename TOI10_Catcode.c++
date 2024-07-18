@@ -90,10 +90,7 @@ int main(void)
 		{
 			
 		}
-		else 
-		{
-			
-		}
+		else cout<<"OK\n";
 	}
 	return 0;
 }
