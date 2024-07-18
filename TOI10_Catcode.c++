@@ -86,7 +86,7 @@ int main(void)
 				cout << j+1 << " ";
 			}
 		}
-		if(c==1) cout<<"\n";
+		if(c==1) cout << "\n";
 		else cout<<"OK\n";
 	}
 	return 0;
