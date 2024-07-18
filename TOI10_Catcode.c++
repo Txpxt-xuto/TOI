@@ -86,9 +86,9 @@ int main(void)
 				cout<<j+1<<" ";
 			}
 		}
-		if(c==1)
+		if(c==1) cout<<"\n";
 		{
-			cout<<"\n";
+			
 		}
 		else
 		{
