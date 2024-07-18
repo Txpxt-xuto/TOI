@@ -66,7 +66,7 @@ int main(void)
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cin >> k >> m;
-	for(int i=0;i<k;i++)
+	for(i=0;i<k;i++)
 	{
 		cin >> b[i];
 		makelps(i);
