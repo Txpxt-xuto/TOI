@@ -6,7 +6,7 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-int k,m,n,c,d;
+int k,m,n,c,d,i,j;
 string b[100001];
 int lps[100001][31];
 void makelps(int x)
