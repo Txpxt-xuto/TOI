@@ -1,6 +1,6 @@
 /*
 TASK: catcodes.cpp
-LANG: C++
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
-*/ 
+LANG: C
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/
