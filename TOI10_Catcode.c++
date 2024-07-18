@@ -68,7 +68,7 @@ int main(void)
 	cin>>k>>m;
 	for(int i=0;i<k;i++)
 	{
-		cin>>b[i];
+		cin >> b[i];
 		makelps(i);
 	}
 	cin >> n;
