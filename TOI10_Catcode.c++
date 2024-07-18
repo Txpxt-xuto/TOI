@@ -61,7 +61,6 @@ bool search(string& a,int y)
 	}
 	return false;
 }
-
 int main(void)
 {
 	ios_base::sync_with_stdio(false);
