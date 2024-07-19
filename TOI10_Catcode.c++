@@ -16,7 +16,7 @@ Need to build own hash-map?????
 -ปล่อยผมปายยยย
 */
 
-int n,k;
+int n,k,i;
 const ii md = 1e6+3;
 bool B[(int)1e6+1]={0};
 int hmap[md]={0};
