@@ -18,7 +18,8 @@ int main(){
     cout.tie(nullptr);
     string s;
     cin>>n>>k;
-    for(int i=1;i<=n;i++){
+    for(i=1;i<=n;i++)
+	{
         int b = 0;
         cin>>s;
         for(int i=0;i<k;i++){
