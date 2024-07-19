@@ -45,9 +45,9 @@ int main()
             g = -1;
             ii idx = b%md;
             while(hmap[idx]!=0&&recheck[hmap[idx]]!=b) idx = (idx+1)%md;
-            if(hmap[idx]==0||recheck[hmap[idx]]!=b)g=-1;
+            if(hmap[idx]==0||recheck[hmap[idx]]!=b) g=-1;
             else g = hmap[idx];
-            if(g!=-1)B[g]=1,f=1;
+            if(g!=-1) B[g]=1,f=1;
             b -= b&(1<<(k-1));
         }
         if(!f) cout << "OK\n";
