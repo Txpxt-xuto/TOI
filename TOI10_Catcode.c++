@@ -71,7 +71,7 @@ int main(){
             for(int i=1;i<=n;i++){
                 if(B[i])cout<<i<<' ',B[i]=0;
             }
-            cout<<'\n';
+            cout << '\n';
         }
     }
     return 0;
