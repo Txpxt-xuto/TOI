@@ -22,7 +22,7 @@ int main()
     for(i=1;i<=n;i++)
 	{
         int b = 0;
-        cin>>s;
+        cin >> s;
         for(int i=0;i<k;i++){
             b = (b<<1)+(s[i]-'0');
         }
