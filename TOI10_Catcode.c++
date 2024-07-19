@@ -23,9 +23,7 @@ int main()
 	{
         int b = 0;
         cin >> s;
-        for(int i=0;i<k;i++){
-            b = (b<<1)+(s[i]-'0');
-        }
+        for(int i=0;i<k;i++) b = (b<<1)+(s[i]-'0');
         ii idx = b%md;
         while(hmap[idx]!=0){
             idx = (idx+1)%md;
