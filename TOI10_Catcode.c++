@@ -32,10 +32,11 @@ int main()
     int q,w,g = 0,f = 0,b = 0;
 	cin >> q;
     int sz;
-    while(q--){
+    while(q--)
+	{
         b=0;
         f=0;    
-        cin>>w>>s;
+        cin >> w >> s;
         sz = min(w,k-1);
         for(int i=0;i<sz;i++){
             b = (b<<1)+(s[i]-'0');
