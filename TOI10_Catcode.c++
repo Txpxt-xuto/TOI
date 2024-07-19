@@ -12,7 +12,8 @@ const ii md = 1e6+3;
 bool B[(int)1e6+1]={0};
 int hmap[md]={0};
 ii recheck[md]={0};
-int main(){    
+int main()
+{    
     ios_base::sync_with_stdio(0);
     cin.tie(nullptr);
     cout.tie(nullptr);
