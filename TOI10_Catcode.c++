@@ -29,11 +29,8 @@ int main()
         hmap[idx] = i;
         recheck[i] = b;
     }
-    int q;
+    int q,w,g = 0,f = 0,b = 0;
 	cin >> q;
-    int b = 0;
-    int f = 0;
-    int g = 0;int w;
     int sz;
     while(q--){
         b=0;
