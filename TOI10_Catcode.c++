@@ -68,7 +68,7 @@ int main(){
         }
         if(!f)cout<<"OK\n";
         else {
-            for(int i=1;i<=n;i++) if(B[i])cout<<i<<' ',B[i]=0;
+            for(int i=1;i<=n;i++) if(B[i]) cout << i <<' ',B[i]=0;
             cout << '\n';
         }
     }
