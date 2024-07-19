@@ -31,7 +31,6 @@ int main()
     }
     int q,w,g = 0,f = 0,b = 0,sz;
 	cin >> q;
-    int 
     while(q--)
 	{
         b=0;
