@@ -7,15 +7,6 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 typedef int ii;
-
-/*
-Rabin-Karp with binary.
-
-Need to build own hash-map?????
--ใครทำเทสเคสวะเนี่ยยยยยยยยยย
--ปล่อยผมปายยยย
-*/
-
 int n,k,i;
 const ii md = 1e6+3;
 bool B[(int)1e6+1]={0};
