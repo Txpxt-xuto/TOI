@@ -38,9 +38,7 @@ int main()
         f=0;    
         cin >> w >> s;
         sz = min(w,k-1);
-        for(int i=0;i<sz;i++){
-            b = (b<<1)+(s[i]-'0');
-        }
+        for(int i=0;i<sz;i++) b = (b<<1)+(s[i]-'0');
         for(int i=k-1;i<w;i++){
             b = (b<<1) + (s[i]-'0');
             g = -1;
