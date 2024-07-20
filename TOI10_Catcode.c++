@@ -9,9 +9,9 @@ CENTER: Home
 #include<string>
 using namespace std;
 const int mod = 1e6+3;
-int h[mod], a[mod];
+int h[mod], a[mod], n, m, cur, q, sz, now, i;
 string s;
-int n, m, cur, q, sz,now,i;
+int 
 bool f = 0;
 int main()
 {
@@ -36,7 +36,7 @@ int main()
 	cin >> q;
 	while(q--)
     {
-		f=0;
+		f = 0;
 		cur = 0;
 		cin >> sz >> s;
 		for(i=0;i<m-1;++i) cur = (cur<<1)+(s[i]-'0');
