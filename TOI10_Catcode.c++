@@ -33,7 +33,7 @@ int main()
 		h[now] = i;
 		a[i] = cur;
 	}
-	cin>> q;
+	cin >> q;
 	while(q--)
     {
 		f=0;
