@@ -13,7 +13,8 @@ int h[mod], a[mod];
 string s;
 int n, m, cur, q, sz,now,i;
 bool f = 0;
-int main(){
+int main()
+{
 	ios_base::sync_with_stdio(0); 
     cin.tie(0);
 	cin >> n >> m;
@@ -33,7 +34,8 @@ int main(){
 		a[i] = cur;
 	}
 	cin>>q;
-	while(q--){
+	while(q--)
+    {
 		f=0;
 		cur = 0;
 		cin>>sz>>s;
