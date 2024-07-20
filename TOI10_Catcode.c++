@@ -69,7 +69,7 @@ int main()
             }
 			cout << '\n';
 		}
-        else
-			cout << "OK\n";
+        else cout << "OK\n";
+		
 	}
 }
