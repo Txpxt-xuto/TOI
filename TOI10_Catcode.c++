@@ -63,7 +63,7 @@ int main()
                 if(vis[i] == 1) 
                 {
                     cout << i << ' ';
-                    vis[i]=0;
+                    vis[i] = 0;
                 }
             }
 			cout << '\n';
