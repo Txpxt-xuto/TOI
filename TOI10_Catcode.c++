@@ -67,7 +67,8 @@ int main()
                 }
             }
 			cout << '\n';
-		}else
+		}
+        else
         {
 			cout << "OK\n";
 		}
