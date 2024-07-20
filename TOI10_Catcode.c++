@@ -59,7 +59,7 @@ int main()
 		}
 		if(f){
 			for(int i=1;i<=n;++i) if(vis[i] == 1) cout << i << ' ',vis[i]=0;
-			cout<<'\n';
+			cout<< '\n';
 		}else{
 			cout<<"OK\n";
 		}
