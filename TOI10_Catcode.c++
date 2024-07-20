@@ -16,7 +16,7 @@ bool f = 0;
 int main(){
 	ios_base::sync_with_stdio(0); 
     cin.tie(0);
-	cin>>n>>m;
+	cin >> n >> m;
     bool vis[n+1]{};
 	for(int i=1;i<=n;++i){
 		cin>>s;
