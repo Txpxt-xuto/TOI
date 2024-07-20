@@ -70,7 +70,6 @@ int main()
 			cout << '\n';
 		}
         else
-        {
-			cout << "OK\n"
+			cout << "OK\n";
 	}
 }
