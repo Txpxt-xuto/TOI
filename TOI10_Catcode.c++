@@ -57,7 +57,8 @@ int main()
 			}
 			cur -= cur&(1<<(m-1));
 		}
-		if(f){
+		if(f)
+        {
 			for(i=1;i<=n;++i) 
             {
                 if(vis[i] == 1) 
