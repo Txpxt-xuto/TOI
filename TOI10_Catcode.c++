@@ -19,11 +19,12 @@ int main(){
 	cin >> n >> m;
     bool vis[n+1]{};
 	for(int i=1;i<=n;++i){
-		cin>>s;
+		cin >> s;
 		cur = 0;
-		for(int i=0;i<m;++i) cur = (cur<<1)+(s[i]-'0');
+		for(i=0;i<m;++i) cur = (cur<<1)+(s[i]-'0');
 		now = cur%mod;
-		while(h[now] != 0){
+		while(h[now] != 0)
+        {
 			++now;
 			if(now == mod) now = 0;
 		}
