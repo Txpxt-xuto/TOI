@@ -20,10 +20,7 @@ int main()
     {
 		cin >> s;
 		int cur = 0;
-		for(int i=0;i<m;i++)
-        {
-			cur = (cur<<1)|(s[i]-'0');
-		}
+		for(int i=0;i<m;i++) cur = (cur<<1)|(s[i]-'0');
 		int now = cur%mod;
 		while(h[now] != 0)
         {
@@ -40,10 +37,7 @@ int main()
 		f = 0;
 		cur = 0;
 		cin >> sz >> s;
-		for(int i=0;i<m-1;i++)
-        {
-			cur = (cur<<1)|(s[i]-'0');
-		}
+		for(int i=0;i<m-1;i++) cur = (cur<<1)|(s[i]-'0');
 		for(int i=m-1;i<sz;i++)
         {
 			cur = (cur<<1)|(s[i]-'0');
@@ -72,9 +66,6 @@ int main()
 			}
 			cout << '\n';
 		}
-        else
-        {
-			cout << "OK\n";
-		}
+        else cout << "OK\n";
 	}
 }
