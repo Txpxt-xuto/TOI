@@ -11,14 +11,15 @@ using namespace std;
 const int mod = 1e6+3;
 int h[mod], a[mod];
 string s;
-int n, m, cur, q, sz,now;
+int n, m, cur, q, sz,now,i;
 bool f = 0;
 int main(){
 	ios_base::sync_with_stdio(0); 
     cin.tie(0);
 	cin >> n >> m;
     bool vis[n+1]{};
-	for(int i=1;i<=n;++i){
+	for(i=1;i<=n;++i)
+    {
 		cin >> s;
 		cur = 0;
 		for(i=0;i<m;++i) cur = (cur<<1)+(s[i]-'0');
