@@ -40,7 +40,8 @@ int main()
 		cur = 0;
 		cin >> sz >> s;
 		for(int i=0;i<m-1;++i) cur = (cur<<1)+(s[i]-'0');
-		for(int i=m-1;i<sz;++i){
+		for(i=m-1;i<sz;++i)
+        {
 			cur = (cur<<1)+(s[i]-'0');
 			now = cur%mod;
 			while(h[now] != 0){
