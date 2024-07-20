@@ -44,7 +44,8 @@ int main()
         {
 			cur = (cur<<1)+(s[i]-'0');
 			now = cur%mod;
-			while(h[now] != 0){
+			while(h[now] != 0)
+            {
 				if(a[h[now]] == cur){
 					vis[h[now]] = 1;
 					f = 1;
