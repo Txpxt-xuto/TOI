@@ -35,7 +35,7 @@ int main()
                 maxi=t;
             } else if (t == maxi) {
                 if (i.f-currpos == 0) continue;
-                amt+=i.f-currpos;
+                amt += i.f-currpos;
             }
         }
         if(i.s > 0) 
