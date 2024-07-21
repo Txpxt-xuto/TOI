@@ -24,7 +24,8 @@ int main()
     tuple<long long,long long,long long,long long> curr = {1,1,1,1};
     n = num.size();
     long long currpos=0;
-    for (auto i : num) {
+    for(auto i : num) 
+    {
         if(i.f != currpos) 
         {
             t = get<0>(curr)*get<1>(curr)*get<2>(curr)*get<3>(curr);
