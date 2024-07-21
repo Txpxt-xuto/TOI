@@ -40,13 +40,14 @@ int main()
                 amt+=i.f-currpos;
             }
         }
-        if (i.s > 0) 
+        if(i.s > 0) 
         {
             get<0>(curr) += get<0>(prime[i.s]);
             get<1>(curr) += get<1>(prime[i.s]);
             get<2>(curr) += get<2>(prime[i.s]);
             get<3>(curr) += get<3>(prime[i.s]);
-        } else 
+        } 
+        else 
         {
             get<0>(curr) -= get<0>(prime[-i.s]);
             get<1>(curr) -= get<1>(prime[-i.s]);
