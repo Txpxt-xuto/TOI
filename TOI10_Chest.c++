@@ -34,8 +34,8 @@ int main()
                 amt=i.f-currpos;
                 maxi=t;
             } else if (t == maxi) {
-                if (i.f-currpos == 0) {
-                    continue;
+                if (i.f-currpos == 0) continue;
+                    
                 }
                 amt+=i.f-currpos;
             }
