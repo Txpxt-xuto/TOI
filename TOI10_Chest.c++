@@ -19,8 +19,7 @@ int main()
         num.push_back({e+1,-x});
     }
     sort(num.begin(),num.end());
-    long long maxi=0;
-    long long t,amt=0;
+    long long maxi=0,t,amt=0;
     tuple<long long,long long,long long,long long> curr = {1,1,1,1};
     n = num.size();
     long long currpos=0;
