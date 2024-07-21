@@ -4,7 +4,8 @@ using namespace std;
 #define s second
 #define f first
 tuple<int,int,int,int> prime[11] = {{0,0,0,0},{0,0,0,0},{1,0,0,0},{0,1,0,0},{2,0,0,0},{0,0,1,0},{1,1,0,0},{0,0,0,1},{3,0,0,0},{0,2,0,0},{1,0,1,0}};
-int main() {
+int main() 
+{
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     long long n;
