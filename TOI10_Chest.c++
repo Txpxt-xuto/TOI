@@ -8,13 +8,13 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    long long n;
+    long long n,i;
     vector<pair<long long,int>> num;
     int m;
     cin >> n >> m;
     int x;
     long long s,e;
-    for(long long i=0;i<n;i++) 
+    for(i=0;i<n;i++) 
     {
         cin >> x >> s >> e;
         num.push_back({s,x});
