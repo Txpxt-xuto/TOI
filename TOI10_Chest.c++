@@ -10,9 +10,8 @@ int main()
     cin.tie(nullptr);
     long long n,i,s,e;
     vector<pair<long long,int>> num;
-    int m;
+    int m,x;
     cin >> n >> m;
-    int x;
     for(i=0;i<n;i++) 
     {
         cin >> x >> s >> e;
