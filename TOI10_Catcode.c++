@@ -14,9 +14,9 @@ int main()
 	ios_base::sync_with_stdio(0); 
     cin.tie(0);
 	string s;
-	int n, m, sz;
+	int n, m, sz, i;
 	cin >> n >> m;
-	for(int i=1;i<=n;i++)
+	for(i=1;i<=n;i++)
     {
 		cin >> s;
 		int cur = 0;
@@ -37,8 +37,8 @@ int main()
 		f = 0;
 		cur = 0;
 		cin >> sz >> s;
-		for(int i=0;i<m-1;i++) cur = (cur<<1)|(s[i]-'0');
-		for(int i=m-1;i<sz;i++)
+		for(i=0;i<m-1;i++) cur = (cur<<1)|(s[i]-'0');
+		for(i=m-1;i<sz;i++)
         {
 			cur = (cur<<1)|(s[i]-'0');
 			int now = cur%mod;
