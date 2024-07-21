@@ -28,12 +28,12 @@ int main()
         if (i.f != currpos) {
             t = get<0>(curr)*get<1>(curr)*get<2>(curr)*get<3>(curr);
             if (t > maxi) {
-                if (i.f-currpos == 0) {
-                    continue;
-                }
+                if (i.f-currpos == 0) continue;
                 amt=i.f-currpos;
                 maxi=t;
-            } else if (t == maxi) {
+            } 
+            else if (t == maxi) 
+            {
                 if (i.f-currpos == 0) continue;
                 amt += i.f-currpos;
             }
