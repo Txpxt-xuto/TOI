@@ -13,7 +13,8 @@ int main() {
     cin >> n >> m;
     int x;
     long long s,e;
-    for (long long i=0;i<n;i++) {
+    for(long long i=0;i<n;i++) 
+    {
         cin >> x >> s >> e;
         num.push_back({s,x});
         num.push_back({e+1,-x});
