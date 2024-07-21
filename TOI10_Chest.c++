@@ -1,4 +1,9 @@
-
+/*
+TASK: chest.cpp
+LANG: C++
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/
 #pragma GCC optimize("O3,unroll-loops")
 #include <bits/stdc++.h>
 using namespace std;
