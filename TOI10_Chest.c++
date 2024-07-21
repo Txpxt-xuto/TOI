@@ -1,8 +1,8 @@
 /*
 TASK: chest.cpp
 LANG: C++
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
+AUTHOR: Tapat Toungsakul
+CENTER: Home
 */
 #pragma GCC optimize("O3,unroll-loops")
 #include <bits/stdc++.h>
