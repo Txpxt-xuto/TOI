@@ -25,7 +25,7 @@ int main()
     n = num.size();
     long long currpos=0;
     for (auto i : num) {
-        if (i.f != currpos) 
+        if(i.f != currpos) 
         {
             t = get<0>(curr)*get<1>(curr)*get<2>(curr)*get<3>(curr);
             if(t > maxi) 
