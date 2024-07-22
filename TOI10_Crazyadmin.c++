@@ -9,14 +9,15 @@ CENTER: Home
 #define f first
 #define s second
 using namespace std;
-int main() {
+int main() 
+{
     ios::sync_with_stdio(0);
     cin.tie(0);
     int n,m;
     cin >> n >> m;
     vector<int> a(m);
     int l = 0, r = 1e9;
-    for(int i= 0 ; i < m ; i++) 
+    for(i=0;i<m;i++) 
     {
         cin >> a[i];
         l = max(l,a[i]);
