@@ -33,8 +33,8 @@ int main()
                 cnt++;
             }
         }
-        if(sum > 0) cnt++;
-        if(cnt <= n) r = mid;
+        if(sum>0) cnt++;
+        if(cnt<=n) r = mid;
         else l = mid + 1;
     }
     cout << r;
