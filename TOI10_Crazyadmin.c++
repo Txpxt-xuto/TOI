@@ -24,7 +24,6 @@ int main()
     }
     while(l<r) {
         int mid = (l+r)/2,sum = 0,cnt = 0;
-        int ;
         for (int i = 0 ; i < m ; i++)
         {
             sum += a[i];
