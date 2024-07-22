@@ -22,10 +22,7 @@ int main()
 		int cur = 0;
 		for(int i=0;i<m;i++) cur = (cur<<1)|(s[i]-'0');
 		int now = cur%mod;
-		while(h[now] != 0)
-        {
-			now = (now+1)%mod;
-		}
+		while(h[now] != 0) now = (now+1)%mod;
 		h[now] = i;
 		a[i] = cur;
 	}
