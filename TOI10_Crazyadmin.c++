@@ -17,7 +17,7 @@ int main() {
     vector<int> a(m);
 
     int l = 0, r = 1e9;
-    for (int i= 0 ; i < m ; i++) 
+    for(int i= 0 ; i < m ; i++) 
     {
         cin >> a[i];
         l = max(l,a[i]);
@@ -33,8 +33,8 @@ int main() {
                 cnt++;
             }
         }
-        if (sum > 0) cnt++;
-        if (cnt <= n) r = mid;
+        if(sum > 0) cnt++;
+        if(cnt <= n) r = mid;
         else l = mid + 1;
     }
     cout << r;
