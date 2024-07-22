@@ -21,7 +21,6 @@ int main() {
         cin >> a[i];
         l = max(l,a[i]);
     }
-    //sort(a.begin(),a.end(),greater<int>());
     while(l<r) {
         int mid = (l+r)/2;
         int sum = 0;
