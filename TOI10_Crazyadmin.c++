@@ -28,7 +28,8 @@ int main()
         int cnt = 0;
         for (int i = 0 ; i < m ; i++){
             sum += a[i];
-            if (sum > mid) {
+            if (sum > mid) 
+            {
                 sum = a[i];
                 cnt++;
             }
