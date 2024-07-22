@@ -15,7 +15,6 @@ int main() {
     int n,m;
     cin >> n >> m;
     vector<int> a(m);
-
     int l = 0, r = 1e9;
     for(int i= 0 ; i < m ; i++) 
     {
