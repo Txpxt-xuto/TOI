@@ -21,7 +21,7 @@ int main()
         int mid = (l+r)/2, temp = 0, c = 1;
         for(i=0;i<n;i++ )
         {
-            if( temp+arr[i] > mid )
+            if(temp+arr[i] > mid )
             {
                 temp = arr[i];
                 c++;
