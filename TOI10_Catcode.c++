@@ -7,7 +7,7 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ii;
-int n,i,k;
+int n,i,k,q;
 const ii md = 1e6+3;
 bool B[(int)1e6+1]={0};
 int hmap[md]={0};
@@ -32,7 +32,6 @@ int main()
         hmap[idx] = i;
         recheck[i] = b;
     }
-    int q;
 	cin >> q;
     int b = 0,f = 0,g = 0,w,sz;
     while(q--)
