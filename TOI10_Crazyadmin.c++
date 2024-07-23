@@ -16,11 +16,10 @@ int main()
         cin >> arr[i];
         l = max( l, arr[i] );
     }
-    while( l<=r )
+    while(l<=r)
     {
-        int mid = (l+r)/2;
-        int temp = 0, c = 1;
-        for( int i=0;i<n;i++ )
+        int mid = (l+r)/2, temp = 0, c = 1;
+        for(i=0;i<n;i++ )
         {
             if( temp+arr[i] > mid )
             {
