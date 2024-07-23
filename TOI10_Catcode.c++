@@ -40,11 +40,13 @@ int main(){
         cin >> w >> s;
         sz = min(w,k-1);
         for(i=0;i<sz;i++) b = (b<<1)+(s[i]-'0');
-        for(i=k-1;i<w;i++){
+        for(i=k-1;i<w;i++)
+		{
             b = (b<<1) + (s[i]-'0');
             g = -1;
             ii idx = b%md;
-            while(hmap[idx]!=0&&recheck[hmap[idx]]!=b){
+            while(hmap[idx]!=0&&recheck[hmap[idx]]!=b)
+			{
                 idx = (idx+1)%md;
             }
             if(hmap[idx]==0||recheck[hmap[idx]]!=b)g=-1;
