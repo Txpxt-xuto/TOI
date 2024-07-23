@@ -7,22 +7,7 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ii;
-
-/*
-Rabin-Karp with binary.
-
-Need to build own hash-map?????
-
--ห้ามเรียกฟังก์ชั่น 
--ห้ามใช้ min ซ้ำใน for-loop
--ห้ามใช้ map, unordered_map
--ต้อง cin>>string ครั้งเดียว
--ต้อง reuse ตัวเเปร
--ต้องเขียน hash-map เอง 
-
--ขนาดนี้ให้เขียน assembly ไหม...
-*/
-int n,k;
+int n,i,k;
 const ii md = 1e6+3;
 bool B[(int)1e6+1]={0};
 int hmap[md]={0};
