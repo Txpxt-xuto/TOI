@@ -73,10 +73,10 @@ int main(){
             if(g!=-1)B[g]=1,f=1;
             b -= b&(1<<(k-1));
         }
-        if(!f)cout<<"OK\n";
+        if(!f) cout << "OK\n";
         else 
 		{
-            for(int i=1;i<=n;i++)
+            for(i=1;i<=n;i++)
 			{
                 if(B[i]) cout << i << ' ';
 				B[i]=0;
