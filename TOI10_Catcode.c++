@@ -74,11 +74,14 @@ int main(){
             b -= b&(1<<(k-1));
         }
         if(!f)cout<<"OK\n";
-        else {
-            for(int i=1;i<=n;i++){
-                if(B[i])cout<<i<<' ',B[i]=0;
+        else 
+		{
+            for(int i=1;i<=n;i++)
+			{
+                if(B[i]) cout << i << ' ';
+				B[i]=0;
             }
-            cout<<'\n';
+            cout << '\n';
         }
     }
     return 0;
