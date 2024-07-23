@@ -6,8 +6,7 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-int n, m, l, r = 1e9;
-int arr[105];
+int n, m, l, r = 1e9, i, arr[105];
 int main()
 {
     cin >> m >> n;
