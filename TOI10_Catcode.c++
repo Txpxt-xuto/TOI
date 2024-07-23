@@ -12,26 +12,28 @@ const ii md = 1e6+3;
 bool B[(int)1e6+1]={0};
 int hmap[md]={0};
 ii recheck[md]={0};
-int main(){    
+int main()
+{    
     ios_base::sync_with_stdio(0);
     cin.tie(nullptr);
     cout.tie(nullptr);
     string s;
     cin>>n>>k;
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+	{
         int b = 0;
-        cin>>s;
-        for(int i=0;i<k;i++){
-            b = (b<<1)+(s[i]-'0');
-        }
+        cin >> s;
+        for(int i=0;i<k;i++) b = (b<<1)+(s[i]-'0');
         ii idx = b%md;
-        while(hmap[idx]!=0){
+        while(hmap[idx]!=0)
+		{
             idx = (idx+1)%md;
         }
         hmap[idx] = i;
         recheck[i] = b;
     }
-    int q;cin>>q;
+    int q;
+	cin >> q;
     int b = 0,f = 0,g = 0,w,sz;
     while(q--)
 	{
