@@ -21,14 +21,14 @@ int main()
         int mid = (l+r)/2, temp = 0, c = 1;
         for(i=0;i<n;i++ )
         {
-            if(temp+arr[i] > mid )
+            if(temp+arr[i] > mid)
             {
                 temp = arr[i];
                 c++;
             }
             else temp += arr[i];
         }
-        if( c <= m ) r = mid-1;
+        if(c <= m) r = mid-1;
         else l = mid+1;
     }
     cout << l;
