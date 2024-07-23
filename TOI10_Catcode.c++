@@ -32,10 +32,7 @@ int main(){
         recheck[i] = b;
     }
     int q;cin>>q;
-    int b = 0;
-    int f = 0;
-    int g = 0;int w;
-    int sz;
+    int b = 0,f = 0,g = 0,w,sz;
     while(q--){
         b=0;
         f=0;    
