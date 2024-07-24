@@ -19,10 +19,7 @@ int main(void)
 		int a,b;
 		char c;
 		cin >> a >> c >> b;
-		if(c=='U')
-		{
-			q.push({1,{a,b}});
-		}
+		if(c=='U') q.push({1,{a,b}});
 		else
 		{
 			q.push({2,{a,b}});
