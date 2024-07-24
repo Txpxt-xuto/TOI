@@ -21,7 +21,7 @@ int main()
         path[x][y] = true;
     }
     
-    dp[1][0] = 1; // กำหนดค่าเริ่มต้นให้ตำแหน่งเริ่มต้น
+    dp[1][0] = 1;
     for(int i=1; i<= r; i++){
         for(int j=1; j<=c ; j++){
             if(path[i][j]) continue;
