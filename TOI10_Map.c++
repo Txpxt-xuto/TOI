@@ -20,10 +20,7 @@ int main(void)
 		char c;
 		cin >> a >> c >> b;
 		if(c=='U') q.push({1,{a,b}});
-		else
-		{
-			q.push({2,{a,b}});
-		}
+		else q.push({2,{a,b}});
 	}
 	vis[0]=true;
 	adj[0]={0,0};
