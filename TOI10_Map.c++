@@ -86,8 +86,6 @@ int main(void)
 	ty=adj[idx].second;
 	for(int i=0;i<m*n;i++)
 	{
-		//cout<<adj[i].first<<" "<<adj[i].second<<"\n";
-		//cout<<adj[i].first-tx<<" "<<adj[i].second-ty<<"\n";
 		ans[adj[i].first-tx][adj[i].second-ty]=i;
 	}
 	for(int i=0;i<m;i++)
