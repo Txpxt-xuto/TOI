@@ -9,14 +9,13 @@ using namespace std;
 int main(void)
 {
 	queue<pair<int,pair<int,int> > > q;
-	int m,n,idx,tx,ty,i,j;
+	int m,n,idx,tx,ty,i,j,a,b;
 	cin >> m >> n;
 	int ans[m+1][n+1];
 	vector<pair<int,int> > adj(m*n+20);
 	vector<bool> vis(m*n+20,false);
 	for(i=0;i<m*n-1;i++)
 	{
-		int a,b;
 		char c;
 		cin >> a >> c >> b;
 		if(c=='U') q.push({1,{a,b}});
