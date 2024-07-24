@@ -3,15 +3,14 @@ TASK: map.cpp
 LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
-*/ #include <bits/stdc++.h>
-
+*/
+#include <bits/stdc++.h>
 using namespace std;
-
 int main(void)
 {
 	queue<pair<int,pair<int,int> > > q;
 	int m,n,idx,tx,ty;
-	cin>>m>>n;
+	cin >> m >> n;
 	int ans[m+1][n+1];
 	vector<pair<int,int> > adj(m*n+20);
 	vector<bool> vis(m*n+20,false);
@@ -92,9 +91,9 @@ int main(void)
 	{
 		for(int j=0;j<n;j++)
 		{
-			cout<<ans[i][j]<<" ";
+			cout << ans[i][j]<<" ";
 		}
-		cout<<"\n";
+		cout << "\n";
 	}
 	return 0;
 }
