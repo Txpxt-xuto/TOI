@@ -9,7 +9,7 @@ using namespace std;
 int main(void)
 {
 	queue<pair<int,pair<int,int> > > q;
-	int m,n,idx,tx,ty,i;
+	int m,n,idx,tx,ty,i,j;
 	cin >> m >> n;
 	int ans[m+1][n+1];
 	vector<pair<int,int> > adj(m*n+20);
@@ -22,8 +22,8 @@ int main(void)
 		if(c=='U') q.push({1,{a,b}});
 		else q.push({2,{a,b}});
 	}
-	vis[0]=true;
-	adj[0]={0,0};
+	vis[0] = true;
+	adj[0] = {0,0};
 	while(!q.empty())
 	{
 		int c=q.front().first;
@@ -56,10 +56,7 @@ int main(void)
 	for(i=0;i<m*n;i++) ans[adj[i].first-tx][adj[i].second-ty] = i;
 	for(i=0;i<m;i++)
 	{
-		for(int j=0;j<n;j++) 
-		{
-			
-		}
+		for(j=0;j<n;j++) cout << ans[i][j] << " ";
 		cout << "\n";
 	}
 	return 0;
