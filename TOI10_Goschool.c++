@@ -22,8 +22,10 @@ int main()
     }
     
     dp[1][0] = 1;
-    for(int i=1; i<= r; i++){
-        for(int j=1; j<=c ; j++){
+    for(int i=1; i<= r; i++)
+    {
+        for(j=1;j<=c;j++)
+        {
             if(path[i][j]) continue;
             dp[i][j] = dp[i][j-1] + dp[i-1][j];
         }
