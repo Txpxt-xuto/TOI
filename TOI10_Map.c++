@@ -40,14 +40,12 @@ int main(void)
 		else if(vis[b])
 		{
 			vis[a]=true;
-			if(c==1)
+			if(c==1) adj[a]={adj[b].first-1,adj[b].second};
 			{
-				adj[a]={adj[b].first-1,adj[b].second};
+				
 			}
-			else
-			{
-				adj[a]={adj[b].first,adj[b].second-1};
-			}
+			else adj[a]={adj[b].first,adj[b].second-1};
+
 		}
 		else
 		{
