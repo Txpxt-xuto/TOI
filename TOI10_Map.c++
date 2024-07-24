@@ -33,14 +33,14 @@ int main(void)
 		else if(vis[a])
 		{
 			vis[b]=true;
-			if(c==1) adj[b]={adj[a].first+1,adj[a].second};
-			else adj[b]={adj[a].first,adj[a].second+1};
+			if(c==1) adj[b] = {adj[a].first+1,adj[a].second};
+			else adj[b] = {adj[a].first,adj[a].second+1};
 		}
 		else if(vis[b])
 		{
 			vis[a]=true;
-			if(c==1) adj[a]={adj[b].first-1,adj[b].second};
-			else adj[a]={adj[b].first,adj[b].second-1};
+			if(c==1) adj[a] = {adj[b].first-1,adj[b].second};
+			else adj[a] = {adj[b].first,adj[b].second-1};
 		}
 		else q.push({c,{a,b}});
 	}
