@@ -43,10 +43,7 @@ int main(void)
 			if(c==1) adj[a]={adj[b].first-1,adj[b].second};
 			else adj[a]={adj[b].first,adj[b].second-1};
 		}
-		else
-		{
-			q.push({c,{a,b}});
-		}
+		else q.push({c,{a,b}});
 	}
 	idx=0;
 	for(int i=1;i<m*n;i++)
