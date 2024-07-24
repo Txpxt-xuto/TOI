@@ -15,7 +15,6 @@ int main()
     int r, c, o, x, y;
     cin >> r >> c;
     cin >> o;
-    
     for(i=0;i<o;i++)
     {
         cin >> x >> y;
