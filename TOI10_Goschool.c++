@@ -12,7 +12,7 @@ int main()
     ios_base::sync_with_stdio(false);
     bool path[52][52] = {false}; 
     long long dp[52][52] = {0};
-    int r, c, o, x, y;
+    int r, c, o, x, y, i, j;
     cin >> r >> c;
     cin >> o;
     for(i=0;i<o;i++)
@@ -30,6 +30,5 @@ int main()
         }
     }
     cout<< dp[r][c];
-    
     return 0;
 }
