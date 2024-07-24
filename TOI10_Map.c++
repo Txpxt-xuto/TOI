@@ -51,17 +51,14 @@ int main(void)
 		if(adj[i].first<adj[idx].first) idx=i;
 		else if(adj[i].first==adj[idx].first && adj[i].second<adj[idx].second) idx=i;
 	}
-	tx=adj[idx].first;
-	ty=adj[idx].second;
-	for(int i=0;i<m*n;i++)
+	tx = adj[idx].first;
+	ty = adj[idx].second;
+	for(i=0;i<m*n;i++) ans[adj[i].first-tx][adj[i].second-ty] = i;
+	for(i=0;i<m;i++)
 	{
-		ans[adj[i].first-tx][adj[i].second-ty]=i;
-	}
-	for(int i=0;i<m;i++)
-	{
-		for(int j=0;j<n;j++)
+		for(int j=0;j<n;j++) 
 		{
-			cout << ans[i][j]<<" ";
+			
 		}
 		cout << "\n";
 	}
