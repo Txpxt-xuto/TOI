@@ -49,10 +49,7 @@ int main(void)
 	for(i=1;i<m*n;i++)
 	{
 		if(adj[i].first<adj[idx].first) idx=i;
-		else if(adj[i].first==adj[idx].first && adj[i].second<adj[idx].second)
-		{
-			idx=i;
-		}
+		else if(adj[i].first==adj[idx].first && adj[i].second<adj[idx].second) idx=i;
 	}
 	tx=adj[idx].first;
 	ty=adj[idx].second;
