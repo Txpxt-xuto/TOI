@@ -8,7 +8,7 @@ CENTER: Home
 using namespace std;
 const int N=1e3+7;
 char a[N];
-int n,dp[N][N];
+int n,dp[N][N],i;
 int main()
 {
     cin.tie(NULL)->sync_with_stdio(false);
