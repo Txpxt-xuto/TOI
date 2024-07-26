@@ -11,7 +11,8 @@ char a[1005];
 int dp[1005][1005];
 int main()
 {
-    ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
     cin >> n;
     for(i=0;i<n;i++ ) cin >> a[i];
     for(l=2;l<=n;l++ )
