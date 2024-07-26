@@ -20,7 +20,7 @@ int main(){
         for(i=0;i+l-1<n;i++)
         {
             int j = i+l-1;
-            if(a[i]==a[j]) dp[i][j]=dp[i+1][j-1]+1;
+            if(a[i]==a[j]) dp[i][j] = dp[i+1][j-1]+1;
             for(k=i;k<j;k++) dp[i][j] = max(dp[i][j],dp[i][k]+dp[k+1][j]);
         }
     }
