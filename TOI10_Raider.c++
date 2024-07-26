@@ -19,10 +19,11 @@ ll dj[2][6] = {{0, 1, 1, 1, 0, -1}, {0, -1, -1, -1, 0, 1}};
 int main() {
     ll n, m;
     scanf("%d %d",&n, &m);
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+    for (int i = 0; i < n; i++) 
+    {
+        for (int j = 0; j < m; j++) 
             scanf("%d", &arr[i][j]);
-        }
+        
     }
 
     ll mid = n / 2;
