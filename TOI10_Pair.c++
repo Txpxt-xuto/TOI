@@ -24,5 +24,5 @@ int main(){
             for(k=i;k<j;k++) dp[i][j] = max(dp[i][j],dp[i][k]+dp[k+1][j]);
         }
     }
-    cout<<dp[0][n-1];
+    cout << dp[0][n-1];
 }
