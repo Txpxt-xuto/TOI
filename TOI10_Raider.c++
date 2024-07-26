@@ -6,16 +6,12 @@ CENTER: Home
 */ #include <bits/stdc++.h>
 #define F first
 #define S second
-
 using namespace std;
-
 typedef int ll;
 typedef pair<ll, ll> pll;
 typedef pair<ll, pll> plpll;
-
 const ll maxn = 120;
 const ll inf = 1e9;
-
 ll arr[maxn][maxn], memo[maxn][maxn];
 ll di[6] = {-1, -1, 0, 1, 1, 0};
 ll dj[2][6] = {{0, 1, 1, 1, 0, -1}, {0, -1, -1, -1, 0, 1}};
