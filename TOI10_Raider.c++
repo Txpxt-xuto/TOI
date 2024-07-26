@@ -3,7 +3,8 @@ TASK: raider.cpp
 LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
-*/ #include <bits/stdc++.h>
+*/ 
+#include <bits/stdc++.h>
 #define F first
 #define S second
 using namespace std;
