@@ -35,7 +35,7 @@ int main() {
         que.pop();
         if (nowi == mid && nowj == m - 1) 
         {
-            printf("%d", nowstep);
+            printf("%d",nowstep);
             exit(0);
         }
         ++nowstep;
