@@ -21,7 +21,7 @@ int main(){
         {
             int j = i+l-1;
             if(a[i]==a[j]) dp[i][j]=dp[i+1][j-1]+1;
-            for(k=i;k<j;k++) dp[i][j]=max(dp[i][j],dp[i][k]+dp[k+1][j]);
+            for(k=i;k<j;k++) dp[i][j] = max(dp[i][j],dp[i][k]+dp[k+1][j]);
         }
     }
     cout<<dp[0][n-1];
