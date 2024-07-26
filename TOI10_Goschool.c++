@@ -21,7 +21,7 @@ int main()
         path[x][y] = true;
     }
     dp[1][0] = 1;
-    for(i=1; i<= r; i++)
+    for(i=1;i<= r;i++)
     {
         for(j=1;j<=c;j++)
         {
