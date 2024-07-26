@@ -15,7 +15,8 @@ int main(){
     for (int i=0; i<n; i++){
         cin>>a[i];
     }
-    for (int l=2; l<=n; l++){
+    for (int l=2; l<=n; l++)
+    {
         for (int i=0; i+l-1<n; i++)
         {
             int j = i+l-1;
