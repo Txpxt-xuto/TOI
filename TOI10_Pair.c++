@@ -9,7 +9,8 @@ using namespace std;
 const int N=1e3+7;
 char a[N];
 int n,dp[N][N];
-int main(){
+int main()
+{
     cin.tie(NULL)->sync_with_stdio(false);
     cin>>n;
     for(i=0;i<n;i++) cin >> a[i];
