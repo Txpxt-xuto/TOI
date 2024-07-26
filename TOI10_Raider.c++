@@ -39,7 +39,8 @@ int main() {
             exit(0);
         }
         ++nowstep;
-        for (int i = 0; i < 6; i++) {
+        for (i=0;i<6;i++) 
+        {
             ll toi = nowi + di[i];
             ll toj = nowj + dj[nowi%2][i];
             if (toi >= 0 && toi < n && toj >= 0 && toj < m && arr[toi][toj] != 0 && memo[toi][toj] != nowstep && nowstep % arr[toi][toj] == 0) {
