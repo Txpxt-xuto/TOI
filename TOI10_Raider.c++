@@ -27,12 +27,14 @@ int main() {
     ll mid = n / 2;
     queue<plpll> que;
     que.emplace(0, make_pair(mid, -1));
-    while (!que.empty()) {
+    while (!que.empty()) 
+    {
         ll nowstep = que.front().F;
         ll nowi = que.front().S.F;
         ll nowj = que.front().S.S;
         que.pop();
-        if (nowi == mid && nowj == m - 1) {
+        if (nowi == mid && nowj == m - 1) 
+        {
             printf("%d", nowstep);
             exit(0);
         }
