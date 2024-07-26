@@ -33,7 +33,7 @@ int main() {
         ll nowi = que.front().S.F;
         ll nowj = que.front().S.S;
         que.pop();
-        if (nowi == mid && nowj == m - 1) 
+        if(nowi == mid && nowj == m - 1) 
         {
             printf("%d",nowstep);
             exit(0);
