@@ -17,7 +17,7 @@ ll arr[maxn][maxn], memo[maxn][maxn];
 ll di[6] = {-1, -1, 0, 1, 1, 0};
 ll dj[2][6] = {{0, 1, 1, 1, 0, -1}, {0, -1, -1, -1, 0, 1}};
 int main() {
-    ll n, m;
+    ll n, m, i, j;
     scanf("%d %d",&n, &m);
     for(i=0;i<n;i++) 
     {
