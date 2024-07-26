@@ -6,7 +6,7 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-int n;
+int n,i,l,k;
 char a[1005];
 int dp[1005][1005];
 int main()
