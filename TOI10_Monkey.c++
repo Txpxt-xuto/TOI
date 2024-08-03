@@ -25,7 +25,8 @@ int main ()
     vs[st]=1;
     if(st>=2)vs[st-1]=1;
     if(st<=n-1)vs[st+1]=1;
-    for(auto x : br){
+    for(auto x : br)
+    {
         bool t = vs[x.second];
         vs[x.second] = vs[x.second+1];
         vs[x.second+1] = t;
