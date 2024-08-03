@@ -1,4 +1,9 @@
-
+/*
+TASK: monkey.cpp
+LANG: C++
+AUTHOR: YourName YourLastName
+CENTER: YourCenter
+*/ 
 #include <algorithm>
 #include <iostream>
 #include <bitset>
