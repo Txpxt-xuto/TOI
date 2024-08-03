@@ -1,9 +1,9 @@
 /*
 TASK: monkey.cpp
 LANG: C++
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
-*/ 
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/
 #include <algorithm>
 #include <iostream>
 #include <bitset>
