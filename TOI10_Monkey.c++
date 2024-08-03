@@ -5,17 +5,13 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include<bits/stdc++.h>
-
 using namespace std;
-
 const int N=2e5+5;
-
 int n,m,k;
 int a[N];
 vector<pair<int,int>> stick;
 int s;
 int ans,ans2;
-
 int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
