@@ -13,8 +13,8 @@ int main ()
     cin.tie(0);
     int m, n, k; 
     cin >> m >> n >> k;
-    for(int i = 1; i <= n; ++i) cin >> a[i];
-    for(int i = 0; i < k; ++i) 
+    for(i=1;i<=n;++i) cin >> a[i];
+    for(i=0;i<k;++i) 
     {
         int pi, hi; 
         cin >> pi >> hi;
