@@ -63,7 +63,8 @@ void solve()
         stick.pb({h, u, u+1});
     }
     sort(all(stick));
-    int s; cin >> s;
+    int s; 
+    cin >> s;
     reach[s] = 1;
     reach[s+1] = reach[s-1] = 1;
     for (auto [h, u, v] : stick) 
