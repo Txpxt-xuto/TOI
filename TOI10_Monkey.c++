@@ -62,24 +62,24 @@ void solve()
         cin >> u >> h;
         stick.pb({h, u, u+1});
     }
-  sort(all(stick));
-
-  int s; cin >> s;
-  reach[s] = 1;
-  reach[s+1] = reach[s-1] = 1;
-  for (auto [h, u, v] : stick) {
-    swap(reach[u], reach[v]);
-    if (u == s) s++;
-    else if (v == s) s--;
+    sort(all(stick));
+    int s; cin >> s;
+    reach[s] = 1;
     reach[s+1] = reach[s-1] = 1;
-  }
-  
-  int mx = 0;
-  rep(i, 1, n) {
-    if (!reach[i]) continue;
-    ckmax(mx, val[i]);
-  }
-  cout << mx << nl << (val[s] == mx ? "NO" : "USE") << nl;
+    for (auto [h, u, v] : stick) 
+    {
+        swap(reach[u], reach[v]);
+        if (u == s) s++;
+        else if (v == s) s--;
+        reach[s+1] = reach[s-1] = 1;
+    }
+    int mx = 0;
+    rep(i, 1, n) 
+    {
+        if (!reach[i]) continue;
+        ckmax(mx, val[i]);
+    }
+    cout << mx << nl << (val[s] == mx ? "NO" : "USE") << nl;
 }
 
 int main(int argc, char* argv[]) {
