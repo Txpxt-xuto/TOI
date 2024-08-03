@@ -30,7 +30,7 @@ int main()
     cin >> s;
     int ans_not_use = a[s];
     int ans_use = max(a[s - 1], a[s + 1]);
-    for (int i = 1;i <= k;i++) 
+    for(int i = 1;i <= k;i++) 
     {
         swap(a[stick[i].i], a[stick[i].i + 1]);
         if (s == stick[i].i) s = stick[i].i + 1;
