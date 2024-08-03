@@ -45,4 +45,4 @@ int main()
     int mx = 0;
     for(i=1;i<=n;++i) if(vs[i]) mx = max(mx,a[i]);
     cout << mx << "\n" << (a[st]==mx ? "NO" : "USE");
-}
+}//ผิด
