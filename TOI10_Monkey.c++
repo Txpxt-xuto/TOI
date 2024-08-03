@@ -38,7 +38,7 @@ int main()
         ans_use = max({ ans_use, a[s - 1] });
         ans_use = max({ ans_use, a[s + 1] });
     }
-    if(ans_not_use > ans_use) cout << ans_not_u se << "\nNO";
+    if(ans_not_use > ans_use) cout << ans_not_use << "\nNO";
     else cout << ans_use << "\nUSE";
     return 0;
 }
