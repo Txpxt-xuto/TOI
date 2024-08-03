@@ -1,7 +1,6 @@
 #pragma once
 #include <bits/stdc++.h>
 using namespace std;
-
 typedef long long ll;
 typedef double db;
 typedef long double ld;
@@ -18,10 +17,8 @@ typedef vector<vi> vvi;
 typedef tuple<ll, ll, ll> t3;
 typedef tuple<ll, ll, ll, ll> t4;
 typedef tuple<ll, ll, ll, ll, ll> t5;
-
 template<typename T> using pq = priority_queue<T>;
 template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
-
 #define rep0(a) for (int i = 0; i < a; ++i)
 #define rep1(i, a) for (int i = 0; i < a; ++i)
 #define rep2(i, a, b) for (int i = a; i <= b; ++i)
