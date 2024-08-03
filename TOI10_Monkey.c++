@@ -43,24 +43,23 @@ template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-
 const int MOD = 1e9 + 7;
 const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
 const char nl = '\n';
 const int MX = 2e5 + 3;
-
 int val[MX];
 bool reach[MX];
-
-void solve() {
-  int m, n, k; cin >> m >> n >> k;
-  rep(i, 1, n) cin >> val[i];
-  vector<tuple<int, int, int>> stick;
-  rep(i, 1, k) {
+void solve() 
+{
+    int m, n, k; cin >> m >> n >> k;
+    rep(i, 1, n) cin >> val[i];
+    vector<tuple<int, int, int>> stick;
+    rep(i, 1, k) 
+    {
     int u, h; cin >> u >> h;
     stick.pb({h, u, u+1});
-  }
+    }
   sort(all(stick));
 
   int s; cin >> s;
