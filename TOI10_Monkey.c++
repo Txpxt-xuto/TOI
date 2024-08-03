@@ -35,6 +35,6 @@ int main ()
         if(st <= n-1) vs[st+1] = 1;
     }
     int mx = 0;
-    for (int i = 1; i <= n; ++i) if (vs[i]) mx = max(mx,a[i]);
+    for(int i = 1; i <= n; ++i) if (vs[i]) mx = max(mx,a[i]);
     cout << mx << "\n" << (a[st]==mx ? "NO" : "USE");
 }
