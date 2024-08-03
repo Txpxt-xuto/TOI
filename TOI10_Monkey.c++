@@ -25,7 +25,7 @@ int main()
     for(int i = 1;i <= n;i++) cin >> a[i];
     for(int i = 1;i <= k;i++) cin >> stick[i].i >> stick[i].h;
     sort(stick + 1, stick + 1 + k);
-    for (int i = k;i >= 1;i--) swap(a[stick[i].i], a[stick[i].i + 1]);
+    for(int i = k;i >= 1;i--) swap(a[stick[i].i], a[stick[i].i + 1]);
     int s;
     cin >> s;
     int ans_not_use = a[s];
