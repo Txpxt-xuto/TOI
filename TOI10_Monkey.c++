@@ -57,7 +57,8 @@ void solve()
     vector<tuple<int, int, int>> stick;
     rep(i, 1, k) 
     {
-        int u, h; cin >> u >> h;
+        int u, h; 
+        cin >> u >> h;
         stick.pb({h, u, u+1});
     }
   sort(all(stick));
