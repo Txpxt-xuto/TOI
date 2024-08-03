@@ -21,10 +21,11 @@ int main ()
         br.emplace_back(hi, pi);
     }
     sort(br.begin(),br.end());
-    int st;cin>>st;
+    int st;
+    cin >> st;
     vs[st]=1;
-    if(st>=2)vs[st-1]=1;
-    if(st<=n-1)vs[st+1]=1;
+    if(st>=2) vs[st-1]=1;
+    if(st<=n-1) vs[st+1]=1;
     for(auto x : br)
     {
         bool t = vs[x.second];
