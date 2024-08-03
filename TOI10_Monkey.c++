@@ -52,7 +52,8 @@ int val[MX];
 bool reach[MX];
 void solve() 
 {
-    int m, n, k; cin >> m >> n >> k;
+    int m, n, k; 
+    cin >> m >> n >> k;
     rep(i, 1, n) cin >> val[i];
     vector<tuple<int, int, int>> stick;
     rep(i, 1, k) 
