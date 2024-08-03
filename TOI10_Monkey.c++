@@ -27,9 +27,9 @@ int main()
     for(auto [h,p]:stick)
     {
         swap(a[p],a[p+1]);
-        if(s==p) s=p+1;
-        else if(s==p+1) s=p;
-        ans2=max({ans2,a[s-1],a[s+1]});
+        if(s==p) s = p+1;
+        else if(s==p+1) s = p;
+        ans2 = max({ans2,a[s-1],a[s+1]});
     }
     cout << max(ans,ans2) << "\n";
     cout << (ans>ans2?"NO":"USE");
