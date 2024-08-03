@@ -12,7 +12,7 @@ using namespace std;
 int a[200001];
 bitset<200001> vs;
 vector<pair<int, int>> br;
-int main () 
+int main() 
 {
     ios_base::sync_with_stdio(0);
     cout.tie(0);
