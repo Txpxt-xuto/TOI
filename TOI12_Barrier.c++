@@ -47,8 +47,5 @@ int main()
         }
     }
     if(!maxsum) cout << "0\n0";
-    {
-        
-    }
     else cout << maxsum << '\n' << minlen;
 }
