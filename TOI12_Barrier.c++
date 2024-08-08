@@ -46,12 +46,10 @@ int main()
             minlen=min(minlen,i-index.front());
         }
     }
-    if(!maxsum)
+    if(!maxsum) cout << "0\n0";
     {
-        cout << "0\n0";
+        
     }
-    else
-    {
-        cout << maxsum << '\n' << minlen;
-    }
+    else cout << maxsum << '\n' << minlen;
+
 }
