@@ -26,7 +26,8 @@ int main(){
         while(!index.empty() and i-index.front()>maxlen){
             index.pop_front();
         }
-        while(!index.empty() and home[index.back()]>=home[i]){
+        while(!index.empty() and home[index.back()]>=home[i])
+        {
             index.pop_back();
         }
         index.push_back(i);
