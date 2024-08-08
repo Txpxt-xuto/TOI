@@ -24,7 +24,8 @@ signed main()
             sz = i+1;
         }
 		while(!dq.empty() && dq.front() < i-w) dq.pop_front();
-		if(!dq.empty()){
+		if(!dq.empty())
+        {
 			int F = dq.front(), tmp = qs[i] - qs[F];
 			if(tmp > mx || (tmp == mx && i-F < sz))
             {
