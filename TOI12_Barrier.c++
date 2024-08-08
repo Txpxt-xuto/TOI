@@ -18,7 +18,8 @@ int main()
     int temp;
     cin >> temp;
     home[0]+=temp;
-    for(int i=1;i<n;i++){
+    for(i=1;i<n;i++)
+    {
         cin >> temp;
         home[i]+=home[i-1]+temp;
     }
