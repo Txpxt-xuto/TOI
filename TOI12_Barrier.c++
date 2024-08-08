@@ -3,7 +3,8 @@ TASK: barrier.cpp
 LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
-*/#include <cstdio>
+*/
+#include <cstdio>
 #include <queue>
 using namespace std;
 int qs[6000000];
