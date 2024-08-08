@@ -15,11 +15,13 @@ signed main()
 	deque<int> dq;
 	for(int i = 0, v; i<n; ++i)
     {
-		scanf("%d", &v); prf_sum += v; qs[i] = prf_sum;
+		scanf("%d", &v); 
+        prf_sum += v; 
+        qs[i] = prf_sum;
 		if(i < w && (qs[i] > mx || (qs[i] == mx && i+1 < sz)))
         {
             mx = qs[i]; 
-        sz = i+1;
+            sz = i+1;
         }
 		while(!dq.empty() && dq.front() < i-w) dq.pop_front();
 		if(!dq.empty()){
