@@ -30,11 +30,13 @@ int main(){
             index.pop_back();
         }
         index.push_back(i);
-        if(home[index.back()]-home[index.front()]>maxsum){
+        if(home[index.back()]-home[index.front()]>maxsum)
+        {
             maxsum=home[index.back()]-home[index.front()];
             minlen=i-index.front();
         }
-        else if(minlen==i-index.front()){
+        else if(minlen==i-index.front())
+        {
             minlen=min(minlen,i-index.front());
         }
     }
