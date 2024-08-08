@@ -23,7 +23,8 @@ int main(){
     int maxsum=0,minlen=maxlen;
     deque <int> index;
     for(int i=0;i<n;i++){
-        while(!index.empty() and i-index.front()>maxlen){
+        while(!index.empty() and i-index.front()>maxlen)
+        {
             index.pop_front();
         }
         while(!index.empty() and home[index.back()]>=home[i])
