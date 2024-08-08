@@ -27,7 +27,10 @@ signed main()
 		if(!dq.empty()){
 			int F = dq.front(), tmp = qs[i] - qs[F];
 			if(tmp > mx || (tmp == mx && i-F < sz))
-            {mx = tmp; sz = i-F;}
+            {
+                mx = tmp; 
+                sz = i-F;
+            }
 		}
 		while(!dq.empty() && qs[dq.back()] >= qs[i]) dq.pop_back();
 		dq.push_back(i);
