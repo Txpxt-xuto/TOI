@@ -51,5 +51,4 @@ int main()
         
     }
     else cout << maxsum << '\n' << minlen;
-
 }
