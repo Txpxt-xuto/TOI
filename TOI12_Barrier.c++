@@ -13,7 +13,7 @@ signed main()
 	int n, w, prf_sum = 0, mx = 0, sz = 0; 
     scanf("%d %d", &n, &w);
 	deque<int> dq;
-	for(int i = 0, v; i<n; ++i)
+	for(i=0,v;i<n;++i)
     {
 		scanf("%d", &v); 
         prf_sum += v; 
