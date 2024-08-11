@@ -20,10 +20,8 @@ int main(void)
         dp[0][0]=true;
         for(int i=1;i<=an;i++)
         {
-            if(a[i-1]!=c[i-1])
-                dp[i][0]=false;
-            else
-                dp[i][0]=dp[i-1][0];
+            if(a[i-1]!=c[i-1]) dp[i][0]=false;
+            else dp[i][0]=dp[i-1][0];
         }
         for(i=1;i<=bn;i++)
         {
