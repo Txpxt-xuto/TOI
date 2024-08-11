@@ -11,7 +11,8 @@ struct edge{
 	int st;
 	int en;
 	int we;
-	bool operator<(const edge &x)const{
+	bool operator<(const edge &x)const
+    {
 	return x.we > we;
 	}
 };
