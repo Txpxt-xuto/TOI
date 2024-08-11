@@ -14,13 +14,15 @@ struct A{
     }
 };
 priority_queue<A> pq;
-int fr(int i){
-    if(p[i]==i)return i;
+int fr(int i)
+{
+    if(p[i]==i) return i;
     return p[i]=fr(p[i]);
 }
-signed main(){
+signed main()
+{
     ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0);
-    int n,m;
+    int n,m,i;
     cin >> n >> m;
     for(i=1;i<=n;i++) p[i] = i;
     while(m--)
