@@ -41,8 +41,7 @@ signed main(){
         int v=x.v;
         int w=x.w;
         mn=w;
-        int pa=fr(u);
-        int pb=fr(v);
+        int pa=fr(u),pb=fr(v);
         if(pa!=pb) p[pb] = pa;
         if(fr(st)==fr(en)) break;
     }
