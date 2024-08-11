@@ -8,14 +8,14 @@ int main(void)
     cin.tie(NULL);
     cout.tie(NULL);
     string a,b,c;
-    int an,bn,q,i,j;
-    cin>>a>>b;
-    an=a.size();
-    bn=b.size();
-    cin>>q;
-    for(int t=0;t<q;t++)
+    int an,bn,q,i,j,t;
+    cin>> a >> b;
+    an = a.size();
+    bn = b.size();
+    cin >> q;
+    for(t=0;t<q;t++)
     {
-        cin>>c;
+        cin >> c;
         memset(dp,false,sizeof dp);
         dp[0][0] = true;
         for(int i=1;i<=an;i++)
