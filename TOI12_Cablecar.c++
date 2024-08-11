@@ -50,7 +50,8 @@ void krukal(int sta,int ens)
 		pq.pop();
 		if(head[temp.st]!=head[temp.en]){
 			merge(temp.st,temp.en);
-			if(findhead(sta)==findhead(ens)){
+			if(findhead(sta)==findhead(ens))
+            {
 				ans = temp.we;
 				break;
 			}
