@@ -25,20 +25,20 @@ signed main(){
     for(int i = 1 ; i <= n ; i++){
         p[i] = i;
     }
-    while(m--){
+    while(m--)
+    {
         int u,v,w;
         cin >> u >> v >> w;
         pq.push({u,v,w-1});
     }
-    int mn;
-    int st,en,pp;
+    int mn,st,en,pp;
     cin >> st >> en >> pp;
     while(!pq.empty())
     {
         auto x=pq.top();
         pq.pop();
         int u=x.u,v=x.v,w=x.w;
-        mn=w;
+        mn = w;
         int pa=fr(u),pb=fr(v);
         if(pa!=pb) p[pb] = pa;
         if(fr(st)==fr(en)) break;
