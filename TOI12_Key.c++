@@ -8,7 +8,7 @@ int main(void)
     cin.tie(NULL);
     cout.tie(NULL);
     string a,b,c;
-    int an,bn,q;
+    int an,bn,q,i,j;
     cin>>a>>b;
     an=a.size();
     bn=b.size();
@@ -25,16 +25,16 @@ int main(void)
             else
                 dp[i][0]=dp[i-1][0];
         }
-        for(int i=1;i<=bn;i++)
+        for(i=1;i<=bn;i++)
         {
             if(b[i-1]!=c[i-1])
                 dp[0][i]=false;
             else
                 dp[0][i]=dp[0][i-1];
         }
-        for(int i=1;i<=an;i++)
+        for(i=1;i<=an;i++)
         {
-            for(int j=1;j<=bn;j++)
+            for(j=1;j<=bn;j++)
             {
                 if(dp[i-1][j]==true&&a[i-1]==c[i+j-1]) dp[i][j] = true;
                 else if(dp[i][j-1]==true&&b[j-1]==c[i+j-1]) dp[i][j] = true;
