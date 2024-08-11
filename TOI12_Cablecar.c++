@@ -68,7 +68,6 @@ int main()
 		scanf("%d %d %d",&st,&en,&we);
 		addedge(st,en,we);
 	}
-	int;
 	scanf("%d %d %lf",&stx,&enx,&people);
 	krukal(stx,enx);
 	int an = ceil(people/(ans-1));
