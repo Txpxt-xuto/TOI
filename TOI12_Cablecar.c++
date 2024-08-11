@@ -42,9 +42,8 @@ signed main(){
         mn=w;
         int pa=fr(u);
         int pb=fr(v);
-        if(pa!=pb)p[pb]=pa;
-
-        if(fr(st)==fr(en))break;
+        if(pa!=pb)p[pb] = pa;
+        if(fr(st)==fr(en)) break;
     }
     cout << pp/mn+(pp%(mn)!=0);
 }
