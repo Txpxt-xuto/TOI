@@ -27,7 +27,8 @@ int findhead(int n){
 	else return findhead(head[n]);
 }
 
-void merge(int st,int en){
+void merge(int st,int en)
+{
 	int x1 = findhead(st);
 	int x2 = findhead(en);
 	
