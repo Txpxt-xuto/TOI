@@ -24,7 +24,8 @@ void addedge(int st,int en,int we)
 	v.push_back({st,en,we});
 }
 
-int findhead(int n){
+int findhead(int n)
+{
 	if(head[n]==n) return n;
 	else return findhead(head[n]);
 }
