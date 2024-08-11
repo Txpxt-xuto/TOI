@@ -40,9 +40,7 @@ int main(void)
                 else if(dp[i][j-1]==true&&b[j-1]==c[i+j-1]) dp[i][j] = true;
             }
         } 
-        if(dp[an][bn]==true)
-            cout<<"Yes\n";
-        else    
-            cout<<"No\n";
+        if(dp[an][bn]==true) cout << "Yes\n";
+        else cout << "No\n";
     }
 }
