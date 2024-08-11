@@ -33,7 +33,8 @@ signed main(){
     int mn;
     int st,en,pp;
     cin >> st >> en >> pp;
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         auto x=pq.top();
         pq.pop();
         int u=x.u;
@@ -42,7 +43,7 @@ signed main(){
         mn=w;
         int pa=fr(u);
         int pb=fr(v);
-        if(pa!=pb)p[pb] = pa;
+        if(pa!=pb) p[pb] = pa;
         if(fr(st)==fr(en)) break;
     }
     cout << pp/mn+(pp%(mn)!=0);
