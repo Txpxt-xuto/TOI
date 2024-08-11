@@ -29,7 +29,6 @@ int main(void)
         {
             if(b[i-1]!=c[i-1]) dp[0][i]=false;
             else dp[0][i]=dp[0][i-1];
-                
         }
         for(i=1;i<=an;i++)
         {
