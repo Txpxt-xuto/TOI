@@ -37,9 +37,7 @@ signed main(){
     {
         auto x=pq.top();
         pq.pop();
-        int u=x.u;
-        int v=x.v;
-        int w=x.w;
+        int u=x.u,v=x.v,w=x.w;
         mn=w;
         int pa=fr(u),pb=fr(v);
         if(pa!=pb) p[pb] = pa;
