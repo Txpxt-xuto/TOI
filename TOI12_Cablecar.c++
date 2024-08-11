@@ -44,7 +44,8 @@ void krukal(int sta,int ens)
 	for(int i=1;i<=n;i++) head[i]=i;
 	priority_queue <edge> pq;
 	for(auto x: v) pq.push(x);
-	while(!pq.empty()){
+	while(!pq.empty())
+    {
 		edge temp = pq.top();
 		pq.pop();
 		if(head[temp.st]!=head[temp.en]){
