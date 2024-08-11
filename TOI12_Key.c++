@@ -1,3 +1,9 @@
+/*
+TASK: key.cpp
+LANG: C++
+AUTHOR: Tapat Toungsakul
+CENTER: Home
+*/
 #include <bits/stdc++.h>
 using namespace std;
 const int hi=1005;
