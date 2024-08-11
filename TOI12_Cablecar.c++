@@ -38,8 +38,8 @@ void merge(int st,int en)
 	else head[x2]=x1;
 }
 int n,m,ans=0;
-void krukal(int sta,int ens){
-	
+void krukal(int sta,int ens)
+{
 	for(int i=1;i<=n;i++) head[i]=i;
 	priority_queue <edge> pq;
 	for(auto x: v) pq.push(x);
