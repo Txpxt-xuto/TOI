@@ -61,11 +61,10 @@ void krukal(int sta,int ens)
 double people;
 int main()
 {
-    int i;
+    int i,st,en,we;
 	scanf("%d %d",&n,&m);
 	for(i=0;i<m;i++)
     {
-		int st,en,we;
 		scanf("%d %d %d",&st,&en,&we);
 		addedge(st,en,we);
 	}
