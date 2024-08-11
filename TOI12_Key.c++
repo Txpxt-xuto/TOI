@@ -54,12 +54,3 @@ int main(void)
             cout<<"No\n";
     }
 }
-/*
-BAB
-AB
-4
-BAABB
-BABAB
-ABBAB
-BBABA
-*/
