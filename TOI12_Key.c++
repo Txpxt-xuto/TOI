@@ -36,16 +36,12 @@ int main(void)
         {
             for(int j=1;j<=bn;j++)
             {
-                if(dp[i-1][j]==true&&a[i-1]==c[i+j-1])
+                if(dp[i-1][j]==true&&a[i-1]==c[i+j-1]) dp[i][j] = true;
                 {
-                    dp[i][j]=true;
+                    
                 }
-                else if(dp[i][j-1]==true&&b[j-1]==c[i+j-1])
-                {
-                    dp[i][j]=true;
-                }
+                else if(dp[i][j-1]==true&&b[j-1]==c[i+j-1]) dp[i][j] = true;
             }
-            //cout<<"\n";
         } 
         if(dp[an][bn]==true)
             cout<<"Yes\n";
