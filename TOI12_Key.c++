@@ -9,7 +9,7 @@ int main(void)
     cout.tie(NULL);
     string a,b,c;
     int an,bn,q,i,j,t;
-    cin>> a >> b;
+    cin >> a >> b;
     an = a.size();
     bn = b.size();
     cin >> q;
