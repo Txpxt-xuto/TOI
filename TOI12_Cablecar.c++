@@ -17,7 +17,8 @@ struct edge{
 };
 vector <edge> v;
 int head[2600];
-void addedge(int st,int en,int we){
+void addedge(int st,int en,int we)
+{
 	v.push_back({st,en,we});
 }
 
