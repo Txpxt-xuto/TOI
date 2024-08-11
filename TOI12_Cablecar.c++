@@ -61,14 +61,14 @@ void krukal(int sta,int ens)
 double people;
 int main()
 {
-    int i,st,en,we;
+    int i,st,en,we,stx,enx;
 	scanf("%d %d",&n,&m);
 	for(i=0;i<m;i++)
     {
 		scanf("%d %d %d",&st,&en,&we);
 		addedge(st,en,we);
 	}
-	int stx,enx;
+	int;
 	scanf("%d %d %lf",&stx,&enx,&people);
 	krukal(stx,enx);
 	int an = ceil(people/(ans-1));
