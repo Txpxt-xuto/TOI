@@ -17,23 +17,23 @@ int main(void)
     {
         cin>>c;
         memset(dp,false,sizeof dp);
-        dp[0][0]=true;
+        dp[0][0] = true;
         for(int i=1;i<=an;i++)
         {
-            if(a[i-1]!=c[i-1]) dp[i][0]=false;
+            if(a[i-1]!=c[i-1]) dp[i][0] = false;
             else dp[i][0]=dp[i-1][0];
         }
         for(i=1;i<=bn;i++)
         {
-            if(b[i-1]!=c[i-1]) dp[0][i]=false;
+            if(b[i-1]!=c[i-1]) dp[0][i] = false;
             else dp[0][i]=dp[0][i-1];
         }
         for(i=1;i<=an;i++)
         {
             for(j=1;j<=bn;j++)
             {
-                if(dp[i-1][j]==true&&a[i-1]==c[i+j-1]) dp[i][j] = true;
-                else if(dp[i][j-1]==true&&b[j-1]==c[i+j-1]) dp[i][j] = true;
+                if(dp[i-1][j]==true && a[i-1]==c[i+j-1]) dp[i][j] = true;
+                else if(dp[i][j-1]==true && b[j-1]==c[i+j-1]) dp[i][j] = true;
             }
         } 
         if(dp[an][bn]==true) cout << "Yes\n";
