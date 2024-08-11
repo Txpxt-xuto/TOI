@@ -44,7 +44,6 @@ int main(void)
                 {
                     dp[i][j]=true;
                 }
-                //cout<<i<<" "<<j<<" "<<a[i-1]<<" "<<b[j-1]<<" "<<c[i+j-1]<<" "<<dp[i][j]<<"\n";
             }
             //cout<<"\n";
         } 
