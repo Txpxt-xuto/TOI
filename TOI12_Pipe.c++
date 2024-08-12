@@ -29,7 +29,7 @@ int main()
                 temp = j;
             }
         }
-        swap( arr[i+1], arr[temp] ), swap( dp[i+1], dp[temp] );
+        swap(arr[i+1], arr[temp]), swap(dp[i+1], dp[temp]);
     }
     sort(dp, dp+15005);
     long long ans = 0;
