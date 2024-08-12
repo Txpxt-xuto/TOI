@@ -16,7 +16,7 @@ int main()
     cout.tie(0);
     cin >> n >> k;
     for( int i=1;i<=n;i++ ) cin >> arr[i].first >> arr[i].second;
-    for( int i=0;i<15005;i++ ) dp[i] = INT_MAX;
+    for(int i=0;i<15005;i++ ) dp[i] = INT_MAX;
     for(int i=1;i<n;i++ )
     {
         int mini = INT_MAX, temp;
