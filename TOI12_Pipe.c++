@@ -17,7 +17,7 @@ int main()
     cin >> n >> k;
     for( int i=1;i<=n;i++ ) cin >> arr[i].first >> arr[i].second;
     for( int i=0;i<15005;i++ ) dp[i] = INT_MAX;
-    for( int i=1;i<n;i++ )
+    for(int i=1;i<n;i++ )
     {
         int mini = INT_MAX, temp;
         for( int j=i+1;j<=n;j++ )
