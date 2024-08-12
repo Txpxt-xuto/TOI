@@ -22,7 +22,7 @@ int main()
         int mini = INT_MAX, temp;
         for( int j=i+1;j<=n;j++ )
         {
-            dp[j] = min( dp[j], (abs(arr[i].first-arr[j].first)+abs( arr[i].second-arr[j].second )) );
+            dp[j] = min(dp[j],(abs(arr[i].first-arr[j].first)+abs(arr[i].second-arr[j].second)));
             if(mini > dp[j])
             {
                 mini = dp[j];
