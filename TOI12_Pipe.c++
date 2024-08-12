@@ -6,7 +6,7 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-int n, k, i;
+int n, k, i, j;
 pair<int,int> arr[15005];
 int dp[15005];
 int main()
