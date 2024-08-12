@@ -33,7 +33,7 @@ int main()
     }
     sort(dp, dp+15005);
     long long ans = 0;
-    for(i=0;i<n-k;i++ ) ans += dp[i];
+    for(i=0;i<n-k;i++) ans += dp[i];
     cout << ans;
     return 0;
 }
