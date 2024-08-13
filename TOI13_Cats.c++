@@ -32,7 +32,8 @@ int main()
     sort(sortcat , sortcat + n);
     ll maximum = sortcat[n-1];
     int first = 0 , last = n-1;
-    for(int j = 0 ; j < log(n) / log(2) + 1 ; j++){
+    for(j=0;j<log(n)/log(2)+1;j++)
+    {
         int mid = (first + last) / 2;
         int check = 0;
         queue<ll> q;
