@@ -33,7 +33,8 @@ int main(){
                 arr[i][j]='0';
                 ++cnt;
                 q.emplace(i,j);
-                while(!q.empty()){
+                while(!q.empty())
+                {
                     int ii=q.front().first;
                     int jj=q.front().second;
                     q.pop();
