@@ -20,7 +20,7 @@ bool issafe(int i,int j){
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cin>>n>>m;
+    cin >> n >> m;
     for(i=0;i<n;++i)
     {
         for(j=0;j<m;++j) cin>>arr[i][j];
