@@ -17,7 +17,8 @@ bool issafe(int i,int j){
     if(arr[i][j]=='0')return false;
     return true;
 }
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cin >> n >> m;
