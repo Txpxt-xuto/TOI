@@ -37,24 +37,25 @@ int main()
         int mid = (first + last) / 2;
         int check = 0;
         queue<ll> q;
-        for(int i = 0 ; i < n ; i++) if(cat[i] > sortcat[mid]) q.push(cat[i]);
-        while(!q.empty()){
+        for(i=0;i<n;i++) if(cat[i] > sortcat[mid]) q.push(cat[i]);
+        while(!q.empty())
+        {
             ll a = q.front();
             q.pop();
             ll b = q.front();
             q.pop();
-            if(a != b){
+            if(a != b)
+            {
                 check = 1;
                 break;
             }
         }
-        if(check == 0){
+        if(check == 0)
+        {
             last = mid;
             maximum = sortcat[mid];
         }
-        else{
-            first = mid;
-        }
+        else first = mid;
     }
     cout << maximum;
     return 0;
