@@ -38,7 +38,8 @@ int main(){
                     int ii=q.front().first;
                     int jj=q.front().second;
                     q.pop();
-                    for(int k=0;k<8;++k){
+                    for(int k=0;k<8;++k)
+                    {
                         int ni=ii+di[k];
                         int nj=jj+dj[k];
                         if(issafe(ni,nj))
