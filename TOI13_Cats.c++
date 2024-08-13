@@ -9,7 +9,8 @@ CENTER: YourCenter
 using namespace std;
 ll cat[2000001] , sortcat[2000001];
 int main() {
-    std::ios_base::sync_with_stdio(false) , cin.tie(NULL);
+    std::ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int n;
     cin >> n;
     int k = 0;
