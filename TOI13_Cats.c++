@@ -24,7 +24,8 @@ int main()
             if(cat[i] != cat[i-1]) k = 1;
         }
     }
-    if(k == 0){
+    if(k == 0)
+    {
         cout << 0;
         return 0;
     }
