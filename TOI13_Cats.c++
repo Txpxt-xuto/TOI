@@ -13,7 +13,8 @@ int main() {
     int n;
     cin >> n;
     int k = 0;
-    for(int i = 0 ; i < n ; i++){
+    for(i=0;i<n;i++)
+    {
         cin >> cat[i];
         sortcat[i] = cat[i];
         if(i % 2 == 1){
