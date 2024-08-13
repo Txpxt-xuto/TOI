@@ -6,7 +6,6 @@ CENTER: YourCenter
 */
 #include <bits/stdc++.h>
 #define ll long long
-
 using namespace std;
 ll cat[2000001] , sortcat[2000001];
 int main() {
