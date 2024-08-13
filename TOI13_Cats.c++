@@ -8,7 +8,8 @@ CENTER: YourCenter
 #define ll long long
 using namespace std;
 ll cat[2000001] , sortcat[2000001];
-int main() {
+int main()
+{
     std::ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int n;
@@ -18,7 +19,8 @@ int main() {
     {
         cin >> cat[i];
         sortcat[i] = cat[i];
-        if(i % 2 == 1){
+        if(i % 2 == 1)
+        {
             if(cat[i] != cat[i-1]) k = 1;
         }
     }
