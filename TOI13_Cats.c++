@@ -37,10 +37,7 @@ int main()
         int mid = (first + last) / 2;
         int check = 0;
         queue<ll> q;
-        for(int i = 0 ; i < n ; i++)
-        {
-            if(cat[i] > sortcat[mid]) q.push(cat[i]);
-        }
+        for(int i = 0 ; i < n ; i++) if(cat[i] > sortcat[mid]) q.push(cat[i]);
         while(!q.empty()){
             ll a = q.front();
             q.pop();
