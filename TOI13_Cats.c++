@@ -34,8 +34,7 @@ int main()
     int first = 0 , last = n-1;
     for(j=0;j<log(n)/log(2)+1;j++)
     {
-        int mid = (first + last) / 2;
-        int check = 0;
+        int mid = (first + last) / 2, check = 0;
         queue<ll> q;
         for(i=0;i<n;i++) if(cat[i] > sortcat[mid]) q.push(cat[i]);
         while(!q.empty())
