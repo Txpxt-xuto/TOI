@@ -26,9 +26,9 @@ int main(){
             cin>>arr[i][j];
         }
     }
-    for(int i=0;i<n;++i)
+    for(i=0;i<n;++i)
     {
-        for(int j=0;j<m;++j)
+        for(j=0;j<m;++j)
         {
             if(arr[i][j]=='1')
             {
@@ -37,8 +37,7 @@ int main(){
                 q.emplace(i,j);
                 while(!q.empty())
                 {
-                    int ii=q.front().first;
-                    int jj=q.front().second;
+                    int ii=q.front().first,jj=q.front().second;
                     q.pop();
                     for(int k=0;k<8;++k)
                     {
