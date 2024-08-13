@@ -41,8 +41,7 @@ int main(){
                     q.pop();
                     for(k=0;k<8;++k)
                     {
-                        int ni=ii+di[k];
-                        int nj=jj+dj[k];
+                        int ni=ii+di[k],nj=jj+dj[k];
                         if(issafe(ni,nj))
                         {
                             arr[ni][nj]='0';
