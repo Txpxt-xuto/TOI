@@ -53,6 +53,6 @@ int main()
             }
         }
     }
-    cout<<cnt;
+    cout << cnt;
     return 0;
 }
