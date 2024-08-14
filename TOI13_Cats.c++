@@ -26,8 +26,8 @@ int main()
     {
         ll mid = (L+R)/2,check = 1;
         queue<int> q;
-        for(int i = 0 ; i < N ; i++){
-
+        for(i=0;i<N;i++)
+        {
             if(vec[i] > mid)
             {
                 if(q.empty() == 1) q.push(vec[i]);
