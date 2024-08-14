@@ -7,7 +7,6 @@ CENTER: YourCenter
 #include <stdio.h>
 #include <stdlib.h>
 #define check_border(X, Y, M, N) ((X)>=(M) || (X)<0 || (Y)>=(N) || (Y)<0)
-
 char candle[2000][2000];
 
 void bfs(int x, int y, int m, int n);
