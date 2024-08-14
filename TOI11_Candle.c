@@ -19,7 +19,7 @@ int main(void) {
     for (int j = 0; j < n; j++) 
     {
         if (candle[i][j] == '0') continue;
-    
+
         bfs(i, j, m, n);
         count++;
     }
