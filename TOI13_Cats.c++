@@ -42,15 +42,12 @@ int main()
                 }
             }
         }
-
-        if(check == 1){
+        if(check == 1)
+        {
             ans = mid;
             R = mid - 1;
         }
-        else{
-            L = mid + 1;
-        }
-
+        else L = mid + 1;
     }
     printf("%lld",ans);
 
