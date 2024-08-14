@@ -48,12 +48,11 @@ void bfs(int x, int y, int m, int n)
             {
                 if(check_border(i, j, m, n)) continue;
                 if(candle[i][j] == '0') continue;
-
-        candle[i][j] = '0';
-        tail->next = (struct queue *)malloc(sizeof(struct queue));
-        tail = tail->next;
-        *tail = (struct queue) { .x = i, .y = j, .next = NULL };
-      }
+                candle[i][j] = '0';
+                tail->next = (struct queue *)malloc(sizeof(struct queue));
+                tail = tail->next;
+                *tail = (struct queue) { .x = i, .y = j, .next = NULL };
+            }
     }
     struct queue *temp = q;
     q = q->next;
