@@ -11,8 +11,9 @@ ll N,maxx = 0,minn = 1e9;
 vector<int> vec;
 int main()
 {
+    int i;
     scanf("%d",&N);
-    for(int i = 0 ; i < N ; i++)
+    for(i=0;i<N;i++)
     {
         int x;
         scanf("%d",&x);
@@ -21,16 +22,17 @@ int main()
     }
     ll ans = maxx;
     ll L = 0,R = maxx;
-
-
-    while(L <= R){
+    while(L <= R)
+    {
         ll mid = (L+R)/2,check = 1;
         queue<int> q;
-
         for(int i = 0 ; i < N ; i++){
-            if(vec[i] > mid){
-                if(q.empty() == 1){
-                    q.push(vec[i]);
+
+            if(vec[i] > mid)
+            {
+                if(q.empty() == 1) q.push(vec[i]);
+                {
+                    
                 }
                 else{
                     if(q.front() == vec[i]){
