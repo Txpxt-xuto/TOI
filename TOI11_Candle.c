@@ -15,11 +15,11 @@ int main(void) {
   scanf("%d %d", &m, &n);
   for (int i = 0; i < m; i++)
     scanf("%s", candle[i]);
-  for (int i = 0; i < m; i++) {
+  for (int i = 0; i < m; i++) 
+  {
     for (int j = 0; j < n; j++) 
     {
         if (candle[i][j] == '0') continue;
-
         bfs(i, j, m, n);
         count++;
     }
