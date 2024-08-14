@@ -20,8 +20,7 @@ int main()
         vec.push_back(x);
         if(x > maxx) maxx = x;
     }
-    ll ans = maxx;
-    ll L = 0,R = maxx;
+    ll ans = maxx,L = 0,R = maxx;
     while(L <= R)
     {
         ll mid = (L+R)/2,check = 1;
@@ -49,5 +48,5 @@ int main()
         }
         else L = mid + 1;
     }
-    printf("%lld",ans);
+    printf("%lld", ans);
 }
