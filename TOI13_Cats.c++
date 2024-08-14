@@ -31,14 +31,10 @@ int main()
             if(vec[i] > mid)
             {
                 if(q.empty() == 1) q.push(vec[i]);
-                {
-                    
-                }
                 else{
-                    if(q.front() == vec[i]){
-                        q.pop();
-                    }
-                    else{
+                    if(q.front() == vec[i]) q.pop();
+                    else
+                    {
                         check = 0;
                         break;
                     }
