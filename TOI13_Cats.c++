@@ -17,9 +17,7 @@ int main()
         int x;
         scanf("%d",&x);
         vec.push_back(x);
-        if(x > maxx)
-            maxx = x;
-
+        if(x > maxx) maxx = x;
     }
     ll ans = maxx;
     ll L = 0,R = maxx;
