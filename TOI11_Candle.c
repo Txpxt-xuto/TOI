@@ -11,7 +11,7 @@ char candle[2000][2000];
 void bfs(int x, int y, int m, int n);
 int main(void) 
 {
-    int m, n, i;
+    int m, n, i, j;
     int count = 0;
     scanf("%d %d", &m, &n);
     for(i=0;i<m;i++) scanf("%s", candle[i]);
