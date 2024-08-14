@@ -50,5 +50,4 @@ int main()
         else L = mid + 1;
     }
     printf("%lld",ans);
-
 }
