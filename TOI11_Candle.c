@@ -1,8 +1,8 @@
 /*
-TASK: candle.cpp
+TASK: candle.c
 LANG: C++
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
+AUTHOR: Tapat Toungsakul
+CENTER: Home
 */ 
 #include <stdio.h>
 #include <stdlib.h>
