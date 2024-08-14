@@ -10,7 +10,6 @@ CENTER: YourCenter
 char candle[2000][2000];
 
 void bfs(int x, int y, int m, int n);
-
 int main(void) {
   int m, n;
   int count = 0;
