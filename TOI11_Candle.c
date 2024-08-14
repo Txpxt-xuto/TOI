@@ -38,14 +38,16 @@ void bfs(int x, int y, int m, int n)
     struct queue *q = (struct queue *)malloc(sizeof(struct queue));
     struct queue *tail = q;
     *q = (struct queue) { .x = x, .y = y, .next = NULL };
-
-  while (q != NULL) {
-    int cur_x = q->x;
-    int cur_y = q->y;
-    for (int i = cur_x-1; i < cur_x+2; i++) {
-      for (int j = cur_y-1; j < cur_y+2; j++) {
-        if (check_border(i, j, m, n)) continue;
-        if (candle[i][j] == '0') continue;
+    while (q != NULL) 
+    {
+        int cur_x = q->x;
+        int cur_y = q->y;
+        for (int i = cur_x-1; i < cur_x+2; i++) 
+        {
+            for (int j = cur_y-1; j < cur_y+2; j++) 
+            {
+                if (check_border(i, j, m, n)) continue;
+                if (candle[i][j] == '0') continue;
 
         candle[i][j] = '0';
         tail->next = (struct queue *)malloc(sizeof(struct queue));
