@@ -18,10 +18,10 @@ int main(void) {
   for (int i = 0; i < m; i++) {
     for (int j = 0; j < n; j++) 
     {
-      if (candle[i][j] == '0') continue;
+        if (candle[i][j] == '0') continue;
     
         bfs(i, j, m, n);
-      count++;
+        count++;
     }
   }
   printf("%d\n", count);
