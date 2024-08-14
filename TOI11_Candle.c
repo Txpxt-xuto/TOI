@@ -20,7 +20,7 @@ int main(void) {
     {
       if (candle[i][j] == '0') continue;
     
-      bfs(i, j, m, n);
+        bfs(i, j, m, n);
       count++;
     }
   }
