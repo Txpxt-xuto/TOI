@@ -31,7 +31,8 @@ int main()
             if(vec[i] > mid)
             {
                 if(q.empty() == 1) q.push(vec[i]);
-                else{
+                else
+                {
                     if(q.front() == vec[i]) q.pop();
                     else
                     {
