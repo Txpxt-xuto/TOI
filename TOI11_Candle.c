@@ -29,7 +29,6 @@ int main(void) {
 
   return 0;
 }
-
 void bfs(int x, int y, int m, int n) {
   candle[x][y] = '0';
   struct queue {
