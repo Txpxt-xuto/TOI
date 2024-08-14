@@ -9,12 +9,13 @@ CENTER: YourCenter
 #define check_border(X, Y, M, N) ((X)>=(M) || (X)<0 || (Y)>=(N) || (Y)<0)
 char candle[2000][2000];
 void bfs(int x, int y, int m, int n);
-int main(void) {
-  int m, n;
-  int count = 0;
-  scanf("%d %d", &m, &n);
-  for (int i = 0; i < m; i++)
-    scanf("%s", candle[i]);
+int main(void) 
+{
+    int m, n, i;
+    int count = 0;
+    scanf("%d %d", &m, &n);
+    for(i=0;i<m;i++) scanf("%s", candle[i]);
+        
   for(int i = 0; i < m; i++) 
   {
     for(int j = 0; j < n; j++) 
