@@ -8,13 +8,13 @@ CENTER: Home
 using namespace std;
 int main()
 {
-	int row,col;
+	int row,col,i,j;
 	cin >> row >> col;
 	vector<vector<char> > robot(row,vector<char> (col));
 	queue<pair<int, int> > q;
-	for(int i=0;i<row;i++)
+	for(i=0;i<row;i++)
     {
-		for(int j=0;j<col;j++)
+		for(j=0;j<col;j++)
         {
 			cin >> robot[i][j];
 			if(robot[i][j]=='X') q.push({i,j});
@@ -27,7 +27,7 @@ int main()
     {
 		int _x=q.front().first, _y=q.front().second;
 		q.pop();
-		for(int i=0;i<4;i++)
+		for(i=0;i<4;i++)
         {
 			int x=_x+dx[i], y=_y+dy[i];
 			if(x<0 || x>=row || y<0 || y>=col)
