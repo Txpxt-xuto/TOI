@@ -15,14 +15,14 @@ int main()
 {
     int sum = 0, cnt = 0;
     cin >> m >> n;
-    for(int i = 1; i <= m; ++i)
+    for(i=1;i<=m;++i)
     {
             cin >> path[i];
             path[i] = '@' + path[i];
     }
-    for(int i = 1; i <= m; ++i)
+    for(i=1;i<=m;++i)
     {
-        for(int j = 1; j <= n; ++j)
+        for(j=1;j<=n;++j)
         {
             if(path[i][j] == 'X')
             {
