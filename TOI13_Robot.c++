@@ -12,7 +12,8 @@ int dist[2002][2002];
 queue<pair<int, int> > gq;
 pair<int, int> front;
 int n, m, x, y;
-int main(){
+int main()
+{
     int sum = 0, cnt = 0;
     cin >> m >> n;
     for(int i = 1; i <= m; ++i)
