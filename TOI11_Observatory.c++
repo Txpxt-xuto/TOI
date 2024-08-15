@@ -51,8 +51,6 @@ int main(){
             ans = max(ans , res);
         }
     }
-
     printf("%lld", ans);
-
     return 0;
 }
