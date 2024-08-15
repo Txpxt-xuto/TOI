@@ -30,8 +30,8 @@ int main()
 	int move=0;
 	while(!q.empty())
     {
-		int _x=q.front().first;
-		int _y=q.front().second;
+		int _x=q.front().first,_y=q.front().second;
+		int 
 		q.pop();
 		for(int i=0;i<4;i++)
         {
