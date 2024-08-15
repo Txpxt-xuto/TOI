@@ -39,7 +39,7 @@ int main(){
             dist[x-1][y] = min(dist[x][y] +1, dist[x-1][y]);
         }
         if(x <= m-1 && path[x+1][y] != 'W' && dist[x+1][y] == 9999){
-             gq.push({x+1, y});
+            gq.push({x+1, y});
             dist[x+1][y] = min(dist[x][y] +1, dist[x+1][y]);
         }
         if(y >= 2 && path[x][y-1] != 'W' && dist[x][y-1] == 9999){
