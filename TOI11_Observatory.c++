@@ -30,7 +30,7 @@ int main()
         for(j=n;j>=k;j--)
         {
             int sum=0;
-            for(int r=0;r<k;r++) sum+=h[i+r][j]-h[i+r][j-r-1];
+            for(r=0;r<k;r++) sum+=h[i+r][j]-h[i+r][j-r-1];
             mx=max(mx,sum);
         }
     }
