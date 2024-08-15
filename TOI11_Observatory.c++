@@ -19,10 +19,10 @@ int main()
         cin >> h[i][j];
         h[i][j]+=h[i][j-1];
     }
-    for(int i=0; i<=m-k; i++) for(int j=1; j<=n-k+1; j++)
+    for(int i=0;i<=m-k;i++) for(int j=1; j<=n-k+1; j++)
     {
         int sum=0;
-        for(int r=0; r<k; r++) sum+=h[i+r][j+r]-h[i+r][j-1];
+        for(int r=0;r<k;r++) sum+=h[i+r][j+r]-h[i+r][j-1];
         mx=max(mx,sum);
     }
     for(int i=0; i<=m-k; i++) 
