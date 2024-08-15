@@ -12,7 +12,8 @@ int main(){
 	cin >> row >> col;
 	vector<vector<char> > robot(row,vector<char> (col));
 	queue<pair<int, int> > q;
-	for(int i=0;i<row;i++){
+	for(int i=0;i<row;i++)
+    {
 		for(int j=0;j<col;j++)
         {
 			cin >> robot[i][j];
