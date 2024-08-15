@@ -72,6 +72,4 @@ int main()
     }
     cout << cnt << " " << sum*2;
 }
-
-
 //ผิด 
