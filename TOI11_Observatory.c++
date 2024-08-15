@@ -27,7 +27,7 @@ int main()
     {
         int sum=0;
         for(int r=0;r<k;r++) sum+=h[i+r][j+r]-h[i+r][j-1];
-        mx=max(mx,sum);
+        mx = max(mx,sum);
     }
     for(i=0;i<=m-k;i++) 
     {
@@ -35,7 +35,7 @@ int main()
         {
             int sum=0;
             for(r=0;r<k;r++) sum+=h[i+r][j]-h[i+r][j-r-1];
-            mx=max(mx,sum);
+            mx = max(mx,sum);
         }
     }
     cout << mx;
