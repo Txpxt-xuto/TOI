@@ -8,7 +8,7 @@ CENTER: Home
 using namespace std;
 int main()
 {
-	int row,col,i,j;
+	int row, col, i, j;
 	cin >> row >> col;
 	vector<vector<char> > robot(row,vector<char> (col));
 	queue<pair<int, int> > q;
@@ -17,7 +17,7 @@ int main()
 		for(j=0;j<col;j++)
         {
 			cin >> robot[i][j];
-			if(robot[i][j]=='X') q.push({i,j});
+			if(robot[i][j] == 'X') q.push({i,j});
 		}
 	}
 	vector<vector<int>> distance(row, vector<int>(col, 0));
