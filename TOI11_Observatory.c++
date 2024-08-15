@@ -45,8 +45,10 @@ int main(){
             dp2[i][j] = dp2[i-1][j+1] + (sum2[i][j] - sum2[i-1][j]);
         }
     }
-    for (int i = k;i <= n;i++){
-        for (int j = m-k+1;j >= 1;j--){
+    for(int i = k;i <= n;i++)
+    {
+        for (int j = m-k+1;j >= 1;j--)
+        {
             ll res = dp2[i][j] - dp2[i-k][j+k] - (sum2[i][j+k] - sum2[i-k][j+k]);
             ans = max(ans , res);
         }
