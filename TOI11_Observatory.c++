@@ -16,7 +16,7 @@ int main()
     cin >> m >> n >> k;
     for(i=0;i<m;i++) 
     {
-        for(int j=1; j<=n; j++)
+        for(j=1; j<=n; j++)
         {
             cin >> h[i][j];
             h[i][j]+=h[i][j-1];
