@@ -7,7 +7,8 @@ CENTER: Home
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
 	int row,col;
 	cin >> row >> col;
 	vector<vector<char> > robot(row,vector<char> (col));
