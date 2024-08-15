@@ -38,19 +38,23 @@ int main()
         x = front.first;
         y = front.second;
         gq.pop();
-        if(x >= 2 && path[x-1][y] != 'W' && dist[x-1][y] == 9999){
+        if(x >= 2 && path[x-1][y] != 'W' && dist[x-1][y] == 9999)
+        {
             gq.push({x-1, y});
             dist[x-1][y] = min(dist[x][y] +1, dist[x-1][y]);
         }
-        if(x <= m-1 && path[x+1][y] != 'W' && dist[x+1][y] == 9999){
+        if(x <= m-1 && path[x+1][y] != 'W' && dist[x+1][y] == 9999)
+        {
             gq.push({x+1, y});
             dist[x+1][y] = min(dist[x][y] +1, dist[x+1][y]);
         }
-        if(y >= 2 && path[x][y-1] != 'W' && dist[x][y-1] == 9999){
+        if(y >= 2 && path[x][y-1] != 'W' && dist[x][y-1] == 9999)
+        {
             gq.push({x, y-1});
             dist[x][y-1] = min(dist[x][y] +1, dist[x][y-1]);
         }
-        if(y <= n-1 && path[x][y+1] != 'W' && dist[x][y+1] == 9999){
+        if(y <= n-1 && path[x][y+1] != 'W' && dist[x][y+1] == 9999)
+        {
             gq.push({x, y+1});
             dist[x][y+1] = min(dist[x][y] +1, dist[x][y+1]);
         }
