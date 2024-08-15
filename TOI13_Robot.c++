@@ -17,10 +17,7 @@ int main()
 		for(int j=0;j<col;j++)
         {
 			cin >> robot[i][j];
-			if(robot[i][j]=='X')
-            {
-				q.push({i,j});
-			}
+			if(robot[i][j]=='X') q.push({i,j});
 		}
 	}
 	vector<vector<int>> distance(row, vector<int>(col, 0));
