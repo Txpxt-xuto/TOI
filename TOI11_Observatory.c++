@@ -17,10 +17,10 @@ int main()
     for(i=0;i<m;i++) 
     {
         for(int j=1; j<=n; j++)
-    {
-        cin >> h[i][j];
-        h[i][j]+=h[i][j-1];
-    }
+        {
+            cin >> h[i][j];
+            h[i][j]+=h[i][j-1];
+        }
     }
     
     for(i=0;i<=m-k;i++) for(int j=1; j<=n-k+1; j++)
