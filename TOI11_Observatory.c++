@@ -22,15 +22,14 @@ int main(){
             scanf("%lld", &a[i][j]);
         }
     }
-    for(int i = 1;i <= n;i++)
+    for(i=1;i<=n;i++)
     {
-        for(int j = 1;j <= m;j++)
+        for(j=1;j<=m;j++)
         {
             sum[i][j] = sum[i-1][j] + sum[i][j-1] - sum[i-1][j-1] + a[i][j];
             dp[i][j] = dp[i-1][j-1] + sum[i][j] - sum[i-1][j];
         }
     }
-
     ll ans = -1e18;
 
     for (int i = k;i <= n;i++){
