@@ -41,7 +41,8 @@ int main()
             {
 				continue;
 			}
-			if((robot[x][y]=='E' || robot[x][y]=='A') && distance[x][y]<=distance[_x][_y]){
+			if((robot[x][y]=='E' || robot[x][y]=='A') && distance[x][y]<=distance[_x][_y])
+            {
 				distance[x][y]=distance[_x][_y]+1;
 				if(robot[x][y]=='A')
                 {
