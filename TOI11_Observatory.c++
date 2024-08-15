@@ -39,15 +39,17 @@ int main(){
             ans = max(ans , res);
         }
     }
-    for (int i = 1;i <= n;i++){
-        for (int j = m;j >= 1;j--){
+    for(i=1;i<=n;i++)
+    {
+        for(j=m;j>=1;j--)
+        {
             sum2[i][j] = sum[i][m] - sum[i][j-1];
             dp2[i][j] = dp2[i-1][j+1] + (sum2[i][j] - sum2[i-1][j]);
         }
     }
-    for(int i = k;i <= n;i++)
+    for(i=k;i<=n;i++)
     {
-        for (int j = m-k+1;j >= 1;j--)
+        for(j=m-k+1;j>=1;j--)
         {
             ll res = dp2[i][j] - dp2[i-k][j+k] - (sum2[i][j+k] - sum2[i-k][j+k]);
             ans = max(ans , res);
