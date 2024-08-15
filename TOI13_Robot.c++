@@ -33,7 +33,8 @@ int main(){
             else dist[i][j] = 9999;
         }
     }
-    while(!gq.empty()){
+    while(!gq.empty())
+    {
         front = gq.front();
         x = front.first;
         y = front.second;
