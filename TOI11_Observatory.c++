@@ -12,7 +12,7 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-    int m,n,k,mx=-INF;
+    int m,n,k,mx=-INF,i,j,r;
     cin >> m >> n >> k;
     for(int i=0; i<m; i++) for(int j=1; j<=n; j++)
     {
@@ -25,9 +25,9 @@ int main()
         for(int r=0;r<k;r++) sum+=h[i+r][j+r]-h[i+r][j-1];
         mx=max(mx,sum);
     }
-    for(int i=0;i<=m-k;i++) 
+    for(i=0;i<=m-k;i++) 
     {
-        for(int j=n;j>=k;j--)
+        for(j=n;j>=k;j--)
         {
             int sum=0;
             for(int r=0;r<k;r++) sum+=h[i+r][j]-h[i+r][j-r-1];
