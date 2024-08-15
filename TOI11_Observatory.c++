@@ -1,8 +1,8 @@
 /*
 TASK: observatory.cpp
 LANG: C++
-AUTHOR: YourName YourLastName
-CENTER: YourCenter
+AUTHOR: Tapat Toungsakul
+CENTER: Home
 */
 #include <iostream>
 #define INF (int)1e9
@@ -14,7 +14,8 @@ int main()
     cin.tie(0);
     int m,n,k,mx=-INF,i,j,r;
     cin >> m >> n >> k;
-    for(i=0;i<m;i++) for(int j=1; j<=n; j++)
+    for(i=0;i<m;i++) 
+    for(int j=1; j<=n; j++)
     {
         cin >> h[i][j];
         h[i][j]+=h[i][j-1];
