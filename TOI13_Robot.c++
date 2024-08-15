@@ -21,8 +21,7 @@ int main()
 		}
 	}
 	vector<vector<int>> distance(row, vector<int>(col, 0));
-	int dx[4]={0,0,1,-1}, dy[4]={-1,1,0,0};
-	int move=0, count=0;
+	int dx[4]={0,0,1,-1}, dy[4]={-1,1,0,0}, move=0, count=0;
 	while(!q.empty())
     {
 		int _x=q.front().first, _y=q.front().second;
