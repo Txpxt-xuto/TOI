@@ -3,7 +3,8 @@ TASK: observatory.cpp
 LANG: C++
 AUTHOR: YourName YourLastName
 CENTER: YourCenter
-*/#include <iostream>
+*/
+#include <iostream>
 #define INF (int)1e9
 using namespace std;
 int h[2000][2001];
