@@ -6,7 +6,6 @@ CENTER: Home
 */
 #include<bits/stdc++.h>
 using namespace std;
-
 int main()
 {
 	int row,col;
@@ -44,7 +43,8 @@ int main()
 			}
 			if((robot[x][y]=='E' || robot[x][y]=='A') && distance[x][y]<=distance[_x][_y]){
 				distance[x][y]=distance[_x][_y]+1;
-				if(robot[x][y]=='A'){
+				if(robot[x][y]=='A')
+                {
 					count++;
 					move=move+2*distance[x][y];
 				}
