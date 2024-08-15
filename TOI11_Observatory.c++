@@ -25,7 +25,7 @@ int main()
     
     for(i=0;i<=m-k;i++) 
     {
-        for(int j=1; j<=n-k+1; j++)
+        for(int j=1;j<=n-k+1;j++)
         {
             int sum=0;
             for(int r=0;r<k;r++) sum+=h[i+r][j+r]-h[i+r][j-1];
