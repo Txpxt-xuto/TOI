@@ -29,19 +29,19 @@ int main()
 		for(i=0;i<4;i++)
         {
 			int x = _x+dx[i], y = _y+dy[i];
-			if(x<0 || x>=row || y<0 || y>=col)
+			if(x < 0 || x >= row || y<0 || y >= col)
             {
 				continue;
 			}
-			if((robot[x][y]=='E' || robot[x][y]=='A') && distance[x][y]<=distance[_x][_y])
+			if((robot[x][y] == 'E' || robot[x][y] == 'A') && distance[x][y] <= distance[_x][_y])
             {
 				distance[x][y]=distance[_x][_y]+1;
-				if(robot[x][y]=='A')
+				if(robot[x][y] = 'A')
                 {
 					count++;
-					move=move+2*distance[x][y];
+					move = move+2*distance[x][y];
 				}
-				robot[x][y]=' ';
+				robot[x][y] = ' ';
 				q.push({x,y});
 			}
 		}
