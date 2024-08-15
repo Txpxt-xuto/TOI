@@ -15,6 +15,9 @@ int main()
     int m,n,k,mx=-INF,i,j,r;
     cin >> m >> n >> k;
     for(i=0;i<m;i++) 
+    {
+        
+    }
     for(int j=1; j<=n; j++)
     {
         cin >> h[i][j];
