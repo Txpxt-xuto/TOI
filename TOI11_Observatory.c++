@@ -5,7 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <iostream>
-
 using namespace std;
 #define ll long long
 const int N = 2003;
