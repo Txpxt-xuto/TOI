@@ -31,12 +31,11 @@ int main()
 	while(!q.empty())
     {
 		int _x=q.front().first, _y=q.front().second;
-		int 
 		q.pop();
 		for(int i=0;i<4;i++)
         {
-			int x=_x+dx[i];
-			int y=_y+dy[i];
+			int x=_x+dx[i], y=_y+dy[i];
+			int ;
 			if(x<0 || x>=row || y<0 || y>=col)
             {
 				continue;
