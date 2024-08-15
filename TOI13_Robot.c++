@@ -21,14 +21,14 @@ int main()
 		}
 	}
 	vector<vector<int>> distance(row, vector<int>(col, 0));
-	int dx[4]={0,0,1,-1}, dy[4]={-1,1,0,0}, move=0, count=0;
+	int dx[4] = {0,0,1,-1}, dy[4] = {-1,1,0,0}, move = 0, count = 0;
 	while(!q.empty())
     {
 		int _x=q.front().first, _y=q.front().second;
 		q.pop();
 		for(i=0;i<4;i++)
         {
-			int x=_x+dx[i], y=_y+dy[i];
+			int x = _x+dx[i], y = _y+dy[i];
 			if(x<0 || x>=row || y<0 || y>=col)
             {
 				continue;
