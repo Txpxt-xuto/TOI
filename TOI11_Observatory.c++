@@ -31,9 +31,10 @@ int main(){
         }
     }
     ll ans = -1e18;
-
-    for (int i = k;i <= n;i++){
-        for (int j = k;j <= m;j++){
+    for (int i = k;i <= n;i++)
+    {
+        for (int j = k;j <= m;j++)
+        {
             ll res = dp[i][j] - dp[i-k][j-k] - (sum[i][j-k] - sum[i-k][j-k]);
             ans = max(ans , res);
         }
