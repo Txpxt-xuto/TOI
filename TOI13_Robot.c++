@@ -16,11 +16,13 @@ int main(){
     int sum = 0;
     int cnt = 0;
     cin >> m >> n;
-    for(int i = 1; i <= m; ++i){
+    for(int i = 1; i <= m; ++i)
+    {
             cin >> path[i];
             path[i] = '@' + path[i];
     }
-    for(int i = 1; i <= m; ++i){
+    for(int i = 1; i <= m; ++i)
+    {
         for(int j = 1; j <= n; ++j)
         {
             if(path[i][j] == 'X')
@@ -31,7 +33,6 @@ int main(){
             else dist[i][j] = 9999;
         }
     }
-
     while(!gq.empty()){
         front = gq.front();
         x = front.first;
