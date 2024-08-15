@@ -9,10 +9,9 @@ CENTER: Home
 using namespace std;
 #define ll long long
 const int N = 2003;
-
 ll a[N][N], sum[N][N], sum2[N][N], dp[N][N], dp2[N][N];
-
-int main(){
+int main()
+{
     int n, m, k, i, j; 
     scanf("%d %d %d", &n, &m, &k);
     for(i=1;i<=n;i++)
