@@ -25,7 +25,7 @@ int main()
         for(int r=0;r<k;r++) sum+=h[i+r][j+r]-h[i+r][j-1];
         mx=max(mx,sum);
     }
-    for(int i=0; i<=m-k; i++) 
+    for(int i=0;i<=m-k;i++) 
     {
         for(int j=n;j>=k;j--)
         {
