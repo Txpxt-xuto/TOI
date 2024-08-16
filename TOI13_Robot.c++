@@ -48,7 +48,6 @@ int main()
             pa[ny][nx]=pa[y][x]+1;
             if(A[ny][nx]=='A'){
                 Acnt++;
-                // cout << pa[ny][nx] << " " << ny << " " << nx << "\n";
                 ans+=pa[ny][nx]*2;
             }
             q.emplace(ny,nx);
