@@ -53,5 +53,5 @@ int main()
             q.emplace(ny,nx);
         }
     }
-    cout << Acnt<<" " << ans;
+    cout << Acnt <<" " << ans;
 }
