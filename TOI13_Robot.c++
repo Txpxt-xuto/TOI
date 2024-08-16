@@ -6,7 +6,6 @@ CENTER: Home
 */
 #include<bits/stdc++.h>
 using namespace std;
-
 string path[2002];
 int dist[2002][2002];
 queue<pair<int, int> > gq;
