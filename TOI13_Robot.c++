@@ -38,9 +38,9 @@ int main()
     {
         auto [y,x] = q.front();
         q.pop();
-        for(auto [u,v]:dir){
-            int ny=y+u;
-            int nx=x+v;
+        for(auto [u,v]:dir)
+        {
+            int ny=y+u,nx=x+v;
             if(ny<0||nx<0||ny>=n||nx>=m)continue;
             if(A[ny][nx]=='W')continue;
             if(visited[ny][nx])continue;
