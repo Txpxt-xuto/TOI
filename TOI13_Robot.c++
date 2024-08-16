@@ -21,15 +21,17 @@ int main(){
             path[i] = '@' + path[i];
     }
     for(int i = 1; i <= m; ++i){
-        for(int j = 1; j <= n; ++j){
-            if(path[i][j] == 'X'){
+        for(j=1;j<=n;++j)
+        {
+            if(path[i][j] == 'X')
+            {
                 dist[i][j] = 0;
                 gq.push({i, j});
             } else dist[i][j] = 9999;
         }
     }
-
-    while(!gq.empty()){
+    while(!gq.empty())
+    {
         front = gq.front();
         x = front.first;
         y = front.second;
