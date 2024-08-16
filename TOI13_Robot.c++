@@ -12,15 +12,19 @@ char A[MAX_N][MAX_N];
 int pa[MAX_N][MAX_N];
 bool visited[MAX_N][MAX_N]={0};
 const vector<pair<int,int>> dir = {{1,0},{-1,0},{0,1},{0,-1}}; 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     int n,m;
     cin >> n >> m;
     vector<pp> robots;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++){
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
             cin >> A[i][j];
-            if(A[i][j]=='X'){
+            if(A[i][j]=='X')
+            {
                 robots.emplace_back(i,j);
             }
         }
