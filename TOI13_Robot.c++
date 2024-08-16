@@ -55,8 +55,8 @@ int main(){
             dist[x][y+1] = min(dist[x][y] +1, dist[x][y+1]);
         }
     }
-    for(int i = 1; i <= m; ++i){
-        for(j = 1; j <= n; ++j)
+    for(i=1;i<=m;++i){
+        for(j=1;j<=n;++j)
         {
             if(path[i][j] == 'A' && dist[i][j] != 9999) 
             {
