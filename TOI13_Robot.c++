@@ -56,8 +56,13 @@ int main(){
         }
     }
     for(int i = 1; i <= m; ++i){
-        for(int j = 1; j <= n; ++j){
-            if(path[i][j] == 'A' && dist[i][j] != 9999) {sum += dist[i][j];cnt += 1;}
+        for(j = 1; j <= n; ++j)
+        {
+            if(path[i][j] == 'A' && dist[i][j] != 9999) 
+            {
+                sum += dist[i][j];
+                cnt += 1;
+            }
         }
     }
     cout << cnt << " " << sum*2;
