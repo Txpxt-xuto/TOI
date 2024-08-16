@@ -18,9 +18,9 @@ int main()
     int n,m;
     cin >> n >> m;
     vector<pp> robots;
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-        for(int j=0;j<m;j++)
+        for(j=0;j<m;j++)
         {
             cin >> A[i][j];
             if(A[i][j]=='X') robots.emplace_back(i,j);
