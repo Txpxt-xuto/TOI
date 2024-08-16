@@ -11,16 +11,18 @@ string path[2002];
 int dist[2002][2002];
 queue<pair<int, int> > gq;
 pair<int, int> front;
-int n, m, x, y;
-int main(){
-    int sum = 0;
-    int cnt = 0;
+int n, m, x, y, i, j;
+int main()
+{
+    int sum = 0,cnt = 0;
     cin >> m >> n;
-    for(int i = 1; i <= m; ++i){
+    for(i=1;i<=m;++i)
+    {
             cin >> path[i];
             path[i] = '@' + path[i];
     }
-    for(int i = 1; i <= m; ++i){
+    for(i=1;i<=m;++i)
+    {
         for(j=1;j<=n;++j)
         {
             if(path[i][j] == 'X')
