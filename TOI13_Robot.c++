@@ -28,12 +28,13 @@ int main()
     }
     int Acnt=0,ans=0;
     queue<pp> q;
-    for(auto [i,j]:robots){
+    for(auto [i,j]:robots)
+    {
         q.emplace(i,j);
         pa[i][j]=0;
         visited[i][j]=1;
     }
-    while (!q.empty())
+    while(!q.empty())
     {
         auto [y,x] = q.front();
         q.pop();
