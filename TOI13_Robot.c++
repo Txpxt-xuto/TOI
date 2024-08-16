@@ -23,16 +23,16 @@ int main()
         for(j=0;j<m;j++)
         {
             cin >> A[i][j];
-            if(A[i][j]=='X') robots.emplace_back(i,j);
+            if(A[i][j] == 'X') robots.emplace_back(i,j);
         }
     }
-    int Acnt=0,ans=0;
+    int Acnt = 0,ans = 0;
     queue<pp> q;
     for(auto [i,j]:robots)
     {
         q.emplace(i,j);
-        pa[i][j]=0;
-        visited[i][j]=1;
+        pa[i][j] = 0;
+        visited[i][j] = 1;
     }
     while(!q.empty())
     {
