@@ -23,10 +23,7 @@ int main()
         for(int j=0;j<m;j++)
         {
             cin >> A[i][j];
-            if(A[i][j]=='X')
-            {
-                robots.emplace_back(i,j);
-            }
+            if(A[i][j]=='X') robots.emplace_back(i,j);
         }
     }
     int Acnt=0,ans=0;
