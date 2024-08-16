@@ -42,11 +42,11 @@ int main()
         {
             int ny=y+u,nx=x+v;
             if(ny<0||nx<0||ny>=n||nx>=m)continue;
-            if(A[ny][nx]=='W')continue;
+            if(A[ny][nx] == 'W')continue;
             if(visited[ny][nx])continue;
             visited[ny][nx] = 1;
             pa[ny][nx] = pa[y][x]+1;
-            if(A[ny][nx]=='A')
+            if(A[ny][nx] == 'A')
             {
                 Acnt++;
                 ans += pa[ny][nx]*2;
