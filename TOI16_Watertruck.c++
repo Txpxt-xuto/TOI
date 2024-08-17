@@ -35,9 +35,10 @@ int main()
         do {
             vector<ll> temp;
             for (i = 0; i <= v; i++) {
-                if (deg[i] == 1) {
+                if(deg[i] == 1)
+                {
                     deg[i] = 0;
-                    for (pint p : adj[i])
+                    for(pint p : adj[i])
                     {
                         if(deg[p.second] > 0){
                             deg[p.second]--;
