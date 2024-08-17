@@ -91,7 +91,7 @@ int main()
                     }
                 }
             }
-            if (cnt == 2) 
+            if(cnt == 2) 
             {
                 sum += dis[0][odd[1]];
                 cout << sum;
@@ -104,10 +104,12 @@ int main()
                     priority_queue<pint, vector<pint>, greater<pint>> pq2;
                     dis[i][odd[i]] = 0;
                     pq2.push({dis[i][odd[i]], odd[i]});
-                    while (!pq2.empty()) {
+                    while(!pq2.empty()) 
+                    {
                         a = pq2.top().second;
                         pq2.pop();
-                        if (!pro2[a]) {
+                        if(!pro2[a]) 
+                        {
                             pro2[a] = 1;
                             for (pint p : adj[a]) {
                                 w = p.first;
