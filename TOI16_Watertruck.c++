@@ -51,9 +51,10 @@ int main()
             }
             cnt = 0;
             for(i=0;i<=v;i++) cnt += (deg[i] == 1);
-        } while (cnt > 0);
+        } while(cnt > 0);
         cnt = 0;
-        for(i=0;i<=v;i++){
+        for(i=0;i<=v;i++)
+        {
             if(deg[i]%2 == 1) 
             {
                 odd.push_back(i);
@@ -71,17 +72,18 @@ int main()
             priority_queue<pint, vector<pint>, greater<pint>> pq;
             dis[0][odd[0]] = 0;
             pq.push({dis[0][odd[0]], odd[0]});
-            while (!pq.empty()) 
+            while(!pq.empty()) 
             {
                 a = pq.top().second;
                 pq.pop();
-                if (!pro[a]) 
+                if(!pro[a]) 
                 {
                     pro[a] = 1;
-                    for (pint p : adj[a]) {
+                    for(pint p : adj[a])
+                    {
                         w = p.first;
                         b = p.second;
-                        if (!pro[b]) 
+                        if(!pro[b]) 
                         {
                             dis[0][b] = min(dis[0][b], dis[0][a] + w);
                             pq.push({dis[0][b], b});
