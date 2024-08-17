@@ -64,12 +64,9 @@ int main()
         else 
         {
             ll dis[cnt][v + 1], pro[v + 1] = {};
-            for (i = 0; i < cnt; i++) 
+            for(i=0;i<cnt;i++) 
             {
-                for (j = 0; j <= v; j++) 
-                {
-                    dis[i][j] = INT_MAX;
-                }
+                for(j=0;j<=v;j++) dis[i][j] = INT_MAX;
             }
             priority_queue<pint, vector<pint>, greater<pint>> pq;
             dis[0][odd[0]] = 0;
