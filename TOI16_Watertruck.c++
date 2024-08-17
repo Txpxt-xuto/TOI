@@ -38,7 +38,7 @@ int main()
                 if (deg[i] == 1) {
                     deg[i] = 0;
                     for (pint p : adj[i]) {
-                        if (deg[p.second] > 0) {
+                        if(deg[p.second] > 0){
                             deg[p.second]--;
                             sum += p.first;
                         }
