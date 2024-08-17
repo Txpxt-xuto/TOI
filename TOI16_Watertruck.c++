@@ -27,9 +27,7 @@ int main()
         adj[a].push_back({w, b});
         adj[b].push_back({w, a});
     }
-    for(i = 0; i <= v; i++){
-        cnt += deg[i]%2;
-    }
+    for(i = 0; i <= v; i++) cnt += deg[i]%2;
     if (cnt == 0) {
         cout << sum;
     }
