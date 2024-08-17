@@ -14,7 +14,6 @@ int main()
     cin.tie(0);
     cout.tie(0);
     ll i, j, e, v, a, b, w, sum = 0, cnt = 0;
-    ll 
     cin >> e >> v;
     ll deg[v + 1] = {};
     vector<pint> adj[v + 1];
