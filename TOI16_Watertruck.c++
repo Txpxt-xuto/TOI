@@ -60,9 +60,7 @@ int main()
                 cnt++;
             }
         }
-        if (cnt == 0) {
-            cout << sum;
-        }
+        if (cnt == 0) cout << sum;
         else {
             ll dis[cnt][v + 1], pro[v + 1] = {};
             for (i = 0; i < cnt; i++) {
