@@ -4,12 +4,6 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 Center: Home
 */
-/*
-TASK: truck.cpp
-LANG: C++
-AUTHOR: Tanakorn Sookhanonsawat
-Center: WU
-*/
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
