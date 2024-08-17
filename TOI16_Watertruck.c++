@@ -61,10 +61,13 @@ int main()
             }
         }
         if(cnt == 0) cout << sum;
-        else {
+        else 
+        {
             ll dis[cnt][v + 1], pro[v + 1] = {};
-            for (i = 0; i < cnt; i++) {
-                for (j = 0; j <= v; j++) {
+            for (i = 0; i < cnt; i++) 
+            {
+                for (j = 0; j <= v; j++) 
+                {
                     dis[i][j] = INT_MAX;
                 }
             }
