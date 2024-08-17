@@ -34,7 +34,7 @@ int main()
         vector<ll> odd;
         do {
             vector<ll> temp;
-            for (i = 0; i <= v; i++) {
+            for(i=0;i<=v;i++) {
                 if(deg[i] == 1)
                 {
                     deg[i] = 0;
