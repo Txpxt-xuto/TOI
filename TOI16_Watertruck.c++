@@ -111,7 +111,8 @@ int main()
                         if(!pro2[a]) 
                         {
                             pro2[a] = 1;
-                            for (pint p : adj[a]) {
+                            for(pint p : adj[a]) 
+                            {
                                 w = p.first;
                                 b = p.second;
                                 if (!pro2[b]) {
