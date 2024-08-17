@@ -91,7 +91,8 @@ int main()
                 cout << sum;
             }
             else {
-                for (i = 1; i <= 2; i++) {
+                for(i=1;i<=2;i++) 
+                {
                     ll pro2[v + 1] = {};
                     priority_queue<pint, vector<pint>, greater<pint>> pq2;
                     dis[i][odd[i]] = 0;
