@@ -51,8 +51,6 @@ int main()
             }
             cnt = 0;
             for(i=0;i<=v;i++) cnt += (deg[i] == 1);
-                
-            }
         } while (cnt > 0);
         cnt = 0;
         for (i = 0; i <= v; i++) {
