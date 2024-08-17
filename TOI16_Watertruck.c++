@@ -29,8 +29,6 @@ int main()
     }
     for(i=0;i<=v;i++) cnt += deg[i]%2;
     if (cnt == 0) cout << sum;
-        
-    }
     else {
         vector<ll> odd;
         do {
