@@ -18,7 +18,7 @@ int main()
     cin >> e >> v;
     ll deg[v + 1] = {};
     vector<pint> adj[v + 1];
-    for(i =0; i < e; i++)
+    for(i=0; i < e; i++)
     {
         cin >> a >> b >> w;
         deg[a]++;
