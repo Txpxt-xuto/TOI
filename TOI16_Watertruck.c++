@@ -54,7 +54,7 @@ int main()
         } while (cnt > 0);
         cnt = 0;
         for(i=0;i<=v;i++){
-            if (deg[i]%2 == 1) 
+            if(deg[i]%2 == 1) 
             {
                 odd.push_back(i);
                 cnt++;
