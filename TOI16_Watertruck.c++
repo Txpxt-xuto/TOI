@@ -115,7 +115,8 @@ int main()
                             {
                                 w = p.first;
                                 b = p.second;
-                                if (!pro2[b]) {
+                                if(!pro2[b])
+                                {
                                     dis[i][b] = min(dis[i][b], dis[i][a] + w);
                                     pq2.push({dis[i][b], b});
                                 }
