@@ -13,7 +13,7 @@ int findParent(int u){
 }
 int main()
 {
-    int n, m, u, v, w;
+    int n, m, u, v, w, i;
     cin >> n >> m;
     for(i=0;i<n;i++) parent[i] = i;
     priority_queue<pair<int, pair<int, int>>> pq;
