@@ -20,7 +20,7 @@ signed main()
         p[i] = i; 
         sz[i] = 1;
     }
-	for(int i = 0; i<m; ++i)
+	for(i=0;i<m;++i)
     {
 		int u, v, w; scanf("%d %d %d", &u, &v, &w); 
 		E[i] = std::make_tuple(w-1, u-1, v-1);
