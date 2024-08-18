@@ -27,7 +27,6 @@ int com(const void *a,const void *b){
     }
     else return +1;
 }
-
 int main(){
     int n,m;
     scanf("%d%d",&m,&n);
@@ -50,6 +49,5 @@ int main(){
         ans+=ll;
         U(xx,yy);
     }
-
     printf("%lld",ans);
 }
