@@ -36,9 +36,7 @@ int main(){
     long long int ans=0;
     for(int i=1;i<=n;i++)
     {
-        int ll=a[i].l;
-        int xx=a[i].x;
-        int yy=a[i].y;
+        int ll=a[i].l,xx=a[i].x,yy=a[i].y;
         if(find(xx)==find(yy)) continue;
         ans+=ll;
         U(xx,yy);
