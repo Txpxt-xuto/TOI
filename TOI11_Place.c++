@@ -31,7 +31,7 @@ signed main()
 	}
 	std::sort(E, E+m, std::greater<std::tuple<int,int,int>>());
 	long long MST = 0;
-	for(int i = 0; i<m; ++i)
+	for(i=0;i<m;++i)
     {
 		int w, u, v;
         std::tie(w, u, v) = E[i];
