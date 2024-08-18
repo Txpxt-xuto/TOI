@@ -22,7 +22,8 @@ signed main()
     }
 	for(i=0;i<m;++i)
     {
-		int u, v, w; scanf("%d %d %d", &u, &v, &w); 
+		int u, v, w; 
+        scanf("%d %d %d", &u, &v, &w); 
 		E[i] = std::make_tuple(w-1, u-1, v-1);
 	}
 	std::sort(E, E+m, std::greater<std::tuple<int,int,int>>());
