@@ -36,9 +36,12 @@ signed main()
 		int w, u, v; std::tie(w, u, v) = E[i];
 		if(fp(u) != fp(v))
         {
-			u = fp(u); v = fp(v); MST += w;
+			u = fp(u); 
+            v = fp(v); 
+            MST += w;
 			if(sz[u] < sz[v]) std::swap(u, v);
-			sz[u] += sz[v]; p[v] = u;
+			sz[u] += sz[v]; 
+            p[v] = u;
 		}
 	}
 	printf("%lld", MST);
