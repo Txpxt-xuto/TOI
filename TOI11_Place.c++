@@ -40,9 +40,6 @@ int main(){
         a[i].y=v;
     }
     qsort(a+1,n,sizeof(pii),com);
-   // for(int i=1;i<=n;i++){
-     //   printf("%d %d %d\n",a[i].l,a[i].x,a[i].y);
-   // }
     long long int ans=0;
 
     for(int i=1;i<=n;i++){
