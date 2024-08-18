@@ -21,7 +21,8 @@ int com(const void *a,const void *b){
     if(num1->l > num2->l) return -1;
     else return +1;
 }
-int main(){
+int main()
+{
     int n,m,i;
     scanf("%d%d",&m,&n);
     for(i=1;i<=200000;i++) pa[i]=i;
