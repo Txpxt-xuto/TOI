@@ -13,16 +13,19 @@ int findParent(int u){
 int main(){
     int n, m, u, v, w;
     cin >> n >> m;
-    for(int i=0; i<n; i++){
+    for(int i=0; i<n; i++)
+    {
         parent[i] = i;
     }
     priority_queue<pair<int, pair<int, int>>> pq;
-    for(int i=0; i<m; i++){
+    for(int i=0; i<m; i++)
+    {
         cin >> u >> v >> w;
         pq.push({w, {u, v}});
     }
     int maxdist = 0;
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         w = pq.top().first;
         u = pq.top().second.first;
         v = pq.top().second.second;
