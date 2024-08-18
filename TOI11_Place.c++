@@ -1,6 +1,6 @@
 /*
 TASK: place.cpp
-LANG: C+
+LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */ 
