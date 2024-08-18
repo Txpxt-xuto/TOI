@@ -31,7 +31,7 @@ int main(){
         v = findParent(v);
         if(u != v){
             maxdist += w - 1;
-            parent[v] = u; // set new parent
+            parent[v] = u; 
         }
     }
     cout << maxdist;
