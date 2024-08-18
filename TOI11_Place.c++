@@ -13,8 +13,9 @@ std::tuple<int,int,int> E[1000000];
 int fp(int x){if(x == p[x]) return x; return p[x] = fp(p[x]);}
 signed main()
 {
-	int n, m; scanf("%d %d", &n, &m);
-	for(int i = 0; i<n; ++i)
+	int n, m, i; 
+    scanf("%d %d", &n, &m);
+	for(i=0;i<n;++i)
     {
         p[i] = i; 
         sz[i] = 1;
