@@ -9,8 +9,8 @@ int findParent(int u){
     }
     return parent[u] = findParent(parent[u]);
 }
-
-int main(){
+int main()
+{
     int n, m, u, v, w;
     cin >> n >> m;
     for(i=0;i<n;i++) parent[i] = i;
