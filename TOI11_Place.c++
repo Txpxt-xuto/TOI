@@ -16,7 +16,7 @@ int main(){
     for(int i=0; i<n; i++){
         parent[i] = i;
     }
-    priority_queue<pair<int, pair<int, int>>> pq; // graph
+    priority_queue<pair<int, pair<int, int>>> pq;
     for(int i=0; i<m; i++){
         cin >> u >> v >> w;
         pq.push({w, {u, v}});
@@ -31,7 +31,7 @@ int main(){
         v = findParent(v);
         if(u != v){
             maxdist += w - 1;
-            parent[v] = u; 
+            parent[v] = u;
         }
     }
     cout << maxdist;
