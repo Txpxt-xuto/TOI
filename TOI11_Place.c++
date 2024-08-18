@@ -29,7 +29,8 @@ int main()
         pq.pop();
         u = findParent(u);
         v = findParent(v);
-        if(u != v){
+        if(u != v)
+        {
             maxdist += w - 1;
             parent[v] = u;
         }
