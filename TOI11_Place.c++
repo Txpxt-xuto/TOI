@@ -22,10 +22,11 @@ int com(const void *a,const void *b){
     else return +1;
 }
 int main(){
-    int n,m;
+    int n,m,i;
     scanf("%d%d",&m,&n);
-    for(int i=1;i<=200000;i++) pa[i]=i;
-    for(int i=1;i<=n;i++){
+    for(i=1;i<=200000;i++) pa[i]=i;
+    for(i=1;i<=n;i++)
+    {
         int u,v,w;
         scanf("%d%d%d",&u,&v,&w);
         a[i].l=w-1;
@@ -34,7 +35,7 @@ int main(){
     }
     qsort(a+1,n,sizeof(pii),com);
     long long int ans=0;
-    for(int i=1;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
         int ll=a[i].l,xx=a[i].x,yy=a[i].y;
         if(find(xx)==find(yy)) continue;
