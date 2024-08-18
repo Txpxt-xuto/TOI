@@ -1,13 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-
 typedef struct{
     int l,x,y;
 } pii;
 pii a[200050];
 int pa[200050];
-
 int find(int v){
     if(pa[v]==v) return v;
     return pa[v]=find(pa[v]);
