@@ -15,7 +15,9 @@ signed main()
 {
 	int n, m; scanf("%d %d", &n, &m);
 	for(int i = 0; i<n; ++i)
-    {p[i] = i; sz[i] = 1;
+    {
+        p[i] = i; 
+        sz[i] = 1;
     }
 	for(int i = 0; i<m; ++i)
     {
