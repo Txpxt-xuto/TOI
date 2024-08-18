@@ -12,13 +12,11 @@ int find(int v){
     if(pa[v]==v) return v;
     return pa[v]=find(pa[v]);
 }
-
 void U(int a,int b){
     a=find(a);
     b=find(b);
     if(a!=b) pa[a]=b;
 }
-
 int com(const void *a,const void *b){
     const pii *num1=(pii*)a;
     const pii *num2=(pii*)b;
