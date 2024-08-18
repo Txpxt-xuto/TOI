@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int parent[200001];
-
 int findParent(int u){
     if(parent[u] == u) return u;
     return parent[u] = findParent(parent[u]);
