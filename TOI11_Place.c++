@@ -5,7 +5,7 @@ int parent[200001];
 
 int findParent(int u){
     if(parent[u] == u){
-        return u; // it is its own parent
+        return u;
     }
     return parent[u] = findParent(parent[u]);
 }
