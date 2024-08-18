@@ -18,9 +18,7 @@ void U(int a,int b){
 int com(const void *a,const void *b){
     const pii *num1=(pii*)a;
     const pii *num2=(pii*)b;
-    if(num1->l > num2->l){
-        return -1;
-    }
+    if(num1->l > num2->l) return -1;
     else return +1;
 }
 int main(){
