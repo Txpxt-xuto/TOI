@@ -41,8 +41,8 @@ int main(){
     }
     qsort(a+1,n,sizeof(pii),com);
     long long int ans=0;
-
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         int ll=a[i].l;
         int xx=a[i].x;
         int yy=a[i].y;
