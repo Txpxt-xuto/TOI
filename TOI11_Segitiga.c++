@@ -36,7 +36,8 @@ bool mcm(int i, int j, int want)
 int main()
 {
     ios_base::sync_with_stdio(0),cin.tie(0);
-    for(int loop=0;loop<20;loop++){
+    for(int loop=0;loop<20;loop++)
+    {
         cin >> n >> a;
     if(a[0]=='0')
     {
