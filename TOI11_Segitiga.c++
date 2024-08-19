@@ -3,8 +3,9 @@ using namespace std;
 int n; string a;
 int dp[3][256][256];
 bool mcm(int i, int j, int want){
-    if(i==j){return (a[i]-'0'==want);}
-    if(dp[want][i][j]!=-1)return dp[want][i][j];
+    if(i==j)
+        return (a[i]-'0'==want);
+    if(dp[want][i][j]!=-1) return dp[want][i][j];
     if(want==0)
     {
         for(int k=i;k<j;k++)
