@@ -17,9 +17,9 @@ bool mcm(int i, int j, int want)
     {
         for(int k=i;k<j;k++)
         {
-            if(mcm(i,k,0) && mcm(k+1,j,0))return dp[want][i][j] = 1;
-            else if(mcm(i,k,1) && mcm(k+1,j,0))return dp[want][i][j] = 1;
-            else if(mcm(i,k,2) && mcm(k+1,j,1))return dp[want][i][j] = 1;
+            if(mcm(i,k,0) && mcm(k+1,j,0)) return dp[want][i][j] = 1;
+            else if(mcm(i,k,1) && mcm(k+1,j,0)) return dp[want][i][j] = 1;
+            else if(mcm(i,k,2) && mcm(k+1,j,1)) return dp[want][i][j] = 1;
         }
     }else { //if(want ==1)
         for(int k=i;k<j;k++){
