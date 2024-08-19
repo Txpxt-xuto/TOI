@@ -43,7 +43,7 @@ int main()
         {
             if(n==1)
             {
-                cout<<"yes\n"; 
+                cout << "yes\n"; 
                 continue;
             }
             else if(memset(dp,-1,sizeof(dp));
