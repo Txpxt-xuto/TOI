@@ -38,7 +38,8 @@ int main()
     ios_base::sync_with_stdio(0),cin.tie(0);
     for(int loop=0;loop<20;loop++){
         cin >> n >> a;
-    if(a[0]=='0'){
+    if(a[0]=='0')
+    {
         if(n==1){cout<<"yes\n"; continue;}
         else if(memset(dp,-1,sizeof(dp));
             mcm(0,n-1,0)){cout<<"yes\n"; continue;}
