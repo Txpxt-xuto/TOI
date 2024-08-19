@@ -31,9 +31,10 @@ bool mcm(int i, int j, int want)
             else if(mcm(i,k,2) && ((mcm(k+1,j,0))||(mcm(k+1,j,2)))) return dp[want][i][j] = 1;
         }
     }
-return  dp[want][i][j]=0;
+    return  dp[want][i][j]=0;
 }
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0),cin.tie(0);
     for(int loop=0;loop<20;loop++){
         cin >> n >> a;
