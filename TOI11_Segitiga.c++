@@ -2,14 +2,15 @@
 using namespace std;
 int n; string a;
 int dp[3][256][256];
-bool mcm(int i, int j, int want){
+bool mcm(int i, int j, int want)
+{
     if(i==j) return (a[i]-'0'==want);
     if(dp[want][i][j]!=-1) return dp[want][i][j];
     if(want==0)
     {
         for(int k=i;k<j;k++)
         {
-            if(mcm(i,k,0) && mcm(k+1,j,2))return dp[want][i][j] = 1;
+            if(mcm(i,k,0) && mcm(k+1,j,2)) return dp[want][i][j] = 1;
         }
     }
     else if(want==2)
