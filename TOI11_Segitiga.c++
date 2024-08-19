@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n; string a;
+int n; 
+string a;
 int dp[3][256][256];
 bool mcm(int i, int j, int want)
 {
