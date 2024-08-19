@@ -40,7 +40,11 @@ int main()
         cin >> n >> a;
     if(a[0]=='0')
     {
-        if(n==1){cout<<"yes\n"; continue;}
+        if(n==1)
+        {
+            cout<<"yes\n"; 
+            continue;
+        }
         else if(memset(dp,-1,sizeof(dp));
             mcm(0,n-1,0)){cout<<"yes\n"; continue;}
     }
