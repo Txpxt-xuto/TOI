@@ -10,7 +10,6 @@ bool mcm(int i, int j, int want){
         {
             if(mcm(i,k,0) && mcm(k+1,j,2))return dp[want][i][j] = 1;
         }
-
     }
     else if(want==2)
     {
