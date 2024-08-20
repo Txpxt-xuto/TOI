@@ -39,7 +39,8 @@ int main() {
         sort(v.begin(), v.end());
         m[v]++;
     }
-    for (i = 0; i < q; i++) {
+    for(i = 0; i < q; i++)
+    {
         vector<pi> v;
         int qi;
         cin >> qi;
