@@ -1,6 +1,6 @@
 /*
-TASK: blockchain.c
-LANG: C
+TASK: blockchain.cpp
+LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
