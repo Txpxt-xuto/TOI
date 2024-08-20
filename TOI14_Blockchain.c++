@@ -30,8 +30,9 @@ int main() {
         {
             int a, b;
             cin >> a >> b;
-            if (a < b) {
-                v.push_back({a, b});
+            if (a < b) v.push_back({a, b});
+            {
+                
             }
             else {
                 v.push_back({b, a});
