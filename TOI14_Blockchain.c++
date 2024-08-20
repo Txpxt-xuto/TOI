@@ -48,8 +48,8 @@ int main() {
             if (a < b) {
                 v.push_back({a, b});
             }
-            else {
-                v.push_back({b, a});
+            else v.push_back({b, a});
+                
             }
         }
         sort(v.begin(), v.end());
