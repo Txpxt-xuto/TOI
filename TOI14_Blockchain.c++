@@ -49,8 +49,7 @@ int main() {
                 v.push_back({a, b});
             }
             else v.push_back({b, a});
-                
-            }
+
         }
         sort(v.begin(), v.end());
         cout << m[v] << "\n";
