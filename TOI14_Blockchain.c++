@@ -4,12 +4,6 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-/*
-TASK: blockchain.cpp
-LANG: C++
-AUTHOR: Tanakorn Sookhanonsawat
-CENTER: WU
-*/
 #include <bits/stdc++.h>
 using namespace std;
 typedef pair<int, int> pi;
