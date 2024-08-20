@@ -26,7 +26,8 @@ int main() {
         vector<pi> v;
         int ti;
         cin >> ti;
-        for (j = 0; j < ti - 1; j++) {
+        for(j=0;j<ti-1;j++)
+        {
             int a, b;
             cin >> a >> b;
             if (a < b) {
