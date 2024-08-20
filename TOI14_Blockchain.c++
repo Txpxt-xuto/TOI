@@ -21,7 +21,7 @@ int main() {
     int t, q;
     map<vector<pi>, int> m;
     cin >> t >> q;
-    for(i = 0; i < t; i++)
+    for(i=0;i<t;i++)
     {
         vector<pi> v;
         int ti;
