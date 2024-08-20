@@ -41,7 +41,8 @@ int main() {
         vector<pi> v;
         int qi;
         cin >> qi;
-        for (j = 0; j < qi - 1; j++) {
+        for(j=0;j<qi-1;j++)
+        {
             int a, b;
             cin >> a >> b;
             if (a < b) {
