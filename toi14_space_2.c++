@@ -14,7 +14,7 @@ int main()
 {
 	ios::sync_with_stdio(0); 
     cin.tie(0);
-	int ans_1=0, ans_2=0, ans_3=0;
+	int ans_1 = 0, ans_2 = 0, ans_3 = 0;
 	int n, m, i, j, k;
 	cin >> n >> m;
 	for(i=1;i<=m;i++)
@@ -32,13 +32,12 @@ int main()
         {
             if(a[i][j]==true)
             {
-				int c=0, xm=i, xi=i, ym=j, yi=j;
+				int c = 0, xm = i, xi = i, ym = j, yi = j;
 				q.push({i,j});
 				a[i][j]==false;
 				while(!q.empty())
                 {
-					int x = q.front().first;
-					int y = q.front().second;
+					int x = q.front().first,y = q.front().second;
 					xm = max(xm,x);
 					xi = min(xi,x);
 					ym = max(ym,y);
