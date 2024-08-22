@@ -21,7 +21,7 @@ int main()
         {
             if(a[i][j]=='1')
             {
-                a[i][j]='0';
+                a[i][j] = '0';
                 q.push({i,j});
                 int cnt = 0,minx = i,maxx = i,miny = j,maxy = j;
                 while(!q.empty())
