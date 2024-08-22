@@ -34,10 +34,10 @@ int main()
                     int y=q.front().second;
                     q.pop();
                     cnt+=1;
-                    minx=min(minx,x);
-                    maxx=max(maxx,x);
-                    miny=min(miny,y);
-                    maxy=max(maxy,y);
+                    minx = min(minx,x);
+                    maxx = max(maxx,x);
+                    miny = min(miny,y);
+                    maxy = max(maxy,y);
                     if(x+1<m && a[x+1][y]=='1')
                     {
                         a[x+1][y]='0';
