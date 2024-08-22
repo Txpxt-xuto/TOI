@@ -55,8 +55,7 @@ int main()
                         q.push({x,y-1});
                     }
                 }
-                int h=maxx-minx+1;
-                int w=maxy-miny+1;
+                int h = maxx-minx+1,w = maxy-miny+1;
                 if(h==w && h*w==cnt) sqa+=1;
                 else if(h==w && h*w!=cnt) dia+=1;
                 else tri+=1;
