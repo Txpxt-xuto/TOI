@@ -32,10 +32,8 @@ int main()
                 {
                     int o=0;
                     while(i+o<n && ss[i+o][j]) o++;
-                    if(ss[i+o-1][j-1])
-                    t++;
-                    else
-                    k++;
+                    if(ss[i+o-1][j-1]) t++;
+                    else k++;
                 }
                 else
                 t++;
