@@ -51,10 +51,8 @@ int main(){
 				if((xm-xi+1)*(xm-xi+1)==c && (ym-yi+1)*(ym-yi+1)==c) ans_1++;			
 				else if(xm-xi==ym-yi) ans_2++;
 				else ans_3++;
-				//cout << xm << ' ' << xi << ' ' << ym << ' ' << yi << ' '<< c <<  "\n";
 			}
 		}
 	}
 	cout << ans_1 << ' ' << ans_2 << ' ' << ans_3;
 }
-//true is 1
