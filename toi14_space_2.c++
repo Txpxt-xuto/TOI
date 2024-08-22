@@ -35,13 +35,14 @@ int main()
 				int c=0, xm=i, xi=i, ym=j, yi=j;
 				q.push({i,j});
 				a[i][j]==false;
-				while(!q.empty()){
-					int x=q.front().first;
-					int y=q.front().second;
-					xm=max(xm,x);
-					xi=min(xi,x);
-					ym=max(ym,y);
-					yi=min(yi,y);
+				while(!q.empty())
+                {
+					int x = q.front().first;
+					int y = q.front().second;
+					xm = max(xm,x);
+					xi = min(xi,x);
+					ym = max(ym,y);
+					yi = min(yi,y);
 					q.pop();
 					for(int k=0;k<4;k++){
 						int xx=x+dx[k];
