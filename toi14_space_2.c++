@@ -15,8 +15,8 @@ int main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int n,m;
-    cin>>m>>n;
+    int n,m,i,j;
+    cin >> m >> n;
     for(i=0;i<n;i++)
     cin>>ss[i];
     int r=0,t=0,k=0;
