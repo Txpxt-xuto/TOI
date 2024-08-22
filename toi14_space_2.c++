@@ -26,7 +26,7 @@ int main()
         {
             if(ss[i][j])
             {
-                if(j+1<m&&i+1<n&&ss[i][j+1]&&ss[i+1][j])
+                if(j+1<m && i+1<n && ss[i][j+1] && ss[i+1][j])
                 r++;
                 else if(j+1<m&&ss[i][j+1])
                 t++;
