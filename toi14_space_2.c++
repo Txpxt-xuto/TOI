@@ -42,8 +42,7 @@ int main()
                 {
                     auto p=q.front();
                     q.pop();
-                    if(ss[p.f][p.s]==0)
-                    continue;
+                    if(ss[p.f][p.s]==0) continue;
                     ss[p.f][p.s]=0;
                     for(int l=0;l<4;l++)
                     {
