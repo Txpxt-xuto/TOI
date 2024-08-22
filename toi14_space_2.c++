@@ -27,8 +27,8 @@ int main()
             if(ss[i][j])
             {
                 if(j+1<m && i+1<n && ss[i][j+1] && ss[i+1][j]) r++;
-                else if(j+1<m&&ss[i][j+1]) t++;
-                else if(i+1<n&&j-1>=0&&j+1<m&&ss[i+1][j-1]&&ss[i+1][j+1])
+                else if(j+1<m && ss[i][j+1]) t++;
+                else if(i+1<n && j-1>=0 && j+1<m && ss[i+1][j-1] && ss[i+1][j+1])
                 {
                     int o=0;
                     while(i+o<n&&ss[i+o][j])
