@@ -35,8 +35,7 @@ int main()
                     if(ss[i+o-1][j-1]) t++;
                     else k++;
                 }
-                else
-                t++;
+                else t++;
                 queue<pair<int,int>> q;
                 q.push({i,j});
                 while(!q.empty())
