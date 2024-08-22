@@ -17,7 +17,7 @@ int main()
     for(i=0;i<m;i++){ for(j=0;j<n;j++) cin >> a[i][j];} 
     for(i=0;i<m;i++)
     {
-        for(int j=0;j<n;j++)
+        for(j=0;j<n;j++)
         {
             if(a[i][j]=='1')
             {
