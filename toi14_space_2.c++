@@ -18,7 +18,7 @@ int main()
     int n,m,i,j;
     cin >> m >> n;
     for(i=0;i<n;i++)
-    cin>>ss[i];
+    cin >> ss[i];
     int r=0,t=0,k=0;
     for(i=0;i<n;i++)
     {
