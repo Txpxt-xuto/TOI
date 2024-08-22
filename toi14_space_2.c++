@@ -47,7 +47,7 @@ int main()
                     for(l=0;l<4;l++)
                     {
                         int iii=p.f+di[l], jjj=p.s+dj[l];
-                        if(iii<0||iii>=n||jjj<0||jjj>=m)
+                        if(iii<0 || iii>=n || jjj<0 || jjj>=m)
                         continue;
                         if(ss[iii][jjj])
                         q.push({iii,jjj});
