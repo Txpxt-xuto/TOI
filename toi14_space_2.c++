@@ -17,7 +17,6 @@ int main()
     cin.tie(0);
     int n,m;
     cin>>m>>n;
-    //string ss[n];
     for(int i=0;i<n;i++)
     cin>>ss[i];
     int r=0,t=0,k=0;
