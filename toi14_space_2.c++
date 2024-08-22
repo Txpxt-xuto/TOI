@@ -13,10 +13,11 @@ queue<pair<int,int>> q;
 int main(){
 	ios::sync_with_stdio(0); cin.tie(0);
 	int ans_1=0,ans_2=0,ans_3=0;
-	int n,m;
+	int n, m, i, j;
 	cin >> n >> m;
-	for(int i=1;i<=m;i++){
-		for(int j=1;j<=n;j++)
+	for(i=1;i<=m;i++)
+    {
+		for(j=1;j<=n;j++)
         {
 			char c;
 			cin >> c;
