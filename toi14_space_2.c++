@@ -22,7 +22,7 @@ int main()
     int r=0,t=0,k=0;
     for(i=0;i<n;i++)
     {
-        for(int j=0;j<m;j++)
+        for(j=0;j<m;j++)
         {
             if(ss[i][j])
             {
