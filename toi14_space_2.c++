@@ -15,7 +15,7 @@ int main()
 	ios::sync_with_stdio(0); 
     cin.tie(0);
 	int ans_1=0, ans_2=0, ans_3=0;
-	int n, m, i, j;
+	int n, m, i, j, k;
 	cin >> n >> m;
 	for(i=1;i<=m;i++)
     {
@@ -44,11 +44,12 @@ int main()
 					ym = max(ym,y);
 					yi = min(yi,y);
 					q.pop();
-					for(int k=0;k<4;k++){
-						int xx=x+dx[k];
-						int yy=y+dy[k];
-						if(a[xx][yy]==true){
-							a[xx][yy]=false;
+					for(k=0;k<4;k++)
+                    {
+						int xx=x+dx[k], yy=y+dy[k];
+						if(a[xx][yy]==true)
+                        {
+							a[xx][yy] = false;
 							q.push({xx,yy});
 							c++;	
 						}
