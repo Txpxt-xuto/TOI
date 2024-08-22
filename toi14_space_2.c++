@@ -14,7 +14,7 @@ int main()
 {
 	ios::sync_with_stdio(0); 
     cin.tie(0);
-	int ans_1 = 0, ans_2 = 0, ans_3 = 0;
+	int ans1 = 0, ans2 = 0, ans3 = 0;
 	int n, m, i, j, k;
 	cin >> n >> m;
 	for(i=1;i<=m;i++)
@@ -54,11 +54,11 @@ int main()
 						}
 					}
 				}
-				if((xm-xi+1)*(xm-xi+1)==c && (ym-yi+1)*(ym-yi+1)==c) ans_1++;			
-				else if(xm-xi==ym-yi) ans_2++;
-				else ans_3++;
+				if((xm-xi+1)*(xm-xi+1)==c && (ym-yi+1)*(ym-yi+1)==c) ans1++;			
+				else if(xm-xi==ym-yi) ans2++;
+				else ans3++;
 			}
 		}
 	}
-	cout << ans_1 << ' ' << ans_2 << ' ' << ans_3;
+	cout << ans1 << ' ' << ans2 << ' ' << ans3;
 }
