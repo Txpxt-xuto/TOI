@@ -6,53 +6,55 @@ CENTER: Home
 */
 #include<bits/stdc++.h>
 using namespace std;
-#define f first
-#define s second
-int di[]={0,0,-1,1};
-int dj[]={-1,1,0,0};
-bitset<2000> ss[10000];
-int main()
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    int n, m, i, j, l;
-    cin >> m >> n;
-    for(i=0;i<n;i++)
-    cin >> ss[i];
-    int r=0,t=0,k=0;
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<m;j++)
-        {
-            if(ss[i][j])
-            {
-                if(j+1<m && i+1<n && ss[i][j+1] && ss[i+1][j]) r++;
-                else if(j+1<m && ss[i][j+1]) t++;
-                else if(i+1<n && j-1>=0 && j+1<m && ss[i+1][j-1] && ss[i+1][j+1])
-                {
-                    int o=0;
-                    while(i+o<n && ss[i+o][j]) o++;
-                    if(ss[i+o-1][j-1]) t++;
-                    else k++;
-                }
-                else t++;
-                queue<pair<int,int>> q;
-                q.push({i,j});
-                while(!q.empty())
-                {
-                    auto p=q.front();
-                    q.pop();
-                    if(ss[p.f][p.s]==0) continue;
-                    ss[p.f][p.s]=0;
-                    for(l=0;l<4;l++)
-                    {
-                        int ii=p.f+di[l], jj=p.s+dj[l];
-                        if(ii<0 || ii>=n || jj<0 || jj>=m) continue;
-                        if(ss[ii][jj]) q.push({iii,jj});
-                    }
-                }
-            }
-        }
-    }
-    cout << r << " " << k << " " << t;
+int dx[]={0,0,1,-1};
+int dy[]={1,-1,0,0};
+bool a[10050][2050];
+//bool vis[10050][2050];
+queue<pair<int,int>> q;
+
+int main(){
+	ios::sync_with_stdio(0); cin.tie(0);
+	int ans_1=0,ans_2=0,ans_3=0;
+	int n,m;
+	cin >> n >> m;
+	for(int i=1;i<=m;i++){
+		for(int j=1;j<=n;j++){
+			char c;
+			cin >> c;
+			if(c=='1') a[i][j]=true;
+		}
+	}
+	for(int i=1;i<=m;i++){
+		for(int j=1;j<=n;j++){
+	 	if(a[i][j]==true){
+				int c=0,xm=i,xi=i,ym=j,yi=j;
+				q.push({i,j});
+				a[i][j]==false;
+				while(!q.empty()){
+					int x=q.front().first;
+					int y=q.front().second;
+					xm=max(xm,x);
+					xi=min(xi,x);
+					ym=max(ym,y);
+					yi=min(yi,y);
+					q.pop();
+					for(int k=0;k<4;k++){
+						int xx=x+dx[k];
+						int yy=y+dy[k];
+						if(a[xx][yy]==true){
+							a[xx][yy]=false;
+							q.push({xx,yy});
+							c++;	
+						}
+					}
+				}
+				if((xm-xi+1)*(xm-xi+1)==c && (ym-yi+1)*(ym-yi+1)==c) ans_1++;			
+				else if(xm-xi==ym-yi) ans_2++;
+				else ans_3++;
+				//cout << xm << ' ' << xi << ' ' << ym << ' ' << yi << ' '<< c <<  "\n";
+			}
+		}
+	}
+	cout << ans_1 << ' ' << ans_2 << ' ' << ans_3;
 }
+//true is 1
