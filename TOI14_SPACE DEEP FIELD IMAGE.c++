@@ -13,7 +13,7 @@ int main()
 {
     ios::sync_with_stdio(0);cin.tie(0);
     cin>>n>>m;
-    for(i=0;i<m;i++){ for(j=0;j<n;j++) cin>>a[i][j];} 
+    for(i=0;i<m;i++){ for(j=0;j<n;j++) cin >> a[i][j];} 
     for(i=0;i<m;i++)
     {
         for(int j=0;j<n;j++)
