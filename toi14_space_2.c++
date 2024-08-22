@@ -31,7 +31,7 @@ int main()
                 else if(i+1<n && j-1>=0 && j+1<m && ss[i+1][j-1] && ss[i+1][j+1])
                 {
                     int o=0;
-                    while(i+o<n&&ss[i+o][j])
+                    while(i+o<n && ss[i+o][j])
                     o++;
                     if(ss[i+o-1][j-1])
                     t++;
