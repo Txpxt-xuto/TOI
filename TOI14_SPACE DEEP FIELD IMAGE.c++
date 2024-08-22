@@ -23,11 +23,7 @@ int main()
             {
                 a[i][j]='0';
                 q.push({i,j});
-                int cnt = 0;
-                int minx = i;
-                int maxx = i;
-                int miny = j;
-                int maxy = j;
+                int cnt = 0,minx = i,maxx = i,miny = j,maxy = j;
                 while(!q.empty())
                 {
                     int x=q.front().first;
