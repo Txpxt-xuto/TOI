@@ -23,8 +23,9 @@ int main(){
 			if(c=='1') a[i][j]=true;
 		}
 	}
-	for(int i=1;i<=m;i++){
-		for(int j=1;j<=n;j++)
+	for(i=1;i<=m;i++)
+    {
+		for(j=1;j<=n;j++)
         {
 	 	if(a[i][j]==true){
 				int c=0,xm=i,xi=i,ym=j,yi=j;
