@@ -46,9 +46,9 @@ int main()
                     ss[p.f][p.s]=0;
                     for(l=0;l<4;l++)
                     {
-                        int iii=p.f+di[l], jjj=p.s+dj[l];
-                        if(iii<0 || iii>=n || jjj<0 || jjj>=m) continue;
-                        if(ss[iii][jjj]) q.push({iii,jjj});
+                        int ii=p.f+di[l], jj=p.s+dj[l];
+                        if(ii<0 || ii>=n || jj<0 || jj>=m) continue;
+                        if(ss[ii][jj]) q.push({iii,jj});
                     }
                 }
             }
