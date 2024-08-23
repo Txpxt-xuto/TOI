@@ -31,7 +31,7 @@ int main()
         }
         swap(arr[i+1], arr[temp]), swap(dp[i+1], dp[temp]);
     }
-    sort(dp, dp+15005);
+    sort(dp, dp + 15005);
     long long ans = 0;
     for(i=0;i<n-k;i++) ans += dp[i];
     cout << ans;
