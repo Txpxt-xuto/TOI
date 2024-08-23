@@ -16,7 +16,8 @@ int main()
     scanf("%d %d %d", &n, &k, &t);
     vector<int> l(n + 5), p(n + 5), cnt(k + 5), deg(n + 5);
     vector<vector<int>> v(n + 5, vector<int>());
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++)
+    {
         scanf("%d %d", &l[i], &p[i]);
         deg[i] = p[i]; cnt[l[i]]++;
         for (int j = 0; j < p[i]; j++) scanf("%d", &x), v[x].emplace_back(i);
