@@ -5,7 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include<bits/stdc++.h>
-
 using namespace std;
 using pii = pair<int, int>;
 int n, k, t, x;
