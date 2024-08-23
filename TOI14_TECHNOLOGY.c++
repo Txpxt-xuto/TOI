@@ -29,7 +29,7 @@ int main()
             if (!(--deg[e])) pq.emplace(cnt[l[e]], e);
         }
     }
-    if (cnt[1]) printf("-1"), exit(0);
+    if(cnt[1]) printf("-1"), exit(0);
     for(int i = 1; i <= k; i++) if(cnt[i]) printf("%d", i - 1), exit(0);
     printf("%d", k);
 }/*
