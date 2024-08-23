@@ -11,7 +11,8 @@ using pii = pair<int, int>;
 
 int n, k, t, x;
 
-int main() {
+int main()
+{
     scanf("%d %d %d", &n, &k, &t);
     vector<int> l(n + 5), p(n + 5), cnt(k + 5), deg(n + 5);
     vector<vector<int>> v(n + 5, vector<int>());
