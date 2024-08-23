@@ -31,7 +31,7 @@ int main()
         }
     }
     if(cnt[1]) printf("-1"), exit(0);
-    for(i = 1; i <= k; i++) if(cnt[i]) printf("%d", i - 1), exit(0);
+    for(i = 1; i<=k;i++) if(cnt[i]) printf("%d", i - 1), exit(0);
     printf("%d", k);
 }/*
 #include <stdio.h>
