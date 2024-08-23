@@ -20,7 +20,7 @@ int main()
     {
         scanf("%d %d", &l[i], &p[i]);
         deg[i] = p[i]; cnt[l[i]]++;
-        for (int j = 0; j < p[i]; j++) scanf("%d", &x), v[x].emplace_back(i);
+        for(int j = 0; j < p[i]; j++) scanf("%d", &x), v[x].emplace_back(i);
     }
     priority_queue<pii, vector<pii>, greater<pii>> pq;
     for (int i = 1; i <= n; i++) if (!deg[i]) pq.emplace(cnt[l[i]], i);
