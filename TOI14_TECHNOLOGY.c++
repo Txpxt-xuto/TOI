@@ -21,7 +21,8 @@ int main()
     }
     priority_queue<pii, vector<pii>, greater<pii>> pq;
     for (int i = 1; i <= n; i++) if (!deg[i]) pq.emplace(cnt[l[i]], i);
-    while (!pq.empty() && t--) {
+    while (!pq.empty() && t--)
+    {
         auto [nl, nn] = pq.top(); pq.pop();
         cnt[l[nn]]--;
         for (auto &e: v[nn]) {
