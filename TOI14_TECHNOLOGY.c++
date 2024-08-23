@@ -8,9 +8,7 @@ CENTER: Home
 
 using namespace std;
 using pii = pair<int, int>;
-
 int n, k, t, x;
-
 int main()
 {
     scanf("%d %d %d", &n, &k, &t);
