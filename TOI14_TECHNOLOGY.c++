@@ -7,7 +7,7 @@ CENTER: Home
 #include<bits/stdc++.h>
 using namespace std;
 using pii = pair<int, int>;
-int n, k, t, x, i;
+int n, k, t, x, i, j;
 int main()
 {
     scanf("%d %d %d", &n, &k, &t);
@@ -17,7 +17,7 @@ int main()
     {
         scanf("%d %d", &l[i], &p[i]);
         deg[i] = p[i]; cnt[l[i]]++;
-        for(int j = 0; j < p[i]; j++) scanf("%d", &x), v[x].emplace_back(i);
+        for(j = 0; j < p[i]; j++) scanf("%d", &x), v[x].emplace_back(i);
     }
     priority_queue<pii, vector<pii>, greater<pii>> pq;
     for(i = 1; i <= n; i++) if(!deg[i]) pq.emplace(cnt[l[i]], i);
