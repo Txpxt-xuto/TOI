@@ -25,7 +25,8 @@ int main()
     {
         auto [nl, nn] = pq.top(); pq.pop();
         cnt[l[nn]]--;
-        for (auto &e: v[nn]) {
+        for (auto &e: v[nn])
+        {
             if (!(--deg[e])) pq.emplace(cnt[l[e]], e);
         }
     }
