@@ -16,7 +16,7 @@ struct info
 };
 int main()
 {
-    int n,k,t;
+    int n, k, t, i;
     cin >> n >> k >> t;
     bool vis[n+1];
     memset(vis,0,sizeof vis);
