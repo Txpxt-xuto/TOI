@@ -31,7 +31,6 @@ int main()
     {
         int id, m;
         cin >> id;
-        int ;
         cin >> m;
         while(m--)
         {
