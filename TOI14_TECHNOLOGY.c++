@@ -29,9 +29,9 @@ int main()
     int dd[n+1];
     for(int i=1;i<=n;i++)
     {
-        int id;
+        int id, m;
         cin >> id;
-        int m;
+        int ;
         cin >> m;
         while(m--)
         {
