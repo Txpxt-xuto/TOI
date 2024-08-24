@@ -9,8 +9,6 @@ using namespace std;
 #define ll long long
 vector<int> edge[100001],level[100001];
 int ti[100001], vis[100001], n, k, t;
-int ;
-int ;
 ll sm;
 bool dfs(int cur){
     if(vis[cur] == 1) return 0;
