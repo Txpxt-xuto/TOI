@@ -23,7 +23,7 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cin >> n >> k >> t;
-    int x,r,s,i,j;
+    int x, r, s, i, j;
     for(i=1;i<=n;i++)
     {
         cin >> x >> r;
@@ -38,7 +38,6 @@ int main()
     sm = 0;
     memset(vis,0,sizeof vis);
     c = false;
-    int i;
     for(i=1;i<=k;i++)
     {
         for(auto j:level[i])
