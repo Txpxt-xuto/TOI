@@ -4,7 +4,6 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -49,4 +48,4 @@ int main()
             }
         }
     }
-}*/
+}
