@@ -49,7 +49,6 @@ int main()
         auto p=q.top();
         q.pop();
         ss.insert(p.i);
-        //cout<<p.i<<" "<<t<<endl;
         if(vis[p.i])
         {
             t++;
