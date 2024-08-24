@@ -46,7 +46,8 @@ int main () {
     for (i=1;i<=k;i++) {
         for(auto j:level[i])
         {
-            if (!dfs(j)) {
+            if(!dfs(j))
+            {
                 c=true;
                 break;
             }
