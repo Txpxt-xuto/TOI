@@ -38,10 +38,10 @@ int main () {
             edge[i].push_back(s);
         }
     }
-    bool c=false;
-    sm=0;
+    bool c = false;
+    sm = 0;
     memset(vis,0,sizeof vis);
-    c=false;
+    c = false;
     int i;
     for(i=1;i<=k;i++)
     {
