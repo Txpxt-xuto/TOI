@@ -30,7 +30,7 @@ int main()
     for(int i=1;i<=n;i++)
     {
         int id;
-        cin>>id;
+        cin >> id;
         int m;
         cin >> m;
         while(m--)
