@@ -25,12 +25,14 @@ bool dfs(int cur) {
     vis[cur] = 2;
     return (++sm<=t);
 }
-int main () {
+int main()
+{
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cin >> n >> k >> t;
-    int x,r,s;
-    for(i=1;i<=n;i++) {
+    int x,r,s,i,j;
+    for(i=1;i<=n;i++)
+    {
         cin >> x >> r;
         level[x].push_back(i);
         for(j=0;j<r;j++)
