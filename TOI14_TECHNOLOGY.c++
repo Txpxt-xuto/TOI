@@ -11,9 +11,7 @@ struct info
     int id,i;
     bool operator < (const info&o) const
     {
-        //if(id!=o.id)
         return id>o.id;
-        //return i>o.i;
     }
 };
 int main()
