@@ -13,8 +13,8 @@ int vis[100001];
 int n,k,t;
 ll sm;
 bool dfs(int cur) {
-    if (vis[cur] == 1) return 0;
-    else if (vis[cur] == 2) return 1;
+    if(vis[cur] == 1) return 0;
+    else if(vis[cur] == 2) return 1;
     vis[cur] = 1;
     for (auto i:edge[cur]) dfs(i);
     vis[cur] = 2;
