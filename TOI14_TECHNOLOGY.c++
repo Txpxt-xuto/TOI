@@ -61,13 +61,6 @@ int main(void)
 		cout<<-1;
 		return 0;
 	}
-	for(int i=0;i<k;i++)
-	{
-		if(r[i]>0)
-		{
-			cout<<i-1;
-			break;
-		}
-	}
+	
 	return 0;
 }
