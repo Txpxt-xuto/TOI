@@ -51,10 +51,7 @@ int main(void)
 			dfs(i);
 		}
 	}
-	for(int i=0;i<n && i<t;i++)
-	{
-		r[l[ans[i]]]--;
-	}
+	for(i=0;i<n && i<t;i++) r[l[ans[i]]]--;
 	cout << -1;
 	return 0;
 }
