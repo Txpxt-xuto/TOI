@@ -1,6 +1,6 @@
 /*
 TASK: plantation.cpp
-LANG: C++
+LANG: C++technology.cpp
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
