@@ -56,10 +56,5 @@ int main(void)
 		r[l[ans[i]]]--;
 	}
 	cout<<-1;
-	/*if(r[1]>0)
-	{
-		cout<<-1;
-		return 0;
-	}
 	return 0;
 }
