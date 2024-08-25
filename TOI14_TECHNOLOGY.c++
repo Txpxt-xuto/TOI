@@ -6,7 +6,7 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-int n,k,t,tt,i,j;
+int n, k, t, tt, i, j;
 int l[100001],p[100001],r[10001];
 vector<vector<pair<int,int> > > v(100001);
 vector<bool> vis(100001);
