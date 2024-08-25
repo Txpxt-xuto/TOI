@@ -55,6 +55,6 @@ int main(void)
 	{
 		r[l[ans[i]]]--;
 	}
-	cout<<-1;
+	cout << -1;
 	return 0;
 }
