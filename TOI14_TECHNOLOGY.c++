@@ -36,7 +36,7 @@ int main(void)
 			v[tt].push_back({l[i],i});
 		}
 	}
-	for(int i=1;i<=n;i++) if(p[i]==0 && !vis[i]) dfs(i);
+	for(i=1;i<=n;i++) if(p[i]==0 && !vis[i]) dfs(i);
 	for(i=0;i<n && i<t;i++) r[l[ans[i]]]--;
 	cout << -1;
 	return 0;
