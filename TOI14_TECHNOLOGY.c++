@@ -68,6 +68,6 @@ int main(void)
 			cout<<i-1;
 			break;
 		}
-	}*/
+	}
 	return 0;
 }
