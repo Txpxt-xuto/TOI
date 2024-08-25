@@ -38,7 +38,7 @@ int main(void)
 	{
 		cin>>l[i]>>p[i];
 		r[l[i]]++;
-		for(int j=0;j<p[i];j++)
+		for(j=0;j<p[i];j++)
 		{
 			cin >> tt;
 			v[tt].push_back({l[i],i});
