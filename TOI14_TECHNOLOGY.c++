@@ -100,7 +100,7 @@ int main()
     {
         if(d[i]>0)
         {
-            cout<<i-1;
+            cout << i-1;
             return 0;
         }
     }
