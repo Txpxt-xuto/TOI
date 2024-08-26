@@ -96,7 +96,7 @@ int main()
         cout<<-1;
         return 0;
     }
-    for(int i=2;i<=k;i++)
+    for(i=2;i<=k;i++)
     {
         if(d[i]>0)
         {
