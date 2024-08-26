@@ -30,12 +30,7 @@ int main()
         int id, m, x;
         cin >> id;
         cin >> m;
-        while(m--)
-        {
-            cin >> x;
-            v[i].push_back(x);
-        }
-        q.push({id,i});
+        ush({id,i});
         dd[i] = id;
         d[id]++;
     }
