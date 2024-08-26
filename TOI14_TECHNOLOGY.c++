@@ -40,8 +40,6 @@ int main()
         auto p = q.top();
         q.pop();
         ss.insert(p.i);
-        for(auto x:v[p.i])
-        {        }
         if(!t) break;
         if(cnt==0)
         {
