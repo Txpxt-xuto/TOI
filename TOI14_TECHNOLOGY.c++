@@ -42,16 +42,7 @@ int main()
         ss.insert(p.i);
         for(auto x:v[p.i])
         {
-            if(!vis[x])
-            {
-                q.push({p.id-10,x});
-                cnt++;
-                if(ss.count(x)!=0)
-                {
-                    t = 0;
-                    break;
-                }
-            }
+            
         }
         if(!t) break;
         if(cnt==0)
