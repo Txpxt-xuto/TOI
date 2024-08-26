@@ -29,13 +29,13 @@ int main()
     int dd[n+1];
     for(int i=1;i<=n;i++)
     {
-        int id, m;
+        int id, m, x;
         cin >> id;
         int ;
         cin >> m;
         while(m--)
         {
-            int x;
+            int ;
             cin >> x;
             v[i].push_back(x);
         }
