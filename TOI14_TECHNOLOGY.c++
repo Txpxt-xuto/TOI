@@ -32,7 +32,7 @@ int main()
         int id;
         cin>>id;
         int m;
-        cin>>m;
+        cin >> m;
         while(m--)
         {
             int x;
