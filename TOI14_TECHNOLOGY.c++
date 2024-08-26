@@ -46,7 +46,7 @@ int main()
     set<int> ss;
     while((t--)&&!q.empty())
     {
-        auto p=q.top();
+        auto p = q.top();
         q.pop();
         ss.insert(p.i);
         if(vis[p.i])
