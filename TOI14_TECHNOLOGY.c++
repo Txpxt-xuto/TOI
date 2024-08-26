@@ -40,11 +40,7 @@ int main()
         auto p = q.top();
         q.pop();
         ss.insert(p.i);
-        if(vis[p.i])
-        {
-            t++;
-            continue;
-        }
+        
         if(v[p.i].empty())
         {
             d[dd[p.i]]--;
