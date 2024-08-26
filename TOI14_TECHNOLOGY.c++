@@ -40,13 +40,5 @@ int main()
         cout << -1;
         return 0;
     }
-    for(i=2;i<=k;i++)
-    {
-        if(d[i]>0)
-        {
-            cout << i-1;
-            return 0;
-        }
-    }
     cout << k;
 }
