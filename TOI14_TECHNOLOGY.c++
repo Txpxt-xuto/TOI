@@ -41,13 +41,7 @@ int main()
         q.pop();
         ss.insert(p.i);
         
-        if(v[p.i].empty())
-        {
-            d[dd[p.i]]--;
-            vis[p.i] = 1;
-            ss.erase(p.i);
-            continue;
-        }
+        
         int cnt=0;
         for(auto x:v[p.i])
         {
