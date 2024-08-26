@@ -14,6 +14,3 @@ struct info
         return id>o.id;
     }
 };
-int main()
-{
-}
