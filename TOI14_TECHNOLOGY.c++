@@ -35,7 +35,6 @@ int main()
         cin >> m;
         while(m--)
         {
-            int ;
             cin >> x;
             v[i].push_back(x);
         }
