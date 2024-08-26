@@ -40,9 +40,6 @@ int main()
         auto p = q.top();
         q.pop();
         ss.insert(p.i);
-        
-        
-        int cnt=0;
         for(auto x:v[p.i])
         {
             if(!vis[x])
