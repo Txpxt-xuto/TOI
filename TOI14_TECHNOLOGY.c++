@@ -89,7 +89,6 @@ int main()
         v[p.i].clear();
         q.push({p.id,p.i});
         t++;
-        //ss.insert(p.i);
     }
     if(d[1]>0)
     {
