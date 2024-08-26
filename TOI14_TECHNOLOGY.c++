@@ -35,17 +35,6 @@ int main()
         d[id]++;
     }
     set<int> ss;
-    while((t--)&&!q.empty())
-    {
-        auto p = q.top();
-        q.pop();
-        ss.insert(p.i);
-        if(!t) break;
-       
-        v[p.i].clear();
-        q.push({p.id,p.i});
-        t++;
-    }
     if(d[1]>0)
     {
         cout << -1;
