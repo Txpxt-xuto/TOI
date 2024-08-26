@@ -82,7 +82,7 @@ int main()
         if(cnt==0)
         {
             d[dd[p.i]]--;
-            vis[p.i]=1;
+            vis[p.i] = 1;
             ss.erase(p.i);
             continue;
         }
