@@ -34,6 +34,4 @@ int main()
         dd[i] = id;
         d[id]++;
     }
-    set<int> ss;
-    cout << k;
 }
