@@ -9,5 +9,4 @@ using namespace std;
 struct info
 {
     int id,i;
-   
 };
