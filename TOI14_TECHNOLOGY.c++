@@ -57,9 +57,8 @@ int main()
         }
         if(v[p.i].empty())
         {
-            //cout<<p.i<<" ";
             d[dd[p.i]]--;
-            vis[p.i]=1;
+            vis[p.i] = 1;
             ss.erase(p.i);
             continue;
         }
