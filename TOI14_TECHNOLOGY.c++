@@ -36,7 +36,7 @@ int main()
         while(m--)
         {
             int x;
-            cin>>x;
+            cin >> x;
             v[i].push_back(x);
         }
         q.push({id,i});
