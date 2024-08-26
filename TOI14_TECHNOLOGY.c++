@@ -35,10 +35,5 @@ int main()
         d[id]++;
     }
     set<int> ss;
-    if(d[1]>0)
-    {
-        cout << -1;
-        return 0;
-    }
     cout << k;
 }
