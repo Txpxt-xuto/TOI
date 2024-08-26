@@ -104,5 +104,5 @@ int main()
             return 0;
         }
     }
-    cout<<k;
+    cout << k;
 }
