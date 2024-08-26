@@ -40,7 +40,7 @@ int main()
             v[i].push_back(x);
         }
         q.push({id,i});
-        dd[i]=id;
+        dd[i] = id;
         d[id]++;
     }
     set<int> ss;
