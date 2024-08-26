@@ -77,8 +77,8 @@ int main()
                 }
             }
         }
-        if(!t)
-        break;
+        if(!t) break;
+        
         if(cnt==0)
         {
             d[dd[p.i]]--;
