@@ -25,13 +25,4 @@ int main()
     int d[k+1];
     memset(d,0,sizeof d);
     int dd[n+1];
-    for(i=1;i<=n;i++)
-    {
-        int id, m, x;
-        cin >> id;
-        cin >> m;
-        ush({id,i});
-        dd[i] = id;
-        d[id]++;
-    }
 }
