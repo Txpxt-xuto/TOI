@@ -9,8 +9,5 @@ using namespace std;
 struct info
 {
     int id,i;
-    bool operator < (const info&o) const
-    {
-        return id>o.id;
-    }
+   
 };
