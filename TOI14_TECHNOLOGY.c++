@@ -93,7 +93,7 @@ int main()
     }
     if(d[1]>0)
     {
-        cout<<-1;
+        cout << -1;
         return 0;
     }
     for(i=2;i<=k;i++)
