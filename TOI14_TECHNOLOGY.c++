@@ -72,7 +72,7 @@ int main()
                 cnt++;
                 if(ss.count(x)!=0)
                 {
-                    t=0;
+                    t = 0;
                     break;
                 }
             }
