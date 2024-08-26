@@ -41,13 +41,7 @@ int main()
         q.pop();
         ss.insert(p.i);
         if(!t) break;
-        if(cnt==0)
-        {
-            d[dd[p.i]]--;
-            vis[p.i] = 1;
-            ss.erase(p.i);
-            continue;
-        }
+       
         v[p.i].clear();
         q.push({p.id,p.i});
         t++;
