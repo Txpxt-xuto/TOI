@@ -16,13 +16,4 @@ struct info
 };
 int main()
 {
-    int n, k, t, i;
-    cin >> n >> k >> t;
-    bool vis[n+1];
-    memset(vis,0,sizeof vis);
-    priority_queue<info> q;
-    vector<int> v[n+1];
-    int d[k+1];
-    memset(d,0,sizeof d);
-    int dd[n+1];
 }
