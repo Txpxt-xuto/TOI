@@ -5,7 +5,8 @@ using namespace std;
 string s;
 
 void insrt(char p){
-    for(int i=0;i<s.length();i++){
+    for(int i=0;i<s.length();i++)
+    {
         if(s[i]==p){
 
             if(s[i]== '3')
@@ -30,8 +31,7 @@ void insrt(char p){
                     break;
                 }
             }
-
-            for(int j=i+1;j<s.length();j++){
+            for(j=i+1;j<s.length();j++){
                 if(s[j] == '[') cnt++;
                 else if(s[j] == ']') cnt--;
                 if(cnt == 0)
