@@ -66,7 +66,8 @@ int calculate(string ss){
             float num1=0,num2=0,op=0;
             bool done = false;
             for(int j=0;j<tmp.length();j++){
-                if(isdigit(tmp[j])){
+                if(isdigit(tmp[j]))
+                {
                     if(!done)
                     {
                         num1*=10;
