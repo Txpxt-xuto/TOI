@@ -89,10 +89,8 @@ int calculate(string ss){
             }
 
             total = floor((num1+num2)*op);
-            //cout << total << " ";
             total+=num1;
             total+=num2;
-            //cout << num1 << " "<< num2 <<" " << op << " " << total << endl;
             if(st.empty())
                 return total;
             string tmp2;
