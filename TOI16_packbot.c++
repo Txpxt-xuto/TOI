@@ -67,11 +67,13 @@ int calculate(string ss){
             bool done = false;
             for(int j=0;j<tmp.length();j++){
                 if(isdigit(tmp[j])){
-                    if(!done){
+                    if(!done)
+                    {
                         num1*=10;
                         num1+= tmp[j]-'0';
                     }
-                    else{
+                    else
+                    {
                         num2*=10;
                         num2+= tmp[j]-'0';
                     }
