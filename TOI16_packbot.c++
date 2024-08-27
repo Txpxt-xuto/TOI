@@ -51,8 +51,8 @@ void insrt(char p){
 
 int calculate(string ss){
     stack<char> st;
-    int total=0;
-    for(int i=0;i<s.length();i++)
+    int total=0,i,j;
+    for(i=0;i<s.length();i++)
     {
         st.push(s[i]);
         if(st.top() == ']')
