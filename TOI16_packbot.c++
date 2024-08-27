@@ -107,7 +107,6 @@ int calculate(string ss){
         }
     }
 }
-
 int main()
 {
     cin >> s;
