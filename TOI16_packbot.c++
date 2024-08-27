@@ -16,9 +16,7 @@ void insrt(char p){
             int cnt=0;
             for(j=i-1;j>=0;j--){
                 if(s[j] == ']') cnt++;
-                    
                 else if(s[j] == '[') cnt--;
-                    
                 if(cnt == 0){
                     if(isalpha(s[j]))
                         s[j]='*';
