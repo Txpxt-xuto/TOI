@@ -26,7 +26,8 @@ void insrt(char p){
                     break;
                 }
             }
-            for(j=i+1;j<s.length();j++){
+            for(j=i+1;j<s.length();j++)
+            {
                 if(s[j] == '[') cnt++;
                 else if(s[j] == ']') cnt--;
                 if(cnt == 0)
