@@ -38,6 +38,7 @@ void insrt(char p){
                 if(cnt == 0)
                 {
                     if(isalpha(s[j])) s[j]='*';
+                        
                     s.insert(j+1,"]");
                     i++;
                     break;
