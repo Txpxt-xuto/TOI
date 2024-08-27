@@ -79,11 +79,8 @@ int calculate(string ss){
                 else{
                     done = true;
                     if(tmp[j]=='@') op = 0.16f;
-                        
                     if(tmp[j]=='#') op = 0.08f;
-                        
                     if(tmp[j]=='$') op = 0.04f;
-                        
                 }
             }
             total = floor((num1+num2)*op);
