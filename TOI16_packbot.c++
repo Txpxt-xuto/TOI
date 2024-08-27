@@ -123,6 +123,6 @@ int main(){
             s.insert(i+1,"0");
         }
     }
-    string tmp=s;
+    string tmp = s;
     cout << calculate(tmp);
 }
