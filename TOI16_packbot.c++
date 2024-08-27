@@ -125,7 +125,4 @@ int main(){
 
     string tmp=s;
     cout << calculate(tmp);
-
-
-    //cout << s;
 }
