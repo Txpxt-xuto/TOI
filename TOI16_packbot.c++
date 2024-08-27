@@ -78,7 +78,8 @@ int calculate(string ss){
                         num2+= tmp[j]-'0';
                     }
                 }
-                else{
+                else
+                {
                     done = true;
                     if(tmp[j]=='@') op = 0.16f;
                     if(tmp[j]=='#') op = 0.08f;
