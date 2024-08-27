@@ -117,9 +117,9 @@ int main(){
     insrt('1');
     for(i=0;i<s.length();i++)
     {
-        if(s[i]=='*')
+        if(s[i] == '*')
         {
-            s[i]='2';
+            s[i] = '2';
             s.insert(i+1,"0");
         }
     }
