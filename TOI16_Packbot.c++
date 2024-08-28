@@ -40,7 +40,8 @@ int main() {
             operate.push(curr);
         }
     }
-    while(!operate.empty()) {
+    while(!operate.empty())
+    {
         opr = operate.top();
         operate.pop();
         num1 = num.top();
