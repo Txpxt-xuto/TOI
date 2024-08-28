@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main() {
+int main(){
     string s;
     cin >> s;
     stack<int> num, operate;
@@ -58,3 +58,4 @@ int main() {
     }
     cout << num.top();
     return 0;
+    
