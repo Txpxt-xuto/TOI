@@ -46,4 +46,9 @@ DEF(F,108,G,'2')DEF(G,116,T,'3') N*T(V){
 I O(N*n){
     if(!n->o) return 20;
     return ((O(n->l)+O(n->r))*n->o)/100;
-}I main(){scanf("%s",s);printf("%d",O(E()));return 0;}
+}
+I main(){
+    scanf("%s",s);
+    printf("%d",O(E()));
+    return 0;
+}
