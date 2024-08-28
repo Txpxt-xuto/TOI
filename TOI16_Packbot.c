@@ -14,7 +14,8 @@ typedef void V;
 struct N{I o;struct N*l,*r;};
 typedef struct N N;
 char s[10005];
-I p;N*nN(I o,N*l,N*r){N*n=malloc(20);
+I p;N*nN(I o,N*l,N*r){
+    N*n=malloc(20);
 n->o=o;n->l=l;n->r=r;
 return n;} N*E(V)
 ;N*F(V);
