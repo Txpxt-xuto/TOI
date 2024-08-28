@@ -2,6 +2,7 @@
 #include <stack>
 #include <queue>
 using namespace std;
+int i;
 int main(){
     string s;
     cin >> s;
