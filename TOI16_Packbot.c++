@@ -13,7 +13,8 @@ int main() {
         if(s[i] > 64 && s[i] < 91) num.push(20);
         else if(s[i] == '[') operate.push(-1);
         else if(s[i] == ']') {
-            while(!operate.empty() && operate.top() != -1) {
+            while(!operate.empty() && operate.top() != -1)
+            {
                 opr = operate.top();
                 operate.pop();
                 num1 = num.top();
