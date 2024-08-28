@@ -28,7 +28,8 @@ int main() {
             if(s[i] == '1') curr = 4;
             else if(s[i] == '2') curr = 8;
             else if(s[i] == '3') curr = 16;
-            while(!operate.empty() && curr <= operate.top()) {
+            while(!operate.empty() && curr <= operate.top())
+            {
                 opr = operate.top();
                 operate.pop();
                 num1 = num.top();
