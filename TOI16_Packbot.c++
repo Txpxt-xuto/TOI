@@ -23,7 +23,9 @@ int main() {
                 num.push(int((num1 + num2) * (100+opr) /100));
             }
             operate.pop();
-        } else {
+        }
+        else 
+        {
             int curr;
             if(s[i] == '1') curr = 4;
             else if(s[i] == '2') curr = 8;
