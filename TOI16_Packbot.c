@@ -47,7 +47,8 @@ I O(N*n){
     if(!n->o) return 20;
     return ((O(n->l)+O(n->r))*n->o)/100;
 }
-I main(){
+I main()
+{
     scanf("%s",s);
     printf("%d",O(E()));
     return 0;
