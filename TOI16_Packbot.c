@@ -27,7 +27,7 @@ I p;N*nN(I o,N*l,N*r){
     N*T(V);
     DEF(E,104,F,'1')
 DEF(F,108,G,'2')DEF(G,116,T,'3') N*T(V){
-    if(!s[p])return 0;
+    if(!s[p]) return 0;
     if(s[p]=='[')
     {
         p++;
