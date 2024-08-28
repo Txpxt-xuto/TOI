@@ -4,7 +4,6 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 Center: Home
 */
-
 #include <iostream>
 #include <stack>
 #include <queue>
