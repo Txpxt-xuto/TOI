@@ -12,7 +12,8 @@ int main() {
     for(int i=0; i<s.size(); i++) {
         if(s[i] > 64 && s[i] < 91) num.push(20);
         else if(s[i] == '[') operate.push(-1);
-        else if(s[i] == ']') {
+        else if(s[i] == ']')
+        {
             while(!operate.empty() && operate.top() != -1)
             {
                 opr = operate.top();
