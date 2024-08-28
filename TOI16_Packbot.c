@@ -16,9 +16,13 @@ typedef struct N N;
 char s[10005];
 I p;N*nN(I o,N*l,N*r){
     N*n=malloc(20);
-n->o=o;n->l=l;n->r=r;
-return n;} N*E(V)
-;N*F(V);
+    n->o=o;
+    n->l=l;
+    n->r=r;
+    return n;
+    }
+    N*E(V);
+    N*F(V);
 N*G(V);
 N*T(V);
 DEF(E,104,F,'1')
