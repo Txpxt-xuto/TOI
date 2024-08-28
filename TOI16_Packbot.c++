@@ -9,7 +9,8 @@ int main() {
     cin >> s;
     stack<int> num, operate;
     float opr, num1, num2;
-    for(int i=0; i<s.size(); i++) {
+    for(i=0; i<s.size(); i++)
+    {
         if(s[i] > 64 && s[i] < 91) num.push(20);
         else if(s[i] == '[') operate.push(-1);
         else if(s[i] == ']')
