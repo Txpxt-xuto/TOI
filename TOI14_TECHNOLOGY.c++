@@ -92,4 +92,3 @@ int main(void)
 }
 /*
 6 5 4
-1
