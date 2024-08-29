@@ -90,4 +90,3 @@ int main(void)
 	cout<<k;
 	return 0;
 }
-/*
