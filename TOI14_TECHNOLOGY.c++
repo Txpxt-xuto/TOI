@@ -99,4 +99,3 @@ int main(void)
 3 1 6
 2 1 1
 
-7 
