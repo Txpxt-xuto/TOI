@@ -33,7 +33,7 @@ int dfs(int x)
 	}
 	int sum=0;
 	vis[x]=1;
-	for(int i=0;i<v[x].size();i++)
+	for(i=0;i<v[x].size();i++)
 	{
 		sum = sum + dfs(v[x][i]);
 		if(c==-1)
