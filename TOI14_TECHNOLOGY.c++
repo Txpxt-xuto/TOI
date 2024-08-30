@@ -45,7 +45,6 @@ int dfs(int x)
 	vis[x]=2;
 	return 1+sum;
 }
-
 int main(void)
 {
 	ios::sync_with_stdio(false);
