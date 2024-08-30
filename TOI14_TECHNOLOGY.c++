@@ -50,6 +50,7 @@ int main(void)
 {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
+	int
 	cin >> n >> k >> t;
 	for(int i=1;i<=n;i++)
 	{
