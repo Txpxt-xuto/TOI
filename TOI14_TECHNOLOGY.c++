@@ -24,7 +24,7 @@ int dfs(int x)
 	}
 	if(vis[x]==1)
 	{
-		c=-1;
+		c = -1;
 		return -1;
 	}
 	if(vis[x]==2)
