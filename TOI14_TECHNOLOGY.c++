@@ -38,7 +38,7 @@ int dfs(int x)
 		sum = sum + dfs(v[x][i]);
 		if(c==-1)
 		{
-			c=-1;
+			c = -1;
 			return -1;
 		}
 	}
