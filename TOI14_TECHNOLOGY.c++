@@ -31,8 +31,8 @@ int dfs(int x)
 	{
 		return 0;
 	}
-	int sum=0;
-	vis[x]=1;
+	int sum = 0;
+	vis[x] = 1;
 	for(i=0;i<v[x].size();i++)
 	{
 		sum = sum + dfs(v[x][i]);
