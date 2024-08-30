@@ -5,7 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <bits/stdc++.h>
-
 using namespace std;
 int n,k,t,tt,c;
 int l[100001],p[100001];
