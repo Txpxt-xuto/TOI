@@ -14,7 +14,6 @@ vector<vector<int> > v(100001);
 vector<vector<int> > r(10001);
 vector<int> vis(100001);
 vector<int> ans;
-
 int dfs(int x)
 {
 	if(c==-1)
