@@ -87,6 +87,6 @@ int main(void)
 			}
 		}
 	}
-	cout<< k;
+	cout << k;
 	return 0;
 }
