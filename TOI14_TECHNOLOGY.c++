@@ -61,7 +61,7 @@ int main(void)
 			v[i].push_back(tt);
 		}
 	}
-	int cnt=0;
+	int cnt = 0;
 	for(i=1;i<=k;i++)
 	{
 		for(j=0;j<r[i].size();j++) cnt = cnt + dfs(r[i][j]);
