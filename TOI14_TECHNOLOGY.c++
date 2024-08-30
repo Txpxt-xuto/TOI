@@ -24,10 +24,7 @@ int dfs(int x)
 		c = -1;
 		return -1;
 	}
-	if(vis[x]==2)
-	{
-		return 0;
-	}
+	if(vis[x]==2) return 0;
 	int sum = 0;
 	vis[x] = 1;
 	for(i=0;i<v[x].size();i++)
