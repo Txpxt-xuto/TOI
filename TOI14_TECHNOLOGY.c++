@@ -65,7 +65,7 @@ int main(void)
 	for(int i=1;i<=k;i++)
 	{
 		for(j=0;j<r[i].size();j++) cnt = cnt + dfs(r[i][j]);
-		
+	
 		if(c==-1)
 		{
 			cout << -1;
