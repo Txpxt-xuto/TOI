@@ -19,7 +19,7 @@ int dfs(int x)
 {
 	if(c==-1)
 	{
-		c=-1;
+		c = -1;
 		return -1;
 	}
 	if(vis[x]==1)
