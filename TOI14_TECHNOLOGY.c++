@@ -50,7 +50,7 @@ signed main(){
 				if(dp[r] - lg[r] <= T)
 				{
 					ch = true; 
-				break;
+					break;
 				}
 			}
 		}
