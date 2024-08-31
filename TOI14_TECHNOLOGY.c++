@@ -30,7 +30,8 @@ int main () {
     cin.tie(0);
     cin >> n >> k >> t;
     int x,r,s;
-    for (int i=1;i<=n;i++) {
+    for(int i=1;i<=n;i++)
+	{
         cin >> x >> r;
         level[x].push_back(i);
         for(j=0;j<r;j++)
