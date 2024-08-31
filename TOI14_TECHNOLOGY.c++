@@ -33,7 +33,8 @@ int main () {
     for (int i=1;i<=n;i++) {
         cin >> x >> r;
         level[x].push_back(i);
-        for (int j=0;j<r;j++) {
+        for(int j=0;j<r;j++)
+		{
             cin >> s;
             edge[i].push_back(s);
         }
