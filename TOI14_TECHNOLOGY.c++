@@ -44,7 +44,8 @@ signed main(){
 			}
 		}
 		bool ch = false;
-		for(int r: root){
+		for(int r: root)
+		{
 			if(sz[r] == cnt)
 			{
 				if(dp[r] - lg[r] <= T)
