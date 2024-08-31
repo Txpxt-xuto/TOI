@@ -52,7 +52,7 @@ int main () {
         }
         if (c) break;
             
-        
+
     }
     cout << ((i==1)?-1:i-1);
 }
