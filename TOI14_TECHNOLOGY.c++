@@ -39,7 +39,7 @@ int main () {
         }
     }
     bool c=false;
-    sm=0;
+    sm = 0;
     memset(vis,0,sizeof vis);
     c = false;
     int i;
