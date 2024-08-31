@@ -15,7 +15,8 @@ signed main(){
 	int n, k, T; scanf("%d %d %d", &n, &k, &T);
 	for(int i = 0, sz; i<n; ++i){
 		scanf("%d %d", lv+i, &sz);
-		for(int j = 0, x; j<sz; ++j){
+		for(int j = 0, x; j<sz; ++j)
+		{
 			scanf("%d", &x); adj[--x].push_back(i); ++deg[i];
 		}
 	}
@@ -25,7 +26,7 @@ signed main(){
 		if(!deg[i]) 
 		{
 			q.push(i);
-		 	 root.push_back(i);
+		 	root.push_back(i);
 		}
 	}
 	while(!q.empty())
