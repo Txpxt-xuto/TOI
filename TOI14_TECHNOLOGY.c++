@@ -22,7 +22,11 @@ signed main(){
 	queue<int> q;
 	for(i = 0; i<n; ++i) 
 	{
-		if(!deg[i]) q.push(i), root.push_back(i);
+		if(!deg[i]) 
+		{
+			q.push(i);
+		 	 root.push_back(i);
+		}
 	}
 	while(!q.empty())
 	{
