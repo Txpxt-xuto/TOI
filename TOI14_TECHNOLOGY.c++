@@ -47,7 +47,8 @@ signed main(){
 		for(int r: root){
 			if(sz[r] == cnt)
 			{
-				if(dp[r] - lg[r] <= T){ch = true; break;}
+				if(dp[r] - lg[r] <= T)
+				{ch = true; break;}
 			}
 		}
 		if(ch) low = mid+1, ans = mid;
