@@ -17,7 +17,9 @@ signed main(){
 		scanf("%d %d", lv+i, &sz);
 		for(int j = 0, x; j<sz; ++j)
 		{
-			scanf("%d", &x); adj[--x].push_back(i); ++deg[i];
+			scanf("%d", &x);
+			adj[--x].push_back(i);
+			++deg[i];
 		}
 	}
 	queue<int> q;
