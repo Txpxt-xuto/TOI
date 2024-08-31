@@ -11,8 +11,9 @@ const int inf = 1e8;
 int deg[N], lg[N], sz[N], dp[N], lv[N];
 vector<int> adj[N], topo, root;
 bool ch[N], vis[N];
-signed main(){
-	int n, k, T;
+signed main()
+{
+	int n, k, T, i,j;
 	scanf("%d %d %d", &n, &k, &T);
 	for(i = 0, sz; i<n; ++i)
 	{
