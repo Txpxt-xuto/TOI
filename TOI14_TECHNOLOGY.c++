@@ -24,7 +24,8 @@ signed main(){
 	while(!q.empty())
 	{
 		int u = q.front(); 
-		q.pop();  topo.push_back(u);
+		q.pop();  
+		topo.push_back(u);
 		for(int v: adj[u]) if(!--deg[v]) q.push(v);
 	}
 	reverse(topo.begin(), topo.end());
