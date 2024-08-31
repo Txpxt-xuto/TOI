@@ -13,8 +13,8 @@ int vis[100001];
 int n,k,t;
 ll sm;
 bool dfs(int cur) {
-    if (vis[cur] == 1) {
-        return 0;
+    if (vis[cur] == 1){ return 0;
+       
     } else if (vis[cur] == 2) {
         return 1;
     }
@@ -25,11 +25,12 @@ bool dfs(int cur) {
     vis[cur] = 2;
     return (++sm<=t);
 }
-int main () {
+int main ()
+{
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cin >> n >> k >> t;
-    int x, r, s;
+    int x, r, s, i, j;
     for(i=1;i<=n;i++)
 	{
         cin >> x >> r;
