@@ -35,7 +35,7 @@ signed main(){
 		for(i = 0; i<n; ++i) cnt += ch[i];
 		fill(lg, lg+n, -inf);
 		fill(sz, sz+n, 0);
-		ill(dp, dp+n, 0);
+		fill(dp, dp+n, 0);
 		fill(vis, vis+n, false);
 		for(int u: topo)
 		{
