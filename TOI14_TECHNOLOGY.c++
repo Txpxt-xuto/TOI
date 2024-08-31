@@ -16,8 +16,8 @@ bool dfs(int cur) {
     if (vis[cur] == 1) return 0;
     else if(vis[cur] == 2) return 1;
     vis[cur] = 1;
-    for (auto i:edge[cur]) {
-        dfs(i);
+    for (auto i:edge[cur]) dfs(i);
+        
     }
     vis[cur] = 2;
     return (++sm<=t);
