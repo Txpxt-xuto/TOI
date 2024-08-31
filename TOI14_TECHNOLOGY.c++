@@ -38,7 +38,8 @@ signed main(){
 				lg[u] = max(lg[u], lg[v]+1);
 				if(sz[v] > 0 && !vis[v])
 				{
-					dp[u] += 2; vis[v] = true;
+					dp[u] += 2; 
+					vis[v] = true;
 					sz[u] += sz[v];
 				}
 				dp[u] += dp[v];
