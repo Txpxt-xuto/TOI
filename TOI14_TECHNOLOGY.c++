@@ -38,7 +38,7 @@ int main () {
             edge[i].push_back(s);
         }
     }
-    bool c=false;
+    bool c = false;
     sm = 0;
     memset(vis,0,sizeof vis);
     c = false;
