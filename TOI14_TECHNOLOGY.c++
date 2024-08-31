@@ -23,7 +23,8 @@ signed main(){
 	for(int i = 0; i<n; ++i) if(!deg[i]) q.push(i), root.push_back(i);
 	while(!q.empty())
 	{
-		int u = q.front(); q.pop();  topo.push_back(u);
+		int u = q.front(); 
+		q.pop();  topo.push_back(u);
 		for(int v: adj[u]) if(!--deg[v]) q.push(v);
 	}
 	reverse(topo.begin(), topo.end());
