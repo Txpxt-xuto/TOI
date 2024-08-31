@@ -13,9 +13,10 @@ vector<int> adj[N], topo, root;
 bool ch[N], vis[N];
 signed main(){
 	int n, k, T; scanf("%d %d %d", &n, &k, &T);
-	for(int i = 0, sz; i<n; ++i){
+	for(int i = 0, sz; i<n; ++i)
+	{
 		scanf("%d %d", lv+i, &sz);
-		for(int j = 0, x; j<sz; ++j)
+		for(j = 0, x; j<sz; ++j)
 		{
 			scanf("%d", &x);
 			adj[--x].push_back(i);
