@@ -36,7 +36,8 @@ signed main(){
 			if(ch[u]) lg[u] = max(lg[u], 0), sz[u] = 1;
 			for(int v: adj[u]){
 				lg[u] = max(lg[u], lg[v]+1);
-				if(sz[v] > 0 && !vis[v]){
+				if(sz[v] > 0 && !vis[v])
+				{
 					dp[u] += 2; vis[v] = true;
 					sz[u] += sz[v];
 				}
