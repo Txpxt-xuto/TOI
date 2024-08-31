@@ -28,7 +28,8 @@ signed main(){
 	reverse(topo.begin(), topo.end());
 	int ans = -1, low = 1, high = k;
 	while(low<=high){
-		int mid = low + ((high-low)>>1), cnt = 0;
+		int mid = low + ((high-low)>>1)
+		cnt = 0;
 		for(int i = 0; i<n; ++i) ch[i] = (lv[i] <= mid);
 		for(int i = 0; i<n; ++i) cnt += ch[i];
 		fill(lg, lg+n, -inf); fill(sz, sz+n, 0); fill(dp, dp+n, 0); fill(vis, vis+n, false);
