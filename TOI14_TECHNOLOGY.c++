@@ -31,8 +31,7 @@ signed main(){
 		int mid = low + ((high-low)>>1), cnt = 0;
 		for(int i = 0; i<n; ++i) ch[i] = (lv[i] <= mid);
 		for(int i = 0; i<n; ++i) cnt += ch[i];
-		fill(lg, lg+n, -
-		inf); fill(sz, sz+n, 0); fill(dp, dp+n, 0); fill(vis, vis+n, false);
+		fill(lg, lg+n, -inf); fill(sz, sz+n, 0); fill(dp, dp+n, 0); fill(vis, vis+n, false);
 		for(int u: topo){
 			if(ch[u]) lg[u] = max(lg[u], 0), sz[u] = 1;
 			for(int v: adj[u])
