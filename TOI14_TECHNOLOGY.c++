@@ -34,7 +34,8 @@ signed main(){
 		fill(lg, lg+n, -inf); fill(sz, sz+n, 0); fill(dp, dp+n, 0); fill(vis, vis+n, false);
 		for(int u: topo){
 			if(ch[u]) lg[u] = max(lg[u], 0), sz[u] = 1;
-			for(int v: adj[u]){
+			for(int v: adj[u])
+			{
 				lg[u] = max(lg[u], lg[v]+1);
 				if(sz[v] > 0 && !vis[v])
 				{
