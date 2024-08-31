@@ -48,7 +48,8 @@ signed main(){
 			if(sz[r] == cnt)
 			{
 				if(dp[r] - lg[r] <= T)
-				{ch = true; break;}
+				{ch = true; break;
+				}
 			}
 		}
 		if(ch) low = mid+1, ans = mid;
