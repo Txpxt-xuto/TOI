@@ -26,7 +26,7 @@ int main(void)
     printf("%d\n", \count);
     return 0;
 }
-void bfs(int x, int y, int m, int n) {
+void bfs(int x, int y, int m, int n){
     candle[x][y] = '0';
     struct queue {
         int x;
