@@ -41,7 +41,7 @@ void bfs(int x, int y, int m, int n){
     {
         int cur_x = q->x;
         int cur_y = q->y;
-        for(int i = cur_x-1; i < cur_x+2; i++) 
+        for(int i = cur_x-1; i <cur_x+2; i++) 
         {
             for(int j = cur_y-1; j < cur_y+2; j++) 
             {
