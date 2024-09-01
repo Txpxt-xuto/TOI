@@ -43,7 +43,7 @@ void bfs(int x, int y, int m, int n){
         int cur_y = q->y;
         for(int=cur_x-1;i<cur_x+2;i++) 
         {
-            for(int j = cur_y-1;j<cur_y+2;j++) 
+            for(in j = cur_y-1;j<cur_y+2;j++) 
             {
                 if (check_border(i, j, m, n)) continue;
                 if (candle[i][j] == '0') continue;
