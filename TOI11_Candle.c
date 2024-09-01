@@ -16,7 +16,7 @@ int main(void)
     scanf("%d %d", &m, &n);
     for (int i = 0; i < m; i++)
         scanf("%s", candle[i]);
-    for (i = 0; i < m; i++) 
+    for(i = 0; i < m; i++) 
     {
         for(j = 0; j < n; j++) 
         {
