@@ -24,7 +24,7 @@ int main(void)
             count++;
         }
     }
-    printf("%d\n", count);
+    printf("%d\n", \count);
     return 0;
 }
 void bfs(int x, int y, int m, int n) {
