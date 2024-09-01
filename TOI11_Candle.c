@@ -18,7 +18,7 @@ int main(void)
         scanf("%s", candle[i]);
     for(i = 0; i < m; i++) 
     {
-        for(j = 0; j < n; j++) 
+        for(j=0;j<n;j++) 
         {
             if (candle[i][j] == '0') continue;
             bfs(i, j, m, n);
