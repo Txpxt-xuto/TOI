@@ -36,7 +36,7 @@ void bfs(int x, int y, int m, int n){
     struct queue *q = (struct queue *)malloc(sizeof(struct queue));
     struct queue *tail = q;
     *q = (struct queue) { .x = x, .y = y, .next = NULL };
-
+    int i, j;
     while (q != NULL) 
     {
         int cur_x = q->x;
