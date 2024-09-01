@@ -12,7 +12,6 @@ void bfs(int x, int y, int m, int n);
 int main(void) 
 {
     int m, n, count = 0;
-    int count = 0;
     scanf("%d %d", &m, &n);
     for(i=0;i<m;i++)
         scanf("%s", candle[i]);
