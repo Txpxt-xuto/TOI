@@ -52,7 +52,6 @@ void bfs(int x, int y, int m, int n){
                 tail = tail->next;
                 *tail = (struct queue) { .x = i, .y = j, .next = NULL };
             }
-            
         }
         struct queue *temp = q;
         q = q->next;
