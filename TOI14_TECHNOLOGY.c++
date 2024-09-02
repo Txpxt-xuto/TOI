@@ -20,4 +20,3 @@ bool dfs(int cur){
     vis[cur] = 2;
     return (++sm<=t);
 }
-int main ()
