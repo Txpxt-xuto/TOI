@@ -41,6 +41,4 @@ int main ()
     memset(vis,0,sizeof vis);
     c = false;
     for(i=1;i<=k;i++)
-	{
-        for(auto j:level[i])
 }
