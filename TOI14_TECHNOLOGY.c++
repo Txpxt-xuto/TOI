@@ -40,5 +40,4 @@ int main ()
     sm = 0;
     memset(vis,0,sizeof vis);
     c = false;
-    for(i=1;i<=k;i++)
 }
