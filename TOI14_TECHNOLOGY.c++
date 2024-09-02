@@ -21,5 +21,3 @@ bool dfs(int cur){
     return (++sm<=t);
 }
 int main ()
-
-}
