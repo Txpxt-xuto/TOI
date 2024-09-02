@@ -6,4 +6,4 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long lonvector<int> ed
+#define ll long lonvector
