@@ -12,5 +12,3 @@ int ti[100001];
 int vis[100001];
 int n,k,t;
 ll sm;
-bool dfs(int cur){
-    if(vis[cur] == 1) return 0;
