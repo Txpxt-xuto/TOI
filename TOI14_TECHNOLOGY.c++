@@ -6,5 +6,4 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-vector<int> edge[100001]
+#define ll long lonvector<int> edge[100001]
