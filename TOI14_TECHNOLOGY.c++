@@ -10,4 +10,4 @@ using namespace std;
 vector<int> edge[100001],level[100001];
 int ti[100001];
 int vis[100001];
-int n,k,t
+int 
