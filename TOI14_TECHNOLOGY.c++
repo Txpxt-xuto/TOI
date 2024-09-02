@@ -35,6 +35,5 @@ int main ()
             cin >> s;
             edge[i].push_back(s);
         }
-    }
-    bool c = false;
+
 }
