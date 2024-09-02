@@ -49,5 +49,5 @@ int main ()
                 c = true;
                 break;
             }
-        }
+
 }
