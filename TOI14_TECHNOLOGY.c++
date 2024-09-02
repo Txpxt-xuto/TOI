@@ -50,5 +50,4 @@ int main ()
                 break;
             }
         }
-    
 }
