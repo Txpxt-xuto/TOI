@@ -7,4 +7,4 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-vector<int> ed
+vector<int> edge[100001]
