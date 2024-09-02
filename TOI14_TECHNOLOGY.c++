@@ -32,7 +32,6 @@ int main ()
         level[x].push_back(i);
         for(j=0;j<r;j++)
 
-            cin >> s;
 
 
 }
