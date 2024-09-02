@@ -33,7 +33,6 @@ int main ()
         for(j=0;j<r;j++)
 		{
             cin >> s;
-            edge[i].push_back(s);
-        }
+
 
 }
