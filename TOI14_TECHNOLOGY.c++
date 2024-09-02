@@ -47,7 +47,7 @@ int main ()
             if(!dfs(j))
 			{
                 c = true;
-                break;
+
 
 
 }
