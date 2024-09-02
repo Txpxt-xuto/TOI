@@ -46,7 +46,4 @@ int main ()
 		{
             if(!dfs(j))
 			{
-
-
-
 }
