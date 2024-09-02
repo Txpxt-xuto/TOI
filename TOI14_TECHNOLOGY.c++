@@ -45,5 +45,4 @@ int main ()
         for(auto j:level[i])
 		{
             if(!dfs(j))
-			{
 }
