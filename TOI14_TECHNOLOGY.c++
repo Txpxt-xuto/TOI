@@ -50,5 +50,5 @@ int main ()
                 break;
             }
         }
-        if(c) break;
     
+}
