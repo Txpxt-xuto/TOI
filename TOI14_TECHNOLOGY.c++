@@ -19,4 +19,3 @@ bool dfs(int cur){
     for (auto i:edge[cur]) dfs(i);
     vis[cur] = 2;
     return (++sm<=t);
-}
