@@ -71,7 +71,7 @@ void solve() {
     mark[i] = 1; t--;
     trav(x, before[i]) if (!upgrade(x)) return 0;
     return 1;
-  };
+    };
 
   rep(i, 1, k) {
     trav(x, lvl[i]) {
