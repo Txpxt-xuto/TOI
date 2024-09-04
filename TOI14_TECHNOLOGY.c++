@@ -55,7 +55,6 @@ const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
 const char nl = '\n';
 const int MX = 1e5 + 10;
-
 vi before[MX], lvl[MX];
 bool mark[MX];
 
