@@ -56,7 +56,6 @@ const char nl = '\n';
 const int MX = 1e5 + 10;
 vi before[MX], lvl[MX];
 bool mark[MX];
-
 void solve() {
   int n, k, t; cin >> n >> k >> t;
   rep(i, 1, n) {
