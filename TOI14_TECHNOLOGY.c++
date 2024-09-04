@@ -46,7 +46,6 @@ template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 #define ub upper_bound
 #define all(x) (x).begin(), (x).end()
 #define ins insert
-
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
 
