@@ -64,7 +64,7 @@ void solve() {
         lvl[l].pb(i);
         rep(j, 1, m) { int x; cin >> x; before[i].pb(x); }
     }
-  int mx = 0;
+    int mx = 0;
   function<bool(int)> upgrade = [&](int i) {
     if (mark[i]) return 1;
     if (t==0) return 0;
