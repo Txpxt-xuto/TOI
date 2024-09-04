@@ -69,8 +69,8 @@ void solve() {
         if (mark[i]) return 1;
         if (t==0) return 0;
         mark[i] = 1; t--;
-    trav(x, before[i]) if (!upgrade(x)) return 0;
-    return 1;
+        trav(x, before[i]) if (!upgrade(x)) return 0;
+        return 1;
     };
 
   rep(i, 1, k) {
