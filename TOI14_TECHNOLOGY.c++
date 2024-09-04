@@ -68,7 +68,7 @@ void solve() {
     function<bool(int)> upgrade = [&](int i){
         if (mark[i]) return 1;
         if (t==0) return 0;
-    mark[i] = 1; t--;
+        mark[i] = 1; t--;
     trav(x, before[i]) if (!upgrade(x)) return 0;
     return 1;
     };
