@@ -67,7 +67,7 @@ void solve() {
     { 
         int x; 
         cin >> x; 
-    before[i].pb(x); 
+        before[i].pb(x); 
     }
   }
   int mx = 0;
