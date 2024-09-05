@@ -83,7 +83,8 @@ void solve() {
     return 1;
     };
   rep(i, 1, k) {
-    trav(x, lvl[i]) {
+    trav(x, lvl[i])
+    {
       if (!upgrade(x)) return void(cout << (i==1?-1:i-1) << nl);
     }
   }
