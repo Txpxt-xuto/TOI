@@ -72,7 +72,7 @@ void solve() {
     }
   }
   int mx = 0;
-  function<bool(int)> upgrade = [&](int i){
+    function<bool(int)> upgrade = [&](int i){
     if (mark[i]==2) return 1;
     if (mark[i]==1) return 0;
     if (t==0) return 0;
