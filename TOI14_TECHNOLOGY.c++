@@ -37,7 +37,6 @@ template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 #define repd3(i, a, b, c) for (int i = b; i >= a; i-=c)
 #define repd(...) overload4(__VA_ARGS__, repd3, repd2, repd1, repd0)(__VA_ARGS__)
 #define trav(a, x) for (auto& a : x)
-
 #define sz(x) (int)(x).size()
 #define mp make_pair
 #define pb push_back
