@@ -89,7 +89,7 @@ void solve() {
             if (!upgrade(x)) return void(cout << (i==1?-1:i-1) << nl);
         }
     }
-  cout << k << nl;
+    cout << k << nl;
 }
 int main(int argc, char* argv[])
 {
