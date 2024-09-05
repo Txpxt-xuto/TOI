@@ -66,7 +66,7 @@ void solve() {
     rep(j, 1, m) 
     { 
         int x; 
-    cin >> x; 
+        cin >> x; 
     before[i].pb(x); 
     }
   }
