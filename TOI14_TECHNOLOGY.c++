@@ -70,7 +70,7 @@ void solve() {
         cin >> x; 
         before[i].pb(x); 
     }
-  }
+    }
     int mx = 0;
     function<bool(int)> upgrade = [&](int i){
     if (mark[i]==2) return 1;
