@@ -61,7 +61,7 @@ void solve() {
     cin >> n >> k >> t;
     rep(i, 1, n) 
     {
-    int l, m; 
+        int l, m; 
     cin >> l >> m;
     lvl[l].pb(i);
     rep(j, 1, m) 
