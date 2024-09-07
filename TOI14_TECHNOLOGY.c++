@@ -7,7 +7,6 @@ CENTER: Home
 template<typename T> using pq = priority_queue<T>;
 #define rep0(a) for (int i = 0; i < a; ++i)
 #define rep1(i, a) for (int i = 0; i < a; ++i#define rep2(i, a, b) for (int i = a; i <= b; ++i)
-
 const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
 const char nl = '\n';
