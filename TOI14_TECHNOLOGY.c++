@@ -19,17 +19,7 @@ void solve() {
         cin >> x; 
         before[i].pb(x); 
         }
-    }
 
-    };
-    rep(i, 1, k)
-    {
-        trav(x, lvl[i])
-        {
-            if (!upgrade(x)) return void(cout << (i==1?-1:i-1) << nl);
-        }
-    }
-    cout << k << nl;
 }
 int main(int argc, char* argv[])
 {
