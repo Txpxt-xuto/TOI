@@ -15,8 +15,7 @@ template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 #define repd0(a) for (int i = a; i >= 1; --i)
 #define repd1(i, a) for (int i = a; i >= 1; --i)
 #define r
-#define repd(...) overload4(__VA_ARGS__, repd3, repd2, repd1, repd0)(__VA_ARGS__)
-template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
+1 : 0; }
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 const int MOD = 1e9 + 7;
