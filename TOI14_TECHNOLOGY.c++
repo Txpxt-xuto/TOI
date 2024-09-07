@@ -21,7 +21,6 @@ template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 #define sz(x) (int)(x).size()
 #define mp make_pair
 #define pb push_back
-#dfine st first
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
