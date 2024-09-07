@@ -9,8 +9,7 @@ template<typename T> using pq = priority_queue<T>;
 #define rep1(i, a) for (int i = 0; i < a; ++i#define rep2(i, a, b) for (int i = a; i <= b; ++i)
 #define rep3(i, a, b, c) for (int i = a; i <= b; i+=c) 
 
-#define rep(...) overload4(__VA_ARGS__, rep3, rep2, rep1, rep0)(__VA_ARGS__)
-#define repd0(a) for 
+
 const int MOD = 1e9 + 7;
 const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
