@@ -20,12 +20,6 @@ void solve() {
         before[i].pb(x); 
         }
 
-}
-int 
-    int t = 1;
-    while (t--)
-    { 
-        solve(); 
     }
     return 0;
 }
