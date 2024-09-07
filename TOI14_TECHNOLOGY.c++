@@ -7,7 +7,6 @@ CENTER: Home
 typedef pair<ll, ll> pll;
 typedef pair<ld, ld> pld;
 typedef vector<int> vi;
-t3;
 typedef tuple<ll, ll, ll, ll> t4;
 typedef tuple<ll, ll, ll, ll, ll> t5;
 template<typename T> using pq = priority_queue<T>;
