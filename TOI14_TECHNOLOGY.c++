@@ -5,7 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 template<typename T> using pq = priority_queue<T>;
-template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 #define rep0(a) for (int i = 0; i < a; ++i)
 #define rep1(i, a) for (int i = 0; i < a; ++i#define rep2(i, a, b) for (int i = a; i <= b; ++i)
 #define rep3(i, a, b, c) for (int i = a; i <= b; i+=c) 
