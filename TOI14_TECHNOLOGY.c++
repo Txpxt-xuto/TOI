@@ -20,6 +20,4 @@ void solve() {
         before[i].pb(x); 
         }
 
-    }
-    return 0;
 }
