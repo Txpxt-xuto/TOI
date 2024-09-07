@@ -19,5 +19,4 @@ void solve() {
         cin >> x; 
         before[i].pb(x); 
         }
-
 }
