@@ -4,8 +4,7 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#pragma once
-#include <bits/stdc++.h>
+
 using namespace std;
 typedef long long ll;
 typedef double db;
