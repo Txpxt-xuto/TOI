@@ -6,7 +6,6 @@ CENTER: Home
 */
 template<typename T> using pq = priority_queue<T>;
 #define rep0(a) for (int i = 0; i < a; ++i)
-
 vi before[MX], lvl[MX];
 int mark[MX];
 void solve() {
