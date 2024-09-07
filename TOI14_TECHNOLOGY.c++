@@ -4,7 +4,6 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-
 typedef pair<ll, ll> pll;
 typedef pair<ld, ld> pld;
 typedef vector<int> vi;
