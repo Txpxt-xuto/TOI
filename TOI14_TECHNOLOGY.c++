@@ -24,7 +24,7 @@ int main() {
 	ios_base::sync_with_stdio(false); cin.tie(NULL);
 	int n, k, t, i;
 	cin >> n >> k >> t;
-	for(ii = 1; i <= n; i++)
+	for(i =1; i <= n; i++)
     {
 		int l, p;
 		cin >> l >> p;
