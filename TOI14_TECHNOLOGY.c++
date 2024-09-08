@@ -29,7 +29,7 @@ int main() {
 		int l, p;
 		cin >> l >> p;
 		level[l].push_back(i);
-		while (p--) {
+		while (p--){
 			int q;
 			cin >> q;
 			g[i].push_back(q);
