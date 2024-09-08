@@ -37,7 +37,8 @@ int main() {
 	int ans=-1;
 	for (int i = 1; i <= k; i++)
     {
-		for (auto u : level[i]){
+		for (auto u : level[i])
+        {
 			if (visited[u]) continue;
 			dfs(u);
 		}
