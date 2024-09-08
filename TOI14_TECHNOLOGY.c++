@@ -35,7 +35,7 @@ int main() {
 		}
 	}
 	int ans=-1;
-	for(ii = 1; i <= k; i++)
+	for(i = 1; i <= k; i++)
     {
 		for(auto u : level[i])
         {
