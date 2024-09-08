@@ -23,7 +23,7 @@ int main()
 {
 	ios_base::sync_with_stdio(false); 
     cin.tie(NULL);
-	int n, k, t, i, ans=-1. l, p;
+	int n, k, t, i, ans=-1, l, p;
 	cin >> n >> k >> t;
 	for(i=1;i<=n;i++)
     {
