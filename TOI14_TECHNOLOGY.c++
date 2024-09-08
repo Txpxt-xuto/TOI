@@ -15,7 +15,7 @@ void dfs(int u) {
 	cnt++;
 	for(auto v : g[u])
     {
-		if (visited[v] == 0) dfs(v);
+		if(visited[v] == 0) dfs(v);
 		else if (visited[v] == 1) cnt = 2e9;
 	}
 	visited[u] = 2;
