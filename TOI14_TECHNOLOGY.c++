@@ -21,7 +21,8 @@ void dfs(int u) {
 }
 
 int main() {
-	ios_base::sync_with_stdio(false); cin.tie(NULL);
+	ios_base::sync_with_stdio(false); 
+    cin.tie(NULL);
 	int n, k, t, i;
 	cin >> n >> k >> t;
 	for(i=1;i<=n;i++)
