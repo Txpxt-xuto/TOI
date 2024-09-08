@@ -23,7 +23,7 @@ int main()
 {
 	ios_base::sync_with_stdio(false); 
     cin.tie(NULL);
-	int n, k, t, i;
+	int n, k, t, i, ans=-1;
 	cin >> n >> k >> t;
 	for(i=1;i<=n;i++)
     {
@@ -37,7 +37,7 @@ int main()
 			g[i].push_back(q);
 		}
 	}
-	int ans=-1;
+	int ;
 	for(i=1;i<=k;i++)
     {
 		for(auto u : level[i])
