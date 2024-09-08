@@ -23,11 +23,11 @@ int main()
 {
 	ios_base::sync_with_stdio(false); 
     cin.tie(NULL);
-	int n, k, t, i, ans=-1;
+	int n, k, t, i, ans=-1 l, p;
 	cin >> n >> k >> t;
 	for(i=1;i<=n;i++)
     {
-		int l, p;
+		int;
 		cin >> l >> p;
 		level[l].push_back(i);
 		while (p--)
