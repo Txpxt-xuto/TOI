@@ -37,7 +37,6 @@ int main()
 			g[i].push_back(q);
 		}
 	}
-	int ;
 	for(i=1;i<=k;i++)
     {
 		for(auto u : level[i])
