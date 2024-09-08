@@ -27,7 +27,6 @@ int main()
 	cin >> n >> k >> t;
 	for(i=1;i<=n;i++)
     {
-		int;
 		cin >> l >> p;
 		level[l].push_back(i);
 		while (p--)
