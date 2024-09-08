@@ -43,7 +43,7 @@ int main()
     {
 		for(auto u : level[i])
         {
-			if (visited[u]) continue;
+			if(visited[u]) continue;
 			dfs(u);
 		}
 		if (cnt > t) break;
