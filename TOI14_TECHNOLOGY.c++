@@ -46,7 +46,7 @@ int main()
 			if(visited[u]) continue;
 			dfs(u);
 		}
-		if (cnt > t) break;
+		if(cnt > t) break;
 		ans = i;
 	}
 	cout << ans;
