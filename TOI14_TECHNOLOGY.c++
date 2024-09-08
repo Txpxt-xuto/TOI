@@ -24,7 +24,8 @@ int main() {
 	ios_base::sync_with_stdio(false); cin.tie(NULL);
 	int n, k, t;
 	cin >> n >> k >> t;
-	for(int i = 1; i <= n; i++){
+	for(int i = 1; i <= n; i++)
+    {
 		int l, p;
 		cin >> l >> p;
 		level[l].push_back(i);
