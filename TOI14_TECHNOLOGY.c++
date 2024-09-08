@@ -6,7 +6,6 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-
 vector<int> g[100009], level[100009];
 int visited[100009], cnt=0;
 void dfs(int u)
