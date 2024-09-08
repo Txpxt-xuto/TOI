@@ -20,7 +20,8 @@ void dfs(int u) {
 	visited[u] = 2;
 }
 
-int main(){
+int main()
+{
 	ios_base::sync_with_stdio(false); 
     cin.tie(NULL);
 	int n, k, t, i;
