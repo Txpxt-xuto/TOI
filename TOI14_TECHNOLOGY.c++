@@ -63,7 +63,7 @@ int main(){
         if(mn-2*r >= d){
             cout << "Y\n";
         }else cout << "N\n";
-        
+    
         vctor.clear();
     }
     return 0;
