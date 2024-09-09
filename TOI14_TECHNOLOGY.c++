@@ -36,7 +36,8 @@ double closest_pair(int l, int r){
     for(int i = mid+1; vctor[i].f <= vctor[mid].f+mn && i < n; ++i){
         rights.push_back(vctor[i]);
     }
-    for(pair<double, double> p : lefts){
+    for(pair<double, double> p : lefts)
+	{
         for(pair<double, double> q : rights){
             mn = min(mn, dist(p, q));
         }
