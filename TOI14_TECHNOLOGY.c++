@@ -62,8 +62,8 @@ int main(){
         double mn = closest_pair(0, n-1);
         if(mn-2*r >= d){
             cout << "Y\n";
-        }elsecout << "N\n";
-        }
+        }else cout << "N\n";
+        
         vctor.clear();
     }
     return 0;
