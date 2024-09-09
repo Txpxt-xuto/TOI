@@ -60,7 +60,6 @@ int main(){
         }
         sort(vctor.begin(), vctor.end());
         double mn = closest_pair(0, n-1);
-//        cout << mn;
         if(mn-2*r >= d){
             cout << "Y\n";
         }else{
