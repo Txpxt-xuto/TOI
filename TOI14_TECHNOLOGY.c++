@@ -37,7 +37,6 @@ double closest_pair(int l, int r)
     if((int)rights.size()) rights.clear();
     return mn;
 }
-
 int main()
 {
     cin.tie(0)->ios_base::sync_with_stdio(0);
