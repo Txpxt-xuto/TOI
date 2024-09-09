@@ -21,9 +21,6 @@ double closest_pair(int l, int r){
     if(r-l <= 2){
         for(int i = l; i < r; ++i){
             for(int j = i+1; j <= r; ++j) mn = min(mn, dist(vctor[i], vctor[j]));
-			{
-                mn = min(mn, dist(vctor[i], vctor[j]));
-            }
         }
         return mn;
     }
