@@ -8,7 +8,6 @@ CENTER: Home
 #define f first
 #define s second
 using namespace std;
-
 int n, r, d;
 vector<pair<double, double>> vctor;
 vector<pair<double, double>> lefts, rights;
