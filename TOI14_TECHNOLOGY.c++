@@ -21,7 +21,7 @@ double closest_pair(int l, int r){
     if(r-l <= 2){
         for(int i = l; i < r; ++i){
             for(int j = i+1; j <= r; ++j){
-//                cout << vctor[i].f << ' ' << vctor[i].s << ' ' << vctor[j].f << ' ' << vctor[j].s << ' ' << dist(vctor[i], vctor[j]) << "\n";
+
                 mn = min(mn, dist(vctor[i], vctor[j]));
             }
         }
