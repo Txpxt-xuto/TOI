@@ -41,9 +41,9 @@ double closest_pair(int l, int r){
             mn = min(mn, dist(p, q));
         }
     }
-    if((int)lefts.size())
+    if((int)lefts.size()) lefts.clear();
         lefts.clear();
-    if((int)rights.size())
+    if((int)rights.size()) 
         rights.clear();
     return mn;
 }
