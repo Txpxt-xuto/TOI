@@ -54,7 +54,7 @@ int main(){
     scanf("%d", &w);
     while(w--){
         cin >> n >> r >> d;
-        for(int i =0, x, y; i < n; ++i)
+        for(int i=0, x, y; i < n; ++i)
 		{
             cin >> x >> y;
             vctor.push_back({x, y});
