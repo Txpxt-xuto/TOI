@@ -25,7 +25,6 @@ double closest_pair(int l, int r){
                 mn = min(mn, dist(vctor[i], vctor[j]));
             }
         }
-//        cout << mn << '\n';
         return mn;
     }
     int mid = l+(r-l)/2;
