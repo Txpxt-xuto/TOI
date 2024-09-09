@@ -42,7 +42,6 @@ double closest_pair(int l, int r){
         }
     }
     if((int)lefts.size()) lefts.clear();
-        lefts.clear();
     if((int)rights.size()) rights.clear();
     return mn;
 }
