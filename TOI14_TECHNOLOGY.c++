@@ -38,7 +38,7 @@ double closest_pair(int l, int r){
     }
     for(pair<double, double> p : lefts)
 	{
-        for(pair<double, double> q : rights)
+        for(pair<double, double> q : rights) mn = min(mn, dist(p, q));
 		{
             mn = min(mn, dist(p, q));
         }
