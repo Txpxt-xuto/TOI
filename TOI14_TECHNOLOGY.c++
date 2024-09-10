@@ -7,5 +7,4 @@ CENTER: Home
 #include <bits/stdc++.h>
 #define f first
 #define s second
-using namespace 
 int n, r, d;
