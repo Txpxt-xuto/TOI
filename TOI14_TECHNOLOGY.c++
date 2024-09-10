@@ -32,6 +32,5 @@ double closest_pair(int l, int r)
     for(pair<double, double> p : lefts)
 	{
     }
-    if((int)lefts.size()) lefts.clear();
     return mn;
 }
