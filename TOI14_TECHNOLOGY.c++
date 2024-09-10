@@ -32,5 +32,4 @@ double closest_pair(int l, int r)
     for(pair<double, double> p : lefts)
 	{
     }
-    return mn;
 }
