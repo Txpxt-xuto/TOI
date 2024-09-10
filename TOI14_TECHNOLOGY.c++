@@ -24,4 +24,4 @@ double closest_pair(int l, int r)
             for(j=i+1;j<=r;++j) mn = min(mn, dist(vctor[i], vctor[j]));
         }
         return mn;}
-        }
+}
