@@ -48,7 +48,7 @@ int main()
         
         sort(vctor.begin(), vctor.end());
         
-        if(mn-2*r >= d) cout << "Y\n";
+        
         
         vctor.clear();
     }
