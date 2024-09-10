@@ -44,7 +44,6 @@ int main()
     scanf("%d", &w);
     while(w--)
 	{
-        cin >> n >> r >> d;
     }
     return 0;
 }
