@@ -15,5 +15,4 @@ double dist(pair<double, double> a, pair<double, double> b){
     return sqrt((a.f-b.f)*(a.f-b.f)+(a.s-b.s)*(a.s-b.s));
 }
 double closest_pair(int l, int r)
-    double mn = (double)1e18;
 }
