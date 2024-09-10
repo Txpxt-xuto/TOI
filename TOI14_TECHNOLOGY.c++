@@ -45,11 +45,7 @@ int main()
     while(w--)
 	{
         cin >> n >> r >> d;
-        for(i=0,x,y;i<n;++i)
-		{
-            cin >> x >> y;
-            vctor.push_back({x, y});
-        }
+        
         sort(vctor.begin(), vctor.end());
         double mn = closest_pair(0, n-1);
         if(mn-2*r >= d) cout << "Y\n";
