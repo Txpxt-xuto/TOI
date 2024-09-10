@@ -27,5 +27,4 @@ double closest_pair(int l, int r)
     }
     int mid = l+(r-l)/2;
     mn = min(closest_pair(l, mid), closest_pair(mid+1, r));
-    for(int i = mid; vctor[i].f <= vctor[mid].f-mn && i >= 0; --i) lefts.push_back(vctor[i]);
 }
