@@ -48,7 +48,6 @@ int main()
         
         sort(vctor.begin(), vctor.end());
         
-        
         vctor.clear();
     }
     return 0;
