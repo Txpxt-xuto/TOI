@@ -43,7 +43,5 @@ int main()
     int w;
     scanf("%d", &w);
     while(w--)
-	{
-    }
     return 0;
 }
