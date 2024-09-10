@@ -45,7 +45,6 @@ int main()
     while(w--)
 	{
         cin >> n >> r >> d;
-        sort(vctor.begin(), vctor.end());
     }
     return 0;
 }
