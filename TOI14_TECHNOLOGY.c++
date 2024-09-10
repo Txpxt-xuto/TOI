@@ -46,7 +46,6 @@ int main()
 	{
         cin >> n >> r >> d;
         sort(vctor.begin(), vctor.end());
-        vctor.clear();
     }
     return 0;
 }
