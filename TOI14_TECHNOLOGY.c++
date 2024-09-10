@@ -26,5 +26,4 @@ double closest_pair(int l, int r)
         return mn;
     }
     int mid = l+(r-l)/2;
-    mn = min(closest_pair(l, mid), closest_pair(mid+1, r));
 }
