@@ -17,5 +17,4 @@ double dist(pair<double, double> a, pair<double, double> b){
 double closest_pair(int l, int r)
     double mn = (double)1e18;
     if(r-l <= 2)
-	{
 }
