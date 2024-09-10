@@ -9,4 +9,3 @@ CENTER: Home
 #define s second
 using namespace std;
 int n, r, d;
-vector<pair<double, double>> vctor;
