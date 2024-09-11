@@ -30,7 +30,7 @@ int main(void)
 	cin >> n >> k >> t;
 	for(i=1;i<=n;i++)
 	{
-		cin>>l[i] >>p[i];
+		cin>>l[i] >> p[i];
 		r[l[i]]++;
 		for(j=0;j<p[i];j++)
 		{
