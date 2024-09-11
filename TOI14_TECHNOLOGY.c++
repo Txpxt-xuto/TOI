@@ -39,9 +39,6 @@ int main(void)
 		}
 	}
 	for(int i=1;i<=n;i++) if(p[i]==0 && !vis[i]) dfs(i);
-	{
-		if(p[i]==0 && !vis[i]) dfs(i);
-	}
 	for(int i=0;i<n && i<t;i++) r[l[ans[i]]]--;
 	if(r[1]>0)
 	{
