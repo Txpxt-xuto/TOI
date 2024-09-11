@@ -49,7 +49,7 @@ int main(void)
 	{
 		if(r[i]>0)
 		{
-			cout<<i-1;
+			cout << i-1;
 			break;
 		}
 	}
