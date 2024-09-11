@@ -26,12 +26,13 @@ int main(void)
 {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
+    int i,j;
 	cin >> n >> k >> t;
-	for(int i=1;i<=n;i++)
+	for(i=1;i<=n;i++)
 	{
 		cin>>l[i]>>p[i];
 		r[l[i]]++;
-		for(int j=0;j<p[i];j++)
+		for(j=0;j<p[i];j++)
 		{
 			cin>>tt;
 			v[tt].push_back({l[i],i});
