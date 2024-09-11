@@ -19,8 +19,6 @@ void dfs(int x)
 	{
 		p[v[x][i].second]--;
 		if(p[v[x][i].second]==0) dfs(v[x][i].second);
-		{
-		}
 	}
 }
 int main(void)
