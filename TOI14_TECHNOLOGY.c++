@@ -45,7 +45,7 @@ int main(void)
 		cout << -1;
 		return 0;
 	}
-	for(int i=0;i<k;i++)
+	for(i=0;i<k;i++)
 	{
 		if(r[i]>0)
 		{
