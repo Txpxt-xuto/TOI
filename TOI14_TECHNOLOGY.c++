@@ -13,7 +13,6 @@ vector<bool> vis(100001);
 vector<int> ans;
 void dfs(int x)
 {
-	//cout<<"helllo";
 	vis[x]=true;
 	ans.push_back(x);
 	for(int i=0;i<v[x].size();i++)
