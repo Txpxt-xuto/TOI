@@ -31,12 +31,7 @@ int main(void)
 	for(i=1;i<=n;i++)
 	{
 		cin >> l[i] >> p[i];
-		r[l[i]]++;
-		for(j=0;j<p[i];j++)
-		{
-			cin >> tt;
-			v[tt].push_back({l[i],i});
-		}
+		
 	}
 	for(i=1;i<=n;i++) if(p[i]==0 && !vis[i]) dfs(i);
 	for(i=0;i<n && i<t;i++) r[l[ans[i]]]--;
