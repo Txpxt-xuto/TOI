@@ -78,7 +78,8 @@ int calculate(string ss)
                         op = 0.16f;
                     if(tmp[j]=='#')
                         op = 0.08f;
-                    if(tmp[j]=='$')
+                    if(tmp[j]=='$') 
+                    if(tmp[j]=='$') 
                         op = 0.04f;
                 }
             }
