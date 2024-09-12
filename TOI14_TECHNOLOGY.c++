@@ -9,7 +9,7 @@ using namespace std;
 string s;
 void insrt(char p)
 {
-    for(int i=0;i<s.length();i++)
+    for(i=0;i<s.length();i++)
 	{
         if(s[i]==p)
 		{
@@ -17,7 +17,7 @@ void insrt(char p)
             if(s[i]=='2') s[i]='#';
             if(s[i]=='1') s[i]='$';
             int cnt=0;
-            for(int j=i-1;j>=0;j--)
+            for(j=i-1;j>=0;j--)
 			{
                 if(s[j] == ']') cnt++;
                 else if(s[j] == '[') cnt--;
@@ -29,7 +29,8 @@ void insrt(char p)
                     break;
                 }
             }
-            for(int j=i+1;j<s.length();j++){
+            for(j=i+1;j<s.length();j++)
+			{
                 if(s[j] == '[')
                     cnt++;
                 else if(s[j] == ']')
