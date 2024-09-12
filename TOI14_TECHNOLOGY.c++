@@ -24,5 +24,4 @@ void dfs(int x)
 }
 int main(void)
 {
-	ios::sync_with_stdio(false);
 }
