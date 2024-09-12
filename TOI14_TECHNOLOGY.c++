@@ -5,7 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include<bits/stdc++.h>
-
 using namespace std;
 string s;
 void insrt(char p){
