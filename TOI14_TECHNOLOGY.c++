@@ -15,6 +15,5 @@ void dfs(int x)
 {
     int i;
 	vis[x]=true;
-	ans.push_back(x);
-
+	ans.push_back(x)
 }
