@@ -104,7 +104,7 @@ int calculate(string ss)
     }
 }
 int main()
-{
+
 	int i;l
     cin >> s;
     insrt('3');
