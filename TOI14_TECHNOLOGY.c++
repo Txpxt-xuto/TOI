@@ -33,13 +33,11 @@ void insrt(char p){
                     break;
                 }
             }
-
             for(int j=i+1;j<s.length();j++){
                 if(s[j] == '[')
                     cnt++;
                 else if(s[j] == ']')
                     cnt--;
-
                 if(cnt == 0){
                     if(isalpha(s[j]))
                         s[j]='*';
