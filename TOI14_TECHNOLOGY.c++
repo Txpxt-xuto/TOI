@@ -88,7 +88,6 @@ int calculate(string ss)
             //cout << total << " ";
             total+=num1;
             total+=num2;
-            //cout << num1 << " "<< num2 <<" " << op << " " << total << endl;
             if(st.empty())
                 return total;
             string tmp2;
