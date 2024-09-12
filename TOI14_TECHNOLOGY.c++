@@ -8,8 +8,10 @@ CENTER: Home
 using namespace std;
 string s;
 void insrt(char p){
-    for(int i=0;i<s.length();i++){
-        if(s[i]==p){
+    for(int i=0;i<s.length();i++)
+	{
+        if(s[i]==p)
+		{
             if(s[i]== '3')
                 s[i] = '@';
             if(s[i]=='2')
