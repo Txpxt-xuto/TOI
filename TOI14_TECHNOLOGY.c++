@@ -35,8 +35,7 @@ void insrt(char p)
                 if(s[j] == '[') cnt++;
                 else if(s[j] == ']') cnt--;
                 if(cnt == 0){
-                    if(isalpha(s[j]))
-                        s[j]='*';
+                    if(isalpha(s[j])) s[j]='*';
                     s.insert(j+1,"]");
                     i++;
                     break;
