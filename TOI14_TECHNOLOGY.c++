@@ -7,4 +7,4 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 int n,k,t,tt;
-int l[100001],p[100001]
+int l[100001
