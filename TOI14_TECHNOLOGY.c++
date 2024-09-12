@@ -87,8 +87,7 @@ int calculate(string ss)
             total = floor((num1+num2)*op);
             total+=num1;
             total+=num2;
-            if(st.empty())
-                return total;
+            if(st.empty()) return total;
             string tmp2;
             while(total != 0){
                 tmp2 += (total%10) + '0';
