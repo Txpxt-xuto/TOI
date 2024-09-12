@@ -16,9 +16,5 @@ void dfs(int x)
     int i;
 	vis[x]=true;
 	ans.push_back(x);
-	for(i=0;i<v[x].size();i++)
-	{
-		p[v[x][i].second]--;
-		if(p[v[x][i].second]==0) dfs(v[x][i].second);
-	}
+
 }
