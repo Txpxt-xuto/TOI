@@ -104,8 +104,8 @@ int calculate(string ss)
     }
 }
 int main()
-
-	int i;l
+{
+	int i;
     cin >> s;
     insrt('3');
     insrt('2');
