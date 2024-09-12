@@ -105,11 +105,13 @@ int calculate(string ss)
 }
 int main()
 {
+	int i;l
     cin >> s;
     insrt('3');
     insrt('2');
     insrt('1');
-    for(int i=0;i<s.length();i++){
+    for(i=0;i<s.length();i++)
+	{
         if(s[i]=='*'){
             s[i]='2';
             s.insert(i+1,"0");
