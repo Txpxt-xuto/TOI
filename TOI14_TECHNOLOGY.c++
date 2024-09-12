@@ -62,26 +62,25 @@ int calculate(string ss)
             float num1=0,num2=0,op=0;
             bool done = false;
             for(int j=0;j<tmp.length();j++){
-                if(isdigit(tmp[j])){
-                    if(!done){
+                if(isdigit(tmp[j]))
+				{
+                    if(!done)
+					{
                         num1*=10;
                         num1+= tmp[j]-'0';
                     }
-                    else{
+                    else
+					{
                         num2*=10;
                         num2+= tmp[j]-'0';
                     }
                 }
-                else{
+                else
+				{
                     done = true;
-                    if(tmp[j]=='@')
-                        op = 0.16f;
-                    if(tmp[j]=='#')
-                        op = 0.08f;
-                    if(tmp[j]=='$') 
-                    if(tmp[j]=='$') 
-                    if(tmp[j]=='$') 
-                        op = 0.04f;
+                    if(tmp[j]=='@') op = 0.04f;
+                    if(tmp[j]=='#') op = 0.04f;
+                    if(tmp[j]=='$') op = 0.04f;
                 }
             }
             total = floor((num1+num2)*op);
