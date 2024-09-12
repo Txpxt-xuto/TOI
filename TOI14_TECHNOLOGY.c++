@@ -81,9 +81,7 @@ int calculate(string ss)
                     if(tmp[j]=='$')
                         op = 0.04f;
                 }
-
             }
-
             total = floor((num1+num2)*op);
             total+=num1;
             total+=num2;
