@@ -47,10 +47,12 @@ void insrt(char p)
 int calculate(string ss)
 {
     stack<char> st;
-    int total=0;
-    for(int i=0;i<s.length();i++){
+    int total=0,i;
+    for(i=0;i<s.length();i++)
+	{
         st.push(s[i]);
-        if(st.top() == ']'){
+        if(st.top() == ']')
+		{
             string tmp;
             st.pop();
             while(!st.empty() && st.top()!='[')
