@@ -13,12 +13,10 @@ void insrt(char p)
 	{
         if(s[i]==p)
 		{
-            if(s[i]== '3')
+            if(s[i]== '3') s[i] = '@';
                 s[i] = '@';
-            if(s[i]=='2')
-                s[i]='#';
-            if(s[i]=='1')
-                s[i]='$';
+            if(s[i]=='2') s[i]='#';
+            if(s[i]=='1') s[i]='$';
             int cnt=0;
             for(int j=i-1;j>=0;j--){
                 if(s[j] == ']')
