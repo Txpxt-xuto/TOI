@@ -7,7 +7,6 @@ CENTER: Home
 #include<bits/stdc++.h>
 
 using namespace std;
-
 string s;
 void insrt(char p){
     for(int i=0;i<s.length();i++){
