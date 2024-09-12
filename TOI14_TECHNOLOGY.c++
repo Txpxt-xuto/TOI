@@ -5,6 +5,3 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <bits/stdc++.h>
-using namespace std;
-int n,k,t,tt;
-int l[100001
