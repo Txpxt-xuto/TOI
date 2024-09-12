@@ -45,7 +45,4 @@ int main(void)
 		cout << -1;
 		return 0;
 	}
-	for(i=0;i<k;i++)
-	{
-
 }
