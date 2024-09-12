@@ -20,8 +20,7 @@ void insrt(char p)
             for(int j=i-1;j>=0;j--)
 			{
                 if(s[j] == ']') cnt++;
-                else if(s[j] == '[') cnt--;
-                    cnt--;
+                else if(s[j] == '[') cnt--
                 if(cnt == 0){
                     if(isalpha(s[j]))
                         s[j]='*';
