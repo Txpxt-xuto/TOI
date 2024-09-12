@@ -53,7 +53,8 @@ int calculate(string ss)
         if(st.top() == ']'){
             string tmp;
             st.pop();
-            while(!st.empty() && st.top()!='['){
+            while(!st.empty() && st.top()!='[')
+			{
                 tmp += st.top();
                 st.pop();
             }
@@ -61,7 +62,8 @@ int calculate(string ss)
             st.pop();
             float num1=0,num2=0,op=0;
             bool done = false;
-            for(int j=0;j<tmp.length();j++){
+            for(j=0;j<tmp.length();j++)
+			{
                 if(isdigit(tmp[j]))
 				{
                     if(!done)
