@@ -14,6 +14,4 @@ vector<int> ans;
 void dfs(int x)
 {
     int i;
-	vis[x]=true;
-	ans.push_back(x)
 }
