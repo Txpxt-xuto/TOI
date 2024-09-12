@@ -10,21 +10,18 @@ string s;
 void insrt(char p){
     for(int i=0;i<s.length();i++){
         if(s[i]==p){
-
             if(s[i]== '3')
                 s[i] = '@';
             if(s[i]=='2')
                 s[i]='#';
             if(s[i]=='1')
                 s[i]='$';
-
             int cnt=0;
             for(int j=i-1;j>=0;j--){
                 if(s[j] == ']')
                     cnt++;
                 else if(s[j] == '[')
                     cnt--;
-
                 if(cnt == 0){
                     if(isalpha(s[j]))
                         s[j]='*';
