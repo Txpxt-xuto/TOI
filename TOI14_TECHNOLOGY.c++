@@ -44,8 +44,8 @@ void insrt(char p)
         }
     }
 }
-
-int calculate(string ss){
+int calculate(string ss)
+{
     stack<char> st;
     int total=0;
     for(int i=0;i<s.length();i++){
