@@ -79,14 +79,6 @@ int calculate(string ss)
                         num2+= tmp[j]-'0';
                     }
                 }
-                else
-				{
-                    done = true;
-                    if(tmp[j]=='@') op = 0.04f;
-                    if(tmp[j]=='#') op = 0.04f;
-                    if(tmp[j]=='$') op = 0.04f;
-                }
-            }
         }
     }
 }
