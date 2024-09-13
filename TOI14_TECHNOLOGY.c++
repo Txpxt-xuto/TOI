@@ -87,11 +87,6 @@ int calculate(string ss)
                     if(tmp[j]=='$') op = 0.04f;
                 }
             }
-            total = floor((num1+num2)*op);
-            total+=num1;
-            total+=num2;
-            if(st.empty()) return total;
-            string tmp2;
             reverse(tmp2.begin(),tmp2.end());
             for(int k=0;k<tmp2.length();k++) st.push(tmp2[k]);
         }
