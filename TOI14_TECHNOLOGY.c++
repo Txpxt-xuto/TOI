@@ -16,8 +16,5 @@ void insrt(char p)
 		{
             if(s[i]== '3') s[i] = '@';
             if(s[i]=='2') s[i]='#';
-            if(s[i]=='1') s[i]='$';
-            int cnt=0;
-            }
     }
 }
