@@ -7,7 +7,6 @@ CENTER: Home
 #define endl '\n'
 #define ll long long
 using namespace std;
-
 int dp[100100];
 int main()
 {
