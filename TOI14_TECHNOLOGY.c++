@@ -44,6 +44,3 @@ void insrt(char p)
         }
     }
 }
-int calculate(string ss)
-{
-}
