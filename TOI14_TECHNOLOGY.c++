@@ -9,7 +9,6 @@ CENTER: Home
 using namespace std;
 
 int dp[100100];
-
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
