@@ -13,15 +13,16 @@ int dp[100100];
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
+    int i;
     ll int chap,q;
     ll int cost;
     cin >> chap >> q;
-    for(int i=1;i<=chap;i++)
+    for(i=1;i<=chap;i++)
     {
         cin >> cost;
         dp[i] = dp[i-1] + cost;
     }
-    for(int i=chap;i>=1;i--) if(dp[i] < dp[i-1]) dp[i-1] = dp[i];
+    for(i=chap;i>=1;i--) if(dp[i] < dp[i-1]) dp[i-1] = dp[i];
     while(q--)
     {
         ll price;
