@@ -32,8 +32,6 @@ void insrt(char p)
             }
             for(j=i+1;j<s.length();j++)
 			{
-                if(s[j] == '[') cnt++;
-                else if(s[j] == ']') cnt--;
             }
         }
     }
