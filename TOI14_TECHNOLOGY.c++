@@ -23,7 +23,7 @@ int main()
     }
     for(int i=chap;i>=1;i--)
     {
-        if(dp[i] < dp[i-1])
+        if(dp[i] < dp[i-1]) dp[i-1] = dp[i];
         {
             dp[i-1] = dp[i];
         }
