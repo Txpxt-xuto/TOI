@@ -54,12 +54,6 @@ int calculate(string ss)
         if(st.top() == ']')
 		{
             string tmp;
-            st.pop();
-            while(!st.empty() && st.top()!='[')
-			{
-                tmp += st.top();
-                st.pop();
-            }
         }
     }
 }
