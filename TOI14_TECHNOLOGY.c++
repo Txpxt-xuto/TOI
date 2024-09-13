@@ -34,7 +34,6 @@ void insrt(char p)
 			{
                 if(s[j] == '[') cnt++;
                 else if(s[j] == ']') cnt--;
-
             }
         }
     }
