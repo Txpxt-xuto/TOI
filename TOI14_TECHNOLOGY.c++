@@ -68,11 +68,7 @@ int calculate(string ss)
 			{
                 if(isdigit(tmp[j]))
 				{
-                    if(!done)
-					{
-                        num1*=10;
-                        num1+= tmp[j]-'0';
-                    }
+                   
                     
                 }
         }
