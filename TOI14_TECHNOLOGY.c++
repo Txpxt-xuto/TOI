@@ -51,9 +51,5 @@ int calculate(string ss)
     for(i=0;i<s.length();i++)
 	{
         st.push(s[i]);
-        if(st.top() == ']')
-		{
-            string tmp;
-        }
     }
 }
