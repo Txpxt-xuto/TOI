@@ -102,3 +102,21 @@ int calculate(string ss)
         }
     }
 }
+int main()
+{
+	int i;
+    cin >> s;
+    insrt('3');
+    insrt('2');
+    insrt('1');
+    for(i=0;i<s.length();i++)
+	{
+        if(s[i]=='*')
+		{
+            s[i]='2';
+            s.insert(i+1,"0");
+        }
+    }
+    string tmp=s;
+    cout << calculate(tmp);
+}
