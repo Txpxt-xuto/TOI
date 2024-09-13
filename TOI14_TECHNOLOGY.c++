@@ -92,11 +92,6 @@ int calculate(string ss)
             total+=num2;
             if(st.empty()) return total;
             string tmp2;
-            while(total != 0)
-			{
-                tmp2 += (total%10) + '0';
-                total/=10;
-            }
             reverse(tmp2.begin(),tmp2.end());
             for(int k=0;k<tmp2.length();k++) st.push(tmp2[k]);
         }
