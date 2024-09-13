@@ -48,8 +48,4 @@ int calculate(string ss)
 {
     stack<char> st;
     int total=0,i;
-    for(i=0;i<s.length();i++)
-	{
-        st.push(s[i]);
-    }
 }
