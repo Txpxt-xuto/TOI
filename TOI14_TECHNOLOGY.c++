@@ -46,6 +46,4 @@ void insrt(char p)
 }
 int calculate(string ss)
 {
-    stack<char> st;
-    int total=0,i;
 }
