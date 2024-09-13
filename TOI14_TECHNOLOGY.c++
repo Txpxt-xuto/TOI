@@ -22,7 +22,6 @@ int main()
         dp[i] = dp[i-1] + cost;
     }
     for(int i=chap;i>=1;i--) if(dp[i] < dp[i-1]) dp[i-1] = dp[i];
-
     while(q--)
     {
         ll price;
