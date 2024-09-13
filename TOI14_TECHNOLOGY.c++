@@ -73,11 +73,7 @@ int calculate(string ss)
                         num1*=10;
                         num1+= tmp[j]-'0';
                     }
-                    else
-					{
-                        num2*=10;
-                        num2+= tmp[j]-'0';
-                    }
+                    
                 }
         }
     }
