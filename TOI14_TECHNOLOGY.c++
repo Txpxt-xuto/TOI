@@ -32,6 +32,7 @@ void insrt(char p)
             }
             for(j=i+1;j<s.length();j++)
 			{
+
             }
         }
     }
