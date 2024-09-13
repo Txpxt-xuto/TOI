@@ -66,11 +66,7 @@ int calculate(string ss)
             bool done = false;
             for(j=0;j<tmp.length();j++)
 			{
-                if(isdigit(tmp[j]))
-				{
-                   
-                    
-                }
+               
         }
     }
 }
