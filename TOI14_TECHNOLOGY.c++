@@ -42,7 +42,8 @@ void stp2(ll st)
 	priority_queue<edge> pq;
 	visited2[st]=true;
 	for(auto x:graph2[st]) pq.push(x);
-	while(!pq.empty()){
+	while(!pq.empty())
+    {
 		edge tmp = pq.top();
 		pq.pop();
 		if(visited2[tmp.en])continue;
