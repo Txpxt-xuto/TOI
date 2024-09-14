@@ -60,7 +60,8 @@ int main()
 	cin >> n;
 	for(int i=0;i<n;i++)
     {
-		ll x;cin >> x;
+		ll x;
+        cin >> x;
 		fuel.push_back(x);
 	}
 	cin >> st >> en >> tk >> m;
