@@ -12,8 +12,8 @@ int main()
 {
     cin.tie(0)->sync_with_stdio(0);
     int i;
-    ll int chap,q;
-    ll int cost;
+    ll int chap,qcost;
+    ll int ;
     cin >> chap >> q;
     for(i=1;i<=chap;i++)
     {
