@@ -8,9 +8,7 @@ CENTER: Home
 using namespace std;
 #define int long long int
 const int maxsz = 500005;
-int tin[maxsz];
-int low[maxsz];
-int tim=0;
+int tin[maxsz],low[maxsz],tim=0;
 vector<int> edges[maxsz];
 int bridges=0;
 int n,m,u,v;
