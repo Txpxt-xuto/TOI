@@ -27,7 +27,7 @@ void dfs(int node, int par)
 			dfs(to,node);
 			low[node]=min(low[node],low[to]);
 		}
-		else //have explored already -> found a back-edge
+		else low[node]=min(low[node],tin[to]);
 		{
 			low[node]=min(low[node],tin[to]);
 		}
