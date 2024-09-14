@@ -66,4 +66,3 @@ int main(){
 }
 //  g++ toi14_lo.cpp && ./toi14_lo
 // 4
-/*
