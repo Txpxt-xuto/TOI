@@ -50,10 +50,7 @@ void stp2(ll st)
 		visited2[tmp.en] = true;
 		dis2[tmp.en]=tmp.w;
 		if(tmp.en==en) return;
-		for(auto x:graph2[tmp.en])
-        {
-			pq.push({x.en,x.w+tmp.w});
-		}
+		for(auto x:graph2[tmp.en]) pq.push({x.en,x.w+tmp.w});
 	}
 }
 int main(){
