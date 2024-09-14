@@ -16,7 +16,7 @@ int bridges=0;
 int n,m,u,v;
 void dfs(int node, int par)
 {
-	tin[node]=tim;
+	tin[node] = tim;
 	low[node]=tim;
 	tim++;
 	for(auto to:edges[node])
