@@ -56,7 +56,6 @@ int main(){
                 pq.push({w,0,box,a1});
             }
             }
-            
         }
     }
     cout << min(dp[e][0],dp[e][1]);
