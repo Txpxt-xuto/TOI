@@ -10,7 +10,8 @@ using namespace std;
 struct edge
 {
 	ll en,w;
-	bool operator<(const edge&x)const{
+	bool operator<(const edge&x)const
+    {
 		return w>x.w;
 	}
 };
