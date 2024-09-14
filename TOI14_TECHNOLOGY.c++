@@ -53,8 +53,10 @@ void stp2(ll st)
 		for(auto x:graph2[tmp.en]) pq.push({x.en,x.w+tmp.w});
 	}
 }
-int main(){
-	ios_base::sync_with_stdio(false);cin.tie(NULL);
+int main()
+{
+	ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 	cin >> n;
 	for(int i=0;i<n;i++){
 		ll x;cin >> x;
