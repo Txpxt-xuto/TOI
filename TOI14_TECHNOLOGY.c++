@@ -40,8 +40,9 @@ int main(){
         auto [x1,x2,x3,x4] = pq.top();
         pq.pop();
         int w=x1;
-        for(int i=x3;i<=box;++i){
-            for(int j=0;j<v[x4].size();++j)
+        for(i=x3;i<=box;++i)
+        {
+            for(j=0;j<v[x4].size();++j)
             {
                 int a1=v[x4][j].first;
                 int a2=v[x4][j].second;
