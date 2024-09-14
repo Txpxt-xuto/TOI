@@ -27,7 +27,7 @@ void dfs(int node, int par)
 			dfs(to,node);
 			low[node]=min(low[node],low[to]);
 		}
-		else low[node]=min(low[node],tin[to]);
+		else low[node] = min(low[node],tin[to]);
 	}
 	if(low[node]==tin[node]) bridges++;
 }
