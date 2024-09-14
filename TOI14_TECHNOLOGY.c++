@@ -28,7 +28,7 @@ int main(){
     cin>>s>>e>>box;
     int c;
     cin>>c;
-    for(int i=0;i<c;++i)
+    for(i=0;i<c;++i)
     {
         int x,y,z;
         cin>>x>>y>>z;
