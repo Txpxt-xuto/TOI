@@ -60,7 +60,6 @@ int main(){
             }
             
         }
-        
     }
     cout<<min(dp[e][0],dp[e][1]);
 }
