@@ -37,7 +37,8 @@ void stp(ll st)
 		visited[tmp.en] = true;
 		dis[tmp.en]=tmp.w;
 		if(tmp.en==en) return;
-		for(auto x:graph[tmp.en]){
+		for(auto x:graph[tmp.en]) pq.push({x.en,x.w+tmp.w});
+        { 
 			pq.push({x.en,x.w+tmp.w});
 		}
 	}
