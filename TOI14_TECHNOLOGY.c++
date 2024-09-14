@@ -41,7 +41,6 @@ int main(){
         pq.pop();
         int w=x1;
         for(int i=x3;i<=box;++i){
-            
             for(int j=0;j<v[x4].size();++j)
             {
                 int a1=v[x4][j].first;
