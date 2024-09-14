@@ -25,7 +25,7 @@ void dfs(int node, int par)
 		if(tin[to]==-1) //havent explored yet
 		{
 			dfs(to,node);
-			low[node]=min(low[node],low[to]);
+			low[node] = min(low[node],low[to]);
 		}
 		else low[node] = min(low[node],tin[to]);
 	}
