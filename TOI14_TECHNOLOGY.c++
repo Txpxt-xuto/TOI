@@ -15,7 +15,6 @@ struct edge
 		return w>x.w;
 	}
 };
-
 ll n,m,st,en,tk;
 vector<ll> fuel;
 vector<edge> graph[109];
