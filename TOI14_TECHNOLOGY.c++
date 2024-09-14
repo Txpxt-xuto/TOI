@@ -10,8 +10,7 @@ using namespace std;
 const int maxsz = 500005;
 int tin[maxsz],low[maxsz],tim=0;
 vector<int> edges[maxsz];
-int bridges=0;
-int n,m,u,v;
+int bridges=0,n,m,u,v;
 void dfs(int node, int par)
 {
 	tin[node] = tim;
