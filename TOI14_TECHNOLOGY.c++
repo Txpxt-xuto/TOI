@@ -51,9 +51,9 @@ int main(){
                     dp[a1][x2]=i;
                     pq.push({x1,x2,i,a1});
                 }
-                
                 x1+=a[x4];
-                if(x2||dp[a1][0]>w){
+                if(x2||dp[a1][0]>w)
+                {
                     dp[a1][0]=w;
                     pq.push({w,0,box,a1});
                 }
