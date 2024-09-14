@@ -23,7 +23,6 @@ vector<ll> dis;
 vector<ll> dis2;
 bool visited[109];
 bool visited2[109];
-
 void stp(ll st){
 	dis.assign(109,INT_MAX);
 	priority_queue<edge> pq;
