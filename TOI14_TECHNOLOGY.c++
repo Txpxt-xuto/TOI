@@ -12,7 +12,7 @@ int main()
 {
     cin.tie(0)->sync_with_stdio(0);
     int i;
-    ll int chap,qcost;
+    ll int chap,q,cost;
     ll int ;
     cin >> chap >> q;
     for(i=1;i<=chap;i++)
