@@ -3,7 +3,8 @@ TASK: technology.cpp
 LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
-*/#include <bits/stdc++.h>
+*/
+#include <bits/stdc++.h>
 #define endl '\n'
 #define ll long long
 using namespace std;
