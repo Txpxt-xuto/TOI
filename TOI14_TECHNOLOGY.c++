@@ -38,9 +38,6 @@ void stp(ll st)
 		dis[tmp.en]=tmp.w;
 		if(tmp.en==en) return;
 		for(auto x:graph[tmp.en]) pq.push({x.en,x.w+tmp.w});
-        { 
-			pq.push({x.en,x.w+tmp.w});
-		}
 	}
 }
 void stp2(ll st){
