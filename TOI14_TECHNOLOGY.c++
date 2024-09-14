@@ -36,20 +36,3 @@ void stp(ll st)
 		for(auto x:graph[tmp.en]) pq.push({x.en,x.w+tmp.w});
 	}
 }
-void stp2(ll st)
-{
-	dis2.assign(109,INT_MAX);
-	priority_queue<edge> pq;
-	visited2[st]=true;
-	for(auto x:graph2[st]) pq.push(x);
-	while(!pq.empty())
-    {
-		edge tmp = pq.top();
-		pq.pop();
-		if(visited2[tmp.en]) continue;
-		visited2[tmp.en] = true;
-		dis2[tmp.en]=tmp.w;
-		if(tmp.en==en) return;
-		for(auto x:graph2[tmp.en]) pq.push({x.en,x.w+tmp.w});
-	}
-}
