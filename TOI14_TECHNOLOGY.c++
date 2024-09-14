@@ -28,7 +28,8 @@ void stp(ll st)
 	dis.assign(109,INT_MAX);
 	priority_queue<edge> pq;
 	visited[st]=true;
-	for(auto x:graph[st]){
+	for(auto x:graph[st])
+    {
 		pq.push(x);
 	}
 	while(!pq.empty()){
