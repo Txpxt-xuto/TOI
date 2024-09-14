@@ -52,11 +52,11 @@ int main(){
                     pq.push({x1,x2,i,a1});
                 }
                 
-            x1+=a[x4];
-            if(x2||dp[a1][0]>w){
-                dp[a1][0]=w;
-                pq.push({w,0,box,a1});
-            }
+                x1+=a[x4];
+                if(x2||dp[a1][0]>w){
+                    dp[a1][0]=w;
+                    pq.push({w,0,box,a1});
+                }
             }
         }
     }
