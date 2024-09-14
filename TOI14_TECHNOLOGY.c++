@@ -49,8 +49,8 @@ void stp2(ll st)
 		if(visited2[tmp.en])continue;
 		visited2[tmp.en] = true;
 		dis2[tmp.en]=tmp.w;
-		if(tmp.en==en){
-            
+		if(tmp.en==en) return;
+
 			return;
 		}
 		for(auto x:graph2[tmp.en]){
