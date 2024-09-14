@@ -16,7 +16,6 @@ struct edge
 	}
 };
 ll n,m,st,en,tk;
-vector<ll> fuel;
 vector<edge> graph[109],graph2[109];
 vector<ll> dis,dis2,fuel;
 bool visited[109],visited2[109];
