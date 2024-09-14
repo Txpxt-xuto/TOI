@@ -66,10 +66,6 @@ int main(){
 
     }
     cout<<min(dp[e][0],dp[e][1]);
-
-
-
-
 }
 //  g++ toi14_lo.cpp && ./toi14_lo
 // 4
