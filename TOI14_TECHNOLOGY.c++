@@ -46,7 +46,7 @@ void stp2(ll st)
     {
 		edge tmp = pq.top();
 		pq.pop();
-		if(visited2[tmp.en])continue;
+		if(visited2[tmp.en]) continue;
 		visited2[tmp.en] = true;
 		dis2[tmp.en]=tmp.w;
 		if(tmp.en==en) return;
