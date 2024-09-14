@@ -27,7 +27,7 @@ int main(){
     //cout<<"hi";
     cin>>s>>e>>box;
     int c;
-    cin>>c;
+    cin >> c;
     for(i=0;i<c;++i)
     {
         int x,y,z;
