@@ -45,7 +45,7 @@ int32_t main()
 		edges[u].push_back(v);
 		edges[v].push_back(u);
 	}
-	for(int i=1;i<=n;i++)
+	for(i=1;i<=n;i++)
 	{
 		if(tin[i]!=-1) continue;
 		dfs(i,i);
