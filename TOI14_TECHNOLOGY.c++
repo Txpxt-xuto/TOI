@@ -36,13 +36,12 @@ void stp(ll st)
 		for(auto x:graph[tmp.en]) pq.push({x.en,x.w+tmp.w});
 	}
 }
-void stp2(ll st){
+void stp2(ll st)
+{
 	dis2.assign(109,INT_MAX);
 	priority_queue<edge> pq;
 	visited2[st]=true;
-	for(auto x:graph2[st]){
-		pq.push(x);
-	}
+	for(auto x:graph2[st]) pq.push(x);
 	while(!pq.empty()){
 		edge tmp = pq.top();
 		pq.pop();
