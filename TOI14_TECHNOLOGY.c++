@@ -35,7 +35,8 @@ int main(){
         v[y].push_back({x,z});
     }
     pq.push({0,1,0,s});
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         auto [x1,x2,x3,x4] = pq.top();
         pq.pop();
         int w=x1;
