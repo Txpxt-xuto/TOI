@@ -65,7 +65,8 @@ int main()
 		fuel.push_back(x);
 	}
 	cin >> st >> en >> tk >> m;
-	while(m--){
+	while(m--)
+    {
 		ll st1,en1,w;cin >> st1 >> en1 >> w;
 		graph[st1].push_back({en1,w*fuel[st1-1]});
 		graph[en1].push_back({st1,w*fuel[en1-1]});
