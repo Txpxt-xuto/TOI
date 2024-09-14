@@ -22,7 +22,7 @@ void dfs(int node, int par)
 	for(auto to:edges[node])
 	{
 		if(to==par) continue;
-		if(tin[to]==-1) //havent explored yet
+		if(tin[to]==-1)
 		{
 			dfs(to,node);
 			low[node] = min(low[node],low[to]);
