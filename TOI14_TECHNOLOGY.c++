@@ -33,7 +33,6 @@ int main(){
         cin>>x>>y>>z;
         v[x].push_back({y,z});
         v[y].push_back({x,z});
-        //cout<<i<<" \n";
     }
     pq.push({0,1,0,s});
     while(!pq.empty()){
