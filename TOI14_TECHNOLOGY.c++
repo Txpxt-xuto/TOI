@@ -21,7 +21,7 @@ vector<edge> graph[109];
 vector<edge> graph2[109];
 vector<ll> dis;
 vector<ll> dis2;
-bool visited[109];
+bool visited[109],visited2[109];
 bool visited2[109];
 void stp(ll st)
 {
