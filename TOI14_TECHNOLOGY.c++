@@ -53,28 +53,3 @@ void stp2(ll st)
 		for(auto x:graph2[tmp.en]) pq.push({x.en,x.w+tmp.w});
 	}
 }
-int main()
-{
-	ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-	cin >> n;
-	for(int i=0;i<n;i++)
-    {
-		ll x;
-        cin >> x;
-		fuel.push_back(x);
-	}
-	cin >> st >> en >> tk >> m;
-	while(m--)
-    {
-		ll st1,en1,w;cin >> st1 >> en1 >> w;
-		graph[st1].push_back({en1,w*fuel[st1-1]});
-		graph[en1].push_back({st1,w*fuel[en1-1]});
-		graph2[st1].push_back({en1,w*fuel[en1-1]});
-		graph2[en1].push_back({st1,w*fuel[st1-1]});
-	}
-	stp(st);
-	stp2(st);
-	cout << min(dis[en],dis2[en]);
-	return 0;	
-}
