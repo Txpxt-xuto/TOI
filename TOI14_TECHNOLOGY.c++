@@ -29,10 +29,11 @@ void stp(ll st)
 	priority_queue<edge> pq;
 	visited[st]=true;
 	for(auto x:graph[st]) pq.push(x);
-	while(!pq.empty()){
+	while(!pq.empty())
+    {
 		edge tmp = pq.top();
 		pq.pop();
-		if(visited[tmp.en])continue;
+		if(visited[tmp.en]) continue;
 		visited[tmp.en] = true;
 		dis[tmp.en]=tmp.w;
 		if(tmp.en==en){
