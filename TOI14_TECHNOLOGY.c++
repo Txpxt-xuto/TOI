@@ -52,7 +52,6 @@ int main()
     }
     cout << min(dp[e][0],dp[e][1]);
 }
-
 /*
 #include <bits/stdc++.h>
 using namespace std;
