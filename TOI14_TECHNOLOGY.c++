@@ -22,7 +22,7 @@ int main(){
     
     cin>>n;
     for(int i=0;i<n;++i) cin>>a[i];
-    cin >> s>>e>>box;
+    cin >> s>> e>>box;
     cin >> c;
     for(i=0;i<c;++i)
     {
