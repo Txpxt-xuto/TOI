@@ -20,7 +20,7 @@ int main(){
     
     int n,s,e,box;
     
-    cin>>n;
+    cin >> n;
     for(int i=0;i<n;++i) cin>>a[i];
     cin >> s >> e >> box;
     cin >> c;
