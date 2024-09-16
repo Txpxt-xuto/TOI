@@ -25,7 +25,7 @@ int main(){
         cin>>a[i];
     }
     //cout<<"hi";
-    cin>> s>>e>>box;
+    cin >> s>>e>>box;
     int c;
     cin >> c;
     for(i=0;i<c;++i)
