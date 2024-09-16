@@ -6,7 +6,6 @@ CENTER: Home
 */
 #include<bits/stdc++.h>
 using namespace std;
-
 vector<pair<int,int>> v[105];
 int a[105],dp[105][2];
 priority_queue<tuple<int,int,int,int>,vector<tuple<int,int,int,int>>,greater<tuple<int,int,int,int>>> pq;
