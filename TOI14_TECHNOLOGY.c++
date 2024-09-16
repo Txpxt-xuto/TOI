@@ -13,7 +13,8 @@ int a[105],dp[105][2];
 
 priority_queue<tuple<int,int,int,int>,vector<tuple<int,int,int,int>>,greater<tuple<int,int,int,int>>> pq;
 
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);
     int n,s,e,box,c;
     cin >> n;
