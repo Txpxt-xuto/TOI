@@ -36,11 +36,6 @@ int main()
             {
                 int a1=v[x4][j].first;
                 int a2=v[x4][j].second;
-                if(dp[a1][x2]>x1||i<a2)
-                {
-                    dp[a1][x2]=i;
-                    pq.push({x1,x2,i,a1});
-                }
             }
         }
     }
