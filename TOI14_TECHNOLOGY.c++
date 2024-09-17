@@ -18,7 +18,6 @@ void calc()
     if(x==2)S.push((a+b)*108/100);
     if(x==3)S.push((a+b)*116/100);
 }
-
 int main(){
     string s;cin>>s;
     for(char &c:s){
