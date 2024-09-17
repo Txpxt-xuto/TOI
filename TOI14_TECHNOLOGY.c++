@@ -14,9 +14,6 @@ int main()
     ios_base::sync_with_stdio(0);
     int n,s,e,box,c;
     cin >> n;
-    for(int i=0;i<n;++i) cin>>a[i];
-    cin >> s >> e >> box;
-    cin >> c;
 }
 /*
 #include <bits/stdc++.h>
