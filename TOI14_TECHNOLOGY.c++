@@ -31,13 +31,6 @@ int main()
         pq.pop();
         int w=x1;
         for(i=x3;i<=box;++i)
-        {
-            for(j=0;j<v[x4].size();++j)
-            {
-                int a1=v[x4][j].first;
-                int a2=v[x4][j].second;
-            }
-        }
     }
 }
 /*
