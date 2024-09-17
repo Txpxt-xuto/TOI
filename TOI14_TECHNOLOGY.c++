@@ -30,9 +30,6 @@ int main()
             continue;
         }
         else if(c=='[') Operand.push(-1);
-        {
-            Operand.push(-1);
-        }
         else if(c==']')
         {
             while(Operand.top()!=-1)
