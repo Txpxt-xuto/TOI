@@ -11,7 +11,6 @@ typedef long long ii;
 
 stack<ii> S;
 stack<int> Operand;
-
 void calc(){
     int x = Operand.top();
     ii a=S.top();S.pop();
