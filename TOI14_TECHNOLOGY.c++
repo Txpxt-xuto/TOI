@@ -20,10 +20,6 @@ int main()
     for(i=0;i<c;++i)
     {
         int x,y,z;
-        cin >> x >> y >> z;
-        v[x].push_back({y,z});
-        v[y].push_back({x,z});
-    }
 }
 /*
 #include <bits/stdc++.h>
