@@ -44,8 +44,6 @@ int main()
                 x1+=a[x4];
                 if(x2||dp[a1][0]>w)
                 {
-                    dp[a1][0]=w;
-                    pq.push({w,0,box,a1});
                 }
             }
         }
