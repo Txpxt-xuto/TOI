@@ -17,9 +17,6 @@ int main()
     for(int i=0;i<n;++i) cin>>a[i];
     cin >> s >> e >> box;
     cin >> c;
-    for(i=0;i<c;++i)
-    {
-        int x,y,z;
 }
 /*
 #include <bits/stdc++.h>
