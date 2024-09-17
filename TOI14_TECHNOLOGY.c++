@@ -41,7 +41,8 @@ int main()
             }
             Operand.pop();
         }
-        else{
+        else
+        {
             while(!Operand.empty()&&Operand.top()>=(c-'0')){
                 calc();
                 Operand.pop();
