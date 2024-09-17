@@ -5,9 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include<bits/stdc++.h>
-using namespace std;
-vector<pair<int,int>> v[105];
-int a[105],dp[105][2];
 /*
 #include <bits/stdc++.h>
 using namespace std;
