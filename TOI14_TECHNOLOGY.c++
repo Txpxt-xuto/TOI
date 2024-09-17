@@ -54,7 +54,5 @@ int main()
 
     while(!Operand.empty())calc(),Operand.pop();
     cout<<S.top();
-
-
     return 0;
 }
