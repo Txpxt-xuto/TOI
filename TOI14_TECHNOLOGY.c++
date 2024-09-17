@@ -9,7 +9,8 @@ using namespace std;
 typedef long long ii;
 stack<ii> S;
 stack<int> Operand;
-void calc(){
+void calc()
+{
     int x = Operand.top();
     ii a=S.top();S.pop();
     ii b=S.top();S.pop();
