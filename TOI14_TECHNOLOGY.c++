@@ -8,7 +8,6 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ii;
-
 stack<ii> S;
 stack<int> Operand;
 void calc(){
