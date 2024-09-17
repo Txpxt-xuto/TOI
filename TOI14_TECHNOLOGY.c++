@@ -34,7 +34,8 @@ int main()
             Operand.push(-1);
         }
         else if(c==']'){
-            while(Operand.top()!=-1){
+            while(Operand.top()!=-1)
+            {
                 calc();
                 Operand.pop();
             }
