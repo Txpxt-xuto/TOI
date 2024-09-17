@@ -24,10 +24,6 @@ int main()
         v[x].push_back({y,z});
         v[y].push_back({x,z});
     }
-    pq.push({0,1,0,s});
-    while(!pq.empty())
-    {
-    }
 }
 /*
 #include <bits/stdc++.h>
