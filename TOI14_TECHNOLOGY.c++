@@ -43,7 +43,8 @@ int main()
         }
         else
         {
-            while(!Operand.empty()&&Operand.top()>=(c-'0')){
+            while(!Operand.empty()&&Operand.top()>=(c-'0'))
+            {
                 calc();
                 Operand.pop();
             }
