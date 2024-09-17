@@ -12,8 +12,10 @@ stack<int> Operand;
 void calc()
 {
     int x = Operand.top();
-    ii a=S.top();S.pop();
-    ii b=S.top();S.pop();
+    ii a=S.top();
+    S.pop();
+    ii b=S.top();
+    S.pop();
     if(x==1) S.push((a+b)*104/100);
     if(x==2) S.push((a+b)*108/100);
     if(x==3) S.push((a+b)*116/100);
