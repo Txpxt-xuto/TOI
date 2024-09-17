@@ -41,7 +41,6 @@ int main()
                     dp[a1][x2]=i;
                     pq.push({x1,x2,i,a1});
                 }
-                x1+=a[x4];
             }
         }
     }
