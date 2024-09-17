@@ -49,7 +49,7 @@ int main()
             Operand.push(c-'0');
         }
     }
-    while(!Operand.empty())calc(),Operand.pop();
+    while(!Operand.empty()) calc(),Operand.pop();
     cout << S.top();
     return 0;
 }
