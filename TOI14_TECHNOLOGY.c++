@@ -29,8 +29,6 @@ int main()
     {
         auto [x1,x2,x3,x4] = pq.top();
         pq.pop();
-        int w=x1;
-        for(i=x3;i<=box;++i)
     }
 }
 /*
