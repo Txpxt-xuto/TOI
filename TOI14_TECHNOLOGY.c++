@@ -52,6 +52,6 @@ int main()
         }
     }
     while(!Operand.empty())calc(),Operand.pop();
-    cou t<< S.top();
+    cout << S.top();
     return 0;
 }
