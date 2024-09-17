@@ -29,7 +29,8 @@ int main()
             S.push(20);
             continue;
         }
-        else if(c=='['){
+        else if(c=='[')
+        {
             Operand.push(-1);
         }
         else if(c==']'){
