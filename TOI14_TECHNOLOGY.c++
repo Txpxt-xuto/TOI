@@ -9,7 +9,6 @@ CENTER: Home
 
 using namespace std;
 typedef long long ll;
-
 const ll MAXX = 505, MAXY = 505;
 ll N, X, Y;
 ll dp[MAXX][MAXX];
