@@ -4,54 +4,35 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
+#define ll long long
 using namespace std;
-typedef long long ii;
-stack<ii> S;
-stack<int> Operand;
-void calc()
-{
-    int x = Operand.top();
-    ii a=S.top();
-    S.pop();
-    ii b=S.top();
-    S.pop();
-    if(x==1) S.push((a+b)*104/100);
-    if(x==2) S.push((a+b)*108/100);
-    if(x==3) S.push((a+b)*116/100);
-}
+pair<int,int> point[1007];
+ll cost[1007];
+ll dp[507][507];
+
 int main()
 {
-    string s;
-    cin >> s;
-    for(char &c:s)
+    cin.tie(nullptr)->ios::sync_with_stdio(false);
+
+    int n,X,Y;
+    cin>>n>>X>>Y;
+    for(int i=0;i<=500;i++)for(int j=0;j<=500;j++)dp[i][j]=1e18+7;
+    for(int i=1;i<=n;i++)cin>>point[i].first>>point[i].second>>cost[i];
+    dp[0][0]=0;
+    for(int i=1;i<=n;i++)
     {
-        if(isalpha(c))
+        for(int x=X;x>=0;x--)
         {
-            S.push(20);
-            continue;
-        }
-        else if(c=='[') Operand.push(-1);
-        else if(c==']')
-        {
-            while(Operand.top()!=-1)
+            for(int y=Y;y>=0;y--)
             {
-                calc();
-                Operand.pop();
+                // cout<<x<<" "<<y<<" "<<dp[x-point[i].first][y-point[i].second]<<"\n";
+                dp[x][y]=min(dp[x][y],dp[max(0,x-point[i].first)][max(0,y-point[i].second)]+cost[i]);
             }
-            Operand.pop();
-        }
-        else
-        {
-            while(!Operand.empty()&&Operand.top()>=(c-'0'))
-            {
-                calc();
-                Operand.pop();
-            }
-            Operand.push(c-'0');
         }
     }
-    while(!Operand.empty()) calc(),Operand.pop();
-    cout << S.top();
+
+    if(dp[X][Y]==1e18+7)cout<<"-1";
+    else cout<<dp[X][Y];
     return 0;
 }
