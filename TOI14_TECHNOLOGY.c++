@@ -8,6 +8,3 @@ CENTER: Home
 #define ll long long
 using namespace std;
 pair<int,int> point[1007];
-ll cost[1007];
-ll dp[507][507];
-int main()
