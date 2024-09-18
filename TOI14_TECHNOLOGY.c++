@@ -22,9 +22,9 @@ int main()
     dp[0][0]=0;
     for(int i=1;i<=n;i++)
     {
-        for(int x=X;x>=0;x--)
+        for(x=X;x>=0;x--)
         {
-            for(int y=Y;y>=0;y--)
+            for(y=Y;y>=0;y--)
             {
                 dp[x][y] = min(dp[x][y],dp[max(0,x-point[i].first)][max(0,y-point[i].second)]+cost[i]);
             }
