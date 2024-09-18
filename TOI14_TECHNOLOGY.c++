@@ -15,6 +15,4 @@ int main()
     cin.tie(nullptr)->ios::sync_with_stdio(false);
     int n,X,Y,x,y,i,j;
     cin >> n >> X >> Y;
-
-    return 0;
 }
