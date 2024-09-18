@@ -12,7 +12,6 @@ ll cost[1007];
 ll dp[507][507];
 int main()
 {
-    cin.tie(nullptr)->ios::sync_with_stdio(false);
-    int n,X,Y,x,y,i,j;
+    cin.tie(nullptr)->ios::sync_with_stdio(false)
     cin >> n >> X >> Y;
 }
