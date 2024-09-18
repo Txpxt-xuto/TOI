@@ -16,7 +16,8 @@ ll N, X, Y;
 
 ll dp[MAXX][MAXX];
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cin >> N >> X >> Y;
