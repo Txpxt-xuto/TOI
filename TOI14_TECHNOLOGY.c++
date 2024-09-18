@@ -33,6 +33,5 @@ int main() {
     }
 
     cout << (dp[X][Y] >= 1e18 ? -1 : dp[X][Y]);
-
     return 0;
 }
