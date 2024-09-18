@@ -27,7 +27,7 @@ int main() {
     {
         ll x, y, c;
         cin >> x >> y >> c;
-        for (ll i = X; i >= 0; i--)
+        for(ll i = X; i >= 0; i--)
         {
             for (ll j = Y; j >= 0; j--)
             {
