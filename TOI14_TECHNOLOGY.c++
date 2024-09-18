@@ -28,7 +28,12 @@ int main() {
         ll x, y, c;
         cin >> x >> y >> c;
         for (ll i = X; i >= 0; i--)
-        {}
+        {
+            for (ll j = Y; j >= 0; j--)
+            {
+            dp[min(X, i+x)][min(Y, j+y)] = min(dp[min(X, i+x)][min(Y, j+y)], dp[i][j]+c);
+            }
+        }
         for (ll j = Y; j >= 0; j--)
         {
             dp[min(X, i+x)][min(Y, j+y)] = min(dp[min(X, i+x)][min(Y, j+y)], dp[i][j]+c);
