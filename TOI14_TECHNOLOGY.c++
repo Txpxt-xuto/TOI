@@ -6,7 +6,6 @@ CENTER: Home
 */
 #pragma GCC optimize("O3")
 #include <bits/stdc++.h>
-
 using namespace std;
 typedef long long ll;
 const ll MAXX = 505, MAXY = 505;
