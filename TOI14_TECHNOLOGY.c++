@@ -34,7 +34,6 @@ int main() {
             dp[min(X, i+x)][min(Y, j+y)] = min(dp[min(X, i+x)][min(Y, j+y)], dp[i][j]+c);
             }
         }
-
     }
     cout << (dp[X][Y] >= 1e18 ? -1 : dp[X][Y]);
     return 0;
