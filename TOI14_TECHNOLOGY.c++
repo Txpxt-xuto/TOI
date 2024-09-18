@@ -15,7 +15,7 @@ int main()
 {
     cin.tie(nullptr)->ios::sync_with_stdio(false);
 
-    int n,X,Yปมัมร;
+    int n,X,Y,x,y,i;
     cin>>n>>X>>Y;
     for(int i=0;i<=500;i++)for(int j=0;j<=500;j++)dp[i][j]=1e18+7;
     for(int i=1;i<=n;i++)cin>>point[i].first>>point[i].second>>cost[i];
