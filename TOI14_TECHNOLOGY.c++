@@ -20,9 +20,6 @@ int main()
     dp[0][0]=0;
     for(i=1;i<=n;i++)
     {
-        for(x=X;x>=0;x--)
-        {
-        }
     }
     if(dp[X][Y] == 1e18+7) cout<<"-1";
     else cout << dp[X][Y];
