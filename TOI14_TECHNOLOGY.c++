@@ -31,7 +31,7 @@ int main() {
         {
             for (ll j = Y; j >= 0; j--)
             {
-            dp[min(X, i+x)][min(Y, j+y)] = min(dp[min(X, i+x)][min(Y, j+y)], dp[i][j]+c);
+                dp[min(X, i+x)][min(Y, j+y)] = min(dp[min(X, i+x)][min(Y, j+y)], dp[i][j]+c);
             }
         }
     }
