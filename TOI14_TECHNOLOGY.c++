@@ -3,7 +3,8 @@ TASK: technology.cpp
 LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
-*/#pragma GCC optimize("O3")
+*/
+#pragma GCC optimize("O3")
 #include <bits/stdc++.h>
 
 using namespace std;
