@@ -15,7 +15,6 @@ const ll MAXX = 505, MAXY = 505;
 ll N, X, Y;
 
 ll dp[MAXX][MAXX];
-
 int main()
 {
     ios_base::sync_with_stdio(false);
