@@ -23,7 +23,6 @@ int main() {
     cin >> N >> X >> Y;
     for (ll i = 0; i <= X; i++) for (ll j = 0; j <= Y; j++) dp[i][j] = 1e18;
     dp[0][0] = 0;
-
     while (N--) {
         ll x, y, c;
         cin >> x >> y >> c;
