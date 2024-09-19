@@ -115,7 +115,7 @@ void innit(imvec* v){
     v->head=(pair*)calloc(2,sizeof(pair));
 }
 int main(){
-    for(int i=0;i<(1<<S);i++){
+    for(i=0;i<(1<<S);i++){
         seg[i].a=inf;
     }
     int n,m,k,start,ii=0;
