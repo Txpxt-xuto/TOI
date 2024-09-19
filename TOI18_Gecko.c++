@@ -55,10 +55,5 @@ int main()
     for(int i=1;i<=k;++i)
     {
         int x = gecko[i];
-        while(x != p)
-        {
-            if(x < to[x]) ss.insert({x,to[x]});
-            else ss.insert({to[x],x});
-            x = to[x];
-        }
+        
     }
