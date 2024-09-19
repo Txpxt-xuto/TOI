@@ -22,7 +22,4 @@ int main()
         cin >> gecko[i];
         gecko[i]++;
     }
-    for(int i=1;i<=m;++i)
-    {
-        int u,v,w;
-        cin >> u >> v >> w;
+ u >> v >> w;
