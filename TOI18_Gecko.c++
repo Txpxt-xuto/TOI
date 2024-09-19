@@ -95,7 +95,8 @@ typedef struct {
 }imvec;
 void update(imvec* v){
     //int s=sizeof(v->head)/sizeof(int);
-    if(v->capa==v->size){
+    if(v->capa==v->size)
+    {
         v->capa*=2;
         v->head=(pair*)realloc(v->head,v->capa*sizeof(pair));
     }
