@@ -167,7 +167,6 @@ int main(){
     innit(&ansp);
     for(int i=0;i<k;i++){
         printf("%d ",dis[gec[i]]);
-        //std::cout<<dis[gec[i]]<<" ";
     }
     for(i=0;i<k;i++)
     {
