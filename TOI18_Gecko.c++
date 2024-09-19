@@ -50,6 +50,3 @@ int main()
             }
         }
     }
-    for(int i=1;i<=k;++i) cout << dist[gecko[i]] << ' ';
-    cout << '\n';
-    
