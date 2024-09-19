@@ -161,7 +161,7 @@ int main(){
             }
         }
     }
-    int cnt=0;
+    int cnt = 0;
     imvec ansp;
     bool valid[n+1];
     for(i=0;i<=n;i++) valid[i]=0;
