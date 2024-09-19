@@ -183,7 +183,8 @@ int main(){
         }
     }
     printf("\n%d\n",ansp.size);
-    for(int i=0;i<ansp.size;i++){
+    for(int i=0;i<ansp.size;i++)
+    {
         printf("%d %d\n",ansp.head[i].a,ansp.head[i].b);
     }
     return 0;
