@@ -26,14 +26,3 @@ int main()
     {
         int u,v,w;
         cin >> u >> v >> w;
-        u++; v++;
-        g[u].emplace_back(v,w,i);
-        g[v].emplace_back(u,w,i);
-        edge[i] = {u,v,i};
-        vis[i] = false;
-    }
-    fill(dist,dist+n+1,INF);
-    priority_queue<pii,vector<pii>,greater<pii>> pq;
-    dist[p] = 0;
-    pq.push({dist[p],p});
-    
