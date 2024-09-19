@@ -115,7 +115,6 @@ void innit(imvec* v){
     v->head=(pair*)calloc(2,sizeof(pair));
 }
 int main(){
-    //printf("%d",max(555,2));
     for(int i=0;i<(1<<S);i++){
         seg[i].a=inf;
     }
