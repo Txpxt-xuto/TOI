@@ -54,19 +54,12 @@ void popseg(){
     seg[i].b=0;
     for(i>>=1;i>0;i>>=1){
         if(seg[i<<1].a==seg[(i<<1)+1].a){
-            if(seg[i<<1].b<seg[(i<<1)+1].b){
-                seg[i]=seg[i<<1];
-            }else{
-                seg[i]=seg[(i<<1)+1];
-            }
+            if(seg[i<<1].b<seg[(i<<1)+1].b) seg[i]=seg[i<<1];
+            else seg[i]=seg[(i<<1)+1];
             continue;
         }
-        if(seg[i<<1].a<seg[(i<<1)+1].a){
-            seg[i]=seg[i<<1];
-        }else if(seg[i<<1].a>seg[(i<<1)+1].a)
-        {
-            seg[i]=seg[(i<<1)+1];
-        }
+        if(seg[i<<1].a<seg[(i<<1)+1].a) seg[i] = seg[i << 1];
+        else if(seg[i<<1].a>seg[(i<<1)+1].a) seg[i] = seg[(i << 1)+1];
     }
 }
 pair query(int l,int r)
