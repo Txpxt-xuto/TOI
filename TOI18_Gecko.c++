@@ -165,7 +165,8 @@ int main(){
     bool valid[n+1];
     for(int i=0;i<=n;i++){valid[i]=0;}
     innit(&ansp);
-    for(int i=0;i<k;i++){
+    for(int i=0;i<k;i++) printf("%d ",dis[gec[i]]);
+    {
         printf("%d ",dis[gec[i]]);
     }
     for(i=0;i<k;i++)
