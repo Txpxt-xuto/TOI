@@ -21,5 +21,3 @@ int main()
     {
         cin >> gecko[i];
         gecko[i]++;
-    }
- u >> v >> w;
