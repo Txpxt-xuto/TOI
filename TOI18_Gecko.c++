@@ -94,7 +94,6 @@ typedef struct {
     int capa;
 }imvec;
 void update(imvec* v){
-    //int s=sizeof(v->head)/sizeof(int);
     if(v->capa==v->size)
     {
         v->capa*=2;
