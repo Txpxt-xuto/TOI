@@ -62,7 +62,3 @@ int main()
             x = to[x];
         }
     }
-    cout << ss.size() << '\n';
-    for(auto [u,v] : ss) cout << u-1 << ' ' << v-1 << '\n';
-    return 0;
-}
