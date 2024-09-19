@@ -172,7 +172,8 @@ int main(){
     //printf("\n%d\n",path.size-1);
     for(int i=0;i<k;i++){
         int idx=gec[i];
-        while(par[idx]!=-1){
+        while(par[idx]!=-1)
+        {
             valid[idx]=1;
             idx=par[idx];
         }
