@@ -93,7 +93,8 @@ typedef struct {
     int size;
     int capa;
 }imvec;
-void update(imvec* v){
+void update(imvec* v)
+{
     if(v->capa==v->size)
     {
         v->capa*=2;
