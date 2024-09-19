@@ -132,7 +132,8 @@ int main(){
         vis[i]=0;
         par[i]=-1;
     }
-    for(int i=0;i<k;i++){
+    for(int i=0;i<k;i++)
+    {
         scanf("%d",&gec[i]);
     }
     for(i=0;i<m;i++)
