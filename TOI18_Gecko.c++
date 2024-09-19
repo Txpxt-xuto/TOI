@@ -61,14 +61,17 @@ void popseg(){
             }
             continue;
         }
-        if(seg[i<<1].a<seg[(i<<1)+1].a){
+        if(seg[i<<1].a<seg[(i<<1)+1].a
+        ){
             seg[i]=seg[i<<1];
-        }else if(seg[i<<1].a>seg[(i<<1)+1].a){
+        }else if(seg[i<<1].a>seg[(i<<1)+1].a)
+        {
             seg[i]=seg[(i<<1)+1];
         }
     }
 }
-pair query(int l,int r){
+pair query(int l,int r)
+{
     pair y={inf,0};
     l+=(1<<(S-1)),r+=(1<<(S-1))+1;
     for(;l<r;l>>=1,r>>=1){
