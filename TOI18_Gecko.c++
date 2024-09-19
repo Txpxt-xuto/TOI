@@ -114,7 +114,8 @@ void innit(imvec* v){
     v->size=0;
     v->head=(pair*)calloc(2,sizeof(pair));
 }
-int main(){
+int main()
+{
     for(i=0;i<(1<<S);i++) seg[i].a=inf;
     int n,m,k,start,ii=0;
     scanf("%d %d %d %d",&n,&m,&k,&start);
