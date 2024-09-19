@@ -36,17 +36,4 @@ int main()
     priority_queue<pii,vector<pii>,greater<pii>> pq;
     dist[p] = 0;
     pq.push({dist[p],p});
-    while(!pq.empty())
-    {
-        auto [dis,u] = pq.top();
-        pq.pop();
-        for(auto [v,w,num] : g[u])
-        {
-            if(dist[u] + w < dist[v])
-            {
-                dist[v] = dist[u]+w;
-                pq.push({dist[v],v});
-                to[v] = u;
-            }
-        }
-    }
+    w
