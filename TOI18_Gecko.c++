@@ -19,41 +19,37 @@ typedef struct{
     int b;
 }pair;
 pair seg[(1<<S)];
-void updateseg(int idx,int val,int f){
+void updateseg(int idx,int val,int f)
+{
     idx+=(1<<(S-1));
     seg[idx].a=val;
     seg[idx].b=f;
-    for(idx>>=1;idx>0;idx>>=1){
-        if(seg[idx<<1].a==seg[(idx<<1)+1].a){
-            if(seg[idx<<1].b<seg[(idx<<1)+1].b){
-                seg[idx]=seg[idx<<1];
-            }else{
-                seg[idx]=seg[(idx<<1)+1];
-            }
+    for(idx>>=1;idx>0;idx>>=1)
+    {
+        if(seg[idx<<1].a==seg[(idx<<1)+1].a)
+        {
+            if(seg[idx<<1].b<seg[(idx<<1)+1].b) seg[idx]=seg[idx<<1];
+            else seg[idx]=seg[(idx<<1)+1];
             continue;
         }
-        if(seg[idx<<1].a<seg[(idx<<1)+1].a){
-            seg[idx]=seg[idx<<1];
-        }else if(seg[idx<<1].a>seg[(idx<<1)+1].a){
-            seg[idx]=seg[(idx<<1)+1];
-        }
+        if(seg[idx<<1].a<seg[(idx<<1)+1].a) seg[idx]=seg[idx<<1];
+        else if(seg[idx<<1].a>seg[(idx<<1)+1].a) seg[idx]=seg[(idx<<1)+1];
     }
 }
-void popseg(){
+void popseg()
+{
     int i=1;
-    while((i<<1)<(1<<S)){
-        if(seg[i<<1].a==seg[i].a&&seg[i<<1].b==seg[i].b){
-            i<<=1;
-        }else{
-            i=(i<<1)+1;
-        }
-        //printf("%d\n",i);
+    while((i<<1)<(1<<S))
+    {
+        if(seg[i<<1].a==seg[i].a&&seg[i<<1].b==seg[i].b) i<<=1;
+        else i=(i<<1)+1;
     }
-    //printf("hi");
     seg[i].a=inf;
     seg[i].b=0;
-    for(i>>=1;i>0;i>>=1){
-        if(seg[i<<1].a==seg[(i<<1)+1].a){
+    for(i>>=1;i>0;i>>=1)
+    {
+        if(seg[i<<1].a==seg[(i<<1)+1].a)
+        {
             if(seg[i<<1].b<seg[(i<<1)+1].b) seg[i]=seg[i<<1];
             else seg[i]=seg[(i<<1)+1];
             continue;
@@ -119,6 +115,7 @@ void innit(imvec* v)
 }
 int main()
 {
+    int i;
     for(i=0;i<(1<<S);i++) seg[i].a=inf;
     int n,m,k,start,ii=0;
     scanf("%d %d %d %d",&n,&m,&k,&start);
