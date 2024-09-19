@@ -17,7 +17,3 @@ int main()
     cin.tie(0);
     cin >> n >> m >> k >> p;
     p++;
-    for(int i=1;i<=k;++i)
-    {
-        cin >> gecko[i];
-        gecko[i]++;
