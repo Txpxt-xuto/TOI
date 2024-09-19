@@ -164,7 +164,7 @@ int main(){
     int cnt = 0;
     imvec ansp;
     bool valid[n+1];
-    for(i=0;i<=n;i++) valid[i]=0;
+    for(i=0;i<=n;i++) valid[i] = 0;
     innit(&ansp);
     for(i=0;i<k;i++) printf("%d ",dis[gec[i]]);
     for(i=0;i<k;i++)
