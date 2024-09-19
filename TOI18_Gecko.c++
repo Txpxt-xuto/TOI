@@ -154,8 +154,8 @@ int main(){
         for(int i=0;i<v[node].size;i++){
             if(dis[v[node].head[i].a]>dis[node]+v[node].head[i].b)
             {
-                dis[v[node].head[i].a]=dis[node]+v[node].head[i].b;
-                par[v[node].head[i].a]=node;
+                dis[v[node].head[i].a] = dis[node]+v[node].head[i].b;
+                par[v[node].head[i].a] = node;
                 updateseg(ii,dis[v[node].head[i].a],v[node].head[i].a);
                 ii++;
             }
