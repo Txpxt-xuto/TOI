@@ -169,7 +169,6 @@ int main(){
         printf("%d ",dis[gec[i]]);
         //std::cout<<dis[gec[i]]<<" ";
     }
-
     for(i=0;i<k;i++)
     {
         int idx = gec[i];
