@@ -69,6 +69,5 @@ int main()
         }
         else if(c == ans) cnt++;
     }
-     
     cout << ans << ' ' << cnt;
 }
