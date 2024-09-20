@@ -52,7 +52,7 @@ int main()
     int cnt = 0,top = 0;
     ll s2 = 1, s3 = 1, s5 = 1, s7 = 1;
     for (int i = 0 ; i < n ; i++) {
-        while(top < a.size() && i >= a[top][0]) {
+        while(top < a.size() && i >= a[top][0]){
             s2 += a[top][1];
             s3 += a[top][2];
             s5 += a[top][3];
