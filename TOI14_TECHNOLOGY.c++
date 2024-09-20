@@ -69,9 +69,6 @@ int main()
         }
         else if(c == ans) cnt++;
     }
-    /*for (int i = 0 ; i < m ; i++) {
-        cout << a[i].first << ' ' << a[i].second.first << ' ' << a[i].second.second << endl;
-    }*/
 
     /*for (int i = 0 ; i < n ; i++) {
         power.clear();
