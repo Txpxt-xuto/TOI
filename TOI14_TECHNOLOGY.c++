@@ -44,7 +44,6 @@ int main()
         a.push_back({s,s2,s3,s5,s7});
         a.push_back({e+1,-s2,-s3,-s5,-s7});
     }
-
     sort(a.begin(),a.end(),[](auto& x, auto& y) {
         return x[0] < y[0];
     });
