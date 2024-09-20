@@ -79,9 +79,6 @@ int main()
         if(c > ans)
         {
             ans = c;
-            cnt = 1;
-        }
-        else if(c == ans) cnt++;
     }
     cout << ans << ' ' << cnt;
 }
