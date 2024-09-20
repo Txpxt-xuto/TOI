@@ -82,6 +82,6 @@ int main()
             cnt = 1;
         }
         else if(c == ans) cnt++;
-    }*/
+    }
     cout << ans << ' ' << cnt;
 }
