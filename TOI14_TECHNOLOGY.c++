@@ -76,10 +76,11 @@ int main()
             //cout << power[j] << ' ';
         }
         //cout << endl;
-        if(c > ans){
+        if(c > ans)
+        {
             ans = c;
             cnt = 1;
-        } else if (c == ans) {
+        }else if (c == ans) {
             cnt++;
         }
     }*/
