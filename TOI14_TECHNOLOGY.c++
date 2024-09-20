@@ -49,8 +49,7 @@ int main()
         return x[0] < y[0];
     });
     ll ans = 0;
-    int cnt = 0;
-    int top = 0;
+    int cnt = 0,top = 0;
     ll s2 = 1, s3 = 1, s5 = 1, s7 = 1;
     for (int i = 0 ; i < n ; i++) {
         while(top < a.size() && i >= a[top][0]) {
