@@ -70,7 +70,7 @@ int main()
         else if(c == ans) cnt++;
     }
         int c = 1;
-        for (int j = 2 ; j < 8 ; j++) {
+        for (int j = 2 ; j < 8 ; j++){
             c *= power[j];
             //cout << power[j] << ' ';
         }
