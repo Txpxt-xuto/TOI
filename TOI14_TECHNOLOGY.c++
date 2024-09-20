@@ -69,7 +69,6 @@ int main()
         }
         else if(c == ans) cnt++;
     }
-
     /*for (int i = 0 ; i < n ; i++) {
         power.clear();
         power.resize(8,1);
