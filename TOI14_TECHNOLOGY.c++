@@ -21,7 +21,8 @@ int main()
         int x,s,e;
         int s2 = 0, s3 = 0, s5 = 0, s7 = 0;
         cin >> x >> s >> e;
-        while(x%2==0) {
+        while(x%2==0)
+        {
             s2++;
             x /= 2;
         }
