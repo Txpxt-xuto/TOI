@@ -69,24 +69,6 @@ int main()
         }
         else if(c == ans) cnt++;
     }
-    /*for (int i = 0 ; i < n ; i++) {
-        power.clear();
-        power.resize(8,1);
-        for (int j = 0 ; j < m ; j++) {
-            if (i < a[j].s.f) break;
-            if (i >= a[j].s.f && i <= a[j].s.s) {
-                if (a[j].f == 4) power[2]+=2;
-                else if (a[j].f == 6) {
-                    power[2]++;
-                    power[3]++;
-                } else if (a[j].f == 8) power[2] += 3;
-                else if (a[j].f == 9) power[3] += 2;
-                else if (a[j].f == 10) {
-                    power[2]++;
-                    power[5]++;
-                } else power[a[j].f]++;
-            }
-        }
         int c = 1;
         //cout << i << " : ";
         for (int j = 2 ; j < 8 ; j++) {
