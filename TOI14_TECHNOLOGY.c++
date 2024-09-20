@@ -66,7 +66,8 @@ int main()
         {
             ans = c;
             cnt = 1;
-        } else if (c == ans) {
+        }
+        else if (c == ans) {
             cnt++;
         }
     }
