@@ -68,9 +68,6 @@ int main()
             cnt = 1;
         }
         else if(c == ans) cnt++;
-        {
-            cnt++;
-        }
     }
     /*for (int i = 0 ; i < m ; i++) {
         cout << a[i].first << ' ' << a[i].second.first << ' ' << a[i].second.second << endl;
