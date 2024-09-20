@@ -44,10 +44,7 @@ int main()
         a.push_back({s,s2,s3,s5,s7});
         a.push_back({e+1,-s2,-s3,-s5,-s7});
     }
-    sort(a.begin(),a.end(),[](auto& x, auto& y)
-    {
-        return x[0] < y[0];
-    });
+    sort(a.begin(),a.end(),[](auto& x, auto& y) return x[0] < y[0];
     ll ans = 0;
     int cnt = 0,top = 0;
     ll s2 = 1, s3 = 1, s5 = 1, s7 = 1;
