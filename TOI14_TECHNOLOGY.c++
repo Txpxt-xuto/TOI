@@ -62,7 +62,7 @@ int main()
             top++;
         }
         ll c = s2*s3*s5*s7;
-        if (c > ans){
+        if(c > ans){
             ans = c;
             cnt = 1;
         } else if (c == ans) {
