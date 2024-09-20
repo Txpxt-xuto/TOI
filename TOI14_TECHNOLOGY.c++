@@ -76,9 +76,5 @@ int main()
             //cout << power[j] << ' ';
         }
         //cout << endl;
-        if(c > ans)
-        {
-            ans = c;
-    }
     cout << ans << ' ' << cnt;
 }
