@@ -55,7 +55,6 @@ void runcase(){
     }
     cout << (ans>=d+r*2?'Y':'N') << '\n';
 }
-
 int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
