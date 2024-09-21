@@ -29,7 +29,8 @@ void runcase(){
     int n,r,d;
     cin >> n >> r >> d;
     vector<Point> a(n);
-    for(auto &[x,y]:a){
+    for(auto &[x,y]:a) cin >> x >> y;
+    {
         cin >> x >> y;
     }
     sort(a.begin(),a.end(),[&](Point l,Point r){
