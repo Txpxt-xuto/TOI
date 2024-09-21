@@ -14,7 +14,7 @@ struct Point{
     bool operator==(Point o){
         return x==o.x&&y==o.y;
     }
-};=
+};
 struct Cmp{
     bool operator()(const Point &l,const Point &r)const{
         return l.y<r.y||(l.y==r.y&&l.x<r.x);
