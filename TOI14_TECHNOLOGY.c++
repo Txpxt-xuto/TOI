@@ -20,13 +20,11 @@ struct Cmp{
         return l.y<r.y||(l.y==r.y&&l.x<r.x);
     }
 };
-
 double dist(Point a,Point b){
     long long dx=a.x-b.x;
     long long dy=a.y-b.y;
     return sqrt(dx*dx+dy*dy);
 }
-
 void runcase(){
     int n,r,d;
     cin >> n >> r >> d;
