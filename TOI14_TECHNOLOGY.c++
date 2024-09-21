@@ -30,9 +30,6 @@ void runcase(){
     cin >> n >> r >> d;
     vector<Point> a(n);
     for(auto &[x,y]:a) cin >> x >> y;
-    {
-        cin >> x >> y;
-    }
     sort(a.begin(),a.end(),[&](Point l,Point r){
         return l.x<r.x||(l.x==r.x&&l.y<r.y);
     });
