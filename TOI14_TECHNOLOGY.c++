@@ -50,8 +50,9 @@ void runcase(){
             s.erase(s.find(a[j]));
             j++;
         }
-        for(auto it=s.lower_bound(Point(-INF,a[i].y-floor(ans)));it!=s.end()&&it->y-a[i].y<=ans;it++){
-            ans=min(ans,dist(a[i],*it));
+        for(auto it=s.lower_bound(Point(-INF,a[i].y-floor(ans)));it!=s.end()&&it->y-a[i].y<=ans;it++)
+        {
+            ans = min(ans,dist(a[i],*it));
         }
         s.insert(a[i]);
     }
