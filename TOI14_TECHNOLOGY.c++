@@ -43,8 +43,10 @@ void runcase(){
     }
     double ans=INF;
     multiset<Point,Cmp> s;
-    for(i=0,j=0;i<n;i++){
-        while(a[i].x-a[j].x>ans){
+    for(i=0,j=0;i<n;i++)
+    {
+        while(a[i].x-a[j].x>ans)
+        {
             s.erase(s.find(a[j]));
             j++;
         }
