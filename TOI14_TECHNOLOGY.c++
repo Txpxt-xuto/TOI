@@ -26,14 +26,14 @@ double dist(Point a,Point b){
     return sqrt(dx*dx+dy*dy);
 }
 void runcase(){
-    int n,r,d;
+    int n,r,d,i;
     cin >> n >> r >> d;
     vector<Point> a(n);
     for(auto &[x,y]:a) cin >> x >> y;
     sort(a.begin(),a.end(),[&](Point l,Point r){
         return l.x<r.x||(l.x==r.x&&l.y<r.y);
     });
-    for(int i=1;i<n;i++)
+    for(i=1;i<n;i++)
     {
         if(a[i]==a[i-1])
         {
@@ -43,7 +43,7 @@ void runcase(){
     }
     double ans=INF;
     multiset<Point,Cmp> s;
-    for(int i=0,j=0;i<n;i++){
+    for(i=0,j=0;i<n;i++){
         while(a[i].x-a[j].x>ans){
             s.erase(s.find(a[j]));
             j++;
