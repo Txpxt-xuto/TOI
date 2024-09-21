@@ -33,8 +33,10 @@ void runcase(){
     sort(a.begin(),a.end(),[&](Point l,Point r){
         return l.x<r.x||(l.x==r.x&&l.y<r.y);
     });
-    for(int i=1;i<n;i++){
-        if(a[i]==a[i-1]){
+    for(int i=1;i<n;i++)
+    {
+        if(a[i]==a[i-1])
+        {
             cout << "N\n";
             return;
         }
