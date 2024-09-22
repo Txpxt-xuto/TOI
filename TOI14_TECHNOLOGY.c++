@@ -39,21 +39,26 @@ void upd(int x,int y,int t){
     else ti=-1;
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> T >> f >> s >> q;
-    for(int i=1;i<=n;i++){
+    for(i=1;i<=n;i++)
+    {
         int x,y,h,v;
         cin >> x >> y >> h >> v;
         auto &[hp,st,ti]=mp[{x,y}];
         hp=h;
         st=3;
         ti=-1;
-        if(v){
-            if(h>q){
+        if(v)
+        {
+            if(h>q)
+            {
                 ti=0;
                 pq.emplace(0,2,x,y);
-            }else{
+            }
+            else{
                 st=0;
                 qua++;
                 all++;
