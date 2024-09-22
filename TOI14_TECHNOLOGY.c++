@@ -28,7 +28,7 @@ int main() {
     for(int i=0;i<n;i++){
         int u,v,w;cin>>u>>v>>w;g[u].pb({v,w});g[v].pb({u,w});
     }int st;
-    for(int i=0;i<=n;i++){if(g[i].size()==1){st=i;break;}}
+    for(i=0;i<=n;i++){if(g[i].size()==1){st=i;break;}}
     dfs(st,st);
     ll l=0,r=1e16;
     while(l<r)
