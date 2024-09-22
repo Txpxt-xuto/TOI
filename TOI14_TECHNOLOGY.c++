@@ -20,7 +20,7 @@ void upd(int x,int y,int t){
     int sum=0,cnt=0;
     for(i=0;i<4;i++)
     {
-        int xx = x+dx[i];
+        int xx = x+dx[i], yy = y+dy[i];
         int yy = y+dy[i];
         auto it=mp.find({xx,yy});
         if(it==mp.end()) continue;
