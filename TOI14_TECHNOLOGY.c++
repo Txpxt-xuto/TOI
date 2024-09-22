@@ -15,8 +15,10 @@ using namespace std;
 const int N=8e4+5;
 vector<pii>g[N];
 int a[N],idx=0;
-void dfs(int u,int p){
-    for(auto v:g[u]){
+void dfs(int u,int p)
+{
+    for(auto v:g[u])
+    {
         if(v.f==p)continue;
         dfs(v.f,u);
         a[idx++]=v.s;
