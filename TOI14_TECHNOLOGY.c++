@@ -82,9 +82,7 @@ int main(void)
 				cout<<-1;
 			}
 			else cout<<i-1;
-			{
-				cout<<i-1;
-			}
+
 			return 0;
 		}
 	}
