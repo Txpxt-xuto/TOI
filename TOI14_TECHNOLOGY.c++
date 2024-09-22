@@ -72,7 +72,7 @@ int main()
         pq.pop();
         if(t>T)break;
         auto &[hp,st,ti]=mp[{x,y}];
-        if(st<=d||(d==2&&t!=ti))continue;
+        if(st<=d||(d==2&&t!=ti)) continue;
         st=d;
         if(d==2)
         {
@@ -83,7 +83,7 @@ int main()
         else
         {
             qua+=(d==0);
-            for(int i=0;i<4;i++)upd(x+dx[i],y+dy[i],t);
+            for(i=0;i<4;i++)upd(x+dx[i],y+dy[i],t);
         }
     }
 
