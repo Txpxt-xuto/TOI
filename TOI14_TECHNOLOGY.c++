@@ -21,7 +21,6 @@ void upd(int x,int y,int t){
     for(i=0;i<4;i++)
     {
         int xx = x+dx[i], yy = y+dy[i];
-        int yy = y+dy[i];
         auto it=mp.find({xx,yy});
         if(it==mp.end()) continue;
         auto &[hp,st,ti]=it->second;
