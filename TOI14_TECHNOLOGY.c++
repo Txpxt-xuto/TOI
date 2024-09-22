@@ -52,7 +52,7 @@ int main(void)
 		r[l[i]].push_back(i);
 		for(int j=0;j<p[i];j++)
 		{
-			cin>>tt;
+			cin >> tt;
 			v[i].push_back(tt);
 		}
 	}
