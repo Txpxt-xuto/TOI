@@ -19,7 +19,7 @@ void dfs(int u,int p)
 {
     for(auto v:g[u])
     {
-        if(v.f==p)continue;
+        if(v.f==p) continue;
         dfs(v.f,u);
         a[idx++]=v.s;
     }
