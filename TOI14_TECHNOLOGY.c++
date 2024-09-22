@@ -60,7 +60,7 @@ int main()
             }
             else
             {
-                st=0;
+                st = 0;
                 qua++;
                 all++;
             }
