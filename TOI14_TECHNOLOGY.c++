@@ -28,7 +28,7 @@ int main() {
     for(int i=0;i<n;i++)
     {
         int u,v,w;
-        cin>>u>> v >> w;
+        cin>>u >> v >> w;
         g[u].pb({v,w});
         g[v].pb({u,w});
     }
