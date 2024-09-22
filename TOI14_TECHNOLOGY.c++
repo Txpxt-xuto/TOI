@@ -16,7 +16,7 @@ void upd(int x,int y,int t){
     auto it=mp.find({x,y});
     if(it==mp.end()) return;
     auto &[hp,st,ti]=it->second;
-    if(st!=3)return;
+    if(st!=3) return;
     int sum=0,cnt=0;
     for(int i=0;i<4;i++){
         int xx=x+dx[i];
