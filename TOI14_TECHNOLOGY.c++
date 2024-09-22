@@ -81,7 +81,7 @@ int main(void)
 			{
 				cout<<-1;
 			}
-			else
+			else cout<<i-1;
 			{
 				cout<<i-1;
 			}
