@@ -34,7 +34,7 @@ int dfs(int x)
 			return -1;
 		}
 	}
-	vis[x]=2;
+	vis[x]  2;
 	return 1+sum;
 }
 int main(void)
