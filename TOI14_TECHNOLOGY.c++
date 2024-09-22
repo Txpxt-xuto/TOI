@@ -35,7 +35,9 @@ void upd(int x,int y,int t){
     {
         ti = max(t,(int)ceil(1.0*(hp-sum)/cnt));
         pq.emplace(ti,2,x,y);
-    }else{
+    }
+    else
+    {
         ti=-1;
     }
 }
@@ -77,5 +79,6 @@ int main(){
             for(int i=0;i<4;i++)upd(x+dx[i],y+dy[i],t);
         }
     }
+
     cout << all-qua << '\n' << qua;
 }
