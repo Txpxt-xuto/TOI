@@ -37,7 +37,10 @@ int main() {
         for(int i=0;i<idx;i++)
         {
             sum+=a[i];
-            if(sum>=m) cnt++,sum=0;
+            if(sum>=m)
+            {
+                cnt++,sum=0;
+            }
         }
         if(cnt>=3) l=m;
         else r=m-1;
