@@ -9,7 +9,7 @@ using namespace std;
 typedef tuple<int,int,int> t3;
 typedef tuple<int,int,int,int> t4;
 const int N=1e5+5;
-int dx[4]={-1,0,1,0},dy[4]={0,-1,0,1},n,T,f,s,q,all,qua;
+int dx[4]={-1,0,1,0},dy[4]={0,-1,0,1},i,n,T,f,s,q,all,qua;
 map<pair<int,int>,t3> mp;
 priority_queue<t4,vector<t4>,greater<t4>> pq;
 void upd(int x,int y,int t){
@@ -18,7 +18,7 @@ void upd(int x,int y,int t){
     auto &[hp,st,ti]=it->second;
     if(st!=3) return;
     int sum=0,cnt=0;
-    for(int i=0;i<4;i++)
+    for(i=0;i<4;i++)
     {
         int xx=x+dx[i];
         int yy=y+dy[i];
