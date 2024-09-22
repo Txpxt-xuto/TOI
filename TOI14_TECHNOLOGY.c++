@@ -37,9 +37,6 @@ void upd(int x,int y,int t){
         pq.emplace(ti,2,x,y);
     }
     else ti=-1;
-    {
-        ti=-1;
-    }
 }
 
 int main(){
