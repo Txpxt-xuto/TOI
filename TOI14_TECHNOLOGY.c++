@@ -48,9 +48,9 @@ int main()
         int x,y,h,v;
         cin >> x >> y >> h >> v;
         auto &[hp,st,ti]=mp[{x,y}];
-        hp=h;
-        st=3;
-        ti=-1;
+        hp =h;
+        st =3;
+        ti =-1;
         if(v)
         {
             if(h>q)
