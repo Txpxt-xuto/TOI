@@ -47,7 +47,7 @@ int main(void)
 	cin.tie(NULL);
     int i,j;
 	cin>>n>>k>>t;
-	for(int i=1;i<=n;i++)
+	for(i=1;i<=n;i++)
 	{
 		cin >> l[i] >> p[i];
 		r[l[i]].push_back(i);
