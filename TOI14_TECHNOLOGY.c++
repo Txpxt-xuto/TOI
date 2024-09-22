@@ -27,7 +27,7 @@ int dfs(int x)
 	vis[x]=1;
 	for(i=0;i<v[x].size();i++)
 	{
-		sum = sum+dfs(v[x][i]);
+		sum = sum + dfs(v[x][i]);
 		if(c==-1)
 		{
 			c=-1;
