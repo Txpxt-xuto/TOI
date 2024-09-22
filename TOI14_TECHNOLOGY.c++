@@ -39,7 +39,8 @@ int main() {
             sum+=a[i];
             if(sum>=m)
             {
-                cnt++,sum=0;
+                cnt++;
+                sum=0;
             }
         }
         if(cnt>=3) l=m;
