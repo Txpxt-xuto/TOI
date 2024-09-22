@@ -45,5 +45,6 @@ int main() {
         }
         if(cnt>=3) l=m;
         else r=m-1;
-    }cout << l;
+    }
+    cout << l;
 }
