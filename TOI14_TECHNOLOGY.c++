@@ -73,7 +73,7 @@ int main()
         if(t>T)break;
         auto &[hp,st,ti]=mp[{x,y}];
         if(st<=d||(d==2&&t!=ti)) continue;
-        st=d;
+        st = d;
         if(d==2)
         {
             all++;
