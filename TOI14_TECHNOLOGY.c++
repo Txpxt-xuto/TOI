@@ -83,7 +83,7 @@ int main()
         else
         {
             qua+=(d==0);
-            for(i=0;i<4;i++)upd(x+dx[i],y+dy[i],t);
+            for(i=0;i<4;i++) upd(x+dx[i],y+dy[i],t);
         }
     }
 
