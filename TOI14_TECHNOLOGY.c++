@@ -33,7 +33,8 @@ int main() {
     ll l=0,r=1e16;
     while(l<r){
         ll m=(l+r+1)>>1;
-        int cnt=0;ll sum=0;
+        int cnt=0;
+        ll sum=0;
         for(i=0;i<idx;i++)
         {
             sum+=a[i];
