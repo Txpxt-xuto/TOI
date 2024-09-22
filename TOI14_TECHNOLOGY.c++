@@ -28,7 +28,7 @@ void upd(int x,int y,int t){
         if(st==1)
         {
             cnt++;
-            sum+=f-hp-ti;
+            sum =f-hp-ti;
         }
     }
     if(cnt)
