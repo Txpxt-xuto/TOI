@@ -31,7 +31,8 @@ int main() {
     for(int i=0;i<=n;i++){if(g[i].size()==1){st=i;break;}}
     dfs(st,st);
     ll l=0,r=1e16;
-    while(l<r){
+    while(l<r)
+    {
         ll m=(l+r+1) >> 1;
         int cnt=0;
         ll sum=0;
