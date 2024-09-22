@@ -66,9 +66,6 @@ int main(void)
 		if(c==-1)
 		{
 			if(i==1) cout<<-1;
-			{ 
-				cout<<-1;
-			}
 			else cout<<i-1;
 			return 0;
 		}
