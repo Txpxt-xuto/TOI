@@ -88,6 +88,6 @@ int main(void)
 			return 0;
 		}
 	}
-	cout<<k;
+	cout << k;
 	return 0;
 }
