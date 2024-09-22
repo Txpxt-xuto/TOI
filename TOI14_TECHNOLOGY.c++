@@ -22,7 +22,7 @@ int dfs(int x)
 		c=-1;
 		return 0;
 	}
-	if(vis[x]==2)
+	if(vis[x]==2)return 0;
 	{
 		return 0;
 	}
