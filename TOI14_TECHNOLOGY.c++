@@ -77,7 +77,7 @@ int main(void)
 		}
 		if(cnt>t)
 		{
-			if(i==1)
+			if(i==1) cout<<-1;
 			{
 				cout<<-1;
 			}
