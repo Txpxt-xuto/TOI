@@ -28,7 +28,7 @@ int dfs(int a,int b){
     }
     if(!ok)return dfs(a+1,b-1);
     parse=0;
-    int mn=99,j=-1;
+    int mn = 99,j = -1;
     for(i=a;i<=b;i++)
 	{
         if(s[i]=='[') parse++;
