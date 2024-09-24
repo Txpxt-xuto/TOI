@@ -10,7 +10,8 @@ string a;
 vector <char> op;
 vector <int> v;
 int x,y,i;
-void cal(){
+void cal()
+{
     y=v.back();
 	v.pop_back();
     x=v.back();
