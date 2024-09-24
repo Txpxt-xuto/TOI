@@ -18,8 +18,8 @@ string s;
 int c=0;
 int dfs(int a,int b){
     if(a>=b) return 20;
-    int parse=0;
-    bool ok=false;
+    int parse = 0;
+    bool ok = false;
     for(i=a;i<b;i++)
 	{
         if(s[i]=='[')parse++;
