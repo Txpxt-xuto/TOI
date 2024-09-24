@@ -7,10 +7,11 @@ CENTER: Home
 #pragma GCC optimize("O3","unroll-loops")
 #include<bits/stdc++.h>
 using namespace std;
-int solve(int a,int b,int c){
-    if(c==1)return ((a+b)*104)/100;
-    if(c==2)return ((a+b)*108)/100;
-    if(c==3)return ((a+b)*116)/100;
+int solve(int a,int b,int c)
+{
+    if(c==1) return ((a+b)*104)/100;
+    if(c==2) return ((a+b)*108)/100;
+    if(c==3) return ((a+b)*116)/100;
 }
 string s;
 int c=0;
