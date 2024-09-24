@@ -29,7 +29,7 @@ int main()
         {
             price.push(20);
         }
-        else if (s[i] == '[')
+        else if (s[i] == '[') operand.push(0);
         {
             operand.push(0);
         }
