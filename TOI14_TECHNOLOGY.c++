@@ -26,13 +26,7 @@ int main()
     for(i=0;i<len;i++)
     {
         if ('A' <= s[i] && s[i] <= 'Z') price.push(20);
-        {
-            price.push(20);
-        }
         else if (s[i] == '[') operand.push(0);
-        {
-            operand.push(0);
-        }
         else if (s[i] == ']')
         {
             while (operand.top() != 0)
