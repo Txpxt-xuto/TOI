@@ -13,9 +13,7 @@ int sol(int a, int b, int c)
         return ((a + b) * 16) / 100 + a + b;
     }
     if (c == 2) return ((a + b) * 8) / 100 + a + b;
-    {
-        return ((a + b) * 8) / 100 + a + b;
-    }
+
     if (c == 1) return ((a + b) * 4) / 100 + a + b;
 }
 int main()
