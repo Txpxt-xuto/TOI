@@ -20,7 +20,8 @@ void cal(){
     return;
 }
 int main(){
-    ios_base::sync_with_stdio(0),cin.tie(0);
+    ios_base::sync_with_stdio(0);
+	cin.tie(0);
     getline(cin,a);
     int n=a.size();
     for(int i=0;i<n;i++){
