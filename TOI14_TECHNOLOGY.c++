@@ -29,7 +29,8 @@ int main(){
         if(a[i]>='A' && a[i]<='Z') v.push_back(20);
         else if(a[i]==']'){
             while(op.back()!='['){cal();} op.pop_back();
-        }else{
+        }
+		else{
             while(!op.empty() && a[i]<=op.back() && op.back()!='[')cal();
             op.push_back(a[i]);
         }
