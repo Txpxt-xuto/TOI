@@ -35,8 +35,8 @@ int dfs(int a,int b){
         if(s[i]==']') parse--;
         if(parse<=0 && '1'<=s[i] && s[i]<='3' && mn>=s[i]-'0')
 		{
-            mn=s[i]-'0';
-            j=i;
+            mn = s[i]-'0';
+            j = i;
         }
     }
     return solve(dfs(j+1,b),dfs(a,j-1),mn);
