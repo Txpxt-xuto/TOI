@@ -38,8 +38,5 @@ int main(){
         }
     }
     while (!op.empty()) cal();
-	{
-        cal();
-    }
     cout<<v[0];
 }
