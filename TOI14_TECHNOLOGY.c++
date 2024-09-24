@@ -9,7 +9,7 @@ using namespace std;
 string a;
 vector <char> op;
 vector <int> v;
-int x,y;
+int x,y,i;
 void cal(){
     y=v.back(); v.pop_back();
     x=v.back(); v.pop_back();
@@ -19,7 +19,8 @@ void cal(){
     op.pop_back();
     return;
 }
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);
 	cin.tie(0);
     getline(cin,a);
