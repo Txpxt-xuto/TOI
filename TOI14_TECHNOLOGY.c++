@@ -7,6 +7,7 @@ CENTER: Home
 #pragma GCC optimize("O3","unroll-loops")
 #include<bits/stdc++.h>
 using namespace std;
+int i;
 int solve(int a,int b,int c)
 {
     if(c==1) return ((a+b)*104)/100;
@@ -16,10 +17,11 @@ int solve(int a,int b,int c)
 string s;
 int c=0;
 int dfs(int a,int b){
-    if(a>=b)return 20;
+    if(a>=b) return 20;
     int parse=0;
     bool ok=false;
-    for(int i=a;i<b;i++){
+    for(i=a;i<b;i++)
+	{
         if(s[i]=='[')parse++;
         if(s[i]==']')parse--;
         if(parse==0)ok=true;
