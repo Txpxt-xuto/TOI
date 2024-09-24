@@ -11,7 +11,7 @@ vector <char> op;
 vector <int> v;
 int x,y,i;
 void cal(){
-    y=v.back(); 
+    y=v.back();
 	v.pop_back();
     x=v.back();
 	v.pop_back();
