@@ -34,7 +34,7 @@ int main(){
         }
 		else
 		{
-            while(!op.empty() && a[i]<=op.back() && op.back()!='[')cal();
+            while(!op.empty() && a[i]<=op.back() && op.back()!='[') cal();
             op.push_back(a[i]);
         }
     }
