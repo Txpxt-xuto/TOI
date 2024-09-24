@@ -37,7 +37,7 @@ int main(){
             op.push_back(a[i]);
         }
     }
-    while (!op.empty())
+    while (!op.empty()) cal();
 	{
         cal();
     }
