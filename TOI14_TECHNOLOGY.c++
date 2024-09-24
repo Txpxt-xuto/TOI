@@ -27,7 +27,7 @@ int dfs(int a,int b){
         if(parse==0)ok=true;
     }
     if(!ok)return dfs(a+1,b-1);
-    parse=0;
+    parse = 0;
     int mn = 99,j = -1;
     for(i=a;i<=b;i++)
 	{
