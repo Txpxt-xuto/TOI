@@ -43,5 +43,5 @@ int main()
         }
     }
     while (!op.empty()) cal();
-    cout<< v[0];
+    cout << v[0];
 }
