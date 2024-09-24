@@ -41,7 +41,8 @@ int dfs(int a,int b){
     }
     return solve(dfs(j+1,b),dfs(a,j-1),mn);
 }
-int main(){
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(NULL);
     cin >> s;
