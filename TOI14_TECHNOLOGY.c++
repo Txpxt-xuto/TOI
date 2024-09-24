@@ -37,4 +37,3 @@ int main(){
     }
     cout<<v[0];
 }
-    
