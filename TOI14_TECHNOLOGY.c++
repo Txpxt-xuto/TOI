@@ -42,4 +42,3 @@ int main(){
     cin >> s;
     cout << dfs(0,s.length()-1);
 }
-//[A2B]1[A3C]
