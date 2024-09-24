@@ -44,7 +44,8 @@ int dfs(int a,int b){
 int main()
 {
     ios::sync_with_stdio(false);
-    cin.tie(NULL);cout.tie(NULL);
+    cin.tie(NULL);
+	cout.tie(NULL);
     cin >> s;
     cout << dfs(0,s.length()-1);
 }
