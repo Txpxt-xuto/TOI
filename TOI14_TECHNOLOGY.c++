@@ -24,7 +24,8 @@ int main(){
 	cin.tie(0);
     getline(cin,a);
     int n=a.size();
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+	{
         if(a[i]>='A' && a[i]<='Z'){v.push_back(20);}
         else if(a[i]==']'){
             while(op.back()!='['){cal();} op.pop_back();
