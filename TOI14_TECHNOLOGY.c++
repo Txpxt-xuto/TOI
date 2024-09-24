@@ -23,7 +23,7 @@ int main()
     stack<int> price;
     cin >> s;
     len = s.length();
-    for (i = 0; i < len; i++)
+    for(i=0;i<len;i++)
     {
         if ('A' <= s[i] && s[i] <= 'Z')
         {
