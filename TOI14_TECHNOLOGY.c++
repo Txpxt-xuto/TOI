@@ -25,7 +25,7 @@ int main()
     len = s.length();
     for(i=0;i<len;i++)
     {
-        if ('A' <= s[i] && s[i] <= 'Z')
+        if ('A' <= s[i] && s[i] <= 'Z') price.push(20);
         {
             price.push(20);
         }
