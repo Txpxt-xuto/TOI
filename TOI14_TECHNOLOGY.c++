@@ -29,7 +29,8 @@ int dfs(int a,int b){
     if(!ok)return dfs(a+1,b-1);
     parse=0;
     int mn=99,j=-1;
-    for(i=a;i<=b;i++)\{
+    for(i=a;i<=b;i++)
+	{
         if(s[i]=='[')parse++;
         if(s[i]==']')parse--;
         if(parse<=0 && '1'<=s[i] && s[i]<='3' && mn>=s[i]-'0'){
