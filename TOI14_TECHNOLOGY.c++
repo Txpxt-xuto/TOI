@@ -36,9 +36,5 @@ int main(){
         cal();
     }
     cout<<v[0];
-
-    //A3C1[F1G3H]3D 153
-    //A3C2D1E 94
-    //A3C1D2E 92
 }
     
