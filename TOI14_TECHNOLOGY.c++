@@ -15,7 +15,7 @@ int solve(int a,int b,int c)
     if(c==3) return ((a+b)*116)/100;
 }
 string s;
-int c=0;
+int c = 0;
 int dfs(int a,int b){
     if(a>=b) return 20;
     int parse = 0;
