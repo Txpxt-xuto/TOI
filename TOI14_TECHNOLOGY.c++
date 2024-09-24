@@ -31,9 +31,10 @@ int dfs(int a,int b){
     int mn=99,j=-1;
     for(i=a;i<=b;i++)
 	{
-        if(s[i]=='[')parse++;
-        if(s[i]==']')parse--;
-        if(parse<=0 && '1'<=s[i] && s[i]<='3' && mn>=s[i]-'0'){
+        if(s[i]=='[') parse++;
+        if(s[i]==']') parse--;
+        if(parse<=0 && '1'<=s[i] && s[i]<='3' && mn>=s[i]-'0')
+		{
             mn=s[i]-'0';
             j=i;
         }
