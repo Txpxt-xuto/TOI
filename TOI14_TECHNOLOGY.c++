@@ -11,8 +11,10 @@ vector <char> op;
 vector <int> v;
 int x,y,i;
 void cal(){
-    y=v.back(); v.pop_back();
-    x=v.back(); v.pop_back();
+    y=v.back(); 
+	v.pop_back();
+    x=v.back();
+	v.pop_back();
     if(op.back()=='3'){v.push_back((x+y)*116/100);}
     else if(op.back()=='2'){v.push_back((x+y)*108/100);}
     else {v.push_back(((x+y)*104)/100);}
