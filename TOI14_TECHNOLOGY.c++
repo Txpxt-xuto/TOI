@@ -32,7 +32,8 @@ int main(){
             while(op.back()!='[') cal();
 			op.pop_back();
         }
-		else{
+		else
+		{
             while(!op.empty() && a[i]<=op.back() && op.back()!='[')cal();
             op.push_back(a[i]);
         }
