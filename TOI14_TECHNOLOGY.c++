@@ -11,11 +11,13 @@ using ll=long long;
 
 int board[2050][2050],sq[2050][2050],qs[2050][2050],dp[2050][2050],mx=INT_MIN;
 
-signed main(){
+signed main(
+{
     ios::sync_with_stdio(0), cin.tie(0);
     int m,n,k;
     cin >> m >> n >> k;
-    for(int i=1;i<=m;i++){
+    for(int i=1;i<=m;i++)
+    {
         for(int j=1;j<=n;j++)
         {
             cin >> board[i][j];
