@@ -26,7 +26,7 @@ int main(){
         a = (a << 1) % md;
         if(s[i]=='1') a = (a + 1) % md;
     }
-    ll b=a;
+    ll b = a;
     for(i=0;i<n;i++)
     {
         b=(b<<1)%md;
