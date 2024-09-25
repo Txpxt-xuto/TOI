@@ -25,7 +25,8 @@ signed main(){
             if(i>=k && j>=k) mx=max(mx,dp[i][j]-dp[i-k][j-k]-sq[i][j-k]+sq[i-k][j-k]);
         }
     }
-    for(int i=1;i<=m;i++){
+    for(int i=1;i<=m;i++)
+    {
         for(int j=1;j<=n/2;j++){
             swap(board[i][j],board[i][n-j+1]);
         }
