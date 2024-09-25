@@ -24,7 +24,7 @@ int main(){
         if(s[i]=='1')a=(a+1)%md;
     }
     ll b=a;
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
         b=(b<<1)%md;
         if(s[i] =='1')b=(b-mx+1+md)%md;
