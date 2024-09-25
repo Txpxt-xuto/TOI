@@ -33,7 +33,7 @@ int main(){
         if(s[i] =='1') b = (b - mx + 1 + md) % md;
         if(a==b)
         {
-            cout<<(i+1);
+            cout << (i + 1);
             return 0;
         }
     }
