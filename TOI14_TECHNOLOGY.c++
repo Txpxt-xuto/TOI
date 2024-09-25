@@ -15,7 +15,7 @@ int main(){
     cin.tie(0)->sync_with_stdio(0);
 
     int n;cin>>n;
-    string s;cin>>s;
+    string s;cin >>s;
     s+=s;
     ll a=0,mx=1;
     for(int i=0;i<n;i++){
