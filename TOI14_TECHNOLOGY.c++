@@ -22,7 +22,7 @@ int main(){
     ll a = 0,mx = 1;
     for(i=0;i<n;i++)
     {
-        mx=(mx<<1)%md;
+        mx = (mx<<1)%md;
         a=(a<<1)%md;
         if(s[i]=='1')a=(a+1)%md;
     }
