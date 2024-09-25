@@ -30,7 +30,8 @@ signed main(){
             swap(board[i][j],board[i][n-j+1]);
         }
     }
-    for(int i=1;i<=m;i++){
+    for(int i=1;i<=m;i++)
+    {
         for(int j=1;j<=n;j++)
         {
             sq[i][j]=board[i][j]+sq[i-1][j]+sq[i][j-1]-sq[i-1][j-1];
