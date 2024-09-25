@@ -20,7 +20,8 @@ int main(){
     cin >> s;
     s+=s;
     ll a = 0,mx = 1;
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         mx=(mx<<1)%md;
         a=(a<<1)%md;
         if(s[i]=='1')a=(a+1)%md;
