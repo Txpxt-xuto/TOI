@@ -10,7 +10,6 @@ using ll =long long;
 const ll md=5000011;
 
 ll pw[5000005] = {1};
-
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
