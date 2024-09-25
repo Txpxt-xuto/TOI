@@ -19,7 +19,7 @@ int main(){
     string s;
     cin >> s;
     s+=s;
-    ll a=0,mx=1;
+    ll a=0,mx = 1;
     for(int i=0;i<n;i++){
         mx=(mx<<1)%md;
         a=(a<<1)%md;
