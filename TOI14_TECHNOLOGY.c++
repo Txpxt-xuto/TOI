@@ -30,7 +30,7 @@ int main(){
     for(i=0;i<n;i++)
     {
         b = (b << 1) % md;
-        if(s[i] =='1') b = (b-mx+1+md)%md;
+        if(s[i] =='1') b = (b-mx+1+md)% md;
         if(a==b){
             cout<<(i+1);
             return 0;
