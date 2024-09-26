@@ -6,16 +6,14 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-
 vector<int>adj[100005],lv[100005];
 int vis[100005],cur;
-
 bool dfs(int u,int p){
     vis[u]=1;
     for(auto &v:adj[u])
     {
         if(vis[v]==2) continue;
-        if(vis[v]==1 || !dfs(v,u))return 0;
+        if(vis[v]==1 || !dfs(v,u)) return 0;
     }
     vis[u]=2;
     ++cur;
