@@ -14,7 +14,7 @@ bool dfs(int u,int p){
     vis[u]=1;
     for(auto &v:adj[u])
     {
-        if(vis[v]==2)continue;
+        if(vis[v]==2) continue;
         if(vis[v]==1 || !dfs(v,u))return 0;
     }
     vis[u]=2;
