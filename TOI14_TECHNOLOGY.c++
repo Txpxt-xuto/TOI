@@ -25,8 +25,10 @@ int main(){
     cin.tie(0)->sync_with_stdio(0);
 
     int n,k,t;cin>>n>>k>>t;
-    for(int i=1;i<=n;i++){
-        int x,m;cin>>x>>m;
+    for(int i=1;i<=n;i++)
+    {
+        int x,m;
+        cin>>x>>m;
         lv[x].push_back({i});
         for(int j=0;j<m;j++)
         {
