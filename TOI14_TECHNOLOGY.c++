@@ -23,9 +23,8 @@ bool dfs(int u,int p){
 
 int main(){
     cin.tie(0)->sync_with_stdio(0);
-
     int n,k,t;
-    cin>>n >> k >> t;
+    cin >> n >> k >> t;
     for(i=1;i<=n;i++)
     {
         int x,m;
