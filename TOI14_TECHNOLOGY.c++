@@ -30,7 +30,8 @@ int main(){
         lv[x].push_back({i});
         for(int j=0;j<m;j++)
         {
-            int u;cin>>u;
+            int u;
+            cin>>u;
             adj[i].push_back({u});
         }
     }
