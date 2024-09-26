@@ -33,7 +33,8 @@ int main(){
             adj[i].push_back({u});
         }
     }
-    for(int i=1;i<=k;i++){
+    for(i=1;i<=k;i++)
+    {
         for(auto e:lv[i])
         {
             if(vis[e] ==2 || dfs(e,e) && cur<=t) continue;
