@@ -36,8 +36,8 @@ int main(){
     for(int i=1;i<=k;i++){
         for(auto e:lv[i]){
             if(vis[e] ==2 || dfs(e,e) && cur<=t)continue;
-            if(i==1)cout<<-1;
-            else cout<<i-1;
+            if(i==1)cout << -1;
+            else cout << i-1;
             return 0;
         }
     }
