@@ -31,7 +31,7 @@ int main(){
         for(int j=0;j<m;j++)
         {
             int u;
-            cin>>u;
+            cin > > u;
             adj[i].push_back({u});
         }
     }
