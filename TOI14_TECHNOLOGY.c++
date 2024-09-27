@@ -23,7 +23,7 @@ int main(){
             else if(i == '3') ind = 3;
             if(operationn.empty()){
                 operationn.push(ind);
-            {
+            }
             else
             {
                 x = operationn.top();
