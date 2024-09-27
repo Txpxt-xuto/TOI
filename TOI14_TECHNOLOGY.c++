@@ -50,7 +50,8 @@ int main(){
                 stack.pop();
                 stack.push((s1+s2)*(100 + 2*(1<<x))/100);
                 operationn.pop();
-            } operationn.pop();
+            }
+            operationn.pop();
         }
         else stack.push(20);
     }
