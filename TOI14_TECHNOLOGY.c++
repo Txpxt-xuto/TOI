@@ -41,7 +41,8 @@ int main(){
                 operationn.push(ind);
             }
         } else if(i == '[') operationn.push(-1);
-        else if(i == ']'){
+        else if(i == ']')
+        {
             while(operationn.top() != -1)
             {
                 x = operationn.top();
