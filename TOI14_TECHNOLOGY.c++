@@ -50,7 +50,7 @@ void kha(int left,int right,vector<long long> &v)
 			v[i-1]+=v[i-1]*8/100;
 			v[i]=v[i-1];
 			v[i+1]=v[i-1];
-			j=i-2;
+			j = i - 2;
 			while(j>=left&&(v[j]==temp1||v[j]==-5))
 			{
 				v[j]=v[i-1];
