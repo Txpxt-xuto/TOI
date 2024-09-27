@@ -8,7 +8,7 @@ CENTER: Home
 using namespace std;
 void kha(int left,int right,vector<long long> &v)
 {
-	int temp1,temp2,i,j;
+	int temp1, temp2, i, j;
 	for(i=left;i<right;i++)
 	{
 		if(v[i]==-3)
