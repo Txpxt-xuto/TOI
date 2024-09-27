@@ -107,8 +107,7 @@ int main(void)
 	stack<long long> check;
 	for(int i=0;i<a.size();i++)
 	{
-		if(a[i]>='1'&&a[i]<='3')
-			v.push_back((a[i]-'0')*-1);
+		if(a[i]>='1'&&a[i]<='3') v.push_back((a[i]-'0')*-1);
 		else if(a[i]=='[')
 		{
 			check.push(i);
