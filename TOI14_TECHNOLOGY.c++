@@ -23,7 +23,9 @@ int main(){
             else if(i == '3') ind = 3;
             if(operationn.empty()){
                 operationn.push(ind);
-            }else {
+            {
+            else
+            {
                 x = operationn.top();
                 operationn.pop();
                 while(ind <= x)
