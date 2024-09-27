@@ -105,7 +105,7 @@ int main(void)
 	cin>>a;
 	vector<long long> v;
 	stack<long long> check;
-	for(int i=0;i<a.size();i++)
+	for(i=0;i<a.size();i++)
 	{
 		if(a[i]>='1'&&a[i]<='3') v.push_back((a[i]-'0')*-1);
 		else if(a[i]=='[')
