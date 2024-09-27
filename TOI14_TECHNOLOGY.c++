@@ -17,7 +17,8 @@ int main(){
     char i;
     for(int j = 0; j < inp.length(); ++j){
         i = inp[j];
-        if(i == '1' || i == '2' || i == '3'){
+        if(i == '1' || i == '2' || i == '3')
+        {
             if(i == '1') ind = 1;
             else if(i == '2') ind = 2;
             else if(i == '3') ind = 3;
