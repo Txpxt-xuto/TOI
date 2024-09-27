@@ -53,8 +53,6 @@ int main(){
             } operationn.pop();
         }
         else{ stack.push(20);
-            stack.push(20);
-        }
     }
     while(stack.size() != 1)
     {
