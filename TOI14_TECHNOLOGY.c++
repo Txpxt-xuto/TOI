@@ -21,7 +21,7 @@ int main(){
             if(i == '1') ind = 1;
             else if(i == '2') ind = 2;
             else if(i == '3') ind = 3;
-            if(operationn.empty())
+            if(operationn.empty()) operationn.push(ind);
             {
                 operationn.push(ind);
             }
