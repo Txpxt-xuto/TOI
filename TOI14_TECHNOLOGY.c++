@@ -52,7 +52,7 @@ int main(){
                 operationn.pop();
             } operationn.pop();
         }
-        else{
+        else{ stack.push(20);
             stack.push(20);
         }
     }
