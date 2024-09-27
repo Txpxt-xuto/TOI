@@ -7,7 +7,6 @@ CENTER: Home
 #include<bits/stdc++.h>
 #include <stack>
 using namespace std;
-
 int main()
 {
     string inp;
