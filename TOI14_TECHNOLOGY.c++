@@ -23,7 +23,6 @@ int main(){
             else if(i == '3') ind = 3;
             if(operationn.empty()) operationn.push(ind);
             {
-                operationn.push(ind);
             }
             else
             {
