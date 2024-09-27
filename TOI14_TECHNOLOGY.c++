@@ -121,7 +121,6 @@ int main(void)
 			check.pop();
 		}
 		else v.push_back(20);
-			v.push_back(20);
 	}
 	kha(0,v.size(),v);
 	cout << v[0];
