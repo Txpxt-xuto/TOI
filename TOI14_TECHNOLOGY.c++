@@ -12,8 +12,7 @@ int main()
     string inp;
     cin >> inp;
     stack<int> stack, operationn;
-    int ind = 0, x, s1, s2
-    int x, s1, s2;
+    int ind = 0, x, s1, s2;
     char i;
     for(j=0;j<inp.length();++j)
     {
