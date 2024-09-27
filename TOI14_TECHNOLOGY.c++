@@ -40,7 +40,8 @@ int main(){
                 operationn.push(x);
                 operationn.push(ind);
             }
-        } else if(i == '[') operationn.push(-1);
+        }
+        else if(i == '[') operationn.push(-1);
         else if(i == ']')
         {
             while(operationn.top() != -1)
