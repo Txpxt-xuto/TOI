@@ -26,7 +26,8 @@ int main(){
             }else {
                 x = operationn.top();
                 operationn.pop();
-                while(ind <= x){
+                while(ind <= x)
+                {
                     if(stack.size() <= 1) break;
                     s1 = stack.top();
                     stack.pop();
