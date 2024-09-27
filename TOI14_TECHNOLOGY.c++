@@ -15,7 +15,7 @@ int main(){
     int ind = 0;
     int x, s1, s2;
     char i;
-    for(j=0;j<inp.length(); ++j)
+    for(j=0;j<inp.length();++j)
     {
         i = inp[j];
         if(i == '1' || i == '2' || i == '3')
