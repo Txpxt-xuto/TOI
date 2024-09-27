@@ -120,7 +120,7 @@ int main(void)
 			kha(check.top(),i,v);
 			check.pop();
 		}
-		else
+		else v.push_back(20);
 			v.push_back(20);
 	}
 	kha(0,v.size(),v);
