@@ -22,8 +22,6 @@ int main(){
             else if(i == '2') ind = 2;
             else if(i == '3') ind = 3;
             if(operationn.empty()) operationn.push(ind);
-            {
-            }
             else
             {
                 x = operationn.top();
