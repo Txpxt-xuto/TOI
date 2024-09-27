@@ -102,7 +102,7 @@ int main(void)
 	cin.tie(NULL);
 	cout.tie(NULL);
 	string a;
-	cin>>a;
+	cin >> a;
 	vector<long long> v;
 	stack<long long> check;
 	for(i=0;i<a.size();i++)
