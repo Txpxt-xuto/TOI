@@ -8,7 +8,8 @@ CENTER: Home
 #include <stack>
 using namespace std;
 
-int main(){
+int main()
+{
     string inp;
     cin >> inp;
     stack<int> stack, operationn;
