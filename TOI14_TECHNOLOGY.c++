@@ -102,6 +102,7 @@ int main(void)
 	cin.tie(NULL);
 	cout.tie(NULL);
 	string a;
+    int i;
 	cin >> a;
 	vector<long long> v;
 	stack<long long> check;
