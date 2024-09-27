@@ -9,11 +9,8 @@ using namespace std;
 void kha(int left,int right,vector<long long> &v)
 {
 	int temp1,temp2,j;
-	//cout<<left<<" "<<right<<"\n";
-	/*for(int i=0;i<v.size();i++)
-		cout<<v[i]<<" ";
-	cout<<"\n";*/
-	for(int i=left;i<right;i++)
+int i;
+	for(i=left;i<right;i++)
 	{
 		if(v[i]==-3)
 		{
