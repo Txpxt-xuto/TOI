@@ -44,8 +44,8 @@ void kha(int left,int right,vector<long long> &v)
 	{
 		if(v[i]==-2)
 		{
-			temp1=v[i-1];
-			temp2=v[i+1];
+			temp1 = v[i-1];
+			temp2 = v[i+1];
 			v[i-1]+=v[i+1];
 			v[i-1]+=v[i-1]*8/100;
 			v[i] = v[i-1];
