@@ -124,5 +124,5 @@ int main(void)
 			v.push_back(20);
 	}
 	kha(0,v.size(),v);
-	cout<<v[0];
+	cout << v[0];
 }
