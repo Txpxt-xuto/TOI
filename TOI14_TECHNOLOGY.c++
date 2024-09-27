@@ -56,7 +56,7 @@ int main(){
             stack.push(20);
         }
     }
-    while (stack.size() != 1)
+    while(stack.size() != 1)
     {
         ind = operationn.top();
         operationn.pop();
