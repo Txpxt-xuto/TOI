@@ -5,7 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <iostream> 
-
 using namespace std;
 int arr[1001][1001];
 int qs[1001][1001]; 
