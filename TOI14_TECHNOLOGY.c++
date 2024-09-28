@@ -34,7 +34,7 @@ int main() {
 
     int ans = 0;
     for (int i=k; i<=n; i++) {
-        for (=k; j<=m; j++) ans = max(ans, qs[i][j] - qs[i-k][j] - qs[i][j-k] + qs[i-k][j-k]);
+        for (j=k; j<=m; j++) ans = max(ans, qs[i][j] - qs[i-k][j] - qs[i][j-k] + qs[i-k][j-k]);
 		{
             ans = max(ans, qs[i][j] - qs[i-k][j] - qs[i][j-k] + qs[i-k][j-k]);
         }
