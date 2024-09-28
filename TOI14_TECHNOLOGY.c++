@@ -19,7 +19,6 @@ int main() {
 
     int k;
     cin >> k;
-
     for(i=1; i<=n; i++)
 	{
         for(j=1; j<=m; j++) cin >> arr[i][j];
