@@ -21,11 +21,11 @@ int main() {
     cin >> k;
 
     for (int i=1; i<=n; i++) {
-        for (int j=1; j<=m; j++) {
+        for (int j=1; j<=m; j++) cin >> arr[i][j];
+		{
             cin >> arr[i][j];
         }
     }
-
     for(i=1; i<=n; i++)
 	{
         for(j=1; j<=m; j++) qs[i][j] = qs[i-1][j] + qs[i][j-1] - qs[i-1][j-1] + arr[i][j];
