@@ -26,7 +26,7 @@ int main() {
         }
     }
 
-    for (i=1; i<=n; i++) {
+    for(i=1; i<=n; i++) {
         for(j=1; j<=m; j++) qs[i][j] = qs[i-1][j] + qs[i][j-1] - qs[i-1][j-1] + arr[i][j];
     }
     int ans = 0;
