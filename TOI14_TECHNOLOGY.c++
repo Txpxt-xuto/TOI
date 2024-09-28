@@ -16,7 +16,6 @@ int main() {
 	cin.tie(0);
     int n, m, k;
     cin >> n >> m;
-
     cin >> k;
     for(i=1; i<=n; i++)
 	{
