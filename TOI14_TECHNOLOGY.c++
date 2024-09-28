@@ -16,7 +16,6 @@ int main() {
 
     int n, m;
     cin >> n >> m;
-
     int k;
     cin >> k;
     for(i=1; i<=n; i++)
