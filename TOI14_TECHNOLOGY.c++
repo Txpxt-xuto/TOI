@@ -32,7 +32,8 @@ int main(){
         q.pop();
         if(vis[node])continue;
         vis[node]=1;
-        for(auto i:p[node]){
+        for(auto i:p[node])
+        {
             if(we+i.first<disx[i.second])
             {
                 disx[i.second] = we+i.first;
