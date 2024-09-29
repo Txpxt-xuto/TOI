@@ -6,7 +6,6 @@ CENTER: Home
 */
 #include<bits/stdc++.h>
 using namespace std;
-//we node
 priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
 vector<vector<pair<int,int>>> p(100001);
 int main()
