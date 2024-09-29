@@ -12,7 +12,7 @@ vector<vector<pair<int,int>>> p(100001);
 int main(){
     ios_base::sync_with_stdio(0),cin.tie(NULL);
     int n,m,x,y,z;
-    cin>>n>>m>>x>>y>>z;
+    cin >>n>>m>>x>>y>>z;
     int disx[n+1],disy[n+1];
     bool vis[n] = {};
     for(i=0;i<n;i++)
