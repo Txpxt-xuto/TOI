@@ -21,7 +21,7 @@ int main(){
     }
     for(int i=0;i<m;i++){
         int u,v,w;
-        cin>>u>>v>>w;
+        cin>> u >>v>>w;
         p[u].push_back({w,v});
         p[v].push_back({w,u});
     }
