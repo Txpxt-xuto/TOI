@@ -40,7 +40,7 @@ int main(){
         }
     }
     q.push({0,y});
-    disy[y]=0;
+    disy[y] = 0;
     memset(vis,false,sizeof(vis));
     while(!q.empty())
     {
