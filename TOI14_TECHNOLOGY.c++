@@ -15,7 +15,7 @@ int main(){
     cin>>n>>m>>x>>y>>z;
     int disx[n+1],disy[n+1];
     bool vis[n]={};
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
         disx[i] = 2e9;
         disy[i] = 2e9;
