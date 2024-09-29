@@ -64,7 +64,7 @@ int main(){
         {
             rub = disy[i];
             dist = disx[i];
-            node=i;
+            node = i;
         }
     }
     cout << node << " " << dist << " " << rub;
