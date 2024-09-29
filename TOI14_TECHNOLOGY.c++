@@ -29,7 +29,7 @@ int main(){
     disx[x]=0;
     while(!q.empty())
     {
-        int we=q.top().first,node=q.top().second;
+        int we = q.top().first,node = q.top().second;
         q.pop();
         if(vis[node]) continue;
         vis[node] = 1;
