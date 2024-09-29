@@ -56,7 +56,7 @@ int main(){
     }
     if(disx[y]<=z)
     {
-        cout<< y<<" "<<disx[y]<<" "<<0;
+        cout<< y << " "<<disx[y]<<" "<<0;
         return 0;
     }
     int node,dist=2e9,rub=2e9;
