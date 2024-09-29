@@ -42,7 +42,8 @@ int main(){
     q.push({0,y});
     disy[y]=0;
     memset(vis,false,sizeof(vis));
-    while(!q.empty()){
+    while(!q.empty())
+    {
         int node = q.top().second,we = q.top().first;
         q.pop();
         if(vis[node]) continue;
