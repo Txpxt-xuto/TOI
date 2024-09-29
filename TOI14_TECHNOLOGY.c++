@@ -63,7 +63,7 @@ int main(){
         if(disx[i]<=z&&disy[i]<rub)
         {
             rub = disy[i];
-            dist=disx[i];
+            dist = disx[i];
             node=i;
         }
     }
