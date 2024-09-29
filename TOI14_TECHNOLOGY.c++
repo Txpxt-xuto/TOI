@@ -59,7 +59,8 @@ int main(){
         return 0;
     }
     int node,dist=2e9,rub=2e9;
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         if(disx[i]<=z&&disy[i]<rub)
         {
             rub = disy[i];
