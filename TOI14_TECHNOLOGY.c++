@@ -47,7 +47,8 @@ int main(){
         q.pop();
         if(vis[node])continue;
         vis[node]=1;
-        for(auto i:p[node]){
+        for(auto i:p[node])
+        {
             if(disy[i.second]>we+i.first)
             {
                 disy[i.second] = we+i.first;
