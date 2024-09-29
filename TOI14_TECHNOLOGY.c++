@@ -26,7 +26,7 @@ int main(){
         p[v].push_back({w,u});
     }
     q.push({0,x});
-    disx[x]=0;
+    disx[x] = 0;
     while(!q.empty())
     {
         int we = q.top().first,node = q.top().second;
