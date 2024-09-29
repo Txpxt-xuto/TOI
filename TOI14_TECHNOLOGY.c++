@@ -27,7 +27,8 @@ int main(){
     }
     q.push({0,x});
     disx[x]=0;
-    while(!q.empty()){
+    while(!q.empty())
+    {
         int we=q.top().first,node=q.top().second;
         q.pop();
         if(vis[node]) continue;
