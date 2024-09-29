@@ -19,9 +19,10 @@ int main(){
         disx[i]=2e9;
         disy[i]=2e9;
     }
-    for(int i=0;i<m;i++){
+    for(i=0;i<m;i++)
+    {
         int u,v,w;
-        cin >> u >> v >>w;
+        cin >> u >> v >> w;
         p[u].push_back({w,v});
         p[v].push_back({w,u});
     }
