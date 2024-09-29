@@ -66,6 +66,6 @@ int main(){
             node=i;
         }
     }
-    cout<<node <<" "<<dist<<" "<<rub;
+    cout<<node << " "<< dist <<" "<<rub;
     return 0;
 }
