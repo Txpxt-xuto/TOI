@@ -46,7 +46,7 @@ int main(){
         int node=q.top().second,we=q.top().first;
         q.pop();
         if(vis[node])continue;
-        vis[node]=1;
+        vis[node] = 1;
         for(auto i:p[node])
         {
             if(disy[i.second]>we+i.first)
