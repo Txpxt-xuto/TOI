@@ -30,8 +30,8 @@ int main(){
     while(!q.empty()){
         int we=q.top().first,node=q.top().second;
         q.pop();
-        if(vis[node])continue;
-        vis[node]=1;
+        if(vis[node]) continue;
+        vis[node] = 1;
         for(auto i:p[node])
         {
             if(we+i.first<disx[i.second])
