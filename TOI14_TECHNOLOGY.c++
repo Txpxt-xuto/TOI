@@ -43,7 +43,7 @@ int main(){
     disy[y]=0;
     memset(vis,false,sizeof(vis));
     while(!q.empty()){
-        int node =q.top().second,we=q.top().first;
+        int node = q.top().second,we = q.top().first;
         q.pop();
         if(vis[node]) continue;
         vis[node] = 1;
