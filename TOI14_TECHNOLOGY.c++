@@ -24,9 +24,9 @@ int main(){
         if(!(temp%i)) for(j=i; j<k; j+=i) val[j]=1;
         while(!(temp%i)) temp/=i;
     }
-    for(i=1; i<k; i++) partial[i]=partial[i-1]+val[i];
+    for(i=1;i<k;i++) partial[i]=partial[i-1]+val[i];
     int rsq[n];
-    for(i=0; i<n; i++) rsq[i]=(a[i]/k)*partial[k-1]+partial[a[i]%k];
+    for(i=0;i<n;i++) rsq[i]=(a[i]/k)*partial[k-1]+partial[a[i]%k];
     int mn=rsq[0]-val[a[0]%k],mx=rsq[0]-val[a[0]%k],ans=-1;
     for(int i=1; i<n; i++){
         ans=max(ans,max(abs(rsq[i]-mn),abs(rsq[i]-mx)));
