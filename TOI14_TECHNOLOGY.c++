@@ -55,7 +55,8 @@ int main(){
         hp=h;
         st=3;
         ti=-1;
-        if(v){
+        if(v)
+        {
             if(h>q)
             {
                 ti=0;
