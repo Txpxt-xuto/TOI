@@ -19,7 +19,6 @@ int dy[4]={0,-1,0,1};
 int n,T,f,s,q,all,qua;
 map<pair<int,int>,t3> mp;
 priority_queue<t4,vector<t4>,greater<t4>> pq;
-
 void upd(int x,int y,int t)
 {
     auto it=mp.find({x,y});
