@@ -10,7 +10,6 @@ using namespace std;
 
 typedef tuple<int,int,int> t3;
 typedef tuple<int,int,int,int> t4;
-
 const int N=1e5+5;
 int dx[4]={-1,0,1,0};
 int dy[4]={0,-1,0,1};
