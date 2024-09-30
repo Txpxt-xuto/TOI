@@ -37,7 +37,8 @@ void upd(int x,int y,int t){
             sum+=f-hp-ti;
         }
     }
-    if(cnt){
+    if(cnt)
+    {
         ti=max(t,(int)ceil(1.0*(hp-sum)/cnt));
         pq.emplace(ti,2,x,y);
     }
