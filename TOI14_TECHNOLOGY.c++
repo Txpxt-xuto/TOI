@@ -74,11 +74,13 @@ int main(){
         auto &[hp,st,ti]=mp[{x,y}];
         if(st<=d||(d==2&&t!=ti)) continue;
         st=d;
-        if(d==2){
+        if(d==2)
+        {
             all++;
             pq.emplace(t+max(1,hp-s),1,x,y);
             pq.emplace(t+max(1,hp-q),0,x,y);
-        }else{
+        }
+        else{
             qua+=(d==0);
             for(int i=0;i<4;i++)upd(x+dx[i],y+dy[i],t);
         }
