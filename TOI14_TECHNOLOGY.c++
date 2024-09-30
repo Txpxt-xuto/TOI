@@ -56,7 +56,8 @@ int main(){
         st=3;
         ti=-1;
         if(v){
-            if(h>q){
+            if(h>q)
+            {
                 ti=0;
                 pq.emplace(0,2,x,y);
             }
