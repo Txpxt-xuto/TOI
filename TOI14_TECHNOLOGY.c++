@@ -5,7 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include<bits/stdc++.h>
-
 using namespace std;
 typedef tuple<int,int,int> t3;
 typedef tuple<int,int,int,int> t4;
