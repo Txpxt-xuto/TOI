@@ -19,7 +19,8 @@ int main(){
     int temp=k,val[k],partial[k];
     memset(val,-1,sizeof(val));
     val[0]=partial[0]=1;
-    for(i=2; i<=k && temp!=1; i++){
+    for(i=2;i<=k && temp!=1;i++)
+    {
         if(!(temp%i)) for(int j=i; j<k; j+=i) val[j]=1;
         while(!(temp%i)) temp/=i;
     }
