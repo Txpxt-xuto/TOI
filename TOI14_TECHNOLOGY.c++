@@ -30,9 +30,9 @@ int main(){
     int mn=rsq[0]-val[a[0]%k],mx=rsq[0]-val[a[0]%k],ans=-1;
     for(i=1; i<n; i++)
     {
-        ans=max(ans,max(abs(rsq[i]-mn),abs(rsq[i]-mx)));
-        mn=min(mn,rsq[i]-val[a[i]%k]);
-        mx=max(mx,rsq[i]-val[a[i]%k]);
+        ans = max(ans,max(abs(rsq[i]-mn),abs(rsq[i]-mx)));
+        mn= min(mn,rsq[i]-val[a[i]%k]);
+        mx =max(mx,rsq[i]-val[a[i]%k]);
     }
     cout << ans;
     return 0;
