@@ -39,7 +39,7 @@ void upd(int x,int y,int t){
     }
     if(cnt)
     {
-        ti = m ax(t,(int)ceil(1.0*(hp-sum)/cnt));
+        ti = max(t,(int)ceil(1.0*(hp-sum)/cnt));
         pq.emplace(ti,2,x,y);
     }
     else  ti=-1;
