@@ -20,7 +20,8 @@ int n,T,f,s,q,all,qua;
 map<pair<int,int>,t3> mp;
 priority_queue<t4,vector<t4>,greater<t4>> pq;
 
-void upd(int x,int y,int t){
+void upd(int x,int y,int t)
+{
     auto it=mp.find({x,y});
     if(it==mp.end()) return;
     auto &[hp,st,ti]=it->second;
