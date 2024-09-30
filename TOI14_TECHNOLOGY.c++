@@ -40,12 +40,11 @@ void upd(int x,int y,int t){
     if(cnt){
         ti=max(t,(int)ceil(1.0*(hp-sum)/cnt));
         pq.emplace(ti,2,x,y);
-    }else{
-        ti=-1;
     }
+    else  ti=-1;
 }
-
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> T >> f >> s >> q;
     for(i=1;i<=n;i++)
