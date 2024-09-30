@@ -8,7 +8,8 @@ CENTER: Home
 #define INF (int)(2e9+20)
 typedef long long ll;
 using namespace std;
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int z,k,i,j,n;
