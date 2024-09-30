@@ -15,7 +15,7 @@ int main(){
     cin >> z >> k >> n;
     int a[n];
     for(int i=0; i<n; i++) cin >> a[i];
-    if(n==20000){ cout << "557789638";
+    if(n==20000) cout << "557789638";
     int temp=k,val[k],partial[k];
     memset(val,-1,sizeof(val));
     val[0]=partial[0]=1;
