@@ -31,8 +31,8 @@ int main(){
     for(i=1; i<n; i++)
     {
         ans = max(ans,max(abs(rsq[i]-mn),abs(rsq[i]-mx)));
-        mn= min(mn,rsq[i]-val[a[i]%k]);
-        mx =max(mx,rsq[i]-val[a[i]%k]);
+        mn = min(mn,rsq[i]-val[a[i]%k]);
+        mx = max(mx,rsq[i]-val[a[i]%k]);
     }
     cout << ans;
     return 0;
