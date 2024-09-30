@@ -26,7 +26,7 @@ void upd(int x,int y,int t){
     auto &[hp,st,ti]=it->second;
     if(st!=3)return;
     int sum=0,cnt=0;
-    for(int i=0;i<4;i++)
+    for(i=0;i<4;i++)
     {
         int xx=x+dx[i];
         int yy=y+dy[i];
