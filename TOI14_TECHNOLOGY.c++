@@ -76,7 +76,8 @@ int main() {
             int x = eventX[eventptr].x;
             int h = eventX[eventptr].h;
             int o = eventX[eventptr].o;
-            while(x == i) {
+            while(x == i)
+            {
                 f1.add(1,o);
                 f1.add(h + 1,-o);
                 eventptr++;
