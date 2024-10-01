@@ -82,7 +82,6 @@ int main() {
                 /*for(int j = 1; j <= 5; j++) {
                     cout << f1.c[j] << ' ';
                 }
-                cout << endl;*/
                 eventptr++;
                 x = eventX[eventptr].x;
                 h = eventX[eventptr].h;
