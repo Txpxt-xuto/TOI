@@ -69,9 +69,8 @@ int main()
     sort(eventX.begin(),eventX.end());
     sort(posX.begin(),posX.end());
     posX.resize(unique(posX.begin(),posX.end()) - posX.begin());
-    int ans = 0;
-    int eventptr = 0;
-    int lastPos = 0;
+    int ans = 0,eventptr = 0,lastPos = 0;
+    int eventptr = 0,lastPos = 0;
     for(i : posX)
     {
         int rlow = binarySl(T),rhigh = binarySH(T);
