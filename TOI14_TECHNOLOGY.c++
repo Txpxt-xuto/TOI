@@ -30,7 +30,8 @@ struct fenwick {
 }f1;
 int binarySl(int T) {
     int st = 1; int en = MX;
-    while(st < en) {
+    while(st < en)
+    {
         int mid = (st + en) / 2;
         if(f1.find(mid) > T) st = mid + 1;
         else en = mid;
