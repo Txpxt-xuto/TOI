@@ -51,7 +51,7 @@ int main() {
     ll N,T; cin >> N >> T;
     vector<event> eventX;
     vector<int> posX;
-    for(int i = 0; i < N; i++)
+    for(i = 0; i < N; i++)
     {
         int s,h,w,o;
         cin >> s >> h >> w >> o;
