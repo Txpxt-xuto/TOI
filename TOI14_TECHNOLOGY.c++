@@ -19,16 +19,16 @@ struct event {
 };
 struct fenwick {
     int c[MX];
-    void add(int idx,int val) {
+    void add(int idx,int val){
         while(idx < MX) c[idx] += val,idx += (idx&-idx);
     }
-    int find(int idx) {
+    int find(int idx){
         int tmp = 0;
         while(idx > 0) tmp += c[idx],idx -= (idx&-idx);
         return tmp;
     }
 }f1;
-int binarySl(int T) {
+int binarySl(int T){
     int st = 1,en = MX;
     while(st < en)
     {
@@ -38,7 +38,7 @@ int binarySl(int T) {
     }
     return en;
 }
-int binarySH(int T) {
+int binarySH(int T){
     int st = 1; int en = MX;
     while(st < en)
     {
