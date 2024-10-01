@@ -39,7 +39,8 @@ int binarySl(int T) {
 }
 int binarySH(int T) {
     int st = 1; int en = MX;
-    while(st < en) {
+    while(st < en)
+    {
         int mid = (st + en + 1) / 2;
         if(f1.find(mid) < T) en = mid - 1;
         else st = mid;
