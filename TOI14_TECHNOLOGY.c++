@@ -13,14 +13,16 @@ struct event {
     int x;
     int h;
     int o;
-    bool operator < (const event&temp) const {
+    bool operator < (const event&temp) const
+    {
         return x < temp.x;
     }
 };
 struct fenwick {
     int c[MX];
     void add(int idx,int val) while(idx < MX) c[idx] += val,idx += (idx&-idx);
-    int find(int idx){
+    int find(int idx)
+    {
         int tmp = 0;
         while(idx > 0) tmp += c[idx],idx -= (idx&-idx);
         return tmp;
