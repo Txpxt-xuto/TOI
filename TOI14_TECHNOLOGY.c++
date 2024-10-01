@@ -68,7 +68,8 @@ int main() {
         int rlow = binarySl(T);
         int rhigh = binarySH(T);
         //cout << rlow << ' ' << rhigh << ' ' << f1.find(rlow) << ' ' << f1.find(rhigh) << endl << endl;
-        if(f1.find(rlow) == T && f1.find(rhigh) == T) {
+        if(f1.find(rlow) == T && f1.find(rhigh) == T) ans += (rhigh - rlow + 1) * (i - lastPos);
+        {
             ans += (rhigh - rlow + 1) * (i - lastPos);
         }
         lastPos = i;
