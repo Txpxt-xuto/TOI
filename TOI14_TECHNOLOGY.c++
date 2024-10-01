@@ -48,7 +48,8 @@ int binarySH(int T) {
 }
 int main()
 {
-    ios::sync_with_stdio(0); cin.tie(0);
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     ll N,T;
     int i;
     cin >> N >> T;
