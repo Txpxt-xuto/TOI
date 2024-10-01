@@ -80,9 +80,7 @@ int main()
         lastPos = i;
         if(eventptr < eventX.size())
         {
-            int x = eventX[eventptr].x;
-            int h = eventX[eventptr].h;
-            int o = eventX[eventptr].o;
+            int x = eventX[eventptr].x,h = eventX[eventptr].h,o = eventX[eventptr].o;
             while(x == i)
             {
                 f1.add(1,o);
