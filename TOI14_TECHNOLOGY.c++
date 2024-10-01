@@ -29,7 +29,7 @@ struct fenwick {
     }
 }f1;
 int binarySl(int T) {
-    int st = 1; int en = MX;
+    int st = 1,en = MX;
     while(st < en)
     {
         int mid = (st + en) / 2;
