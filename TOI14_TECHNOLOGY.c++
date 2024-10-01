@@ -72,7 +72,8 @@ int main() {
             ans += (rhigh - rlow + 1) * (i - lastPos);
         }
         lastPos = i;
-        if(eventptr < eventX.size()) {
+        if(eventptr < eventX.size())
+        {
             int x = eventX[eventptr].x;
             int h = eventX[eventptr].h;
             int o = eventX[eventptr].o;
