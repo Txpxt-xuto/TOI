@@ -68,7 +68,7 @@ int main() {
     int ans = 0;
     int eventptr = 0;
     int lastPos = 0;
-    for(int i : posX)
+    for(i : posX)
     {
         int rlow = binarySl(T);
         int rhigh = binarySH(T);
