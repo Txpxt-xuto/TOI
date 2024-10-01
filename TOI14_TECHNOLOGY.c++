@@ -74,8 +74,7 @@ int main()
     int lastPos = 0;
     for(i : posX)
     {
-        int rlow = binarySl(T);
-        int rhigh = binarySH(T);
+        int rlow = binarySl(T),rhigh = binarySH(T);
         if(f1.find(rlow) == T && f1.find(rhigh) == T) ans += (rhigh - rlow + 1) * (i - lastPos);
         lastPos = i;
         if(eventptr < eventX.size())
