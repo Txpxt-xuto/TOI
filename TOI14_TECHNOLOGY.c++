@@ -53,7 +53,8 @@ int main() {
     vector<int> posX;
     for(int i = 0; i < N; i++)
     {
-        int s,h,w,o; cin >> s >> h >> w >> o;
+        int s,h,w,o;
+        cin >> s >> h >> w >> o;
         eventX.push_back({s,h,o});
         eventX.push_back({s + w,h,-o});
         posX.push_back(s);
