@@ -48,7 +48,9 @@ int binarySH(int T) {
 }
 int main() {
     ios::sync_with_stdio(0); cin.tie(0);
-    ll N,T; cin >> N >> T;
+    ll N,T;
+    int i;
+    cin >> N >> T;
     vector<event> eventX;
     vector<int> posX;
     for(i = 0; i < N; i++)
