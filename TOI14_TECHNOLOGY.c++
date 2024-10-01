@@ -80,7 +80,6 @@ int main() {
                 f1.add(1,o);
                 f1.add(h + 1,-o);
                 /*for(int j = 1; j <= 5; j++) {
-                    cout << f1.c[j] << ' ';
                 }
                 eventptr++;
                 x = eventX[eventptr].x;
