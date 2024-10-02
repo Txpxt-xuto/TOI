@@ -45,7 +45,8 @@ int main()
         cin >> c;
         while(c--)
         {
-            int u;cin>>u;
+            int u;
+            cin>>u;
             adjL[i].push_back(u);
         }
     }
