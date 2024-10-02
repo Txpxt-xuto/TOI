@@ -42,7 +42,7 @@ int main()
         cin>>g;
         lvl[g].push_back(i);
         int c;
-        cin>>c;
+        cin >>c;
         while(c--){
             int u;cin>>u;
             adjL[i].push_back(u);
