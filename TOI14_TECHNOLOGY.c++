@@ -55,7 +55,4 @@ int main(){
         }
     }
     cout<<k;
-    return 0;
-
-    return 0;
 }
