@@ -7,8 +7,6 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ii;
-
-
 ii n,k,t;
 vector<ii> adjL[(int)2e5+1];
 vector<ii> lvl[(int)1e4+1];
