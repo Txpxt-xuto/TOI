@@ -36,7 +36,7 @@ int main()
 {
     cin>>n>>k>>t;
     int i,j;
-    for(int i=1;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
         int g;cin>>g;lvl[g].push_back(i);
         int c;cin>>c;
