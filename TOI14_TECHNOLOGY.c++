@@ -38,8 +38,10 @@ int main()
     int i,j;
     for(i=1;i<=n;i++)
     {
-        int g;cin>>g;lvl[g].push_back(i);
-        int c;cin>>c;
+        int g;cin>>g;
+        lvl[g].push_back(i);
+        int c;
+        cin>>c;
         while(c--){
             int u;cin>>u;
             adjL[i].push_back(u);
