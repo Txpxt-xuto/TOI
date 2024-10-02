@@ -31,7 +31,6 @@ bool dfs(int x){
     visited[x]=2;
     return cango&&(t>=0);
 }
-
 int main()
 {
     cin >> n >> k >> t;
