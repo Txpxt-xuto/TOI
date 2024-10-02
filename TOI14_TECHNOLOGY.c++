@@ -48,11 +48,11 @@ int main(){
         {
             if(!dfs(j))
             {
-                if(i-1==0)cout << -1;
+                if(i-1==0) cout << -1;
                 else cout << i-1;
                 return 0;
             }
         }
     }
-    cout<<k;
+    cout << k;
 }
