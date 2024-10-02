@@ -34,7 +34,7 @@ bool dfs(int x){
 
 int main()
 {
-    cin>>n>>k>>t;
+    cin >> n >> k >> t;
     int i,j;
     for(i=1;i<=n;i++)
     {
