@@ -44,7 +44,8 @@ int main(){
     }
     for(int i=1;i<=k;i++)
     {
-        for(int j:lvl[i]){
+        for(int j:lvl[i])
+        {
             if(!dfs(j)){
                 if(i-1==0)cout<<-1;
                 else cout<<i-1;
