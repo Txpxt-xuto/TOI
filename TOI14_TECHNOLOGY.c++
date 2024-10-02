@@ -42,7 +42,8 @@ int main(){
             adjL[i].push_back(u);
         }
     }
-    for(int i=1;i<=k;i++){
+    for(int i=1;i<=k;i++)
+    {
         for(int j:lvl[i]){
             if(!dfs(j)){
                 if(i-1==0)cout<<-1;
