@@ -32,9 +32,12 @@ bool dfs(int x){
     return cango&&(t>=0);
 }
 
-int main(){
+int main()
+{
     cin>>n>>k>>t;
-    for(int i=1;i<=n;i++){
+    int i,j;
+    for(int i=1;i<=n;i++)
+    {
         int g;cin>>g;lvl[g].push_back(i);
         int c;cin>>c;
         while(c--){
