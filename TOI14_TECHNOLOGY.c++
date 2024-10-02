@@ -4,91 +4,55 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define endl '\n'
-typedef long long ll;
-const int MX = 1000002;
-struct event {
-    int x;
-    int h;
-    int o;
-    bool operator < (const event&temp) const
-    {
-        return x < temp.x;
+typedef long long ii;
+
+/*
+Construct graph : u->v means need to build v before u.
+                  DFS from u in x level to all node that need to be build first.
+                  If found cycle -> can't build u. -> can't build level x;
+*/
+ii n,k,t;
+vector<ii> adjL[(int)2e5+1];
+vector<ii> lvl[(int)1e4+1];
+
+int visited[(int)2e5+1]={0};
+
+bool dfs(int x){
+    if(visited[x]==1)return 0;
+    if(visited[x]==2)return 1;
+    t--;
+    visited[x] = 1;
+    bool cango = 1;
+    for(int v:adjL[x]){
+        cango&=dfs(v);
     }
-};
-struct fenwick {
-    int c[MX];
-    void add(int idx,int val) while(idx < MX) c[idx] += val,idx += (idx&-idx);
-    int find(int idx)
-    {
-        int tmp = 0;
-        while(idx > 0) tmp += c[idx],idx -= (idx&-idx);
-        return tmp;
-    }
-}f1;
-int binarySl(int T){
-    int st = 1,en = MX;
-    while(st < en)
-    {
-        int mid = (st + en) / 2;
-        if(f1.find(mid) > T) st = mid + 1;
-        else en = mid;
-    }
-    return en;
+    visited[x]=2;
+    return cango&&(t>=0);
 }
-int binarySH(int T){
-    int st = 1; int en = MX;
-    while(st < en)
-    {
-        int mid = (st + en + 1) / 2;
-        if(f1.find(mid) < T) en = mid - 1;
-        else st = mid;
+
+int main(){
+    cin>>n>>k>>t;
+    for(int i=1;i<=n;i++){
+        int g;cin>>g;lvl[g].push_back(i);
+        int c;cin>>c;
+        while(c--){
+            int u;cin>>u;
+            adjL[i].push_back(u);
+        }
     }
-    return en;
-}
-int main()
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    ll N,T;
-    int i;
-    cin >> N >> T;
-    vector<event> eventX;
-    vector<int> posX;
-    for(i=0;i<N;i++)
-    {
-        int s,h,w,o;
-        cin >> s >> h >> w >> o;
-        eventX.push_back({s,h,o});
-        eventX.push_back({s + w,h,-o});
-        posX.push_back(s);
-        posX.push_back(s + w);
-    }
-    sort(eventX.begin(),eventX.end());
-    sort(posX.begin(),posX.end());
-    posX.resize(unique(posX.begin(),posX.end()) - posX.begin());
-    int ans = 0,eventptr = 0,lastPos = 0;
-    for(i : posX)
-    {
-        int rlow = binarySl(T),rhigh = binarySH(T);
-        if(f1.find(rlow) == T && f1.find(rhigh) == T) ans += (rhigh - rlow + 1) * (i - lastPos);
-        lastPos = i;
-        if(eventptr < eventX.size())
-        {
-            int x = eventX[eventptr].x,h = eventX[eventptr].h,o = eventX[eventptr].o;
-            while(x == i)
-            {
-                f1.add(1,o);
-                f1.add(h + 1,-o);
-                eventptr++;
-                x = eventX[eventptr].x;
-                h = eventX[eventptr].h;
-                o = eventX[eventptr].o;
+    for(int i=1;i<=k;i++){
+        for(int j:lvl[i]){
+            if(!dfs(j)){
+                if(i-1==0)cout<<-1;
+                else cout<<i-1;
+                return 0;
             }
         }
     }
-    cout << ans;
+    cout<<k;
+    return 0;
+
     return 0;
 }
