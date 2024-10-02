@@ -42,7 +42,7 @@ int main()
         cin>>g;
         lvl[g].push_back(i);
         int c;
-        cin >>c;
+        cin >> c;
         while(c--){
             int u;cin>>u;
             adjL[i].push_back(u);
@@ -57,7 +57,7 @@ int main()
                 if(i-1==0) cout << -1;
                 else cout << i-1;
                 return 0;
-            }
+            } 
         }
     }
     cout << k;
