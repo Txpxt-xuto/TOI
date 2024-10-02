@@ -43,7 +43,8 @@ int main()
         lvl[g].push_back(i);
         int c;
         cin >> c;
-        while(c--){
+        while(c--)
+        {
             int u;cin>>u;
             adjL[i].push_back(u);
         }
