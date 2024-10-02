@@ -8,18 +8,13 @@ CENTER: Home
 using namespace std;
 typedef long long ii;
 
-/*
-Construct graph : u->v means need to build v before u.
-                  DFS from u in x level to all node that need to be build first.
-                  If found cycle -> can't build u. -> can't build level x;
-*/
+
 ii n,k,t;
 vector<ii> adjL[(int)2e5+1];
 vector<ii> lvl[(int)1e4+1];
-
 int visited[(int)2e5+1]={0};
-
-bool dfs(int x){
+bool dfs(int x)
+{
     if(visited[x]==1) return 0;
     if(visited[x]==2) return 1;
     t--;
