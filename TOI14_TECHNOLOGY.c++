@@ -20,7 +20,7 @@ vector<ii> lvl[(int)1e4+1];
 int visited[(int)2e5+1]={0};
 
 bool dfs(int x){
-    if(visited[x]==1)return 0;
+    if(visited[x]==1) return 0;
     if(visited[x]==2) return 1;
     t--;
     visited[x] = 1;
