@@ -20,7 +20,7 @@ signed main()
         scanf("%d %d %d",&m,&n,&t);
 		for(i,j;t--;)
         {
-            scanf("%d %d", &i, &j);
+            scanf("%d %d",&i,&j);
             qs[i][j] = 1;
         }
 		for(int i = 0; i<m; ++i)
