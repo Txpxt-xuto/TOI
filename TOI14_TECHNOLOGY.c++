@@ -24,7 +24,8 @@ signed main()
 			}
 		}
 		bool ch = false;
-		for(int k = min(m, n); k; --k){
+		for(int k = min(m, n); k; --k)
+        {
 			for(i = k-1; i<m; ++i){
 				for(j = k-1; j<n; ++j)
                 {
