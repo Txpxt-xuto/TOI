@@ -53,7 +53,6 @@ int main()
     }
 
     for(int j = 1; j <= n; j++){
-        //printf("%d ", dp[m][j]);
         h = max(h, dp[m][j]);
     }
     for(int j = 1; j <= n; j++){
