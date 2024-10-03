@@ -17,7 +17,10 @@ signed main()
     {
 		memset(qs, 0, sizeof(qs));
 		int m, n, t; scanf("%d %d %d", &m, &n, &t);
-		for(int i, j; t--; ){scanf("%d %d", &i, &j); qs[i][j] = 1;}
+		for(int i, j; t--; )
+        {scanf("%d %d", &i, &j);
+        qs[i][j] = 1;
+        }
 		for(int i = 0; i<m; ++i)
         {
 			for(j=0;j<n;++j) qs[i][j] += f(i-1, j) + f(i, j-1) - f(i-1, j-1);
