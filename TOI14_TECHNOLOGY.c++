@@ -18,8 +18,9 @@ signed main()
 		memset(qs, 0, sizeof(qs));
 		int m, n, t; scanf("%d %d %d", &m, &n, &t);
 		for(int i, j; t--; )
-        {scanf("%d %d", &i, &j);
-        qs[i][j] = 1;
+        {
+            scanf("%d %d", &i, &j);
+            qs[i][j] = 1;
         }
 		for(int i = 0; i<m; ++i)
         {
