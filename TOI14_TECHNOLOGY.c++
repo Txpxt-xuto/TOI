@@ -26,7 +26,7 @@ signed main(){
 				for(int j = k-1; j<n; ++j){
 					int outer = f(i, j) - f(i-k, j) - f(i, j-k) + f(i-k, j-k);
 					int inner = f(i-1, j-1) - f(i-k+1, j-1) - f(i-1, j-k+1) + f(i-k+1, j-k+1);
-					if(outer == inner){printf("%d\n", k); ch = true; break;}
+					if(outer == inner){ printf("%d\n", k); ch = true; break;}
 				}
 				if(ch) break;
 			}
