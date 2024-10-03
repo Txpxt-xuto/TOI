@@ -12,8 +12,9 @@ int dp[1005][1005];
 int way[1005][1005];
 int main()
 {
-    scanf("%d %d", &m, &n);
-    for(int i = 1; i <= m; i++)
+    int i,j;
+    scanf("%d %d",&m,&n);
+    for(i=1;i<=m;i++)
     {
         for(j=1;j<=n;j++)
         {
