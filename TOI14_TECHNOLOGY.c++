@@ -56,9 +56,9 @@ int main()
     {
         h = max(h, dp[m][j]);
     }
-    for(int j = 1; j <= n; j++)
+    for(int j = 1; j <= n; j++) 
     {
-        if(dp[m][j] == h)
+        if(dp[m][j] == h) cnt += way[m][j];
         {
             cnt += way[m][j];
         }
