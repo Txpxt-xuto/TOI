@@ -21,9 +21,6 @@ signed main()
 		for(int i = 0; i<m; ++i)
         {
 			for(j=0;j<n;++j) qs[i][j] += f(i-1, j) + f(i, j-1) - f(i-1, j-1);
-            {
-				qs[i][j] += f(i-1, j) + f(i, j-1) - f(i-1, j-1);
-			}
 		}
 		bool ch = false;
 		for(k=min(m, n);k;--k)
