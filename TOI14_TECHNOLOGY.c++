@@ -12,8 +12,9 @@ int qs[500][500];
 inline int f(int i, int j){if(i>=0 && j>=0) return qs[i][j]; return 0;}
 signed main()
 {
-    รืะ รม่ว
-	for(int tc = 0; tc<2; ++tc){
+    int i,j;
+	for(int tc = 0; tc<2; ++tc)
+    {
 		memset(qs, 0, sizeof(qs));
 		int m, n, t; scanf("%d %d %d", &m, &n, &t);
 		for(int i, j; t--; ){scanf("%d %d", &i, &j); qs[i][j] = 1;}
