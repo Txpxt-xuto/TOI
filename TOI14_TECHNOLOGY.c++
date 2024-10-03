@@ -20,7 +20,8 @@ int main()
     for(int i = 1; i <= m; i++){
         for(int j = 1; j <= n; j++){
             scanf("%d", &hive[i][j]);
-            if(i == 1){
+            if(i == 1)
+            {
                 for(j=1;j<=n;j++)
                 {
                     dp[1][j] = hive[i][j];
