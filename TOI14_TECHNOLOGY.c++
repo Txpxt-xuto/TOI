@@ -53,10 +53,6 @@ int main()
     }
 
     for(j=1;j<=n;j++) h = max(h, dp[m][j]);
-    }
-    {
-        h = max(h, dp[m][j]);
-    }
     for(j=1;j<=n;j++) if(dp[m][j] == h) cnt += way[m][j];
     printf("%d %d",h,cnt);
     return 0;
