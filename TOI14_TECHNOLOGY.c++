@@ -27,7 +27,6 @@ int main()
                 }
                 continue;
             }
-
             if(i%2)
             {
                 dp[i][j] = max(dp[i-1][j-1], dp[i-1][j]);
