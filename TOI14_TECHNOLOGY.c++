@@ -10,7 +10,9 @@ CENTER: Home
 using namespace std;
 int qs[500][500];
 inline int f(int i, int j){if(i>=0 && j>=0) return qs[i][j]; return 0;}
-signed main(){
+signed main()
+{
+    รืะ รม่ว
 	for(int tc = 0; tc<2; ++tc){
 		memset(qs, 0, sizeof(qs));
 		int m, n, t; scanf("%d %d %d", &m, &n, &t);
