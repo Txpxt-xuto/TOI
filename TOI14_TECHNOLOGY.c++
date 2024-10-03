@@ -31,7 +31,7 @@ signed main(){
                         printf("%d\n", k);
                         ch = true;
                         break;
-                        }
+                    }
 				}
 				if(ch) break;
 			}
