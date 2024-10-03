@@ -21,7 +21,7 @@ int main()
         for(int j = 1; j <= n; j++){
             scanf("%d", &hive[i][j]);
             if(i == 1){
-                for(int j = 1; j <= n; j++)
+                for(j=1;j<=n;j++)
                 {
                     dp[1][j] = hive[i][j];
                     way[i][j] = 1;
