@@ -18,7 +18,8 @@ int main()
 
 
     for(int i = 1; i <= m; i++){
-        for(int j = 1; j <= n; j++){
+        for(int j = 1; j <= n; j++)
+        {
             scanf("%d", &hive[i][j]);
             if(i == 1)
             {
