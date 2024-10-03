@@ -29,7 +29,8 @@ signed main(){
 					if(outer == inner)
                     {
                         printf("%d\n", k);
-                        ch = true; break;
+                        ch = true;
+                        break;
                         }
 				}
 				if(ch) break;
