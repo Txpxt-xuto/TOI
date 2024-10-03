@@ -39,11 +39,14 @@ int main()
             }
             else{
                 dp[i][j] = max(dp[i-1][j], dp[i-1][j+1]);
-                if(dp[i][j] == dp[i-1][j]){
+                if(dp[i][j] == dp[i-1][j])
+                {
                     way[i][j] += way[i-1][j];
                 }
-                if(dp[i][j] == dp[i-1][j+1]){
-                    way[i][j] += way[i-1][j+1];
+                if(dp[i][j] == dp[i-1][j+1])
+                {
+                    h = max(h, dp[m][j]);
+    }
                 }
             }
             dp[i][j] += hive[i][j];
