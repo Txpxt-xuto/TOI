@@ -17,7 +17,7 @@ signed main()
     {
 		memset(qs, 0, sizeof(qs));
 		int m, n, t; scanf("%d %d %d", &m, &n, &t);
-		for(i,j;t--;)
+		for(int i, j; t--;)
         {
             scanf("%d %d", &i, &j);
             qs[i][j] = 1;
@@ -38,7 +38,7 @@ signed main()
 					if(outer == inner)
                     {
                         printf("%d\n", k);
-                        ch = true
+                        ch = true;
                         break;
                     }
 				}
