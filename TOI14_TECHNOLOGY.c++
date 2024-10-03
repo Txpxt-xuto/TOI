@@ -16,7 +16,8 @@ signed main()
 	for(tc = 0; tc<2; ++tc)
     {
 		memset(qs, 0, sizeof(qs));
-		int m, n, t; scanf("%d %d %d", &m, &n, &t);
+		int m, n, t;
+        scanf("%d %d %d",&m, &n, &t);
 		for(i,j;t--;)
         {
             scanf("%d %d", &i, &j);
