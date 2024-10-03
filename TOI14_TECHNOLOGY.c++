@@ -58,10 +58,6 @@ int main()
     }
     for(int j = 1; j <= n; j++) if(dp[m][j] == h) cnt += way[m][j];
     {
-        if(dp[m][j] == h) cnt += way[m][j];
-        {
-            cnt += way[m][j];
-        }
     }
     printf("%d %d", h, cnt);
     return 0;
