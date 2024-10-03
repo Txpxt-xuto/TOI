@@ -58,7 +58,8 @@ int main()
     }
     for(int j = 1; j <= n; j++)
     {
-        if(dp[m][j] == h){
+        if(dp[m][j] == h)
+        {
             cnt += way[m][j];
         }
     }
