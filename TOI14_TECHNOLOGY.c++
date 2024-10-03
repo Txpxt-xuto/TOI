@@ -33,11 +33,13 @@ int main()
                 if(dp[i][j] == dp[i-1][j-1]){
                     way[i][j] += way[i-1][j-1];
                 }
-                if(dp[i][j] == dp[i-1][j]){
+                if(dp[i][j] == dp[i-1][j])
+                {
                     way[i][j] += way[i-1][j];
                 }
             }
-            else{
+            else
+            {
                 dp[i][j] = max(dp[i-1][j], dp[i-1][j+1]);
                 if(dp[i][j] == dp[i-1][j]) way[i][j] += way[i-1][j];
                 if(dp[i][j] == dp[i-1][j+1]) way[i][j] += way[i-1][j+1];
