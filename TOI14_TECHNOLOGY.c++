@@ -52,7 +52,8 @@ int main()
 
     }
 
-    for(j=1;j<=n;j++)
+    for(j=1;j<=n;j++) h = max(h, dp[m][j]);
+    }
     {
         h = max(h, dp[m][j]);
     }
