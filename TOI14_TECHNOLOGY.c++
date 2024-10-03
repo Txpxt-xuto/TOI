@@ -37,7 +37,7 @@ signed main()
 					int inner = f(i-1, j-1) - f(i-k+1, j-1) - f(i-1, j-k+1) + f(i-k+1, j-k+1);
 					if(outer == inner)
                     {
-                        printf("%d\n", k);
+                        printf("%d\n",k);
                         ch = true;
                         break;
                     }
