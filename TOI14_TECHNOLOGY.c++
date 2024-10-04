@@ -44,7 +44,8 @@ int32_t main() {
         int oil = pq.top().S.F;
         int coupon = pq.top().S.S;
         pq.pop();
-        if(oil<f && coupon && dist[city][f][0] > money){
+        if(oil<f && coupon && dist[city][f][0] > money)
+        {
             pq.push({{money,city},{f,0}});
             dist[city][f][0] = money;
         }
