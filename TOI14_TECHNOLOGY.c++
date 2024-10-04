@@ -155,7 +155,6 @@ int main()
         V[a].push_back({b,w});
         V[b].push_back({a,w});
     }
-
     STP();
     cout << min(dis[d][f][1],dis[d][f][0]);
     return 0;
