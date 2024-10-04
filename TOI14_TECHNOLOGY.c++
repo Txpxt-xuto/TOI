@@ -123,19 +123,14 @@ void STP()
         // Normally Fill Fuel
         if(fuel != f && dis[en][fuel+1][used] > dis[en][fuel][used] + P[en])
             pq.push({en, dis[en][fuel+1][used] = dis[en][fuel][used] + P[en], fuel+1, used});
-
-        // Use free ticket
         if(!used && dis[en][f][1] > dis[en][fuel][used])
             pq.push({en, dis[en][f][1] = dis[en][fuel][used], f, 1});
-
-        // Travel
         for(auto [to,w2] : V[en])
             if(fuel >= w2)
                 if(dis[to][fuel-w2][used] >= dis[en][fuel][used])
                     pq.push({to, dis[to][fuel-w2][used] = dis[en][fuel][used], fuel-w2, used});
     }
 }
-
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
