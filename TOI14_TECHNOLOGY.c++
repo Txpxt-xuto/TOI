@@ -119,8 +119,6 @@ void STP()
         dis[en][fuel][used] = w;
 
         if(fuel == f && en == d) continue;
-
-        // Normally Fill Fuel
         if(fuel != f && dis[en][fuel+1][used] > dis[en][fuel][used] + P[en])
             pq.push({en, dis[en][fuel+1][used] = dis[en][fuel][used] + P[en], fuel+1, used});
         if(!used && dis[en][f][1] > dis[en][fuel][used])
