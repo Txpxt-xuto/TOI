@@ -70,3 +70,96 @@ int32_t main()
     cout << min(dist[d][f][0],dist[d][f][1]);
     return 0;
 }
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ty long long
+#define N 101
+
+ty b,c,d,e,f,g,h,i,j,k,l,m,a,x,z,y,n,o,p,q,r,s,t,u,v,w;
+
+struct way
+{
+    ty en, w, fuel;
+    bool is_used;
+    bool operator<(const way &x) const
+    {
+        return w > x.w;
+    }
+};
+
+struct edge
+{
+    ty en, w;
+    bool operator<(const edge &x) const
+    {
+        return w > x.w;
+    }
+};
+
+ty P[N];
+ty dis[N][N][2];
+vector<edge> V[N];
+bitset<2> mark[N][N];
+
+void STP()
+{
+    priority_queue<way> pq;
+
+    dis[s][0][0] = 0;
+    pq.push({s,0,0,0});
+    while(pq.size())
+    {
+        auto [en,w,fuel,used] = pq.top();
+        pq.pop();
+
+        if(mark[en][fuel][used]) continue;
+        mark[en][fuel][used] = 1;
+
+        dis[en][fuel][used] = w;
+
+        if(fuel == f && en == d) continue;
+
+        // Normally Fill Fuel
+        if(fuel != f && dis[en][fuel+1][used] > dis[en][fuel][used] + P[en])
+            pq.push({en, dis[en][fuel+1][used] = dis[en][fuel][used] + P[en], fuel+1, used});
+
+        // Use free ticket
+        if(!used && dis[en][f][1] > dis[en][fuel][used])
+            pq.push({en, dis[en][f][1] = dis[en][fuel][used], f, 1});
+
+        // Travel
+        for(auto [to,w2] : V[en])
+            if(fuel >= w2)
+                if(dis[to][fuel-w2][used] >= dis[en][fuel][used])
+                    pq.push({to, dis[to][fuel-w2][used] = dis[en][fuel][used], fuel-w2, used});
+    }
+}
+
+int main()
+{
+    cin.tie(0)->sync_with_stdio(0);
+
+    cin >> n;
+
+    fill_n(dis[0][0],N*N*2,LLONG_MAX);
+
+    while(i++<n) cin >> P[i];
+
+    cin >> s >> d >> f;
+
+    cin >> m;
+    while(m--)
+    {
+        cin >> a >> b >> w;
+        V[a].push_back({b,w});
+        V[b].push_back({a,w});
+    }
+
+    STP();
+
+    cout << min(dis[d][f][1],dis[d][f][0]);
+
+
+    return 0;
+}
