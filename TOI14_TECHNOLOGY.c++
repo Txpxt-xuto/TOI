@@ -38,7 +38,8 @@ int32_t main() {
     priority_queue<pair<pii,pii>,vector<pair<pii,pii>>,greater<pair<pii,pii>>> pq;
     pq.push({{0,s},{0,1}});
     dist[s][0][1] = 0;
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         int city = pq.top().F.S;
         int money = pq.top().F.F;
         int oil = pq.top().S.F;
