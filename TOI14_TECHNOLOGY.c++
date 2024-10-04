@@ -23,7 +23,8 @@ int32_t main() {
     fast;
     int n;cin >> n;
     vector<int> p(n);
-    for(int &i:p){
+    for(int &i:p) cin >> i;
+    {
         cin >> i;
     }
     int s,d,f;
