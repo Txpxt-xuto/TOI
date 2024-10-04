@@ -5,7 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <bits/stdc++.h>
-
 #define pb push_back
 #define ist insert
 #define all(x) x.begin(), x.end()
