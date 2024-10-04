@@ -112,7 +112,6 @@ void STP()
     {
         auto [en,w,fuel,used] = pq.top();
         pq.pop();
-
         if(mark[en][fuel][used]) continue;
         mark[en][fuel][used] = 1;
         dis[en][fuel][used] = w;
