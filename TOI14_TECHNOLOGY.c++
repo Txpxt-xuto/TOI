@@ -29,7 +29,8 @@ int32_t main() {
     int s,d,f;cin >> s >> d >> f;
     int m;cin >> m;
     vector<pii> adj[n+1];
-    while(m--){
+    while(m--)
+    {
         int a,b,w;cin >> a >> b >> w;
         adj[a].pb({b,w});
         adj[b].pb({a,w});
