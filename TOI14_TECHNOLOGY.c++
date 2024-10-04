@@ -52,7 +52,8 @@ int32_t main() {
             pq.push({{money+p[city-1],city},{oil+1,coupon}});
             dist[city][oil+1][coupon] = money+p[city-1];
         }
-        for(auto it:adj[city]){
+        for(auto it:adj[city])
+        {
             int destination = it.F;
             int weight = it.S;
             if(oil>=weight && dist[destination][oil-weight][coupon] > money){
