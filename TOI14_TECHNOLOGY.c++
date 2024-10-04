@@ -24,9 +24,6 @@ int32_t main() {
     int n;cin >> n;
     vector<int> p(n);
     for(int &i:p) cin >> i;
-    {
-        cin >> i;
-    }
     int s,d,f;
     cin >> s >> d >> f;
     int m;
