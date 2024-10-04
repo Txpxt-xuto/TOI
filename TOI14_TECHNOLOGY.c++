@@ -26,7 +26,8 @@ int32_t main() {
     for(int &i:p){
         cin >> i;
     }
-    int s,d,f;cin >> s >> d >> f;
+    int s,d,f;
+    cin >> s >> d >> f;
     int m;
     cin >> m;
     vector<pii> adj[n+1];
