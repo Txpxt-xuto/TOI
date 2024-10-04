@@ -143,7 +143,6 @@ int main()
     cin >> n;
 
     fill_n(dis[0][0],N*N*2,LLONG_MAX);
-
     while(i++<n) cin >> P[i];
     cin >> s >> d >> f;
     cin >> m;
