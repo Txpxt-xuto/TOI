@@ -105,7 +105,6 @@ bitset<2> mark[N][N];
 void STP()
 {
     priority_queue<way> pq;
-
     dis[s][0][0] = 0;
     pq.push({s,0,0,0});
     while(pq.size())
