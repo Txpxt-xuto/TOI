@@ -139,9 +139,7 @@ void STP()
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
-
     cin >> n;
-
     fill_n(dis[0][0],N*N*2,LLONG_MAX);
     while(i++<n) cin >> P[i];
     cin >> s >> d >> f;
