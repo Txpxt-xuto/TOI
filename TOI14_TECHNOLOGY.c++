@@ -31,7 +31,8 @@ int32_t main() {
     vector<pii> adj[n+1];
     while(m--)
     {
-        int a,b,w;cin >> a >> b >> w;
+        int a,b,w;
+        cin >> a >> b >> w;
         adj[a].pb({b,w});
         adj[b].pb({a,w});
     }
