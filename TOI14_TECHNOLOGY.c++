@@ -48,7 +48,8 @@ int32_t main() {
             pq.push({{money,city},{f,0}});
             dist[city][f][0] = money;
         }
-        if(oil+1<=f && dist[city][oil+1][coupon]>money+p[city-1]){
+        if(oil+1<=f && dist[city][oil+1][coupon]>money+p[city-1])
+        {
             pq.push({{money+p[city-1],city},{oil+1,coupon}});
             dist[city][oil+1][coupon] = money+p[city-1];
         }
