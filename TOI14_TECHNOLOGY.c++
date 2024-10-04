@@ -119,14 +119,9 @@ void STP()
         dis[en][fuel][used] = w;
 
         if(fuel == f && en == d) continue;
-        if(fuel != f && dis[en][fuel+1][used] > dis[en][fuel][used] + P[en])
-            pq.push({en, dis[en][fuel+1][used] = dis[en][fuel][used] + P[en], fuel+1, used});
-        if(!used && dis[en][f][1] > dis[en][fuel][used])
-            pq.push({en, dis[en][f][1] = dis[en][fuel][used], f, 1});
-        for(auto [to,w2] : V[en])
-            if(fuel >= w2)
-                if(dis[to][fuel-w2][used] >= dis[en][fuel][used])
-                    pq.push({to, dis[to][fuel-w2][used] = dis[en][fuel][used], fuel-w2, used});
+        if(fuel != f && dis[en][fuel+1][used] > dis[en][fuel][used] + P[en]) pq.push({en, dis[en][fuel+1][used] = dis[en][fuel][used] + P[en], fuel+1, used});
+        if(!used && dis[en][f][1] > dis[en][fuel][used]) pq.push({en, dis[en][f][1] = dis[en][fuel][used], f, 1});
+        for(auto [to,w2] : V[en]) if(dis[to][fuel-w2][used] >= dis[en][fuel][used]) pq.push({to, dis[to][fuel-w2][used] = dis[en][fuel][used], fuel-w2, used});
     }
 }
 int main()
