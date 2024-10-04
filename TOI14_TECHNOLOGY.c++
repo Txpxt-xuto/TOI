@@ -72,12 +72,9 @@ int32_t main()
 }
 #include <bits/stdc++.h>
 using namespace std;
-
 #define ty long long
 #define N 101
-
 ty b,c,d,e,f,g,h,i,j,k,l,m,a,x,z,y,n,o,p,q,r,s,t,u,v,w;
-
 struct way
 {
     ty en, w, fuel;
@@ -87,7 +84,6 @@ struct way
         return w > x.w;
     }
 };
-
 struct edge
 {
     ty en, w;
@@ -96,12 +92,10 @@ struct edge
         return w > x.w;
     }
 };
-
 ty P[N];
 ty dis[N][N][2];
 vector<edge> V[N];
 bitset<2> mark[N][N];
-
 void STP()
 {
     priority_queue<way> pq;
