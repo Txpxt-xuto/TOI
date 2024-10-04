@@ -27,7 +27,8 @@ int32_t main() {
         cin >> i;
     }
     int s,d,f;cin >> s >> d >> f;
-    int m;cin >> m;
+    int m;
+    cin >> m;
     vector<pii> adj[n+1];
     while(m--)
     {
