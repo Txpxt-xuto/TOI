@@ -56,7 +56,8 @@ int32_t main() {
         {
             int destination = it.F;
             int weight = it.S;
-            if(oil>=weight && dist[destination][oil-weight][coupon] > money){
+            if(oil>=weight && dist[destination][oil-weight][coupon] > money)
+            {
                 dist[destination][oil-weight][coupon] = money;
                 pq.push({{money,destination},{oil-weight,coupon}});
             }
