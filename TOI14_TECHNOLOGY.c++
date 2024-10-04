@@ -70,7 +70,6 @@ int32_t main()
     cout << min(dist[d][f][0],dist[d][f][1]);
     return 0;
 }
-#include <bits/stdc++.h>
 using namespace std;
 #define ty long long
 #define N 101
