@@ -159,7 +159,5 @@ int main()
     STP();
 
     cout << min(dis[d][f][1],dis[d][f][0]);
-
-
     return 0;
 }
