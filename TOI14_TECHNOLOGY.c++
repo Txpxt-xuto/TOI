@@ -19,7 +19,8 @@ CENTER: Home
 
 using namespace std;
 
-int32_t main() {
+int32_t main()
+{
     fast;
     int n;cin >> n;
     vector<int> p(n);
