@@ -115,9 +115,7 @@ void STP()
 
         if(mark[en][fuel][used]) continue;
         mark[en][fuel][used] = 1;
-
         dis[en][fuel][used] = w;
-
         if(fuel == f && en == d) continue;
         if(fuel != f && dis[en][fuel+1][used] > dis[en][fuel][used] + P[en]) pq.push({en, dis[en][fuel+1][used] = dis[en][fuel][used] + P[en], fuel+1, used});
         if(!used && dis[en][f][1] > dis[en][fuel][used]) pq.push({en, dis[en][f][1] = dis[en][fuel][used], f, 1});
