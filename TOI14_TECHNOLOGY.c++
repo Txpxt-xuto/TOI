@@ -13,7 +13,8 @@ ll check(ll mid){
     for(int i=0;i<m;++i) work += mid/t[i];
     return work >= n;
 }
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cin >> m >> n;
