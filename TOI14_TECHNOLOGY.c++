@@ -11,7 +11,8 @@ ll t[1000001],m,n;
 ll check(ll mid)
 {
     ll work = 0;
-    for(int i=0;i<m;++i) work += mid/t[i];
+    int i;
+    for(i=0;i<m;++i) work += mid/t[i];
     return work >= n;
 }
 int main()
