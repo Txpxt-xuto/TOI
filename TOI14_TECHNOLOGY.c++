@@ -13,7 +13,7 @@ int main() {
   for (int i = 1; i <= m; i++) {
     scanf("%lld", &pw[i]);
   }
-  long long l = 1, r = 1000000LL * n;
+    long long l = 1, r = 1000000LL * n;
     while (l < r) {
     long long mid = (l + r) / 2;
     long long all = 0;
