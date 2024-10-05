@@ -17,10 +17,7 @@ int main() {
   while (l < r) {
     long long mid = (l + r) / 2;
     long long all = 0;
-    for(i = 1; i <= m; i++)
-    {
-      all += mid / pw[i];
-    }
+    for(i = 1; i <= m; i++) all += mid / pw[i];
     if (all >= n)
       r = mid;
     else
