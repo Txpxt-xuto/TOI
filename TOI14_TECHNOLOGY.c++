@@ -5,7 +5,6 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <bits/stdc++.h>
-
 using namespace std;
 long long n, m;
 long long pw[1000100];
@@ -18,7 +17,8 @@ int main() {
   while (l < r) {
     long long mid = (l + r) / 2;
     long long all = 0;
-    for (int i = 1; i <= m; i++) {
+    for(i = 1; i <= m; i++)
+    {
       all += mid / pw[i];
     }
     if (all >= n)
