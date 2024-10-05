@@ -14,9 +14,11 @@ ll check(ll mid){
     return work >= n;
 }
 int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     cin >> m >> n;
-    for(int i=0;i<m;++i) cin >> t[i];
+    int i;
+    for(i=0;i<m;++i) cin >> t[i];
     ll lo = 0,hi = (ll)1e12+1;
     while(lo<hi)
     {
