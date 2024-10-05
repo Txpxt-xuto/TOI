@@ -8,7 +8,8 @@ CENTER: Home
 #define ll long long
 using namespace std;
 ll t[1000001],m,n;
-ll check(ll mid){
+ll check(ll mid)
+{
     ll work = 0;
     for(int i=0;i<m;++i) work += mid/t[i];
     return work >= n;
