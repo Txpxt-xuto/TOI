@@ -14,7 +14,8 @@ int main() {
     scanf("%lld", &pw[i]);
   }
     long long l = 1, r = 1000000LL * n;
-    while(l < r) {
+    while(l < r)
+    {
     long long mid = (l + r) / 2;
     long long all = 0;
     for(i = 1; i <= m; i++) all += mid / pw[i];
