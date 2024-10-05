@@ -18,7 +18,8 @@ int main(){
     cin >> m >> n;
     for(int i=0;i<m;++i) cin >> t[i];
     ll lo = 0,hi = (ll)1e12+1;
-    while(lo<hi){
+    while(lo<hi)
+    {
         ll mid = (lo+hi)/2;
         if(check(mid)) hi = mid;
         else lo = mid+1;
