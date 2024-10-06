@@ -58,7 +58,8 @@ signed main()
     int m = a.length(), n = b.length();
     while(k--)
     {
-		cin>>s; memset(dp, false, sizeof(dp));
+		cin>>s;
+        memset(dp, false, sizeof(dp));
 		dp[0][0] = true;
 		for(int i = 0; i<=m; ++i){
 			for(int j = 0; j<=n; ++j)
