@@ -45,3 +45,23 @@ int main(int argc, char* argv[])
 	}
 	return 0;
 }
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+string a, b, s;
+bool dp[1005][1005];
+signed main(){
+	int k; cin>>a>>b>>k; int m = a.length(), n = b.length();	while(k--){
+		cin>>s; memset(dp, false, sizeof(dp));
+		dp[0][0] = true;
+		for(int i = 0; i<=m; ++i){
+			for(int j = 0; j<=n; ++j){
+				if(i && s[i+j-1] == a[i-1]) dp[i][j] |= dp[i-1][j];
+				if(j && s[i+j-1] == b[j-1]) dp[i][j] |= dp[i][j-1];
+			}
+		}
+		if(dp[m][n]) puts("Yes");
+		else puts("No");
+	}
+}
