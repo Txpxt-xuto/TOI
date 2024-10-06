@@ -61,7 +61,8 @@ signed main()
 		cin >> s;
         memset(dp,false,sizeof(dp));
 		dp[0][0] = true;
-		for(i=0;i<=m;++i){
+		for(i=0;i<=m;++i)
+        {
 			for(j=0;j<=n;++j)
             {
 				if(i && s[i+j-1] == a[i-1]) dp[i][j] |= dp[i-1][j];
