@@ -53,7 +53,8 @@ string a, b, s;
 bool dp[1005][1005];
 signed main()
 {
-	int k; cin>>a>>b>>k; int m = a.length(), n = b.length();	while(k--){
+	int k;
+    cin>>a>>b>>k; int m = a.length(), n = b.length();	while(k--){
 		cin>>s; memset(dp, false, sizeof(dp));
 		dp[0][0] = true;
 		for(int i = 0; i<=m; ++i){
