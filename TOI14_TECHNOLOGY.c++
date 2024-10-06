@@ -51,7 +51,8 @@ int main(int argc, char* argv[])
 using namespace std;
 string a, b, s;
 bool dp[1005][1005];
-signed main(){
+signed main()
+{
 	int k; cin>>a>>b>>k; int m = a.length(), n = b.length();	while(k--){
 		cin>>s; memset(dp, false, sizeof(dp));
 		dp[0][0] = true;
