@@ -54,7 +54,7 @@ bool dp[1005][1005];
 signed main()
 {
 	int k;
-    cin>>a>>b>>k;
+    cin >> a >> b >> k;
     int m = a.length(), n = b.length();
     while(k--)
     {
