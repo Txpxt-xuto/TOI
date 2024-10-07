@@ -30,7 +30,7 @@ int32_t main(){
     priority_queue<A> pq;
     pq.push({s,0,0,0});
     memset(dist,0x3f,sizeof dist);
-    dist[s][0][0]=0;
+    dist[s][0][0] = 0;
     int m;
     cin >> m;
     while(m--)
