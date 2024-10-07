@@ -39,7 +39,8 @@ int32_t main(){
         adj[a].push_back({b,w});
         adj[b].push_back({a,w});
     }
-    while(!pq.empty()){
+    while(!pq.empty())
+	{
         int u = pq.top().u;
         int cf = pq.top().f;
         int w = pq.top().w;
