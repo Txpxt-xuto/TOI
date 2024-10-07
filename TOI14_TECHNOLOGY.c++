@@ -60,7 +60,7 @@ int32_t main(){
 		{
             if(i.second<=cf && dist[i.first][free][cf-i.second]>w)
 			{
-                dist[i.first][free][cf-i.second]=w;
+                dist[i.first][free][cf-i.second] = w;
                 pq.push({i.first,cf-i.second,w,free});
             }
         }
