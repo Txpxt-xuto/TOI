@@ -98,9 +98,7 @@ int32_t main(){
     pq.push({st,0,0,0});
     while(!pq.empty()){
         int u=pq.top().u;
-        int cost=pq.top().cost;
         int tick=pq.top().ticket,fuel=pq.top().fuel,cost=pq.top().cost,u=pq.top().u;
-        int fuel=pq.top().fuel;
         pq.pop();
         if(tick==0&&cost<dist[1][mxfuel][u])
 		{
