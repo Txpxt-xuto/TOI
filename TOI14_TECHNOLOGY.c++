@@ -33,7 +33,8 @@ int32_t main(){
     dist[s][0][0]=0;
     int m;
     cin >> m;
-    while(m--){
+    while(m--)
+	{
         int a,b,w;
         cin >> a >> b>>w;
         adj[a].push_back({b,w});
