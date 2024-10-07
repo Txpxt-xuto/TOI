@@ -110,8 +110,9 @@ int32_t main(){
             dist[tick][fuel+1][u]=cost+pc[u];
             pq.push({u,cost+pc[u],fuel+1,tick});
         }
-        for(auto e:adj[u]){
-            if(fuel<e.s)continue;
+        for(auto e:adj[u])
+		{
+            if(fuel<e.s) continue;
             if(cost<dist[tick][fuel-e.s][e.f])
 			{
                 dist[tick][fuel-e.s][e.f] = cost;
