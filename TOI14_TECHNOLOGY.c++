@@ -25,7 +25,7 @@ int32_t main(){
     int s,d,f;
     for(int i=1;i<=n;i++)
 	{
-        cin>> cost[i];
+        cin >> cost[i];
     }
     cin >> s >> d >> f;
     priority_queue<A> pq;
