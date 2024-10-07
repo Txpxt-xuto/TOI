@@ -46,7 +46,8 @@ int32_t main(){
         int free = pq.top().free;
         pq.pop();
         if(dist[u][free][cf]<w)continue;
-        if(free==0 && dist[u][1][f]>w){
+        if(free==0 && dist[u][1][f]>w)
+		{
             dist[u][1][f]=w;
             pq.push({u,f,w,1});
         }
