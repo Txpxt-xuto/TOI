@@ -81,7 +81,8 @@ struct A{
 int pc[110],dist[2][110][110];
 vector<pair<int,int>>adj[110];
 priority_queue<A>pq;
-int32_t main(){
+int32_t main()
+{
     ios_base::sync_with_stdio(false);cin.tie(0);
     int n,i,m,st,ed,mxfuel;
     cin >> n;
