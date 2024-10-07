@@ -21,7 +21,7 @@ int cost[110];
 int32_t main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
-    int n;
+    int n,i;
     cin >> n;
     int s,d,f;
     for(i=1;i<=n;i++) cin >> cost[i];
