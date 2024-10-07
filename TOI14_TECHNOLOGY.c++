@@ -41,10 +41,9 @@ int32_t main(){
     }
     while(!pq.empty())
 	{
-        int u = pq.top().u;
         int w = pq.top().w,cf = pq.top().f,free = pq.top().free,cf = pq.top().f;
         pq.pop();
-        if(dist[u][free][cf] < w)continue;
+        if(dist[u][free][cf] < w) continue;
         if(free == 0 && dist[u][1][f] > w)
 		{
             dist[u][1][f] = w;
