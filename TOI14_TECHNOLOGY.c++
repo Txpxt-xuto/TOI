@@ -36,7 +36,7 @@ int32_t main(){
     while(m--)
 	{
         int a,b,w;
-        cin >> a >> b >>w;
+        cin >> a >> b >> w;
         adj[a].push_back({b,w});
         adj[b].push_back({a,w});
     }
