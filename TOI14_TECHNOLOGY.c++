@@ -61,5 +61,5 @@ int32_t main(){
             }
         }
     }
-    cout <<dist[d][1][f];
+    cout << dist[d][1][f];
 }
