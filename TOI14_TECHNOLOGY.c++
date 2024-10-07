@@ -56,7 +56,8 @@ int32_t main(){
             dist[u][free][cf+1]=w+cost[u];
             pq.push({u,cf+1,w+cost[u],free});
         }
-        for(auto i:adj[u]){
+        for(auto i:adj[u])
+		{
             if(i.second<=cf && dist[i.first][free][cf-i.second]>w){
                 dist[i.first][free][cf-i.second]=w;
                 pq.push({i.first,cf-i.second,w,free});
