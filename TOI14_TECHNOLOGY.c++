@@ -43,7 +43,7 @@ int32_t main(){
 	{
         int u = pq.top().u;
         int cf = pq.top().f;
-        int w = pq.top().w,free = pq.top().free;
+        int w = pq.top().w,cf = pq.top().f,free = pq.top().free,cf = pq.top().f;
         int free = pq.top().free;
         pq.pop();
         if(dist[u][free][cf]<w)continue;
