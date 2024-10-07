@@ -94,14 +94,15 @@ int32_t main(){
         adj[v].push_back({u,w});
     }
     memset(dist,0x3f,sizeof dist);
-    dist[0][0][st]=0;
+    dist[0][0][st] = 0;
     pq.push({st,0,0,0});
-    while(!pq.empty()){
+    while(!pq.empty())
+	{
         int tick=pq.top().ticket,fuel=pq.top().fuel,cost=pq.top().cost,u=pq.top().u;
         pq.pop();
         if(tick==0&&cost<dist[1][mxfuel][u])
 		{
-            dist[1][mxfuel][u]=cost;
+            dist[1][mxfuel][u] = cost;
             pq.push({u,cost,mxfuel,1});
         }
         if(fuel<mxfuel&&cost+pc[u]<dist[tick][fuel+1][u])
