@@ -71,10 +71,10 @@ using namespace std;
 #define f first
 #define s second
 const int MOD=1e9+7;
-
 struct A{
     int u,cost,fuel,ticket;
-    bool operator < (const A& o)const{
+    bool operator < (const A& o)const
+	{
         return cost>o.cost;
     }
 };
