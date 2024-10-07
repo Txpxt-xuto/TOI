@@ -112,8 +112,9 @@ int32_t main(){
         }
         for(auto e:adj[u]){
             if(fuel<e.s)continue;
-            if(cost<dist[tick][fuel-e.s][e.f]){
-                dist[tick][fuel-e.s][e.f]=cost;
+            if(cost<dist[tick][fuel-e.s][e.f])
+			{
+                dist[tick][fuel-e.s][e.f] = cost;
                 pq.push({e.f,cost,fuel-e.s,tick});
             }
         }
