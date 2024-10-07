@@ -51,7 +51,8 @@ int32_t main(){
             dist[u][1][f]=w;
             pq.push({u,f,w,1});
         }
-        if(cf<f && dist[u][free][cf+1]>w+cost[u]){
+        if(cf<f && dist[u][free][cf+1]>w+cost[u])
+		{
             dist[u][free][cf+1]=w+cost[u];
             pq.push({u,cf+1,w+cost[u],free});
         }
