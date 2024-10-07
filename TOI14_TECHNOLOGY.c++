@@ -58,7 +58,7 @@ int32_t main(){
         }
         for(auto i:adj[u])
 		{
-            if(i.second<=cf && dist[i.first][free][cf-i.second]>w)
+            if(i.second <= cf && dist[i.first][free][cf-i.second]>w)
 			{
                 dist[i.first][free][cf-i.second] = w;
                 pq.push({i.first,cf-i.second,w,free});
