@@ -12,12 +12,12 @@ vector<pair<int,int>> adj[110];
 struct A
 {
     int u,f,w,free;
-    bool operator<(const A&o)const{
+    bool operator<(const A&o)const
+	{
         return w>o.w;
     }
 };
 int cost[110];
-
 int32_t main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
