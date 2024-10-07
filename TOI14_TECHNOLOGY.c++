@@ -85,7 +85,7 @@ int32_t main(){
     ios_base::sync_with_stdio(false);cin.tie(0);
     int n,m,st,ed,mxfuel;
     cin >> n;
-    for(int i=1;i<=n;i++)cin >> pc[i];
+    for( i=1;i<=n;i++)cin >> pc[i];
     cin >> st >> ed >> mxfuel >> m;
     for(i=1;i<=m;i++)
 	{
