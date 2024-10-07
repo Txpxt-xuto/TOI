@@ -102,7 +102,8 @@ int32_t main(){
         int tick=pq.top().ticket;
         int fuel=pq.top().fuel;
         pq.pop();
-        if(tick==0&&cost<dist[1][mxfuel][u]){
+        if(tick==0&&cost<dist[1][mxfuel][u])
+		{
             dist[1][mxfuel][u]=cost;
             pq.push({u,cost,mxfuel,1});
         }
