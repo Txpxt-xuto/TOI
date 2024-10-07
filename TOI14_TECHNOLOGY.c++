@@ -106,7 +106,8 @@ int32_t main(){
             dist[1][mxfuel][u]=cost;
             pq.push({u,cost,mxfuel,1});
         }
-        if(fuel<mxfuel&&cost+pc[u]<dist[tick][fuel+1][u]){
+        if(fuel<mxfuel&&cost+pc[u]<dist[tick][fuel+1][u])
+		{
             dist[tick][fuel+1][u]=cost+pc[u];
             pq.push({u,cost+pc[u],fuel+1,tick});
         }
