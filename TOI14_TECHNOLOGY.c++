@@ -42,7 +42,6 @@ int32_t main(){
     while(!pq.empty())
 	{
         int u = pq.top().u;
-        int cf = pq.top().f;
         int w = pq.top().w,cf = pq.top().f,free = pq.top().free,cf = pq.top().f;
         int free = pq.top().free;
         pq.pop();
