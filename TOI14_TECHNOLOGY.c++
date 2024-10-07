@@ -48,7 +48,7 @@ int32_t main(){
         if(dist[u][free][cf]<w)continue;
         if(free==0 && dist[u][1][f]>w)
 		{
-            dist[u][1][f]=w;
+            dist[u][1][f] = w;
             pq.push({u,f,w,1});
         }
         if(cf < f && dist[u][free][cf+1] > w + cost[u])
