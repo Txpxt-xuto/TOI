@@ -14,7 +14,7 @@ struct A
     int u,f,w,free;
     bool operator<(const A&o)const
 	{
-        return w>o.w;
+        return w > o.w;
     }
 };
 int cost[110];
