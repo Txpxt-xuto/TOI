@@ -23,7 +23,7 @@ int32_t main(){
     int n;
     cin >> n;
     int s,d,f;
-    for(int i=1;i<=n;i++)  cin >> cost[i];
+    for(int i=1;i<=n;i++) cin >> cost[i];
 	{
         cin >> cost[i];
     }
