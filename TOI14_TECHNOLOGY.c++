@@ -87,7 +87,8 @@ int32_t main(){
     cin >> n;
     for(int i=1;i<=n;i++)cin >> pc[i];
     cin >> st >> ed >> mxfuel >> m;
-    for(int i=1;i<=m;i++){
+    for(i=1;i<=m;i++)
+	{
         int u,v,w;
         cin >> u >> v >> w;
         adj[u].push_back({v,w});
