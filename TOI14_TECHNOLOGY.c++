@@ -125,3 +125,35 @@ int32_t main()
     cout << dist[1][mxfuel][ed];
     return 0;
 }
+#include<bits/stdc++.h>
+using namespace std;
+int const X=15001;
+struct fenwick{
+    int a[X][X];
+    void upd(int st,int en)
+    {
+        for(int i=st;i<X;i+=i&-i)for(int j=en;j>0;j-=j&-j)a[i][j]++;
+    }
+    int qr(int st,int en)
+    {
+        int ret=0;
+        for(int i=st;i>0;i-=i&-i)for(int j=en;j<X;j+=j&-j)ret+=a[i][j];
+        return ret;
+    }
+}tree;
+
+signed main()
+{
+    cin.tie(nullptr)->sync_with_stdio(false);
+    int n;
+    cin>>n;
+    while(n--)
+    {
+        int a,b;
+        cin>>a>>b;
+        int p1=a-b+5000,p2=a+b+5000;
+        cout<<tree.qr(p1,p2)<<"\n";
+        tree.upd(p1,p2);
+    }
+    return 0;
+}
