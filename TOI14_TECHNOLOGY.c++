@@ -161,7 +161,8 @@ signed main()
 using namespace std;
 struct fenwick{
     int info[15004][15004]{0};
-    void upd(int x,int y){
+    void upd(int x,int y)
+    {
         for(i=x;i<=15000;i+=i&-i)
         {
             for(j=y;j<=15000;j+=j&-j)
