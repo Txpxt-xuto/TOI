@@ -237,7 +237,7 @@ int main(){
     ios_base::sync_with_stdio(0), cin.tie(0);
     int n, m, k, num;
     cin >> n >> m >> k;
-    for (int i = 0; i < m; i++)
+    for(i=0;i<m;i++)
     {
         cin >> num;
         canvas_pos[i] = num;
