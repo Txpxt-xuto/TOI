@@ -128,7 +128,8 @@ int32_t main()
 #include<bits/stdc++.h>
 using namespace std;
 int const X=15001;
-struct fenwick{
+struct fenwick
+{
     int a[X][X];
     void upd(int st,int en)
     {
