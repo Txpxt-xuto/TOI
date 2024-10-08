@@ -136,8 +136,8 @@ struct fenwick{
     }
     int qr(int st,int en)
     {
-        int ret=0;
-        for(i=st;i>0;i-=i&-i) for(j=en;j<X;j+=j&-j)ret+=a[i][j];
+        int i,j,ret=0;
+        for(i=st;i>0;i-=i&-i) for(j=en;j<X;j+=j&-j) ret+=a[i][j];
         return ret;
     }
 }tree;
