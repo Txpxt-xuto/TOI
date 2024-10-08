@@ -201,3 +201,25 @@ int main()
         fw.upd(l+5000,r+5000);
     }
 }
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    cin.tie(NULL)->sync_with_stdio(false);
+    int n,m,k;cin>>n>>m>>k;
+    int ans=0;
+    vector<int> a,b(m);
+    for(int i=0;i<m;i++)cin>>b[i];
+    for(int i=0;i<b.size();i++){
+        if(i!=b.size()-1){
+            int x=b[i+1]-b[i]-1;
+            if(x!=0)a.push_back(x);
+        }
+    }
+    sort(a.begin(),a.end());
+    for(int i=1;i<=k;i++){
+        if(a.size()==0)break;
+        if(i>1)a.pop_back();
+    }
+    for(int i=0;i<a.size();i++)ans+=a[i];
+    cout<<ans;
+}
