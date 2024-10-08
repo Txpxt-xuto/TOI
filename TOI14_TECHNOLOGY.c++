@@ -242,7 +242,7 @@ int main(){
         cin >> num;
         canvas_pos[i] = num;
     }
-    for (int j=1; j<m; j++)
+    for(j=1;j<m;j++)
     {
         space_ls[j-1] = canvas_pos[j]-canvas_pos[j-1]-1;
     }
