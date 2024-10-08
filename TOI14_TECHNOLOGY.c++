@@ -140,8 +140,3 @@ struct fenwick
         int i,j,ret=0;
         for(i=st;i>0;i-=i&-i) for(j=en;j<X;j+=j&-j) ret+=a[i][j];
         return ret;
-    }
-}tree;
-signed main()
-{
-    cin.tie(nullptr)->sync_with_stdio(false);
