@@ -205,10 +205,11 @@ int main()
 using namespace std;
 int main(){
     cin.tie(NULL)->sync_with_stdio(false);
-    int n,m,k;cin>>n>>m>>k;
+    int n,m,k;
+    cin >> n >> m >> k;
     int ans=0;
     vector<int> a,b(m);
-    for(i=0;i<m;i++)cin>>b[i];
+    for(i=0;i<m;i++) cin>>b[i];
     for(i=0;i<b.size();i++)
     {
         if(i!=b.size()-1)
