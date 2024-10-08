@@ -203,7 +203,8 @@ int main()
 }
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     cin.tie(NULL)->sync_with_stdio(false);
     int n,m,k;
     cin >> n >> m >> k;
