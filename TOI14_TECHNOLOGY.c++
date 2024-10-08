@@ -132,7 +132,7 @@ struct fenwick{
     int a[X][X];
     void upd(int st,int en)
     {
-        for(int i=st;i<X;i+=i&-i)for(int j=en;j>0;j-=j&-j)a[i][j]++;
+        for(i=st;i<X;i+=i&-i) for(j=en;j>0;j-=j&-j) a[i][j]++;
     }
     int qr(int st,int en)
     {
