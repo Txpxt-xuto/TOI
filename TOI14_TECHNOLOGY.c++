@@ -228,10 +228,3 @@ int main()
     for(i=0;i<a.size();i++) ans+=a[i];
     cout << ans;
 }
-#include <bits/stdc++.h>
-using namespace std;
-int canvas_pos[100001], space_ls[100000], summ;
-int main()
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
