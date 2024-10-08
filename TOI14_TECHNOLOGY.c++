@@ -189,7 +189,7 @@ int main()
         int p,h;
         cin >> p >> h;
         int l = p - h;
-        int r= p + h;
+        int r = p + h;
         cout<<fw.fsum(l+5000,15000)-fw.fsum(l+5000,r+5000-1)<<"\n";
         fw.upd(l+5000,r+5000);
     }
