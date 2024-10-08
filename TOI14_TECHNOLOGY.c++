@@ -229,8 +229,7 @@ int main()
     cout << ans;
 }
 #include <bits/stdc++.h>
-
-using namespce std;
+using namespace std;
 int canvas_pos[100001], space_ls[100000], summ;
 int main()
 {
