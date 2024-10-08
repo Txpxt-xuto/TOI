@@ -230,8 +230,7 @@ int main()
 }
 #include <bits/stdc++.h>
 
-using namespace std;
-
+using namespce std;
 int canvas_pos[100001], space_ls[100000], summ;
 int main()
 {
