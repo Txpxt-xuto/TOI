@@ -209,8 +209,10 @@ int main(){
     int ans=0;
     vector<int> a,b(m);
     for(int i=0;i<m;i++)cin>>b[i];
-    for(int i=0;i<b.size();i++){
-        if(i!=b.size()-1){
+    for(int i=0;i<b.size();i++)
+    {
+        if(i!=b.size()-1)
+        {
             int x=b[i+1]-b[i]-1;
             if(x!=0)a.push_back(x);
         }
