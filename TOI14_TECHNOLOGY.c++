@@ -172,16 +172,3 @@ struct fenwick
             }
         }
     }
-    int fsum(int x,int y)
-    {
-        int sum=0,i,j;
-        for(i=x;i>0;i-=i&-i)
-        {
-            for(j=y;j>0;j-=j&-j)
-            {
-                sum+=info[i][j];
-            }
-        }
-        return sum;
-    }
-}fw;
