@@ -157,3 +157,38 @@ signed main()
     }
     return 0;
 }
+#include<bits/stdc++.h>
+using namespace std;
+struct fenwick{
+    int info[15004][15004]{0};
+    void upd(int x,int y){
+        for(int i=x;i<=15000;i+=i&-i){
+            for(int j=y;j<=15000;j+=j&-j){
+                info[i][j]++;
+            }
+        }
+    }
+    int fsum(int x,int y){
+        int sum=0;
+        for(int i=x;i>0;i-=i&-i){
+            for(int j=y;j>0;j-=j&-j){
+                sum+=info[i][j];
+            }
+        }
+        return sum;
+    }
+}fw;
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        int p,h;
+        cin>>p>>h;
+        int l=p-h;
+        int r=p+h;
+        cout<<fw.fsum(l+5000,15000)-fw.fsum(l+5000,r+5000-1)<<"\n";
+        fw.upd(l+5000,r+5000);
+    }
+}
