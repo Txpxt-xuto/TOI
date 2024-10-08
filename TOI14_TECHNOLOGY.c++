@@ -208,8 +208,8 @@ int main(){
     int n,m,k;cin>>n>>m>>k;
     int ans=0;
     vector<int> a,b(m);
-    for(int i=0;i<m;i++)cin>>b[i];
-    for(int i=0;i<b.size();i++)
+    for(i=0;i<m;i++)cin>>b[i];
+    for(i=0;i<b.size();i++)
     {
         if(i!=b.size()-1)
         {
