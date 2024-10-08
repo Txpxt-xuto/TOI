@@ -218,10 +218,11 @@ int main(){
         }
     }
     sort(a.begin(),a.end());
-    for(int i=1;i<=k;i++){
-        if(a.size()==0)break;
+    for(int i=1;i<=k;i++)
+    {
+        if(a.size()==0) break;
         if(i>1)a.pop_back();
     }
     for(int i=0;i<a.size();i++)ans+=a[i];
-    cout<<ans;
+    cout << ans;
 }
