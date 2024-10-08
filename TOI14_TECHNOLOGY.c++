@@ -159,7 +159,8 @@ signed main()
 }
 #include<bits/stdc++.h>
 using namespace std;
-struct fenwick{
+struct fenwick
+{
     int info[15004][15004]{0};
     void upd(int x,int y)
     {
