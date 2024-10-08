@@ -252,5 +252,4 @@ int main()
         summ+=space_ls[i];
     }
     cout<<summ;
-    return 0;
-}
+    r
