@@ -151,7 +151,8 @@ signed main()
     {
         int a,b;
         cin >> a >> b;
-        int p1=a-b+5000,p2=a+b+5000;
+        int p1 = a - b 
+         5000,p2 = a+b+5000;
         cout << tree.qr(p1,p2) << "\n";
         tree.upd(p1,p2);
     }
