@@ -162,8 +162,10 @@ using namespace std;
 struct fenwick{
     int info[15004][15004]{0};
     void upd(int x,int y){
-        for(int i=x;i<=15000;i+=i&-i){
-            for(int j=y;j<=15000;j+=j&-j){
+        for(i=x;i<=15000;i+=i&-i)
+        {
+            for(j=y;j<=15000;j+=j&-j)
+            {
                 info[i][j]++;
             }
         }
