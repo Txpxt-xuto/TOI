@@ -141,7 +141,6 @@ struct fenwick{
         return ret;
     }
 }tree;
-
 signed main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
