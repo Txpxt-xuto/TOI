@@ -67,4 +67,4 @@ int main()
 {
     while(q--)
     {
-        int n,m,t,mx=1;
+        int n,m,t,m
