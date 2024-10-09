@@ -92,8 +92,6 @@ int main()
         }
         if(qs[n][m]==n*m)
         {
-            cout << 0 << '\n';
-            continue;
         }
         for(sz=2;sz<=min(n,m);sz++)
         {
