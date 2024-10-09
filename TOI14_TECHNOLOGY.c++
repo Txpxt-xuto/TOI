@@ -60,11 +60,3 @@ int main()
         }
     }
 }
-#include <bits/stdc++.h>
-using namespace std;
-int a[550][550],qs[550][550];
-int main()
-{
-    while(q--)
-    {
-        int n,m,t,m
