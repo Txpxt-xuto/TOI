@@ -95,9 +95,6 @@ int main(){
                     int sumout=qs[i][j]-qs[i][j-sz]-qs[i-sz][j]+qs[i-sz][j-sz];
                     int sumin=qs[i-1][j-1]-qs[i-1][j-(sz-1)]-qs[i-(sz-1)][j-1]+qs[i-(sz-1)][j-(sz-1)];
                     if(sumout==sumin) mx=max(mx,sz);
-                    {
-                        mx=max(mx,sz);
-                    }
                 }
             }
         }
