@@ -41,7 +41,7 @@ int main()
     memset(arr,0,sizeof arr);
     memset(qs,0,sizeof qs);
     cin >> n >> m >> t;
-    for(int i=0;i<t;i++)
+    for(i=0;i<t;i++)
     {
         cin >> x >> y;
         arr[x+1][y+1] = 1;
