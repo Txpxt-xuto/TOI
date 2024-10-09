@@ -89,8 +89,10 @@ int main(){
             cout << 0 << '\n';
             continue;
         }
-        for(int sz=2;sz<=min(n,m);sz++){
-            for(int i=sz;i<=n;i++){
+        for(sz=2;sz<=min(n,m);sz++)
+        {
+            for(int i=sz;i<=n;i++)
+            {
                 for(j=sz;j<=m;j++)
                 {
                     int sumout = qs[i][j]-qs[i][j-sz]-qs[i-sz][j]+qs[i-sz][j-sz];
