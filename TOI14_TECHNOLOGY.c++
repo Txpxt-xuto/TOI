@@ -44,7 +44,7 @@ int main()
     for(int i=0;i<t;i++)
     {
         cin >> x >> y;
-        arr[x+1][y+1]=1;
+        arr[x+1][y+1] = 1;
     }
     for(i=1;i<=n;i++)
     {
