@@ -12,7 +12,7 @@ int main()
 {
     int n,m,t,x,y,sum;
     cin >> n >> m >> t;
-    for(int i=0;i<t;i++)
+    for(i=0;i<t;i++)
     {
         cin >> x >> y;
         arr[x+1][y+1]=1;
