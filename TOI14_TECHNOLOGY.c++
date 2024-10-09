@@ -24,11 +24,11 @@ int main()
             qs[i][j]=qs[i-1][j]+qs[i][j-1]-qs[i-1][j-1]+arr[i][j];
         }
     }
-    for(int i=min(n,m);i>=1;i--)
+    for(i=min(n,m);i>=1;i--)
     {
-        for(int j=1;j<=n-i+1;j++)
+        for(j=1;j<=n-i+1;j++)
         {
-            for(int k=1;k<=m-i+1;k++)
+            for(k=1;k<=m-i+1;k++)
             {
                 sum = (qs[j+i-1][k+i-1]-qs[j-1][k+i-1]-qs[j+i-1][k-1]+qs[j-1][k-1])-(qs[j+i-2][k+i-2]-qs[j][k+i-2]-qs[j+i-2][k]+qs[j][k]);
                 if(sum==0)
