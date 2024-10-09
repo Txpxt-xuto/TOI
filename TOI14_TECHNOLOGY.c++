@@ -64,7 +64,8 @@ int main()
                 {
                     cout << i << '\n';
                     j=n+1;
-                    i=0;break;
+                    i=0;
+                    break;
                 }
             }
         }
