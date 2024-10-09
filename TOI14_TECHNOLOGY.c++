@@ -97,7 +97,6 @@ int main(){
                     if(sumout==sumin){
                         mx=max(mx,sz);
                     }
-                    //cout << sumin << " " << i << " " << j << '\n';
                 }
             }
         }
