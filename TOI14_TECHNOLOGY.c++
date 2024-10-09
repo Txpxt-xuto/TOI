@@ -68,5 +68,3 @@ int main()
     while(q--)
     {
         int n,m,t,mx=1;
-        cin >> n >> m >> t;
-        for(i=1;i<=t;i++)
