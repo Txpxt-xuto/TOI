@@ -55,7 +55,7 @@ int main()
     }
     for(int i=min(n,m);i>=1;i--)
     {
-        for(int j=1;j<=n-i+1;j++)
+        for(j=1;j<=n-i+1;j++)
         {
             for(k=1;k<=m-i+1;k++)
             {
