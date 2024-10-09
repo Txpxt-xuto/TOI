@@ -79,9 +79,7 @@ int main()
         cin >> n >> m >> t;
         for(i=1;i<=t;i++)
         {
-            int x,y;
-            cin >> x >> y;
-            a[x+1][y+1]++;
+
         }
         for(i=1;i<=n;i++)
         {
