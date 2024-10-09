@@ -87,7 +87,6 @@ int main()
         {
             for(j=1;j<=m;j++)
             {
-                qs[i][j]+=a[i][j]+qs[i][j-1]+qs[i-1][j]-qs[i-1][j-1];
             }
         }
         if(qs[n][m]==n*m)
