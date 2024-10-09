@@ -65,3 +65,48 @@ int main()
         }
     }
 }
+#include <bits/stdc++.h>
+using namespace std;
+
+int a[550][550],qs[550][550];
+int main(){
+    ios_base::sync_with_stdio(false);cin.tie(0);
+    int q=2;
+    while(q--){
+        int n,m,t,mx=1;
+        cin >> n >> m >> t;
+        for(int i=1;i<=t;i++){
+            int x,y;
+            cin >> x >> y;
+            a[x+1][y+1]++;
+        }
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=m;j++){
+                qs[i][j]+=a[i][j]+qs[i][j-1]+qs[i-1][j]-qs[i-1][j-1];
+            }
+        }
+        if(qs[n][m]==n*m){
+            cout << 0 << '\n';
+            continue;
+        }
+        for(int sz=2;sz<=min(n,m);sz++){
+            for(int i=sz;i<=n;i++){
+                for(int j=sz;j<=m;j++){
+                    int sumout=qs[i][j]-qs[i][j-sz]-qs[i-sz][j]+qs[i-sz][j-sz];
+                    int sumin=qs[i-1][j-1]-qs[i-1][j-(sz-1)]-qs[i-(sz-1)][j-1]+qs[i-(sz-1)][j-(sz-1)];
+                    if(sumout==sumin){
+                        mx=max(mx,sz);
+                    }
+                    //cout << sumin << " " << i << " " << j << '\n';
+                }
+            }
+        }
+        cout << mx << '\n';
+
+        memset(qs,0,sizeof qs);
+        memset(a,0,sizeof a);
+    }
+    
+
+    return 0;
+}
