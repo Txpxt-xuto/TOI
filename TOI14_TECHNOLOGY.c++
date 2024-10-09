@@ -17,9 +17,9 @@ int main()
         cin >> x >> y;
         arr[x+1][y+1]=1;
     }
-    for(int i=1;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
-        for(int j=1;j<=m;j++) qs[i][j] = qs[i-1][j]+qs[i][j-1]-qs[i-1][j-1]+arr[i][j];
+        for(j=1;j<=m;j++) qs[i][j] = qs[i-1][j]+qs[i][j-1]-qs[i-1][j-1]+arr[i][j];
     }
     for(i=min(n,m);i>=1;i--)
     {
