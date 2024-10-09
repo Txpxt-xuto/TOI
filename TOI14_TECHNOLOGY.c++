@@ -70,11 +70,3 @@ int main()
         int n,m,t,mx=1;
         cin >> n >> m >> t;
         for(i=1;i<=t;i++)
-        {
-        }
-        for(i=1;i<=n;i++)
-        {
-            for(j=1;j<=m;j++)
-            {
-            }
-     
