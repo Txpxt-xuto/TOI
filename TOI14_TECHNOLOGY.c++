@@ -53,7 +53,6 @@ int main()
         {
             for(k=1;k<=m-i+1;k++)
             {
-                sum = (qs[j+i-1][k+i-1]-qs[j-1][k+i-1]-qs[j+i-1][k-1]+qs[j-1][k-1])-(qs[j+i-2][k+i-2]-qs[j][k+i-2]-qs[j+i-2][k]+qs[j][k]);
                 if(sum==0)
                 {
                 }
@@ -78,19 +77,4 @@ int main()
             for(j=1;j<=m;j++)
             {
             }
-        }
-        if(qs[n][m]==n*m)
-        {
-        }
-        for(sz=2;sz<=min(n,m);sz++)
-        {
-            for(int i=sz;i<=n;i++)
-            {
-                for(j=sz;j<=m;j++)
-                {
-                }
-            }
-        }
-    }
-    return 0;
-}
+     
