@@ -63,7 +63,8 @@ int main()
                 if(sum==0)
                 {
                     cout << i << '\n';
-                    j=n+1;i=0;break;
+                    j=n+1;
+                    i=0;break;
                 }
             }
         }
