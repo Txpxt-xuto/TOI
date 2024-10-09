@@ -107,9 +107,6 @@ int main()
                 }
             }
         }
-        cout << mx << '\n';
-        memset(qs,0,sizeof qs);
-        memset(a,0,sizeof a);
     }
     return 0;
 }
