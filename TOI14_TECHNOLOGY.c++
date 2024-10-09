@@ -70,16 +70,12 @@ using namespace std;
 int a[550][550],qs[550][550];
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    int q=2;
     while(q--)
     {
         int n,m,t,mx=1;
         cin >> n >> m >> t;
         for(i=1;i<=t;i++)
         {
-
         }
         for(i=1;i<=n;i++)
         {
