@@ -53,7 +53,7 @@ int main()
             qs[i][j]=qs[i-1][j]+qs[i][j-1]-qs[i-1][j-1]+arr[i][j];
         }
     }
-    for(int i=min(n,m);i>=1;i--)
+    for(i=min(n,m);i>=1;i--)
     {
         for(j=1;j<=n-i+1;j++)
         {
