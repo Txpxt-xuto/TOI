@@ -101,9 +101,6 @@ int main()
             {
                 for(j=sz;j<=m;j++)
                 {
-                    int sumout = qs[i][j]-qs[i][j-sz]-qs[i-sz][j]+qs[i-sz][j-sz];
-                    int sumin = qs[i-1][j-1]-qs[i-1][j-(sz-1)]-qs[i-(sz-1)][j-1]+qs[i-(sz-1)][j-(sz-1)];
-                    if(sumout==sumin) mx=max(mx,sz);
                 }
             }
         }
