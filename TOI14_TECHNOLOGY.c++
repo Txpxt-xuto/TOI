@@ -75,17 +75,21 @@ int main(){
     while(q--){
         int n,m,t,mx=1;
         cin >> n >> m >> t;
-        for(int i=1;i<=t;i++){
+        for(i=1;i<=t;i++)
+        {
             int x,y;
             cin >> x >> y;
             a[x+1][y+1]++;
         }
-        for(int i=1;i<=n;i++){
-            for(int j=1;j<=m;j++){
+        for(i=1;i<=n;i++)
+        {
+            for(j=1;j<=m;j++)
+            {
                 qs[i][j]+=a[i][j]+qs[i][j-1]+qs[i-1][j]-qs[i-1][j-1];
             }
         }
-        if(qs[n][m]==n*m){
+        if(qs[n][m]==n*m)
+        {
             cout << 0 << '\n';
             continue;
         }
