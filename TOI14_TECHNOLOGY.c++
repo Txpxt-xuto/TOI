@@ -170,7 +170,8 @@ int main() {
                 dp[i % 2][j] = max(dp[i % 2][j], dqOutRange.front().first + qs[j] - qs[j - i]);
             }
 
-            if(j + i - 1 <= n) {
+            if(j + i - 1 <= n)
+            {
                 while(!dqInRange.empty())
                 {
                     if(dqInRange.back().first <= dp[(i - 1) % 2][j + i - 1]) dqInRange.pop_back();
