@@ -171,7 +171,8 @@ int main() {
             }
 
             if(j + i - 1 <= n) {
-                while(!dqInRange.empty()) {
+                while(!dqInRange.empty())
+                {
                     if(dqInRange.back().first <= dp[(i - 1) % 2][j + i - 1]) dqInRange.pop_back();
                     else break;
                 }
