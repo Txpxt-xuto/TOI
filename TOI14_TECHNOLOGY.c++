@@ -121,14 +121,12 @@ int main() {
                 if(dqInRange.back().first <= dp[(i - 1) % 2][j]) {
                     dqInRange.pop_back();
                 }
-                else {
+                els {
                     break;
                 }
             }
-
             dqInRange.emplace_back(dp[(i - 1) % 2][j], j);
         }
-
         deque<pair<long long, int>> dqOutRange;
         for(j=i*2-1;j<=n;++j)
         {
