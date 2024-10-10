@@ -85,3 +85,127 @@ int main()
     cin >> n;
     func(n, "");
 }
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n;
+    cin >> n;
+
+    int qs[n + 1];
+    qs[0] = 0;
+
+    for(int i = 1; i <= n; ++i) {
+        cin >> qs[i];
+        qs[i] += qs[i - 1];
+    }
+
+    long long dp[2][n + 1];
+    for(int i = 0; i <= 1; ++i) {
+        for(int j = 1; j <= n; ++j) {
+            dp[i][j] = 0;
+        }
+    }
+    
+    for(int i = 1; i <= n; ++i) {
+        dp[1][i] = qs[i] - qs[i - 1];
+    }
+
+    for(int i = 2; i <= n; ++i) {
+        deque<pair<long long, int>> dqInRange;
+        for(int j = i - 1; j <= min(n, i * 2 - 2); ++j) {
+            while(!dqInRange.empty()) {
+                if(dqInRange.back().first <= dp[(i - 1) % 2][j]) {
+                    dqInRange.pop_back();
+                }
+                else {
+                    break;
+                }
+            }
+
+            dqInRange.emplace_back(dp[(i - 1) % 2][j], j);
+        }
+
+        deque<pair<long long, int>> dqOutRange;
+        for(int j = i * 2 - 1; j <= n; ++j) {
+            while(!dqOutRange.empty()) {
+                if(dqOutRange.back().first <= dp[(i - 1) % 2][j]) {
+                    dqOutRange.pop_back();
+                }
+                else {
+                    break;  
+                }
+            }
+
+            dqOutRange.emplace_back(dp[(i - 1) % 2][j], j);
+        }
+
+        for(int j = i; j <= n; ++j) {
+            while(!dqInRange.empty()) {
+                if(dqInRange.front().second < max(1, j - i + 1) or dqInRange.front().second > min(n, j + i - 2)) {
+                    dqInRange.pop_front();
+                }
+                else {
+                    break;
+                }
+            }
+            
+            if(!dqInRange.empty()) {
+                dp[i % 2][j] = max(dp[i % 2][j], dqInRange.front().first + (qs[j] - qs[j - i]) / 2);
+            }
+
+            while(!dqOutRange.empty()) {
+                if(dqOutRange.front().second >= max(1, j - i + 1) and dqOutRange.front().second <= min(n, j + i - 2)) {
+                    dqOutRange.pop_front();
+                }
+                else {
+                    break;
+                }
+            }
+            
+            if(!dqOutRange.empty()) {
+                dp[i % 2][j] = max(dp[i % 2][j], dqOutRange.front().first + qs[j] - qs[j - i]);
+            }
+
+            if(j + i - 1 <= n) {
+                while(!dqInRange.empty()) {
+                    if(dqInRange.back().first <= dp[(i - 1) % 2][j + i - 1]) {
+                        dqInRange.pop_back();
+                    }
+                    else {
+                        break;
+                    }
+                }
+
+                dqInRange.emplace_back(dp[(i - 1) % 2][j + i - 1], j + i - 1);
+            }
+
+            if(j - i + 1 >= i - 1) {
+                while(!dqOutRange.empty()) {
+                    if(dqOutRange.back().first <= dp[(i - 1) % 2][j - i + 1]) {
+                        dqOutRange.pop_back();
+                    }
+                    else {
+                        break;
+                    }
+                }
+
+                dqOutRange.emplace_back(dp[(i - 1) % 2][j - i + 1], j - i + 1);
+            }
+        }
+    }
+
+    // for(int i = 1; i <= n; ++i) {
+    //     for(int j = 1; j <= n; ++j) {
+    //         cout << dp[i][j] << " ";
+    //     }
+
+    //     cout << "\n";
+    // }
+
+    cout << dp[n % 2][n];
+    return 0;
+}
