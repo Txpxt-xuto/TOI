@@ -161,7 +161,8 @@ int main() {
                 if(dqOutRange.front().second >= max(1, j - i + 1) and dqOutRange.front().second <= min(n, j + i - 2)) {
                     dqOutRange.pop_front();
                 }
-                else {
+                else break;
+                {
                     break;
                 }
             }
