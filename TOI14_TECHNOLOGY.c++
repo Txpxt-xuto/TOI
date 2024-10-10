@@ -152,7 +152,6 @@ int main() {
                     break;
                 }
             }
-            
             if(!dqInRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], dqInRange.front().first + (qs[j] - qs[j - i]) / 2);
             while(!dqOutRange.empty())
             {
