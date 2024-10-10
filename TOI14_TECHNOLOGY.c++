@@ -146,11 +146,11 @@ int main() {
         for(int j = i; j <= n; ++j) {
             while(!dqInRange.empty())
             {
-                if(dqInRange.front().second < max(1, j - i + 1) or dqInRange.front().second > min(n, j + i - 2))
+                if(dqInRange.front().second < max(1, j - i + 1) or dqInRange.front().second > min(n, j + i - 2)) dqInRange.pop_front();
                 {
                     dqInRange.pop_front();
                 }
-                else
+                else break;
                 {
                     break;
                 }
