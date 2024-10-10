@@ -158,7 +158,8 @@ int main() {
             }
 
             while(!dqOutRange.empty()) {
-                if(dqOutRange.front().second >= max(1, j - i + 1) and dqOutRange.front().second <= min(n, j + i - 2)) {
+                if(dqOutRange.front().second >= max(1, j - i + 1) and dqOutRange.front().second <= min(n, j + i - 2)) dqOutRange.pop_front();
+                {
                     dqOutRange.pop_front();
                 }
                 else break;
