@@ -134,13 +134,7 @@ int main() {
             while(!dqOutRange.empty())
             {
                 if(dqOutRange.back().first <= dp[(i - 1) % 2][j]) dqOutRange.pop_back();
-                {
-                    dqOutRange.pop_back();
-                }
                 else break;
-                {
-                    break;  
-                }
             }
             dqOutRange.emplace_back(dp[(i - 1) % 2][j], j);
         }
