@@ -205,7 +205,6 @@ int main() {
 
     //     cout << "\n";
     // }
-
     cout << dp[n % 2][n];
     return 0;
 }
