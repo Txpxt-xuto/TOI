@@ -131,15 +131,17 @@ int main() {
 
         deque<pair<long long, int>> dqOutRange;
         for(int j = i * 2 - 1; j <= n; ++j) {
-            while(!dqOutRange.empty()) {
-                if(dqOutRange.back().first <= dp[(i - 1) % 2][j]) {
+            while(!dqOutRange.empty())
+            {
+                if(dqOutRange.back().first <= dp[(i - 1) % 2][j]) dqOutRange.pop_back();
+                {
                     dqOutRange.pop_back();
                 }
-                else {
+                else break;
+                {
                     break;  
                 }
             }
-
             dqOutRange.emplace_back(dp[(i - 1) % 2][j], j);
         }
         for(j=i;j<=n;++j)
