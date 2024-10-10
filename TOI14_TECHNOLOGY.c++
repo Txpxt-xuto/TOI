@@ -187,7 +187,8 @@ int main() {
                     if(dqOutRange.back().first <= dp[(i - 1) % 2][j - i + 1]) {
                         dqOutRange.pop_back();
                     }
-                    else {
+                    else break;
+                    {
                         break;
                     }
                 }
