@@ -60,3 +60,29 @@ int main()
         }
     }
 }
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void func(int i, string p){
+    if(i == 0){
+        for(auto j : p){
+            cout << j << j << "\n";
+        }
+        cout << "E\n";
+        return;
+    }
+    string t1 = p + '-';
+    func(i-1, t1);
+    if(i >= 2){
+        string t2 = p + '|';
+        func(i-2, t2);
+    }
+    
+}
+
+int main(){
+    int n;
+    cin >> n;
+    func(n, "");
+}
