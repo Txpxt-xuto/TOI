@@ -143,7 +143,8 @@ int main() {
             dqOutRange.emplace_back(dp[(i - 1) % 2][j], j);
         }
 
-        for(int j = i; j <= n; ++j) {
+        for(int j = i; j <= n; ++j)
+        {
             while(!dqInRange.empty())
             {
                 if(dqInRange.front().second < max(1, j - i + 1) or dqInRange.front().second > min(n, j + i - 2)) dqInRange.pop_front();
