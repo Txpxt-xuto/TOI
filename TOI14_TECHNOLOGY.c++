@@ -182,8 +182,10 @@ int main() {
 
                 dqInRange.emplace_back(dp[(i - 1) % 2][j + i - 1], j + i - 1);
             }
-            if(j - i + 1 >= i - 1) {
-                while(!dqOutRange.empty()) {
+            if(j - i + 1 >= i - 1)
+            {
+                while(!dqOutRange.empty())
+                {
                     if(dqOutRange.back().first <= dp[(i - 1) % 2][j - i + 1]) dqOutRange.pop_back();
                     else break;
                 }
