@@ -142,8 +142,7 @@ int main() {
 
             dqOutRange.emplace_back(dp[(i - 1) % 2][j], j);
         }
-
-        for(int j = i; j <= n; ++j)
+        for(j=i;j<=n;++j)
         {
             while(!dqInRange.empty())
             {
