@@ -159,9 +159,6 @@ int main() {
 
             while(!dqOutRange.empty()) {
                 if(dqOutRange.front().second >= max(1, j - i + 1) and dqOutRange.front().second <= min(n, j + i - 2)) dqOutRange.pop_front();
-                {
-                    dqOutRange.pop_front();
-                }
                 else break;
             }
             if(!dqOutRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], dqOutRange.front().first + qs[j] - qs[j - i]);
