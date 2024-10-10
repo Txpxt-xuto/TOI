@@ -106,7 +106,7 @@ int main() {
     long long dp[2][n + 1];
     for(int i = 0; i <= 1; ++i)
     {
-        for(j=1;j<= n; ++j) dp[i][j] = 0;
+        for(j=1;j<=n;++j) dp[i][j] = 0;
     }
     
     for(i=1;i<=n;++i) dp[1][i] = qs[i] - qs[i - 1];
