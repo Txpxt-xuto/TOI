@@ -114,10 +114,13 @@ int main() {
         dp[1][i] = qs[i] - qs[i - 1];
     }
 
-    for(int i = 2; i <= n; ++i) {
+    for(i=2;i<=n;++i)
+    {
         deque<pair<long long, int>> dqInRange;
-        for(int j = i - 1; j <= min(n, i * 2 - 2); ++j) {
-            while(!dqInRange.empty()) {
+        for(j=i-1;j <= min(n,i*2-2);++j)
+        {
+            while(!dqInRange.empty())
+            {
                 if(dqInRange.back().first <= dp[(i - 1) % 2][j]) dqInRange.pop_back();
                 else break;  
             }
