@@ -98,7 +98,8 @@ int main() {
     int qs[n + 1];
     qs[0] = 0;
 
-    for(int i = 1; i <= n; ++i) {
+    for(i=1;i<=n;++i)
+    {
         cin >> qs[i];
         qs[i] += qs[i - 1];
     }
