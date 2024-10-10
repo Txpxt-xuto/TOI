@@ -165,7 +165,6 @@ int main() {
                     break;
                 }
             }
-            
             if(!dqOutRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], dqOutRange.front().first + qs[j] - qs[j - i]);
             if(j + i - 1 <= n)
             {
