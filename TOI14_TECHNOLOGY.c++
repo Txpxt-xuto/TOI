@@ -95,11 +95,6 @@ int main()
     cin >> n;
     int qs[n + 1];
     qs[0] = 0;
-    for(i=1;i<=n;++i)
-    {
-        cin >> qs[i];
-        qs[i] += qs[i - 1];
-    }
     cout << dp[n % 2][n];
     return 0;
 }
