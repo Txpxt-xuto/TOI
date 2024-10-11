@@ -72,9 +72,4 @@ void func(int i, string p)
     }
     string t1 = p + '-';
     func(i-1, t1);
-    if(i >= 2)
-    {
-        string t2 = p + '|';
-        func(i-2, t2);
-    }
 }
