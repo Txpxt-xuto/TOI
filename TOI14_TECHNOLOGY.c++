@@ -77,5 +77,4 @@ void func(int i, string p)
         string t2 = p + '|';
         func(i-2, t2);
     }
-    
 }
