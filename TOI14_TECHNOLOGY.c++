@@ -106,10 +106,6 @@ int main()
         for(j=1;j<=n;++j) dp[i][j] = 0;
     }
     for(i=1;i<=n;++i) dp[1][i] = qs[i] - qs[i - 1];
-    for(i=2;i<=n;++i)
-    {
-        deque<pair<long long, int>> dqInRange;
-    }
     cout << dp[n % 2][n];
     return 0;
 }
