@@ -93,6 +93,5 @@ int main()
     cin.tie(NULL);
     int n;
     cin >> n;
-    cout << dp[n % 2][n];
     return 0;
 }
