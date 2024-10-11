@@ -130,10 +130,6 @@ int main()
         }
         for(j=i;j<=n;++j)
         {
-            
-            
-            
-            
         }
     }
     cout << dp[n % 2][n];
