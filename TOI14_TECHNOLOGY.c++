@@ -102,9 +102,6 @@ int main()
     }
     long long dp[2][n + 1];
     for(int i = 0; i <= 1; ++i)
-    {
-        for(j=1;j<=n;++j) dp[i][j] = 0;
-    }
     cout << dp[n % 2][n];
     return 0;
 }
