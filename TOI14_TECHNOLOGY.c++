@@ -130,11 +130,7 @@ int main()
         }
         for(j=i;j<=n;++j)
         {
-            while(!dqInRange.empty())
-            {
-                if(dqInRange.front().second < max(1, j - i + 1) or dqInRange.front().second > min(n, j + i - 2)) dqInRange.pop_front();
-                else break;
-            }
+            
             if(!dqInRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], dqInRange.front().first + (qs[j] - qs[j - i]) / 2);
             while(!dqOutRange.empty())
             {
