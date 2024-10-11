@@ -69,7 +69,4 @@ void func(int i, string p)
         for(auto j : p) cout << j << j << "\n";
         cout << "E\n";
         return;
-    }
-    string t1 = p + '-';
-    func(i-1, t1);
 }
