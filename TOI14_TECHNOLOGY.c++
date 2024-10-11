@@ -63,10 +63,3 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 void func(int i, string p)
-{
-    if(i == 0)
-    {
-        for(auto j : p) cout << j << j << "\n";
-        cout << "E\n";
-        return;
-}
