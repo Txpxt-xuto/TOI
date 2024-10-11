@@ -131,9 +131,7 @@ int main()
         for(j=i;j<=n;++j)
         {
             
-            if(!dqInRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], dqInRange.front().first + (qs[j] - qs[j - i]) / 2);
             
-            if(!dqOutRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], dqOutRange.front().first + qs[j] - qs[j - i]);
             
             
         }
