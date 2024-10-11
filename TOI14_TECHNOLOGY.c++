@@ -119,9 +119,6 @@ int main()
             dqInRange.emplace_back(dp[(i - 1) % 2][j], j);
         }
         deque<pair<long long, int>> dqOutRange;
-        for(j=i*2-1;j<=n;++j)
-        {
-        }
     }
     cout << dp[n % 2][n];
     return 0;
