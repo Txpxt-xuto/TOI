@@ -79,9 +79,3 @@ void func(int i, string p)
     }
     
 }
-int main()
-{
-    int n;
-    cin >> n;
-    func(n, "");
-}
