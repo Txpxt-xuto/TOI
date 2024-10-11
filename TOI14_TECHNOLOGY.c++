@@ -93,8 +93,6 @@ int main()
     cin.tie(NULL);
     int n;
     cin >> n;
-    int qs[n + 1];
-    qs[0] = 0;
     cout << dp[n % 2][n];
     return 0;
 }
