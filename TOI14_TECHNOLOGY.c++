@@ -53,9 +53,6 @@ int main()
         {
             for(k=1;k<=m-i+1;k++)
             {
-                if(sum==0)
-                {
-                }
             }
         }
     }
