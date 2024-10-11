@@ -134,17 +134,10 @@ int main()
             if(!dqInRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], dqInRange.front().first + (qs[j] - qs[j - i]) / 2);
             
             if(!dqOutRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], dqOutRange.front().first + qs[j] - qs[j - i]);
-            if(j + i - 1 <= n)
-            {
-                
-            }
+            
             if(j - i + 1 >= i - 1)
             {
-                while(!dqOutRange.empty())
-                {
-                    if(dqOutRange.back().first <= dp[(i - 1) % 2][j - i + 1]) dqOutRange.pop_back();
-                    else break;
-                }
+                
                 dqOutRange.emplace_back(dp[(i - 1) % 2][j - i + 1], j - i + 1);
             }
         }
