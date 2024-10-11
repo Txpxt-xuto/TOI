@@ -111,11 +111,6 @@ int main()
         deque<pair<long long, int>> dqInRange;
         for(j=i-1;j <= min(n,i*2-2);++j)
         {
-            while(!dqInRange.empty())
-            {
-                if(dqInRange.back().first <= dp[(i - 1) % 2][j]) dqInRange.pop_back();
-                else break;  
-            }
             dqInRange.emplace_back(dp[(i - 1) % 2][j], j);
         }
     }
