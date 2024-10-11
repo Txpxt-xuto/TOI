@@ -109,10 +109,6 @@ int main()
     for(i=2;i<=n;++i)
     {
         deque<pair<long long, int>> dqInRange;
-        for(j=i-1;j <= min(n,i*2-2);++j)
-        {
-            dqInRange.emplace_back(dp[(i - 1) % 2][j], j);
-        }
     }
     cout << dp[n % 2][n];
     return 0;
