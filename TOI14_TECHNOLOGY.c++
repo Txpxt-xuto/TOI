@@ -128,9 +128,6 @@ int main()
             }
             dqOutRange.emplace_back(dp[(i - 1) % 2][j], j);
         }
-        for(j=i;j<=n;++j)
-        {
-        }
     }
     cout << dp[n % 2][n];
     return 0;
