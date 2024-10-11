@@ -38,8 +38,4 @@ int main()
             }
         }
     }
-    memset(arr,0,sizeof arr);
-    memset(qs,0,sizeof qs);
-    cin >> n >> m >> t;
-
 }
