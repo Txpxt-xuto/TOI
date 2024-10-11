@@ -135,11 +135,7 @@ int main()
             
             if(!dqOutRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], dqOutRange.front().first + qs[j] - qs[j - i]);
             
-            if(j - i + 1 >= i - 1)
-            {
-                
-                dqOutRange.emplace_back(dp[(i - 1) % 2][j - i + 1], j - i + 1);
-            }
+            
         }
     }
     cout << dp[n % 2][n];
