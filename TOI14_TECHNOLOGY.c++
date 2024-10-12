@@ -12,9 +12,4 @@ int main()
 {
     int n,m,t,x,y,sum,i,j,k;
     cin >> n >> m >> t;
-    for(i=0;i<t;i++)
-    {
-        cin >> x >> y;
-        arr[x+1][y+1]=1;
-    }
 }
