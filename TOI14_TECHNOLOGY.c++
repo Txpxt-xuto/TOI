@@ -8,6 +8,3 @@ CENTER: Home
 using namespace std;
 int arr[505][505];
 int qs[505][505];
-int main()
-{
-}
