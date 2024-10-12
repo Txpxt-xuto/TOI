@@ -25,9 +25,6 @@ int main()
     {
         for(j=1;j<=n-i+1;j++)
         {
-            for(k=1;k<=m-i+1;k++)
-            {
-            }
         }
     }
 }
