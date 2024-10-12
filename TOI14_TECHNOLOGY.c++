@@ -23,8 +23,5 @@ int main()
     }
     for(i=min(n,m);i>=1;i--)
     {
-        for(j=1;j<=n-i+1;j++)
-        {
-        }
     }
 }
