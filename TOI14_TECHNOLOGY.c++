@@ -16,8 +16,6 @@ int main()
     {
         cin >> x >> y;
         arr[x+1][y+1]=1;
-    }
-    for(i=1;i<=n;i++)
-    {
+
     }
 }
