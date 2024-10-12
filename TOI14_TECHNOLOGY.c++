@@ -30,10 +30,7 @@ int main()
                 sum = (qs[j+i-1][k+i-1]-qs[j-1][k+i-1]-qs[j+i-1][k-1]+qs[j-1][k-1])-(qs[j+i-2][k+i-2]-qs[j][k+i-2]-qs[j+i-2][k]+qs[j][k]);
                 if(sum==0)
                 {
-                    cout << i << '\n';
-                    j=n+1;
-                    i=0;
-                    break;
+
                 }
             }
         }
