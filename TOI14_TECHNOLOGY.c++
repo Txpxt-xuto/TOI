@@ -16,6 +16,5 @@ int main()
     {
         cin >> x >> y;
         arr[x+1][y+1]=1;
-
     }
 }
