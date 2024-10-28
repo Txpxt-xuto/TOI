@@ -35,7 +35,7 @@ int main(){
         vector<pair<int,int>> vec;
         while(m--){
             int u,v;
-            cin>>u>>v;
+            cin >> u >> v;
             vec.emplace_back(min(u,v),max(u,v));
         }
         sort(vec.begin(),vec.end());
