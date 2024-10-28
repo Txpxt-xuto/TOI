@@ -39,7 +39,7 @@ int main(){
             vec.emplace_back(min(u,v),max(u,v));
         }
         sort(vec.begin(),vec.end());
-        cout<<mp[vec]<<'\n';
+        cout << mp[vec] << '\n';
     }
     
 }
