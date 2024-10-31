@@ -29,7 +29,6 @@ void findPath(vector<vector<int>>& road, int i, int j, int t, int m) {
     path.emplace_back(2); 
     findPath(road, i + 1, j + 1, t, m);
     path.pop_back(); 
-
     path.emplace_back(3);
     findPath(road, i + 1, j, t, m);
     path.pop_back();
