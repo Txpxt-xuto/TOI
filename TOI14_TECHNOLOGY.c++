@@ -43,5 +43,4 @@ int main()
         sort(vec.begin(),vec.end());
         cout << mp[vec] << '\n';
     }
-    
 }
