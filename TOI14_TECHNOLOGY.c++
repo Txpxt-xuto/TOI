@@ -45,9 +45,6 @@ int main()
     vector<vector<int>> road(t + 1, vector<int>(m, 0));
     memo.assign(t + 1, vector<int>(m, -1));
     for(i=1;i<=t;i++) for(j=0;j<m;j++) cin >> road[i][j];
-    {
-        for(j=0;j<m;j++) cin >> road[i][j];
-    }
     findPath(road, 0, n - 1, t, m);
     return 0;
 }
