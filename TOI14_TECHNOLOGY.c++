@@ -15,7 +15,7 @@ void findPath(vector<vector<int>>& road, int i, int j, int t, int m) {
     if (j < 0 || j >= m || road[i][j] == 1) return;
 
     if (i == t) {
-        for (int move : path) cout << move << '\n';
+        for(int move : path) cout << move << '\n';
         return;
     }
     if (memo[i][j] != -1) return;
