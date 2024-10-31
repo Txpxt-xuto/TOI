@@ -47,9 +47,6 @@ int main()
     for(i=1;i<=t;i++)
     {
         for(j=0;j<m;j++) cin >> road[i][j];
-        {
-            cin >> road[i][j];
-        }
     }
     findPath(road, 0, n - 1, t, m);
     return 0;
