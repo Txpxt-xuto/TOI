@@ -21,7 +21,6 @@ void findPath(vector<vector<int>>& road, int i, int j, int t, int m) {
         return;
     }
     if (memo[i][j] != -1) return;
-
     path.emplace_back(1);
     findPath(road, i + 1, j - 1, t, m);
     path.pop_back(); 
