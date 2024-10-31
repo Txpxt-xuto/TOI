@@ -53,6 +53,5 @@ int main() {
     }
 
     findPath(road, 0, n - 1, t, m);
-
     return 0;
 }
