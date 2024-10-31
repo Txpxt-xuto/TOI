@@ -37,7 +37,8 @@ void findPath(vector<vector<int>>& road, int i, int j, int t, int m) {
     memo[i][j] = 0;
 }
 
-int main() {
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     int m, n, t;
     cin >> m >> n >> t;
