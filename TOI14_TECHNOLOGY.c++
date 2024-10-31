@@ -45,7 +45,7 @@ int main()
     vector<vector<int>> road(t + 1, vector<int>(m, 0));
     memo.assign(t + 1, vector<int>(m, -1));
     for(int i = 1; i <= t; i++) {
-        for(int j = 0; j < m; j++)
+        for(int j=0;j<m;j++)
         {
             cin >> road[i][j];
         }
