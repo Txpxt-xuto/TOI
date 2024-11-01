@@ -41,7 +41,7 @@ void solve(){
         cin >> store[i].i>>store[i].j>>store[i].k;
     }
     fly(0,0,0,0,0);
-    cout<<mn;
+    cout << mn;
 }
 int main()
 {
