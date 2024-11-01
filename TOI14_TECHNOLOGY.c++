@@ -29,7 +29,6 @@ int main()
     cin.tie(0)->sync_with_stdio(0);
 
     cin >> n >> m >> w >> p;
-
     while(i++<w)
     {
         cin >> k >> x >> y >> z;
