@@ -33,7 +33,8 @@ void solve(){
     int stx,sty,stz;cin>>want>>stx>>sty>>stz;
     cin>>n;
     store[0] = {stx,sty,stz,0,0,0};
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         cin>>store[i].x>>store[i].y>>store[i].z;
         cin>>store[i].i>>store[i].j>>store[i].k;
     }
