@@ -31,17 +31,3 @@ void fly(ll dis,int cur,int i,int j,int k)
         vis[o]=0;
     }
 }
-void solve()
-{
-    int stx,sty,stz,i;
-    cin >> want >> stx >> sty >> stz;
-    cin >> n;
-    store[0] = {stx,sty,stz,0,0,0};
-    for(i=1;i<=n;i++)
-    {
-        cin >> store[i].x>>store[i].y>>store[i].z;
-        cin >> store[i].i>>store[i].j>>store[i].k;
-    }
-    fly(0,0,0,0,0);
-    cout << mn;
-}
