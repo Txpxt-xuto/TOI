@@ -18,10 +18,5 @@ long long calcdis(int ii,int jj){
 void fly(ll dis,int cur,int i,int j,int k)
 {
     int o;
-    if(i>=want && j>=want && k>=want)
-    {
-        mn = min(dis,mn);
-        return;
-    }
 
 }
