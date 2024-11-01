@@ -50,8 +50,7 @@ int main()
         {
             for(t=0;t<=w+1;t++)
             {
-                if(!u)
-                    BU[0][f] = in[0] - in[f], t=w+1;
+                if(!u) BU[0][f] = in[0] - in[f], t=w+1;
                 else BU[u][t] = min(BU[u][t], BU[u-1][f] + (out[f] - in[t]));
             }
         }
