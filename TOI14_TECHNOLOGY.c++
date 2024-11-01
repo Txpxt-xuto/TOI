@@ -31,7 +31,8 @@ void fly(ll dis,int cur,int i,int j,int k){
         vis[o]=0;
     }
 }
-void solve(){
+void solve()
+{
     int stx,sty,stz,i;
     cin >> want >> stx >> sty >> stz;
     cin >> n;
