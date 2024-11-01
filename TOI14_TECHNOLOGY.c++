@@ -36,7 +36,6 @@ int main()
         in[i] = {k,x};
         out[i] = {y,z};
     }
-
     for(u=0;u<=p;u++)
     {
         for(t=0;t<=w+1;t++) BU[u][t] = LLONG_MAX;
