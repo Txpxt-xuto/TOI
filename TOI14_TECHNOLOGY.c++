@@ -43,7 +43,6 @@ int main()
 
     in[0] = out[0] = {1,1};
     in[w+1] = out[w+1] = {n,m};
-
     for(u=0;u<=p;u++)
     {
         for(f=0;f<=w+1;f++)
