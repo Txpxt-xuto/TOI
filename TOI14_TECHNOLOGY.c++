@@ -23,7 +23,7 @@ void fly(ll dis,int cur,int i,int j,int k){
         mn = min(dis,mn);
         return;
     }
-    for(int o=1;o<=n;o++)
+    for(o=1;o<=n;o++)
     {
         if(vis[o]) continue;
         vis[o]=1;
