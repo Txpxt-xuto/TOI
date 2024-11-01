@@ -6,9 +6,7 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 using namespace std;
-
 #define ll long long
-
 ll b,c,d,e,f,g,h,i,j,k,l,m,a,x,z,y,n,o,p,q,r,s,t,u,v,w;
 ll Mn = LLONG_MAX;
 struct pos
