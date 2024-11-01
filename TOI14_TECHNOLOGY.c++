@@ -53,7 +53,6 @@ int main()
                 else
                     BU[u][t] = min(BU[u][t], BU[u-1][f] + (out[f] - in[t]));
             }
-
     for(i=0;i<=p;i++)
     {
         if(BU[i][w+1] < Mn)
