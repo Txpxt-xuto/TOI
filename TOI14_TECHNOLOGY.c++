@@ -10,5 +10,3 @@ using ll =long long;
 struct A{
     long long x,y,z,i,j,k;
 }store[20];
-ll want=0,mn=1e18,n;
-bitset<20>vis;
