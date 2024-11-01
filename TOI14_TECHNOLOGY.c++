@@ -55,12 +55,13 @@ int main()
             }
 
     for(i=0;i<=p;i++)
+    {
         if(BU[i][w+1] < Mn)
         {
             Mn = BU[i][w+1];
             a = i;
         }
-
+    }
     cout << Mn << " " << a;
     return 0;
 }
