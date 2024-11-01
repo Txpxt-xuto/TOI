@@ -38,8 +38,9 @@ int main()
     }
 
     for(u=0;u<=p;u++)
-        for(t=0;t<=w+1;t++)
-            BU[u][t] = LLONG_MAX;
+    {
+        for(t=0;t<=w+1;t++) BU[u][t] = LLONG_MAX;
+    }
     in[0] = out[0] = {1,1};
     in[w+1] = out[w+1] = {n,m};
     for(u=0;u<=p;u++)
