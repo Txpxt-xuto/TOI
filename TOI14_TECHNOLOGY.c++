@@ -45,10 +45,3 @@ void solve()
     fly(0,0,0,0,0);
     cout << mn;
 }
-int main()
-{
-    cin.tie(0)->sync_with_stdio(0);
-    int q=1;
-    while(q--) solve();;
-    return 0;
-}
