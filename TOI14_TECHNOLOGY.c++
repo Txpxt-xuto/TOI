@@ -33,7 +33,7 @@ void fly(ll dis,int cur,int i,int j,int k){
 }
 void solve(){
     int stx,sty,stz,i;
-    cin >> want >> stx>>sty>>stz;
+    cin >> want >> stx >> sty >> stz;
     cin>>n;
     store[0] = {stx,sty,stz,0,0,0};
     for(i=1;i<=n;i++)
