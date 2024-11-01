@@ -11,7 +11,6 @@ using namespace std;
 
 ll b,c,d,e,f,g,h,i,j,k,l,m,a,x,z,y,n,o,p,q,r,s,t,u,v,w;
 ll Mn = LLONG_MAX;
-
 struct pos
 {
     ll X;
@@ -21,9 +20,7 @@ struct pos
         return abs(X-x.X) + abs(Y-x.Y);
     }
 } in[20002], out[20002];
-
 ll BU[18][20002];
-
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
