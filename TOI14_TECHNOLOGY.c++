@@ -45,14 +45,18 @@ int main()
     in[w+1] = out[w+1] = {n,m};
 
     for(u=0;u<=p;u++)
+    {
         for(f=0;f<=w+1;f++)
+        {
             for(t=0;t<=w+1;t++)
             {
                 if(!u)
                     BU[0][f] = in[0] - in[f], t=w+1;
-                else
+                else BU[u][t] = min(BU[u][t], BU[u-1][f] + (out[f] - in[t]));
                     BU[u][t] = min(BU[u][t], BU[u-1][f] + (out[f] - in[t]));
             }
+        }
+    }
     for(i=0;i<=p;i++)
     {
         if(BU[i][w+1] < Mn)
