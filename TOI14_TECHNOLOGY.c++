@@ -64,4 +64,4 @@ int main()
     cout << Mn << " " << a;
 
     return 0;
-}     
+}
