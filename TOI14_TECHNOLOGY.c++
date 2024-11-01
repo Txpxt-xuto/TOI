@@ -27,7 +27,6 @@ ll BU[18][20002];
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
-
     cin >> n >> m >> w >> p;
     while(i++<w)
     {
