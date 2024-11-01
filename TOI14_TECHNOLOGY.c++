@@ -35,8 +35,8 @@ void solve(){
     store[0] = {stx,sty,stz,0,0,0};
     for(int i=1;i<=n;i++)
     {
-        cin>>store[i].x>>store[i].y>>store[i].z;
-        cin>>store[i].i>>store[i].j>>store[i].k;
+        cin >> store[i].x>>store[i].y>>store[i].z;
+        cin >> store[i].i>>store[i].j>>store[i].k;
     }
     fly(0,0,0,0,0);
     cout<<mn;
