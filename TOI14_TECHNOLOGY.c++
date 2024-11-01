@@ -18,5 +18,4 @@ long long calcdis(int ii,int jj){
 void fly(ll dis,int cur,int i,int j,int k)
 {
     int o;
-
 }
