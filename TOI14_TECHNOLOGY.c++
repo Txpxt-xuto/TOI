@@ -18,12 +18,14 @@ long long calcdis(int ii,int jj){
     return (store[ii].x-store[jj].x)*(store[ii].x-store[jj].x)+(store[ii].y-store[jj].y)*(store[ii].y-store[jj].y)+(store[ii].z-store[jj].z)*(store[ii].z-store[jj].z);
 }
 void fly(ll dis,int cur,int i,int j,int k){
-    if(i>=want && j>=want && k>=want){
+    if(i>=want && j>=want && k>=want)
+    {
         mn = min(dis,mn);
         return;
     }
-    for(int o=1;o<=n;o++){
-        if(vis[o])continue;
+    for(int o=1;o<=n;o++)
+    {
+        if(vis[o]) continue;
         vis[o]=1;
         fly(calcdis(cur,o)+dis,o,i+store[o].i,j+store[o].j,k+store[o].k);
         vis[o]=0;
