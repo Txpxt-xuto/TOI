@@ -39,8 +39,8 @@ bool key(string s){
     return false;
 }
  
-int main(){
- 
+int main()
+{
     scanf("%s",ar1);
     scanf("%s",ar2);
     l1 = strlen(ar1);
