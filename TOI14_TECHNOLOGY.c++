@@ -5,5 +5,4 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <bits/stdc++.h>
-using namespace std;
-using pi = pair <int, int>;
+using namespace 
