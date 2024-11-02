@@ -18,8 +18,7 @@ bool key(string s)
     {
         int a1 = q.front().first;
         int a2 = q.front().second;
-        q.pop();
-        visited[a1][a2] = true;
+        
     }
     return false;
 }
