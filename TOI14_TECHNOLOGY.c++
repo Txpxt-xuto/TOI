@@ -50,12 +50,10 @@ int main(){
     scanf("%d", &n);
  
     while(n--){
- 
         string s;
         cin >> s;
         if(key(s)) printf("Yes\n");
         else printf("No\n");
- 
     }
     return 0;
 }
