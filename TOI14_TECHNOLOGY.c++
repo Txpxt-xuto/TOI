@@ -41,8 +41,8 @@ bool key(string s){
  
 int main(){
  
-    scanf("%s", ar1);
-    scanf("%s", ar2);
+    scanf("%s",ar1);
+    scanf("%s",ar2);
     l1 = strlen(ar1);
     l2 = strlen(ar2);
     int n;
