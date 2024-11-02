@@ -16,7 +16,6 @@ bool key(string s)
     q.push({0, 0});
     while(q.size() > 0)
     {
-        int a1 = q.front().first;
-        int a2 = q.front().second;
+
     }
 }
