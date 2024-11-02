@@ -15,6 +15,4 @@ bool key(string s)
     vector < vector <bool>> visited(l1 + 2, vector <bool> (l2 + 2, false));
     q.push({0, 0});
     while(q.size() > 0)
-    {
-    }
 }
