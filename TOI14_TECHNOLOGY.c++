@@ -29,6 +29,5 @@ bool key(string s)
 }
 int main()
 {
-    scanf("%s",ar1);
-    scanf("%s",ar2);
+
 }
