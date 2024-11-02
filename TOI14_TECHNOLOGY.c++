@@ -24,7 +24,6 @@ bool key(string s){
         int a2 = q.front().second;
         q.pop();
         if(a1 == l1 and a2 == l2) return true;
-            return true;
         if(a1 + a2 >= s.size() or visited[a1][a2]) continue;
         visited[a1][a2] = true;
         if(!visited[a1+1][a2] and (s[a1+a2] == ar1[a1] or a2 == l2 and s[a1+a2] == ar1[a1])) q.push({a1+1, a2});
