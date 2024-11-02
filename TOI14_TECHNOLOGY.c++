@@ -35,6 +35,5 @@ int main()
     l2 = strlen(ar2);
     int n;
     scanf("%d",&n);
-
     return 0;
 }
