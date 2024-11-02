@@ -49,7 +49,8 @@ int main(){
     int n;
     scanf("%d", &n);
  
-    while(n--){
+    while(n--)
+    {
         string s;
         cin >> s;
         if(key(s)) printf("Yes\n");
