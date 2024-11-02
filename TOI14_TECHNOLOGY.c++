@@ -16,6 +16,5 @@ bool key(string s)
     q.push({0, 0});
     while(q.size() > 0)
     {
-
     }
 }
