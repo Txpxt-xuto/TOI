@@ -27,4 +27,3 @@ bool key(string s)
     }
     return false;
 }
-int ma
