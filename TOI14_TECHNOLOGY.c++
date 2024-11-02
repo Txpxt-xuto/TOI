@@ -27,7 +27,7 @@ bool key(string s){
         if(a1 == l1 and a2 == l2)
             return true;
         if(a1 + a2 >= s.size() or visited[a1][a2]) continue;
-            continue;
+
         visited[a1][a2] = true;
         if(!visited[a1+1][a2] and (s[a1+a2] == ar1[a1] or a2 == l2 and s[a1+a2] == ar1[a1])) q.push({a1+1, a2});
         if(!visited[a1][a2+1] and (s[a1+a2] == ar2[a2] or a1 == l1 and s[a1+a2] == ar2[a2])) q.push({a1, a2+1});
