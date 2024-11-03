@@ -10,6 +10,3 @@ CENTER: Home
 using namespace std;
 #define int long long
 #define pii pair <int,int>
-#define pipii pair <int,pii>
-#define f first
-#define s second
