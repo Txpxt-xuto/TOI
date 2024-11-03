@@ -14,5 +14,4 @@ using namespace std;
 #define f first
 #define s second
 const int N=1005;
-int dx[]={0,0,-1,1};
-int dy[]={-1,1,0,0};
+int dx[]={0,0,-
