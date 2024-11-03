@@ -25,6 +25,4 @@ void slove()
     while(!pq.empty()) pq.pop();
     memset(a,0,sizeof(a));
     memset(vis,false,sizeof(vis));
-    sum = mx = 0;
-    cin >> n >> m >> sy >> sx;
 }
