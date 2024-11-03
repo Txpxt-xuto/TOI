@@ -55,6 +55,3 @@ signed main()
     cin >> t;
     while(t--) slove();
 }
-/*
-1
-2
