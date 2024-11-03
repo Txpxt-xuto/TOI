@@ -27,7 +27,4 @@ void slove()
     memset(vis,false,sizeof(vis));
     sum = mx = 0;
     cin >> n >> m >> sy >> sx;
-    for(int i=1;i<=n;i++) for(int j=1;j<=n;j++) cin >> a[i][j];
-    pq.push({a[sy][sx],{sy,sx}});
-    vis[sy][sx]=1;
 }
