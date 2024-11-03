@@ -49,6 +49,3 @@ void slove()
         }
     }
 }
-signed main()
-{
-}
