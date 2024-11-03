@@ -32,9 +32,5 @@ void slove()
     vis[sy][sx]=1;
     while(!pq.empty())
     {
-        int d_u=pq.top().f,y=pq.top().s.f,x=pq.top().s.s;
-        pq.pop();
-        sum+=d_u;
-        mx=max(mx,d_u);
     }
 }
