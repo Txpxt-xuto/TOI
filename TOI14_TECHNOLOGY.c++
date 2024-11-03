@@ -25,21 +25,24 @@ void slove(){
     while(!pq.empty()) pq.pop();
     memset(a,0,sizeof(a));
     memset(vis,false,sizeof(vis));
-    sum=mx=0;
+    sum = mx = 0;
     cin >> n >> m >> sy >> sx;
     for(int i=1;i<=n;i++) for(int j=1;j<=n;j++) cin >> a[i][j];
     pq.push({a[sy][sx],{sy,sx}});
     vis[sy][sx]=1;
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         int d_u=pq.top().f,y=pq.top().s.f,x=pq.top().s.s;
         pq.pop();
         sum+=d_u;
         mx=max(mx,d_u);
-        if(sum>=m){
+        if(sum>=m)
+        {
             cout << mx << "\n";
             return ;
         }
-        for(int i=0;i<4;i++){
+        for(i=0;i<4;i++)
+        {
             int yy=y+dy[i],xx=x+dx[i];
             if(yy<1 || yy>n || xx<1 || xx>n) continue;
             if(!vis[yy][xx]) pq.push({a[yy][xx],{yy,xx}}),vis[yy][xx]=1;
