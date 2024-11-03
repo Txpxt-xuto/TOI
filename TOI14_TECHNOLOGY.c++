@@ -16,11 +16,9 @@ using namespace std;
 const int N=1005;
 int dx[]={0,0,-1,1};
 int dy[]={-1,1,0,0};
-
 int n,m,sum,mx,a[N][N],sy,sx;
 bool vis[N][N];
 priority_queue <pipii,vector<pipii>,greater<pipii>> pq;
-
 void slove()
 {
     int i;
