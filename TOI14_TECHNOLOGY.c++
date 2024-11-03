@@ -21,7 +21,9 @@ int n,m,sum,mx,a[N][N],sy,sx;
 bool vis[N][N];
 priority_queue <pipii,vector<pipii>,greater<pipii>> pq;
 
-void slove(){
+void slove()
+{
+    int i;
     while(!pq.empty()) pq.pop();
     memset(a,0,sizeof(a));
     memset(vis,false,sizeof(vis));
