@@ -36,10 +36,5 @@ void slove()
         pq.pop();
         sum+=d_u;
         mx=max(mx,d_u);
-        if(sum>=m)
-        {
-            cout << mx << "\n";
-            return ;
-        }
     }
 }
