@@ -23,6 +23,4 @@ void slove()
 {
     int i;
     while(!pq.empty()) pq.pop();
-    memset(a,0,sizeof(a));
-    memset(vis,false,sizeof(vis));
 }
