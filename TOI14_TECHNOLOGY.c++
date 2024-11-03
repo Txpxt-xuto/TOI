@@ -13,5 +13,3 @@ using namespace std;
 #define pipii pair <int,pii>
 #define f first
 #define s second
-const int N=1005;
-int dx[]={0,0,-
