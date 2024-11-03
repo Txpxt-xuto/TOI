@@ -43,9 +43,6 @@ void slove()
         }
         for(i=0;i<4;i++)
         {
-            int yy=y+dy[i],xx=x+dx[i];
-            if(yy<1 || yy>n || xx<1 || xx>n) continue;
-            if(!vis[yy][xx]) pq.push({a[yy][xx],{yy,xx}}),vis[yy][xx]=1;
         }
     }
 }
