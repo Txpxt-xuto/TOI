@@ -19,5 +19,3 @@ int dy[]={-1,1,0,0};
 int n,m,sum,mx,a[N][N],sy,sx;
 bool vis[N][N];
 priority_queue <pipii,vector<pipii>,greater<pipii>> pq;
-void slove()
-}
