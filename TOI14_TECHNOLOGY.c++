@@ -41,8 +41,5 @@ void slove()
             cout << mx << "\n";
             return ;
         }
-        for(i=0;i<4;i++)
-        {
-        }
     }
 }
