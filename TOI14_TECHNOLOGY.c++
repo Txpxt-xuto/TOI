@@ -47,7 +47,7 @@ int main() {
             q.push({t.x + 1, {n, t.y.y}});
         else
             q.push({t.x + 1, {wally[t.y.y][idx] - 1, t.y.y}});
-        if (idx == 0)
+        if(idx == 0)
             q.push({t.x + 1, {1, t.y.y}});
         else
             q.push({t.x + 1, {wally[t.y.y][idx - 1] + 1, t.y.y}});
