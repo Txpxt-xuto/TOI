@@ -61,6 +61,6 @@ int main() {
     else
       q.push({t.x + 1, {t.y.x, wallx[t.y.x][idy - 1] + 1}});
   }
-  cout << ans << endl;
-  return 0;
+    cout << ans << endl;
+    return 0;
 }
