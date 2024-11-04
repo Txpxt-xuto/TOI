@@ -31,7 +31,7 @@ int main() {
     q.push({0, {ex, ey}});
     int ans = -1;
     while (!q.empty()) 
-  {
+    {
     auto t = q.front();
     q.pop();
     if (vis[t.y]) continue;
