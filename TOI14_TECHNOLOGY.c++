@@ -21,7 +21,7 @@ int main() {
   cin >> n >> m >> w;
   int sx, sy, ex, ey;
   cin >> sx >> sy >> ex >> ey;
-  for(int i = 0; i < w; i++)
+  for(i=0;i<w;i++)
   {
     int x, y;
     cin >> x >> y;
