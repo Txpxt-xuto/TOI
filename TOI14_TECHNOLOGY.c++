@@ -26,7 +26,5 @@ int main()
         cin >> x >> y;
         wallx[x].push_back(y);
         wally[y].push_back(x);
-    }
-==
-
+    
 }
