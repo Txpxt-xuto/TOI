@@ -11,4 +11,3 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 map<int, vector<int> > wallx, wally;
 map<pair<int, int>, int> vis;
-queue<pair<int, pair<int, int> > > q;
