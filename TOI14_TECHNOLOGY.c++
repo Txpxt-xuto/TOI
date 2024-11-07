@@ -29,7 +29,5 @@ int main()
     }
     q.push({0, {ex, ey}});
     int ans = -1;
-    while (!q.empty()) 
-    {
-    }
+
 }
