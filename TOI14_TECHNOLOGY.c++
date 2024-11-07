@@ -35,9 +35,6 @@ int main()
         q.pop();
         if (vis[t.y]) continue;
         vis[t.y] = 1;
-        if(t.y == make_pair(sx, sy))
-        {
-        }
 
     }
 }
