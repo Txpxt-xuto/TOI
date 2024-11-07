@@ -21,6 +21,7 @@ signed main()
 			v[m++] = make_tuple(x[0][i] + x[1][j], y[0][i] + y[1][j], i); // a, b
 		}
 	}
+    int i,j;
 	sort(v, v+m); 
 	for(i=0;i<n;++i){
 		for(j=0;j<n;++j)
