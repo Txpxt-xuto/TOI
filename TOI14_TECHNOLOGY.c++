@@ -22,6 +22,5 @@ int main()
     cin >> sx >> sy >> ex >> ey;
         int x, y;
         cin >> x >> y;
-        wallx[x].push_back(y);
     
 }
