@@ -18,5 +18,4 @@ int main()
     cin.tie(NULL);
     int n, m, w;
     cin >> n >> m >> w;
-    int sx, sy, ex, ey;
 }
