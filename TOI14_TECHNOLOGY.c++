@@ -20,5 +20,4 @@ int main()
     cin >> n >> m >> w;
     int sx, sy, ex, ey;
     cin >> sx >> sy >> ex >> ey;
-    
 }
