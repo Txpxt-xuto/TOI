@@ -4,8 +4,6 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-//toi9_wizards
-//meet in the middle + find (binary search)
 #include <cstdio>
 #include <algorithm>
 #include <tuple>
