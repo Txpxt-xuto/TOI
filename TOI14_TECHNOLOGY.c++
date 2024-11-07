@@ -44,7 +44,5 @@ int main()
         if(idx == wally[t.y.y].size()) q.push({t.x + 1, {n, t.y.y}}); 
         else q.push({t.x + 1, {wally[t.y.y][idx] - 1, t.y.y}});   
         if(idx == 0) q.push({t.x + 1, {1, t.y.y}});
-        else  q.push({t.x + 1, {wally[t.y.y][idx - 1] + 1, t.y.y}});
-        int idy = upper_bound(all(wallx[t.y.x]), t.y.y) - wallx[t.y.x].begin();
     }
 }
