@@ -31,7 +31,5 @@ int main()
     int ans = -1;
     while (!q.empty()) 
     {
-        auto t = q.front();
-        q.pop();
     }
 }
