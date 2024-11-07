@@ -27,7 +27,6 @@ int main()
         wallx[x].push_back(y);
         wally[y].push_back(x);
     }
-    q.push({0, {ex, ey}});
-    int ans = -1;
+==
 
 }
