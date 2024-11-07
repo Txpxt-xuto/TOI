@@ -20,7 +20,7 @@ int main()
     cin >> n >> m >> w;
     int sx, sy, ex, ey;
     cin >> sx >> sy >> ex >> ey;
-        int x, y;
-        cin >> x >> y;
+    int x, y;
+    cin >> x >> y;
     
 }
