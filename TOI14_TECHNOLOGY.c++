@@ -40,7 +40,6 @@ int main()
             ans = t.x;
             break;
         }
-        int idx = upper_bound(all(wally[t.y.y]), t.y.x) - wally[t.y.y].begin();
 
     }
 }
