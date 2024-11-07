@@ -10,4 +10,3 @@ using namespace std;
 #define y second
 #define all(x) x.begin(), x.end()
 map<int, vector<int> > wallx, wally;
-map<pair<int, int>, int> vis;
