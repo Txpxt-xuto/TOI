@@ -35,6 +35,5 @@ int main()
         q.pop();
         if (vis[t.y]) continue;
         vis[t.y] = 1;
-
     }
 }
