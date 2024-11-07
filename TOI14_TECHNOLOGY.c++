@@ -37,8 +37,6 @@ int main()
         vis[t.y] = 1;
         if(t.y == make_pair(sx, sy))
         {
-            ans = t.x;
-            break;
         }
 
     }
