@@ -14,5 +14,4 @@ map<pair<int, int>, int> vis;
 queue<pair<int, pair<int, int> > > q;
 int main()
 {
-    ios_base::sync_with_stdio(false);
 }
