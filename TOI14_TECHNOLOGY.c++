@@ -25,7 +25,7 @@ signed main()
 	for(int i = 0; i<n; ++i){
 		for(int j = 0; j<n; ++j){
 			tg = make_tuple(xt - x[2][i] - x[3][j], yt - y[2][i] - y[3][j], -1); // c, d
-			itr = lower_bound(v, v+m, tg); //search ans
+			itr = lower_bound(v, v+m, tg);
 			if(itr != v+m){
 				int f = get<0>(tg), s = get<1>(tg);
 				int ff = get<0>(*itr), ss = get<1>(*itr), ii = get<2>(*itr);
