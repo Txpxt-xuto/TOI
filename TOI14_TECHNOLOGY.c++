@@ -7,4 +7,3 @@ CENTER: Home
 #include <bits/stdc++.h>
 using namespace std;
 #define x first
-map<int, vector<int> > wallx, wally;
