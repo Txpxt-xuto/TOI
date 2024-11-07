@@ -29,7 +29,8 @@ signed main()
 			if(itr != v+m){
 				int f = get<0>(tg), s = get<1>(tg);
 				int ff = get<0>(*itr), ss = get<1>(*itr), ii = get<2>(*itr);
-				if(f == ff && s == ss){
+				if(f == ff && s == ss)
+                {
 					printf("%d %d\n%d % d\n%d %d\n%d %d", x[0][ii], y[0][ii], f - x[0][ii], s - y[0][ii], x[2][i], y[2][i], x[3][j], y[3][j]);
 					return 0;
 				}
