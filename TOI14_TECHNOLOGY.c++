@@ -33,7 +33,5 @@ int main()
     {
         auto t = q.front();
         q.pop();
-        if (vis[t.y]) continue;
-        vis[t.y] = 1;
     }
 }
