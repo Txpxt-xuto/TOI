@@ -62,7 +62,8 @@ int32_t main(){
                     m[i].push_back({j, (adj[i][j][s/2] + adj[i][j][s/2 - 1]) / 2});
                     m[j].push_back({i, (adj[i][j][s/2] + adj[i][j][s/2 - 1]) / 2});
                 }
-                else{
+                else
+				{
                     m[i].push_back({j, adj[i][j][s/2]});
                     m[j].push_back({i, adj[i][j][s/2]});
                 }
