@@ -30,7 +30,6 @@ signed main()
 			itr = lower_bound(v, v+m, tg);
 			if(itr != v+m)
             {
-				int f = get<0>(tg), s = get<1>(tg);
 			}
 		}
 	}
