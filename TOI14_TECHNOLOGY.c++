@@ -70,7 +70,8 @@ int32_t main(){
         }
     }
     dfs(0);
-    if(broken){
+    if(broken)
+	{
         cout << "broken";
         return 0;
     }
