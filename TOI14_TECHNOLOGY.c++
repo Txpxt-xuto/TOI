@@ -14,5 +14,4 @@ signed main()
 {
 	int xt, yt, n, m = 0, i, j;
     scanf("%d %d %d", &xt, &yt, &
-
 }
