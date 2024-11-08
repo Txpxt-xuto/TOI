@@ -31,7 +31,6 @@ signed main()
 			if(itr != v+m)
             {
 				int f = get<0>(tg), s = get<1>(tg);
-				int ff = get<0>(*itr), ss = get<1>(*itr), ii = get<2>(*itr);
 			}
 		}
 	}
