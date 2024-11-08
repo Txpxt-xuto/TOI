@@ -22,7 +22,8 @@ void dfs(int n){
     int size = m[n].size();
     int idx = 0, mn = INT_MAX;
     bool found = false;
-    for(int i = 0; i < size; i++){
+    for(i=0;i<size;i++)
+	{
         if(!visited[m[n][i].first] && m[n][i].second < mn)
 		{
             idx = i;
