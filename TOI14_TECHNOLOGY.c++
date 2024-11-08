@@ -53,9 +53,9 @@ int32_t main(){
         adj[a][b].push_back(l);
         adj[b][a].push_back(l);
     }
-    for(i=0; i <= 27; i++)
+    for(i=0;i<=27;i++)
 	{
-        for(j=0; j <= 27; j++)
+        for(j=0;j<=27;j++)
 		{
             if(!adj[i][j].empty())
 			{
