@@ -39,7 +39,7 @@ int32_t main(){
     cin.tie(NULL)->sync_with_stdio(false);
     int n,i,t;
     cin >> n;
-    for(i = 0; i < n; i++)
+    for(i=0;i<n;i++)
 	{
         char ch1, ch2;
         int l;
