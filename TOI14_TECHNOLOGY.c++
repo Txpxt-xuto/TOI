@@ -35,7 +35,8 @@ void dfs(int n){
     }
 }
 
-int32_t main(){
+int32_t main()
+{
     cin.tie(NULL)->sync_with_stdio(false);
     int n,i,t;
     cin >> n;
