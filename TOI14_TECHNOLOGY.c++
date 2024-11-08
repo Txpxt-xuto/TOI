@@ -80,7 +80,7 @@ int32_t main(){
         if(ans[i].first == 0){
             ch1 = 'X';
         }
-        else if(ans[i].first == 27){
+        else if(ans[i].first == 27) ch1 = 'Y';
             ch1 = 'Y';
         }
         else ch1 = (ans[i].first - 1) + 'a';
