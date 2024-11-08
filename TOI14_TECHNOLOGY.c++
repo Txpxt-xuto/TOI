@@ -14,7 +14,8 @@ bool broken = true;
 vector <bool> visited(28, false);
 vector <pair <int, pair <int, double>>> ans;
 
-void dfs(int n){
+void dfs(int n)
+{
     if(n == 27) broken = false;
     visited[n] = true;
     int size = m[n].size();
