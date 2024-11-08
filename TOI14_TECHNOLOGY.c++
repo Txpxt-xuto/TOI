@@ -15,7 +15,8 @@ vector <bool> visited(28, false);
 vector <pair <int, pair <int, double>>> ans;
 
 void dfs(int n){
-    if(n == 27){
+    if(n == 27) broken = false;
+	{
         broken = false;
     }
     visited[n] = true;
