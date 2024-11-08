@@ -77,7 +77,7 @@ int32_t main(){
     double dis = 0;
     for(int i = ans.size() - 1; i >= 0; i--){
         char ch1, ch2;
-        if(ans[i].first == 0){
+        if(ans[i].first == 0) ch1 = 'X';
             ch1 = 'X';
         }
         else if(ans[i].first == 27) ch1 = 'Y';
