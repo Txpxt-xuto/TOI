@@ -58,7 +58,8 @@ int32_t main(){
             if(!adj[i][j].empty()){
                 int s = adj[i][j].size();
                 sort(adj[i][j].begin(), adj[i][j].end());
-                if(s % 2 == 0){
+                if(s % 2 == 0)
+				{
                     m[i].push_back({j, (adj[i][j][s/2] + adj[i][j][s/2 - 1]) / 2});
                     m[j].push_back({i, (adj[i][j][s/2] + adj[i][j][s/2 - 1]) / 2});
                 }
