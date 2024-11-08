@@ -29,12 +29,12 @@ void dfs(int n){
             found = true;
         }
     }
-    if (found) {
+    if(found)
+	{
         dfs(m[n][idx].first);
         if (!broken) ans.push_back({n, {m[n][idx].first, m[n][idx].second}});
     }
 }
-
 int32_t main()
 {
     cin.tie(NULL)->sync_with_stdio(false);
