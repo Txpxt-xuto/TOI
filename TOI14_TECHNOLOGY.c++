@@ -28,9 +28,6 @@ signed main()
         {
 			tg = make_tuple(xt - x[2][i] - x[3][j], yt - y[2][i] - y[3][j], -1);
 			itr = lower_bound(v, v+m, tg);
-			if(itr != v+m)
-            {
-			}
 		}
 	}
 }
