@@ -54,7 +54,8 @@ int32_t main(){
         adj[b][a].push_back(l);
     }
     for(int i = 0; i <= 27; i++){
-        for(int j = 0; j <= 27; j++){
+        for(int j = 0; j <= 27; j++)
+		{
             if(!adj[i][j].empty()){
                 int s = adj[i][j].size();
                 sort(adj[i][j].begin(), adj[i][j].end());
