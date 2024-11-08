@@ -16,7 +16,7 @@ signed main()
     scanf("%d %d %d", &xt, &yt, &n);
 	for(t=0;t<4;++t)
     {
-		for(i=0;i<n;++i) scanf("%d %d", &x[t][i], &y[t][i]);
+
 	}
 
 }
