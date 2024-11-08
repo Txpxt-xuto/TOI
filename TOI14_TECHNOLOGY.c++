@@ -7,7 +7,6 @@ CENTER: Home
 #include <bits/stdc++.h>
 #define int long long
 using namespace std;
-
 vector <double> adj[28][28];
 vector <pair <int, double>> m[28];
 bool broken = true;
