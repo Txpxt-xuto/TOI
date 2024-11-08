@@ -87,8 +87,6 @@ int32_t main(){
             ch1 = (ans[i].first - 1) + 'a';
         }
         if(ans[i].second.first == 0) ch2 = 'X';
-            ch2 = 'X';
-        }
         else if(ans[i].second.first == 27) ch2 = 'Y';
         else ch2 = (ans[i].second.first - 1) + 'a';
         cout << ch1 << ' ' << ch2 << ' ' << fixed << setprecision(1) << ans[i].second.second << '\n';
