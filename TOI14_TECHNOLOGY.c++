@@ -18,6 +18,5 @@ signed main()
     {
 		for(i=0;i<n;++i) scanf("%d %d", &x[t][i], &y[t][i]);
 	}
-	for(i=0;i<n;++i)
 
 }
