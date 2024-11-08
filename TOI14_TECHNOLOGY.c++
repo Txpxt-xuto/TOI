@@ -10,6 +10,3 @@ CENTER: Home
 using namespace std;
 int x[4][1500], y[4][1500];
 tuple<int,int,int> v[2250000], tg, *itr;
-signed main()
-{
-}
