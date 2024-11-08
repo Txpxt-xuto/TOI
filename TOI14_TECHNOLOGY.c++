@@ -37,9 +37,10 @@ void dfs(int n){
 
 int32_t main(){
     cin.tie(NULL)->sync_with_stdio(false);
-    int n;
+    int n,i,t;
     cin >> n;
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++)
+	{
         char ch1, ch2;
         int l;
         cin >> ch1 >> ch2 >> l;
