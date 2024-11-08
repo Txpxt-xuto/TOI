@@ -32,7 +32,7 @@ void dfs(int n){
     if(found)
 	{
         dfs(m[n][idx].first);
-        if (!broken) ans.push_back({n, {m[n][idx].first, m[n][idx].second}});
+        if(!broken) ans.push_back({n, {m[n][idx].first, m[n][idx].second}});
     }
 }
 int32_t main()
