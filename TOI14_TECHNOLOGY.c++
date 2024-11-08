@@ -15,8 +15,5 @@ signed main()
 	int xt, yt, n, m = 0, i, j;
     scanf("%d %d %d", &xt, &yt, &n);
 	for(t=0;t<4;++t)
-    {
-
-	}
 
 }
