@@ -34,8 +34,3 @@ void dfs(int n)
         if(!broken) ans.push_back({n, {m[n][idx].first, m[n][idx].second}});
     }
 }
-int32_t main()
-{
-
-
-}
