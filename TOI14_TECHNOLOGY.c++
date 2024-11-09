@@ -77,7 +77,6 @@ int32_t main()
     }
     for(i=ans.size()-1;i>=0;i--)
     {
-        cout << ch1 << ' ' << ch2 << ' ' << fixed << setprecision(1) << ans[i].second.second << '\n';
         dis += ans[i].second.second;
     }
     cout << fixed << setprecision(1) << dis;
