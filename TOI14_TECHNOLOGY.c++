@@ -75,7 +75,6 @@ int32_t main()
             }
         }
     }
-    dfs(0);
     if(broken)
     double dis = 0;
     for(int i = ans.size() - 1; i >= 0; i--){
