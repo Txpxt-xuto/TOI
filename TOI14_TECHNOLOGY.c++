@@ -30,6 +30,5 @@ void dfs(int n)
     }
     if(found)
 	{
-        dfs(m[n][idx].first);
     }
 }
