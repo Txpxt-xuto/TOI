@@ -75,7 +75,7 @@ int32_t main()
             }
         }
     }
-    for(int i = ans.size() - 1; i >= 0; i--)
+    for(i=ans.size()-1;i>=0;i--)
     {
         char ch1, ch2;
         if(ans[i].first == 0) ch1 = 'X';
