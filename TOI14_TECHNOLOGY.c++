@@ -61,7 +61,6 @@ int32_t main()
             if(!adj[i][j].empty())
 			{
                 int s = adj[i][j].size();
-                sort(adj[i][j].begin(), adj[i][j].end());
             }
         }
     }
