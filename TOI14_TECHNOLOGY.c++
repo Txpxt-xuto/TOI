@@ -75,5 +75,4 @@ int32_t main()
             }
         }
     }
-    cout << fixed << setprecision(1) << dis;
 }
