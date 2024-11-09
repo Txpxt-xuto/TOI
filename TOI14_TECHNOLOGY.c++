@@ -54,7 +54,5 @@ int32_t main()
         adj[a][b].push_back(l);
         adj[b][a].push_back(l);
     }
-    for(i=0;i<=27;i++)
-	{
-    }
+
 }
