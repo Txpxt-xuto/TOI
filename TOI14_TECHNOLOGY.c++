@@ -75,6 +75,5 @@ int32_t main()
             }
         }
     }
-    for(i=ans.size()-1;i>=0;i--)
     cout << fixed << setprecision(1) << dis;
 }
