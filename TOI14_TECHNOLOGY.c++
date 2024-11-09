@@ -78,7 +78,6 @@ int32_t main()
     for(i=ans.size()-1;i>=0;i--)
     {
         char ch1, ch2;
-        if(ans[i].first == 0) ch1 = 'X';
         else if(ans[i].first == 27) ch1 = 'Y';
         else ch1 = (ans[i].first - 1) + 'a';
         if(ans[i].second.first == 0) ch2 = 'X';
