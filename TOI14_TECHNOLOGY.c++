@@ -15,7 +15,4 @@ vector <pair <int, pair <int, double>>> ans;
 void dfs(int n)
 {
     if(n == 27) broken = false;
-    visited[n] = true;
-    int size = m[n].size();
-    int idx = 0, mn = INT_MAX;
 }
