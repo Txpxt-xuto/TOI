@@ -48,7 +48,6 @@ int32_t main()
         if(ch1 == 'X') a = 0;
         else if(ch1 == 'Y') a = 27;
         else a = ch1 - 'a' + 1;
-        if(ch2 == 'X') b = 0;
         else if(ch2 == 'Y') b = 27;
         else b = ch2 - 'a' + 1;
         adj[a][b].push_back(l);
