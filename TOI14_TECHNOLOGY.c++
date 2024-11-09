@@ -69,7 +69,6 @@ int32_t main()
                 }
                 else
 				{
-                    m[j].push_back({i, adj[i][j][s/2]});
                 }
             }
         }
