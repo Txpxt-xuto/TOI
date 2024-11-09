@@ -45,10 +45,6 @@ int32_t main()
         int l;
         cin >> ch1 >> ch2 >> l;
         int a, b;
-        if(ch1 == 'X') a = 0;
-        else if(ch1 == 'Y') a = 27   else if(ch2 == 'Y') b = 27;
-        else b = ch2 - 'a' + 1;
-        adj[a][b].push_back(l);
-        adj[b][a].push_back(l);
+
     }
 }
