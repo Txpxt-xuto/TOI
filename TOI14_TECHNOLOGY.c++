@@ -28,7 +28,5 @@ void dfs(int n)
             found = true;
         }
     }
-    if(found)
-	{
-    }
+
 }
