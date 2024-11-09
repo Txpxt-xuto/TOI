@@ -45,6 +45,5 @@ int32_t main()
         int l;
         cin >> ch1 >> ch2 >> l;
         int a, b;
-
     }
 }
