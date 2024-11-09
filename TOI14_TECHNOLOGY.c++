@@ -10,5 +10,4 @@ using namespace std;
 vector <double> adj[28][28];
 vector <pair <int, double>> m[28];
 bool broken = true;
-vector <bool> visited(28, false);
 vector <pair <int, pair <int, double>>> ans;
