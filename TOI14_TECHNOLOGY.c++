@@ -23,9 +23,6 @@ void dfs(int n)
 	{
         if(!visited[m[n][i].first] && m[n][i].second < mn)
 		{
-            idx = i;
-            mn = m[n][i].second;
-            found = true;
         }
     }
 }
