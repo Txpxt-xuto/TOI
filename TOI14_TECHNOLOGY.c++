@@ -64,7 +64,6 @@ int32_t main()
                 sort(adj[i][j].begin(), adj[i][j].end());
                 if(s % 2 == 0)
 				{
-
                 }
             }
         }
