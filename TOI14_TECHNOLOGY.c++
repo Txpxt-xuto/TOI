@@ -41,9 +41,5 @@ int32_t main()
     cin >> n;
     for(i=0;i<n;i++)
 	{
-        char ch1, ch2;
-        int l;
-        cin >> ch1 >> ch2 >> l;
-        int a, b;
     }
 }
