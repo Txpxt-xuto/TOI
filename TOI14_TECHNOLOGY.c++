@@ -58,9 +58,6 @@ int32_t main()
 	{
         for(j=0;j<=27;j++)
 		{
-            if(!adj[i][j].empty())
-			{
-            }
         }
     }
 }
