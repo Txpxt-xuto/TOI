@@ -75,7 +75,6 @@ int32_t main()
             }
         }
     }
-    if(broken)
     double dis = 0;
     for(int i = ans.size() - 1; i >= 0; i--){
         char ch1, ch2;
