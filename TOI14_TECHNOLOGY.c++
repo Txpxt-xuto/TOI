@@ -78,8 +78,6 @@ int32_t main()
     for(i=ans.size()-1;i>=0;i--)
     {
         char ch1, ch2;
-        else if(ans[i].first == 27) ch1 = 'Y';
-        else if(ans[i].second.first == 27) ch2 = 'Y';
         cout << ch1 << ' ' << ch2 << ' ' << fixed << setprecision(1) << ans[i].second.second << '\n';
         dis += ans[i].second.second;
     }
