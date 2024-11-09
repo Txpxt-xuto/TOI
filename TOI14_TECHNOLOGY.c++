@@ -6,6 +6,5 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 #define int long long
-using namespace std;[28];
-bool broken = true;
+using namespace std;bool broken = true;
 vector <pair <int, pair <int, double>>> ans;
