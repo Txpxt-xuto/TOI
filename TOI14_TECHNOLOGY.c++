@@ -45,17 +45,20 @@ int main(){
         memset(changed,0,sizeof(changed));
         memset(low,0,sizeof(low));
         for(int i=0; i<2*n; i++) cin >> arr[i];
-        for(int i=0; i<m/2; i++){
+        for(int i=0; i<m/2; i++)
+        {
             cin >> a >> b;
             opp[a]=b;
             opp[b]=a;
         }
-        for(int i=0; i<n; i++){
+        for(int i=0; i<n; i++)
+        {
             graph[opp[arr[2*i]]].insert(arr[2*i+1]);
             graph[opp[arr[2*i+1]]].insert(arr[2*i]);
         }
         for(int i=1; i<=m; i++) if(!low[i]) tarjan(i);
-        for(int i=1; i<=m; i++) if(low[i]==low[opp[i]]){
+        for(int i=1; i<=m; i++) if(low[i]==low[opp[i]])
+        {
             cout << 'N';
             goto exit;
         }
