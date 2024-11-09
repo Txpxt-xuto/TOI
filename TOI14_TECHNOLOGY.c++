@@ -20,6 +20,4 @@ void dfs(int n)
     int idx = 0, mn = INT_MAX;
     bool found = false;
     for(i=0;i<size;i++)
-
-    
 }
