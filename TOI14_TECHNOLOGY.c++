@@ -54,9 +54,6 @@ int main()
         for(int i=0; i<2*n; i++) cin >> arr[i];
         for(int i=0; i<m/2; i++)
         {
-            cin >> a >> b;
-            opp[a]=b;
-            opp[b]=a;
         }
     }
 }
