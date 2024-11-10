@@ -63,6 +63,6 @@ int main()
             graph[opp[arr[2*i]]].insert(arr[2*i+1]);
             graph[opp[arr[2*i+1]]].insert(arr[2*i]);
         }
-        for(int i=1; i<=m; i++) if(!low[i]) tarjan(i);
+
     }
 }
