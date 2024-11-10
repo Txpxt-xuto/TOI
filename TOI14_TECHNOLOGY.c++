@@ -52,8 +52,5 @@ int main()
         memset(changed,0,sizeof(changed));
         memset(low,0,sizeof(low));
         for(int i=0; i<2*n; i++) cin >> arr[i];
-        for(int i=0; i<m/2; i++)
-        {
-        }
     }
 }
