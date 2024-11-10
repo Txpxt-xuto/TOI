@@ -24,9 +24,6 @@ void tarjan(int cur)
     {
         while(st.top()!=cur)
         {
-            low[st.top()]=cur;
-            onstack[st.top()]=false;
-            st.pop();
         }
     }
 }
