@@ -9,4 +9,3 @@ CENTER: Home
 using namespace std;
 int n,m,now,opp[MAXM],low[MAXM];
 vector<set<int>> graph;
-st
