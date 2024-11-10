@@ -18,6 +18,5 @@ void tarjan(int cur)
     st.push(cur);
     for(auto v: graph[cur])
     {
-        if(!low[v]) tarjan(v);
     }
 }
