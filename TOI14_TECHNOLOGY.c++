@@ -69,7 +69,6 @@ int main()
             cout << 'N';
             goto exit;
         }
-        cout << 'Y';
         exit:;
     }
 }
