@@ -22,8 +22,5 @@ void tarjan(int cur)
     }
     if(!changed[cur])
     {
-        while(st.top()!=cur)
-        {
-        }
     }
 }
