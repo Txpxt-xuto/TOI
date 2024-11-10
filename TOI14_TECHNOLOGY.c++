@@ -45,6 +45,5 @@ int main()
     for(int t=0; t<5; t++)
     {
         cin >> n >> m;
-        graph.resize(m+1);
     }
 }
