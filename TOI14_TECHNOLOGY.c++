@@ -8,4 +8,3 @@ CENTER: Home
 #define MAXM 200010
 using namespace std;
 int n,m,now,opp[MAXM],low[MAXM];
-vector<set<int>> graph;
