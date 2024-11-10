@@ -44,6 +44,5 @@ int main()
     int a,b;
     for(int t=0; t<5; t++)
     {
-        cin >> n >> m;
     }
 }
