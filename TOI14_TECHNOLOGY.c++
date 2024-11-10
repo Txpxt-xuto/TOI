@@ -61,7 +61,7 @@ int main()
         for(int i=0; i<n; i++)
         {
             graph[opp[arr[2*i]]].insert(arr[2*i+1]);
-            graph[opp[arr[2*i+1]]].insert(arr[2*i]);
+
         }
 
     }
