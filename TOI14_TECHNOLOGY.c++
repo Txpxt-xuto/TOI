@@ -6,4 +6,3 @@ CENTER: Home
 */
 #include <bits/stdc++.h>
 #define MAXM 200010
-using namespace std;
