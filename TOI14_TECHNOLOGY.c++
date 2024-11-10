@@ -28,6 +28,5 @@ void tarjan(int cur)
             onstack[st.top()]=false;
             st.pop();
         }
-        onstack[cur]=false;
     }
 }
