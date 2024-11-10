@@ -46,6 +46,5 @@ int main()
     {
         cin >> n >> m;
         graph.resize(m+1);
-        for(int i=1; i<=m; i++) graph[i].clear();
     }
 }
