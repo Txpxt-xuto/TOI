@@ -21,8 +21,6 @@ void tarjan(int cur)
         if(!low[v]) tarjan(v);
         if(onstack[v] && low[v]<low[cur])
         {
-            low[cur]=low[v];
-            changed[cur]=true;
         }
     }
     if(!changed[cur])
