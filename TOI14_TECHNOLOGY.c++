@@ -19,9 +19,6 @@ void tarjan(int cur)
     for(auto v: graph[cur])
     {
         if(!low[v]) tarjan(v);
-        if(onstack[v] && low[v]<low[cur])
-        {
-        }
     }
     if(!changed[cur])
     {
