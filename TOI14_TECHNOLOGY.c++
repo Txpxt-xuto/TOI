@@ -72,5 +72,4 @@ int main()
         cout << 'Y';
         exit:;
     }
-    return 0;
 }
