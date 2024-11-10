@@ -58,6 +58,5 @@ int main()
             opp[a]=b;
             opp[b]=a;
         }
-        for(int i=0; i<n; i++)
     }
 }
