@@ -7,4 +7,4 @@ CENTER: Home
 #include <bits/stdc++.h>
 #define MAXM 200010
 using namespace std;
-int n,m,now,opp[MAXM],low[MAXM];
+
