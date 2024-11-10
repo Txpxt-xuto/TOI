@@ -59,7 +59,5 @@ int main()
             opp[b]=a;
         }
         for(int i=0; i<n; i++)
-        {
-        }
     }
 }
