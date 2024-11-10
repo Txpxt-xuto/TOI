@@ -50,6 +50,5 @@ int main()
         now=0;
         int arr[2*n];
         memset(changed,0,sizeof(changed));
-        memset(low,0,sizeof(low));
     }
 }
