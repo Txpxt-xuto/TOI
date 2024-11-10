@@ -13,7 +13,4 @@ stack<int> st;
 bool changed[MAXM],onstack[MAXM];
 void tarjan(int cur)
 {
-    low[cur]=++now;
-    onstack[cur]=true;
-    st.push(cur);
 }
