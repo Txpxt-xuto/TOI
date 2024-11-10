@@ -37,6 +37,3 @@ void tarjan(int cur)
         st.pop();
     }
 }
-int main()
-{
-}
