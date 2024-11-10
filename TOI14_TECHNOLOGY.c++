@@ -20,7 +20,4 @@ void tarjan(int cur)
     {
         if(!low[v]) tarjan(v);
     }
-    if(!changed[cur])
-    {
-    }
 }
