@@ -49,6 +49,5 @@ int main()
         for(int i=1; i<=m; i++) graph[i].clear();
         now=0;
         int arr[2*n];
-        memset(changed,0,sizeof(changed));
     }
 }
