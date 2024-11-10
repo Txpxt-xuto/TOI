@@ -51,6 +51,6 @@ int main()
         int arr[2*n];
         memset(changed,0,sizeof(changed));
         memset(low,0,sizeof(low));
-        for(int i=0; i<2*n; i++) cin >> arr[i];
+
     }
 }
