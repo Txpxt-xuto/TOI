@@ -66,8 +66,6 @@ int main()
         for(int i=1; i<=m; i++) if(!low[i]) tarjan(i);
         for(int i=1; i<=m; i++) if(low[i]==low[opp[i]])
         {
-            cout << 'N';
-            goto exit;
         }
         exit:;
     }
