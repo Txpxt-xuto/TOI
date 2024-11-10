@@ -29,6 +29,5 @@ void tarjan(int cur)
             st.pop();
         }
         onstack[cur]=false;
-        st.pop();
     }
 }
