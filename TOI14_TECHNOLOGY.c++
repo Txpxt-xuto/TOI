@@ -16,5 +16,4 @@ void tarjan(int cur)
     low[cur]=++now;
     onstack[cur]=true;
     st.push(cur);
-    for(auto v: graph[cur])
 }
