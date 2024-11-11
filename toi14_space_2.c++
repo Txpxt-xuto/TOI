@@ -26,7 +26,4 @@ int main()
 			if(c=='1') a[i][j]=true;
 		}
 	}
-	for(i=1;i<=m;i++)
-    {
-	}
 }
