@@ -19,6 +19,5 @@ int main()
 	cin >> n >> m;
 	for(i=1;i<=m;i++)
     {
-		for(j=1;j<=n;j++)
 	}
 }
