@@ -45,9 +45,7 @@ void run(int index) {
             }
         }
         if(sum < min) min = sum;
-		{
-            min = sum;
-        }
+
         return;
     }
     for(i = 0; i < n*m; i++) {
