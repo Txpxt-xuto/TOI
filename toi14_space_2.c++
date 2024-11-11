@@ -45,7 +45,6 @@ int main()
 					q.pop();
 					for(k=0;k<4;k++)
                     {
-
 					}
 				}		
 			}
