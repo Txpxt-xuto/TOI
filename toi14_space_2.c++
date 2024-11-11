@@ -37,7 +37,6 @@ int main()
 				a[i][j]==false;
 				while(!q.empty())
                 {
-					int x = q.front().first,y = q.front().second;
 				}		
 			}
 		}
