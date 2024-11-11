@@ -16,5 +16,4 @@ int main()
     cin.tie(0);
 	int ans1 = 0, ans2 = 0, ans3 = 0;
 	int n, m, i, j, k;
-	cin >> n >> m;
 }
