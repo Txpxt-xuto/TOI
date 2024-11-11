@@ -63,8 +63,8 @@ void run(int index) {
 int main()
 {
     int i, j, k;
-    scanf("%d %d", &n, &m);
-    for(i = 0; i < n; i++)
+    scanf("%d %d",&n,&m);
+    for(i=0;i<n;i++)
 	{
         for(j=0;j<m;j++) scanf("%d", &arr[i][j]);
     }
