@@ -30,9 +30,6 @@ void run(int index) {
         for(i = 0; i < n; i++)
 		{
             for(j = 0; j < m; j++) land[i][j] = 1.0*arr[i][j];
-			{
-                land[i][j] = 1.0*arr[i][j];
-            }
         }
         for(i=0;i<n*m;i++)
 		{
