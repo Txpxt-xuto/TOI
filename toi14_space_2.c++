@@ -56,9 +56,7 @@ int main()
 				}
 				if((xm-xi+1)*(xm-xi+1)==c && (ym-yi+1)*(ym-yi+1)==c) ans1++;			
 				else if(xm-xi==ym-yi) ans2++;
-				else ans3++;
 			}
 		}
 	}
-	
 }
