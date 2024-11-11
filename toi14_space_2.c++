@@ -40,10 +40,7 @@ void run(int index) {
             y = table[i] % m;
             for(j = 0; j < 8; j++)
 			{
-                if(in_range(x+num_x[j], n) && in_range(y+num_y[j], m))
-				{
-                    land[x+num_x[j]][y+num_y[j]] += c;
-                }
+                if(in_range(x+num_x[j], n) && in_range(y+num_y[j], m))  land[x+num_x[j]][y+num_y[j]] += c;
             }
         }
         if(sum < min) min = sum;
