@@ -60,5 +60,5 @@ int main()
 			}
 		}
 	}
-	cout << ans1 << ' ' << ans2 << ' ' << ans3;
+	
 }
