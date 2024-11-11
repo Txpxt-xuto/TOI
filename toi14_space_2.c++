@@ -33,7 +33,6 @@ int main()
             if(a[i][j]==true)
             {
 				int c = 0, xm = i, xi = i, ym = j, yi = j;
-				q.push({i,j});
 				a[i][j]==false;	
 			}
 		}
