@@ -38,7 +38,7 @@ void run(int index) {
             land[table[i] / m][table[i] % m] = 0;
             x = table[i] / m;
             y = table[i] % m;
-            for(j = 0; j < 8; j++)
+            for(j=0;j<8;j++)
 			{
                 if(in_range(x+num_x[j], n) && in_range(y+num_y[j], m)) land[x+num_x[j]][y+num_y[j]] += c;
             }
