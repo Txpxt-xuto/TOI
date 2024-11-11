@@ -11,6 +11,5 @@ int dy[]={1,-1,0,0};
 bool a[10050][2050];
 queue<pair<int,int>> q;
 int main()
-{
-	ios::sync_with_stdio(0); 
+{ 
 }
