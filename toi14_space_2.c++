@@ -18,7 +18,8 @@ int in_range(int x, int a) {
 
 void run(int index) {
     int i;
-    if(index == n * m) {
+    if(index == n * m)
+	{
         int j, x, y;
         double c, sum = 0, land[4][4];
         for(i=0;i<n;i++)
