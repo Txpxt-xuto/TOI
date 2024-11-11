@@ -48,7 +48,6 @@ int main()
 						int xx=x+dx[k], yy=y+dy[k];
 						if(a[xx][yy]==true)
                         {
-							a[xx][yy] = false;
 						}
 					}
 				}		
