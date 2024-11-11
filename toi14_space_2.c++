@@ -49,7 +49,6 @@ int main()
 						if(a[xx][yy]==true)
                         {
 							a[xx][yy] = false;
-							q.push({xx,yy});
 						}
 					}
 				}		
