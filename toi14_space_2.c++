@@ -38,7 +38,6 @@ int main()
 				while(!q.empty())
                 {
 					int x = q.front().first,y = q.front().second;
-					xm = max(xm,x);
 				}		
 			}
 		}
