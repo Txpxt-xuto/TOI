@@ -71,10 +71,7 @@ int main() {
             scanf("%d", &arr[i][j]);
         }
     }
-
     run(0);
-
     printf("%.2lf", min);
-
     return 0;
 }
