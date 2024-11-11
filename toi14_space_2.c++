@@ -22,7 +22,6 @@ int main()
 		for(j=1;j<=n;j++)
         {
 			char c;
-			cin >> c;
 			if(c=='1') a[i][j]=true;
 		}
 	}
