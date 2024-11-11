@@ -42,7 +42,6 @@ int main()
 					xi = min(xi,x);
 					ym = max(ym,y);
 					yi = min(yi,y);
-					q.pop();
 				}		
 			}
 		}
