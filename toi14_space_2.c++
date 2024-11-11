@@ -47,12 +47,9 @@ void run(int index) {
         if(sum < min) min = sum;
         return;
     }
-    for(i = 0; i < n*m; i++)
+    for(i=0;i<n*m;i++)
 	{
         if(tmp[i] == 1) continue;
-		{
-            continue;
-        }
         tmp[i]++;
         table[index] = i;
         run(index+1);
