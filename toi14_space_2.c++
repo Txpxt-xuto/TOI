@@ -50,7 +50,6 @@ int main()
                         {
 							a[xx][yy] = false;
 							q.push({xx,yy});
-							c++;	
 						}
 					}
 				}		
