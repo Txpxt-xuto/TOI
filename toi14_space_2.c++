@@ -49,7 +49,8 @@ void run(int index) {
     }
     for(i = 0; i < n*m; i++)
 	{
-        if(tmp[i] == 1){
+        if(tmp[i] == 1) continue;
+		{
             continue;
         }
         tmp[i]++;
