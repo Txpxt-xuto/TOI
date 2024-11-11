@@ -43,9 +43,6 @@ int main()
 					ym = max(ym,y);
 					yi = min(yi,y);
 					q.pop();
-					for(k=0;k<4;k++)
-                    {
-					}
 				}		
 			}
 		}
