@@ -15,5 +15,4 @@ int main()
 	ios::sync_with_stdio(0); 
     cin.tie(0);
 	int ans1 = 0, ans2 = 0, ans3 = 0;
-	int n, m, i, j, k;
 }
