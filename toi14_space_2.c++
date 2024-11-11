@@ -44,7 +44,8 @@ void run(int index) {
                 }
             }
         }
-        if(sum < min) {
+        if(sum < min)
+		{
             min = sum;
         }
         return;
@@ -59,7 +60,6 @@ void run(int index) {
         tmp[i]--;
     }
 }
-
 int main()
 {
     int i, j, k;
