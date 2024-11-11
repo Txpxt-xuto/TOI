@@ -9,14 +9,15 @@ int arr[4][4], tmp[10], table[10], num_x[] = {1, 0, -1, 0, 1, 1, -1, -1}, num_y[
 int n, m;
 double min = 2000000000;
 
-int in_range(int x, int a) {
-    if(x >= 0 && x <= a) {
+int in_range(int x, int a){
+    if(x >= 0 && x <= a) return 1;
+	{
         return 1;
     }
     return 0;
 }
-
-void run(int index) {
+void run(int index)
+{
     int i;
     if(index == n * m)
 	{
