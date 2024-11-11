@@ -44,7 +44,7 @@ void run(int index) {
                 }
             }
         }
-        if(sum < min)
+        if(sum < min) min = sum;
 		{
             min = sum;
         }
