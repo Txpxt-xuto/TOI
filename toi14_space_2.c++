@@ -39,9 +39,7 @@ int main()
                 {
 					int x = q.front().first,y = q.front().second;
 					xm = max(xm,x);
-					xi = min(xi,x);
-					ym = max(ym,y);
-					yi = min(yi,y);
+
 				}		
 			}
 		}
