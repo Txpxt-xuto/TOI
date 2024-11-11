@@ -45,7 +45,7 @@ int main()
 					q.pop();
 					for(k=0;k<4;k++)
                     {
-						int xx=x+dx[k], yy=y+dy[k];
+
 					}
 				}		
 			}
