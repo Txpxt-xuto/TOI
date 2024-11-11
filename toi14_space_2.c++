@@ -32,7 +32,8 @@ void run(int index) {
                 land[i][j] = 1.0*arr[i][j];
             }
         }
-        for(i = 0; i < n*m; i++) {
+        for(i=0;i<n*m;i++)
+		{
             sum += land[table[i] / m][table[i] % m];
             c = land[table[i] / m][table[i] % m]/10;
             land[table[i] / m][table[i] % m] = 0;
