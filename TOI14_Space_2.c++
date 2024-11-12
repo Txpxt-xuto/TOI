@@ -69,7 +69,7 @@ int32_t main(){
             mx1=max(mx1,e.s);
         }
     }
-    int U,V;
+    int U,V,i;
     for(i=mn0;i<=mx0;++i)
 	{
         int u=f0({0,i}),v=f0({0,i-1}),w=mp2[{{0,i},{1,i}}];
