@@ -24,7 +24,6 @@ int f0(pii x){
 }
 vector<pii> adj[400005];
 int dist[400005];
-
 int32_t main()
 {
     ios::sync_with_stdio(false); cin.tie(0);
