@@ -13,7 +13,7 @@ using namespace std;
 #define f first
 #define s second
 const int inf=1e9+7;
-int n,L;
+int n,L,i;
 map<pii,int> mp;
 map<pair<pii,pii>,int> mp2;
 int cnt;
