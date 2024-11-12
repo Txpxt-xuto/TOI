@@ -60,11 +60,13 @@ int32_t main(){
             adj[u].pb({v,w});
             adj[v].pb({u,w});
         }
-        else if(e.f==0){
+        else if(e.f==0)
+		{
             mn0=min(mn0,e.s);
             mx0=max(mx0,e.s);
         }
-        else if(e.f==L){
+        else if(e.f==L)
+		{
             mn1=min(mn1,e.s);
             mx1=max(mx1,e.s);
         }
