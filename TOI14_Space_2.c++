@@ -99,7 +99,6 @@ int32_t main()
             cout << w;
             return 0;
         }
-
     }
     return 0;
 }
