@@ -75,7 +75,6 @@ int32_t main()
 	{
         int u=f0({0,i}),v=f0({0,i-1}),w=mp2[{{0,i},{1,i}}];
         adj[v].pb({u,w});
-        else if(i==mx0) U=u;
     }
     return 0;
 }
