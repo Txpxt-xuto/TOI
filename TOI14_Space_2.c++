@@ -48,7 +48,6 @@ int32_t main()
 #include <bits/stdc++.h>
 #define F first
 #define S second
-
 using namespace std;
 typedef long long ll;
 typedef pair<ll, ll> pll;
