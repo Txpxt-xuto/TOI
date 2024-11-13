@@ -148,7 +148,8 @@ void mains()
             cnt_g--;
             cout << "Y ";
         }
-        else {
+        else  cout << "N ";
+        {
             cout << "N ";
         }
         ll tox = dq.front().F;
