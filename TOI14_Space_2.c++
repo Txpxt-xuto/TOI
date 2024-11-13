@@ -99,9 +99,7 @@ int32_t main()
             cout << w;
             return 0;
         }
-        for(auto &vw:adj[u])
-		{
-        }
+
     }
     return 0;
 }
