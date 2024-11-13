@@ -53,10 +53,6 @@ int32_t main()
             adj[u].pb({v,w});
             adj[v].pb({u,w});
             u=f0({e.f-1,e.s}),v=f0({e.f,e.s}),w=mp2[{{e.f,e.s},{e.f,e.s+1}}];
-            adj[u].pb({v,w});
-            adj[v].pb({u,w});
-,e.s-1}),w=mp2[{{e.f,e.s-1},{e.f,e.s}}]
-            adj[v].pb({u,w});
         else if(e.f==L)
 		{
             mn1=min(mn1,e.s);
