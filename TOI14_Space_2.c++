@@ -82,7 +82,6 @@ int32_t main()
     for(i=mn1;i<=mx1;++i)
 	{
         int u=f0({L-1,i}),v=f0({L-1,i-1}),w=mp2[{{L-1,i},{L,i}}];
-        adj[v].pb({u,w});
     }
     return 0;
 }
