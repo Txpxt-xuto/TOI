@@ -63,7 +63,7 @@ void mains()
     char arr[n + 5][m + 5];
     ll dp_r[n + 5][m + 5], dp_g[n + 5][m + 5];
     pll par_r[n + 5][m + 5], par_g[n + 5][m + 5];
-    for(int i = 0; i < n; i++)
+    for(i=0;i<n;i++)
     {
         string s;
         cin >> s;
