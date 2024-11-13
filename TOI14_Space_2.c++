@@ -122,7 +122,6 @@ void mains()
     }
     cout << (cnt_r || cnt_g ? 'Y' : 'N');
 }
-
 int main()
 {
     ios_base::sync_with_stdio(0);
