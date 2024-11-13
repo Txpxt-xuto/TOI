@@ -4,19 +4,6 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include<bits/stdc++.h>
-using namespace std;
-#define pb push_back
-#define endl '\n'
-#define ll long long
-#define pii pair<int,int>
-#define f first
-#define s second
-const int inf=1e9+7;
-int n,L,i;
-map<pii,int> mp;
-map<pair<pii,pii>,int> mp2;
-int cnt;
 
 #pragma GCC optimize("O3")
 #pragma GCC optimize("Ofast")
