@@ -102,11 +102,7 @@ void mains()
     nowx = 0, nowy = 0;
     while(!dq.empty())
     {
-        if(cnt_r && arr[nowx][nowy] == 'R')
-        {
-            cnt_r--;
-            cout << "Y ";
-        }
+        
         else if(cnt_g && arr[nowx][nowy] == 'G')
         {
             cnt_g--;
