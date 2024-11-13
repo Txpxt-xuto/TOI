@@ -90,10 +90,7 @@ int32_t main()
     memset(dist,0x3f,sizeof dist);
     dist[U]=0;
     while(pq.size())
-	{
-        int w=pq.top().f;
-        int u=pq.top().s;
-        pq.pop();
+	{ 
     }
     return 0;
 }
