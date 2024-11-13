@@ -86,6 +86,5 @@ int32_t main()
         adj[v].pb({u,w});
     }
     priority_queue<pii,vector<pii>,greater<pii>> pq;
-    dist[U]=0;
     return 0;
 }
