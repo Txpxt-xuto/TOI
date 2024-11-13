@@ -82,9 +82,6 @@ void mains()
     cout << 2 * most << "\n";
     deque<pll> dq;
     ll nowx = best_x, nowy = best_y;
-    while(nowx != 0 || nowy != 0)
-    {
-    }
     nowx = best_x2, nowy = best_y2;
     while(nowx != n - 1 || nowy != m - 1)
     {
