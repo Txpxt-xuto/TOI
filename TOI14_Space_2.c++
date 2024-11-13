@@ -77,8 +77,10 @@ void mains()
             if(j && dp_r[i][j] == path2) par_r[i][j] = make_pair(i, j - 1);
         }
     }
-    for (int i = n - 1; i >= 0; i--) {
-        for (int j = m - 1; j >= 0; j--) {
+    for (int i = n - 1; i >= 0; i--)
+    {
+        for (int j = m - 1; j >= 0; j--)
+        {
             ll path1 = (i == n - 1 ? 0 : dp_g[i + 1][j]) + (arr[i][j] == 'G');
             ll path2 = (j == m - 1 ? 0 : dp_g[i][j + 1]) + (arr[i][j] == 'G');
             dp_g[i][j] = max(path1, path2);
