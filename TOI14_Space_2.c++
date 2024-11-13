@@ -50,7 +50,6 @@ int32_t main()
 #define S second
 
 using namespace std;
-
 typedef long long ll;
 typedef pair<ll, ll> pll;
 typedef pair<ll, pll> plpll;
