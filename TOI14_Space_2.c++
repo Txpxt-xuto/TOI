@@ -51,9 +51,6 @@ int32_t main()
 
 using namespace std;
 
-// FC Karu (https://www.youtube.com/@Karu_ARP)
-// inspired by ประกาศตัวแปร2รอบ 💀💀💀
-
 typedef long long ll;
 typedef pair<ll, ll> pll;
 typedef pair<ll, pll> plpll;
