@@ -17,14 +17,6 @@ int n,L,i;
 map<pii,int> mp;
 map<pair<pii,pii>,int> mp2;
 int cnt;
-int f0(pii x)
-{
-    if(mp[x]) return mp[x];
-    if(x.f>=0&&x.f<L) return mp[x]=++cnt;
-    return -1;
-}
-vector<pii> adj[400005];
-int dist[400005];
 
 #pragma GCC optimize("O3")
 #pragma GCC optimize("Ofast")
