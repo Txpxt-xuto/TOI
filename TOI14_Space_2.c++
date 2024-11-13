@@ -119,14 +119,16 @@ void mains()
     cout << 2 * most << "\n";
     deque<pll> dq;
     ll nowx = best_x, nowy = best_y;
-    while (nowx != 0 || nowy != 0) {
+    while(nowx != 0 || nowy != 0)
+    {
         dq.emplace_front(nowx, nowy);
         ll tmp = nowx;
         nowx = par_r[nowx][nowy].F;
         nowy = par_r[tmp][nowy].S;
     }
     nowx = best_x2, nowy = best_y2;
-    while (nowx != n - 1 || nowy != m - 1) {
+    while(nowx != n - 1 || nowy != m - 1)
+    {
         dq.emplace_back(nowx, nowy);
         ll tmp = nowx;
         nowx = par_g[nowx][nowy].F;
