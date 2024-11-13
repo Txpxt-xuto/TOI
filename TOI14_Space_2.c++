@@ -39,8 +39,6 @@ int32_t main()
         vec.pb({c,d});
     }
     sort(vec.begin(),vec.end());
-    vec.resize(unique(vec.begin(),vec.end())-vec.begin());
-
 }
 
 #pragma GCC optimize("O3")
