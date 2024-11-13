@@ -79,8 +79,5 @@ int32_t main()
         if(i==mn0) V=v;
         else if(i==mx0) U=u;
     }
-    for(i=mn1;i<=mx1;++i)
-	{
-    }
     return 0;
 }
