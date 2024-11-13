@@ -58,12 +58,6 @@ int32_t main()
             u=f0({e.f-1,e.s-1}),v=f0({e.f,e.s-1}),w=mp2[{{e.f,e.s-1},{e.f,e.s}}];
             adj[u].pb({v,w});
             adj[v].pb({u,w});
-        }
-        else if(e.f==0)
-		{
-            mn0=min(mn0,e.s);
-            mx0=max(mx0,e.s);
-        }
         else if(e.f==L)
 		{
             mn1=min(mn1,e.s);
