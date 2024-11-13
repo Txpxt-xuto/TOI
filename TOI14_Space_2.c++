@@ -50,8 +50,6 @@ int32_t main()
             adj[u].pb({v,w});
             adj[v].pb({u,w});
             u=f0({e.f-1,e.s}),v=f0({e.f-1,e.s-1}),w=mp2[{{e.f-1,e.s},{e.f,e.s}}];
-            adj[u].pb({v,w});
-            adj[v].pb({u,w});
             u=f0({e.f-1,e.s}),v=f0({e.f,e.s}),w=mp2[{{e.f,e.s},{e.f,e.s+1}}];
     }
     int U,V;
