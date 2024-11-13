@@ -56,8 +56,8 @@ typedef pair<ll, plpll> plplpll;
 const ll inf = 1e18;
 const ll mod = 1e9 + 7;
 const ll maxn = 5e5 + 5;
-
-void mains() {
+void mains()
+{
     ll n, m;
     cin >> n >> m;
     char arr[n + 5][m + 5];
