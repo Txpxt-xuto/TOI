@@ -74,9 +74,6 @@ void mains()
             ll path2 = (j == 0 ? 0 : dp_r[i][j - 1]) + (s[j] == 'R');
             dp_r[i][j] = max(path1, path2);
             if(i && dp_r[i][j] == path1) par_r[i][j] = make_pair(i - 1, j);
-            {
-                par_r[i][j] = make_pair(i - 1, j);
-            }
             if(j && dp_r[i][j] == path2) par_r[i][j] = make_pair(i, j - 1);
         }
     }
