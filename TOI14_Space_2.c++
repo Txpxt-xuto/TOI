@@ -89,9 +89,9 @@ void mains()
     }
     ll most = -1;
     ll best_x = -1, best_y = -1, best_x2 = -1, best_y2 = -1;
-    for (i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-        for (j=0;j<m;j++)
+        for(j=0;j<m;j++)
         {
             ll most_r = dp_r[i][j] + (n - i - 1) + (m - j - 1) - (i == n - 1 ? inf : dp_g[i + 1][j]);
             ll most_g = (i == n - 1 ? inf : dp_g[i + 1][j]) + i + j + 1 - dp_r[i][j];
@@ -100,13 +100,15 @@ void mains()
             ll most_g2 = (j == m - 1 ? inf : dp_g[i][j + 1]) + i + j + 1 - dp_r[i][j];
             ll val2 = min(most_r2, most_g2);
             most = max(most, max(val, val2));
-            if (most == val) {
+            if(most == val)
+            {
                 best_x = i;
                 best_y = j;
                 best_x2 = i + 1;
                 best_y2 = j;
             }
-            if (most == val2) {
+            if(most == val2)
+            {
                 best_x = i;
                 best_y = j;
                 best_x2 = i;
