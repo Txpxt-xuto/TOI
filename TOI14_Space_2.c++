@@ -87,7 +87,6 @@ void mains()
         dq.emplace_front(nowx, nowy);
         ll tmp = nowx;
         nowx = par_r[nowx][nowy].F;
-        nowy = par_r[tmp][nowy].S;
     }
     nowx = best_x2, nowy = best_y2;
     while(nowx != n - 1 || nowy != m - 1)
