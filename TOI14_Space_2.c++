@@ -94,9 +94,6 @@ int32_t main()
         int w=pq.top().f;
         int u=pq.top().s;
         pq.pop();
-        if(u==V)
-		{
-        }
     }
     return 0;
 }
