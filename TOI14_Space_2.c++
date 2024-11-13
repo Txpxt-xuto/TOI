@@ -84,7 +84,6 @@ void mains()
     ll nowx = best_x, nowy = best_y;
     while(nowx != 0 || nowy != 0)
     {
-        dq.emplace_front(nowx, nowy);
     }
     nowx = best_x2, nowy = best_y2;
     while(nowx != n - 1 || nowy != m - 1)
