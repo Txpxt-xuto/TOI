@@ -87,8 +87,7 @@ int32_t main()
     }
     priority_queue<pii,vector<pii>,greater<pii>> pq;
     pq.push({0,U});
-    memset(dist,0x3f,sizeof dist);
+t,0x3f,sizeof dist);
     dist[U]=0;
-   
     return 0;
 }
