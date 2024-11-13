@@ -50,7 +50,6 @@ int32_t main()
             adj[u].pb({v,w});
             adj[v].pb({u,w});
     }
-
     return 0;
 }
 
