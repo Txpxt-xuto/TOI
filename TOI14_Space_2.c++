@@ -89,9 +89,9 @@ void mains()
     }
     ll most = -1;
     ll best_x = -1, best_y = -1, best_x2 = -1, best_y2 = -1;
-    for (int i = 0; i < n; i++)
+    for (i=0;i<n;i++)
     {
-        for (int j = 0; j < m; j++)
+        for (j=0;j<m;j++)
         {
             ll most_r = dp_r[i][j] + (n - i - 1) + (m - j - 1) - (i == n - 1 ? inf : dp_g[i + 1][j]);
             ll most_g = (i == n - 1 ? inf : dp_g[i + 1][j]) + i + j + 1 - dp_r[i][j];
