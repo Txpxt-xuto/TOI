@@ -102,12 +102,6 @@ void mains()
     nowx = 0, nowy = 0;
     while(!dq.empty())
     {
-        
-        else if(cnt_g && arr[nowx][nowy] == 'G')
-        {
-            cnt_g--;
-            cout << "Y ";
-        }
         else cout << "N ";
         ll tox = dq.front().F;
         ll toy = dq.front().S;
