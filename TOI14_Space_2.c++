@@ -101,11 +101,6 @@ int32_t main()
         }
         for(auto &vw:adj[u])
 		{
-            if(dist[vw.f]>w+vw.s)
-			{
-                dist[vw.f]=w+vw.s;
-                pq.push({w+vw.s,vw.f});
-            }
         }
     }
     return 0;
