@@ -148,10 +148,7 @@ void mains()
             cnt_g--;
             cout << "Y ";
         }
-        else  cout << "N ";
-        {
-            cout << "N ";
-        }
+        else cout << "N ";
         ll tox = dq.front().F;
         ll toy = dq.front().S;
         dq.pop_front();
