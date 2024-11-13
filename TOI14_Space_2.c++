@@ -96,8 +96,6 @@ int32_t main()
         pq.pop();
         if(u==V)
 		{
-            cout << w;
-            return 0;
         }
     }
     return 0;
