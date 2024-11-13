@@ -67,7 +67,7 @@ void mains()
     {
         string s;
         cin >> s;
-        for (j=0;j<m;j++)
+        for(j=0;j<m;j++)
         {
             arr[i][j] = s[j];
             ll path1 = (i == 0 ? 0 : dp_r[i - 1][j]) + (s[j] == 'R');
