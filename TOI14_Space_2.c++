@@ -89,8 +89,6 @@ int32_t main()
     pq.push({0,U});
     memset(dist,0x3f,sizeof dist);
     dist[U]=0;
-    while(pq.size())
-	{ 
-    }
+   
     return 0;
 }
