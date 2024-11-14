@@ -18,8 +18,8 @@ int main()
     dino[1] = -1;
     for( ll i=2;i<=z;i++ )
     {
-        if( dino[i] != 0 ) continue;
-        if( k%i == 0 ) for( ll j=i;j<=z;j+=i ) dino[j] = 1;
+        if(dino[i] != 0) continue;
+        if(k%i == 0) for(j=i;j<=z;j+=i ) dino[j] = 1;
         else dino[i] = -1;
     }
     for( ll i=1;i<=z;i++ ) dino[i] += dino[i-1];
