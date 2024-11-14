@@ -58,8 +58,7 @@ void mains()
         {
             ll most_r = dp_r[i][j] + (n - i - 1) + (m - j - 1) - (i == n - 1 ? inf : dp_g[i + 1][j]);
             ll most_g = (i == n - 1 ? inf : dp_g[i + 1][j]) + i + j + 1 - dp_r[i][j];
-            ll val = min(most_r, most_g);
-            ll most_r2 = dp_r[i][j] + (n - i - 1) + (m - j - 1) - (j == m - 1 ? inf : dp_g[i][j + 1]);
+            ll val = min(most_r, most_g);j == m - 1 ? inf : dp_g[i][j + 1]);
             most = max(most, max(val, val2));
         }
     }
