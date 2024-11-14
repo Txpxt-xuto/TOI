@@ -32,7 +32,6 @@ int main()
         for( int j=i+1;j<n;j++ )
         {
             ans = max( ans, dino[bond[j]]-dino[bond[i]-1] );
-            //cout << "bond[i] " << bond[i] << " bond[j] " << bond[j] << " ans " << ans << endl;
         }
     }
     cout << ans;
