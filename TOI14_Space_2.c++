@@ -22,6 +22,4 @@ void mains()
 {
     ll n, m;
     cin >> n >> m;
-    char arr[n + 5][m + 5];
-    ll dp_r[n + 5][m + 5], dp_g[n + 5][m + 5];
 }
