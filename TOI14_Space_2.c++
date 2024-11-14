@@ -28,7 +28,6 @@ void mains()
     {
         for (int j = m - 1; j >= 0; j--)
         {
-            ll path1 = (i == n - 1 ? 0 : dp_g[i + 1][j]) + (arr[i][j] == 'G');
         }
     }
 }
