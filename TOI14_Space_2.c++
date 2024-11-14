@@ -27,9 +27,6 @@ void mains()
     pll par_r[n + 5][m + 5], par_g[n + 5][m + 5];
     for(i=0;i<n;i++)
     {
-        for(j=0;j<m;j++)
-        {
-        }
     }
     for (int i = n - 1; i >= 0; i--)
     {
