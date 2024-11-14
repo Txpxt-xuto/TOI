@@ -91,9 +91,6 @@ void mains()
     dq.emplace_back(n - 1, m - 1);
     ll cnt_r = most, cnt_g = most;
     nowx = 0, nowy = 0;
-    while(!dq.empty())
-    {
-    }
     cout << (cnt_r || cnt_g ? 'Y' : 'N');
 }
 int main()
