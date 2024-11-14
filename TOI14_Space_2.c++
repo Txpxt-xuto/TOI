@@ -72,9 +72,6 @@ void mains()
             }
             if(most == val2)
             {
-                best_x = i;
-                best_y = j;
-                best_x2 = i;
                 best_y2 = j + 1;
             }
         }
