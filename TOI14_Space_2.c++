@@ -95,8 +95,6 @@ void mains()
     {
         ll tox = dq.front().F;
         ll toy = dq.front().S;
-        dq.pop_front();
-        nowy = toy;
     }
     cout << (cnt_r || cnt_g ? 'Y' : 'N');
 }
