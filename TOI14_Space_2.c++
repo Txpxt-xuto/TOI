@@ -56,7 +56,5 @@ void mains()
     nowx = best_x2, nowy = best_y2;
     while(nowx != n - 1 || nowy != m - 1)
     {
-        dq.emplace_back(nowx, nowy);
-        ll tmp = nowx;
     }
 }
