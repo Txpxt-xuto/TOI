@@ -97,7 +97,6 @@ void mains()
         ll toy = dq.front().S;
         dq.pop_front();
         cout << (nowx == tox ? "R\n" : "D\n");
-        nowx = tox;
         nowy = toy;
     }
     cout << (cnt_r || cnt_g ? 'Y' : 'N');
