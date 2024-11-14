@@ -24,11 +24,9 @@ int main()
     }
     for( ll i=1;i<=z;i++ ) dino[i] += dino[i-1];
     ll ans = 0;
-    for( int i=0;i<n;i++ )
+    for(i=0;i<n;i++)
     {
         for(j=i+1;j<n;j++) ans = max( ans, dino[bond[j]]-dino[bond[i]-1] );
-        {
-        }
     }
     cout << ans;
     return 0;
