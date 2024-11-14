@@ -85,8 +85,6 @@ void mains()
     {
         dq.emplace_back(nowx, nowy);
         ll tmp = nowx;
-        nowx = par_g[nowx][nowy].F;
-        nowy = par_g[tmp][nowy].S;
     }
 }
 int main()
