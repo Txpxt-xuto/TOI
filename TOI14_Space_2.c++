@@ -93,8 +93,6 @@ void mains()
     nowx = 0, nowy = 0;
     while(!dq.empty())
     {
-        ll tox = dq.front().F;
-        ll toy = dq.front().S;
     }
     cout << (cnt_r || cnt_g ? 'Y' : 'N');
 }
