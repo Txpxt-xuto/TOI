@@ -26,9 +26,8 @@ int main()
     ll ans = 0;
     for( int i=0;i<n;i++ )
     {
-        for( int j=i+1;j<n;j++ )
+        for(j=i+1;j<n;j++) ans = max( ans, dino[bond[j]]-dino[bond[i]-1] );
         {
-            ans = max( ans, dino[bond[j]]-dino[bond[i]-1] );
         }
     }
     cout << ans;
