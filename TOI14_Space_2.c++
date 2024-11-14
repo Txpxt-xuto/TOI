@@ -29,7 +29,6 @@ void mains()
     {
         for(j=0;j<m;j++)
         {
-            arr[i][j] = s[j];
             ll path1 = (i == 0 ? 0 : dp_r[i - 1][j]) + (s[j] == 'R');
         }
     }
