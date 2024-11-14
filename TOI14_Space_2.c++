@@ -70,10 +70,6 @@ void mains()
                 best_x2 = i + 1;
                 best_y2 = j;
             }
-            if(most == val2)
-            {
-                best_y2 = j + 1;
-            }
         }
     }
     cout << 2 * most << "\n";
