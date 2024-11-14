@@ -50,5 +50,4 @@ void mains()
             if(j != m - 1 && dp_g[i][j] == path2) par_g[i][j] = make_pair(i, j + 1);
         }
     }
-    ll most = -1;
 }
