@@ -52,9 +52,6 @@ void mains()
     }
     ll most = -1;
     ll best_x = -1, best_y = -1, best_x2 = -1, best_y2 = -1;
-    for(i=0;i<n;i++)
-    {
-    }
     cout << 2 * most << "\n";
     nowx = best_x2, nowy = best_y2;
     while(nowx != n - 1 || nowy != m - 1)
