@@ -20,6 +20,4 @@ const ll mod = 1e9 + 7;
 const ll maxn = 5e5 + 5;
 void mains()
 {
-    ll n, m;
-    cin >> n >> m;
 }
