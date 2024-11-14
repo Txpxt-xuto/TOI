@@ -22,9 +22,6 @@ int main()
         if( k%i == 0 ) for( ll j=i;j<=z;j+=i ) dino[j] = 1;
         else dino[i] = -1;
     }
-    /*cout << "------------------\n";
-    for( int i=0;i<=z;i++ ) cout << dino[i] << " ";
-    cout << endl;*/
     for( ll i=1;i<=z;i++ ) dino[i] += dino[i-1];
     ll ans = 0;
     for( int i=0;i<n;i++ )
