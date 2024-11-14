@@ -31,8 +31,6 @@ void mains()
         {
             arr[i][j] = s[j];
             ll path1 = (i == 0 ? 0 : dp_r[i - 1][j]) + (s[j] == 'R');
-            if(i && dp_r[i][j] == path1) par_r[i][j] = make_pair(i - 1, j);
-            if(j && dp_r[i][j] == path2) par_r[i][j] = make_pair(i, j - 1);
         }
     }
     for (int i = n - 1; i >= 0; i--)
