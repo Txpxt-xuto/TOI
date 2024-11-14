@@ -27,8 +27,6 @@ void mains()
     pll par_r[n + 5][m + 5], par_g[n + 5][m + 5];
     for(i=0;i<n;i++)
     {
-        string s;
-        cin >> s;
         for(j=0;j<m;j++)
         {
             arr[i][j] = s[j];
