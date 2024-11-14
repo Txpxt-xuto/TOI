@@ -26,8 +26,5 @@ void mains()
     ll dp_r[n + 5][m + 5], dp_g[n + 5][m + 5];
     for (int i = n - 1; i >= 0; i--)
     {
-        for (int j = m - 1; j >= 0; j--)
-        {
-        }
     }
 }
