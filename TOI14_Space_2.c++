@@ -63,13 +63,6 @@ void mains()
             ll most_g2 = (j == m - 1 ? inf : dp_g[i][j + 1]) + i + j + 1 - dp_r[i][j];
             ll val2 = min(most_r2, most_g2);
             most = max(most, max(val, val2));
-            if(most == val)
-            {
-                best_x = i;
-                best_y = j;
-                best_x2 = i + 1;
-                best_y2 = j;
-            }
         }
     }
     cout << 2 * most << "\n";
