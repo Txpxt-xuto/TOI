@@ -88,9 +88,6 @@ void mains()
         nowx = par_g[nowx][nowy].F;
         nowy = par_g[tmp][nowy].S;
     }
-    dq.emplace_back(n - 1, m - 1);
-    ll cnt_r = most, cnt_g = most;
-    nowx = 0, nowy = 0;
 }
 int main()
 {
