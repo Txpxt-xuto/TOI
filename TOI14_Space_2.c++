@@ -54,9 +54,6 @@ void mains()
     ll best_x = -1, best_y = -1, best_x2 = -1, best_y2 = -1;
     for(i=0;i<n;i++)
     {
-        for(j=0;j<m;j++)
-        {
-        }
     }
     cout << 2 * most << "\n";
     nowx = best_x2, nowy = best_y2;
