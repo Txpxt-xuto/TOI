@@ -13,7 +13,3 @@ CENTER: Home
 using namespace std;
 typedef long long ll;
 typedef pair<ll, ll> pll;
-typedef pair<ll, pll> plpll;
-typedef pair<ll, plpll> plplpll;
-const ll inf = 1e18;
-const ll mod = 1e9 + 7;
