@@ -51,7 +51,4 @@ void mains()
         }
     }
     ll most = -1;
-    ll best_x = -1, best_y = -1, best_x2 = -1, best_y2 = -1;
-    cout << 2 * most << "\n";
-    nowx = best_x2, nowy = best_y2;
 }
