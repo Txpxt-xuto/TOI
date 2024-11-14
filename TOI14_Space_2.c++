@@ -87,6 +87,3 @@ void mains()
         ll tmp = nowx;
     }
 }
-int main()
-{
-}
