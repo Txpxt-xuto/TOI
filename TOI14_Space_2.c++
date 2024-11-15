@@ -178,8 +178,10 @@ int main(){
             idx=par[idx];
         }
     }
-    for(int i=path.size-1;i>=0;i--){
-        if(valid[path.head[i].b]){
+    for(int i=path.size-1;i>=0;i--)
+    {
+        if(valid[path.head[i].b])
+        {
             pb(&ansp,min(path.head[i].b,par[path.head[i].b]),max(path.head[i].b,par[path.head[i].b]));
         }
     }
