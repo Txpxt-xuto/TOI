@@ -107,16 +107,18 @@ void pb(imvec* v,int x,int y){
     v->size++;
     update(v);
 }
-void pop(imvec* v){
+void pop(imvec* v)
+{
     v->size--;
 }
-void innit(imvec* v){
+void innit(imvec* v)
+{
     v->capa=2;
     v->size=0;
     v->head=(pair*)calloc(2,sizeof(pair));
 }
-int main(){
-    //printf("%d",max(555,2));
+int main()
+{
     for(int i=0;i<(1<<S);i++) seg[i].a=inf;
     int n,m,k,start,ii=0;
     scanf("%d %d %d %d",&n,&m,&k,&start);
