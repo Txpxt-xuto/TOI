@@ -26,6 +26,5 @@ int main()
     ll ans = 0;
     for(i=0;i<n;i++)
     {
-        for(j=i+1;j<n;j++) ans = max( ans, dino[bond[j]]-dino[bond[i]-1] );
     }
 }
