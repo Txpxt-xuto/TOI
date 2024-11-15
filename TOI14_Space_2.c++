@@ -47,8 +47,6 @@ void popseg(){
             i<<=1;
         }
         else i=(i<<1)+1;
-            i=(i<<1)+1;
-        }
     }
     seg[i].a=inf;
     seg[i].b=0;
