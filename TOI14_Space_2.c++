@@ -117,7 +117,8 @@ void innit(imvec* v){
 }
 int main(){
     //printf("%d",max(555,2));
-    for(int i=0;i<(1<<S);i++){
+    for(int i=0;i<(1<<S);i++) seg[i].a=inf;
+    {
         seg[i].a=inf;
     }
     int n,m,k,start,ii=0;
