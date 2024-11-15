@@ -22,5 +22,4 @@ int main()
         if(k%i == 0) for(j=i;j<=z;j+=i) dino[j] = 1;
         else dino[i] = -1;
     }
-    for(i=1;i<=z;i++) dino[i] += dino[i-1];
 }
