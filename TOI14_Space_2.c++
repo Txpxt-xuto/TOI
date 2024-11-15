@@ -23,5 +23,4 @@ int main()
         else dino[i] = -1;
     }
     for(i=1;i<=z;i++) dino[i] += dino[i-1];
-    ll ans = 0;
 }
