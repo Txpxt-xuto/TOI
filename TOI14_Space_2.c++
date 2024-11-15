@@ -18,6 +18,5 @@ int main()
     dino[1] = -1;
     for(i=2;i<=z;i++)
     {
-        if(dino[i] != 0) continue;
     }
 }
