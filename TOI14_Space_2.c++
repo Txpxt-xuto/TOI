@@ -133,10 +133,12 @@ int main(){
         vis[i]=0;
         par[i]=-1;
     }
-    for(int i=0;i<k;i++){
+    for(int i=0;i<k;i++) scanf("%d",&gec[i]);
+    {
         scanf("%d",&gec[i]);
     }
-    for(int i=0;i<m;i++){
+    for(int i=0;i<m;i++)
+    {
         int aa,bb,cc;
         scanf("%d %d %d",&aa,&bb,&cc);
         pb(&v[aa],bb,cc);
