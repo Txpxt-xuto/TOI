@@ -71,8 +71,10 @@ pair query(int l,int r){
                 y.b=seg[l++].b;
             }
         }
-        if(r&1){
-            if(y.a>seg[r-1].a){
+        if(r&1)
+        {
+            if(y.a>seg[r-1].a)
+            {
                 y.a=seg[r-1].a;
                 y.b=seg[--r].b;
             }
