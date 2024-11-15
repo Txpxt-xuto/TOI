@@ -27,10 +27,7 @@ void updateseg(int idx,int val,int f){
     for(idx>>=1;idx>0;idx>>=1){
         if(seg[idx<<1].a==seg[(idx<<1)+1].a)
         {
-            if(seg[idx<<1].b<seg[(idx<<1)+1].b)
-            {
-                seg[idx]=seg[idx<<1];
-            }
+            if(seg[idx<<1].b<seg[(idx<<1)+1].b) seg[idx]=seg[idx<<1];
             else seg[idx]=seg[(idx<<1)+1];
             continue;
         }
