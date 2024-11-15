@@ -170,7 +170,6 @@ int main(){
         printf("%d ",dis[gec[i]]);
         //std::cout<<dis[gec[i]]<<" ";
     }
-    //printf("\n%d\n",path.size-1);
     for(int i=0;i<k;i++){
         int idx=gec[i];
         while(par[idx]!=-1){
