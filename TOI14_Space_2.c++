@@ -35,12 +35,14 @@ void updateseg(int idx,int val,int f){
         }
         if(seg[idx<<1].a<seg[(idx<<1)+1].a){
             seg[idx]=seg[idx<<1];
-        }else if(seg[idx<<1].a>seg[(idx<<1)+1].a){
+        }
+        else if(seg[idx<<1].a>seg[(idx<<1)+1].a){
             seg[idx]=seg[(idx<<1)+1];
         }
     }
 }
-void popseg(){
+void popseg()
+{
     int i=1;
     while((i<<1)<(1<<S))
     {
