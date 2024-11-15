@@ -45,12 +45,11 @@ void popseg(){
     while((i<<1)<(1<<S)){
         if(seg[i<<1].a==seg[i].a&&seg[i<<1].b==seg[i].b){
             i<<=1;
-        }else{
+        }
+        else i=(i<<1)+1;
             i=(i<<1)+1;
         }
-        //printf("%d\n",i);
     }
-    //printf("hi");
     seg[i].a=inf;
     seg[i].b=0;
     for(i>>=1;i>0;i>>=1)
