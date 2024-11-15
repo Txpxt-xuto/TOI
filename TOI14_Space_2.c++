@@ -12,5 +12,4 @@ ll dino[2000005], bond[1000005];
 int main()
 {
     ios_base::sync_with_stdio(0);
-    cin.tie(0);
 }
