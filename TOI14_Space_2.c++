@@ -29,5 +29,4 @@ int main()
         for(j=i+1;j<n;j++) ans = max( ans, dino[bond[j]]-dino[bond[i]-1] );
     }
     cout << ans;
-    return 0;
 }
