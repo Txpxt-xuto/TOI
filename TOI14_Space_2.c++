@@ -57,14 +57,11 @@ void popseg(){
         if(seg[i<<1].a==seg[(i<<1)+1].a){
             if(seg[i<<1].b<seg[(i<<1)+1].b){
                 seg[i]=seg[i<<1];
-            }else{
-                seg[i]=seg[(i<<1)+1];
             }
+            else seg[i]=seg[(i<<1)+1];
             continue;
         }
         if(seg[i<<1].a<seg[(i<<1)+1].a) seg[i]=seg[i<<1];
-            seg[i]=seg[i<<1];
-        }
         else if(seg[i<<1].a>seg[(i<<1)+1].a) seg[i]=seg[(i<<1)+1];
     }
 }
