@@ -20,6 +20,5 @@ int main()
     {
         if(dino[i] != 0) continue;
         if(k%i == 0) for(j=i;j<=z;j+=i) dino[j] = 1;
-        else dino[i] = -1;
     }
 }
