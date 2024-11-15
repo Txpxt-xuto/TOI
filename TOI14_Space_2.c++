@@ -64,7 +64,8 @@ void popseg(){
         }
         if(seg[i<<1].a<seg[(i<<1)+1].a){
             seg[i]=seg[i<<1];
-        }else if(seg[i<<1].a>seg[(i<<1)+1].a){
+        }
+        else if(seg[i<<1].a>seg[(i<<1)+1].a) seg[i]=seg[(i<<1)+1];
             seg[i]=seg[(i<<1)+1];
         }
     }
@@ -96,7 +97,8 @@ typedef struct {
 }imvec;
 void update(imvec* v)
 {
-    if(v->capa==v->size){
+    if(v->capa==v->size)
+    {
         v->capa*=2;
         v->head=(pair*)realloc(v->head,v->capa*sizeof(pair));
     }
