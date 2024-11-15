@@ -167,12 +167,11 @@ int main(){
     for(int i=0;i<=n;i++){valid[i]=0;}
     innit(&ansp);
     for(int i=0;i<k;i++) printf("%d ",dis[gec[i]]);
+    for(int i=0;i<k;i++)
     {
-        printf("%d ",dis[gec[i]]);
-    }
-    for(int i=0;i<k;i++){
         int idx=gec[i];
-        while(par[idx]!=-1){
+        while(par[idx]!=-1)
+        {
             valid[idx]=1;
             idx=par[idx];
         }
