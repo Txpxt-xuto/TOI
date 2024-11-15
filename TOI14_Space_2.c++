@@ -186,8 +186,5 @@ int main(){
     //std::cout<<"\n"<<ansp.size<<"\n";
     printf("\n%d\n",ansp.size);
     for(int i=0;i<ansp.size;i++) printf("%d %d\n",ansp.head[i].a,ansp.head[i].b);
-    {
-        printf("%d %d\n",ansp.head[i].a,ansp.head[i].b);
-    }
     return 0;
 }
