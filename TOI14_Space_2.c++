@@ -42,7 +42,8 @@ void updateseg(int idx,int val,int f){
 }
 void popseg(){
     int i=1;
-    while((i<<1)<(1<<S)){
+    while((i<<1)<(1<<S))
+    {
         if(seg[i<<1].a==seg[i].a&&seg[i<<1].b==seg[i].b){
             i<<=1;
         }
