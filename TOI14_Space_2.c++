@@ -127,7 +127,8 @@ int main(){
     int dis[n+1],gec[k],par[n+1];
     bool vis[n+1];
     innit(&path);
-    for(int i=0;i<=n;i++){
+    for(int i=0;i<=n;i++)
+    {
         innit(&(v[i]));
         dis[i]=inf;
         vis[i]=0;
