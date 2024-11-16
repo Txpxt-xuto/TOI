@@ -82,10 +82,3 @@ pair query(int l,int r){
     }
     return y;
 }
-
-typedef struct {
-    pair* head;
-    int size;
-    int capa;
-}imvec;
-void update(imvec* v)
