@@ -155,7 +155,6 @@ int main()
                 dis[v[node].head[i].a]=dis[node]+v[node].head[i].b;
                 par[v[node].head[i].a]=node;
                 updateseg(ii,dis[v[node].head[i].a],v[node].head[i].a);
-                ii++;
             }
         }
     }
