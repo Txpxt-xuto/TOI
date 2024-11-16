@@ -92,5 +92,4 @@ void update(imvec* v)
 {
     if(v->capa==v->size)
     {
-        v->capa*=2;
-void pb(imvec* v,int x,int y)
+        v->capa*=2
