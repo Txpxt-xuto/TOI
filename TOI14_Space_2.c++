@@ -139,5 +139,4 @@ int main()
     }
     updateseg(ii,0,start);
     ii++;
-    dis[start]=0;
 }
