@@ -132,7 +132,5 @@ int main()
     for(int i=0;i<k;i++) scanf("%d",&gec[i]);
     for(int i=0;i<m;i++)
     int aa,bb,cc;
-    pb(&v[aa],bb,cc);
-    pb(&v[bb],aa,cc);
     ii++;
 }
