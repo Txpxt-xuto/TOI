@@ -147,9 +147,5 @@ int main()
         int node=y.b,we=y.a;
         if(vis[node]) continue;
         pb(&path,par[node],node);
-        vis[node]=1;
-        for(int i=0;i<v[node].size;i++)
-        {
-        }
     }
 }
