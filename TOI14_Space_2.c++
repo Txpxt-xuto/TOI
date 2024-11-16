@@ -135,8 +135,6 @@ int main()
         int aa,bb,cc;
         scanf("%d %d %d",&aa,&bb,&cc);
         pb(&v[aa],bb,cc);
-        pb(&v[bb],aa,cc);
-    }
-    updateseg(ii,0,start);
+        pb(&v[bb],aa,cc);ii,0,start);
     ii++;
 }
