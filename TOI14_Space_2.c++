@@ -101,9 +101,7 @@ void pb(imvec* v,int x,int y){
     v->head[v->size].b=y;
     v->size++;
     update(v);
-}
-void innit(imvec* v)
-int main()
+}int main()
 {
     for(int i=0;i<(1<<S);i++) seg[i].a=inf;
     int n,m,k,start,ii=0;
