@@ -122,5 +122,4 @@ int main()
     int dis[n+1],gec[k],par[n+1];
     bool vis[n+1];
     innit(&path);
-    for(int i=0;i<=n;i++)
 }
