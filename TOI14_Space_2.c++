@@ -126,7 +126,6 @@ int main()
     {
         innit(&(v[i]));
         dis[i]=inf;
-        vis[i]=0;
-        par[i]=-1;
+        vis[i]=
     }
 }
