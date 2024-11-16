@@ -145,6 +145,5 @@ int main()
         pair y = query(0,(1<<(S-1)-1));
         popseg();
         int node=y.b,we=y.a;
-        if(vis[node]) continue;
     }
 }
