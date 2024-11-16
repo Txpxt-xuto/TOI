@@ -150,8 +150,6 @@ int main()
         vis[node]=1;
         for(int i=0;i<v[node].size;i++)
         {
-            if(dis[v[node].head[i].a]>dis[node]+v[node].head[i].b)
-            {
         }
     }
 }
