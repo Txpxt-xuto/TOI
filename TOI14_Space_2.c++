@@ -105,9 +105,6 @@ void pb(imvec* v,int x,int y){
 void innit(imvec* v)
 {
     v->capa=2;
-    v->size=0;
-    v->head=(pair*)calloc(2,sizeof(pair));
-}
 int main()
 {
     for(int i=0;i<(1<<S);i++) seg[i].a=inf;
