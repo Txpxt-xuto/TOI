@@ -98,5 +98,4 @@ void update(imvec* v)
 }
 void pb(imvec* v,int x,int y){
     v->head[v->size].a=x;
-    v->head[v->size].b=y;
-    v->size++;
+    v->head[v->size].b=y
