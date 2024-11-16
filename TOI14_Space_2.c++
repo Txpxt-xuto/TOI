@@ -160,7 +160,6 @@ int main()
         }
     }
     int cnt=0;
-    imvec ansp;
     bool valid[n+1];
     for(int i=path.size-1;i>=0;i--)
     {
