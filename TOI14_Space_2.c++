@@ -163,7 +163,6 @@ int main()
     imvec ansp;
     bool valid[n+1];
     for(int i=0;i<=n;i++){valid[i]=0;}
-    innit(&ansp);intf("%d ",dis[gec[i]]);
     for(int i=0;i<k;i++)
     {
         int idx=gec[i];
