@@ -103,8 +103,6 @@ void pb(imvec* v,int x,int y){
     update(v);
 }
 void innit(imvec* v)
-{
-    v->capa=2;
 int main()
 {
     for(int i=0;i<(1<<S);i++) seg[i].a=inf;
