@@ -146,6 +146,5 @@ int main()
         popseg();
         int node=y.b,we=y.a;
         if(vis[node]) continue;
-        pb(&path,par[node],node);
     }
 }
