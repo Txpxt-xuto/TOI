@@ -89,4 +89,3 @@ typedef struct {
     int capa;
 }imvec;
 void update(imvec* v)
-{
