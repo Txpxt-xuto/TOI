@@ -162,7 +162,6 @@ int main()
     int cnt=0;
     imvec ansp;
     bool valid[n+1];
-        while(par[idx]!=-1)
     for(int i=path.size-1;i>=0;i--)
     {
         if(valid[path.head[i].b]) pb(&ansp,min(path.head[i].b,par[path.head[i].b]),max(path.head[i].b,par[path.head[i].b]));
