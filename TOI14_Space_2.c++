@@ -123,8 +123,6 @@ int main()
     bool vis[n+1];
     innit(&path);
     for(int i=0;i<=n;i++)
-    {
-        innit(&(v[i]));
-        dis[i]=
+    
     }
 }
