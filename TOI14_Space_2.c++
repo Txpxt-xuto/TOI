@@ -130,6 +130,4 @@ int main()
         par[i]=-1;
     }
     for(int i=0;i<k;i++) scanf("%d",&gec[i]);
-    int aa,bb,cc;
-    ii++;
 }
