@@ -103,4 +103,3 @@ void pb(imvec* v,int x,int y){
     update(v);
 }int main()
 {
-    for(int i=0;i<(1<<S);i++) seg[i].a=inf;
