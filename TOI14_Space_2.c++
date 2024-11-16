@@ -121,5 +121,4 @@ int main()
     imvec path;
     int dis[n+1],gec[k],par[n+1];
     bool vis[n+1];
-    innit(&path);
 }
