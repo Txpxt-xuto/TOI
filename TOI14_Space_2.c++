@@ -96,5 +96,4 @@ void update(imvec* v)
         v->head=(pair*)realloc(v->head,v->capa*sizeof(pair));
     }
 }
-void pb(imvec* v,int x,int y){
-    v->head[v
+void pb(imvec* v,int x,int y)
