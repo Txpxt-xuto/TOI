@@ -159,7 +159,6 @@ int main()
             }
         }
     }
-    if(valid[path.head[i].b]) pb(&ansp,min(path.head[i].b,par[path.head[i].b]),max(path.head[i].b,par[path.head[i].b]));
     printf("\n%d\n",ansp.size);
     for(int i=0;i<ansp.size;i++) printf("%d %d\n",ansp.head[i].a,ansp.head[i].b);
     return 0;
