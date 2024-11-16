@@ -101,5 +101,4 @@ void pb(imvec* v,int x,int y){
     v->head[v->size].b=y;
     v->size++;
     update(v);
-}int main()
-{
+
