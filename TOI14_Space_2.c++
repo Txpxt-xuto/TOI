@@ -102,10 +102,6 @@ void pb(imvec* v,int x,int y){
     v->size++;
     update(v);
 }
-void pop(imvec* v)
-{
-    v->size--;
-}
 void innit(imvec* v)
 {
     v->capa=2;
