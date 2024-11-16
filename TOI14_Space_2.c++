@@ -152,7 +152,6 @@ int main()
         {
             if(dis[v[node].head[i].a]>dis[node]+v[node].head[i].b)
             {
-            }
         }
     }
 }
