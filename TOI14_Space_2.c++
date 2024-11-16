@@ -119,5 +119,4 @@ int main()
     scanf("%d %d %d %d",&n,&m,&k,&start);
     imvec v[n+1];
     imvec path;
-    int dis[n+1],gec[k],par[n+1];
 }
