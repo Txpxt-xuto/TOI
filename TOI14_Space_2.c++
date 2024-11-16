@@ -107,5 +107,4 @@ void pb(imvec* v,int x,int y){
     int n,m,k,start,ii=0;
     scanf("%d %d %d %d",&n,&m,&k,&start);
     imvec v[n+1];
-    imvec path;
 }
