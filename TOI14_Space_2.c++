@@ -159,5 +159,4 @@ int main()
             }
         }
     }
-    printf("\n%d\n",ansp.size);
 }
