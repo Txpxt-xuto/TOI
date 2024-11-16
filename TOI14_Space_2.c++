@@ -140,7 +140,4 @@ int main()
     updateseg(ii,0,start);
     ii++;
     dis[start]=0;
-    while(query(0,(1<<(S-1)-1)).a!=inf)
-    {
-    }
 }
