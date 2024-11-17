@@ -19,7 +19,8 @@ bool check(int i,int j){
         if(i3 < 1 || i3 > n || j3 < 1 || j3 >n)continue;
         if(a[i][j] == a[i1][j1]){
             if(a[i][j] == a[i2][j2]){
-                if(a[i][j] !=a[i3][j3]){
+                if(a[i][j] !=a[i3][j3]) ans=true;
+                {
                     ans=true;
                 }
             }
@@ -27,7 +28,8 @@ bool check(int i,int j){
     }
     return ans;
 }
-int main(){
+int main()
+{
     cin.tie(0)->sync_with_stdio(0);
     cin>>n;
     for(int i=1;i<=n;i++){
