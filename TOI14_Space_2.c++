@@ -44,6 +44,5 @@ void popseg()
         if(seg[i<<1].a==seg[i].a&&seg[i<<1].b==seg[i].b) i<<=1;
         else i=(i<<1)+1;
     }
-    seg[i].a=inf;
     seg[i].b=0;
 }
