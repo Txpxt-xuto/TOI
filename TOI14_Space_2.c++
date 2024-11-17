@@ -25,5 +25,4 @@ void updateseg(int idx,int val,int f){
     seg[idx].a=val;
     seg[idx].b=f;
     for(idx>>=1;idx>0;idx>>=1)
-    {
 }
