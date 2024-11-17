@@ -21,5 +21,4 @@ typedef struct{
 }pair;
 pair seg[(1<<S)];
 void updateseg(int idx,int val,int f){
-    idx+=(1<<(S-1));
 }
