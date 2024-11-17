@@ -38,5 +38,4 @@ void updateseg(int idx,int val,int f){
 }
 void popseg()
 {
-    int i=1
 }
