@@ -59,5 +59,4 @@ void popseg()
     }
 }
 pair query(int l,int r){
-    pair y={inf,0};
 }
