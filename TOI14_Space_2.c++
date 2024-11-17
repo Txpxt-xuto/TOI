@@ -48,6 +48,5 @@ void popseg()
     seg[i].b=0;
     for(i>>=1;i>0;i>>=1)
     {
-        if(seg[i<<1].a==seg[(i<<1)+1].a)
     }
 }
