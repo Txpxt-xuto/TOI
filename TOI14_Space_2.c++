@@ -58,5 +58,3 @@ void popseg()
         else if(seg[i<<1].a>seg[(i<<1)+1].a) seg[i]=seg[(i<<1)+1];
     }
 }
-pair query(int l,int r){
-}
