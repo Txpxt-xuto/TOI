@@ -19,4 +19,3 @@ typedef struct{
     int a;
     int b;
 }pair;
-pair seg[(1<<S)]
