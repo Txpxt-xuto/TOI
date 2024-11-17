@@ -41,6 +41,5 @@ void popseg()
     int i=1;
     while((i<<1)<(1<<S))
     {
-        else i=(i<<1)+
     }
 }
