@@ -65,9 +65,6 @@ pair query(int l,int r){
     {
         if(l&1)
         {
-            if(y.a>seg[l].a)
-            {
-            }
         }
     }
     return y;
