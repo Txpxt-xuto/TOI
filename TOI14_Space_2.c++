@@ -36,6 +36,3 @@ void updateseg(int idx,int val,int f){
         else if(seg[idx<<1].a>seg[(idx<<1)+1].a) seg[idx]=seg[(idx<<1)+1];
     }
 }
-void popseg()
-{
-}
