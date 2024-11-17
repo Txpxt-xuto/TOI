@@ -62,7 +62,5 @@ pair query(int l,int r){
     pair y={inf,0};
     l+=(1<<(S-1)),r+=(1<<(S-1))+1;
     for(;l<r;l>>=1,r>>=1)
-    {
-    }
     return y;
 }
