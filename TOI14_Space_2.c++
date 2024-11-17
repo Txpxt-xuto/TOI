@@ -71,9 +71,6 @@ pair query(int l,int r){
                 y.b=seg[l++].b;
             }
         }
-        if(r&1)
-        {
-        }
     }
     return y;
 }
