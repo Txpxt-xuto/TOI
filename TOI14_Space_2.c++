@@ -19,6 +19,4 @@ typedef struct{
     int a;
     int b;
 }pair;
-pair seg[(1<<S)];
-void updateseg(int idx,int val,int f){
-}
+pair seg[(1<<S)]
