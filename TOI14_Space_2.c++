@@ -26,6 +26,3 @@ bool check(int i,int j){
     }
     return ans;
 }
-int main()
-{
-}
