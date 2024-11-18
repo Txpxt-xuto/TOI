@@ -34,7 +34,6 @@ int main()
         for(int j=1;j<=n;j++) cin>>a[i][j];
     }
     check(1,1);
-    for(int i=1;i<=n;i++){
         for(int j=1;j<=n;j++) if(check(i,j))ans++;
     }
     cout<<ans;
