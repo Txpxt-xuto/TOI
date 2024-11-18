@@ -243,12 +243,13 @@ void DFS(int i,int j){
                 vec.pop_back();
             }
         }
-        if(!graph[i][j]){
+        if(!graph[i][j])
+        {
             vec.push_back(3);
             DFS(i+1,j);
             vec.pop_back();
         }
-     }
+    }
 }
 int main(){
     ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
