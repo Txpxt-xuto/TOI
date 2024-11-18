@@ -134,15 +134,6 @@ int main()
 	}
 	cout << ans_1 << ' ' << ans_2 << ' ' << ans_3;
 }
-
-/*
-TASK: space.cpp
-LANG: C++
-AUTHOR: Tapat Toungsakul
-CENTER: Home
-*/
-#include<bits/stdc++.h>
-using namespace std;
 int dx[]={0,0,1,-1};
 int dy[]={1,-1,0,0};
 bool a[10050][2050];
