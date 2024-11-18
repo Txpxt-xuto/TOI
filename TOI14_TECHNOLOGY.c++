@@ -227,8 +227,8 @@ void DFS(int i,int j){
            return;
         }
      }
-     else
-     {
+    else
+    {
         if(j!=0)
         {
             if(!graph[i][j-1])
