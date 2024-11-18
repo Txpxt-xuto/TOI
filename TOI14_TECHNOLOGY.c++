@@ -227,8 +227,10 @@ void DFS(int i,int j){
            return;
         }
      }
-     else{
-        if(j!=0){
+     else
+     {
+        if(j!=0)
+        {
             if(!graph[i][j-1])
             {
                 vec.push_back(1);
@@ -236,7 +238,8 @@ void DFS(int i,int j){
                 vec.pop_back();
             }
         }
-        if(j!=m-1){
+        if(j!=m-1)
+        {
             if(!graph[i][j+1])
             {
                 vec.push_back(2);
