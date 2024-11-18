@@ -20,7 +20,6 @@ bool check(int i,int j){
         if(a[i][j] == a[i1][j1]){
             if(a[i][j] == a[i2][j2])
             {
-            }
         }
     }
     return ans;
