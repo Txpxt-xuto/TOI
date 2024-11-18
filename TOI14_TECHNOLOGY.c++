@@ -215,18 +215,20 @@ void DFS(int i,int j){
            }
         }
         if(j!=m-1){
-           if(!graph[i][j+1]){
-             vec.push_back(2);
-             for(int i=0;i<vec.size();i++) cout<<vec[i]<<"\n";
-             return;
-           }
+            if(!graph[i][j+1])
+            {
+                vec.push_back(2);
+                for(int i=0;i<vec.size();i++) cout<<vec[i]<<"\n";
+                return;
+            }
         }
-        if(!graph[i][j]){
-           vec.push_back(3);
-           for(int i=0;i<vec.size();i++) cout<<vec[i]<<"\n";
-           return;
+        if(!graph[i][j])
+        {
+            vec.push_back(3);
+            for(int i=0;i<vec.size();i++) cout<<vec[i]<<"\n";
+            return;
         }
-     }
+    }
     else
     {
         if(j!=0)
