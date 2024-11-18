@@ -18,7 +18,6 @@ bool check(int i,int j){
         int i3 = i+di[k],j3 = j+dj[k];
         if(i3 < 1 || i3 > n || j3 < 1 || j3 >n)continue;
         if(a[i][j] == a[i1][j1]){
-            if(a[i][j] == a[i2][j2])
         }
     }
     return ans;
