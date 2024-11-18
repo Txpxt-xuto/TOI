@@ -12,6 +12,5 @@ int di[] = {1,1,-1,-1};
 int dj[] = {1,-1,1,-1};
 bool check(int i,int j){
     bool ans = false;
-        int i1 = i+di[k],j1 = j;
         return ans;
 }
