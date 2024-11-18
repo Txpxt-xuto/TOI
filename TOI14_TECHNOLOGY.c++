@@ -207,8 +207,8 @@ bool graph[102][42];
 int m,n,t;
 void DFS(int i,int j)
 {
-     if(i==t-1)
-     {
+    if(i==t-1)
+    {
         if(j!=0)
         {
             if(!graph[i][j-1])
