@@ -199,7 +199,6 @@ int main()
 	}
 	cout << ans_1 << ' ' << ans_2 << ' ' << ans_3;
 }
-using namespace std;
 vector<int>vec;
 bool graph[102][42];
 int m,n,t;
