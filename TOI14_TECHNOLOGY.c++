@@ -199,3 +199,59 @@ int main()
 	}
 	cout << ans_1 << ' ' << ans_2 << ' ' << ans_3;
 }
+#include<iostream>
+#include<vector>
+using namespace std;
+vector<int>vec;
+bool graph[102][42];
+int m,n,t;
+void DFS(int i,int j){
+     if(i==t-1){
+        if(j!=0){
+           if(!graph[i][j-1]){
+             vec.push_back(1);
+             for(int i=0;i<vec.size();i++) cout<<vec[i]<<"\n";
+             return;
+           }
+        }
+        if(j!=m-1){
+           if(!graph[i][j+1]){
+             vec.push_back(2);
+             for(int i=0;i<vec.size();i++) cout<<vec[i]<<"\n";
+             return;
+           }
+        }
+        if(!graph[i][j]){
+           vec.push_back(3);
+           for(int i=0;i<vec.size();i++) cout<<vec[i]<<"\n";
+           return;
+        }
+     }
+     else{
+        if(j!=0){
+           if(!graph[i][j-1]){
+              vec.push_back(1);
+              DFS(i+1,j-1);
+              vec.pop_back();
+           }
+        }
+        if(j!=m-1){
+           if(!graph[i][j+1]){
+              vec.push_back(2);
+              DFS(i+1,j+1);
+              vec.pop_back();
+          }
+        }
+        if(!graph[i][j]){
+            vec.push_back(3);
+            DFS(i+1,j);
+            vec.pop_back();
+        }
+     }
+}
+int main(){
+    ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+    cin>>m>>n>>t;
+    for(int i=0;i<t;i++) for(int j=0;j<m;j++) cin>>graph[i][j];
+    DFS(0,n-1);
+}
