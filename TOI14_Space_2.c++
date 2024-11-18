@@ -29,4 +29,4 @@ bool check(int i,int j){
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
-    }
+}
