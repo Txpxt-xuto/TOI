@@ -237,9 +237,9 @@ void DFS(int i,int j){
         }
         if(j!=m-1){
            if(!graph[i][j+1]){
-              vec.push_back(2);
-              DFS(i+1,j+1);
-              vec.pop_back();
+                vec.push_back(2);
+                DFS(i+1,j+1);
+                vec.pop_back();
           }
         }
         if(!graph[i][j]){
