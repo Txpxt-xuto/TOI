@@ -205,9 +205,12 @@ using namespace std;
 vector<int>vec;
 bool graph[102][42];
 int m,n,t;
-void DFS(int i,int j){
-     if(i==t-1){
-        if(j!=0){
+void DFS(int i,int j)
+{
+     if(i==t-1)
+     {
+        if(j!=0)
+        {
             if(!graph[i][j-1])
             {
                 vec.push_back(1);
@@ -215,7 +218,8 @@ void DFS(int i,int j){
                 return;
             }
         }
-        if(j!=m-1){
+        if(j!=m-1)
+        {
             if(!graph[i][j+1])
             {
                 vec.push_back(2);
