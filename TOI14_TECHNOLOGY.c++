@@ -170,8 +170,3 @@ int main()
 	}
 	cout << ans_1 << ' ' << ans_2 << ' ' << ans_3;
 }
-vector<int>vec;
-bool graph[102][42];
-int m,n,t;
-void DFS(int i,int j)
-{
