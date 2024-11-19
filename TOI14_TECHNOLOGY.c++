@@ -208,7 +208,6 @@ void DFS(int i,int j)
         {
             if(!graph[i][j-1])
             {
-                vec.push_back(1);
                 DFS(i+1,j-1);
             }
         }
