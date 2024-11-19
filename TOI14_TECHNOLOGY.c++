@@ -148,25 +148,4 @@ int main()
 					int x = q.front().first,y = q.front().second;
 					xm = max(xm,x);
 					xi = min(xi,x);
-					ym = max(ym,y);
-					yi = min(yi,y);
-					q.pop();
-					for(k=0;k<4;k++)
-                    {
-						int xx=x+dx[k], yy=y+dy[k];
-						if(a[xx][yy]==true)
-                        {
-							a[xx][yy] = false;
-							q.push({xx,yy});
-							c++;	
-						}
-					}
-				}
-				if((xm-xi+1)*(xm-xi+1)==c && (ym-yi+1)*(ym-yi+1)==c) ans_1++;			
-				else if(xm-xi==ym-yi) ans_2++;
-				else ans_3++;
-			}
-		}
-	}
-	cout << ans_1 << ' ' << ans_2 << ' ' << ans_3;
-}
+					ym = max(
