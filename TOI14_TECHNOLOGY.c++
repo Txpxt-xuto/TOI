@@ -213,6 +213,5 @@ void DFS(int i,int j)
                 vec.pop_back();
             }
         }
-        if(j!=m-1j+1]
     }
 }
