@@ -42,46 +42,4 @@ int main()
 					xi = min(xi,x);
 					ym = max(ym,y);
 					yi = min(yi,y);
-					q.pop();
-					for(k=0;k<4;k++)
-                    {
-						int xx=x+dx[k], yy=y+dy[k];
-						if(a[xx][yy]==true)
-                        {
-							a[xx][yy] = false;
-							q.push({xx,yy});
-							c++;	
-						}
-					}
-				}
-				if((xm-xi+1)*(xm-xi+1)==c && (ym-yi+1)*(ym-yi+1)==c) ans_1++;			
-				else if(xm-xi==ym-yi) ans_2++;
-				else ans_3++;
-			}
-		}
-	}
-	cout << ans_1 << ' ' << ans_2 << ' ' << ans_3;
-}
-int main()
-{
-	ios::sync_with_stdio(0); 
-    cin.tie(0);
-	int ans_1 = 0, ans_2 = 0, ans_3 = 0;
-	int n, m, i, j, k;
-	cin >> n >> m;
-	for(i=1;i<=m;i++)
-    {
-		for(j=1;j<=n;j++)
-        {
-			char c;
-			cin >> c;
-			if(c=='1') a[i][j]=true;
-		}
-	}
-	for(i=1;i<=m;i++)
-    {
-		for(j=1;j<=n;j++)
-        {
-            if(a[i][j]==true)
-            {
-	
+			
