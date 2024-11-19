@@ -207,9 +207,6 @@ void DFS(int i,int j)
         if(j!=0)
         {
             if(!graph[i][j-1])
-            {
-                DFS(i+1,j-1);
-            }
         }
     }
 }
