@@ -233,5 +233,4 @@ void DFS(int i,int j)
 int main(){
     cin>>m>>n>>t;
     for(int i=0;i<t;i++) for(int j=0;j<m;j++) cin>>graph[i][j];
-    DFS(0,n-1);
 }
