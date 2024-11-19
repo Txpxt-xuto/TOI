@@ -225,7 +225,6 @@ void DFS(int i,int j)
         if(!graph[i][j])
         {
             vec.push_back(3);
-            DFS(i+1,j);
             vec.pop_back();
         }
     }
