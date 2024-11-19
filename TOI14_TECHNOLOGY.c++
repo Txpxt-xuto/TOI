@@ -84,21 +84,4 @@ int main()
         {
             if(a[i][j]==true)
             {
-				int c = 0, xm = i, xi = i, ym = j, yi = j;
-				q.push({i,j});
-				a[i][j]==false;
-				while(!q.empty())
-                {
-					int x = q.front().first,y = q.front().second;
-					xm = max(xm,x);
-					xi = min(xi,x);
-					ym = max(ym,y);
-					yi = min(yi,y);
-					q.pop();
-					for(k=0;k<4;k++)
-                    {
-						int xx=x+dx[k], yy=y+dy[k];
-						if(a[xx][yy]==true)
-                        {
-							a[xx][yy] = false;
-							q.push({xx,yy});
+	
