@@ -215,6 +215,5 @@ void DFS(int i,int j)
         }
         if(j!=m-1j+1]
                 vec.push_back(2);
-                DFS(i+1,j+1);
     }
 }
