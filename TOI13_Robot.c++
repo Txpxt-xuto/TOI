@@ -28,7 +28,8 @@ int main()
             {
                 dist[i][j] = 0;
                 gq.push({i, j});
-            } else dist[i][j] = 9999;
+            }
+            else dist[i][j] = 9999;
         }
     }
     while(!gq.empty())
@@ -58,7 +59,8 @@ int main()
             dist[x][y+1] = min(dist[x][y] +1, dist[x][y+1]);
         }
     }
-    for(i=1;i<=m;++i){
+    for(i=1;i<=m;++i)
+    {
         for(j=1;j<=n;++j)
         {
             if(path[i][j] == 'A' && dist[i][j] != 9999) 
