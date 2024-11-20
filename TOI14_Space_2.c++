@@ -16,7 +16,7 @@ int main()
 	ios::sync_with_stdio(0); 
     cin.tie(0);
 	int ans_1 = 0, ans_2 = 0, ans_3 = 0;
-	int n, m, i, j, k;
+	int n,m,i,j,k;
 	cin >> n >> m;
 	for(i=1;i<=m;i++)
     {
