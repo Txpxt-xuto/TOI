@@ -55,24 +55,22 @@ template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0;
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-
 const int MOD = 1e9 + 7;
 const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
 const char nl = '\n';
 const int MX = 1e5 + 10;
-
 vi before[MX], lvl[MX];
 int mark[MX];
-
 void solve()
 {
-    int n, k, t; cin >> n >> k >> t;
+    int n, k, t;
+    cin >> n >> k >> t;
     rep(i, 1, n)
     {
         int l, m; cin >> l >> m;
         lvl[l].pb(i);
-        rep(j, 1, m) { int x; cin >> x; before[i].pb(x); }
+        rep(j, 1, m){ int x; cin >> x; before[i].pb(x); }
     }
     int mx = 0;
     function<bool(int)> upgrade = [&](int i)
