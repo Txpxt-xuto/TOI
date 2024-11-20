@@ -10,7 +10,7 @@ string path[2002];
 int dist[2002][2002];
 queue<pair<int, int> > gq;
 pair<int, int> front;
-int n, m, x, y, i, j;
+int n,m,x,y,i,j;
 int main()
 {
     int sum = 0,cnt = 0;
