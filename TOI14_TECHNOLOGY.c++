@@ -65,7 +65,8 @@ const int MX = 1e5 + 10;
 vi before[MX], lvl[MX];
 int mark[MX];
 
-void solve() {
+void solve()
+{
     int n, k, t; cin >> n >> k >> t;
     rep(i, 1, n)
     {
@@ -73,16 +74,17 @@ void solve() {
         lvl[l].pb(i);
         rep(j, 1, m) { int x; cin >> x; before[i].pb(x); }
     }
-  int mx = 0;
-  function<bool(int)> upgrade = [&](int i) {
-    if (mark[i]==2) return 1;
-    if (mark[i]==1) return 0;
-    if (t==0) return 0;
-    mark[i] = 1; t--;
-    trav(x, before[i]) if (!upgrade(x)) return 0;
-    mark[i] = 2;
-    return 1;
-  };
+    int mx = 0;
+    function<bool(int)> upgrade = [&](int i)
+    {
+        if (mark[i]==2) return 1;
+        if (mark[i]==1) return 0;
+        if (t==0) return 0;
+        mark[i] = 1; t--;
+        trav(x, before[i]) if (!upgrade(x)) return 0;
+        mark[i] = 2;
+        return 1;
+    };
 
   rep(i, 1, k) {
     trav(x, lvl[i]) {
