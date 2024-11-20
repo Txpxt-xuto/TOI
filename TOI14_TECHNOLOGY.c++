@@ -77,9 +77,9 @@ void solve()
     int mx = 0;
     function<bool(int)> upgrade = [&](int i)
     {
-        if (mark[i]==2) return 1;
-        if (mark[i]==1) return 0;
-        if (t==0) return 0;
+        if(mark[i]==2) return 1;
+        if(mark[i]==1) return 0;
+        if(t==0) return 0;
         mark[i] = 1; t--;
         trav(x, before[i]) if(!upgrade(x)) return 0;
         mark[i] = 2;
@@ -87,7 +87,7 @@ void solve()
     };
     rep(i, 1, k)
     {
-        trav(x, lvl[i]) if (!upgrade(x)) return void(cout << (i==1?-1:i-1) << nl);
+        trav(x, lvl[i]) if(!upgrade(x)) return void(cout << (i==1?-1:i-1) << nl);
     }  
     cout << k << nl;
 }
