@@ -5,10 +5,7 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #pragma once
-#include <bits/stdc++.h>
-using namespace std;
 
-typedef vector<pll> vpll;
 
     cin >> n >> k >> t;
     rep(i, 1, n)
