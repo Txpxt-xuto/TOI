@@ -14,9 +14,7 @@ typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 typedef pair<ld, ld> pld;
 typedef vector<int> vi;
-typedef vector<ll> vll;
-typedef vector<ld> vld;
-typedef vector<pii> vpii;
+
 typedef vector<pll> vpll;
 
 typedef vector<vi> vvi;
