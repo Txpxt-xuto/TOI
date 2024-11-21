@@ -19,9 +19,6 @@ typedef vector<pll> vpll;
 
 typedef vector<vi> vvi;
 typedef tuple<ll, ll, ll> t3;
-typedef tuple<ll, ll, ll, ll> t4;
-typedef t
-#define ins insert
 
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
