@@ -27,12 +27,7 @@ T, vector<T>, greater<T>>;
 #define rep0(a) for (int i = 0; i < a; ++i)
 #define rep1(i, a) for (int i = 0; i < a; ++i)
 #define rep2(i, a, b) for (int i = a; i <= b; ++i)
-#define rep3(i, a, b, c) for (int i = a; i <= b; i+=c) 
-, rep2, rep1, rep0)(__VA_ARGS__)
-#define repd0(a) for (int i = a; i >= 1; --i)
-#define repd1(i, a) for (int i = a; i >= 1; --i)
-#define repd2(i, a, b) for (int i = b; i >= a; --i)
-
+#
 #define ins insert
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
