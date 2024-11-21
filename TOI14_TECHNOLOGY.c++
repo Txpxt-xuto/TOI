@@ -22,12 +22,7 @@ typedef vector<pll> vpll;
 typedef vector<vi> vvi;
 typedef tuple<ll, ll, ll> t3;
 typedef tuple<ll, ll, ll, ll> t4;
-typedef tuple<ll, ll, ll, ll, ll> t5;
-T, vector<T>, greater<T>>;
-#define rep0(a) for (int i = 0; i < a; ++i)
-#define rep1(i, a) for (int i = 0; i < a; ++i)
-#define rep2(i, a, b) for (int i = a; i <= b; ++i)
-
+typedef t
 #define ins insert
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
