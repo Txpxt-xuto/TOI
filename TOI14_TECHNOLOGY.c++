@@ -32,10 +32,6 @@ T, vector<T>, greater<T>>;
 #define repd0(a) for (int i = a; i >= 1; --i)
 #define repd1(i, a) for (int i = a; i >= 1; --i)
 #define repd2(i, a, b) for (int i = b; i >= a; --i)
-#define repd3(i, a, b, c) for (int i = b; i >= a; i-=c)
-
-#define nd second
-#define lb lower_bound
 
 #define ins insert
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
