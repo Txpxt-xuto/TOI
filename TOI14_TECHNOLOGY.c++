@@ -18,7 +18,7 @@ typedef vector<ll> vll;
 typedef vector<ld> vld;
 typedef vector<pii> vpii;
 typedef vector<pll> vpll;
-typedef vector<pld> vpld;
+
 typedef vector<vi> vvi;
 typedef tuple<ll, ll, ll> t3;
 typedef tuple<ll, ll, ll, ll> t4;
