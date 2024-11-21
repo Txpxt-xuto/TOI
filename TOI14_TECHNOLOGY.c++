@@ -34,12 +34,7 @@ T, vector<T>, greater<T>>;
 #define repd1(i, a) for (int i = a; i >= 1; --i)
 #define repd2(i, a, b) for (int i = b; i >= a; --i)
 #define repd3(i, a, b, c) for (int i = b; i >= a; i-=c)
-#define repd(...) overload4(__VA_ARGS__, repd3, repd2, repd1, repd0)(__VA_ARGS__)
-#define trav(a, x) for (auto& a : x)
-#define sz(x) (int)(x).size()
-#define mp make_pair
-#define pb push_back
-#define st first
+
 #define nd second
 #define lb lower_bound
 #define ub upper_bound
