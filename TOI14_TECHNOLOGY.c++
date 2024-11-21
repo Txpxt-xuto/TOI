@@ -17,18 +17,6 @@ typedef vector<int> vi;
 
 typedef vector<pll> vpll;
 
-typedef vector<vi> vvi;
-typedef tuple<ll, ll, ll> t3;
-
-const int INF = 0x3fffffff;
-const ll LINF = 0x1fffffffffffffff;
-const char nl = '\n';
-const int MX = 1e5 + 10;
-vi before[MX], lvl[MX];
-int mark[MX];
-void solve()
-{
-    int n, k, t;
     cin >> n >> k >> t;
     rep(i, 1, n)
     {
