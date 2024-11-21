@@ -36,7 +36,7 @@ T, vector<T>, greater<T>>;
 
 #define nd second
 #define lb lower_bound
-#define ub upper_bound
+
 #define all(x) (x).begin(), (x).end()
 #define ins insert
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
