@@ -20,9 +20,6 @@ typedef vector<pll> vpll;
 typedef vector<vi> vvi;
 typedef tuple<ll, ll, ll> t3;
 
-template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-const int MOD = 1e9 + 7;
 const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
 const char nl = '\n';
