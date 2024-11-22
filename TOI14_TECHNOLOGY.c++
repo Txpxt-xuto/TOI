@@ -42,11 +42,12 @@ int main()
     {
         if(a[i].size()==0) continue;
         ans+=(i-chk)*(cnt);    
-        for(auto e:a[i]){
-      int o=e.first;
-      int h=e.second;
-      up(1,o);
-      up(h+1,-o);
+        for(auto e:a[i])
+        {
+            int o=e.first;
+            int h=e.second;
+            up(1,o);
+            up(h+1,-o);
         }
         int l=1,r=1e6;
         while(l<=r){
