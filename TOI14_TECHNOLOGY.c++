@@ -21,7 +21,6 @@ CENTER: Home
         mark[i] = 2;
         return 1;
     };
-    rep(i, 1, k)
 
 int main(int argc, char* argv[])
 {
