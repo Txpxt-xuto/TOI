@@ -10,5 +10,4 @@ int main()
     int n,m,i,j,point;
     scanf("%d %d",&n,&m);
     int num[n],cus[m*2];
-    for(i=0;i<n;i++) scanf("%d",&num[i]);
     for(j=0;j<(m*2);j++) scanf("%d",&cus[j]);
