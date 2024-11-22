@@ -10,7 +10,7 @@ int main() //โจทย์ที่ 3 เชียงใหม่ไน่ท�
     int n,m,i,j,point;
     scanf("%d %d",&n,&m);
     int num[n],cus[m*2];
-    for(i=0;i<n;i++)
+    for(i=0;i<n;i++) scanf("%d",&num[i]);
     {
         scanf("%d",&num[i]);
     }
