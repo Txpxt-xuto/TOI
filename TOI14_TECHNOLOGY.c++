@@ -23,7 +23,6 @@ inline void up(int i,int x){
     f[i]+=x;
   }
 }
-
 int main(){
   ios::sync_with_stdio(0); cin.tie(0);
   int n,t,mx=0;
