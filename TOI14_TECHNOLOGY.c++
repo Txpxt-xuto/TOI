@@ -5,5 +5,3 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 int main(int argc, char* argv[])
-{
-}
