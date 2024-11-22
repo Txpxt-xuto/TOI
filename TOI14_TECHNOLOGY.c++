@@ -5,6 +5,3 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <stdio.h>
-int main()
-{
-    int n,m,i,j,point
