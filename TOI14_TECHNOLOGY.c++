@@ -35,10 +35,10 @@ int main()
         mx=max(mx,s+w);
         a[s].push_back({o,h});
         a[s+w].push_back({-o,h});    
-  }
-  int chk=0,x,y,cnt=0;
-  long long int ans=0;
-  for(int i=1;i<=mx;i++){
+    }
+    int chk=0,x,y,cnt=0;
+    long long int ans=0;
+    for(int i=1;i<=mx;i++){
     if(a[i].size()==0) continue;
     ans+=(i-chk)*(cnt);    
     for(auto e:a[i]){
