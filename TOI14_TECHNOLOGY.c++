@@ -24,8 +24,7 @@ CENTER: Home
     rep(i, 1, k)
     {
         trav(x, lvl[i]) if(!upgrade(x)) return void(cout << (i==1?-1:i-1) << nl);
-    }  
-    cout << k << nl;
+
 int main(int argc, char* argv[])
 {
     ios_base::sync_with_stdio(0); cin.tie(NULL);
