@@ -59,7 +59,7 @@ int main()
             if(fw(mid)>t-1) l=mid+1;
             else r=mid-1,y=mid;
         }
-	    cnt=y-x;
+        cnt=y-x;
         chk=i;
     }
     cout << ans;
