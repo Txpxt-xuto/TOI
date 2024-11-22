@@ -22,7 +22,6 @@ CENTER: Home
         return 1;
     };
     rep(i, 1, k)
-        trav(x, lvl[i]) if(!upgrade(x)) return void(cout << (i==1?-1:i-1) << nl);
 
 int main(int argc, char* argv[])
 {
