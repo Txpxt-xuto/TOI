@@ -19,9 +19,7 @@ inline int fw(int i){
   return ans;
 }
 inline void up(int i,int x){
-  for(;i<N;i+=i&-i){
-    f[i]+=x;
-  }
+    for(;i<N;i+=i&-i) f[i]+=x;
 }
 int main()
 {
