@@ -7,5 +7,4 @@ CENTER: Home
 #include <stdio.h>
 int main()
 {
-    int n,m,i,j,point;
-    scanf("%d %d",&n,&m);
+    int n,m,i,j,point
