@@ -23,7 +23,7 @@ int main() //โจทย์ที่ 3 เชียงใหม่ไน่ท�
         point=0;
         for(i=cus[j];i<n;i++)
         {
-            if(num[i]>=0)
+            if(num[i]>=0) point=point+num[i];
             {
                 point=point+num[i];
             }
