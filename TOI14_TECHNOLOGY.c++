@@ -11,9 +11,6 @@ int main() //โจทย์ที่ 3 เชียงใหม่ไน่ท�
     scanf("%d %d",&n,&m);
     int num[n],cus[m*2];
     for(i=0;i<n;i++) scanf("%d",&num[i]);
-    {
-        scanf("%d",&num[i]);
-    }
     for(j=0;j<(m*2);j++) scanf("%d",&cus[j]);
     for(j=0;j<(m*2);j=j+2)
     {
