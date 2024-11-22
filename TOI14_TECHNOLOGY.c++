@@ -8,8 +8,6 @@ CENTER: Home
     {
         int l, m; cin >> l >> m;
         lvl[l].pb(i);
-        rep(j, 1, m){ int x; cin >> x; before[i].pb(x); }
-    }
 
 int main(int argc, char* argv[])
 {
