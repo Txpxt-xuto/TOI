@@ -24,10 +24,4 @@ int main()
                 {
                     cus[j+1]=cus[j+1]+num[i];
                     if(cus[j+1]==0) break;
-                }
-                else break;
-            }
-        }
-        printf("%d\n",point);
-    }
 }
