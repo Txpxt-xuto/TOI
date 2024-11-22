@@ -4,7 +4,7 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */        
-int l, m; cin >> l >> m;
+int l, m; cinl >> m;
 
 int main(int argc, char* argv[])
 {
