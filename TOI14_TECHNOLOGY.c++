@@ -11,7 +11,6 @@ using ppi=pair<int,pii>;
 const int N=1e6+5;
 int f[N];
 vector<pii> a[N];
-
 inline int fw(int i){
   int ans=0;
   for(;i;i-=i&-i){
@@ -19,7 +18,6 @@ inline int fw(int i){
   }
   return ans;
 }
-
 inline void up(int i,int x){
   for(;i<N;i+=i&-i){
     f[i]+=x;
