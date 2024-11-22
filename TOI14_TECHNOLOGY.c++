@@ -12,6 +12,3 @@ int main()
     int num[n],cus[m*2];
     for(i=0;i<n;i++) scanf("%d",&num[i]);
     for(j=0;j<(m*2);j++) scanf("%d",&cus[j]);
-    for(j=0;j<(m*2);j=j+2)
-    {
-        point=0;
