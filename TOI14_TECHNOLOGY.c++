@@ -61,7 +61,6 @@ int main(){
       else r=mid-1,y=mid;
     }
 	cnt=y-x;
-//    cout << y << ' ' << x  << ' ' << i-chk << "\n";
     
     chk=i;
   }
