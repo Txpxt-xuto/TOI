@@ -12,7 +12,6 @@ CENTER: Home
     }
     int mx = 0;
     function<bool(int)> upgrade = [&](int i)
-    {
         if(mark[i]==2) return 1;
         if(mark[i]==1) return 0;
         mark[i] = 1; t--;
