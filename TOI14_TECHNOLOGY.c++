@@ -6,9 +6,6 @@ CENTER: Home
 */
 #pragma once
 
-
-    cin >> n >> k >> t;
-    rep(i, 1, n)
     {
         int l, m; cin >> l >> m;
         lvl[l].pb(i);
