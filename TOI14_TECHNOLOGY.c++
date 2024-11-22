@@ -47,14 +47,14 @@ int main(){
       int h=e.second;
       up(1,o);
       up(h+1,-o);
-    }
-    int l=1,r=1e6;
-    while(l<=r){
-      int mid=(l+r)/2;
-      if(fw(mid)>t) l=mid+1;
-      else r=mid-1, x=mid;
-    }
-    l=1,r=1e6;
+        }
+        int l=1,r=1e6;
+        while(l<=r){
+        int mid=(l+r)/2;
+        if(fw(mid)>t) l=mid+1;
+        else r=mid-1, x=mid;
+        }
+        l=1,r=1e6;
         while(l<=r){
             int mid=(l+r)/2;
             if(fw(mid)>t-1) l=mid+1;
