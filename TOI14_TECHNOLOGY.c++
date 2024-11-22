@@ -55,13 +55,13 @@ int main(){
       else r=mid-1, x=mid;
     }
     l=1,r=1e6;
-    while(l<=r){
-      int mid=(l+r)/2;
-      if(fw(mid)>t-1) l=mid+1;
-      else r=mid-1,y=mid;
+        while(l<=r){
+            int mid=(l+r)/2;
+            if(fw(mid)>t-1) l=mid+1;
+            else r=mid-1,y=mid;
+        }
+	    cnt=y-x;
+        chk=i;
     }
-	cnt=y-x;
-    chk=i;
-  }
-  cout << ans;
+    cout << ans;
 }
