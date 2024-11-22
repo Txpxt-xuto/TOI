@@ -22,7 +22,7 @@ inline void up(int i,int x){
 int main()
 {
     ios::sync_with_stdio(0); cin.tie(0);
-    int n,t,mx=0;
+    int i,n,t,mx=0;
     cin >> n >> t;
     for(int i=1;i<=n;i++)
     {
@@ -34,7 +34,7 @@ int main()
     }
     int chk=0,x,y,cnt=0;
     long long int ans=0;
-    for(int i=1;i<=mx;i++)
+    for(i=1;i<=mx;i++)
     {
         if(a[i].size()==0) continue;
         ans+=(i-chk)*(cnt);    
