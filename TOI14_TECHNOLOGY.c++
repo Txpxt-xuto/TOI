@@ -11,7 +11,6 @@ CENTER: Home
         rep(j, 1, m){ int x; cin >> x; before[i].pb(x); }
     }
     int mx = 0;
-        if(mark[i]==2) return 1;
         mark[i] = 1; t--;
 
 int main(int argc, char* argv[])
