@@ -15,8 +15,3 @@ int main()
     for(j=0;j<(m*2);j=j+2)
     {
         point=0;
-        for(i=cus[j];i<n;i++)
-        {
-            if(num[i]>=0) point=point+num[i];
-            else
-            {
