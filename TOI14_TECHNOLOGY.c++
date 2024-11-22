@@ -5,7 +5,7 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <stdio.h>
-int main() //โจทย์ที่ 3 เชียงใหม่ไน่ทรัพย์//
+int main()
 {
     int n,m,i,j,point;
     scanf("%d %d",&n,&m);
