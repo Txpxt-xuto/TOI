@@ -3,10 +3,7 @@ TASK: technology.cpp
 LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
-*/
-
-    {
-        int l, m; cin >> l >> m;
+*/        int l, m; cin >> l >> m;
         lvl[l].pb(i);
 
 int main(int argc, char* argv[])
