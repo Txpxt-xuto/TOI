@@ -20,8 +20,3 @@ int main()
             if(num[i]>=0) point=point+num[i];
             else
             {
-                if(cus[j+1]>=(num[i]*(-1)))
-                {
-                    cus[j+1]=cus[j+1]+num[i];
-                    if(cus[j+1]==0) break;
-}
