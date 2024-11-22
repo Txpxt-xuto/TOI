@@ -17,7 +17,6 @@ CENTER: Home
         if(mark[i]==1) return 0;
         if(t==0) return 0;
         mark[i] = 1; t--;
-        trav(x, before[i]) if(!upgrade(x)) return 0;
 
 int main(int argc, char* argv[])
 {
