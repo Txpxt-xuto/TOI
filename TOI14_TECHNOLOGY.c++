@@ -24,9 +24,6 @@ int main() //โจทย์ที่ 3 เชียงใหม่ไน่ท�
         for(i=cus[j];i<n;i++)
         {
             if(num[i]>=0) point=point+num[i];
-            {
-                point=point+num[i];
-            }
             else
             {
                 if(cus[j+1]>=(num[i]*(-1)))
