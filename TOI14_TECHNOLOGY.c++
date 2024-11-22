@@ -38,10 +38,11 @@ int main()
     }
     int chk=0,x,y,cnt=0;
     long long int ans=0;
-    for(int i=1;i<=mx;i++){
-    if(a[i].size()==0) continue;
-    ans+=(i-chk)*(cnt);    
-    for(auto e:a[i]){
+    for(int i=1;i<=mx;i++)
+    {
+        if(a[i].size()==0) continue;
+        ans+=(i-chk)*(cnt);    
+        for(auto e:a[i]){
       int o=e.first;
       int h=e.second;
       up(1,o);
