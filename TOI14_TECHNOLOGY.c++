@@ -4,7 +4,6 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#pragma once
 
     {
         int l, m; cin >> l >> m;
