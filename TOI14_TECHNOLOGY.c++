@@ -17,7 +17,8 @@ int main() {
     }
     while(l<r) {
         int mid=(l+r)/2,cou=1,k=0;
-        for(int i=0;i<m;i++) {
+        for(int i=0;i<m;i++)
+        {
             k+=a[i];
             if(k>mid) {
                 k=a[i];
