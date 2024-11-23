@@ -96,8 +96,6 @@ int main()
     }
     return 0;
 }
-#include <bits/stdc++.h>
-using namespace std;
 bool mat[50][50];
 int sum = 0;
 int recur(int x, int y, int m, int n){
