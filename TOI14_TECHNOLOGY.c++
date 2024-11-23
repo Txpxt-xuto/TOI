@@ -84,7 +84,8 @@ int main() {
             }
         }
         if(!found) cout << "OK";
-        else {
+        else
+        {
             for(int j = 1; j <= k; j++)
             {
                 if(foundCode[j])
