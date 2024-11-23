@@ -10,7 +10,6 @@ using pii=pair<int,int>;
 using ppi=pair<int,pii>;
 const int N=1e6+5;
 int f[N];
-vector<pii> a[N];
 
 int main()
 {
