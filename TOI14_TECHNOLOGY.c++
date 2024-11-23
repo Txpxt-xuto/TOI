@@ -10,7 +10,6 @@ using pii=pair<int,int>;
 using ppi=pair<int,pii>;
 const int N=1e6+5;
 int f[N];
-
 int main()
 {
     ios::sync_with_stdio(0); cin.tie(0);
