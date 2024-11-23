@@ -16,8 +16,6 @@ int main()
         int s,h,w,o;
         cin >> s >> h >> w >> o;
         mx=max(mx,s+w);
-        a[s].push_back({o,h});
-        a[s+w].push_back({-o,h});    
     }
     int chk=0,x,y,cnt=0;
     cout << ans;
