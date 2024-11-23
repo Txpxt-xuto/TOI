@@ -52,7 +52,7 @@ int main() {
     for(int i = 0; i < k; i++) {
         cin >> binaryCode;
         ll hashCode = 0;
-        for(int j = 0; j < m; j++) 
+        for(int j = 0; j < m; j++) hashCode = (hashCode << 1) | (binaryCode[j] == '1');
             hashCode = (hashCode << 1) | (binaryCode[j] == '1');
         int idx = hashCode * M % N;
         while(occupied[idx])
