@@ -29,8 +29,6 @@ int main()
         {
             int o=e.first;
             int h=e.second;
-            up(1,o);
-            up(h+1,-o);
         }
         int l=1,r=1e6;
         while(l<=r)
