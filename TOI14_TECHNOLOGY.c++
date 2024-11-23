@@ -96,3 +96,33 @@ int main()
     }
     return 0;
 }
+/*
+TASK: Go to school u little bitch
+LANG: C++
+AUTHOR: Jesada Tuntanuch
+CENTER: Ur basement
+*/
+#include <bits/stdc++.h>
+using namespace std;
+bool mat[50][50];
+int sum = 0;
+int recur(int x, int y, int m, int n){
+    if(x == n-1 && y == m-1) {
+        sum++;
+        return 0;
+    }
+    if(!mat[x+1][y] && x < n-1) recur(x+1, y,m,n);
+    if(!mat[x][y+1] && y < m-1) recur(x, y+1,m,n);
+    return 0;
+}
+signed main(){
+    cin.tie(nullptr)->sync_with_stdio(0);
+    int m, n, t; cin >> n>> m >> t;
+    while(t--){
+        int h, k;
+        cin >> h >> k;
+        mat[h-1][k-1] = true;
+    }
+    recur(0,0,m,n);
+    cout << sum;
+}
