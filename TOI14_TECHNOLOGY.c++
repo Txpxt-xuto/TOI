@@ -25,9 +25,6 @@ int main()
     {
         if(a[i].size()==0) continue;
         ans+=(i-chk)*(cnt);    
-        for(auto e:a[i])
-        {
-        }
         int l=1,r=1e6;
         while(l<=r)
         l=1,r=1e6;
