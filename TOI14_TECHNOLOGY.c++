@@ -35,9 +35,7 @@ int main()
 }
 #include <bits/stdc++.h>
 #define ll long long
-
 using namespace std;
-
 const int N = 1e6 + 7;
 const ll M = 1e9 + 7;
 bool occupied[N], foundCode[N];
