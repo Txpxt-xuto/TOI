@@ -16,9 +16,7 @@ inline int fw(int i){
     for(;i;i-=i&-i) ans+=f[i];
     return ans;
 }
-inline void up(int i,int x){
-    for(;i<N;i+=i&-i) f[i]+=x;
-}
+
 int main()
 {
     ios::sync_with_stdio(0); cin.tie(0);
