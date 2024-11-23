@@ -20,7 +20,8 @@ int main() {
         for(int i=0;i<m;i++)
         {
             k+=a[i];
-            if(k>mid) {
+            if(k>mid)
+            {
                 k=a[i];
                 cou++;
             }
