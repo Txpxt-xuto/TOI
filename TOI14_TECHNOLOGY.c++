@@ -108,9 +108,11 @@ int recur(int x, int y, int m, int n){
     if(!mat[x][y+1] && y < m-1) recur(x, y+1,m,n);
     return 0;
 }
-signed main(){
+signed main()
+{
     cin.tie(nullptr)->sync_with_stdio(0);
-    int m, n, t; cin >> n>> m >> t;
+    int m, n, t;
+    cin >> n>> m >> t;
     while(t--){
         int h, k;
         cin >> h >> k;
