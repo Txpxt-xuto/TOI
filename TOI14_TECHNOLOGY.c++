@@ -25,8 +25,6 @@ int main()
     {
         int l=1,r=1e6;
         while(l<=r)
-        l=1,r=1e6;
-        cnt=y-x;
         chk=i;
     }
     cout << ans;
