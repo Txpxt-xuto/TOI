@@ -43,9 +43,10 @@ const ll M = 1e9 + 7;
 bool occupied[N], foundCode[N];
 int hashMap[N], hashKey[N];
 string binaryCode;
-int n, m, k;
+int n, m, k, i, j;
 
-int main() {
+int main()
+{
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin >> k >> m;
