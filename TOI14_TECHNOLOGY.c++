@@ -63,7 +63,7 @@ int main() {
     }
 
     cin >> n;
-    for(int i = 0; i < n; i++)
+    for(i=0;i<n;i++)
     {
         int d,j;
         cin >> d >> binaryCode;
