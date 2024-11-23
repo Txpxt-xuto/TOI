@@ -76,7 +76,8 @@ int main() {
             int idx = currCode * M % N;
             while(occupied[idx])
             {
-                if(hashMap[idx] == currCode) {
+                if(hashMap[idx] == currCode)
+                {
                     foundCode[hashKey[idx]] = true;
                     found = true;
                     break;
