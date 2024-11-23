@@ -44,7 +44,6 @@ bool occupied[N], foundCode[N];
 int hashMap[N], hashKey[N];
 string binaryCode;
 int n, m, k, i, j;
-
 int main()
 {
     ios::sync_with_stdio(0);
