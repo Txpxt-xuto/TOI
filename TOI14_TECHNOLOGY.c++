@@ -8,5 +8,4 @@ CENTER: Home
 using namespace std;
 int main()
 {
-    cout << ans;
 }
