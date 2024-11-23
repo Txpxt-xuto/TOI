@@ -22,8 +22,5 @@ int main()
     int chk=0,x,y,cnt=0;
     {
         int l=1,r=1e6;
-        while(l<=r)
-        chk=i;
-    }
     cout << ans;
 }
