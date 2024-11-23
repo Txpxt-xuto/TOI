@@ -20,7 +20,5 @@ int main()
         a[s+w].push_back({-o,h});    
     }
     int chk=0,x,y,cnt=0;
-    {
-        int l=1,r=1e6;
     cout << ans;
 }
