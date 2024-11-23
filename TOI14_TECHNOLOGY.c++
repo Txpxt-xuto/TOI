@@ -9,7 +9,6 @@ using namespace std;
 int main()
 {
     ios::sync_with_stdio(0);
-    cin.tie(0);
     int chk=0,x,y,cnt=0;
     cout << ans;
 }
