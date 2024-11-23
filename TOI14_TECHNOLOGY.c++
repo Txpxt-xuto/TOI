@@ -6,8 +6,6 @@ CENTER: Home
 */
 #include<bits/stdc++.h>
 using namespace std;
-#include<bits/stdc++.h>
-using namespace std;
 int n,m,a[105],l=0,r=1e6,_max;
 
 int main() {
