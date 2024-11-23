@@ -38,9 +38,6 @@ int main()
             else r=mid-1, x=mid;
         }
         l=1,r=1e6;
-        while(l<=r)
-        {
-        }
         cnt=y-x;
         chk=i;
     }
