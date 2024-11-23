@@ -74,7 +74,8 @@ int main() {
             currCode = (currCode << 1) | (binaryCode[j] == '1');
             currCode &= ~(1 << m);
             int idx = currCode * M % N;
-            while(occupied[idx]) {
+            while(occupied[idx])
+            {
                 if(hashMap[idx] == currCode) {
                     foundCode[hashKey[idx]] = true;
                     found = true;
