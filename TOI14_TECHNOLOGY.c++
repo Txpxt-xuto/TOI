@@ -13,9 +13,6 @@ int f[N];
 vector<pii> a[N];
 inline int fw(int i){
     int ans=0;
-    for(;i;i-=i&-i) ans+=f[i];
-    return ans;
-}
 
 int main()
 {
