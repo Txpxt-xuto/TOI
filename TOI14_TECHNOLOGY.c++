@@ -20,8 +20,6 @@ int main()
         a[s+w].push_back({-o,h});    
     }
     int chk=0,x,y,cnt=0;
-    long long int ans=0;
-    for(i=1;i<=mx;i++)
     {
         int l=1,r=1e6;
         while(l<=r)
