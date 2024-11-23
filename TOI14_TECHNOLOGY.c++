@@ -14,8 +14,6 @@ int main()
     for(int i=1;i<=n;i++)
     {
         int s,h,w,o;
-        cin >> s >> h >> w >> o;
-    }
     int chk=0,x,y,cnt=0;
     cout << ans;
 }
