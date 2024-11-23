@@ -45,7 +45,7 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin >> k >> m;
-    for(int i = 0; i < k; i++)
+    for(i=0;i<k;i++)
     {
         cin >> binaryCode;
         ll hashCode = 0;
