@@ -9,7 +9,6 @@ using namespace std;
 int main()
 {
     ios::sync_with_stdio(0); cin.tie(0);
-    int i,n,t,mx=0;
     cin >> n >> t;
     for(int i=1;i<=n;i++)
     {
