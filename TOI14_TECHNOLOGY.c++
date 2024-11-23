@@ -88,7 +88,7 @@ int main() {
             for(int j = 1; j <= k; j++)
             {
                 if(foundCode[j])
-                {}
+                {
                     cout << j << ' ';
                     foundCode[j] = false;
                 }
