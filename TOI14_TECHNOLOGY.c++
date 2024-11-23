@@ -63,8 +63,9 @@ int main() {
     }
 
     cin >> n;
-    for(int i = 0; i < n; i++) {
-        int d;
+    for(int i = 0; i < n; i++)
+    {
+        int d,j;
         cin >> d >> binaryCode;
         ll currCode = 0;
         bool found = false;
