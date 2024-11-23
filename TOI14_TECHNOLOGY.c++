@@ -113,7 +113,8 @@ signed main()
     cin.tie(nullptr)->sync_with_stdio(0);
     int m, n, t;
     cin >> n>> m >> t;
-    while(t--){
+    while(t--)
+    {
         int h, k;
         cin >> h >> k;
         mat[h-1][k-1] = true;
