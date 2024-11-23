@@ -11,7 +11,6 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin >> n >> t;
-        int s,h,w,o;
     int chk=0,x,y,cnt=0;
     cout << ans;
 }
