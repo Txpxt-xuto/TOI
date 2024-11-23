@@ -27,8 +27,6 @@ int main()
         ans+=(i-chk)*(cnt);    
         for(auto e:a[i])
         {
-            int o=e.first;
-            int h=e.second;
         }
         int l=1,r=1e6;
         while(l<=r)
