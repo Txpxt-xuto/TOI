@@ -96,12 +96,6 @@ int main()
     }
     return 0;
 }
-/*
-TASK: Go to school u little bitch
-LANG: C++
-AUTHOR: Jesada Tuntanuch
-CENTER: Ur basement
-*/
 #include <bits/stdc++.h>
 using namespace std;
 bool mat[50][50];
