@@ -24,7 +24,6 @@ int main() {
                 cou++;
             }
         }
-        // cout << l << " " << r << " " << mid << " " << cou << endl;
         if(cou>n || mid<_max) l=mid+1;
         else r=mid;
     }
