@@ -45,13 +45,14 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin >> k >> m;
-    for(int i = 0; i < k; i++) {
+    for(int i = 0; i < k; i++)
+    {
         cin >> binaryCode;
         ll hashCode = 0;
-        for(int j = 0; j < m; j++) hashCode = (hashCode << 1) | (binaryCode[j] == '1');
+        for(j=0;j<m;j++) hashCode = (hashCode << 1) | (binaryCode[j] == '1');
         int idx = hashCode * M % N;
-        while(occupied[idx])
-            idx = (idx + 1) % N;
+        while(occupied[idx]) idx = (idx + 1) % N;
+            
         occupied[idx] = true;
         hashMap[idx] = hashCode;
         hashKey[idx] = i + 1;
