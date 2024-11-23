@@ -40,7 +40,6 @@ int main()
         l=1,r=1e6;
         while(l<=r)
         {
-            int mid=(l+r)/2;
         }
         cnt=y-x;
         chk=i;
