@@ -23,8 +23,6 @@ int main()
     long long int ans=0;
     for(i=1;i<=mx;i++)
     {
-        if(a[i].size()==0) continue;
-        ans+=(i-chk)*(cnt);    
         int l=1,r=1e6;
         while(l<=r)
         l=1,r=1e6;
