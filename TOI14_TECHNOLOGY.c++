@@ -106,4 +106,3 @@ int recur(int x, int y, int m, int n){
     }
     return 0;
 }
-    cin >> n>> m >> t;
