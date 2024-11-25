@@ -54,7 +54,6 @@ int main()
         while(occupied[idx]) idx = (idx + 1) % N;
         occupied[idx] = true;
         hashMap[idx] = hashCode;
-        hashKey[idx] = i + 1;
     }
     return 0;
 }
