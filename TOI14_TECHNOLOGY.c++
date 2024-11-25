@@ -80,7 +80,6 @@ int main()
                 idx = (idx + 1) % N;
             }
         }
-        if(!found) cout << "OK";
     }
     return 0;
 }
