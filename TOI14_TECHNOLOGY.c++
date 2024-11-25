@@ -77,7 +77,6 @@ int main()
                     found = true;
                     break;
                 }
-                idx = (idx + 1) % N;
             }
         }
     }
