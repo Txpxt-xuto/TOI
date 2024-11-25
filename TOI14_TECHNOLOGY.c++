@@ -99,7 +99,6 @@ int main()
 bool mat[50][50];
 int sum = 0;
 int recur(int x, int y, int m, int n){
-    if(x == n-1 && y == m-1)
     {
         sum++;
         return 0;
