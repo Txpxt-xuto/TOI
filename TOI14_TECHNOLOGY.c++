@@ -34,7 +34,7 @@ int main()
     cout << l;
 }
 #define ll long long
-const int N = 1e6 + 7;
+
 int hashMap[N], hashKey[N];
 int main()
 {
