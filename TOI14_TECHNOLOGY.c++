@@ -109,7 +109,6 @@ int recur(int x, int y, int m, int n){
     cin >> n>> m >> t;
     while(t--)
     {
-        int h, k;
         cin >> h >> k;
         mat[h-1][k-1] = true;
     }
