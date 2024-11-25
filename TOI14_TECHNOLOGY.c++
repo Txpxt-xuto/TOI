@@ -71,7 +71,6 @@ int main()
             int idx = currCode * M % N;
             while(occupied[idx])
             {
-                if(hashMap[idx] == currCode)
             }
         }
     }
