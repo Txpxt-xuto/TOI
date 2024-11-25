@@ -56,6 +56,5 @@ int main()
         hashMap[idx] = hashCode;
         hashKey[idx] = i + 1;
     }
-    cin >> n;
     return 0;
 }
