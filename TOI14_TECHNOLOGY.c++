@@ -47,7 +47,6 @@ int main()
     cin >> k >> m;
     for(i=0;i<k;i++)
     {
-        cin >> binaryCode;
     }
     return 0;
 }
