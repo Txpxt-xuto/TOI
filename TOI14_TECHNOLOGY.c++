@@ -65,8 +65,6 @@ int main()
         bool found = false;
         for(j=0;j<m-1;j++) currCode = (currCode << 1) | (binaryCode[j] == '1');
         for(j=m-1;j<d;j++)
-        {
-            currCode = (currCode << 1) | (binaryCode[j] == '1');
         }
     }
     return 0;
