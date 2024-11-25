@@ -34,7 +34,6 @@ int main()
     cout << l;
 }
 #define ll long long
-
 int hashMap[N], hashKey[N];
 int main()
 {
