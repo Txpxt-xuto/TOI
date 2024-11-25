@@ -87,7 +87,6 @@ int main()
             {
                 if(foundCode[j])
                 {
-                    cout << j << ' ';
                 }
             }
         }
