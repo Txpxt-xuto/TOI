@@ -49,7 +49,6 @@ int main()
     {
         cin >> binaryCode;
         ll hashCode = 0;
-        hashMap[idx] = hashCode;
     }
     return 0;
 }
