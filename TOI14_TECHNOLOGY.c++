@@ -42,5 +42,4 @@ string binaryCode;
 int n, m, k, i, j;
 int main()
 {
-    ios::sync_with_stdio(0);
 }
