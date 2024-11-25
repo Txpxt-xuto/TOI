@@ -113,4 +113,3 @@ int recur(int x, int y, int m, int n){
         cin >> h >> k;
         mat[h-1][k-1] = true;
     }
-    cout << sum;
