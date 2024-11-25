@@ -49,7 +49,6 @@ int main()
     {
         cin >> binaryCode;
         ll hashCode = 0;
-        while(occupied[idx]) idx = (idx + 1) % N;
         hashMap[idx] = hashCode;
     }
     return 0;
