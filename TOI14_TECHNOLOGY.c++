@@ -72,8 +72,6 @@ int main()
             while(occupied[idx])
             {
                 if(hashMap[idx] == currCode)
-                {
-                }
             }
         }
     }
