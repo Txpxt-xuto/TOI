@@ -61,7 +61,6 @@ int main()
     {
         int d;
         cin >> d >> binaryCode;
-        ll currCode = 0;
     }
     return 0;
 }
