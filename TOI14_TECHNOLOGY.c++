@@ -62,7 +62,6 @@ int main()
         int d;
         cin >> d >> binaryCode;
         ll currCode = 0;
-        bool found = false;
     }
     return 0;
 }
