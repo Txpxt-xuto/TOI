@@ -69,7 +69,6 @@ int main()
             currCode = (currCode << 1) | (binaryCode[j] == '1');
             currCode &= ~(1 << m);
             int idx = currCode * M % N;
-            while(occupied[idx])
             {
             }
         }
