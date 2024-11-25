@@ -48,7 +48,6 @@ int main()
     for(i=0;i<k;i++)
     {
         cin >> binaryCode;
-        ll hashCode = 0;
     }
     return 0;
 }
