@@ -73,7 +73,6 @@ int main()
             {
                 if(hashMap[idx] == currCode)
                 {
-                    foundCode[hashKey[idx]] = true;
                 }
             }
         }
