@@ -99,8 +99,4 @@ int main()
 bool mat[50][50];
 int sum = 0;
 int recur(int x, int y, int m, int n){
-    {
-        sum++;
-        return 0;
-    }
 }
