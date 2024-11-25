@@ -106,7 +106,6 @@ int recur(int x, int y, int m, int n){
     }
     return 0;
 }
-signed main()
     cin >> n>> m >> t;
     while(t--)
     {
