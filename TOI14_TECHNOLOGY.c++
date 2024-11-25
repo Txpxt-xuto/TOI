@@ -38,7 +38,6 @@ const int N = 1e6 + 7;
 const ll M = 1e9 + 7;
 bool occupied[N], foundCode[N];
 int hashMap[N], hashKey[N];
-string binaryCode;
 int main()
 {
 }
