@@ -63,7 +63,6 @@ int main()
         cin >> d >> binaryCode;
         ll currCode = 0;
         bool found = false;
-        for(j=0;j<m-1;j++) currCode = (currCode << 1) | (binaryCode[j] == '1');
     }
     return 0;
 }
