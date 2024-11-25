@@ -107,8 +107,6 @@ int recur(int x, int y, int m, int n){
     return 0;
 }
 signed main()
-{
-    cin.tie(nullptr)->sync_with_stdio(0);
     int m, n, t;
     cin >> n>> m >> t;
     while(t--)
