@@ -81,7 +81,6 @@ int main()
             }
         }
         if(!found) cout << "OK";
-        cout << '\n';
     }
     return 0;
 }
