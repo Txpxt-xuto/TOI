@@ -75,7 +75,6 @@ int main()
                 {
                     foundCode[hashKey[idx]] = true;
                     found = true;
-                    break;
                 }
             }
         }
