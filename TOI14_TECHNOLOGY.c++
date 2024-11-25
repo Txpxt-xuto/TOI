@@ -104,5 +104,4 @@ int recur(int x, int y, int m, int n){
         sum++;
         return 0;
     }
-    return 0;
 }
