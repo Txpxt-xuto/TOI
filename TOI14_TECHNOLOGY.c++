@@ -104,7 +104,6 @@ int recur(int x, int y, int m, int n){
         sum++;
         return 0;
     }
-    if(!mat[x+1][y] && x < n-1) recur(x+1, y,m,n);
     return 0;
 }
 signed main()
