@@ -85,4 +85,3 @@ int main()
     return 0;
 }
 bool mat[50][50];
-int sum = 0;
