@@ -108,5 +108,3 @@ int recur(int x, int y, int m, int n){
 }
     cin >> n>> m >> t;
     while(t--)
-    {
-    }
