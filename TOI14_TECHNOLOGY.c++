@@ -23,7 +23,7 @@ int main(){
         if(d == 1) par[find(a)] = find(b);
         else pq.push({c,a,b});
     }
-    cin>>q;
+    cin >> q;
     multiset<pair<int,int>> mt;
     while(q--)
     {
