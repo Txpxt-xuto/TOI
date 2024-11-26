@@ -38,7 +38,8 @@ int main(){
             par[find(a)] = par[b];
             for(auto [y,x] : mt)
             {
-                if(x >= c){
+                if(x >= c)
+                {
                     sum+=y;
                     break;
                 }
