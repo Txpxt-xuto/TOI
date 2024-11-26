@@ -93,11 +93,8 @@ int main(){
 //  	cout << a[i] << ' ' << b[i] << "\n";
     a[i]=a[i]-b[i];
   }
-  quick(a,0,n-1);
-  int ans=0;
-  for(int i=1;i<n;i++) ans+=a[i]-a[i-1];
-  {
-    ans+=a[i]-a[i-1];
-  }
-  cout << ans;
+    quick(a,0,n-1);
+    int ans=0;
+    for(int i=1;i<n;i++) ans+=a[i]-a[i-1];
+    cout << ans;
 }
