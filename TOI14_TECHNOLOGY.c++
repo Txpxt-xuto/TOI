@@ -28,7 +28,7 @@ int main(){
     while(q--)
     {
         int a,b;
-        cin>>a>>b;
+        cin >> a >> b;
         mt.insert({b,a});
     }
     while(!pq.empty())
