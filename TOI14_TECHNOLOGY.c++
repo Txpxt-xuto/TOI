@@ -89,7 +89,7 @@ int main(){
   }
   quick(a,0,n-1);
   quick(b,0,n-1);
-    for(int i=0;i<n;i++)
+    for(int i=0;i<n;i++) a[i]=a[i]-b[i];
     {
         a[i]=a[i]-b[i];
     }
