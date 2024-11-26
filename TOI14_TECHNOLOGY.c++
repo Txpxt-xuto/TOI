@@ -129,7 +129,6 @@ template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 #define repd3(i, a, b, c) for (int i = b; i >= a; i-=c)
 #define repd(...) overload4(__VA_ARGS__, repd3, repd2, repd1, repd0)(__VA_ARGS__)
 #define trav(a, x) for (auto& a : x)
-
 #define sz(x) (int)(x).size()
 #define mp make_pair
 #define pb push_back
@@ -139,21 +138,17 @@ template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 #define ub upper_bound
 #define all(x) (x).begin(), (x).end()
 #define ins insert
-
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
 template<typename T> bool ckmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
-
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-
 const int MOD = 1e9 + 7;
 const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
 const char nl = '\n';
 const int MX = 1e7 + 10;
-
 ll l[20], a[20], s[MX], t[20], w[20], tmp[20];
-
-void solve() {
+void solve()
+{
   int n, m, x; cin >> n >> m >> x;
   rep(i, 1, n) cin >> l[i];
   rep(i, 1, n) cin >> a[i];
