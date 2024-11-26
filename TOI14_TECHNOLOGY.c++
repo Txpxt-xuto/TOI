@@ -28,6 +28,5 @@ int main()
                 cou++;
             }
         }
-        if(cou>n || mid<_max) l=mid+1;
     }
 }
