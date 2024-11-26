@@ -58,8 +58,8 @@ using namespace std;
 const int N=5e5+5;
 int a[N],b[N],n;
 
-void quick(int p[],int l,int h){
-//	cout << l << ' ' << h << "\n";
+void quick(int p[],int l,int h)
+{
     if(l<h)
     {
         int x=p[h],i=l-1;
