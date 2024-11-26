@@ -24,7 +24,6 @@ int main()
             k+=a[i];
             if(k>mid)
             {
-                k=a[i];
             }
         }
     }
