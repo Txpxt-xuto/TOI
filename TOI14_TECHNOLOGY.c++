@@ -63,12 +63,12 @@ void quick(int p[],int l,int h){
   if(l<h){
     int x=p[h],i=l-1;
     for(int j=l;j<h;j++){
-      if(p[j]<x){
-        i++;
-        swap(p[i],p[j]);
-      }
-    }
-    
+            if(p[j]<x)
+            {
+                i++;
+                swap(p[i],p[j]);
+            }
+        }
         swap(p[i+1],p[h]);
         int xx=i+1;
         quick(p,l,xx-1);
