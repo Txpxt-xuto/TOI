@@ -46,5 +46,5 @@ int main(){
             }
         }
     }
-    cout<<sum;
+    cout << sum;
 }
