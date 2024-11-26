@@ -25,7 +25,6 @@ int main()
             if(k>mid)
             {
                 k=a[i];
-                cou++;
             }
         }
     }
