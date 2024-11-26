@@ -16,7 +16,4 @@ int main()
         cin >> a[i];
         _max=max(_max,a[i]);
     }
-    while(l<r)
-    {
-    }
 }
