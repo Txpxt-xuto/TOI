@@ -23,8 +23,6 @@ int main()
         {
             k+=a[i];
             if(k>mid)
-            {
-            }
         }
     }
 }
