@@ -69,14 +69,12 @@ void quick(int p[],int l,int h){
       }
     }
     
-    swap(p[i+1],p[h]);
-    int xx=i+1;
-    quick(p,l,xx-1);
-    quick(p,xx+1,h);
-  }
+        swap(p[i+1],p[h]);
+        int xx=i+1;
+        quick(p,l,xx-1);
+        quick(p,xx+1,h);
+    }
 }
-
-
 int main()
 {
     int i;
