@@ -79,6 +79,7 @@ void quick(int p[],int l,int h){
 
 int main()
 {
+    int i;
     ios::sync_with_stdio(0); 
     cin. tie(0);
     cin >> n;
