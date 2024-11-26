@@ -96,7 +96,6 @@ int main(){
   quick(a,0,n-1);
   int ans=0;
   for(int i=1;i<n;i++){
-//  	cout << a[i] << "\n";
     ans+=a[i]-a[i-1];
   }
   cout << ans;
