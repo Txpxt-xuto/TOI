@@ -82,8 +82,8 @@ int main()
     ios::sync_with_stdio(0); 
     cin. tie(0);
     cin >> n;
-    for(int i=0;i<n;i++) cin >> a[i];
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++) cin >> a[i];
+    for(i=0;i<n;i++)
     {
         cin >> b[i];
         b[i]=-b[i];
@@ -93,6 +93,6 @@ int main()
     for(int i=0;i<n;i++) a[i]=a[i]-b[i];
     quick(a,0,n-1);
     int ans=0;
-    for(int i=1;i<n;i++) ans+=a[i]-a[i-1];
+    for(i=1;i<n;i++) ans+=a[i]-a[i-1];
     cout << ans;
 }
