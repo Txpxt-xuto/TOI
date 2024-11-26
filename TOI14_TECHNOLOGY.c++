@@ -29,7 +29,8 @@ int main(){
         int a,b;cin>>a>>b;
         mt.insert({b,a});
     }
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         auto [c,a,b] = pq.top();
         pq.pop();
         if(par[find(a)] != par[find(b)]){
