@@ -184,6 +184,6 @@ int main(int argc, char* argv[]) {
   ios_base::sync_with_stdio(0); cin.tie(NULL);
   int t = 1;
 //  cin >> t;
-  while (t--) { solve(); }
-  return 0;
+    while (t--) { solve(); }
+    return 0;
 }
