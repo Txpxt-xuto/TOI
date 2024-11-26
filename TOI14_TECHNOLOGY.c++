@@ -149,22 +149,23 @@ const int MX = 1e7 + 10;
 ll l[20], a[20], s[MX], t[20], w[20], tmp[20];
 void solve()
 {
-  int n, m, x; cin >> n >> m >> x;
-  rep(i, 1, n) cin >> l[i];
-  rep(i, 1, n) cin >> a[i];
-  rep(i, 1, m) cin >> s[i], s[i] += s[i-1];
-  rep(i, 1, x) cin >> t[i];
-  sort(a+1, a+n+1);
-  rep(i, 1, x) {
-    ll prev = 0, y; cin >> y; 
-    rep(i, 1, n-1) cin >> y, w[i] = s[y-1] - s[prev-1], prev = y;
-    w[n] = s[m] - s[prev-1];
-    sort(w+1, w+n+1, greater<ll>());
-    bool ok = 0;
-    sort(l+1, l+n+1);
-    do {
-      bool pass = 1;
-      rep(j, 1, n) tmp[j] = (l[j]*t[i] - w[j])/t[i];
+    int n, m, x; cin >> n >> m >> x;
+    rep(i, 1, n) cin >> l[i];
+    rep(i, 1, n) cin >> a[i];
+    rep(i, 1, m) cin >> s[i], s[i] += s[i-1];
+    rep(i, 1, x) cin >> t[i];
+    sort(a+1, a+n+1);
+    rep(i, 1, x)
+    {
+        ll prev = 0, y; cin >> y; 
+        rep(i, 1, n-1) cin >> y, w[i] = s[y-1] - s[prev-1], prev = y;
+        w[n] = s[m] - s[prev-1];
+        sort(w+1, w+n+1, greater<ll>());
+        bool ok = 0;
+        sort(l+1, l+n+1);
+        do{
+            bool pass = 1;
+            rep(j, 1, n) tmp[j] = (l[j]*t[i] - w[j])/t[i];
       rep(j, 1, n) if (a[j] > tmp[j]) {pass = 0; break;}
       if (pass) {ok = 1; break;}
     } while (next_permutation(l+1, l+n+1));
