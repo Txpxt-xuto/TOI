@@ -169,8 +169,8 @@ void solve()
             rep(j, 1, n) if (a[j] > tmp[j]) {pass = 0; break;}
             if (pass) {ok = 1; break;}
         }while (next_permutation(l+1, l+n+1));
-    cout << (ok ? "P" : "F") << nl;
-  }
+        cout << (ok ? "P" : "F") << nl;
+    }
 }  
 
 int main(int argc, char* argv[])
