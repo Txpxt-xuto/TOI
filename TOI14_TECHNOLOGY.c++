@@ -31,5 +31,4 @@ int main()
         if(cou>n || mid<_max) l=mid+1;
         else r=mid;
     }
-    cout << l;
 }
