@@ -25,7 +25,8 @@ int main(){
     }
     cin>>q;
     multiset<pair<int,int>> mt;
-    while(q--){
+    while(q--)
+    {
         int a,b;cin>>a>>b;
         mt.insert({b,a});
     }
