@@ -61,8 +61,9 @@ int a[N],b[N],n;
 void quick(int p[],int l,int h){
 //	cout << l << ' ' << h << "\n";
   if(l<h){
-    int x=p[h],i=l-1;
-    for(int j=l;j<h;j++){
+        int x=p[h],i=l-1;
+        for(int j=l;j<h;j++)
+        {
             if(p[j]<x)
             {
                 i++;
