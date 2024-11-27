@@ -95,7 +95,7 @@ ter<T>>;
 #define rep0(a) for (int i = 0; i < a; ++i)
 #define rep1(i, a) for (int i = 0; i < a; ++i)
 #define rep2(i, a, b) for (int i = a; i <= b; ++i)
-#define rep3(i, a, b, c) for (int i = a; i <= b; i+=c) 
+
 #define overload4(a, b, c, d, e, ...) e
 #define rep(...) overload4(__VA_ARGS__, rep3, rep2, rep1, rep0)(__VA_ARGS__)
 #define repd0(a) for (int i = a; i >= 1; --i)
