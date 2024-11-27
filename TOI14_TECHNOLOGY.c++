@@ -57,9 +57,6 @@ int main()
 using namespace std;
 const int N=5e5+5;
 int a[N],b[N],n;
-void quick(int p[],int l,int h)
-{
-}
 int main()
 {
     int i;
