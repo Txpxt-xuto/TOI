@@ -83,7 +83,6 @@ typedef long long ll;
 typedef double db;
 typedef long double ld;
 typedef pair<int, int> pii;
-typedef pair<ll, ll> pll;
 typedef pair<ld, ld> pld;
 typedef vector<int> vi;
 typedef vector<ll> vll;
