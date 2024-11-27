@@ -80,13 +80,7 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-typedef double db;
-typedef long double ld;
-#define repd0(a) for (int i = a; i >= 1; --i)
-#define repd3(i, a, b, c) for (int i = b; i >= a; i-=c)
 
-
-#define st first
 #define ub upper_bound
 #define all(x) (x).begin(), (x).end()
 #define ins insert
