@@ -65,8 +65,6 @@ void quick(int p[],int l,int h)
         for(int j=l;j<h;j++)
         {
             if(p[j]<x)
-            {
-            }
         }
         swap(p[i+1],p[h]);
         int xx=i+1;
