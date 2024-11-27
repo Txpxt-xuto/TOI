@@ -81,7 +81,6 @@ int main()
 using namespace std;
 typedef long long ll;
 
-#define ub upper_bound
 #define all(x) (x).begin(), (x).end()
 #define ins insert
 template<typename T> bool ckmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
