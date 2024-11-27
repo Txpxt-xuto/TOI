@@ -101,6 +101,3 @@ void solve()
         cout << (ok ? "P" : "F") << nl;
     }
 }  
-    ios_base::sync_with_stdio(0);
-    cin.tie(NULL);
-    int t = 1;
