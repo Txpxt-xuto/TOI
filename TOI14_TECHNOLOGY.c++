@@ -79,10 +79,6 @@ int main()
 #pragma once
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-#define ins insert
- T &b) { return b < a ? a = b, 1 : 0; }
-=
 const int INF = 0x3fffffff;
 const ll LINF = 0x1fffffffffffffff;
 const char nl = '\n';
