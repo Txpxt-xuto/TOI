@@ -84,7 +84,7 @@ typedef double db;
 typedef long double ld;
 
 typedef pair<ld, ld> pld;
-typedef vector<int> vi;
+
 ;
 typedef vector<ld> vld;
 
