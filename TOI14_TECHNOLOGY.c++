@@ -53,3 +53,51 @@ int main()
     }
     cout << sum;
 }
+#include<bits/stdc++.h>
+using namespace std;
+int a[N],b[N],n;
+int main()
+{
+    int i;
+    ios::sync_with_stdio(0); 
+    cin. tie(0);
+    cin >> n;
+    for(i=0;i<n;i++) cin >> a[i];
+    for(i=0;i<n;i++)
+    {
+        cin >> b[i];
+        b[i]=-b[i];
+    }
+    quick(a,0,n-1);
+    quick(b,0,n-1);
+    for(int i=0;i<n;i++) a[i]=a[i]-b[i];
+    quick(a,0,n-1);
+    int ans=0;
+    for(i=1;i<n;i++) ans+=a[i]-a[i-1];
+    cout << ans;
+}
+void solve()
+{
+    int n, m, x; cin >> n >> m >> x;
+    rep(i, 1, n) cin >> l[i];
+    rep(i, 1, n) cin >> a[i];
+    rep(i, 1, m) cin >> s[i], s[i] += s[i-1];
+    rep(i, 1, x) cin >> t[i];
+    sort(a+1, a+n+1);
+    rep(i, 1, x)
+    {
+        ll prev = 0, y; cin >> y; 
+        rep(i, 1, n-1) cin >> y, w[i] = s[y-1] - s[prev-1], prev = y;
+        w[n] = s[m] - s[prev-1];
+        sort(w+1, w+n+1, greater<ll>());
+        bool ok = 0;
+        sort(l+1, l+n+1);
+        do{
+            bool pass = 1;
+            rep(j, 1, n) tmp[j] = (l[j]*t[i] - w[j])/t[i];
+            rep(j, 1, n) if (a[j] > tmp[j]) {pass = 0; break;}
+            if (pass) {ok = 1; break;}
+        }while (next_permutation(l+1, l+n+1));
+        cout << (ok ? "P" : "F") << nl;
+    }
+}
