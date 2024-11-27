@@ -86,7 +86,6 @@ typedef vector<ld> vld;
 e, ...) e
 p1, rep0)(__VA_ARGS__)
 #define repd0(a) for (int i = a; i >= 1; --i)
-
 #define repd3(i, a, b, c) for (int i = b; i >= a; i-=c)
 #define sz(x) (int)(x).size()
 #define mp make_pair
