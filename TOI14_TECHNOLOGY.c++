@@ -83,9 +83,6 @@ typedef long long ll;
 typedef double db;
 typedef long double ld;
 
-typedef pair<ld, ld> pld;
-
-;
 typedef vector<ld> vld;
 typedef tuple<ll, ll, ll> t3;
 typedef tuple<ll, ll, ll, ll, ll> t5;
