@@ -89,7 +89,6 @@ typedef pair<ld, ld> pld;
 typedef vector<ld> vld;
 
 typedef tuple<ll, ll, ll> t3;
-typedef tuple<ll, ll, ll, ll> t4;
 typedef tuple<ll, ll, ll, ll, ll> t5;
 template<typename T> using pq = priority_queue<T>;
 template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;
