@@ -84,8 +84,7 @@ typedef double db;
 typedef long double ld;
 #define repd0(a) for (int i = a; i >= 1; --i)
 #define repd3(i, a, b, c) for (int i = b; i >= a; i-=c)
-#define sz(x) (int)(x).size()
-#define mp make_pair
+
 
 #define st first
 #define ub upper_bound
