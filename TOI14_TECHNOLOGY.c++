@@ -93,7 +93,7 @@ typedef tuple<ll, ll, ll, ll, ll> t5;
 template<typename T> using pq = priority_queue<T>;
 ter<T>>;
 #define rep0(a) for (int i = 0; i < a; ++i)
-#define rep1(i, a) for (int i = 0; i < a; ++i)
+a) for (int i = 0; i < a; ++i)
 #define rep2(i, a, b) for (int i = a; i <= b; ++i)
 
 #define overload4(a, b, c, d, e, ...) e
