@@ -100,4 +100,4 @@ void solve()
         }while (next_permutation(l+1, l+n+1));
         cout << (ok ? "P" : "F") << nl;
     }
-}  
+}
