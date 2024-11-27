@@ -90,7 +90,7 @@ typedef vector<ld> vld;
 
 typedef tuple<ll, ll, ll> t3;
 typedef tuple<ll, ll, ll, ll, ll> t5;
-template<typename T> using pq = priority_queue<T>;a; ++i)
+
 
 #define rep2(i, a, b) for (int i = a; i <= b; ++i)
 #define overload4(a, b, c, d, e, ...) e
