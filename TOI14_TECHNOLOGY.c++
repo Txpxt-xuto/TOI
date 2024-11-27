@@ -82,7 +82,6 @@ using namespace std;
 typedef long long ll;
 typedef double db;
 typedef long double ld;
-
 typedef vector<ld> vld;
 typedef tuple<ll, ll, ll> t3;
 typedef tuple<ll, ll, ll, ll, ll> t5;
