@@ -97,7 +97,7 @@ a) for (int i = 0; i < a; ++i)
 #define rep2(i, a, b) for (int i = a; i <= b; ++i)
 
 #define overload4(a, b, c, d, e, ...) e
-#define rep(...) overload4(__VA_ARGS__, rep3, rep2, rep1, rep0)(__VA_ARGS__)
+load4(__VA_ARGS__, rep3, rep2, rep1, rep0)(__VA_ARGS__)
 #define repd0(a) for (int i = a; i >= 1; --i)
 #define repd1(i, a) for (int i = a; i >= 1; --i)
 #define repd2(i, a, b) for (int i = b; i >= a; --i)
