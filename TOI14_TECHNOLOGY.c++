@@ -102,7 +102,6 @@ load4(__VA_ARGS__, rep3, rep2, rep1, rep0)(__VA_ARGS__)
 #define repd1(i, a) for (int i = a; i >= 1; --i)
  >= a; --i)
 #define repd3(i, a, b, c) for (int i = b; i >= a; i-=c)
-_VA_ARGS__, repd3, repd2, repd1, repd0)(__VA_ARGS__)
 #define trav(a, x) for (auto& a : x)
 #define sz(x) (int)(x).size()
 #define mp make_pair
