@@ -88,7 +88,6 @@ typedef long double ld;
 #define mp make_pair
 
 #define st first
-#define lb lower_bound
 #define ub upper_bound
 #define all(x) (x).begin(), (x).end()
 #define ins insert
