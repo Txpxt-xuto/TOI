@@ -62,7 +62,6 @@ void quick(int p[],int l,int h)
     if(l<h)
     {
         int x=p[h],i=l-1;
-        int xx=i+1;
         quick(p,xx+1,h);
     }
 }
