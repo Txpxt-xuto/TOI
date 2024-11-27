@@ -83,9 +83,7 @@ typedef long long ll;
 typedef double db;
 typedef long double ld;
 typedef vector<ld> vld;
-typedef tuple<ll, ll, ll> t3;
-i = a; i <= b; ++i)
-#define overload4(a, b, c, d, e, ...) e
+e, ...) e
 p1, rep0)(__VA_ARGS__)
 #define repd0(a) for (int i = a; i >= 1; --i)
 
