@@ -76,14 +76,6 @@ int main()
     for(i=1;i<n;i++) ans+=a[i]-a[i-1];
     cout << ans;
 }
-#pragma once
-#include <bits/stdc++.h>
-using namespace std;
-const int INF = 0x3fffffff;
-const ll LINF = 0x1fffffffffffffff;
-const char nl = '\n';
-const int MX = 1e7 + 10;
-ll l[20], a[20], s[MX], t[20], w[20], tmp[20];
 void solve()
 {
     int n, m, x; cin >> n >> m >> x;
