@@ -28,8 +28,7 @@ int main()
     }
     cin >> q;
     multiset<pair<int,int>> mt;
-    while(q--)
-    {
+    while(q--
     while(!pq.empty())
     {
         auto [c,a,b] = pq.top();
