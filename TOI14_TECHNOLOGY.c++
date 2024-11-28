@@ -54,7 +54,11 @@ int main()
     cout << sum;
 }
 #include<bits/stdc++.h>
-using namespace std
+using namespace std;
+int a[N],b[N],n;
+int main()
+{
+    int i;
     ios::se(0);
     cin >> n;
     for;i<n;i]
