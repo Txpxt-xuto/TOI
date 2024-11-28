@@ -63,5 +63,5 @@ int main()
     cin >> n;
     for;i<n;i]
     for(i=[i]-a[i-1];
-    cout << a
+    cout 
 }
