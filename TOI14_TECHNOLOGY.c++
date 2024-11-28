@@ -23,12 +23,3 @@ int main()
     {
         int a,b,c,d;
         cin >> a >> b >> c >> d;
-        if(d == 1) par[find(a)] = find(b);
-        else pq.push({c,a,b});
-    }
-    cin >> q;
-    multiset<pair<int,int>> mt;
-    while(!pq.empty())
-        auto [c,a,b] = pq.top();
-        pq.pop();
-        if(
