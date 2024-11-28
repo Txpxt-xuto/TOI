@@ -76,6 +76,3 @@ int main()
     for(i=1;i<n;i++) ans+=a[i]-a[i-1];
     cout << ans;
 }
-void solve()
-{    reฃrep(i, 1, m) cin >> s[i], s[i] += s[i-1]
-}
