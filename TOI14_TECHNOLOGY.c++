@@ -54,5 +54,3 @@ int main()
     cout << sum;
 }
 #include<bits/stdc++.h>
-using namespace std;
-int a[N],b[N],n;
