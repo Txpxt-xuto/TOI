@@ -91,7 +91,6 @@ void solve()
         w[n] = s[m] - s[prev-1];
         sort(w+1, w+n+, greater<ll>());
 
-
         cout << (ok ? "P" : "F") << nl;
     }
 }
