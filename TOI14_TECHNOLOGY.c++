@@ -78,7 +78,7 @@ int main()
 }
 void solve()
 {
-    int n, m, x; cin >> n >> m >> x;
+m, x; cin >> n >> m >> x;
     rep(i, 1, n) cin >> l[i];
     rep(i, 1, n) cin >> a[i];
     rep(i, 1, m) cin >> s[i], s[i] += s[i-1];
