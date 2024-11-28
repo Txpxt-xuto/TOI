@@ -13,7 +13,3 @@ int par[3001],n,m,q,sum = 0,i;
 int find(int a){
     return par[a] = (a == par[a]) ? a : find(par[a]);
 }
-int main()
-{
-    cin.tie(nullptr)->sync_with_stdio(false);cout.tie(0);
-    cin>>n>>m;
