@@ -87,7 +87,7 @@ void solve()
     rep(i, 1, x)
     {
 
-        rep(i, 1, n-1) cin >> y, w[i] = s[y-1] - s[prev-1], prev = y;
+-1] - s[prev-1], prev = y;
 
         cout << (ok ? "P" : "F") << nl;
     }
