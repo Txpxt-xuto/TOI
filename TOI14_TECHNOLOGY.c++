@@ -63,10 +63,6 @@ int main()
     cin. tie(0);
     cin >> n;
     for(i=0;i<n;i++) cin >> a[i];
-    quick(a,0,n-1);
- 
-   
-
     for(i=1;i<n;i++) ans+=a[i]-a[i-1];
     cout << ans;
 }
