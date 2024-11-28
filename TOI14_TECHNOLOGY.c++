@@ -38,4 +38,4 @@ int main()
     {
         auto [c,a,b] = pq.top();
         pq.pop();
-        if(par[find(
+        if(
