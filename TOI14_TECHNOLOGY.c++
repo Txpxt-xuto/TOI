@@ -88,7 +88,7 @@ void solve()
     {
         ll prev = 0, y; cin >> y; 
         rep(i, 1, n-1) cin >> y, w[i] = s[y-1] - s[prev-1], prev = y;
-        w[n] = s[m] - s[prev-1];
+
         sort(w+1, w+n+, greater<ll>());
         cout << (ok ? "P" : "F") << nl;
     }
