@@ -19,7 +19,3 @@ int main()
     cin>>n>>m;
     priority_queue<tuple<int,int,int> , vector<tuple<int,int,int>> , greater<tuple<int,int,int>>> pq;
     for(i=0;i<n;++i) par[i] = i;
-    for(i=0;i<m;++i)
-    {
-        int a,b,c,d;
-        cin >> a >> b >> c >> d;
