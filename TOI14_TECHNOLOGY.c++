@@ -93,8 +93,7 @@ void solve()
 
         do            bool pass = 1;
             rep(j, 1, n) tmp[j] = (l[j]*t[i] - w[j])/t[i];
-            rep(j, 1, n) if (a[j] > tmp[j]) {pass = 0; break;}
-            if (pass) {ok = 1; break;}
+reak;}
         }while (next_permutation(l+1, l+n+1));
         cout << (ok ? "P" : "F") << nl;
     }
