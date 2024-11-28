@@ -53,4 +53,3 @@ int main()
     }
     cout << sum;
 }
-#include<bits/stdc++.h>
