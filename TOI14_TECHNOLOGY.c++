@@ -56,12 +56,5 @@ int main()
 #include<bits/stdc++.h>
 using namespace std;
 int a[N],b[N],n;
-int main()
-{
-    int i;
-    ios::se(0);
-    cin >> n;
-    for;i<n;i]
-    for(i-1];
-    cout 
+
 }
