@@ -59,7 +59,7 @@ int a[N],b[N],n;
 int main()
 {
     int i;
-    ios::sync_with_stn. tie(0);
+    ios::se(0);
     cin >> n;
     for(i=0;i<n;i]
     for(i=[i]-a[i-1];
