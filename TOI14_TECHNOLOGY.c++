@@ -39,12 +39,7 @@ int main()
         auto [c,a,b] = pq.top();
         pq.pop();
         if(par[find(a)] != par[find(b)])
-        {
-            par[find(a)] = par[b];
-            for(auto [y,x] : mt)
-            {
-                if(x >= c)
-                {
+        
                     sum+=y;
                     break;
                 }
