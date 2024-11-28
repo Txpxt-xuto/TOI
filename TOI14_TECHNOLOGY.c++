@@ -43,8 +43,3 @@ int main()
                     sum+=y;
                     break;
                 }
-            }
-        }
-    }
-    cout << sum;
-}
