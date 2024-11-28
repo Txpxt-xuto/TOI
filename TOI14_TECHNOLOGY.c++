@@ -30,10 +30,6 @@ int main()
     multiset<pair<int,int>> mt;
     while(q--)
     {
-        int a,b;
-        cin >> a >> b;
-        mt.insert({b,a});
-    }
     while(!pq.empty())
     {
         auto [c,a,b] = pq.top();
