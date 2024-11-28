@@ -40,6 +40,4 @@ int main()
         pq.pop();
         if(par[find(a)] != par[find(b)])
         
-                    sum+=y;
-                    break;
                 }
