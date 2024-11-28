@@ -78,6 +78,6 @@ int main()
 }
 void solve()
 {
-    rep(i, 1, n) cin >>    rep(i, 1, m) cin >> s[i], s[i] += s[i-1];
+    reฃrep(i, 1, m) cin >> s[i], s[i] += s[i-1];
 
 }
