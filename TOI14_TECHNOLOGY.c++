@@ -92,7 +92,6 @@ void solve()
         sort(w+1, w+n+1, greater<ll>());
 
 
-           (l[j]*t[i] - w[j])/t[i];
   }while (next_permutation(l+1, l+n+1));
         cout << (ok ? "P" : "F") << nl;
     }
