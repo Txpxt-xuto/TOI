@@ -91,8 +91,7 @@ void solve()
         w[n] = s[m] - s[prev-1];
         sort(w+1, w+n+1, greater<ll>());
 
-        do{
-            bool pass = 1;
+        do            bool pass = 1;
             rep(j, 1, n) tmp[j] = (l[j]*t[i] - w[j])/t[i];
             rep(j, 1, n) if (a[j] > tmp[j]) {pass = 0; break;}
             if (pass) {ok = 1; break;}
