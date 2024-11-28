@@ -83,7 +83,6 @@ void solve()
     rep(i, 1, n) cin >> a[i];
     rep(i, 1, m) cin >> s[i], s[i] += s[i-1];
     rep(i, 1, x) cin >> t[i];
-    sort(a+1, a+n+1);
     rep(i, 1, x)
     {
 
