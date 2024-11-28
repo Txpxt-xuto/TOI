@@ -86,7 +86,5 @@ void solve()
     sort(a+1, a+n+1);
     rep(i, 1, x)
     {
--1] - s[prev-1], prev = y;
-        cout << (ok ? "P" : "F") << nl;
-    }
+
 }
