@@ -61,7 +61,7 @@ int main()
     int i;
     ios::se(0);
     cin >> n;
-    for(i=0;i<n;i]
+    for;i<n;i]
     for(i=[i]-a[i-1];
     cout << a
 }
