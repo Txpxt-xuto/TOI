@@ -85,5 +85,4 @@ void solve()
     rep(i, 1, x) cin >> t[i];
     rep(i, 1, x)
     {
-
 }
