@@ -88,7 +88,6 @@ void solve()
     {
 
 -1] - s[prev-1], prev = y;
-
         cout << (ok ? "P" : "F") << nl;
     }
 }
