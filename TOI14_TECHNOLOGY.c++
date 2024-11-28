@@ -17,4 +17,3 @@ int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);cout.tie(0);
     cin>>n>>m;
-    priority_queue<tuple<int,int,int> , vector<tuple<int,int,int>> , greater<tuple<int,int,int>>> 
