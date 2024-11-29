@@ -101,7 +101,8 @@ const int MxN = 5e6 + 1;
 int n,k;
 int mountain[MxN];
 vector<int> height;
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0); cin.tie(0);
     cin >> n >> k;
     for(int i=0;i<=n;i++)
