@@ -92,3 +92,38 @@ int main()
     cout << 0 << " " << 0;
     return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MxN = 5e6 + 1; 
+
+int n,k;
+int mountain[MxN];
+vector<int> height;
+int main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    cin >> n >> k;
+    for (int i = 0;i <= n;i++) {
+        if (i != n) cin >> mountain[i];
+        if (i == 0) continue;
+        int now = mountain[i-1];
+        bool l = true,r = true;
+        if (i - 1 != 0 && now <= mountain[i - 2]) l = false;
+        if (i - 1 != n - 1 && now <= mountain[i]) r = false;
+        if (l && r) height.push_back(now);
+    }
+
+    sort(height.begin(),height.end());
+    height.resize(unique(height.begin(),height.end()) - height.begin());
+    int m = height.size();
+    if (m == 0) cout << -1;
+    else if (m >= k) {
+        for (int i = m - 1;i >= m - k;i--) cout << height[i] << '\n';
+    }
+    else {
+        for (int h : height) cout << h << '\n';
+    }
+
+    return 0;
+}
