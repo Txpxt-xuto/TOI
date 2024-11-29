@@ -104,7 +104,8 @@ vector<int> height;
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
     cin >> n >> k;
-    for (int i = 0;i <= n;i++) {
+    for(int i=0;i<=n;i++)
+    {
         if(i != n) cin >> mountain[i];
         if(i == 0) continue;
         int now = mountain[i-1];
