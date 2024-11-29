@@ -9,4 +9,4 @@ CENTER: Home
 using namespace std;
 typedef long long ll;
 using pii = pair<int,int>;
-int par[3001],
+int par[
