@@ -253,7 +253,8 @@ int main(){
         it=sy[x].upper_bound(y);
         if(it==sy[x].end())yr=m;
         else yr=*it-1;
-        if(!vis[{xl,y}]){
+        if(!vis[{xl,y}])
+        {
             vis[{xl,y}]=true;
             q.emplace(d+1,xl,y);
         }
