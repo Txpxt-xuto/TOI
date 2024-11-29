@@ -110,8 +110,8 @@ int main() {
         int now = mountain[i-1];
         bool l = true,r = true;
         if (i - 1 != 0 && now <= mountain[i - 2]) l = false;
-        if (i - 1 != n - 1 && now <= mountain[i]) r = false;
-        if (l && r) height.push_back(now);
+        if(i - 1 != n - 1 && now <= mountain[i]) r = false;
+        if(l && r) height.push_back(now);
     }
     sort(height.begin(),height.end());
     height.resize(unique(height.begin(),height.end()) - height.begin());
