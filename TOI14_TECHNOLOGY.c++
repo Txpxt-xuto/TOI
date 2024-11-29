@@ -45,7 +45,7 @@ int main()
     for(i=1;i<=n;i++)
     {
         string s;
-        cin>> s;
+        cin >> s;
         for(j=1;j<=m;j++)
         {
             mp[i][j] = s[j-1];
