@@ -9,5 +9,4 @@ CENTER: Home
 using namespace std;
 typedef long long ll;
 using pii = pair<int,int>;
-int par[3001],n,m,q,sum = 0,i;
-int find(int a)
+int par[3001],n,m,q,int find(int a)
