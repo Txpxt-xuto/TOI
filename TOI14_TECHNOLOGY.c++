@@ -265,7 +265,8 @@ int main(){
             vis[{x,yl}]=true;
             q.emplace(d+1,x,yl);
         }
-        if(!vis[{x,yr}]){
+        if(!vis[{x,yr}])
+        {
             vis[{x,yr}]=true;
             q.emplace(d+1,x,yr);
         }
