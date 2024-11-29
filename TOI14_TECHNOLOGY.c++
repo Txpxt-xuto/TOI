@@ -174,10 +174,12 @@ int main(){
         st=3;
         ti=-1;
         if(v){
-            if(h>q){
+            if(h>q)
+            {
                 ti=0;
                 pq.emplace(0,2,x,y);
-            }else{
+            }
+            else{
                 st=0;
                 qua++;
                 all++;
@@ -190,7 +192,7 @@ int main(){
         pq.pop();
         if(t>T) break;
         auto &[hp,st,ti]=mp[{x,y}];
-        if(st<=d||(d==2&&t!=ti))continue;
+        if(st<=d||(d==2&&t!=ti)) continue;
         st=d;
         if(d==2)
         {
