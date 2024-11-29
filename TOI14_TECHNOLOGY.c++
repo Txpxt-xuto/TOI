@@ -257,7 +257,8 @@ int main(){
             vis[{xl,y}]=true;
             q.emplace(d+1,xl,y);
         }
-        if(!vis[{xr,y}]){
+        if(!vis[{xr,y}])
+        {
             vis[{xr,y}]=true;
             q.emplace(d+1,xr,y);
         }
