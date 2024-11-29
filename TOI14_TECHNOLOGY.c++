@@ -124,6 +124,5 @@ int main() {
     else {
         for (int h : height) cout << h << '\n';
     }
-
     return 0;
 }
