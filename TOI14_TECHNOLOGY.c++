@@ -97,7 +97,6 @@ int main()
 using namespace std;
 
 const int MxN = 5e6 + 1; 
-
 int n,k;
 int mountain[MxN];
 vector<int> height;
