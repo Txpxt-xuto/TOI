@@ -179,7 +179,8 @@ int main(){
                 ti=0;
                 pq.emplace(0,2,x,y);
             }
-            else{
+            else
+            {
                 st=0;
                 qua++;
                 all++;
