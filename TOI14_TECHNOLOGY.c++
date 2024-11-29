@@ -95,7 +95,6 @@ int main()
 
 #include <bits/stdc++.h>
 using namespace std;
-
 const int MxN = 5e6 + 1; 
 int n,k;
 int mountain[MxN];
