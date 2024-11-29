@@ -123,7 +123,7 @@ int main() {
     }
     else
     {
-        for (int h : height) cout << h << '\n';
+        fo (int h : height) cout << h << '\n';
     }
     return 0;
 }
