@@ -92,7 +92,6 @@ int main()
     cout << 0 << " " << 0;
     return 0;
 }
-
 #include <bits/stdc++.h>
 using namespace std;
 const int MxN = 5e6 + 1; 
