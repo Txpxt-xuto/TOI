@@ -166,7 +166,8 @@ void upd(int x,int y,int t){
 int main(){
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> T >> f >> s >> q;
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         int x,y,h,v;
         cin >> x >> y >> h >> v;
         auto &[hp,st,ti]=mp[{x,y}];
