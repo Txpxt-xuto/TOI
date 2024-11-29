@@ -150,7 +150,8 @@ void upd(int x,int y,int t){
         auto it=mp.find({xx,yy});
         if(it==mp.end())continue;
         auto &[hp,st,ti]=it->second;
-        if(st==1){
+        if(st==1)
+        {
             cnt++;
             sum+=f-hp-ti;
         }
