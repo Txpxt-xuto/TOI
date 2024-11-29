@@ -5,4 +5,4 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 #include <bits/stdc++.h>
-#define e
+#d
