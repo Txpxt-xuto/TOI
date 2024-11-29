@@ -184,10 +184,11 @@ int main(){
             }
         }
     }
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         auto [t,d,x,y]=pq.top();
         pq.pop();
-        if(t>T)break;
+        if(t>T) break;
         auto &[hp,st,ti]=mp[{x,y}];
         if(st<=d||(d==2&&t!=ti))continue;
         st=d;
