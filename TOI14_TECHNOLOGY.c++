@@ -149,7 +149,7 @@ void upd(int x,int y,int t){
         int xx=x+dx[i];
         int yy=y+dy[i];
         auto it=mp.find({xx,yy});
-        if(it==mp.end())continue;
+        if(it==mp.end()) continue;
         auto &[hp,st,ti]=it->second;
         if(st==1)
         {
