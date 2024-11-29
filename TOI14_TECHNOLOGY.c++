@@ -8,4 +8,4 @@ CENTER: Home
 #define endl '\n';
 using namespace std;
 typedef long long ll;
-using pi
+usi
