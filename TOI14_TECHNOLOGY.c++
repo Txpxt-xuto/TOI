@@ -163,7 +163,8 @@ void upd(int x,int y,int t){
     }
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> T >> f >> s >> q;
     for(int i=1;i<=n;i++)
