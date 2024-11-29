@@ -105,11 +105,11 @@ int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
     cin >> n >> k;
     for (int i = 0;i <= n;i++) {
-        if (i != n) cin >> mountain[i];
-        if (i == 0) continue;
+        if(i != n) cin >> mountain[i];
+        if(i == 0) continue;
         int now = mountain[i-1];
         bool l = true,r = true;
-        if (i - 1 != 0 && now <= mountain[i - 2]) l = false;
+        if(i - 1 != 0 && now <= mountain[i - 2]) l = false;
         if(i - 1 != n - 1 && now <= mountain[i]) r = false;
         if(l && r) height.push_back(now);
     }
