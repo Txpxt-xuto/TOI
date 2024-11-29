@@ -200,7 +200,7 @@ int main(){
         else
         {
             qua+=(d==0);
-            for(int i=0;i<4;i++)upd(x+dx[i],y+dy[i],t);
+            for(int i=0;i<4;i++) upd(x+dx[i],y+dy[i],t);
         }
     }
     cout << all-qua << '\n' << qua;
