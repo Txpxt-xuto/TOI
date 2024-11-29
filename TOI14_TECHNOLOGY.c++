@@ -121,7 +121,8 @@ int main() {
     else if (m >= k) {
         for (int i = m - 1;i >= m - k;i--) cout << height[i] << '\n';
     }
-    else {
+    else
+    {
         for (int h : height) cout << h << '\n';
     }
     return 0;
