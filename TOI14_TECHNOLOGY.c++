@@ -118,7 +118,8 @@ int main() {
     height.resize(unique(height.begin(),height.end()) - height.begin());
     int m = height.size();
     if (m == 0) cout << -1;
-    else if (m >= k) {
+    else if (m >= k) for (int i = m - 1;i >= m - k;i--) cout << height[i] << '\n';
+    {
         for (int i = m - 1;i >= m - k;i--) cout << height[i] << '\n';
     }
     else
