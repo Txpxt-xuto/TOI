@@ -306,7 +306,6 @@ void dfs2(int prev,int now,int cn)
     {
         int newcn=cn;
         if(x==prev) continue;
-        //cout<<cn<<'\n';
         if(s[x]==')') newcn++;
         else newcn--;
         if(newcn<0) continue;
