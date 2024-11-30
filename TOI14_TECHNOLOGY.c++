@@ -330,7 +330,7 @@ int main()
         g[b].push_back(a);
     }
     cin>>s;
-      s=" "+s;
+    s=" "+s;
     if(s[u]==')'||s[v]=='(')
     {
         cout << 0;
