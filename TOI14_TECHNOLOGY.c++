@@ -336,10 +336,10 @@ int main()
         cout<<0;
         return 0;
     }
-    pa[u]=1;
-    cnt[1]=1;
+    pa[u] = 1;
+    cnt[1] = 1;
     dfs(0,u);
-    ans+=cnt[1];
+    ans += cnt[1];
     dfs2(0,v,1);
     cout << ans;
     return 0;
