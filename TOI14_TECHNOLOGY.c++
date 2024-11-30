@@ -341,6 +341,6 @@ int main()
     dfs(0,u);
     ans+=cnt[1];
     dfs2(0,v,1);
-    cout<<ans;
+    cout << ans;
     return 0;
 }
