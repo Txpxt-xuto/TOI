@@ -225,7 +225,8 @@ map<int,set<int>> sx,sy;
 map<pair<int,int>,bool> vis;
 queue<tuple<int,int,int>> q;
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> w >> xs >> ys >> xe >> ye;
     for(int i=1;i<=w;i++)
