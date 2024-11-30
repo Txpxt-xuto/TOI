@@ -363,7 +363,6 @@ int main()
         {
             for(int y=500;y>=point[i].second;y--)
             {
-                // cout<<x<<" "<<y<<" "<<dp[x-point[i].first][y-point[i].second]<<"\n";
                 dp[x][y]=min(dp[x][y],dp[x-point[i].first][y-point[i].second]+cost[i]);
             }
         }
@@ -371,7 +370,8 @@ int main()
 
     ll ans=1e18+7;
     for(int i=500;i>=X;i--)
-        for(int j=500;j>=Y;j--)
+        for(int j=500;j>=Y;j--)ans=min(ans,dp[i][j]);
+        }
         {
             ans=min(ans,dp[i][j]);
         }
