@@ -361,7 +361,7 @@ int main()
     {
         for(int x=500;x>=point[i].first;x--)
         {
-            for(int y=500;y>=point[i].second;y--)
+            for(int y=500;y>=point[i].second;y--) dp[x][y]=min(dp[x][y],dp[x-point[i].first][y-point[i].second]+cost[i]);
             {
                 dp[x][y]=min(dp[x][y],dp[x-point[i].first][y-point[i].second]+cost[i]);
             }
