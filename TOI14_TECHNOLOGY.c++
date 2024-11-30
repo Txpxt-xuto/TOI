@@ -341,6 +341,7 @@ int main()
     dfs(0,u);
     ans+=cnt[1];
     dfs2(0,v,1);
+    /*for(int i=0;i<=5;i++)
         cout<<cnt[i]<<' ';*/
     cout<<ans;
     return 0;
