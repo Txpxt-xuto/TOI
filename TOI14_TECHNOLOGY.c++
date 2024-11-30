@@ -329,7 +329,7 @@ int main()
         g[a].push_back(b);
         g[b].push_back(a);
     }
-    cin>>s;
+    cin >> s;
     s=" "+s;
     if(s[u]==')'||s[v]=='(')
     {
