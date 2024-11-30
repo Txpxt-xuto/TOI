@@ -218,13 +218,11 @@ int main()
 using namespace std;
 
 const int N=1e6+5;
-
 int n,m,w;
 int xs,ys,xe,ye;
 map<int,set<int>> sx,sy;
 map<pair<int,int>,bool> vis;
 queue<tuple<int,int,int>> q;
-
 int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
