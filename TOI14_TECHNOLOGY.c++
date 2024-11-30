@@ -315,7 +315,6 @@ void dfs2(int prev,int now,int cn)
         }
 
         ans+=cnt[newcn];
-        //cout<<newcn<<' '<<x<<' '<<ans<<'\n';
         dfs2(now,x,newcn);
     }
 }
