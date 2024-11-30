@@ -370,7 +370,7 @@ int main()
 
     ll ans=1e18+7;
     for(int i=500;i>=X;i--) for(int j=500;j>=Y;j--) ans=min(ans,dp[i][j]);
-    if(ans==1e18+7) cout<< "-1";
-    else cout<<ans;
+    if(ans==1e18+7) cout << "-1";
+    else cout << ans;
     return 0;
 }
