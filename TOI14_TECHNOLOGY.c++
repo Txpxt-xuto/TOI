@@ -321,7 +321,8 @@ void dfs2(int prev,int now,int cn)
 }
 int main()
 {
-    ios::sync_with_stdio(false);cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     int n,u,v;
     cin >> n >> u >> v;
     for(int i=1;i<n;i++)
