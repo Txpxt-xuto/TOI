@@ -245,13 +245,13 @@ int main(){
         if(it==sx[y].begin())xl=1;
         else xl=*prev(it)+1;
         it=sx[y].upper_bound(x);
-        if(it==sx[y].end())xr=n;
+        if(it==sx[y].end()) xr=n;
         else xr=*it-1;
         it=sy[x].lower_bound(y);
-        if(it==sy[x].begin())yl=1;
+        if(it==sy[x].begin()) yl=1;
         else yl=*prev(it)+1;
         it=sy[x].upper_bound(y);
-        if(it==sy[x].end())r=m;
+        if(it==sy[x].end()) yr=m;
         else yr=*it-1;
         if(!vis[{xl,y}])
         {
