@@ -228,7 +228,8 @@ queue<tuple<int,int,int>> q;
 int main(){
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> w >> xs >> ys >> xe >> ye;
-    for(int i=1;i<=w;i++){
+    for(int i=1;i<=w;i++)
+    {
         int x,y;
         cin >> x >> y;
         sx[y].emplace(x);
@@ -236,7 +237,8 @@ int main(){
     }
     vis[{xe,ye}]=true;
     q.emplace(0,xe,ye);
-    while(!q.empty()){
+    while(!q.empty())
+    {
         auto [d,x,y]=q.front();
         q.pop();
         if(x==xs&&y==ys) cout << d,exit(0);
