@@ -275,3 +275,74 @@ int main()
     }
     cout << -1;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define pii pair<int,int>
+int cnt[111111],pa[111111],vis[111111],ans=0;
+string s;
+vector<int> g[111111];
+void dfs(int prev,int now)
+{
+    for(auto x:g[now])
+    {
+        if(x==prev) continue;
+        if(pa[x]==-1) continue;
+        if(s[x]=='(')
+        cnt[pa[now]+1]++,pa[x]=pa[now]+1;
+        else cnt[pa[now]-1]++,pa[x]=pa[now]-1;
+        if(pa[x]<0)
+        {
+            pa[x]=-1;
+            continue;
+        }
+        dfs(now,x);
+    }
+}
+void dfs2(int prev,int now,int cn)
+{
+    for(auto x:g[now])
+    {
+        int newcn=cn;
+        if(x==prev) continue;
+        //cout<<cn<<'\n';
+        if(s[x]==')') newcn++;
+        else newcn--;
+        if(newcn<0){
+
+                continue;
+        }
+
+        ans+=cnt[newcn];
+        //cout<<newcn<<' '<<x<<' '<<ans<<'\n';
+        dfs2(now,x,newcn);
+    }
+}
+int main()
+{
+    ios::sync_with_stdio(false);cin.tie(0);
+    int n,u,v;cin>>n>>u>>v;
+    for(int i=1;i<n;i++)
+    {
+        int a,b;cin>>a>>b;
+        g[a].push_back(b);
+        g[b].push_back(a);
+    }
+    cin>>s;
+      s=" "+s;
+    if(s[u]==')'||s[v]=='(')
+    {
+        cout<<0;
+        return 0;
+    }
+    pa[u]=1;
+    cnt[1]=1;
+    dfs(0,u);
+    ans+=cnt[1];
+    dfs2(0,v,1);
+    /*for(int i=0;i<=5;i++)
+        cout<<cnt[i]<<' ';*/
+    cout<<ans;
+    return 0;
+}
