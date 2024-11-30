@@ -242,7 +242,7 @@ int main(){
         if(x==xs&&y==ys)cout << d,exit(0);
         int xl,xr,yl,yr;
         auto it=sx[y].lower_bound(x);
-        if(it==sx[y].begin())xl=1;
+        if(it==sx[y].begin()) xl=1;
         else xl=*prev(it)+1;
         it=sx[y].upper_bound(x);
         if(it==sx[y].end()) xr=n;
