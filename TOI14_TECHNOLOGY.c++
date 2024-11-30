@@ -373,7 +373,6 @@ int main()
     for(int i=500;i>=X;i--)
         for(int j=500;j>=Y;j--)
         {
-            // cout<<i<<" "<<j<<" "<<dp[i][j]<<"\n";
             ans=min(ans,dp[i][j]);
         }
     if(ans==1e18+7)cout<<"-1";
