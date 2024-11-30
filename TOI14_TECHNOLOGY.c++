@@ -251,7 +251,7 @@ int main(){
         if(it==sy[x].begin())yl=1;
         else yl=*prev(it)+1;
         it=sy[x].upper_bound(y);
-        if(it==sy[x].end())yr=m;
+        if(it==sy[x].end())r=m;
         else yr=*it-1;
         if(!vis[{xl,y}])
         {
