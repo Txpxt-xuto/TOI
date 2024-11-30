@@ -333,7 +333,7 @@ int main()
       s=" "+s;
     if(s[u]==')'||s[v]=='(')
     {
-        cout<<0;
+        cout << 0;
         return 0;
     }
     pa[u] = 1;
