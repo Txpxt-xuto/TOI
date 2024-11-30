@@ -239,7 +239,7 @@ int main(){
     while(!q.empty()){
         auto [d,x,y]=q.front();
         q.pop();
-        if(x==xs&&y==ys)cout << d,exit(0);
+        if(x==xs&&y==ys) cout << d,exit(0);
         int xl,xr,yl,yr;
         auto it=sx[y].lower_bound(x);
         if(it==sx[y].begin()) xl=1;
