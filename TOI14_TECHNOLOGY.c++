@@ -355,7 +355,7 @@ int main()
     int n,X,Y;
     cin>>n>>X>>Y;
     for(int i=0;i<=500;i++)for(int j=0;j<=500;j++)dp[i][j]=1e18+7;
-    for(int i=1;i<=n;i++)cin>>point[i].first>>point[i].second>>cost[i];
+    for(int i=1;i<=n;i++) cin >> point[i].first>>point[i].second>>cost[i];
     dp[0][0]=0;
     for(int i=1;i<=n;i++)
     {
@@ -364,7 +364,6 @@ int main()
             for(int y=500;y>=point[i].second;y--) dp[x][y]=min(dp[x][y],dp[x-point[i].first][y-point[i].second]+cost[i]);
         }
     }
-
     ll ans=1e18+7;
     for(int i=500;i>=X;i--) for(int j=500;j>=Y;j--) ans=min(ans,dp[i][j]);
     if(ans==1e18+7) cout << "-1";
