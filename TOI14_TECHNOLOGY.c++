@@ -310,7 +310,7 @@ void dfs2(int prev,int now,int cn)
         if(s[x]==')') newcn++;
         else newcn--;
         if(newcn<0)
-                continue;
+continue;
         ans+=cnt[newcn];
         dfs2(now,x,newcn);
     }
