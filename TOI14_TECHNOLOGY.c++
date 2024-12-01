@@ -398,21 +398,17 @@ int main() {
 		vector<int> tmp;
 		for (int p : prime) if (i%p == 0) tmp.push_back(p);
 
-		switch (tmp.size())
+		switch(tmp.size())
         {
-			
 			case 1:
 				p1[idx[tmp[0]]].push_back(i);
 				break;
-
 			case 2:
 				p2[idx[tmp[0]]][idx[tmp[1]]].push_back(i);
 				break;
-
 			case 3:
 				p3[idx[tmp[0]]][idx[tmp[1]]][idx[tmp[2]]].push_back(i);
 				break;
-
 			default:
 				break;
 		}
