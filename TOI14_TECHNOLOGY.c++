@@ -394,10 +394,8 @@ int main() {
 			prime.push_back(i);
 			for (int j=i+i ; j<=1000 ; j+=i) isPrime[j] = false;
 		}
-
 		vector<int> tmp;
-		for (int p : prime) if (i%p == 0) tmp.push_back(p);
-
+		for(int p : prime) if(i%p == 0) tmp.push_back(p);
 		switch(tmp.size())
         {
 			case 1:
