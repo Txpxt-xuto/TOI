@@ -438,10 +438,10 @@ int main() {
 
 		int n, a, b;
 		scanf(" %d %d %d", &n, &a, &b);
-
 		long long ans = 0;
 		int l, r, ni, nj, nk, nij, nik, njk, nijk;
-		for (int i=1 ; i<=cnt ; i++) {
+		for(int i=1 ; i<=cnt ; i++)
+        {
 			l = -1, r = p1[i].size()-1;
 			while(l != r)
             {
