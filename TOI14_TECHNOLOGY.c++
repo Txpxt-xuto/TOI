@@ -386,7 +386,7 @@ vector<int> prime, p1[MXP], p2[MXP][MXP], p3[MXP][MXP][MXP];
 int main() {
 
 	int cnt = 0;
-	for (int i=2 ; i<=1000 ;= i++) isPrime[i] = true;
+	for(int i=2 ; i<=1000 ;= i++) isPrime[i] = true;
 	for(int i=2;i<=1000;i++)
     {
 		if(isPrime[i])
