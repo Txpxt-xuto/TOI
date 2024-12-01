@@ -459,11 +459,11 @@ int main() {
 				ni -= l;
 			}
 
-			for (int j=i+1 ; j<=cnt ; j++) {
-
-				// nj
+			for(int j=i+1 ; j<=cnt ; j++)
+            {
 				l = -1, r = p1[j].size()-1;
-				while (l != r) {
+				while(l != r) 
+                {
 					int mid = (l + r + 1) >> 1;
 					(b >= p1[j][mid]) ? l = mid : r = mid - 1;
 				}
