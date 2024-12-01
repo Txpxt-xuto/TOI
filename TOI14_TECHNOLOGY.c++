@@ -389,7 +389,7 @@ int main() {
 	for (int i=2 ; i<=1000 ; i++) isPrime[i] = true;
 	for (int i=2 ; i<=1000 ; i++) {
 
-		if (isPrime[i]) {
+		if (isPrime[i]){
 			idx[i] = ++cnt;
 			prime.push_back(i);
 			for(int j=i+i;j<=1000;j+=i) isPrime[j] = false;
