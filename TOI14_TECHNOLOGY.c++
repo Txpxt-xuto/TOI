@@ -452,13 +452,12 @@ int main() {
 			ni = l + 1;
 			if (ni) {
 				l = 0, r = ni;
-				while (l != r) {
+				while (l != r){
 					int mid = (l + r) >> 1;
 					(a <= p1[i][mid]) ? r = mid : l = mid + 1;
 				}
 				ni -= l;
 			}
-
 			for(int j=i+1 ; j<=cnt ; j++)
             {
 				l = -1, r = p1[j].size()-1;
