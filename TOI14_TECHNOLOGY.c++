@@ -542,8 +542,6 @@ int main() {
 						}
 						njk -= l;
 					}
-
-					// nijk
 					l = -1, r = p3[i][j][k].size()-1;
 					while (l != r) {
 						int mid = (l + r + 1) >> 1;
