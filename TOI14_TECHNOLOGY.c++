@@ -372,17 +372,13 @@ int main()
 
 #include <bits/stdc++.h>
 using namespace std;
-
 #define mod 1000000007
-
 const int MX = 1e3 + 5;
 const int MXP = 200;
-
 int idx[MX];
 long long ncr[MX][MX], fac[MX];
 bool isPrime[MX];
 vector<int> prime, p1[MXP], p2[MXP][MXP], p3[MXP][MXP][MXP];
-
 int main()
 {
 	int cnt = 0;
