@@ -450,7 +450,8 @@ int main() {
 				(b >= p1[i][mid]) ? l = mid : r = mid - 1;
 			}
 			ni = l + 1;
-			if (ni){
+			if
+            (ni){
 				l = 0, r = ni;
 				while(l != r)
                 {
