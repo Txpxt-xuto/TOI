@@ -548,7 +548,8 @@ int main() {
 						(b >= p3[i][j][k][mid]) ? l = mid : r = mid - 1;
 					}
 					nijk = l + 1;
-					if (nijk) {
+					if(nijk)
+                    {
 						l = 0, r = nijk;
 						while (l != r)
                         {
