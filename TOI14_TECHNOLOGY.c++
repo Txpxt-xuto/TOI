@@ -445,7 +445,8 @@ int main() {
 
 			// ni
 			l = -1, r = p1[i].size()-1;
-			while (l != r) {
+			while(l != r)
+            {
 				int mid = (l + r + 1) >> 1;
 				(b >= p1[i][mid]) ? l = mid : r = mid - 1;
 			}
