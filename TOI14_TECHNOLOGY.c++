@@ -493,9 +493,8 @@ int main() {
 					nij -= l;
 				}
 
-				for (int k=j+1 ; k<=cnt ; k++) {
-
-					// nk
+				for(int k=j+1 ; k<=cnt ; k++)
+                {
 					l = -1, r = p1[k].size()-1;
 					while(l != r)
                     {
