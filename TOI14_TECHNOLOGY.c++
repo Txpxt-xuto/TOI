@@ -476,10 +476,9 @@ int main() {
 					}
 					nj -= l;
 				}
-
-				// nij
 				l = -1, r = p2[i][j].size()-1;
-				while (l != r) {
+				while(l != r)
+                {
 					int mid = (l + r + 1) >> 1;
 					(b >= p2[i][j][mid]) ? l = mid : r = mid - 1;
 				}
