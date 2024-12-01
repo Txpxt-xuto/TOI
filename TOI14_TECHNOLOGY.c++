@@ -398,7 +398,7 @@ int main() {
 		vector<int> tmp;
 		for (int p : prime) if (i%p == 0) tmp.push_back(p);
 
-		switch tmp.size())
+		switch (tmp.size())
         {
 			
 			case 1:
