@@ -468,9 +468,11 @@ int main() {
 					(b >= p1[j][mid]) ? l = mid : r = mid - 1;
 				}
 				nj = l + 1;
-				if (nj) {
+				if(nj)
+                {
 					l = 0, r = nj;
-					while (l != r) {
+					while (l != r)
+                    {
 						int mid = (l + r) >> 1;
 						(a <= p1[j][mid]) ? r = mid : l = mid + 1;
 					}
