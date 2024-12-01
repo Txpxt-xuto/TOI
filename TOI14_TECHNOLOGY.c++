@@ -497,28 +497,31 @@ int main() {
 
 					// nk
 					l = -1, r = p1[k].size()-1;
-					while (l != r) {
+					while(l != r)
+                    {
 						int mid = (l + r + 1) >> 1;
 						(b >= p1[k][mid]) ? l = mid : r = mid - 1;
 					}
 					nk = l + 1;
-					if (nk) {
+					if(nk)
+                    {
 						l = 0, r = nk;
-						while (l != r) {
+						while(l != r)
+                        {
 							int mid = (l + r) >> 1;
 							(a <= p1[k][mid]) ? r = mid : l = mid + 1;
 						}
 						nk -= l;
 					}
-
-					// nik
 					l = -1, r = p2[i][k].size()-1;
-					while (l != r) {
+					while(l != r)
+                    {
 						int mid = (l + r + 1) >> 1;
 						(b >= p2[i][k][mid]) ? l = mid : r = mid - 1;
 					}
 					nik = l + 1;
-					if(nik){
+					if(nik)
+                    {
 						l = 0, r = nik;
 						while(l != r)
                         {
