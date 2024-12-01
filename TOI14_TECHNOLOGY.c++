@@ -526,8 +526,6 @@ int main() {
 						}
 						nik -= l;
 					}
-
-					// njk
 					l = -1, r = p2[j][k].size()-1;
 					while(l != r)
                     {
