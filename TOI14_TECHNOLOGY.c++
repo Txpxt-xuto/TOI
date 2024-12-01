@@ -605,10 +605,10 @@ int main() {
 
 					if(nj+nk-2 >= 0 && n-2 >= 0)
                     {
-					ans -= (((((ncr[nj][1] * ncr[nk][1]) % mod) * ncr[nj+nk-2][n-2] ) % mod ) * fac[n] ) % mod;
-					ans %= mod;
-					ans += mod;
-					ans %= mod;
+					    ans -= (((((ncr[nj][1] * ncr[nk][1]) % mod) * ncr[nj+nk-2][n-2] ) % mod ) * fac[n] ) % mod;
+					    ans %= mod;
+					    ans += mod;
+					    ans %= mod;
 					}
 					if(nj + nk + njk - 1 >= 0 && n-1 >= 0)
                     {
