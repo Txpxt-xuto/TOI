@@ -590,7 +590,7 @@ int main() {
 						ans %= mod;
 					}
 
-					if (ni+nk-2 >= 0 && n-2 >= 0)
+					if(ni+nk-2 >= 0 && n-2 >= 0)
                     {
 						ans -= (((((ncr[ni][1] * ncr[nk][1]) % mod) * ncr[ni+nk-2][n-2] ) % mod ) * fac[n] ) % mod;
 						ans %= mod;
