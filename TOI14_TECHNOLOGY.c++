@@ -558,7 +558,6 @@ int main() {
 						}
 						nijk -= l;
 					}
-
 					ans += (ncr[ni + nj + nk + nij + nik + njk + nijk][n] * fac[n]) % mod;
 					ans %= mod;
 					ans -= (ncr[ni][n] * fac[n]) % mod;
