@@ -442,8 +442,6 @@ int main() {
 		long long ans = 0;
 		int l, r, ni, nj, nk, nij, nik, njk, nijk;
 		for (int i=1 ; i<=cnt ; i++) {
-
-			// ni
 			l = -1, r = p1[i].size()-1;
 			while(l != r)
             {
