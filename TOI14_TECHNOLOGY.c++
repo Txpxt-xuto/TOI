@@ -419,7 +419,7 @@ int main() {
 
 	fac[0] = 1;
 	ncr[0][0] = 1;
-	for (int i=1 ; i<=1000 ; i++)
+	for(int i=1 ; i<=1000 ; i++)
     {
 		fac[i] = (long long)i * fac[i-1];
 		fac[i] %= mod;
