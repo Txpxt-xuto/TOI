@@ -484,15 +484,16 @@ int main() {
 					(b >= p2[i][j][mid]) ? l = mid : r = mid - 1;
 				}
 				nij = l + 1;
-				if (nij) {
+				if(nij)
+                {
 					l = 0, r = nij;
-					while (l != r) {
+					while(l != r)
+                    {
 						int mid = (l + r) >> 1;
 						(a <= p2[i][j][mid]) ? r = mid : l = mid + 1;
 					}
 					nij -= l;
 				}
-
 				for(int k=j+1 ; k<=cnt ; k++)
                 {
 					l = -1, r = p1[k].size()-1;
