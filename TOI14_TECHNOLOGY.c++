@@ -518,7 +518,7 @@ int main() {
 						(b >= p2[i][k][mid]) ? l = mid : r = mid - 1;
 					}
 					nik = l + 1;
-					if (nik) {
+					if(nik){
 						l = 0, r = nik;
 						while(l != r)
                         {
