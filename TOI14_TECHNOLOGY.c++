@@ -583,7 +583,8 @@ int main() {
 						ans += mod;
 						ans %= mod;
 					}
-					if (ni + nj + nij - 1 >= 0 && n-1 >= 0) {
+					if(ni + nj + nij - 1 >= 0 && n-1 >= 0)
+                    {
 						ans -= (((ncr[nij][1] * ncr[ni + nj + nij - 1][n-1]) % mod) * fac[n]) % mod;
 						ans %= mod;
 						ans += mod;
