@@ -398,7 +398,8 @@ int main() {
 		vector<int> tmp;
 		for (int p : prime) if (i%p == 0) tmp.push_back(p);
 
-		switch (tmp.size()) {
+		switch tmp.size())
+        {
 			
 			case 1:
 				p1[idx[tmp[0]]].push_back(i);
@@ -423,7 +424,7 @@ int main() {
 		fac[i] = (long long)i * fac[i-1];
 		fac[i] %= mod;
 		ncr[i][0] = 1;
-		for(int j=1 ; j<=i ; j++)
+		for(int j=1;j<=i;j++)
         {
 			ncr[i][j] = ncr[i-1][j-1] + ncr[i-1][j];
 			ncr[i][j] %= mod;
