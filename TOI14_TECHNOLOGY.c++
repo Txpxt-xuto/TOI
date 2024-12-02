@@ -708,7 +708,9 @@ int main(){
             if(d[v]>=2)ans[cur]=ans[cur+1]+u.s,cur--;
             else if(d[v]==1)q.push({v,u.s+1});
         }
-    }int Q;cin>>Q;ans[1]=n-1;
+    }
+    int Q;
+    cin>>Q;ans[1]=n-1;
     while(Q--)
     {
         int y;
