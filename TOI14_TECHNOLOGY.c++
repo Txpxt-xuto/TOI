@@ -649,3 +649,26 @@ int main()
         cout << l << nl;
     }
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+const int MOD = 1e9+7; 
+signed main(){
+    ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0);
+    int n,a;
+    int p2,p1,p0;
+    int q;
+    cin >> q;
+    while(q--){
+    cin >> n >> a;
+    p2=0;
+    p1=1;
+    p0=a;
+    for(int i=1;i<=n;i++){
+        p2=(p1*p1)%MOD + ((2*a)%MOD)*p2;
+        p2%=MOD;
+        p1=((2*a)%MOD*p1)%MOD;
+    }
+    cout << p2 <<"\n";
+    }
