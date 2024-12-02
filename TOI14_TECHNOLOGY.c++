@@ -667,8 +667,8 @@ signed main(){
         p0=a;
         for(int i=1;i<=n;i++)
         {
-        p2=(p1*p1)%MOD + ((2*a)%MOD)*p2;
-        p2%=MOD;
+            p2=(p1*p1)%MOD + ((2*a)%MOD)*p2;
+            p2%=MOD;
         p1=((2*a)%MOD*p1)%MOD;
     }
     cout << p2 <<"\n";
