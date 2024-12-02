@@ -707,9 +707,9 @@ int main(){
         for(auto v:g[u.f])
         {
             d[v]--;
-            if(d[v]>=2)ans[cur]=ans[cur+1]+u.s;
+            if(d[v]>=2) ans[cur]=ans[cur+1]+u.s;
             cur--;
-            else if(d[v]==1)q.push({v,u.s+1});
+            else if(d[v]==1) q.push({v,u.s+1});
         }
     }
     int Q;
