@@ -617,3 +617,42 @@ int main()
 	}
 	return 0;
 }
+
+using namespace std;
+#include<bits/stdc++.h>
+#define nl "\n"
+typedef long long ll;
+typedef pair<int,int> pii;
+typedef pair<pair<int,int>,int> piii;
+
+int SumBio[100005],SumHis[100005];
+
+int main(){
+    ios_base::sync_with_stdio(0), cin.tie(NULL);
+    int n,m,q;
+    cin >> n >> m >> q;
+    for(int i=1;i<=n;i++) cin >> SumBio[i],SumBio[i] += SumBio[i-1];
+    for(int i=1;i<=m;i++) cin >> SumHis[i],SumHis[i] += SumHis[i-1];
+    while(q--){
+        int a,b,c,d,k;
+        cin >> a >> b >> c >> d >> k;
+        ll l = 0,r = 1e10;
+        while(l<r){
+            ll mid = (l+r)/2;
+            ll indbio = upper_bound(SumBio+a,SumBio+c+1,mid+SumBio[a-1])-(SumBio+a);
+            ll indhis = upper_bound(SumHis+b,SumHis+d+1,mid+SumHis[b-1])-(SumHis+b);
+            if(indbio+indhis < k) l = mid+1;
+            else r = mid;
+        }
+        cout << l << nl;
+    }
+    
+}
+
+/*
+5 6 2
+5 6 4 8 2
+6 4 9 5 4 2
+1 1 3 3 4
+1 3 4 5 7
+*/
