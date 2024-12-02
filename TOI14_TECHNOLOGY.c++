@@ -698,7 +698,9 @@ int main(){
     {
         int u,v;
         cin>>u>>v;
-        g[u].pb(v);g[v].pb(u);d[u]++,d[v]++;
+        g[u].pb(v);
+        g[v].pb(u);
+        d[u]++,d[v]++;
     }queue<pii>q;int x=0;
     for(int i=1;i<=n;i++)if(d[i]==1)q.push({i,1}),x++;
     int ans[x+1];int cur=x-1;
