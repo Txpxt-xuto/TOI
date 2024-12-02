@@ -660,7 +660,8 @@ signed main(){
     int p2,p1,p0;
     int q;
     cin >> q;
-    while(q--){
+    while(q--)
+    {
         cin >> n >> a;
         p2=0;
         p1=1;
