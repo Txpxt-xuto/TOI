@@ -710,7 +710,8 @@ int main(){
         }
     }
     int Q;
-    cin>>Q;ans[1]=n-1;
+    cin>>Q;
+    ans[1]=n-1;
     while(Q--)
     {
         int y;
