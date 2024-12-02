@@ -700,9 +700,11 @@ int main(){
     for(int i=1;i<=n;i++)if(d[i]==1)q.push({i,1}),x++;
     int ans[x+1];int cur=x-1;
     ans[x]=0;
-    while(!q.empty()){
-        pii u=q.front();q.pop();
-        if(d[u.f]==0)continue;
+    while(!q.empty())
+    {
+        pii u=q.front();
+        q.pop();
+        if(d[u.f]==0) continue;
         d[u.f]--;
         for(auto v:g[u.f])
         {
