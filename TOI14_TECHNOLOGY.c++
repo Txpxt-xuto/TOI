@@ -662,8 +662,8 @@ signed main(){
     cin >> q;
     while(q--){
         cin >> n >> a;
-    p2=0;
-    p1=1;
+        p2=0;
+        p1=1;
     p0=a;
     for(int i=1;i<=n;i++){
         p2=(p1*p1)%MOD + ((2*a)%MOD)*p2;
