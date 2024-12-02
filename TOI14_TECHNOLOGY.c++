@@ -711,7 +711,8 @@ int main(){
     }int Q;cin>>Q;ans[1]=n-1;
     while(Q--)
     {
-        int y;cin>>y;
+        int y;
+        cin>>y;
         if(y>x)cout<<n-1<<'\n';
         else cout<<n-ans[y]-1<<'\n';
     }
