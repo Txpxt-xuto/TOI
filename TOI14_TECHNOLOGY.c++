@@ -704,7 +704,9 @@ int main(){
         pii u=q.front();q.pop();
         if(d[u.f]==0)continue;
         d[u.f]--;
-        for(auto v:g[u.f]){d[v]--;
+        for(auto v:g[u.f])
+        {
+            d[v]--;
             if(d[v]>=2)ans[cur]=ans[cur+1]+u.s,cur--;
             else if(d[v]==1)q.push({v,u.s+1});
         }
