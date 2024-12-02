@@ -661,7 +661,7 @@ signed main(){
     int q;
     cin >> q;
     while(q--){
-    cin >> n >> a;
+        cin >> n >> a;
     p2=0;
     p1=1;
     p0=a;
@@ -670,6 +670,6 @@ signed main(){
         p2%=MOD;
         p1=((2*a)%MOD*p1)%MOD;
     }
-        cout << p2 <<"\n";
+    cout << p2 <<"\n";
     }
 }
