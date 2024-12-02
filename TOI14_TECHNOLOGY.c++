@@ -705,8 +705,10 @@ int main()
         g[v].pb(u);
         d[u]++;
         d[v]++;
-    }queue<pii>q;int x=0;
-    for(int i=1;i<=n;i++)if(d[i]==1)q.push({i,1}),x++;
+    }
+    queue<pii>q;
+    int x=0;
+    for(int i=1;i<=n;i++) if(d[i]==1) q.push({i,1}),x++;
     int ans[x+1];int cur=x-1;
     ans[x]=0;
     while(!q.empty())
