@@ -625,7 +625,6 @@ typedef long long ll;
 typedef pair<int,int> pii;
 typedef pair<pair<int,int>,int> piii;
 int SumBio[100005],SumHis[100005];
-
 int main(){
     ios_base::sync_with_stdio(0), cin.tie(NULL);
     int n,m,q;
