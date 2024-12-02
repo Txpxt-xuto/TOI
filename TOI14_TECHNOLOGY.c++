@@ -624,7 +624,6 @@ using namespace std;
 typedef long long ll;
 typedef pair<int,int> pii;
 typedef pair<pair<int,int>,int> piii;
-
 int SumBio[100005],SumHis[100005];
 
 int main(){
