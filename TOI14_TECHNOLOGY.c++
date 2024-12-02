@@ -670,6 +670,6 @@ signed main(){
         p2%=MOD;
         p1=((2*a)%MOD*p1)%MOD;
     }
-    cout << p2 <<"\n";
+        cout << p2 <<"\n";
     }
 }
