@@ -712,7 +712,7 @@ int main(){
     while(Q--)
     {
         int y;
-        cin>>y;
+        cin >> y;
         if(y>x)cout<<n-1<<'\n';
         else cout<<n-ans[y]-1<<'\n';
     }
