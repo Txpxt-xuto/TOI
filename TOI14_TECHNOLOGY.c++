@@ -627,7 +627,8 @@ typedef pair<pair<int,int>,int> piii;
 int SumBio[100005],SumHis[100005];
 int main()
 {
-    ios_base::sync_with_stdio(0), cin.tie(NULL);
+    ios_base::sync_with_stdio(0);
+    cin.tie(NULL);
     int n,m,q;
     cin >> n >> m >> q;
     for(int i=1;i<=n;i++) cin >> SumBio[i],SumBio[i] += SumBio[i-1];
