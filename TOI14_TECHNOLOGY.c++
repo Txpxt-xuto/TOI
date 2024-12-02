@@ -638,7 +638,8 @@ int main()
         int a,b,c,d,k;
         cin >> a >> b >> c >> d >> k;
         ll l = 0,r = 1e10;
-        while(l<r){
+        while(l<r)
+        {
             ll mid = (l+r)/2;
             ll indbio = upper_bound(SumBio+a,SumBio+c+1,mid+SumBio[a-1])-(SumBio+a);
             ll indhis = upper_bound(SumHis+b,SumHis+d+1,mid+SumHis[b-1])-(SumHis+b);
