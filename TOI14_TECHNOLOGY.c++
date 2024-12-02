@@ -664,7 +664,7 @@ signed main(){
         cin >> n >> a;
         p2=0;
         p1=1;
-    p0=a;
+        p0=a;
     for(int i=1;i<=n;i++){
         p2=(p1*p1)%MOD + ((2*a)%MOD)*p2;
         p2%=MOD;
