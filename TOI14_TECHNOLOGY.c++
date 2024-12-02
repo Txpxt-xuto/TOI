@@ -694,8 +694,11 @@ vector<int>g[mxn];
 int main(){
     ios_base::sync_with_stdio(0);cin.tie(0);
     int n;cin>>n;
-    for(int i=1;i<=n-1;i++){
-        int u,v;cin>>u>>v;g[u].pb(v);g[v].pb(u);d[u]++,d[v]++;
+    for(int i=1;i<=n-1;i++)
+    {
+        int u,v;
+        cin>>u>>v;
+        g[u].pb(v);g[v].pb(u);d[u]++,d[v]++;
     }queue<pii>q;int x=0;
     for(int i=1;i<=n;i++)if(d[i]==1)q.push({i,1}),x++;
     int ans[x+1];int cur=x-1;
