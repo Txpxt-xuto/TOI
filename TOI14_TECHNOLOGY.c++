@@ -709,7 +709,8 @@ int main(){
             else if(d[v]==1)q.push({v,u.s+1});
         }
     }int Q;cin>>Q;ans[1]=n-1;
-    while(Q--){
+    while(Q--)
+    {
         int y;cin>>y;
         if(y>x)cout<<n-1<<'\n';
         else cout<<n-ans[y]-1<<'\n';
