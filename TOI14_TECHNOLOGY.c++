@@ -633,7 +633,8 @@ int main()
     cin >> n >> m >> q;
     for(int i=1;i<=n;i++) cin >> SumBio[i],SumBio[i] += SumBio[i-1];
     for(int i=1;i<=m;i++) cin >> SumHis[i],SumHis[i] += SumHis[i-1];
-    while(q--){
+    while(q--)
+    {
         int a,b,c,d,k;
         cin >> a >> b >> c >> d >> k;
         ll l = 0,r = 1e10;
