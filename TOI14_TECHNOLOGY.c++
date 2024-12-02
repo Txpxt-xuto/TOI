@@ -678,3 +678,40 @@ signed main()
         cout << p2 << "\n";
     }
 }
+
+#include<bits/stdc++.h>
+#define f first
+#define s second
+#define pb push_back
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define ll long long
+#define sz(x) (ll)x.size()
+using namespace std;
+const int mxn=1e5+5;
+int d[mxn]{0};
+vector<int>g[mxn];
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n;cin>>n;
+    for(int i=1;i<=n-1;i++){
+        int u,v;cin>>u>>v;g[u].pb(v);g[v].pb(u);d[u]++,d[v]++;
+    }queue<pii>q;int x=0;
+    for(int i=1;i<=n;i++)if(d[i]==1)q.push({i,1}),x++;
+    int ans[x+1];int cur=x-1;
+    ans[x]=0;
+    while(!q.empty()){
+        pii u=q.front();q.pop();
+        if(d[u.f]==0)continue;
+        d[u.f]--;
+        for(auto v:g[u.f]){d[v]--;
+            if(d[v]>=2)ans[cur]=ans[cur+1]+u.s,cur--;
+            else if(d[v]==1)q.push({v,u.s+1});
+        }
+    }int Q;cin>>Q;ans[1]=n-1;
+    while(Q--){
+        int y;cin>>y;
+        if(y>x)cout<<n-1<<'\n';
+        else cout<<n-ans[y]-1<<'\n';
+    }
+}
