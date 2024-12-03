@@ -786,7 +786,7 @@ int main()
             if(check_if_dead(s))
             {
                 isdead = true;
-                ans=i+1;
+                ans = i+1;
             }
         }
         cout << ans << "\n";
