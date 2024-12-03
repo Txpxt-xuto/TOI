@@ -756,7 +756,8 @@ bool check_if_dead(string s)
         {
             stk.push(s[i]);
         }
-        else {
+        else
+        {
             if(stk.empty()) return true;
             if((stk.top()=='<'&&s[i]=='>')||(stk.top()=='('&&s[i]==')'))
             stk.pop();
