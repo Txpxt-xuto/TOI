@@ -807,7 +807,8 @@ void dfs_sz(int v = 1, int p = 1) {
         sz[v] += sz[x];
     }
 }
-void hld(int v = 1, int p = 1, int r = 1) {
+void hld(int v = 1, int p = 1, int r = 1)
+{
     idx[v] = ++C;
     root[v] = r;
     int big = -1, Mx = 0;
