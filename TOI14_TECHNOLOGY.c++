@@ -775,7 +775,7 @@ int main()
     while(t--)
     {
         int n;
-        cin>>n;
+        cin >> n;
         bool isdead=false;
         int ans=n;
         for(int i=0;i<n;i++)
