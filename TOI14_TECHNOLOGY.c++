@@ -740,7 +740,6 @@ int main()
 
 #include<bits/stdc++.h>
 using namespace std;
-
 bool check_if_dead(string s)
 {
     if(s.length()==0) return true;
