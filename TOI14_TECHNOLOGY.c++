@@ -737,3 +737,61 @@ int main()
         else cout << n-ans[y]-1 << '\n';
     }
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool check_if_dead(string s)
+{
+    if(s.length()==0)return true;
+    bool ascii[256];
+    memset(ascii,false,sizeof(ascii));
+    stack<char> stk;
+    stk.push(s[0]);
+    ascii[s[0]]=true;
+    for(int i=1;i<s.length();i++)
+    {
+        ascii[s[i]]=true;
+        if(s[i]=='<'||s[i]=='(')
+        {
+            stk.push(s[i]);
+        }
+        else {
+            if(stk.empty())return true;
+            if((stk.top()=='<'&&s[i]=='>')||(stk.top()=='('&&s[i]==')'))
+            stk.pop();
+        }
+    }
+    if(!stk.empty())return true;
+    if(ascii['<']&&ascii['>']&&ascii['(']&&ascii[')'])return false;
+    return true;
+}
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        bool isdead=false;
+        int ans=n;
+        for(int i=0;i<n;i++)
+        {
+            string s;
+            cin>>s;
+            if(isdead)continue;
+            if(check_if_dead(s))
+            {
+                isdead=true;
+                ans=i+1;
+            }
+        }
+        cout<<ans<<"\n";
+    }
+
+
+    return 0;
+}
