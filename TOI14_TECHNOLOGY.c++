@@ -880,7 +880,7 @@ void solve() {
     }
     cout << p << '\n';
     for (int i=1;i<=n;i++) adj[i].clear();
-    for (int i=1;i<=n + 1;i++) qs[i] = 0;
+    for (int i=1;i<=n+1;i++) qs[i] = 0;
 }
 int main()
 {
