@@ -762,7 +762,7 @@ bool check_if_dead(string s)
             stk.pop();
         }
     }
-    if(!stk.empty())return true;
+    if(!stk.empty()) return true;
     if(ascii['<'] && ascii['>'] && ascii['('] && ascii[')']) return false;
     return true;
 }
