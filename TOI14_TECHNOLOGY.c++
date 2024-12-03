@@ -852,7 +852,7 @@ void solve() {
             update(idx[u] + 1, -1);
             u = par[root[u]];
         }
-        if (lv[u] > lv[v]) swap(u, v);
+        if(lv[u] > lv[v]) swap(u, v);
         update(idx[u], 1);
         update(idx[v] + 1, -1);
     }
