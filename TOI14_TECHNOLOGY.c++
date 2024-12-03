@@ -887,7 +887,7 @@ int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
     int q;
     cin >> q;
-    while(q--)  solve();
+    while(q--) solve();
     {
         solve();
     }
