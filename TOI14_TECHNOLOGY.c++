@@ -766,8 +766,6 @@ bool check_if_dead(string s)
     if(ascii['<']&&ascii['>']&&ascii['(']&&ascii[')'])return false;
     return true;
 }
-
-
 int main()
 {
     int t;
