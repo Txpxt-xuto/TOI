@@ -875,7 +875,8 @@ void solve() {
     }
     sort(v.rbegin(), v.rend());
     int p = 0;
-    while (now > P) {
+    while(now > P)
+    {
         now -= v[p++];
     }
     cout << p << '\n';
