@@ -748,7 +748,7 @@ bool check_if_dead(string s)
     memset(ascii,false,sizeof(ascii));
     stack<char> stk;
     stk.push(s[0]);
-    ascii[s[0]]=true;
+    ascii[s[0]] = true;
     for(int i=1;i<s.length();i++)
     {
         ascii[s[i]]=true;
