@@ -889,7 +889,6 @@ int main() {
     cin >> q;
     while(q--) solve();
     {
-        solve();
     }
     return 0;
 }
