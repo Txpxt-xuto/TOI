@@ -771,7 +771,7 @@ bool check_if_dead(string s)
 int main()
 {
     int t;
-    cin>>t;
+    cin >> t;
     while(t--)
     {
         int n;
