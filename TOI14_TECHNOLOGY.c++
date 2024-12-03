@@ -752,7 +752,7 @@ bool check_if_dead(string s)
     for(int i=1;i<s.length();i++)
     {
         ascii[s[i]]=true;
-        if(s[i]=='<'||s[i]=='(')
+        if(s[i]=='<'||s[i]=='(') stk.push(s[i]);
         {
             stk.push(s[i]);
         }
