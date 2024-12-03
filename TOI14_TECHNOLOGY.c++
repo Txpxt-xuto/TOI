@@ -788,3 +788,115 @@ int main()
     }
     return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+const int N = 300300;
+vector<int> adj[N];
+int a[N], c[N];
+int qs[N];
+int par[N], idx[N], root[N], sz[N], lv[N], C, n;
+void dfs_sz(int v = 1, int p = 1) {
+    par[v] = p;
+    sz[v] = 1;
+    for (auto& x : adj[v]) {
+        if (x == p) continue;
+        lv[x] = lv[v] + 1;
+        dfs_sz(x, v);
+        sz[v] += sz[x];
+    }
+}
+void hld(int v = 1, int p = 1, int r = 1) {
+    idx[v] = ++C;
+    root[v] = r;
+    int big = -1, Mx = 0;
+    for (auto& x : adj[v]) {
+        if (x == p) continue;
+        if (sz[x] > Mx) {
+            Mx = sz[x];
+            big = x;
+        }
+    }
+    if (big != -1) {
+        hld(big, v, r);
+    }
+    for (auto& x : adj[v]) {
+        if (x == p || x == big) continue;
+        hld(x, v, x);
+    }
+}
+void update(int v, int w) {
+    qs[v] += w;
+}
+void solve() {
+    ll P;
+    cin >> n >> P;
+    for (int i = 1;i < n;i++) {
+        int p;
+        cin >> p;
+        adj[i].push_back(p);
+        adj[p].push_back(i);
+    }
+    C = 0;
+    dfs_sz();
+    hld();
+    for (int i = 1;i <= n;i++) cin >> a[i];
+    for (int i = 2;i <= n;i++) {
+        int u = a[i - 1], v = a[i];
+        update(idx[u], -1);
+        update(idx[u] + 1, 1);
+        while (root[u] != root[v]) {
+            if (lv[root[u]] < lv[root[v]]) swap(u, v);
+            update(idx[root[u]], 1);
+            update(idx[u] + 1, -1);
+            u = par[root[u]];
+        }
+        if (lv[u] > lv[v]) swap(u, v);
+        update(idx[u], 1);
+        update(idx[v] + 1, -1);
+        // debug
+        // for (int K = 1;K <= n;K++) {
+        //     ll sum = 0;
+        //     for (int j = idx[K];j > 0;j -= j & -j) sum += fw[j];
+        //     cout << sum << ' ';
+        // }
+        // cout << '\n';
+    }
+    for (int i = 1;i <= n;i++) qs[i] += qs[i - 1];
+    vector<ll> v;
+    ll now = 0;
+    for (int i = 1;i <= n;i++) {
+        ll c;
+        cin >> c;
+        ll sum = qs[idx[i]];
+        v.push_back(sum * c);
+        now += sum * c;
+    }
+    sort(v.rbegin(), v.rend());
+    int p = 0;
+    while (now > P) {
+        now -= v[p++];
+    }
+    cout << p << '\n';
+    for (int i = 1;i <= n;i++) adj[i].clear();
+    for (int i = 1;i <= n + 1;i++) qs[i] = 0;
+}
+
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+    int q;
+    cin >> q;
+    while (q--) {
+        solve();
+    }
+    return 0;
+}
+
+/*
+1
+3 7
+3 3
+1 2 3
+1 2 3
+*/
