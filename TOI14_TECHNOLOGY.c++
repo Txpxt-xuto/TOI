@@ -841,8 +841,8 @@ void solve() {
     C = 0;
     dfs_sz();
     hld();
-    for(int i=1;i <= n;i++) cin >> a[i];
-    for(int i=2;i <= n;i++)
+    for(int i=1;i<=n;i++) cin >> a[i];
+    for(int i=2;i<=n;i++)
     {
         int u = a[i - 1], v = a[i];
         update(idx[u], -1);
