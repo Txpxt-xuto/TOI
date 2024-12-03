@@ -785,7 +785,7 @@ int main()
             if(isdead)continue;
             if(check_if_dead(s))
             {
-                isdead=true;
+                isdead = true;
                 ans=i+1;
             }
         }
