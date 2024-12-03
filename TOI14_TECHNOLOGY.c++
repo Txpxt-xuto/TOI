@@ -888,7 +888,5 @@ int main() {
     int q;
     cin >> q;
     while(q--) solve();
-    {
-    }
     return 0;
 }
