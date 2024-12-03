@@ -813,7 +813,7 @@ void hld(int v = 1, int p = 1, int r = 1) {
     int big = -1, Mx = 0;
     for (auto& x : adj[v]) {
         if (x == p) continue;
-        if (sz[x] > Mx)
+        if(sz[x] > Mx)
         {
             Mx = sz[x];
             big = x;
