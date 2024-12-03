@@ -743,7 +743,7 @@ using namespace std;
 
 bool check_if_dead(string s)
 {
-    if(s.length()==0)return true;
+    if(s.length()==0) return true;
     bool ascii[256];
     memset(ascii,false,sizeof(ascii));
     stack<char> stk;
