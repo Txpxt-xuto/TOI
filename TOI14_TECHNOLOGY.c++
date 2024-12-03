@@ -855,7 +855,6 @@ void solve() {
         if (lv[u] > lv[v]) swap(u, v);
         update(idx[u], 1);
         update(idx[v] + 1, -1);
-        // debug
         // for (int K = 1;K <= n;K++) {
     }
     for(int i=1;i<=n;i++) qs[i] += qs[i - 1];
