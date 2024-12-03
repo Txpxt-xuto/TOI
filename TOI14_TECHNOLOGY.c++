@@ -863,7 +863,7 @@ void solve() {
         // }
         // cout << '\n';
     }
-    for(int i = 1;i <= n;i++) qs[i] += qs[i - 1];
+    for(int i=1;i <= n;i++) qs[i] += qs[i - 1];
     vector<ll> v;
     ll now = 0;
     for(int i = 1;i <= n;i++)
