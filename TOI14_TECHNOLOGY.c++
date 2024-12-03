@@ -861,7 +861,6 @@ void solve() {
         //     for (int j = idx[K];j > 0;j -= j & -j) sum += fw[j];
         //     cout << sum << ' ';
         // }
-        // cout << '\n';
     }
     for(int i=1;i<=n;i++) qs[i] += qs[i - 1];
     vector<ll> v;
