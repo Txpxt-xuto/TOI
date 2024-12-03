@@ -876,9 +876,6 @@ void solve() {
     sort(v.rbegin(), v.rend());
     int p = 0;
     while(now > P) now -= v[p++];
-    {
-        now -= v[p++];
-    }
     cout << p << '\n';
     for(int i=1;i<=n;i++) adj[i].clear();
     for(int i=1;i<=n+1;i++) qs[i] = 0;
