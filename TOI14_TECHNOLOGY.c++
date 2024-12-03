@@ -832,7 +832,7 @@ void update(int v, int w) {
 void solve() {
     ll P;
     cin >> n >> P;
-    for(int i=1;i < n;i++)
+    for(int i=1;i<n;i++)
     {
         int p;
         cin >> p;
