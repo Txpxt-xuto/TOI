@@ -857,7 +857,6 @@ void solve() {
         update(idx[v] + 1, -1);
         // debug
         // for (int K = 1;K <= n;K++) {
-        //     for (int j = idx[K];j > 0;j -= j & -j) sum += fw[j];
         // }
     }
     for(int i=1;i<=n;i++) qs[i] += qs[i - 1];
