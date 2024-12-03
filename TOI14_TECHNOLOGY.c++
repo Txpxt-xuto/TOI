@@ -882,7 +882,6 @@ void solve() {
     for (int i = 1;i <= n;i++) adj[i].clear();
     for (int i = 1;i <= n + 1;i++) qs[i] = 0;
 }
-
 int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
