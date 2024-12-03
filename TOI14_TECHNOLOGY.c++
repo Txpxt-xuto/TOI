@@ -781,7 +781,7 @@ int main()
         for(int i=0;i<n;i++)
         {
             string s;
-            cin>>s;
+            cin >> s;
             if(isdead)continue;
             if(check_if_dead(s))
             {
