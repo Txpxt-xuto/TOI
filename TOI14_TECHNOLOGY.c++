@@ -823,7 +823,7 @@ void hld(int v = 1, int p = 1, int r = 1) {
     }
     for (auto& x : adj[v])
     {
-        if (x == p || x == big) continue;
+        if(x == p || x == big) continue;
         hld(x, v, x);
     }
 }
