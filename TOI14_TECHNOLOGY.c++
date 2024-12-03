@@ -846,7 +846,8 @@ void solve() {
         int u = a[i - 1], v = a[i];
         update(idx[u], -1);
         update(idx[u] + 1, 1);
-        while (root[u] != root[v]) {
+        while (root[u] != root[v])
+        {
             if (lv[root[u]] < lv[root[v]]) swap(u, v);
             update(idx[root[u]], 1);
             update(idx[u] + 1, -1);
