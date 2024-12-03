@@ -753,9 +753,6 @@ bool check_if_dead(string s)
     {
         ascii[s[i]]=true;
         if(s[i]=='<'||s[i]=='(') stk.push(s[i]);
-        {
-            stk.push(s[i]);
-        }
         else
         {
             if(stk.empty()) return true;
