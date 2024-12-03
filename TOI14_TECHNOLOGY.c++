@@ -883,7 +883,8 @@ void solve() {
     for (int i = 1;i <= n + 1;i++) qs[i] = 0;
 }
 
-int main() {
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     int q;
     cin >> q;
