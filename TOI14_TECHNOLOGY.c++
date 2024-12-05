@@ -811,7 +811,7 @@ void hld(int v = 1, int p = 1, int r = 1)
 {
     idx[v] = ++C;
     root[v] = r;
-    int big = -1, Mx = 0;
+
     for(auto& x : adj[v])
     {
         if(x == p) continue;
