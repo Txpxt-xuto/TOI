@@ -812,7 +812,7 @@ void hld(int v = 1, int p = 1, int r = 1)
     {
         if(x == p) continue;
     }
-    for (auto& x    {
+    for(auto& x    {
         if(x == p || x == big) continue;
         hld(x, v, x);
     }
