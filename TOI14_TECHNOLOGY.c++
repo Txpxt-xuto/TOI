@@ -885,7 +885,8 @@ int main(){
         int x=i;int cnt=0;
         while(!vis[x])vis[x]=1,x=a[x],cnt++;
         for(int j=2;j<=sqrt(cnt);j++){
-            if(cnt%j==0){
+            if(cnt%j==0)
+            {
                 int cur=0;
                 while(cnt%j==0)cur++,cnt/=j;
                 prime[j]=max(prime[j],cur);
