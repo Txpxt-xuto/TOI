@@ -1055,7 +1055,7 @@ int main()
     {
         for(int j=1;j<=c;j++)
         {
-            a   rr[i][j]=arr[i][j]+arr[i-1][j]+arr[i][j-1]-arr[i-1][j-1];
+            arr[i][j]=arr[i][j]+arr[i-1][j]+arr[i][j-1]-arr[i-1][j-1];
         }
     }
     for(int i=1;i<=r;i++){
