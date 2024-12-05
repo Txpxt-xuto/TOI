@@ -875,7 +875,8 @@ int main()
 using namespace std;
 const int mxn=1500005,inf=998244353;
 int prime[mxn]{0};
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);cin.tie(0);
     int n;
     cin >> n;
