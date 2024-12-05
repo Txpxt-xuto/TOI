@@ -1049,10 +1049,7 @@ int main()
     cin>>r>>c>>k;
     for(int i=1;i<=r;i++)
     {
-        for(int j=1;j<=c;j++)
-        {
-        cin>>arr[i][j];
-        }
+        for(int j=1;j<=c;j++) cin>>arr[i][j];
     }
     for(int i=1;i<=r;i++){
     for(int j=1;j<=c;j++){
