@@ -893,7 +893,7 @@ int main(){
                 prime[j] = max(prime[j],cur);
             }
         }
-        if(cnt!=1)prime[cnt]=max(prime[cnt],1);
+        if(cnt!=1) prime[cnt] = max(prime[cnt],1);
     }
     ll ans=1;
     for(int i=1;i<=mxn;i++)
