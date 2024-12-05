@@ -1079,8 +1079,9 @@ vector<pair<long long,long long>> edge[300005];
 vector<long long> dis(300005,INT_MAX);
 long long path[300005];
 long long n,m,s,e,u,v,w;
-void printpath(long long u){
-    if(u==s){ cout<<s<<' '; return;}
+void printpath(long long u)
+{
+    if(u==s){ cout << s << ' '; return;}
     printpath(path[u]);
     cout<<u<<' ';
 }
