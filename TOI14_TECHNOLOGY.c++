@@ -1007,7 +1007,8 @@ int main() {
             ans[idx] += c2 * (c1 - 1);
             ans[idx] += c1 * (c1 - 1) * (c1 - 2) / 6;
         }
-        else if (!prime(k)) {
+        else if (!prime(k))
+        {
             int p1, p2;
             for (auto& x : p)
             {
