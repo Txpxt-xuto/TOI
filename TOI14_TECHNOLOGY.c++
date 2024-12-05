@@ -1083,7 +1083,7 @@ void printpath(long long u)
 {
     if(u==s){ cout << s << ' '; return;}
     printpath(path[u]);
-    cout<<u<<' ';
+    cout << u << ' ';
 }
 int main()
 {
