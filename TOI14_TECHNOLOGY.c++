@@ -888,7 +888,7 @@ int main(){
             if(cnt%j==0)
             {
                 int cur=0;
-                while(cnt%j==0)cur++,cnt/=j;
+                while(cnt%j==0) cur++,cnt/=j;
                 prime[j]=max(prime[j],cur);
             }
         }
