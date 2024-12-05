@@ -1085,8 +1085,8 @@ void printpath(long long u){
     cout<<u<<' ';
 }
 int main(){
-    cin>>n>>m;
-    cin>>s >> e;
+    cin >> n >> m;
+    cin >> s >> e;
     for(long long i=0;i<m;i++)
     {
         cin >> u >> v >> w;
