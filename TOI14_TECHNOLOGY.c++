@@ -1130,6 +1130,5 @@ int main()
         cin>>a;
         cout<<(a-3)%1000000007<<'\n';
     }
-
     return 0;
 }
