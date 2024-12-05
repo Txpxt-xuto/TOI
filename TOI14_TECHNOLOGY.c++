@@ -1000,10 +1000,10 @@ int main() {
             int sq = 1;
             while (sq * sq * sq != k) sq++;
             ll c1 = 0, c2 = 0;
-            for (auto& x : p)
+            for(auto& x : p)
             {
-                if (cnt[x] >= sq - 1) c1++;
-                if (cnt[x] >= sq * sq - 1) c2++;
+                if(cnt[x] >= sq - 1) c1++;
+                if(cnt[x] >= sq * sq - 1) c2++;
             }
             ans[idx] += c2 * (c1 - 1);
             ans[idx] += c1 * (c1 - 1) * (c1 - 2) / 6;
