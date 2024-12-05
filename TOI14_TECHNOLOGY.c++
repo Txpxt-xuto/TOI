@@ -812,7 +812,6 @@ void hld(int v = 1, int p = 1, int r = 1)
     {
         if(x == p) continue;
         {
-            big = x;
         }
     }
     if(big != -1) hld(big, v, r);
