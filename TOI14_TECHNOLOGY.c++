@@ -889,7 +889,7 @@ int main(){
             {
                 int cur=0;
                 while(cnt%j==0) cur++,cnt/=j;
-                prime[j]=max(prime[j],cur);
+                prime[j] = max(prime[j],cur);
             }
         }
         if(cnt!=1)prime[cnt]=max(prime[cnt],1);
