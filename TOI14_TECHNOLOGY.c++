@@ -1132,3 +1132,40 @@ int main()
     }
     return 0;
 }
+
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+vector<int> adj[606];
+int mt[606], vis[606];
+bool kuhn(int v) {
+    if (vis[v]) return false;
+    vis[v] = 1;
+    for (auto& x : adj[v]) {
+        if (mt[x] == -1 || kuhn(mt[x])) {
+            mt[x] = v;
+            return true;
+        }
+    }
+    return false;
+}
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+    int n, m;
+    cin >> n >> m;
+    memset(mt, -1, sizeof mt);
+    for (int i = 1;i <= m;i++) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v + n);
+    }
+    for (int i = 1;i <= 2 * n;i++) {
+        memset(vis, 0, sizeof vis);
+        kuhn(i);
+    }
+    int cnt = 0;
+    for (int i = 1;i <= 2 * n;i++) if (mt[i] != -1) cnt++;
+    cout << n + m - 2 * cnt;
+    return 0;
+}
