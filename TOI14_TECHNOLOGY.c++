@@ -1086,7 +1086,7 @@ void printpath(long long u){
 }
 int main(){
     cin>>n>>m;
-    cin>>s>>e;
+    cin>>s >> e;
     for(long long i=0;i<m;i++)
     {
         cin >> u >> v >> w;
