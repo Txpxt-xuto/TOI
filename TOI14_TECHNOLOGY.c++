@@ -890,8 +890,10 @@ int main(){
                 while(cnt%j==0)cur++,cnt/=j;
                 prime[j]=max(prime[j],cur);
             }
-        }if(cnt!=1)prime[cnt]=max(prime[cnt],1);
-    }ll ans=1;
+        }
+        if(cnt!=1)prime[cnt]=max(prime[cnt],1);
+    }
+    ll ans=1;
     for(int i=1;i<=mxn;i++)
     {
         for(int j=1;j<=prime[i];j++) ans*=i;ans%=inf;
