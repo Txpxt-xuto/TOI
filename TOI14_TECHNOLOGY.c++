@@ -1094,7 +1094,8 @@ int main(){
     }
     priority_queue<pair<long long,long long>, vector<pair<long long,long long>> , greater<pair<long long,long long>>> pq;
     pq.emplace(1,s);
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         tie(w,v)=pq.top();
         pq.pop();
         for(auto x:edge[v])
