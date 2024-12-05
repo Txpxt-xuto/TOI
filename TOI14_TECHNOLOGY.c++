@@ -1047,10 +1047,11 @@ int main()
     long long k;
     int cnt =0;
     cin>>r>>c>>k;
-    for(int i=1;i<=r;i++){
-    for(int j=1;j<=c;j++){
-    cin>>arr[i][j];
-    }
+    for(int i=1;i<=r;i++)
+    {
+        for(int j=1;j<=c;j++){
+        cin>>arr[i][j];
+        }
     }
     for(int i=1;i<=r;i++){
     for(int j=1;j<=c;j++){
