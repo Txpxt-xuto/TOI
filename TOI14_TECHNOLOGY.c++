@@ -1057,18 +1057,18 @@ int main()
     arr[i][j]=arr[i][j]+arr[i-1][j]+arr[i][j-1]-arr[i-1][j-1];
     }
     }
-for(int i=1;i<=r;i++){
-for(int j=1;j<=c;j++){
-for(int u=i;u<=r;u++){
-for(int o=j;o<=c;o++){
-long long g=0;
- g=arr[u][o]-arr[i-1][o]-arr[u][j-1]+arr[i-1][j-1];
-if(g<=k){
-cnt++;
-}
-}
-}
-}
-}
+    for(int i=1;i<=r;i++){
+    for(int j=1;j<=c;j++){
+    for(int u=i;u<=r;u++){
+    for(int o=j;o<=c;o++){
+    long long g=0;
+    g=arr[u][o]-arr[i-1][o]-arr[u][j-1]+arr[i-1][j-1];
+    if(g<=k){
+    cnt++;
+    }
+    }
+    }
+    }
+    }
 cout<<cnt;
 }
