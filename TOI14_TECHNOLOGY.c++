@@ -1160,7 +1160,8 @@ int main() {
         cin >> u >> v;
         adj[u].push_back(v + n);
     }
-    for (int i = 1;i <= 2 * n;i++) {
+    for(int i=1;i<=2*n;i++)
+    {
         memset(vis, 0, sizeof vis);
         kuhn(i);
     }
