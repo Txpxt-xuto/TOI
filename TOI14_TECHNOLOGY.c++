@@ -877,7 +877,8 @@ const int mxn=1500005,inf=998244353;
 int prime[mxn]{0};
 int main()
 {
-    ios_base::sync_with_stdio(0);cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int n;
     cin >> n;
     int a[n+1];bool vis[n+1]={0};
