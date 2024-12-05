@@ -1041,7 +1041,8 @@ int main() {
 #include<bits/stdc++.h>
 using namespace std;
 long long arr[310][310];
-int main(){
+int main()
+{
 int r,c;
 long long k;
 int cnt =0;
