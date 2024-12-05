@@ -1087,7 +1087,8 @@ void printpath(long long u){
 int main(){
     cin>>n>>m;
     cin>>s>>e;
-    for(long long i=0;i<m;i++){
+    for(long long i=0;i<m;i++)
+    {
         cin>>u>>v>>w;
         edge[u].emplace_back(v,log(w));
         edge[v].emplace_back(u,log(w));
