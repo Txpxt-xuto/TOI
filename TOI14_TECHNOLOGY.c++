@@ -810,7 +810,7 @@ void dfs_sz(int v = 1, int p = 1) {
 void hld(int v = 1, int p = 1, int r = 1)
 {
     idx[v] = ++C;
-    root[v] = r;
+
 
     for(auto& x : adj[v])
     {
