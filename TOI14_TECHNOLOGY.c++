@@ -906,3 +906,125 @@ int main()
     }
     cout << (ans%inf+inf)%inf;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+struct Offline {
+    int n, k, idx;
+    bool operator < (const Offline& o) const {
+        return n < o.n;
+    }
+} Q[55];
+ll ans[55];
+vector<int> p;
+bool sieve[1000001];
+int cnt[1000001];
+bool prime(int k) {
+    int sq = sqrt(k);
+    for (auto& x : p) {
+        if (x > sq) return true;
+        if (k % x == 0) return false;
+    }
+    return true;
+}
+bool square(int k) {
+    for (auto& x : p) {
+        if (1ll * x * x > k) break;
+        if (x * x == k) return true;
+    }
+    return false;
+}
+bool cube(int k) {
+    for (auto& x : p) {
+        if (1ll * x * x * x > k) break;
+        if (x * x * x == k) return true;
+    }
+    return false;
+}
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+    for (int i = 2;i <= 1000000;i++) {
+        sieve[i] = 1;
+    }
+    for (int i = 2;i <= 1000;i++) {
+        if (!sieve[i]) continue;
+        for (int j = i * i;j <= 1000000;j += i) sieve[j] = 0;
+    }
+    for (int i = 2;i <= 1000000;i++) {
+        if (sieve[i]) p.push_back(i);
+    }
+    int q;
+    cin >> q;
+    for (int i = 1;i <= q;i++) {
+        cin >> Q[i].n >> Q[i].k;
+        Q[i].idx = i;
+    }
+    sort(Q + 1, Q + 1 + q);
+    Q[0].n = 0;
+    int sq = 1;
+    for (int i = 1;i <= q;i++) {
+        for (int j = Q[i - 1].n + 1;j <= Q[i].n;j++) {
+            while ((sq + 1) * (sq + 1) <= j) sq++;
+            int val = j;
+            for (auto& x : p) {
+                if (val == 1) break;
+                if (x > sq) break;
+                while (val % x == 0) {
+                    val /= x;
+                    cnt[x]++;
+                }
+            }
+            if (val != 1) cnt[val]++;
+        }
+        int k = Q[i].k, idx = Q[i].idx;
+        if (k == 1) {
+            ans[idx] = 1;
+            continue;
+        }
+        for (auto& x : p) {
+            if (cnt[x] < k - 1) break;
+            ans[idx]++;
+        }
+        if (square(k)) {
+            int sq = 1;
+            while (sq * sq != k) sq++;
+            ll c = 0;
+            for (auto& x : p) {
+                if (cnt[x] < sq - 1) break;
+                c++;
+            }
+            ans[idx] += c * (c - 1) / 2;
+        }
+        else if (cube(k)) {
+            int sq = 1;
+            while (sq * sq * sq != k) sq++;
+            ll c1 = 0, c2 = 0;
+            for (auto& x : p) {
+                if (cnt[x] >= sq - 1) c1++;
+                if (cnt[x] >= sq * sq - 1) c2++;
+            }
+            ans[idx] += c2 * (c1 - 1);
+            ans[idx] += c1 * (c1 - 1) * (c1 - 2) / 6;
+        }
+        else if (!prime(k)) {
+            int p1, p2;
+            for (auto& x : p) {
+                if (k % x == 0) {
+                    p1 = x, p2 = k / x;
+                    break;
+                }
+            }
+            ll cp1 = 0, cp2 = 0;
+            for (auto& x : p) {
+                if (cnt[x] >= p1 - 1) cp1++;
+                if (cnt[x] >= p2 - 1) cp2++;
+            }
+            ans[idx] += cp2 * (cp1 - 1);
+        }
+    }
+    for (int i = 1;i <= q;i++) {
+        cout << ans[i] << '\n';
+    }
+    return 0;
+}
