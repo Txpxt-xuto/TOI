@@ -1089,7 +1089,7 @@ int main(){
     cin>>s>>e;
     for(long long i=0;i<m;i++)
     {
-        cin>>u>>v>>w;
+        cin >> u >> v >> w;
         edge[u].emplace_back(v,log(w));
         edge[v].emplace_back(u,log(w));
     }
