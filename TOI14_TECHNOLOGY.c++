@@ -880,7 +880,8 @@ int main(){
     int n;cin>>n;
     int a[n+1];bool vis[n+1]={0};
     for(int i=1;i<=n;i++)cin>>a[i];
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         if(vis[i])continue;
         int x=i;int cnt=0;
         while(!vis[x]) vis[x]=1,x=a[x],cnt++;
