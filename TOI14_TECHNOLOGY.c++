@@ -1043,18 +1043,18 @@ using namespace std;
 long long arr[310][310];
 int main()
 {
-int r,c;
-long long k;
-int cnt =0;
-cin>>r>>c>>k;
-for(int i=1;i<=r;i++){
-for(int j=1;j<=c;j++){
-cin>>arr[i][j];
-}
-}
-for(int i=1;i<=r;i++){
-for(int j=1;j<=c;j++){
-arr[i][j]=arr[i][j]+arr[i-1][j]+arr[i][j-1]-arr[i-1][j-1];
+    int r,c;
+    long long k;
+    int cnt =0;
+    cin>>r>>c>>k;
+    for(int i=1;i<=r;i++){
+    for(int j=1;j<=c;j++){
+    cin>>arr[i][j];
+    }
+    }
+    for(int i=1;i<=r;i++){
+    for(int j=1;j<=c;j++){
+    arr[i][j]=arr[i][j]+arr[i-1][j]+arr[i][j-1]-arr[i-1][j-1];
 
 }
 
