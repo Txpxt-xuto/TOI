@@ -1155,7 +1155,8 @@ int main() {
     int n, m;
     cin >> n >> m;
     memset(mt, -1, sizeof mt);
-    for (int i = 1;i <= m;i++) {
+    for(int i=1;i<=m;i++)
+    {
         int u, v;
         cin >> u >> v;
         adj[u].push_back(v + n);
