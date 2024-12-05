@@ -823,7 +823,6 @@ void hld(int v = 1, int p = 1, int r = 1)
 }
 void update(int v, int w)
 {
-    qs[v] += w;
 }
 void solve()
 {
