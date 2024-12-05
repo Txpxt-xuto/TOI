@@ -1072,3 +1072,42 @@ int main()
     }
     cout << cnt;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+vector<pair<long long,long long>> edge[300005];
+vector<long long> dis(300005,INT_MAX);
+long long path[300005];
+long long n,m,s,e,u,v,w;
+void printpath(long long u){
+    if(u==s){ cout<<s<<' '; return;}
+    printpath(path[u]);
+    cout<<u<<' ';
+}
+int main(){
+    cin>>n>>m;
+    cin>>s>>e;
+    for(long long i=0;i<m;i++){
+        cin>>u>>v>>w;
+        edge[u].emplace_back(v,log(w));
+        edge[v].emplace_back(u,log(w));
+    }
+    priority_queue<pair<long long,long long>, vector<pair<long long,long long>> , greater<pair<long long,long long>>> pq;
+    pq.emplace(1,s);
+    while(!pq.empty()){
+        tie(w,v)=pq.top();
+        pq.pop();
+        for(auto x:edge[v])
+        {
+            long long wt;
+            tie(u,wt)=x;
+            if(dis[u]>(w+wt))
+            {
+                dis[u]=(w+wt);
+                path[u]=v;
+                pq.emplace(dis[u],u);
+            }
+        }
+    }
+    printpath(e);
+}
