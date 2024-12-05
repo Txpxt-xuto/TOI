@@ -996,11 +996,10 @@ int main() {
             }
             ans[idx] += c * (c - 1) / 2;
         }
-        else if
-        (cube(k))
+        else if(cube(k))
         {
             int sq = 1;
-            while (sq * sq * sq != k) sq++;
+           while (sq * sq * sq != k) sq++;
             ll c1 = 0, c2 = 0;
             for(auto& x : p)
             {
