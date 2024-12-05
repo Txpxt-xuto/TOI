@@ -895,9 +895,6 @@ int main(){
     for(int i=1;i<=mxn;i++)
     {
         for(int j=1;j<=prime[i];j++) ans*=i;ans%=inf;
-        {
-            ans*=i;ans%=inf;
-        }
     }
     cout << (ans%inf+inf)%inf;
 }
