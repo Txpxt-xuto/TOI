@@ -1010,7 +1010,8 @@ int main() {
         else if (!prime(k)) {
             int p1, p2;
             for (auto& x : p) {
-                if (k % x == 0) {
+                if(k % x == 0)
+                {
                     p1 = x, p2 = k / x;
                     break;
                 }
