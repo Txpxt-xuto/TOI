@@ -985,7 +985,7 @@ int main() {
         }
         for(auto& x : p)
         {
-            if (cnt[x] < k - 1) break;
+            if(cnt[x] < k - 1) break;
             ans[idx]++;
         }
         if(square(k))
