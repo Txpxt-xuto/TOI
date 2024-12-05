@@ -978,20 +978,24 @@ int main() {
             if (val != 1) cnt[val]++;
         }
         int k = Q[i].k, idx = Q[i].idx;
-        if (k == 1) {
+        if(k == 1)
+        {
             ans[idx] = 1;
             continue;
         }
-        for (auto& x : p) {
+        for(auto& x : p)
+        {
             if (cnt[x] < k - 1) break;
             ans[idx]++;
         }
-        if (square(k)) {
+        if(square(k))
+        {
             int sq = 1;
-            while (sq * sq != k) sq++;
+            while(sq * sq != k) sq++;
             ll c = 0;
-            for (auto& x : p) {
-                if (cnt[x] < sq - 1) break;
+            for(auto& x : p)
+            {
+                if(cnt[x] < sq - 1) break;
                 c++;
             }
             ans[idx] += c * (c - 1) / 2;
