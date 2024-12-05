@@ -884,7 +884,8 @@ int main(){
         if(vis[i])continue;
         int x=i;int cnt=0;
         while(!vis[x])vis[x]=1,x=a[x],cnt++;
-        for(int j=2;j<=sqrt(cnt);j++){
+        for(int j=2;j<=sqrt(cnt);j++)
+        {
             if(cnt%j==0)
             {
                 int cur=0;
