@@ -1139,11 +1139,14 @@ using namespace std;
 using ll = long long;
 vector<int> adj[606];
 int mt[606], vis[606];
-bool kuhn(int v) {
+bool kuhn(int v)
+{
     if (vis[v]) return false;
     vis[v] = 1;
-    for (auto& x : adj[v]) {
-        if (mt[x] == -1 || kuhn(mt[x])) {
+    for(auto& x : adj[v])
+    {
+        if(mt[x] == -1 || kuhn(mt[x]))
+        {
             mt[x] = v;
             return true;
         }
