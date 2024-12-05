@@ -1127,8 +1127,8 @@ int main()
     for(ll i=0;i<c;i++)
     {
         ll a;
-        cin>>a;
-        cout<<(a-3)%1000000007<<'\n';
+        cin >> a;
+        cout << (a-3)%1000000007 << '\n';
     }
     return 0;
 }
