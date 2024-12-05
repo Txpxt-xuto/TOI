@@ -1018,8 +1018,8 @@ int main() {
             ll cp1 = 0, cp2 = 0;
             for(auto& x : p)
             {
-                if (cnt[x] >= p1 - 1) cp1++;
-                if (cnt[x] >= p2 - 1) cp2++;
+                if(cnt[x] >= p1 - 1) cp1++;
+                if(cnt[x] >= p2 - 1) cp2++;
             }
             ans[idx] += cp2 * (cp1 - 1);
         }
