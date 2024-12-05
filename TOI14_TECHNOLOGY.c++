@@ -1124,7 +1124,6 @@ int main()
     cin.tie(NULL)->sync_with_stdio(false);
     ll c;
     cin>>c;
-
     for(ll i=0;i<c;i++)
     {
         ll a;
