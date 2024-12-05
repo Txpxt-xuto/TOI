@@ -1023,6 +1023,6 @@ int main() {
             ans[idx] += cp2 * (cp1 - 1);
         }
     }
-    for (int i = 1;i <= q;i++) cout << ans[i] << '\n';
+    for(int i = 1;i <= q;i++) cout << ans[i] << '\n';
     return 0;
 }
