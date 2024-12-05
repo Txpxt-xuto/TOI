@@ -1115,3 +1115,23 @@ int main()
     }
     printpath(e);
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main()
+{
+    cin.tie(NULL)->sync_with_stdio(false);
+    ll c;
+    cin>>c;
+
+    for(ll i=0;i<c;i++)
+    {
+        ll a;
+        cin>>a;
+        cout<<(a-3)%1000000007<<'\n';
+    }
+
+
+    return 0;
+}
