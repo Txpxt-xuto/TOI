@@ -897,5 +897,5 @@ int main(){
         {
             ans*=i;ans%=inf;
         }
-    }cout<<(ans%inf+inf)%inf;
+    }cout<< (ans%inf+inf)%inf;
 }
