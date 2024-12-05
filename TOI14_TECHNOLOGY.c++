@@ -1063,7 +1063,7 @@ int main()
     for(int o=j;o<=c;o++){
     long long g=0;
     g=arr[u][o]-arr[i-1][o]-arr[u][j-1]+arr[i-1][j-1];
-    if(g<=k)
+    if(g<=k) cnt++;
     {
         cnt++;
     }
