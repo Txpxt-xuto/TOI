@@ -821,9 +821,6 @@ void hld(int v = 1, int p = 1, int r = 1)
         hld(x, v, x);
     }
 }
-void update(int v, int w)
-{
-}
 void solve()
 {
     ll P;
