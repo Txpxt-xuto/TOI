@@ -864,3 +864,37 @@ int main()
     while(q--) solve();
     return 0;
 }
+
+#include<bits/stdc++.h>
+#define f first
+#define s second
+#define pb push_back
+#define pii pair<int,int>
+#define ll long long
+#define sz(x) (ll)x.size()
+using namespace std;
+const int mxn=1500005,inf=998244353;
+int prime[mxn]{0};
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n;cin>>n;
+    int a[n+1];bool vis[n+1]={0};
+    for(int i=1;i<=n;i++)cin>>a[i];
+    for(int i=1;i<=n;i++){
+        if(vis[i])continue;
+        int x=i;int cnt=0;
+        while(!vis[x])vis[x]=1,x=a[x],cnt++;
+        for(int j=2;j<=sqrt(cnt);j++){
+            if(cnt%j==0){
+                int cur=0;
+                while(cnt%j==0)cur++,cnt/=j;
+                prime[j]=max(prime[j],cur);
+            }
+        }if(cnt!=1)prime[cnt]=max(prime[cnt],1);
+    }ll ans=1;
+    for(int i=1;i<=mxn;i++){
+        for(int j=1;j<=prime[i];j++){
+            ans*=i;ans%=inf;
+        }
+    }cout<<(ans%inf+inf)%inf;
+}
