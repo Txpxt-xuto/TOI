@@ -1201,7 +1201,8 @@ void dfs(int u,int p){
 }
 int main()
 {
-    ios_base::sync_with_stdio(false);cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int n,m;cin>>n>>m;
     for(int i=1;i<=m;i++){
         int u,v;cin>>u>>v;
