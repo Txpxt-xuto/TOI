@@ -1284,5 +1284,5 @@ int main(){
                 }
             }
         }
-    }cout<<(dp[nw][0][0]%inf+inf)%inf;
+    }cout << (dp[nw][0][0]%inf+inf)%inf;
 }
