@@ -1265,8 +1265,10 @@ int main(){
                 }
             }
         }
-        else if(s[i]==']'){
-            for(int j=0;j<=m;j++){
+        else if(s[i]==']')
+        {
+            for(int j=0;j<=m;j++)
+            {
                 for(int k=0;k<=m-1;k++){
                     dp[nw][j][k]=dp[pv][j][k+1];
                 }
