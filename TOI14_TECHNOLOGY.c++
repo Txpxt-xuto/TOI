@@ -1217,3 +1217,72 @@ int main()
     for(int i=1;i<=n;i++) if(!disc[i]) ans++,dfs(i,i);
     cout << ans;
 }
+
+#include<bits/stdc++.h>
+#define ll long long
+#define pii pair<ll,ll>
+#define pll pair<ll,ll>
+#define plx pair<ll,int>
+#define f first
+#define s second
+#define pb push_back
+#define all(x) x.begin(),x.end()
+#define szz(r) (ll)r.size()
+#define vi vector<int>
+#define vvi vector<vi>
+#define pp pair<ll,int>
+#define ub(x,i) upper_bound(all(x),i)-x.begin()
+using namespace std;
+ll dp[2][505][505]{0};
+const int inf=1e9+7;
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n;cin>>n;int m=n;
+    string s;cin>>s;
+    dp[0][0][0]=1;
+    int nw=0,pv=0;
+    for(int i=0;i<n;i++){
+        pv=nw;nw=1-nw;
+        for(int i=0;i<=m;i++)for(int j=0;j<=m;j++)dp[nw][i][j]=0;
+        if(s[i]=='('){
+           for(int j=1;j<=m;j++){
+               for(int k=0;k<=m;k++){
+                   dp[nw][j][k]=dp[pv][j-1][k];
+               }
+           }
+        }
+        else if(s[i]==')'){
+           for(int j=0;j<=m-1;j++){
+               for(int k=0;k<=m;k++){
+                   dp[nw][j][k]=dp[pv][j+1][k];
+               }
+           }
+        }
+        else if(s[i]=='['){
+            for(int j=0;j<=m;j++){
+                for(int k=1;k<=m;k++){
+                    dp[nw][j][k]=dp[pv][j][k-1];
+                }
+            }
+        }
+        else if(s[i]==']'){
+            for(int j=0;j<=m;j++){
+                for(int k=0;k<=m-1;k++){
+                    dp[nw][j][k]=dp[pv][j][k+1];
+                }
+            }
+        }
+
+        else {
+            for(int j=0;j<=m;j++){
+                for(int k=0;k<=m;k++){
+                    if(j>0)dp[nw][j][k]+=dp[pv][j-1][k];
+                    if(j<m)dp[nw][j][k]+=dp[pv][j+1][k];
+                    if(k>0)dp[nw][j][k]+=dp[pv][j][k-1];
+                    if(k<m)dp[nw][j][k]+=dp[pv][j][k+1];
+                    dp[nw][j][k]%=inf;
+                }
+            }
+        }
+    }cout<<(dp[nw][0][0]%inf+inf)%inf;
+}
