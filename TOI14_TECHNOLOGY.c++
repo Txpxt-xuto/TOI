@@ -1205,7 +1205,8 @@ int main()
     cin.tie(NULL);
     int n,m;
     cin>>n>>m;
-    for(int i=1;i<=m;i++){
+    for(int i=1;i<=m;i++)
+    {
         int u,v;cin>>u>>v;
         g[u].pb(v);g[v].pb(u);
     }
