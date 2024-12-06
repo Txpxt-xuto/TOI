@@ -1320,18 +1320,21 @@ bool ch(ppp a,ppp b,ppp c){
 pll solve(ll eee,int n){
     deque<ppp>d1,d2;
     d2.pb({0,0,0});
-    for(int i=1;i<=n;i++){dp2[i]=dp1[i]={2e18,2e18};
-        while(d2.size()>1&&get(d2[0],d2[1])<w[i])d2.pop_front();
-        while(d1.size()>1&&get(d1[0],d1[1])<p[i])d1.pop_front();
+    for(int i=1;i<=n;i++)
+    {
+        dp2[i]=dp1[i]={2e18,2e18};
+        while(d2.size()>1&&get(d2[0],d2[1])<w[i]) d2.pop_front();
+        while(d1.size()>1&&get(d1[0],d1[1])<p[i]) d1.pop_front();
         dp1[i]={d2[0].f*w[i]+d2[0].s-pw[i]+p[i]*w[i]+c[i]+eee,d2[0].t+1};
-        if(i!=1)dp2[i]={d1[0].f*p[i]+d1[0].s+pw[i],d1[0].t};
+        if(i!=1) dp2[i]={d1[0].f*p[i]+d1[0].s+pw[i],d1[0].t};
         dp2[i]=min(dp2[i],dp1[i]);
         ppp x1={-w[i],dp1[i].f-pw[i]+p[i]*w[i],dp1[i].s};
         ppp x2={-p[i],pw[i]+dp2[i].f,dp2[i].s};
-        while(d2.size()>1&&ch(d2[(int)d2.size()-2],d2.back(),x2))d2.pop_back();
-        while(d1.size()>1&&ch(d1[(int)d1.size()-2],d1.back(),x1))d1.pop_back();
+        while(d2.size()>1&&ch(d2[(int)d2.size()-2],d2.back(),x2)) d2.pop_back();
+        while(d1.size()>1&&ch(d1[(int)d1.size()-2],d1.back(),x1)) d1.pop_back();
         d1.pb(x1);d2.pb(x2);
-    }return dp2[n];
+    }
+    return dp2[n];
 }
 int main()
 {
