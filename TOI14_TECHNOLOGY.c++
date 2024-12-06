@@ -1279,10 +1279,10 @@ int main(){
             {
                 for(int k=0;k<=m;k++)
                 {
-                    if(j>0)dp[nw][j][k]+=dp[pv][j-1][k];
-                    if(j<m)dp[nw][j][k]+=dp[pv][j+1][k];
-                    if(k>0)dp[nw][j][k]+=dp[pv][j][k-1];
-                    if(k<m)dp[nw][j][k]+=dp[pv][j][k+1];
+                    if(j>0) dp[nw][j][k]+=dp[pv][j-1][k];
+                    if(j<m) dp[nw][j][k]+=dp[pv][j+1][k];
+                    if(k>0) dp[nw][j][k]+=dp[pv][j][k-1];
+                    if(k<m) dp[nw][j][k]+=dp[pv][j][k+1];
                     dp[nw][j][k]%=inf;
                 }
             }
