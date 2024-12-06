@@ -1241,7 +1241,8 @@ int main(){
     string s;cin>>s;
     dp[0][0][0]=1;
     int nw=0,pv=0;
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         pv=nw;nw=1-nw;
         for(int i=0;i<=m;i++)for(int j=0;j<=m;j++)dp[nw][i][j]=0;
         if(s[i]=='(')
