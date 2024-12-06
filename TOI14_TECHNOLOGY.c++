@@ -1333,7 +1333,8 @@ pll solve(ll eee,int n){
         d1.pb(x1);d2.pb(x2);
     }return dp2[n];
 }
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int n,m;
