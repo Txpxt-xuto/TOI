@@ -1296,3 +1296,55 @@ int main()
     }
     cout << (dp[nw][0][0]%inf+inf)%inf;
 }
+
+#include<bits/stdc++.h>
+#define ll long long
+#define pll pair<ll,ll>
+#define f first
+#define s second
+#define pb push_back
+#define all(x) x.begin(),x.end()
+using namespace std;
+const int mxn=1e5+5;
+ll w[mxn]{0},p[mxn]{0},c[mxn]{0},pw[mxn]{0};
+pll dp1[mxn],dp2[mxn];
+struct ppp{
+    ll f,s,t;
+};
+double get(ppp a,ppp b){
+    return (long double)(b.s-a.s)/(a.f-b.f);
+}
+bool ch(ppp a,ppp b,ppp c){
+    return (a.s-b.s)*(c.f-b.f)>=(b.s-c.s)*(b.f-a.f);
+}
+pll solve(ll eee,int n){
+    deque<ppp>d1,d2;
+    d2.pb({0,0,0});
+    for(int i=1;i<=n;i++){dp2[i]=dp1[i]={2e18,2e18};
+        while(d2.size()>1&&get(d2[0],d2[1])<w[i])d2.pop_front();
+        while(d1.size()>1&&get(d1[0],d1[1])<p[i])d1.pop_front();
+        dp1[i]={d2[0].f*w[i]+d2[0].s-pw[i]+p[i]*w[i]+c[i]+eee,d2[0].t+1};
+        if(i!=1)dp2[i]={d1[0].f*p[i]+d1[0].s+pw[i],d1[0].t};
+        dp2[i]=min(dp2[i],dp1[i]);
+        ppp x1={-w[i],dp1[i].f-pw[i]+p[i]*w[i],dp1[i].s};
+        ppp x2={-p[i],pw[i]+dp2[i].f,dp2[i].s};
+        while(d2.size()>1&&ch(d2[(int)d2.size()-2],d2.back(),x2))d2.pop_back();
+        while(d1.size()>1&&ch(d1[(int)d1.size()-2],d1.back(),x1))d1.pop_back();
+        d1.pb(x1);d2.pb(x2);
+    }return dp2[n];
+}
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n,m;cin>>n>>m;
+    for(int i=2;i<=n;i++)cin>>w[i],w[i]+=w[i-1];
+    for(int i=1;i<=n;i++)cin>>p[i];
+    for(int i=1;i<=n;i++)cin>>c[i];
+    for(int i=1;i<=n;i++)pw[i]=pw[i-1]+p[i]*w[i];
+    for(int i=1;i<=n;i++)p[i]+=p[i-1];
+    ll l=-1e18,r=1e18;
+    while(l<r){
+        ll md=(l+r)>>1;
+        if(solve(md,n).s<=m)r=md;
+        else l=md+1;
+    }cout<<solve(l,n).f-l*m;
+}
