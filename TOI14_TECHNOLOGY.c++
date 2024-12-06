@@ -1237,8 +1237,11 @@ ll dp[2][505][505]{0};
 const int inf=1e9+7;
 int main(){
     ios_base::sync_with_stdio(0);cin.tie(0);
-    int n;cin>>n;int m=n;
-    string s;cin>>s;
+    int n;
+    cin>>n;
+    int m=n;
+    string s;
+    cin>>s;
     dp[0][0][0]=1;
     int nw=0,pv=0;
     for(int i=0;i<n;i++)
