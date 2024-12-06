@@ -1253,7 +1253,7 @@ int main(){
         }
         else if(s[i]==')'){
            for(int j=0;j<=m-1;j++){
-               for(int k=0;k<=m;k++) dp[nw][j][k]=dp[pv][j+1][k];
+               for(int k=0;k<=m;k++) dp[nw][j][k] = dp[pv][j+1][k];
                    dp[nw][j][k]=dp[pv][j+1][k];
                }
            }
