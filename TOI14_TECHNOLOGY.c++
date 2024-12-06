@@ -1235,7 +1235,8 @@ int main()
 using namespace std;
 ll dp[2][505][505]{0};
 const int inf=1e9+7;
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int n;
