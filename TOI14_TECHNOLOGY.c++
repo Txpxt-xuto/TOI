@@ -1337,7 +1337,7 @@ int main(){
     ios_base::sync_with_stdio(0);cin.tie(0);
     int n,m;cin>>n>>m;
     for(int i=2;i<=n;i++)cin>>w[i],w[i]+=w[i-1];
-    for(int i=1;i<=n;i++)cin>>p[i];
+    for(int i=1;i<=n;i++) cin>>p[i];
     for(int i=1;i<=n;i++)cin>>c[i];
     for(int i=1;i<=n;i++)pw[i]=pw[i-1]+p[i]*w[i];
     for(int i=1;i<=n;i++)p[i]+=p[i-1];
