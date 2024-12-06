@@ -1173,3 +1173,39 @@ int main() {
     cout << n+m-2*cnt;
     return 0;
 }
+
+#include<bits/stdc++.h>
+#define pb push_back
+#define ll  long long
+#define f first
+#define s second
+#define pll pair<ll,ll>
+#define pii pair<int,int>
+using namespace std;
+const int N=5e5+5;
+vector<int>g[N];
+int disc[N]{0};
+int low[N]{0};
+int ans=0;
+int t=0;
+void dfs(int u,int p){
+    disc[u]=low[u]=++t;
+    for(auto v:g[u]){
+        if(!disc[v]){
+            dfs(v,u);
+            low[u]=min(low[u],low[v]);
+            if(disc[u]<low[v])ans++;
+        }
+        else if (v!=p)low[u]=min(low[u],disc[v]);
+    }
+}
+int main(){
+    ios_base::sync_with_stdio(false);cin.tie(NULL);
+    int n,m;cin>>n>>m;
+    for(int i=1;i<=m;i++){
+        int u,v;cin>>u>>v;
+        g[u].pb(v);g[v].pb(u);
+    }
+    for(int i=1;i<=n;i++)if(!disc[i])ans++,dfs(i,i);
+    cout<<ans;
+}
