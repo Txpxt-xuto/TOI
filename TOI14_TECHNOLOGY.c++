@@ -1334,7 +1334,8 @@ pll solve(ll eee,int n){
     }return dp2[n];
 }
 int main(){
-    ios_base::sync_with_stdio(0);cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int n,m;
     cin >> n >> m;
     for(int i=2;i<=n;i++) cin>>w[i],w[i]+=w[i-1];
