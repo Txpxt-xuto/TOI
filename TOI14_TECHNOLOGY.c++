@@ -1197,7 +1197,7 @@ void dfs(int u,int p)
         {
             dfs(v,u);
             low[u]=min(low[u],low[v]);
-            if(disc[u]<low[v])ans++;
+            if(disc[u]<low[v]) ans++;
         }
         else if (v!=p)low[u]=min(low[u],disc[v]);
     }
