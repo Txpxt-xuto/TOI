@@ -1211,6 +1211,6 @@ int main()
         cin >> u >> v;
         g[u].pb(v);g[v].pb(u);
     }
-    for(int i=1;i<=n;i++)if(!disc[i])ans++,dfs(i,i);
+    for(int i=1;i<=n;i++) if(!disc[i]) ans++,dfs(i,i);
     cout<<ans;
 }
