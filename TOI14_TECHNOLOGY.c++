@@ -1271,7 +1271,6 @@ int main(){
             {
                 for(int k=0;k<=m-1;k++) dp[nw][j][k] = dp[pv][j][k+1];
                     dp[nw][j][k]=dp[pv][j][k+1];
-                }
             }
         }
         else
