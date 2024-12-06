@@ -1188,7 +1188,8 @@ int disc[N]{0};
 int low[N]{0};
 int ans=0;
 int t=0;
-void dfs(int u,int p){
+void dfs(int u,int p)
+{
     disc[u]=low[u]=++t;
     for(auto v:g[u]){
         if(!disc[v]){
