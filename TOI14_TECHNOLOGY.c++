@@ -1208,7 +1208,7 @@ int main()
     for(int i=1;i<=m;i++)
     {
         int u,v;
-        cin>>u>>v;
+        cin >> u >> v;
         g[u].pb(v);g[v].pb(u);
     }
     for(int i=1;i<=n;i++)if(!disc[i])ans++,dfs(i,i);
