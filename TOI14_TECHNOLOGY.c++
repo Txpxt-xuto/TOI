@@ -1245,7 +1245,7 @@ int main(){
     {
         pv=nw;
         nw=1-nw;
-        for(int i=0;i<=m;i++)for(int j=0;j<=m;j++)dp[nw][i][j]=0;
+        for(int i=0;i<=m;i++) for(int j=0;j<=m;j++)dp[nw][i][j]=0;
         if(s[i]=='(')
         {
             for(int j=1;j<=m;j++)
