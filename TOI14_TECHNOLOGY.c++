@@ -1191,7 +1191,8 @@ int t=0;
 void dfs(int u,int p)
 {
     disc[u]=low[u]=++t;
-    for(auto v:g[u]){
+    for(auto v:g[u])
+    {
         if(!disc[v]){
             dfs(v,u);
             low[u]=min(low[u],low[v]);
