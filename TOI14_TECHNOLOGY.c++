@@ -1340,7 +1340,7 @@ int main(){
     for(int i=1;i<=n;i++) cin>>p[i];
     for(int i=1;i<=n;i++) cin>>c[i];
     for(int i=1;i<=n;i++) pw[i]=pw[i-1]+p[i]*w[i];
-    for(int i=1;i<=n;i++)p[i]+=p[i-1];
+    for(int i=1;i<=n;i++) p[i]+=p[i-1];
     ll l=-1e18,r=1e18;
     while(l<r){
         ll md=(l+r)>>1;
