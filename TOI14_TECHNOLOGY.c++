@@ -1317,7 +1317,8 @@ double get(ppp a,ppp b){
 bool ch(ppp a,ppp b,ppp c){
     return (a.s-b.s)*(c.f-b.f)>=(b.s-c.s)*(b.f-a.f);
 }
-pll solve(ll eee,int n){
+pll solve(ll eee,int n)
+{
     deque<ppp>d1,d2;
     d2.pb({0,0,0});
     for(int i=1;i<=n;i++)
