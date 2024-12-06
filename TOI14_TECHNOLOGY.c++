@@ -1261,8 +1261,6 @@ int main(){
         else if(s[i]=='['){
             for(int j=0;j<=m;j++){
                 for(int k=1;k<=m;k++) dp[nw][j][k] = dp[pv][j][k-1];
-   
-    
             }
         }
         else if(s[i]==']')
