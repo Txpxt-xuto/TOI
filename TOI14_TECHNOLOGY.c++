@@ -1373,7 +1373,8 @@ bool kunzaZa183(int v) {
     }
     return false;
 }
-int main() {
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     int n, m;
     cin >> n >> m;
