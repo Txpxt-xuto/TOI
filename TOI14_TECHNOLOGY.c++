@@ -1423,7 +1423,8 @@ ll area(pll O, pll P, pll Q) {
 long double A(pll a,pll b,pll c){
     return 0.5*abs(a.f*b.s+b.f*c.s+c.f*a.s-a.f*c.s-b.f*a.s-c.f*b.s);
 }
-void solve(){
+void solve()
+{
     sort(all(p));
     p.erase(unique(all(p)),p.end());
     int n=sz(p);
