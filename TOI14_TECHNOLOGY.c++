@@ -1356,3 +1356,39 @@ int main()
         else l=md+1;
     }cout << solve(l,n).f-l*m;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+vector<int> adj[606];
+int mt[606], vis[606];
+bool kunzaZa183(int v) {
+    if (vis[v]) return false;
+    vis[v] = 1;
+    for (auto& x : adj[v]) {
+        if (mt[x] == -1 || kunzaZa183(mt[x])) {
+            mt[x] = v;
+            return true;
+        }
+    }
+    return false;
+}
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+    int n, m;
+    cin >> n >> m;
+    memset(mt, -1, sizeof mt);
+    for (int i = 1;i <= m;i++) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v + n);
+    }
+    for (int i = 1;i <= 2 * n;i++) {
+        memset(vis, 0, sizeof vis);
+        kunzaZa183(i);
+    }
+    int cnt = 0;
+    for (int i = 1;i <= 2 * n;i++) if (mt[i] != -1) cnt++;
+    cout << n + m - 2 * cnt;
+    return 0;
+}
