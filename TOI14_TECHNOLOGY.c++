@@ -1455,7 +1455,8 @@ int main(){
     int m=sz(p);
     int i=0,j=1,k=2;
     int ii=0,jj=1,kk=2;
-    while(1){
+    while(1)
+    {
         while(1)
         {
             while(A(p[i],p[j],p[k])<=A(p[i],p[j],p[(k+1)%m])) k=(k+1)%m;
