@@ -1461,13 +1461,14 @@ int main(){
             if(A(p[i],p[j],p[k])<=A(p[i],p[(j+1)%m],p[k])){j=(j+1)%m;continue;}
             else break;
         }
-        if(A(p[i],p[j],p[k])>=A(p[ii],p[jj],p[kk])){
+        if(A(p[i],p[j],p[k])>=A(p[ii],p[jj],p[kk]))
+        {
             ii=i,jj=j,kk=k;
         }
         i=(i+1)%m;
         j=(i+1)%m;
         k=(i+2)%m;
-        if(i==0)break;
+        if(i==0) break;
     }
     cout << fixed << setprecision(3) << A(p[ii],p[jj],p[kk]);
 }
