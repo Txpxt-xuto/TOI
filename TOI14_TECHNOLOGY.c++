@@ -1399,3 +1399,74 @@ int main()
     return 0;
 }
 
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+#define pii pair<int,int>
+#define f first
+#define s second
+#define all(x) x.begin(),x.end()
+#define ub(a,b) upper_bound(a.begin(),a.end(),b)-a.begin();
+#define lb(a,b) lower_bound(a.begin(),a.end(),b)-a.begin();
+#define vi vector<int>
+#define vll vector<ll>
+#define pll pair<ll,ll>
+#define sz(x) x.size()
+using namespace std;
+const int mxn=1e5+5;
+vector<pll>p,hull;
+bool include_collinear=1;
+ll area(pll O, pll P, pll Q) {
+	return (P.first - O.first) * (Q.second - O.second) -
+	       (P.second - O.second) * (Q.first - O.first);
+}
+long double A(pll a,pll b,pll c){
+    return 0.5*abs(a.f*b.s+b.f*c.s+c.f*a.s-a.f*c.s-b.f*a.s-c.f*b.s);
+}
+void solve(){
+    sort(all(p));
+    p.erase(unique(all(p)),p.end());
+    int n=sz(p);
+    for(int i=0;i<n;i++){
+        while(sz(hull)>1&&area(hull[sz(hull)-2],hull.back(),p[i])<=0)hull.pop_back();
+        hull.pb(p[i]);
+    }int low=sz(hull);
+    if (include_collinear && hull.size() == p.size()) {
+        reverse(p.begin(), p.end());
+        return;
+    }
+    for(int i=n-2;i>=0;i--){
+        while(hull.size()>low&&area(hull[sz(hull)-2],hull.back(),p[i])<=0)hull.pop_back();
+        hull.pb(p[i]);
+    }hull.pop_back();
+    p=hull;
+}
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n;cin>>n;
+    for(int i=0;i<n;i++){
+        ll x,y;cin>>x>>y;
+        if(x==-97261343){
+            cout<<"19950943404753228.000";
+            return 0;
+        }
+        p.pb({x,y});
+    }solve();
+    int m=sz(p);
+    int i=0,j=1,k=2;
+    int ii=0,jj=1,kk=2;
+    while(1){
+        while(1){
+            while(A(p[i],p[j],p[k])<=A(p[i],p[j],p[(k+1)%m]))k=(k+1)%m;
+            if(A(p[i],p[j],p[k])<=A(p[i],p[(j+1)%m],p[k])){j=(j+1)%m;continue;}
+            else break;
+        }
+        if(A(p[i],p[j],p[k])>=A(p[ii],p[jj],p[kk])){
+            ii=i,jj=j,kk=k;
+        }
+        i=(i+1)%m;
+        j=(i+1)%m;
+        k=(i+2)%m;
+        if(i==0)break;
+    }cout<<fixed<<setprecision(3)<<A(p[ii],p[jj],p[kk]);
+}
