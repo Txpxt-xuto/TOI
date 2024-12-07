@@ -1456,9 +1456,13 @@ int main(){
     int i=0,j=1,k=2;
     int ii=0,jj=1,kk=2;
     while(1){
-        while(1){
-            while(A(p[i],p[j],p[k])<=A(p[i],p[j],p[(k+1)%m]))k=(k+1)%m;
-            if(A(p[i],p[j],p[k])<=A(p[i],p[(j+1)%m],p[k])){j=(j+1)%m;continue;}
+        while(1)
+        {
+            while(A(p[i],p[j],p[k])<=A(p[i],p[j],p[(k+1)%m])) k=(k+1)%m;
+            if(A(p[i],p[j],p[k])<=A(p[i],p[(j+1)%m],p[k]))
+            {
+                j=(j+1)%m;continue;
+                }
             else break;
         }
         if(A(p[i],p[j],p[k])>=A(p[ii],p[jj],p[kk]))
