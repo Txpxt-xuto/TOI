@@ -1463,7 +1463,9 @@ int main(){
         }
         if(A(p[i],p[j],p[k])>=A(p[ii],p[jj],p[kk]))
         {
-            ii=i,jj=j,kk=k;
+            ii=i;
+            jj=j;
+            kk=k;
         }
         i=(i+1)%m;
         j=(i+1)%m;
