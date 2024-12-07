@@ -1388,7 +1388,7 @@ int main() {
         kunzaZa183(i);
     }
     int cnt = 0;
-    for(int i=1;i <= 2 * n;i++) if(mt[i] != -1) cnt++;
+    for(int i=1;i<= 2 * n;i++) if(mt[i] != -1) cnt++;
     cout << n + m - 2 * cnt;
     return 0;
 }
