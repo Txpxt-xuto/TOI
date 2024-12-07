@@ -1362,7 +1362,8 @@ using namespace std;
 using ll = long long;
 vector<int> adj[606];
 int mt[606], vis[606];
-bool kunzaZa183(int v) {
+bool kunzaZa183(int v)
+{
     if (vis[v]) return false;
     vis[v] = 1;
     for (auto& x : adj[v]) {
