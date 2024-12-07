@@ -1431,7 +1431,8 @@ void solve(){
         while(sz(hull)>1&&area(hull[sz(hull)-2],hull.back(),p[i])<=0)hull.pop_back();
         hull.pb(p[i]);
     }int low=sz(hull);
-    if (include_collinear && hull.size() == p.size()){
+    if(include_collinear && hull.size() == p.size())
+    {
         reverse(p.begin(), p.end());
         return;
     }
