@@ -1435,8 +1435,9 @@ void solve(){
         reverse(p.begin(), p.end());
         return;
     }
-    for(int i=n-2;i>=0;i--){
-        while(hull.size()>low&&area(hull[sz(hull)-2],hull.back(),p[i])<=0)hull.pop_back();
+    for(int i=n-2;i>=0;i--)
+    {
+        while(hull.size()>low&&area(hull[sz(hull)-2],hull.back(),p[i])<=0) hull.pop_back();
         hull.pb(p[i]);
     }hull.pop_back();
     p=hull;
