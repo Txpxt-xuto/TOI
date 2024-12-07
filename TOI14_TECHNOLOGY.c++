@@ -1427,7 +1427,8 @@ void solve(){
     sort(all(p));
     p.erase(unique(all(p)),p.end());
     int n=sz(p);
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         while(sz(hull)>1&&area(hull[sz(hull)-2],hull.back(),p[i])<=0)hull.pop_back();
         hull.pb(p[i]);
     }int low=sz(hull);
