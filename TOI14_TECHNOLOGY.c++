@@ -1368,7 +1368,8 @@ bool kunzaZa183(int v)
     vis[v] = 1;
     for(auto& x : adj[v])
     {
-        if (mt[x] == -1 || kunzaZa183(mt[x])) {
+        if (mt[x] == -1 || kunzaZa183(mt[x]))
+        {
             mt[x] = v;
             return true;
         }
