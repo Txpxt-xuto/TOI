@@ -1469,5 +1469,5 @@ int main(){
         k=(i+2)%m;
         if(i==0)break;
     }
-    cout<<fixed<<setprecision(3)<<A(p[ii],p[jj],p[kk]);
+    cout << fixed<<setprecision(3)<<A(p[ii],p[jj],p[kk]);
 }
