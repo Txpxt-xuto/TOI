@@ -1587,3 +1587,85 @@ int main()
     }
     cout << -1;
 }
+
+#include<iostream>
+#include<stack>
+#include<map>
+#include<vector>
+#include<string>
+#include<unordered_map>
+#include <queue>
+#include<cstring>
+#include<float.h>
+#include<limits.h>
+#include <cassert>
+#include<cmath>
+#include<set>
+#include<algorithm>
+#include <iomanip>
+#include<numeric> //gcd(a,b)
+#include<bitset>
+using namespace std;
+#define ll long long
+#define f first
+#define endl "\n"
+#define s second
+#define pii pair<int,ll>
+#define ppii pair<int,pii>
+#define vi vector<int>
+#define pb push_back
+#define all(x) x.begin(),x.end()
+#define rall(x) x.rbegin(),x.rend()
+#define F(n) for(int i=0;i<n;i++)
+#define lb lower_bound
+#define ub upper_bound
+using namespace std;
+#define int long long
+#define double long double
+#define fastio ios::sync_with_stdio(false);cin.tie(NULL);
+#pragma GCC optimize ("03,unroll-loops")
+const int mod=98765431,mxn=2e5,lg=22,inf=1e18,minf=-1e9,Mxn=100000;
+struct matrix{
+	int dp[3][3];
+	matrix operator*(matrix a)const{
+		matrix ans;
+		for(int i=0;i<3;i++)for(int j=0;j<3;j++){
+			ans.dp[i][j]=0;
+			for(int k=0;k<3;k++){
+				for(int g=0;g<3;g++)if((k==0||g==0)||k!=g){
+					ans.dp[i][j]=(ans.dp[i][j]+(dp[i][k]*a.dp[g][j])%mod)%mod;
+				}
+			}
+		}
+		return ans;
+	}
+	int sum(){
+		int ans=0;
+		for(int i=0;i<3;i++)for(int j=0;j<3;j++)ans=(ans+dp[i][j])%mod;
+		return ans;
+	}
+};
+
+void solve(){
+	int n;cin>>n;
+	matrix ans,cur;
+	for(int k=0;k<3;k++){
+		for(int g=0;g<3;g++){
+			cur.dp[k][g]=ans.dp[k][g]=0;
+		}
+	}
+	n--;
+	cur.dp[0][0]=cur.dp[1][1]=cur.dp[2][2]=ans.dp[0][0]=ans.dp[1][1]=ans.dp[2][2]=1;
+	while(n){
+		if(n&1)ans=cur*ans;
+		cur=cur*cur;
+		n>>=1;
+	}
+	cout<<ans.sum()<<'\n';
+}
+int32_t main(){
+	fastio
+	int t;cin>>t;
+	while(t--)solve();
+	return 0;
+}
