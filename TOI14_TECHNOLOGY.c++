@@ -1740,8 +1740,7 @@ void mains() {
     fenwick_tree fwt(n);
     for (int i = n - 1; i >= 0; i--) {
         if (last.find(arr[i]) != last.end()) fwt.upd(last[arr[i]], -1);
-        {
-       
+
         last[arr[i]] = i;
         fwt.upd(i, 1);
         for(auto e : query[i]) ans[e.S] -= fwt.qry(e.F);
