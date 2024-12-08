@@ -1632,11 +1632,8 @@ struct matrix{
 		for(int i=0;i<3;i++)for(int j=0;j<3;j++)
         {
 			ans.dp[i][j]=0;
-			for(int k=0;k<3;k++){
+			for(int k=0;k<3;k++) for(int g=0;g<3;g++)if((k==0||g==0)||k!=g) ans.dp[i][j] = (ans.dp[i][j]+(dp[i][k]*a.dp[g][j])%mod)%mod;
 				for(int g=0;g<3;g++)if((k==0||g==0)||k!=g) ans.dp[i][j] = (ans.dp[i][j]+(dp[i][k]*a.dp[g][j])%mod)%mod;
-                {
-					ans.dp[i][j]=(ans.dp[i][j]+(dp[i][k]*a.dp[g][j])%mod)%mod;
-				}
 			}
 		}
 		return ans;
