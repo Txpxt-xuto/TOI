@@ -1759,9 +1759,9 @@ int main() {
 
     ll t = 1;
     // cin >> t;
-    while (t--) mains();
+    while(t--) mains();
     {
         mains();
-    }
+
     return 0;
 }
