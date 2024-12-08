@@ -1691,9 +1691,7 @@ struct fenwick_tree {
 
     ll n;
     vector<ll> fwt;
-
     fenwick_tree() {}
-
     fenwick_tree(ll _n)
     {
         n = _n;
