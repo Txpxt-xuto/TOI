@@ -1666,7 +1666,8 @@ void solve(){
 int32_t main()
 {
 	fastio
-	int t;cin>>t;
+	int t;
+    cin>>t;
 	while(t--)solve();
 	return 0;
 }
