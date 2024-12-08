@@ -1748,7 +1748,7 @@ void mains() {
             ans[e.S] -= fwt.qry(e.F);
         }
     }
-    for (auto e : ans) cout << e << "\n";
+    for(auto e : ans) cout << e << "\n";
 }
 
 int main()
