@@ -1639,9 +1639,10 @@ struct matrix{
 		}
 		return ans;
 	}
-	int sum(){
+	int sum()
+    {
 		int ans=0;
-		for(int i=0;i<3;i++)for(int j=0;j<3;j++)ans=(ans+dp[i][j])%mod;
+		for(int i=0;i<3;i++) for(int j=0;j<3;j++)ans=(ans+dp[i][j])%mod;
 		return ans;
 	}
 };
