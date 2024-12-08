@@ -1761,7 +1761,6 @@ int main() {
     // cin >> t;
     while(t--) mains();
 
-    s();
 
     return 0;
 }
