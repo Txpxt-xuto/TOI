@@ -1536,7 +1536,8 @@ void trav1(int d,int x,int y,int dist){
     trav1(0,n-1,1,d,x,y,dist);
 }
 
-void trav2(int l,int r,int i,int d,int x,int y,int dist){
+void trav2(int l,int r,int i,int d,int x,int y,int dist)
+{
     if(y<l||r<x||vis2[d][i]) return;
     if(x<=l&&r<=y)
     {
