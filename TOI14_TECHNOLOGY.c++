@@ -1748,7 +1748,8 @@ void mains() {
             ans[e.S] -= fwt.qry(e.F);
         }
     }
-    for (auto e : ans) {
+    for (auto e : ans)cout << e << "\n";
+    {
         cout << e << "\n";
     }
 }
