@@ -1730,7 +1730,7 @@ void mains() {
     cin >> q;
     vector<ll> ans;
     vector<vector<pll>> query(n);
-    for(int i = 0; i < q; i++)
+    for(int i = 0;i<q; i++)
     {
         ll l, r;
         cin >> l >> r;
