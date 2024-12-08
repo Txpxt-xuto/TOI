@@ -1719,7 +1719,8 @@ struct fenwick_tree {
 
 };
 
-void mains() {
+void mains()
+{
     ll n;
     cin >> n;
     ll arr[n];
