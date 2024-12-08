@@ -1744,7 +1744,7 @@ void mains() {
         }
         last[arr[i]] = i;
         fwt.upd(i, 1);
-        for (auto e : query[i])
+        for(auto e : query[i])
         {
             ans[e.S] -= fwt.qry(e.F);
         }
