@@ -1552,7 +1552,7 @@ void trav2(int l,int r,int i,int d,int x,int y,int dist)
 
 void trav2(int d,int x,int y,int dist)
 {
-    if(d<-m||n<d)return;
+    if(d<-m||n<d) return;
     trav2(0,n-1,1,d+N,x,y,dist);
 }
 
