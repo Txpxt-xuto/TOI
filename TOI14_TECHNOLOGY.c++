@@ -1671,3 +1671,96 @@ int32_t main()
 	return 0;
 }
 
+#include <bits/stdc++.h>
+#define F first
+#define S second
+
+using namespace std;
+
+typedef long long ll;
+typedef pair<ll, ll> pll;
+typedef pair<ll, bool> plb;
+typedef pair<ll, pll> plpll;
+typedef pair<ll, plpll> plplpll;
+
+const ll inf = 1e18;
+const ll mod = 1e9 + 7;
+const ll maxn = 2e5 + 5;
+
+struct fenwick_tree {
+
+    ll n;
+    vector<ll> fwt;
+
+    fenwick_tree() {}
+
+    fenwick_tree(ll _n) {
+        n = _n;
+        fwt.resize(n + 5, 0);
+    }
+
+    void upd(ll p, ll val) {
+        p++;
+        while (p <= n) {
+            fwt[p] += val;
+            p += p & -p;
+        }
+    }
+
+    ll qry(ll p) {
+        p++;
+        ll sum = 0;
+        while (p > 0) {
+            sum += fwt[p];
+            p -= p & -p;
+        }
+        return sum;
+    }
+
+};
+
+void mains() {
+    ll n;
+    cin >> n;
+    ll arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    ll q;
+    cin >> q;
+    vector<ll> ans;
+    vector<vector<pll>> query(n);
+    for (int i = 0; i < q; i++) {
+        ll l, r;
+        cin >> l >> r;
+        ans.push_back(r - l + 1);
+        query[l].emplace_back(r, i);
+    }
+    map<ll, ll> last;
+    fenwick_tree fwt(n);
+    for (int i = n - 1; i >= 0; i--) {
+        if (last.find(arr[i]) != last.end()) {
+            fwt.upd(last[arr[i]], -1);
+        }
+        last[arr[i]] = i;
+        fwt.upd(i, 1);
+        for (auto e : query[i]) {
+            ans[e.S] -= fwt.qry(e.F);
+        }
+    }
+    for (auto e : ans) {
+        cout << e << "\n";
+    }
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    ll t = 1;
+    // cin >> t;
+    while (t--) {
+        mains();
+    }
+    return 0;
+}
