@@ -1699,7 +1699,6 @@ struct fenwick_tree {
         n = _n;
         fwt.resize(n + 5, 0);
     }
-
     void upd(ll p, ll val)
     {
         p++;
@@ -1709,7 +1708,6 @@ struct fenwick_tree {
             p += p & -p;
         }
     }
-
     ll qry(ll p)
     {
         p++;
