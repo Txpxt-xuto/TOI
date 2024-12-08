@@ -1625,7 +1625,8 @@ using namespace std;
 #define fastio ios::sync_with_stdio(false);cin.tie(NULL);
 #pragma GCC optimize ("03,unroll-loops")
 const int mod=98765431,mxn=2e5,lg=22,inf=1e18,minf=-1e9,Mxn=100000;
-struct matrix{
+struct matrix
+{
 	int dp[3][3];
 	matrix operator*(matrix a)const
     {
