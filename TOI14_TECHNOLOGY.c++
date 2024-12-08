@@ -1661,7 +1661,7 @@ void solve(){
 		cur=cur*cur;
 		n>>=1;
 	}
-	cout<<ans.sum()<<'\n';
+	cout << ans.sum() << '\n';
 }
 int32_t main()
 {
