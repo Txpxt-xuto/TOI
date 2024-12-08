@@ -1699,7 +1699,8 @@ struct fenwick_tree {
         fwt.resize(n + 5, 0);
     }
 
-    void upd(ll p, ll val) {
+    void upd(ll p, ll val)
+    {
         p++;
         while (p <= n) {
             fwt[p] += val;
