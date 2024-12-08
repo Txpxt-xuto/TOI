@@ -1746,7 +1746,7 @@ void mains() {
         fwt.upd(i, 1);
         for(auto e : query[i]) ans[e.S] -= fwt.qry(e.F);
         {
-            ans[e.S] -= fwt.qry(e.F);
+          ;
         }
     }
     for(auto e : ans) cout << e << "\n";
