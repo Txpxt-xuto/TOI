@@ -1707,7 +1707,8 @@ struct fenwick_tree {
         }
     }
 
-    ll qry(ll p) {
+    ll qry(ll p)
+    {
         p++;
         ll sum = 0;
         while (p > 0) {
