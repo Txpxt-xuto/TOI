@@ -1646,7 +1646,8 @@ struct matrix{
 	}
 };
 
-void solve(){
+void solve()
+{
 	int n;
     cin >> n;
 	matrix ans,cur;
