@@ -1668,6 +1668,6 @@ int32_t main()
 	fastio
 	int t;
     cin >> t;
-	while(t--)solve();
+	while(t--) solve();
 	return 0;
 }
