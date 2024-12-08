@@ -1694,7 +1694,8 @@ struct fenwick_tree {
 
     fenwick_tree() {}
 
-    fenwick_tree(ll _n) {
+    fenwick_tree(ll _n)
+    {
         n = _n;
         fwt.resize(n + 5, 0);
     }
