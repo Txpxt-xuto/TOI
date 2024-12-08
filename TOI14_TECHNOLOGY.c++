@@ -1725,8 +1725,7 @@ void mains() {
     ll arr[n];
     for (int i = 0; i < n; i++) cin >> arr[i];
     {
-        cin >> arr[i];
-    }
+
     ll q;
     cin >> q;
     vector<ll> ans;
