@@ -1687,8 +1687,8 @@ const ll inf = 1e18;
 const ll mod = 1e9 + 7;
 const ll maxn = 2e5 + 5;
 
-struct fenwick_tree {
-
+struct fenwick_tree
+{
     ll n;
     vector<ll> fwt;
     fenwick_tree() {}
