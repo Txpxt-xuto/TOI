@@ -1533,7 +1533,7 @@ void trav1(int l,int r,int i,int d,int x,int y,int dist){
 
 void trav1(int d,int x,int y,int dist)
 {
-    if(d<0||n+m<d)return;
+    if(d<0||n+m<d) return;
     trav1(0,n-1,1,d,x,y,dist);
 }
 
