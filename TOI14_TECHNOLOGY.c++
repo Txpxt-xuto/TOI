@@ -1723,7 +1723,8 @@ void mains() {
     ll n;
     cin >> n;
     ll arr[n];
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> arr[i];
     }
     ll q;
