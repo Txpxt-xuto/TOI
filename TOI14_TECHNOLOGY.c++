@@ -1627,12 +1627,13 @@ using namespace std;
 const int mod=98765431,mxn=2e5,lg=22,inf=1e18,minf=-1e9,Mxn=100000;
 struct matrix{
 	int dp[3][3];
-	matrix operator*(matrix a)const{
+	matrix operator*(matrix a)const
+    {
 		matrix ans;
-		for(int i=0;i<3;i++)for(int j=0;j<3;j++)
+		for(int i=0;i<3;i++) for(int j=0;j<3;j++)
         {
 			ans.dp[i][j]=0;
-			for(int k=0;k<3;k++) for(int g=0;g<3;g++)if((k==0||g==0)||k!=g) ans.dp[i][j] = (ans.dp[i][j]+(dp[i][k]*a.dp[g][j])%mod)%mod;
+			for(int k=0;k<3;k++) for(int g=0;g<3;g++) if((k==0||g==0)||k!=g) ans.dp[i][j] = (ans.dp[i][j]+(dp[i][k]*a.dp[g][j])%mod)%mod;
 		}
 		return ans;
 	}
