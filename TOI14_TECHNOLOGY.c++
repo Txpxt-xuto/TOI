@@ -1502,7 +1502,6 @@ const int INF=INT_MAX/2;
 
 const int N=1255;
 const int K=1<<12;
-
 int n,m,sx,sy;
 int a[N*N];
 int dp[N*N];
