@@ -1553,7 +1553,8 @@ void trav2(int d,int x,int y,int dist){
     trav2(0,n-1,1,d+N,x,y,dist);
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> sx >> sy;
     for(int i=0;i<n*m;i++)dp[i]=INF;
