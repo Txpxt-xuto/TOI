@@ -1647,7 +1647,8 @@ struct matrix{
 };
 
 void solve(){
-	int n;cin>>n;
+	int n;
+    cin>>n;
 	matrix ans,cur;
 	for(int k=0;k<3;k++) for(int g=0;g<3;g++) cur.dp[k][g] = ans.dp[k][g]=0;
 	n--;
