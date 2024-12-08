@@ -1663,7 +1663,8 @@ void solve(){
 	}
 	cout<<ans.sum()<<'\n';
 }
-int32_t main(){
+int32_t main()
+{
 	fastio
 	int t;cin>>t;
 	while(t--)solve();
