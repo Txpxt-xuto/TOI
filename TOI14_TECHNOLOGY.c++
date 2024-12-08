@@ -1658,9 +1658,9 @@ void solve(){
 	cur.dp[0][0]=cur.dp[1][1]=cur.dp[2][2]=ans.dp[0][0]=ans.dp[1][1]=ans.dp[2][2]=1;
 	while(n)
     {
-		if(n&1)ans=cur*ans;
-		cur=cur*cur;
-		n>>=1;
+		if(n&1) ans=cur*ans;
+		cur = cur*cur;
+		n >>= 1;
 	}
 	cout << ans.sum() << '\n';
 }
