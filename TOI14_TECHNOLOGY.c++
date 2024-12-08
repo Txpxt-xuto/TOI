@@ -1702,7 +1702,8 @@ struct fenwick_tree {
     void upd(ll p, ll val)
     {
         p++;
-        while (p <= n) {
+        while (p <= n)
+        {
             fwt[p] += val;
             p += p & -p;
         }
