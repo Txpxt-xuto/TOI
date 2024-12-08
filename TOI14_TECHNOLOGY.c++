@@ -1495,7 +1495,6 @@ int main()
 }
 
 #include<bits/stdc++.h>
-
 using namespace std;
 const int INF=INT_MAX/2;
 const int N=1255;
