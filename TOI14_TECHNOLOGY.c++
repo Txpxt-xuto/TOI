@@ -1739,7 +1739,8 @@ void mains() {
     map<ll, ll> last;
     fenwick_tree fwt(n);
     for (int i = n - 1; i >= 0; i--) {
-        if (last.find(arr[i]) != last.end()) {
+        if (last.find(arr[i]) != last.end()) fwt.upd(last[arr[i]], -1);
+        {
             fwt.upd(last[arr[i]], -1);
         }
         last[arr[i]] = i;
