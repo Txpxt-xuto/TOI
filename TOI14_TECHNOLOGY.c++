@@ -1711,7 +1711,7 @@ struct fenwick_tree {
     {
         p++;
         ll sum = 0;
-        while (p > 0)
+        while(p > 0)
         {
             sum += fwt[p];
             p -= p & -p;
