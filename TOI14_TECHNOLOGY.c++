@@ -1572,7 +1572,6 @@ int main(){
         if(x>0) go(encode(x/m-1,x%m),d);
         {
             go(encode(x/m-1,x%m),d);
-        }
         else
         {
             x=-x;
