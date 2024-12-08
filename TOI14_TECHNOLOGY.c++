@@ -1750,7 +1750,7 @@ void mains() {
     }
     for (auto e : ans)cout << e << "\n";
     {
-       "\n";
+  ;
     }
 }
 
