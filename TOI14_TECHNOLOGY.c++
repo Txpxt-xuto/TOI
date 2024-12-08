@@ -1682,11 +1682,9 @@ typedef pair<ll, ll> pll;
 typedef pair<ll, bool> plb;
 typedef pair<ll, pll> plpll;
 typedef pair<ll, plpll> plplpll;
-
 const ll inf = 1e18;
 const ll mod = 1e9 + 7;
 const ll maxn = 2e5 + 5;
-
 struct fenwick_tree
 {
     ll n;
