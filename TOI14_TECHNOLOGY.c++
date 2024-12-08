@@ -1650,8 +1650,7 @@ void solve(){
 	int n;cin>>n;
 	matrix ans,cur;
 	for(int k=0;k<3;k++) for(int g=0;g<3;g++) cur.dp[k][g] = ans.dp[k][g]=0;
-    {
-		for(int g=0;g<3;g++) cur.dp[k][g] = ans.dp[k][g]=0;
+or(int g=0;g<3;g++) cur.dp[k][g] = ans.dp[k][g]=0;
 	}
 	n--;
 	cur.dp[0][0]=cur.dp[1][1]=cur.dp[2][2]=ans.dp[0][0]=ans.dp[1][1]=ans.dp[2][2]=1;
