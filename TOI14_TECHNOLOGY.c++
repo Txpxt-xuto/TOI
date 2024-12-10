@@ -1811,7 +1811,8 @@ int main(){
             ll tot=0;
             for(int j=0;j<=rem;j++) tot=min(tot+dp[pos[i]][j],LIM);
             if(k>=tot) k-=tot;
-            }else{
+            else
+            {
                 if(!ans.empty()&&ans.back()>i){
                     cnt++;
                 }
