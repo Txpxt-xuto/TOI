@@ -1786,9 +1786,6 @@ int main(){
             }
         }
         for(auto x:dp[i]) ways=min(ways+x,LIM);
-        {
-            ways=min(ways+x,LIM);
-        }
     }
     if(k>=ways)
     {
