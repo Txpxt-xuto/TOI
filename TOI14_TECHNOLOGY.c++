@@ -1805,8 +1805,7 @@ int main(){
         {
             if(pos[i]<=last) continue;
             {
-       conue;
-            }
+
             int rem=m-cnt;
             if(!ans.empty()&&ans.back()>i) rem--;
             }
