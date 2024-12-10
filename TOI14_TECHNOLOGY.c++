@@ -1786,7 +1786,6 @@ int main()
                 else if(x>0) dp[i][x] = min(dp[i][x]+dp[j][x-1],LIM);
                 {
                     dp[i][x]=min(dp[i][x]+dp[j][x-1],LIM);
-                }
             }
         }
         for(auto x:dp[i]) ways=min(ways+x,LIM);
