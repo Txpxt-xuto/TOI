@@ -1803,7 +1803,8 @@ int main(){
         k--;
         for(int i=0;i<n;i++)
         {
-            if(pos[i]<=last){
+            if(pos[i]<=last)
+            {
                 continue;
             }
             int rem=m-cnt;
