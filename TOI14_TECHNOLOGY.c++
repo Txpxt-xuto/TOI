@@ -1820,7 +1820,8 @@ int main(){
             }
         }
     }
-    for(auto x:ans){
+    for(auto x:ans)cout << x << " ";
+    {
         cout << x << " ";
     }
 }
