@@ -1783,7 +1783,7 @@ int main()
                 {
                     dp[i][x]=min(dp[i][x]+dp[j][x],LIM);
                 }
-                else if(x>0)
+                else if(x>0) dp[i][x] = min(dp[i][x]+dp[j][x-1],LIM);
                 {
                     dp[i][x]=min(dp[i][x]+dp[j][x-1],LIM);
                 }
