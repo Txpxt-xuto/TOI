@@ -1814,8 +1814,7 @@ int main(){
             }
             if(rem<0) continue;
             {
-                continue;
-            }
+        
             ll tot=0;
             for(int j=0;j<=rem;j++){
                 tot=min(tot+dp[pos[i]][j],LIM);
