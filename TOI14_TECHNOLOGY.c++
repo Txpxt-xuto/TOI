@@ -1796,17 +1796,15 @@ int main(){
     vector<int> ans;
     int last=-1,cnt=0;
     k++;
-    for(int t=0;t<n;t++){
-        if(k==0)break;
-            break;
-        }
+    for(int t=0;t<n;t++)
+    {
+        if(k==0) break;
         k--;
         for(int i=0;i<n;i++)
         {
             if(pos[i]<=last) continue;
             int rem=m-cnt;
             if(!ans.empty()&&ans.back()>i) rem--;
-            }
             if(rem<0) continue;
             ll tot=0;
             for(int j=0;j<=rem;j++) tot=min(tot+dp[pos[i]][j],LIM);
