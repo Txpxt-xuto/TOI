@@ -1776,7 +1776,8 @@ int main()
     {
         dp[i][0]=1;
         for(int j=i+1;j<n;j++){
-            for(int x=0;x<=m;x++){
+            for(int x=0;x<=m;x++)
+            {
                 if(a[i]<a[j]){
                     dp[i][x]=min(dp[i][x]+dp[j][x],LIM);
                 }else if(x>0){
