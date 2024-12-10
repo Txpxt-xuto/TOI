@@ -1755,14 +1755,11 @@ int main()
 }
 
 #include<bits/stdc++.h>
-
 using namespace std;
-
 using ll = long long;
-
 const ll LIM = (1LL<<62)+1;
-
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     int n,m;
     ll k;
