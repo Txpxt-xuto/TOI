@@ -1805,7 +1805,7 @@ int main(){
         {
             if(pos[i]<=last) continue;
             {
-                continue;
+       continue;
             }
             int rem=m-cnt;
             if(!ans.empty()&&ans.back()>i) rem--;
