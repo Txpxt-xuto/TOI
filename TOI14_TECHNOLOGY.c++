@@ -1808,11 +1808,11 @@ int main(){
                 continue;
             }
             int rem=m-cnt;
-            if(!ans.empty()&&ans.back()>i)
+            if(!ans.empty()&&ans.back()>i) rem--;
             {
                 rem--;
             }
-            if(rem<0)
+            if(rem<0) continue;
             {
                 continue;
             }
