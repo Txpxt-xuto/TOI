@@ -1789,7 +1789,8 @@ int main(){
             ways=min(ways+x,LIM);
         }
     }
-    if(k>=ways){
+    if(k>=ways)
+    {
         cout << -1;
         exit(0);
     }
