@@ -1804,8 +1804,6 @@ int main(){
         for(int i=0;i<n;i++)
         {
             if(pos[i]<=last) continue;
-            {
-
             int rem=m-cnt;
             if(!ans.empty()&&ans.back()>i) rem--;
             }
