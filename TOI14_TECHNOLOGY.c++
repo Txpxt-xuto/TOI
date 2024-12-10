@@ -1779,7 +1779,7 @@ int main()
         {
             for(int x=0;x<=m;x++)
             {
-                if(a[i]<a[j])
+                if(a[i]<a[j]) dp[i][x] = min(dp[i][x]+dp[j][x],LIM);
                 {
                     dp[i][x]=min(dp[i][x]+dp[j][x],LIM);
                 }
