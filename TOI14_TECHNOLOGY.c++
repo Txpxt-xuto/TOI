@@ -1810,7 +1810,7 @@ int main(){
             if(rem<0) continue;
             ll tot=0;
             for(int j=0;j<=rem;j++) tot=min(tot+dp[pos[i]][j],LIM);
-            if(k>=tot){
+            if(k>=tot) k-=tot;
                 k-=tot;
             }else{
                 if(!ans.empty()&&ans.back()>i){
