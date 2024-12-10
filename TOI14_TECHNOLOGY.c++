@@ -1813,7 +1813,7 @@ int main(){
             if(k>=tot) k-=tot;
             else
             {
-                if(!ans.empty()&&ans.back()>i){
+                if(!ans.empty()&&ans.back()>i) cnt++;
                     cnt++;
                 }
                 ans.emplace_back(i);
