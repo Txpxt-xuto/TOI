@@ -1775,7 +1775,8 @@ int main()
     for(int i=n-1;i>=0;i--)
     {
         dp[i][0]=1;
-        for(int j=i+1;j<n;j++){
+        for(int j=i+1;j<n;j++)
+        {
             for(int x=0;x<=m;x++)
             {
                 if(a[i]<a[j]){
