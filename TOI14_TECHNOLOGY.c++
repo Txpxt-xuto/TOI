@@ -1797,7 +1797,7 @@ int main(){
     int last=-1,cnt=0;
     k++;
     for(int t=0;t<n;t++){
-        if(k==0){
+        if(k==0)break;
             break;
         }
         k--;
