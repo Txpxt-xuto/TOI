@@ -1815,7 +1815,7 @@ int main(){
             {
                 if(!ans.empty()&&ans.back()>i) cnt++;
                 ans.emplace_back(i);
-                last=pos[i];
+                last = pos[i];
                 break;
             }
         }
