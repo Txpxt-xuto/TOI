@@ -1768,7 +1768,7 @@ int main()
     for(int i=0;i<n;i++)
     {
         cin >> a[i];
-        pos[a[i]]=i;
+        pos[a[i]] = i;
     }
     vector<vector<ll>> dp(n,vector<ll>(m+1));
     ll ways=0;
