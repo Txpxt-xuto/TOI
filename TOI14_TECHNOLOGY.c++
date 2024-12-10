@@ -1822,6 +1822,6 @@ int main(){
     }
     for(auto x:ans)cout << x << " ";
     {
-        x << " ";
+        x 
     }
 }
