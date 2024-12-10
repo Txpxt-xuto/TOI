@@ -1812,7 +1812,8 @@ int main(){
             {
                 rem--;
             }
-            if(rem<0){
+            if(rem<0)
+            {
                 continue;
             }
             ll tot=0;
