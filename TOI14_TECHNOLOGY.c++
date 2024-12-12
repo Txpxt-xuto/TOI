@@ -4,7 +4,6 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-
 TASK: SC
 #include<bits/stdc++.h>
 using namespace std;
