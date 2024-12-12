@@ -1822,17 +1822,16 @@ int main(void)
 {
     int num,fir;
     vector<vector<int>> v(26);
-    cin>>num;
+    cin >> num;
     string s;
     for(int i=0;i<num;i++)
     {
-        cin>>s;
-        //cout<<s<<" ";
+        cin >> s;
         v[s[0]-'A'].push_back(s[1]-'A');
         v[s[1]-'A'].push_back(s[0]-'A');
-        fir=s[0]-'A';
+        fir = s[0]-'A';
     }
-    int jum=fir;
+    int jum = fir;
     for(int i=0;i<26;i++)
     {
         if(v[i].size()%2==1)
