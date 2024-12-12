@@ -1983,11 +1983,13 @@ int main(){
 	int r=mx,g=mx;
 	cur=make_pair(1,1);
 	while(cur!=make_pair(-1,-1)){
-		if(tb[cur.first][cur.second]){
-			if(g) cout<<'Y',g--;
-			else cout<<'N';
+		if(tb[cur.first][cur.second])
+        {
+			if(g) cout << 'Y',g--;
+			else cout << 'N';
 		}
-		else{
+		else
+        {
 			if(r) cout << 'Y',r--;
 			else cout << 'N';
 		}
