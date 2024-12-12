@@ -2011,3 +2011,58 @@ int main()
 	if(g>0 || r>0) cout << 'Y';
 	else cout << 'N';
 }
+
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef pair<int, int> pii;
+
+const int MAXN = 1e6+5, INF = 1e9;
+
+int N, K, A[MAXN];
+
+int cnt[MAXN] = {0}, l[MAXN] = {0}, l_sp[MAXN] = {0}, cct[MAXN] = {0};
+
+int dp1[MAXN], dp2[MAXN];
+
+int eval() {
+    for (int i = 1; i <= N; i++) {
+        if (cnt[A[i]] == 0) l[A[i]] = i;
+        else if (cnt[A[i]] == 1) l_sp[A[i]] = i;
+        cct[i] = ++cnt[A[i]];
+    }
+
+    {
+        dp1[0] = 0;
+        for (int i = 1; i <= N; i++) {
+            dp1[i] = dp1[i-1];
+            dp2[i] = dp2[i-1];
+
+            // is r
+            if (A[i] != 0 && cct[i] == cnt[A[i]]) {
+                dp1[i] = max(dp1[i], dp1[l[A[i]]-1] + cnt[A[i]]);
+                dp2[i] = max(dp2[i], dp2[l[A[i]]-1] + cnt[A[i]]);
+                if (l_sp[A[i]] != 0) dp2[i] = max(dp2[i], dp1[l_sp[A[i]]-1] + cnt[A[i]] - 1);
+            }
+
+            // is r_sp
+            if (A[i] != 0 && cct[i] == cnt[A[i]]-1) {
+                dp2[i] = max(dp2[i], dp1[l[A[i]]-1] + cnt[A[i]] - 1);
+            }
+        }
+    }
+
+    return K == 0 ? N-dp1[N] : min(N-dp1[N], N-dp2[N]);
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    cin >> N >> K;
+    for (int i = 1; i <= N; i++) cin >> A[i];
+
+    cout << eval();
+
+    return 0;
+}
