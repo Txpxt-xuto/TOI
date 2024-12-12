@@ -1963,9 +1963,10 @@ int main(){
 			prt.push_front('D');
 			cur=make_pair(cur.first-1,cur.second);
 		}
-		else{
+		else
+        {
 			prt.push_front('R');
-			cur=make_pair(cur.first,cur.second-1);
+			cur = make_pair(cur.first,cur.second-1);
 		}
 	}
 	if(ans.second=='R') cur = make_pair(ans.first.first,ans.first.second+1),prt.push_back('R');
