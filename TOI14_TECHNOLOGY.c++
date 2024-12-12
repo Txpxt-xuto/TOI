@@ -1991,11 +1991,11 @@ int main(){
 			if(r) cout << 'Y',r--;
 			else cout << 'N';
 		}
-		if(prt.front()=='R') cur=make_pair(cur.first,cur.second+1);
-		else cur=make_pair(cur.first+1,cur.second);
-		cout << " " <<prt.front() <<"\n";
+		if(prt.front()=='R') cur = make_pair(cur.first,cur.second+1);
+		else cur = make_pair(cur.first+1,cur.second);
+		cout << " " << prt.front() << "\n";
 		prt.pop_front();
-		if(cur==make_pair(n,m)) cur=make_pair(-1,-1);
+		if(cur==make_pair(n,m)) cur = make_pair(-1,-1);
 	}
 	if(g>0 || r>0) cout << 'Y';
 	else cout << 'N';
