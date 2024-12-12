@@ -2055,7 +2055,8 @@ int eval() {
     return K == 0 ? N-dp1[N] : min(N-dp1[N], N-dp2[N]);
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cin >> N >> K;
