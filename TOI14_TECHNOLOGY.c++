@@ -2062,7 +2062,7 @@ using namespace std;
 using ll=long long;
 ll n,m,t;
 ll A[305][305],seq[305];
-ll dp[305][305][305]; // num : delete : last digit
+ll dp[305][305][305]; // num : 
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
