@@ -1958,7 +1958,8 @@ int main(){
 	}
 	cout<<mx*2;
 	pair<int,int> cur=ans.first;
-	while(cur!=make_pair(1,1)){
+	while(cur!=make_pair(1,1))
+    {
 		if(pr[cur.first][cur.second])
         {
 			prt.push_front('D');
