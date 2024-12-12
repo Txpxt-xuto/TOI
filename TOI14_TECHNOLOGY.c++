@@ -1997,6 +1997,6 @@ int main(){
 		prt.pop_front();
 		if(cur==make_pair(n,m)) cur=make_pair(-1,-1);
 	}
-	if(g>0 || r>0) cout<<'Y';
+	if(g>0 || r>0) cout << 'Y';
 	else cout<<'N';
 }
