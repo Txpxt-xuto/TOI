@@ -1963,7 +1963,7 @@ int main(){
 		if(pr[cur.first][cur.second])
         {
 			prt.push_front('D');
-			cur=make_pair(cur.first-1,cur.second);
+			cur = make_pair(cur.first-1,cur.second);
 		}
 		else
         {
