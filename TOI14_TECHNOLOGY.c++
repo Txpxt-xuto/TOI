@@ -1972,7 +1972,8 @@ int main(){
 	else cur=make_pair(ans.first.first+1,ans.first.second),prt.push_back('D');
 	while(cur!=make_pair(n,m))
     {
-		if(pg[cur.first][cur.second]){
+		if(pg[cur.first][cur.second])
+        {
 			prt.push_back('D');
 			cur=make_pair(cur.first+1,cur.second);
 		}
