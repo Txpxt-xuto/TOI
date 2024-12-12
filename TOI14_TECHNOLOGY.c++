@@ -1865,10 +1865,7 @@ int main(void)
             st.push(go);
             //cout<<v[fir][perm]<<"<-\n";
             v[fir].erase(v[fir].begin()+perm);
-            for(int i=0;i<v[go].size();i++) if(v[go][i]==fir) v[go].erase(v[go].begin()+i);
-            {
-                if(v[go][i]==fir) v[go].erase(v[go].begin()+i);
-            }
+
         }
         pri = fir + 'A';
         cout << pri << " ";
