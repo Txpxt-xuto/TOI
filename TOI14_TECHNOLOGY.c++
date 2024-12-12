@@ -1873,7 +1873,7 @@ int main(void)
                 }
             }
         }
-        pri=fir+'A';
+        pri = fir+'A';
         cout << pri << " ";
     }
 }
