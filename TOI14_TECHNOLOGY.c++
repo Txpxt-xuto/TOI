@@ -1980,9 +1980,10 @@ int main(){
 			cur=make_pair(cur.first,cur.second+1);
 		}
 	}
-	int r=mx,g=mx;
-	cur=make_pair(1,1);
-	while(cur!=make_pair(-1,-1)){
+	int r = mx,g = mx;
+	cur = make_pair(1,1);
+	while(cur!=make_pair(-1,-1))
+    {
 		if(tb[cur.first][cur.second])
         {
 			if(g) cout << 'Y',g--;
