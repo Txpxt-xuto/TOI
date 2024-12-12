@@ -2077,7 +2077,8 @@ int main()
     
     //compute
     for(int i=1;i<=m;i++){
-        for(int j=0;j<=i;j++){
+        for(int j=0;j<=i;j++)
+        {
             for(int k=t;k>=0;k--)
             {
                 dp[i][k+1][j]=min(dp[i][k+1][j],dp[i-1][k][j]);
