@@ -1878,7 +1878,8 @@ int main(){
 	tb.resize(n+1,vector<int>(m+1,0));
 	for(int i=1;i<=n;i++){
 		cin>>inp;
-		for(int j=1;j<=m;j++){
+		for(int j=1;j<=m;j++) tb[i][j] = (inp[j-1]=='G');
+        {
 			tb[i][j]=(inp[j-1]=='G');
 		}
 	}
