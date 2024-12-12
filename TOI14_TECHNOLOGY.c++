@@ -2025,7 +2025,8 @@ int cnt[MAXN] = {0}, l[MAXN] = {0}, l_sp[MAXN] = {0}, cct[MAXN] = {0};
 
 int dp1[MAXN], dp2[MAXN];
 
-int eval() {
+int eval()
+{
     for(int i=1;i <= N; i++)
     {
         if(cnt[A[i]] == 0) l[A[i]] = i;
