@@ -1817,3 +1817,63 @@ int main()
     }
     for(auto x:ans)cout << x << " ";
 }
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <stack>
+using namespace std;
+int main(void)
+{
+    int num,fir;
+    vector<vector<int>> v(26);
+    cin>>num;
+    string s;
+    for(int i=0;i<num;i++)
+    {
+        cin>>s;
+        //cout<<s<<" ";
+        v[s[0]-'A'].push_back(s[1]-'A');
+        v[s[1]-'A'].push_back(s[0]-'A');
+        fir=s[0]-'A';
+    }
+    int jum=fir;
+    for(int i=0;i<26;i++)
+    {
+        if(v[i].size()%2==1)
+        {
+            jum=i;
+            break;
+        }
+    }
+    stack<int> st;
+    st.push(jum);
+    char pri;
+    int go,perm;
+    while(!st.empty())
+    {
+        fir=st.top();
+        st.pop();
+        if(!v[fir].empty())
+        {
+            perm=0;
+            if(v[fir].size()>1&&v[fir].size()%2==1&&v[v[fir][0]].size()%2==1)
+            {
+                perm++;
+            }
+            go=v[fir][perm];
+            st.push(go);
+            //cout<<v[fir][perm]<<"<-\n";
+            v[fir].erase(v[fir].begin()+perm);
+            for(int i=0;i<v[go].size();i++)
+            {
+                if(v[go][i]==fir)
+                {
+                    v[go].erase(v[go].begin()+i);
+                }
+            }
+        }
+        pri=fir+'A';
+        cout<<pri<<" ";
+    }
+}
