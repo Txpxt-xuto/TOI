@@ -1842,7 +1842,7 @@ int main(void)
     {
         if(v[i].size()%2==1)
         {
-            jum=i;
+            jum=  i;
             break;
         }
     }
