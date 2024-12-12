@@ -2081,13 +2081,13 @@ int main()
         {
             for(int k=t;k>=0;k--)
             {
-                dp[i][k+1][j]=min(dp[i][k+1][j],dp[i-1][k][j]);
-                dp[i][k][i]=min(dp[i][k][i],dp[i-1][k][j]+A[seq[i]][seq[j]]);
+                dp[i][k+1][j] = min(dp[i][k+1][j],dp[i-1][k][j]);
+                dp[i][k][i] = min(dp[i][k][i],dp[i-1][k][j]+A[seq[i]][seq[j]]);
             }
         }
     }
     ll mn=LLONG_MAX;
-    for(int i=0;i<=m;i++) for(int j=0;j<=t;j++) mn=min(mn,dp[m][j][i]);
+    for(int i=0;i<=m;i++) for(int j=0;j<=t;j++) mn = min(mn,dp[m][j][i]);
     cout << mn;
     return 0;
 }
