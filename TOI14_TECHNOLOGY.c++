@@ -2055,3 +2055,38 @@ int main()
     cout << eval();
     return 0;
 }
+
+#include <bits/stdc++.h>
+
+using namespace std;
+using ll=long long;
+ll n,m,t;
+ll A[305][305],seq[305];
+ll dp[305][305][305]; // num : delete : last digit
+int main()
+{
+    cin.tie(0)->sync_with_stdio(0);
+    cin >> n >> m >> t;
+    //precom
+    for(int i=0;i<=300;i++) 
+        for(int j=0;j<=300;j++)
+            for(int k=0;k<=300;k++) dp[i][j][k]=1e18;
+    dp[0][0][0]=0;
+    for(int i=1;i<=n;i++) for(int j=1;j<=n;j++) cin >> A[i][j];
+    for(int i=1;i<=m;i++) cin >> seq[i];
+    
+    //compute
+    for(int i=1;i<=m;i++){
+        for(int j=0;j<=i;j++){
+            for(int k=t;k>=0;k--)
+            {
+                dp[i][k+1][j]=min(dp[i][k+1][j],dp[i-1][k][j]);
+                dp[i][k][i]=min(dp[i][k][i],dp[i-1][k][j]+A[seq[i]][seq[j]]);
+            }
+        }
+    }
+    ll mn=LLONG_MAX;
+    for(int i=0;i<=m;i++) for(int j=0;j<=t;j++) mn=min(mn,dp[m][j][i]);
+    cout << mn;
+    return 0;
+}
