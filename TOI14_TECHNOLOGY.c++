@@ -8,7 +8,7 @@ CENTER: Home
 TASK: SC
 LAN
 AUTHOR: Tapat Toungsaku
-CENT
+CEN
 #include<bits/stdc++.h>
 using namespace std;
 const int mxN = 70;
