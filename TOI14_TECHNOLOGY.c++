@@ -6,7 +6,7 @@ CENTER: Home
 */
 
 TASK: SC
-LANG:
+LANG
 AUTHOR: Tapat Toungsaku
 CENT
 #include<bits/stdc++.h>
