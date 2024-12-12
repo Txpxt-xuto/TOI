@@ -2067,7 +2067,6 @@ int main()
 {
     cin.tie(0)->sync_with_stdio(0);
     cin >> n >> m >> t;
-    //precom
     for(int i=0;i<=300;i++) 
         for(int j=0;j<=300;j++)
             for(int k=0;k<=300;k++) dp[i][j][k]=1e18;
