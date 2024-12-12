@@ -1886,8 +1886,8 @@ int main(){
 		for(int j=1;j<=m;j++){
 			if(i==1 && j==1) dpr[i][j]=(!tb[i][j]);
 			else if(i==1){
-				pr[i][j]=0;
-				dpr[i][j]=dpr[i][j-1]+(!tb[i][j]);
+				pr[i][j] = 0;
+				dpr[i][j] = dpr[i][j-1]+(!tb[i][j]);
 			}
 			else if(j==1)
             {
