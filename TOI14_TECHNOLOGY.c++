@@ -1912,13 +1912,13 @@ int main(){
 			if(i==n && j==m) dpg[i][j]=(tb[i][j]);
 			else if(i==n)
             {
-				pg[i][j]=0;
-				dpg[i][j]=dpg[i][j+1]+tb[i][j];
+				pg[i][j] = 0;
+				dpg[i][j] = dpg[i][j+1]+tb[i][j];
 			}
 			else if(j==m)
             {
-				pg[i][j]=1;
-				dpg[i][j]=dpg[i+1][j]+tb[i][j];
+				pg[i][j] = 1;
+				dpg[i][j] = dpg[i+1][j]+tb[i][j];
 			}
 			else
             {
