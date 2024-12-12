@@ -1975,12 +1975,12 @@ int main(){
 		if(pg[cur.first][cur.second])
         {
 			prt.push_back('D');
-			cur=make_pair(cur.first+1,cur.second);
+			cur = make_pair(cur.first+1,cur.second);
 		}
 		else
         {
 			prt.push_back('R');
-			cur=make_pair(cur.first,cur.second+1);
+			cur = make_pair(cur.first,cur.second+1);
 		}
 	}
 	int r = mx,g = mx;
