@@ -4,12 +4,11 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-/*
-TASK: SCHOOL
-LANG: C++
-AUTHOR: Tapat Toungsakul
-CENTER: Home
-*/
+
+TASK: SC
+LAN
+AUTHOR: Tapat Toungsaku
+CEN
 #include<bits/stdc++.h>
 using namespace std;
 const int mxN = 70;
@@ -1817,6 +1816,7 @@ int main()
     }
     for(auto x:ans)cout << x << " ";
 }
+
 
 #include <iostream>
 #include <vector>
