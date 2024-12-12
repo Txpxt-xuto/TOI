@@ -7,7 +7,7 @@ CENTER: Home
 
 TASK: SCHOO
 LANG:
-AUTHOR: Tapat Toungsakul
+AUTHOR: Tapat Toungsaku
 CENTE
 #include<bits/stdc++.h>
 using namespace std;
