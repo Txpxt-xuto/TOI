@@ -2037,8 +2037,6 @@ int eval() {
         for (int i = 1; i <= N; i++) {
             dp1[i] = dp1[i-1];
             dp2[i] = dp2[i-1];
-
-            // is r
             if(A[i] != 0 && cct[i] == cnt[A[i]])
             {
                 dp1[i] = max(dp1[i], dp1[l[A[i]]-1] + cnt[A[i]]);
@@ -2048,7 +2046,6 @@ int eval() {
             if(A[i] != 0 && cct[i] == cnt[A[i]]-1) dp2[i] = max(dp2[i], dp1[l[A[i]]-1] + cnt[A[i]] - 1);
         }
     }
-
     return K == 0 ? N-dp1[N] : min(N-dp1[N], N-dp2[N]);
 }
 
