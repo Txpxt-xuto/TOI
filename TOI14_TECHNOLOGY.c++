@@ -1894,13 +1894,15 @@ int main(){
 				dpr[i][j]=dpr[i-1][j]+(!tb[i][j]);
 			}
 			else{
-				if(dpr[i-1][j]>dpr[i][j-1]){
-					pr[i][j]=1;
-					dpr[i][j]=dpr[i-1][j]+(!tb[i][j]);
+				if(dpr[i-1][j]>dpr[i][j-1])
+                {
+					pr[i][j] = 1;
+					dpr[i][j] = dpr[i-1][j]+(!tb[i][j]);
 				}
-				else{
-					pr[i][j]=0;
-					dpr[i][j]=dpr[i][j-1]+(!tb[i][j]);
+				else
+                {
+					pr[i][j] = 0;
+					dpr[i][j] = dpr[i][j-1]+(!tb[i][j]);
 				}
 			}
 		}
