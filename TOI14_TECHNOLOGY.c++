@@ -6,7 +6,6 @@ CENTER: Home
 */
 
 TASK: SC
-LANu
 
 #include<bits/stdc++.h>
 using namespace std;
