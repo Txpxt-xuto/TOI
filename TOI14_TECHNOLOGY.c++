@@ -7,7 +7,7 @@ CENTER: Home
 
 TASK: SC
 LANu
-CEN
+
 #include<bits/stdc++.h>
 using namespace std;
 const int mxN = 70;
