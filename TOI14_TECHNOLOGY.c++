@@ -5,7 +5,7 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 
-TASK: SCHOOL
+TASK: SCHOO
 LANG:
 AUTHOR: Tapat Toungsakul
 CENTER:
