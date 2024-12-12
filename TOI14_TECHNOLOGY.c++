@@ -1874,6 +1874,6 @@ int main(void)
             }
         }
         pri=fir+'A';
-        cout<<pri<<" ";
+        cout<<pri<< " ";
     }
 }
