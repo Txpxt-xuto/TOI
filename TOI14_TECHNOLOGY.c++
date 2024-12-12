@@ -4,7 +4,7 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-/*
+
 TASK: SCHOOL
 LANG: C++
 AUTHOR: Tapat Toungsakul
