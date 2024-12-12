@@ -1956,7 +1956,7 @@ int main(){
 			}
 		}
 	}
-	cout<<mx*2;
+	cout << mx*2;
 	pair<int,int> cur=ans.first;
 	while(cur!=make_pair(1,1))
     {
