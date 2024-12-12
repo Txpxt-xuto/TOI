@@ -2044,7 +2044,8 @@ int eval() {
                 dp2[i] = max(dp2[i], dp2[l[A[i]]-1] + cnt[A[i]]);
                 if (l_sp[A[i]] != 0) dp2[i] = max(dp2[i], dp1[l_sp[A[i]]-1] + cnt[A[i]] - 1);
             }
-            if (A[i] != 0 && cct[i] == cnt[A[i]]-1) {
+            if(A[i] != 0 && cct[i] == cnt[A[i]]-1) dp2[i] = max(dp2[i], dp1[l[A[i]]-1] + cnt[A[i]] - 1);
+            {
                 dp2[i] = max(dp2[i], dp1[l[A[i]]-1] + cnt[A[i]] - 1);
             }
         }
