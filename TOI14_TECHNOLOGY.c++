@@ -4,7 +4,7 @@ LANG: C++
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-TASK: SC
+TAS
 #include<bits/stdc++.h>
 using namespace std;
 const int mxN = 70;
