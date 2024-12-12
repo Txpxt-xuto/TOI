@@ -1857,9 +1857,9 @@ int main(void)
         if(!v[fir].empty())
         {
             perm=0;
-            if(v[fir].size()>1&&v[fir].size()%2==1&&v[v[fir][0]].size()%2==1)
+            if(v[fir].size()>1&&v[fir].size()%2==1&&v[v[fir][0]].size()%2==1)perm++;
             {
-                perm++;
+                
             }
             go = v[fir][perm];
             st.push(go);
