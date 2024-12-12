@@ -8,7 +8,7 @@ CENTER: Home
 TASK: SCHOOL
 LANG:
 AUTHOR: Tapat Toungsakul
-CENTER: Home
+CENTER:
 #include<bits/stdc++.h>
 using namespace std;
 const int mxN = 70;
