@@ -6,8 +6,7 @@ CENTER: Home
 */
 
 TASK: SC
-LAN
-AUTHOR: Tapat Toungsaku
+LANu
 CEN
 #include<bits/stdc++.h>
 using namespace std;
