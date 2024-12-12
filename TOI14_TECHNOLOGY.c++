@@ -1909,7 +1909,7 @@ int main(){
     {
 		for(int j=m;j>=1;j--)
         {
-			if(i==n && j==m) dpg[i][j]=(tb[i][j]);
+			if(i==n && j==m) dpg[i][j] = (tb[i][j]);
 			else if(i==n)
             {
 				pg[i][j] = 0;
