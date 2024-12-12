@@ -1910,11 +1910,13 @@ int main(){
 		for(int j=m;j>=1;j--)
         {
 			if(i==n && j==m) dpg[i][j]=(tb[i][j]);
-			else if(i==n){
+			else if(i==n)
+            {
 				pg[i][j]=0;
 				dpg[i][j]=dpg[i][j+1]+tb[i][j];
 			}
-			else if(j==m){
+			else if(j==m)
+            {
 				pg[i][j]=1;
 				dpg[i][j]=dpg[i+1][j]+tb[i][j];
 			}
