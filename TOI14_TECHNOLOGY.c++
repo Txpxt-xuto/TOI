@@ -1870,7 +1870,7 @@ int main(void)
                 if(v[go][i]==fir) v[go].erase(v[go].begin()+i);
                 {
                     v[go].erase(v[go].begin()+i);
-                }
+        
             }
         }
         pri = fir + 'A';
