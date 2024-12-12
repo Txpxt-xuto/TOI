@@ -5,7 +5,7 @@ AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
 
-TASK: SCO
+TASK: SC
 LANG:
 AUTHOR: Tapat Toungsaku
 CENTE
