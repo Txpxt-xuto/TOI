@@ -1968,8 +1968,8 @@ int main(){
 			cur=make_pair(cur.first,cur.second-1);
 		}
 	}
-	if(ans.second=='R') cur=make_pair(ans.first.first,ans.first.second+1),prt.push_back('R');
-	else cur=make_pair(ans.first.first+1,ans.first.second),prt.push_back('D');
+	if(ans.second=='R') cur = make_pair(ans.first.first,ans.first.second+1),prt.push_back('R');
+	else cur = make_pair(ans.first.first+1,ans.first.second),prt.push_back('D');
 	while(cur!=make_pair(n,m))
     {
 		if(pg[cur.first][cur.second])
