@@ -6,7 +6,7 @@ CENTER: Home
 */
 
 TASK: SCHOOL
-LANG: C++
+LANG:
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 #include<bits/stdc++.h>
