@@ -1861,7 +1861,7 @@ int main(void)
             {
                 perm++;
             }
-            go=  v[fir][perm];
+            go = v[fir][perm];
             st.push(go);
             v[fir].erase(v[fir].begin()+perm);
             for(int i=0;i<v[go].size();i++) if(v[go][i]==fir) v[go].erase(v[go].begin()+i);
