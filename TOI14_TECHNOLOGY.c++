@@ -1868,7 +1868,6 @@ int main(void)
             for(int i=0;i<v[go].size();i++)
             {
                 if(v[go][i]==fir) v[go].erase(v[go].begin()+i);
-                {
                     v[go].erase(v[go].begin()+i);
             }
         }
