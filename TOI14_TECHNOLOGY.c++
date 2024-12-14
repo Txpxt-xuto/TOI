@@ -2230,7 +2230,7 @@ int main() {
 		}
 		else 
         {
-			std::cout << "NO\n";
+			cout << "NO\n";
 		}
 	}
 }
