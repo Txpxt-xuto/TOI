@@ -2163,7 +2163,8 @@ struct pers_segt{
     }
 } xdt;
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     ll N, M;
