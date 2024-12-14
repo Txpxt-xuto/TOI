@@ -2234,7 +2234,8 @@ int main() {
 	}
 }
 
-bool isParinSpecificRange(std::string& baseString, int strSize, int a, int b, int c, int d) {
+bool isParinSpecificRange(std::string& baseString, int strSize, int a, int b, int c, int d)
+{
 	int firstStringLength = (b - a + 1);
 	int secondStringLength = (d - c + 1);
 	int testStringLength = firstStringLength + secondStringLength;
