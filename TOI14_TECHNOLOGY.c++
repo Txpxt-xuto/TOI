@@ -2143,7 +2143,7 @@ struct pers_segt{
             tree[curnode] = tree[lchild[curnode] = tlc] + tree[rchild[curnode] = trc];
             tree2[curnode] = tree2[tlc] + tree2[trc];
         }
-        
+
         return curnode;
     }
     ll query(ll l, ll r, ll v, ll tl, ll tr)
