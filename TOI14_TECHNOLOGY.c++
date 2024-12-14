@@ -2128,10 +2128,13 @@ struct pers_segt{
     
     ll update(ll p, ll x, ll v, ll l, ll r) {
         ll curnode = ccnode++;
-        if (l == r) {
+        if(l == r)
+        {
             tree[curnode] = x;
             tree2[curnode] = 1;
-        } else {
+        }
+        else
+        {
             ll mid = (l+r)/2;
             ll tlc = lchild[v];
             ll trc = rchild[v];
