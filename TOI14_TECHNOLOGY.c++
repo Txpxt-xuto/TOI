@@ -2143,7 +2143,6 @@ struct pers_segt{
         
         return curnode;
     }
-    
     ll query(ll l, ll r, ll v, ll tl, ll tr)
     {
         if(l > r) return 0;
