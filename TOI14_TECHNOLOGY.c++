@@ -2153,7 +2153,8 @@ struct pers_segt{
         + query(max(l, mid+1), r, rchild[v], mid+1, tr);
     }
     
-    ll query2(ll l, ll r, ll v, ll tl, ll tr) {
+    ll query2(ll l, ll r, ll v, ll tl, ll tr)
+    {
         if (l > r) return 0;
         if (l == tl && r == tr) return tree2[v];
         
