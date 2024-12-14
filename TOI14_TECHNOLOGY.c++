@@ -2192,7 +2192,6 @@ int main() {
         cin >> s >> t;
         ld x;
         cin >> x;
-        
         ll l = 0, r = N+1;
         while(r-l > 1)
         {
