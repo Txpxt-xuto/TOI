@@ -2208,6 +2208,5 @@ int main() {
             cout << (cnt > 0 ? (t-s+1)-cnt : -1) << "\n";
         }
     }
-    
     return 0;
 }
