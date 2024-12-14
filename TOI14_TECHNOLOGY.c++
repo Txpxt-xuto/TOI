@@ -2199,7 +2199,6 @@ int main() {
             ll mid = (l+r)/2;
             ll sm = xdt.query(s, t, version[mid], 1, N);
             ll cnt = xdt.query2(s, t, version[mid], 1, N);
-            
             if (sm >= x*cnt) l = mid;
             else r = mid;
         }
