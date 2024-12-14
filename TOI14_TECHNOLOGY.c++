@@ -2226,13 +2226,7 @@ int main() {
 		int a, b, c, d;
 		std::cin >> a >> b >> c >> d;
 		if(isParinSpecificRange(wholeString, numberLength, a, b, c, d)) cout << "YES\n";
-        {
-			cout << "YES\n";
-		}
 		else cout << "NO\n";
-        {
-			cout << "NO\n";
-		}
 	}
 }
 
