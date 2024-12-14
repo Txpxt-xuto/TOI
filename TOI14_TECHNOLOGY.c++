@@ -2116,7 +2116,6 @@ struct pers_segt{
         
         return curnode;
     }
-    
     void init(ll N)
     {
         n = N;
