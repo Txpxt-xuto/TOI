@@ -2238,7 +2238,8 @@ bool isParinSpecificRange(std::string& baseString, int strSize, int a, int b, in
 	int firstStringLength = (b - a + 1);
 	int secondStringLength = (d - c + 1);
 	int testStringLength = firstStringLength + secondStringLength;
-	for (int i = 0; i < testStringLength / 2; i++) {
+	for (int i = 0; i < testStringLength / 2; i++)
+    {
 		int firstPtrIndex;
 		if(i + a <= b) firstPtrIndex = a + i;
 		else firstPtrIndex = c + (i - firstStringLength);
