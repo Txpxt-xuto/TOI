@@ -2187,7 +2187,8 @@ int main() {
         version[i] = xdt.update(p, x, version[i-1], 1, N);
     }
     
-    while (M--) {
+    while(M--)
+    {
         ll s, t;
         cin >> s >> t;
         ld x;
