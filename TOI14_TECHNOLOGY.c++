@@ -2096,7 +2096,6 @@ using namespace std;
 typedef long long ll;
 typedef pair<ll, ll> pll;
 typedef long double ld;
-
 const ll MAXTREE = 1.5e6;
 struct pers_segt
 {
