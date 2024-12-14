@@ -2228,7 +2228,8 @@ int main() {
 		if (isParinSpecificRange(wholeString, numberLength, a, b, c, d)) {
 			std::cout << "YES\n";
 		}
-		else {
+		else 
+        {
 			std::cout << "NO\n";
 		}
 	}
