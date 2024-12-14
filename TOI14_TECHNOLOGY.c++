@@ -2102,7 +2102,6 @@ const ll MAXTREE = 1.5e6;
 struct pers_segt{
     ll n, ccnode = 0;
     ll tree[MAXTREE], tree2[MAXTREE], lchild[MAXTREE], rchild[MAXTREE];
-    
     ll build(ll l, ll r)
     {
         ll curnode = ccnode++;
