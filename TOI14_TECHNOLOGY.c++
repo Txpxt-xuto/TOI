@@ -2216,7 +2216,7 @@ bool isParinSpecificRange(std::string& baseString, int strSize, int a, int b, in
 
 
 int main() {
-	std::ios::sync_with_stdio(false);
+	ios::sync_with_stdio(false);
 	cin.tie(0);
 	int numberLength = 0, testCase = 0;
 	cin >> numberLength >> testCase;
