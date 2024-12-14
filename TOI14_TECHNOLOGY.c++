@@ -2138,7 +2138,7 @@ struct pers_segt{
             ll mid = (l+r)/2;
             ll tlc = lchild[v];
             ll trc = rchild[v];
-            if (p <= mid) tlc = update(p, x, lchild[v], l, mid);
+            if(p <= mid) tlc = update(p, x, lchild[v], l, mid);
             else trc = update(p, x, rchild[v], mid+1, r);
             tree[curnode] = tree[lchild[curnode] = tlc] + tree[rchild[curnode] = trc];
             tree2[curnode] = tree2[tlc] + tree2[trc];
