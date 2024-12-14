@@ -2194,7 +2194,8 @@ int main() {
         cin >> x;
         
         ll l = 0, r = N+1;
-        while (r-l > 1) {
+        while(r-l > 1)
+        {
             ll mid = (l+r)/2;
             ll sm = xdt.query(s, t, version[mid], 1, N);
             ll cnt = xdt.query2(s, t, version[mid], 1, N);
