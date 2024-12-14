@@ -2227,7 +2227,7 @@ int main() {
 		std::cin >> a >> b >> c >> d;
 		if(isParinSpecificRange(wholeString, numberLength, a, b, c, d))
         {
-			firstPtrIndex = a + i;
+			cout << "YES\n";
 		}
 		else 
         {
