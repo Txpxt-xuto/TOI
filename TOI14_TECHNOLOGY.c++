@@ -2117,7 +2117,8 @@ struct pers_segt{
         return curnode;
     }
     
-    void init(ll N) {
+    void init(ll N)
+    {
         n = N;
         memset(tree, 0, sizeof(tree));
         memset(tree2, 0, sizeof(tree2));
