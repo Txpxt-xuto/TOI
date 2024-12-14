@@ -2225,7 +2225,8 @@ int main() {
 	for (int i = 0; i < testCase; i++) {
 		int a, b, c, d;
 		std::cin >> a >> b >> c >> d;
-		if (isParinSpecificRange(wholeString, numberLength, a, b, c, d)) {
+		if(isParinSpecificRange(wholeString, numberLength, a, b, c, d))
+        {
 			cout << "YES\n";
 		}
 		else 
