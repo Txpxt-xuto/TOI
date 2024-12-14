@@ -2114,7 +2114,6 @@ struct pers_segt{
             lchild[curnode] = tlc;
             rchild[curnode] = trc;
         }
-        
         return curnode;
     }
     void init(ll N)
