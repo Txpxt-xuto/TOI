@@ -2176,7 +2176,6 @@ int main() {
     }
     sort(dt+1, dt+N+1);
     reverse(dt+1, dt+N+1);
-    
     xdt.init(N);
     ll version[N+1];
     version[0] = 0;
