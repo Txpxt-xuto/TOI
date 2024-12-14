@@ -2109,7 +2109,6 @@ struct pers_segt{
         if(l != r)
         {
             ll mid = (l+r)/2;
-            
             ll tlc = build(l, mid);
             ll trc = build(mid+1, r);
             lchild[curnode] = tlc;
