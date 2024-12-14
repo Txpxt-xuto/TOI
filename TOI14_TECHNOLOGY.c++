@@ -2089,3 +2089,125 @@ int main()
     cout << mn;
     return 0;
 }
+
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+typedef pair<ll, ll> pll;
+typedef long double ld;
+
+const ll MAXTREE = 1.5e6;
+
+struct pers_segt{
+    ll n, ccnode = 0;
+    ll tree[MAXTREE], tree2[MAXTREE], lchild[MAXTREE], rchild[MAXTREE];
+    
+    ll build(ll l, ll r) {
+        ll curnode = ccnode++;
+        if (l != r) {
+            ll mid = (l+r)/2;
+            
+            ll tlc = build(l, mid);
+            ll trc = build(mid+1, r);
+            lchild[curnode] = tlc;
+            rchild[curnode] = trc;
+        }
+        
+        return curnode;
+    }
+    
+    void init(ll N) {
+        n = N;
+        memset(tree, 0, sizeof(tree));
+        memset(tree2, 0, sizeof(tree2));
+        memset(lchild, -1, sizeof(lchild));
+        memset(rchild, -1, sizeof(rchild));
+        build(1, N);
+    }
+    
+    ll update(ll p, ll x, ll v, ll l, ll r) {
+        ll curnode = ccnode++;
+        if (l == r) {
+            tree[curnode] = x;
+            tree2[curnode] = 1;
+        } else {
+            ll mid = (l+r)/2;
+            ll tlc = lchild[v];
+            ll trc = rchild[v];
+            if (p <= mid) tlc = update(p, x, lchild[v], l, mid);
+            else trc = update(p, x, rchild[v], mid+1, r);
+            tree[curnode] = tree[lchild[curnode] = tlc] + tree[rchild[curnode] = trc];
+            tree2[curnode] = tree2[tlc] + tree2[trc];
+        }
+        
+        return curnode;
+    }
+    
+    ll query(ll l, ll r, ll v, ll tl, ll tr) {
+        if (l > r) return 0;
+        if (l == tl && r == tr) return tree[v];
+        
+        ll mid = (tl+tr)/2;
+        return query(l, min(mid, r), lchild[v], tl, mid)
+        + query(max(l, mid+1), r, rchild[v], mid+1, tr);
+    }
+    
+    ll query2(ll l, ll r, ll v, ll tl, ll tr) {
+        if (l > r) return 0;
+        if (l == tl && r == tr) return tree2[v];
+        
+        ll mid = (tl+tr)/2;
+        return query2(l, min(mid, r), lchild[v], tl, mid)
+        + query2(max(l, mid+1), r, rchild[v], mid+1, tr);
+    }
+} xdt;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    ll N, M;
+    cin >> N >> M;
+    pll dt[N+1];
+    for (ll i = 1; i <= N; i++) {
+        cin >> dt[i].first;
+        dt[i].second = i;
+    }
+    sort(dt+1, dt+N+1);
+    reverse(dt+1, dt+N+1);
+    
+    xdt.init(N);
+    ll version[N+1];
+    version[0] = 0;
+    
+    for (ll i = 1; i <= N; i++) {
+        ll x, p;
+        tie(x, p) = dt[i];
+        version[i] = xdt.update(p, x, version[i-1], 1, N);
+    }
+    
+    while (M--) {
+        ll s, t;
+        cin >> s >> t;
+        ld x;
+        cin >> x;
+        
+        ll l = 0, r = N+1;
+        while (r-l > 1) {
+            ll mid = (l+r)/2;
+            ll sm = xdt.query(s, t, version[mid], 1, N);
+            ll cnt = xdt.query2(s, t, version[mid], 1, N);
+            
+            if (sm >= x*cnt) l = mid;
+            else r = mid;
+        }
+        
+        {
+            ll cnt = xdt.query2(s, t, version[l], 1, N);
+            cout << (cnt > 0 ? (t-s+1)-cnt : -1) << "\n";
+        }
+    }
+    
+    return 0;
+}
