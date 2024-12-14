@@ -2208,3 +2208,57 @@ int main()
     }
     return 0;
 }
+
+#include <iostream>
+#include <cstdlib>
+
+bool isParinSpecificRange(std::string& baseString, int strSize, int a, int b, int c, int d);
+
+
+int main() {
+	std::ios::sync_with_stdio(false);
+	std::cin.tie(0);
+	int numberLength = 0, testCase = 0;
+	std::cin >> numberLength >> testCase;
+	std::string wholeString;
+	std::cin >> wholeString;
+	for (int i = 0; i < testCase; i++) {
+		int a, b, c, d;
+		std::cin >> a >> b >> c >> d;
+		if (isParinSpecificRange(wholeString, numberLength, a, b, c, d)) {
+			std::cout << "YES\n";
+		}
+		else {
+			std::cout << "NO\n";
+		}
+	}
+}
+
+bool isParinSpecificRange(std::string& baseString, int strSize, int a, int b, int c, int d) {
+	int firstStringLength = (b - a + 1);
+	int secondStringLength = (d - c + 1);
+	int testStringLength = firstStringLength + secondStringLength;
+	for (int i = 0; i < testStringLength / 2; i++) {
+		int firstPtrIndex;
+		if (i + a <= b) {
+			firstPtrIndex = a + i;
+		}
+		else {
+			firstPtrIndex = c + (i - firstStringLength);
+		}
+		int secondPtrIndex;
+		if (d - i >= c) {
+			secondPtrIndex = d - i;
+		}
+		else {
+			secondPtrIndex = b - (i - secondStringLength);
+		}
+		//std::cout <<"ptr:" << firstPtrIndex <<" " << secondPtrIndex << std::endl;
+		if (baseString[(firstPtrIndex-1)] != baseString[(secondPtrIndex-1)]) {
+			return false;
+		}
+	}
+	return true;
+}
+
+/
