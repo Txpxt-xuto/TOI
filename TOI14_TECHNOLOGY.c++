@@ -2170,7 +2170,7 @@ int main() {
     ll N, M;
     cin >> N >> M;
     pll dt[N+1];
-    for(ll i = 1; i <= N; i++)
+    for(ll i=1;i<=N;i++)
     {
         cin >> dt[i].first;
         dt[i].second = i;
