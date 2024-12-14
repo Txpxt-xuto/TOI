@@ -2202,7 +2202,6 @@ int main() {
             if (sm >= x*cnt) l = mid;
             else r = mid;
         }
-        
         {
             ll cnt = xdt.query2(s, t, version[l], 1, N);
             cout << (cnt > 0 ? (t-s+1)-cnt : -1) << "\n";
