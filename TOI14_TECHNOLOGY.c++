@@ -2166,7 +2166,6 @@ struct pers_segt{
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
     ll N, M;
     cin >> N >> M;
     pll dt[N+1];
