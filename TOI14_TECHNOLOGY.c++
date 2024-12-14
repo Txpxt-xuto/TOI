@@ -2181,7 +2181,7 @@ int main() {
     ll version[N+1];
     version[0] = 0;
     
-    for (ll i = 1; i <= N; i++)
+    for(ll i = 1; i <= N; i++)
     {
         ll x, p;
         tie(x, p) = dt[i];
