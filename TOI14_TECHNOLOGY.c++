@@ -2222,7 +2222,7 @@ int main() {
 	std::cin >> numberLength >> testCase;
 	std::string wholeString;
 	std::cin >> wholeString;
-	for (int i = 0; i < testCase; i++)
+	for(int i=0;i<testCase;i++)
     {
 		int a, b, c, d;
 		cin >> a >> b >> c >> d;
