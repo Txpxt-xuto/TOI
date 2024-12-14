@@ -2145,8 +2145,8 @@ struct pers_segt{
     }
     
     ll query(ll l, ll r, ll v, ll tl, ll tr) {
-        if (l > r) return 0;
-        if (l == tl && r == tr) return tree[v];
+        if(l > r) return 0;
+        if(l == tl && r == tr) return tree[v];
         
         ll mid = (tl+tr)/2;
         return query(l, min(mid, r), lchild[v], tl, mid)
