@@ -2126,7 +2126,8 @@ struct pers_segt{
         build(1, N);
     }
     
-    ll update(ll p, ll x, ll v, ll l, ll r) {
+    ll update(ll p, ll x, ll v, ll l, ll r)
+    {
         ll curnode = ccnode++;
         if(l == r)
         {
