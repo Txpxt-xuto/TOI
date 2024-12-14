@@ -2221,7 +2221,7 @@ int main() {
 	int numberLength = 0, testCase = 0;
 	std::cin >> numberLength >> testCase;
 	std::string wholeString;
-	std::cin >> wholeString;
+	cin >> wholeString;
 	for(int i=0;i<testCase;i++)
     {
 		int a, b, c, d;
