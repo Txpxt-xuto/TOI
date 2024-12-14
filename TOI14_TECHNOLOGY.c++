@@ -2211,7 +2211,6 @@ int main()
 
 #include <iostream>
 #include <cstdlib>
-
 bool isParinSpecificRange(std::string& baseString, int strSize, int a, int b, int c, int d);
 
 int main()
