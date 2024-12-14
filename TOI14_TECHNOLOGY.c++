@@ -2187,7 +2187,6 @@ int main() {
         tie(x, p) = dt[i];
         version[i] = xdt.update(p, x, version[i-1], 1, N);
     }
-    
     while(M--)
     {
         ll s, t;
