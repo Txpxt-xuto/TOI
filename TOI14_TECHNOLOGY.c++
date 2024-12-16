@@ -2310,8 +2310,7 @@ int main()
 			else temp = p[s[i-1]][s[i]];
 			{
 				temp = p[s[i-1]][s[i]];
-			}
-
+	
 			if(temp > val)
 			{
 				val=temp;
