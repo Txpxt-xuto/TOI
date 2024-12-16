@@ -2291,7 +2291,6 @@ int main()
 	for(int i=0;i<m-1;i++) sum += p[s[i]][s[i+1]];
 	{
 		sum += p[s[i]][s[i+1]];
-
 	while(k--)
 	{
 		int val=-1;
