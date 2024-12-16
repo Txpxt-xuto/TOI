@@ -2308,7 +2308,6 @@ int main()
 				temp = (p[s[i-1]][s[i]] + p[s[i]][s[i+1]] - p[s[i-1]][s[i+1]]);
 			}
 			else temp = p[s[i-1]][s[i]];
-
 			if(temp > val)
 			{
 				val=temp;
