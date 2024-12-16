@@ -2250,13 +2250,13 @@ bool isParinSpecificRange(std::string& baseString, int strSize, int a, int b, in
 
 #include<bits/stdc++.h>
 using namespace std;
-void setIO(string name = "") {
+void setIO(string name = "")
+{
 	if (name.size()) {
 		freopen((name + ".in").c_str(), "r", stdin);
 		freopen((name + ".out").c_str(), "w", stdout);
 	}
 }
-
 #define rep(i, a, b) for(int i = a; i < (b); ++i)
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
