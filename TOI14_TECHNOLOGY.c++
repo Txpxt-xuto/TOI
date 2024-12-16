@@ -2247,3 +2247,80 @@ bool isParinSpecificRange(std::string& baseString, int strSize, int a, int b, in
 	}
 	return true;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+void setIO(string name = "") {
+	if (name.size()) {
+		freopen((name + ".in").c_str(), "r", stdin);
+		freopen((name + ".out").c_str(), "w", stdout);
+	}
+}
+
+#define rep(i, a, b) for(int i = a; i < (b); ++i)
+#define all(x) begin(x), end(x)
+#define sz(x) (int)(x).size()
+#define pb push_back
+#define mp make_pair
+typedef long long ll;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+typedef pair<ll,ll> pll;
+int n,m,k;
+int p[305][305];
+vi s;
+int main()
+{
+	ios_base::sync_with_stdio(0);
+    cin.tie(0);
+	cin >> n >> m >> k;
+	for(int i=1;i<=n;i++)
+	{
+		for(int j=1;j<=n;j++)
+		{
+			cin >> p[i][j];
+		}
+	}
+	int sum=0;
+	for(int i=1;i<=m;i++)
+	{
+		int a;
+		cin >> a;
+		s.pb(a);
+	}
+	for(int i=0;i<m-1;i++)
+	{
+		sum += p[s[i]][s[i+1]];
+	}
+	while(k--)
+	{
+		int val=-1;
+		int idx=-1;
+		for(int i=0;i<s.size();i++)
+		{
+			int temp;
+			if(i==0)
+			{
+				temp = p[s[i]][s[i+1]];
+			}
+			else if(i<s.size()-1)
+			{
+				temp = (p[s[i-1]][s[i]] + p[s[i]][s[i+1]] - p[s[i-1]][s[i+1]]);
+			}
+			else
+			{
+				temp = p[s[i-1]][s[i]];
+			}
+
+			if(temp > val)
+			{
+				val=temp;
+				idx = i;
+			}
+		}
+		if(idx == -1 || val == -1) break;
+		s.erase(s.begin()+idx);
+		sum -= val;
+	}
+	cout << sum;
+}
