@@ -2299,7 +2299,7 @@ int main()
 		for(int i=0;i<s.size();i++)
 		{
 			int temp;
-			if(i==0)
+			if(i==0) temp = p[s[i]][s[i+1]];
 			{
 				temp = p[s[i]][s[i+1]];
 			}
