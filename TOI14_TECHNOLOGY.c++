@@ -2288,7 +2288,7 @@ int main()
 		cin >> a;
 		s.pb(a);
 	}
-	for(int i=0;i<m-1;i++)  
+	for(int i=0;i<m-1;i++) sum += p[s[i]][s[i+1]];
 	{
 		sum += p[s[i]][s[i+1]];
 	}
