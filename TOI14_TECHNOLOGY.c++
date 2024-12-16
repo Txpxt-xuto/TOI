@@ -2307,7 +2307,7 @@ int main()
 			{
 				temp = (p[s[i-1]][s[i]] + p[s[i]][s[i+1]] - p[s[i-1]][s[i+1]]);
 			}
-			else
+			else temp = p[s[i-1]][s[i]];
 			{
 				temp = p[s[i-1]][s[i]];
 			}
