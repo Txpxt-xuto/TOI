@@ -2305,3 +2305,91 @@ int main()
 	}
 	cout << sum;
 }
+
+#include<bits/stdc++.h>
+#pragma GCC optimize("O3")
+#pragma GCC target("avx2")
+#define ll long long
+#define pii pair<ll,ll>
+#define pll pair<ll,ll>
+#define plx pair<ll,int>
+#define f first
+#define s second
+#define pb push_back
+#define all(x) x.begin(),x.end()
+#define vi vector<int>
+#define vl vector<ll>
+#define vvi vector<vi>
+using namespace std;
+const int mxn=1e6+5;
+vector<ll> vec;
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n;cin>>n;ll a[n],b[n],d[n];
+    for(int i=0;i<n;i++)cin>>a[i];
+    for(int i=0;i<n-1;i++)b[i]=a[i+1]-a[i],vec.pb(b[i]);b[n-1]=-2e18;vec.pb(b[n-1]);
+    sort(all(vec));vec.erase(unique(all(vec)),vec.end());
+    for(int i=0;i<n;i++)d[i]=b[i],b[i]=lower_bound(all(vec),b[i])-vec.begin();
+    vector<ll>p(n),c(n),pn(n),cn(n);ll cnt[n+1]={0};
+    for(int i=0;i<n;i++)cnt[b[i]]++;
+    for(int i=1;i<n;i++)cnt[i]+=cnt[i-1];
+    for(int i=0;i<n;i++)p[--cnt[b[i]]]=i;
+    c[p[0]]=0;int ord=1;
+    for(int i=1;i<n;i++){
+        if(b[p[i-1]]!=b[p[i]])ord++;
+        c[p[i]]=ord-1;
+    }
+    for(int h=0;(1<<h)<n;h++){
+        for(int i=0;i<n;i++){
+            pn[i]=p[i]-(1<<h);
+            if(pn[i]<0)pn[i]+=n;
+        }memset(cnt,0,sizeof cnt);
+        for(int i=0;i<n;i++)cnt[c[i]]++;
+        for(int i=1;i<n;i++)cnt[i]+=cnt[i-1];
+        for(int i=n-1;i>=0;i--){
+            p[--cnt[c[pn[i]]]]=pn[i];
+        }cn[p[0]]=0;ord=1;
+        for(int i=1;i<n;i++){
+            pii cur = {c[p[i]],c[(p[i]+(1<<(h)))%n]};
+            pii prev={c[p[i-1]],c[(p[i-1]+(1<<(h)))%n]};
+            if(cur!=prev)ord++;
+            cn[p[i]]=ord-1;
+        }c.swap(cn);
+    }int q;cin>>q;
+    while(q--){
+        int s;cin>>s;
+        ll v[s],vv[s-1];
+        for(int i=0;i<s;i++)cin>>v[i];
+        if(s==1){
+            cout<<n<<'\n';continue;
+        }
+        for(int i=0;i<s-1;i++)vv[i]=v[i]-v[i+1];s--;
+        bool ch=1;
+        for(int i=0;i<s;i++){
+            if(i+p[n-1]>n-1){ch=0;break;}
+            if(vv[i]<d[p[n-1]+i])break;
+            if(vv[i]>d[p[n-1]+i]){ch=0;break;}
+        }if(!ch){cout<<0<<'\n';continue;}
+        int l=0,r=n-1;
+        while(l<r){
+            int m=(l+r)>>1;
+            bool ch2=1;
+            for(int i=0;i<s;i++){
+                if(i+p[m]>n-1){ch2=0;break;}
+                if(vv[i]<d[p[m]+i])break;
+                if(vv[i]>d[p[m]+i]){ch2=0;break;}
+            }if(ch2)r=m;
+            else l=m+1;
+        }int le=l;l=0,r=n-1;
+        while(l<r){
+            int m=(l+r+1)>>1;
+            bool ch2=0;
+            for(int i=0;i<s;i++){
+                if(i+p[m]>n-1){ch2=0;break;}
+                if(vv[i]<d[p[m]+i]){ch2=1;break;}
+                if(vv[i]>d[p[m]+i]){ch2=0;break;}
+            }if(ch2)r=m-1;
+            else l=m;
+        }cout<<r-le+1<<'\n';
+    }
+}
