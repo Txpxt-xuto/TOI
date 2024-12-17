@@ -2381,7 +2381,8 @@ int main(){
             }if(ch2)r=m;
             else l=m+1;
         }int le=l;l=0,r=n-1;
-        while(l<r){
+        while(l<r)
+        {
             int m=(l+r+1) >> 1;
             bool ch2=0;
             for(int i=0;i<s;i++)
