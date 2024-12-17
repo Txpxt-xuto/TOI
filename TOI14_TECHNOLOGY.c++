@@ -2363,7 +2363,7 @@ int main(){
         if(s==1){
             cout<<n<<'\n';continue;
         }
-        for(int i=0;i<s-1;i++)vv[i]=v[i]-v[i+1];s--;
+        for(int i=0;i<s-1;i++) vv[i] = v[i]-v[i+1];s--;
         bool ch=1;
         for(int i=0;i<s;i++)
         {
