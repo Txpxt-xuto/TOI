@@ -2348,7 +2348,7 @@ int main(){
         for(int i=1;i<n;i++)cnt[i]+=cnt[i-1];
         for(int i=n-1;i>=0;i--) p[--cnt[c[pn[i]]]] = pn[i];
         {
-            pi];
+    
         }
         cn[p[0]]=0;
         ord=1;
