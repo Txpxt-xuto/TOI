@@ -2386,7 +2386,9 @@ int main(){
             bool ch2=0;
             for(int i=0;i<s;i++)
             {
-                if(i+p[m]>n-1){ch2=0;break;}
+                if(i+p[m]>n-1)
+                {
+                    ch2=0;break;}
                 if(vv[i]<d[p[m]+i]){ch2=1;break;}
                 if(vv[i]>d[p[m]+i]){ch2=0;break;}
             }
