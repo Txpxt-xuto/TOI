@@ -2384,11 +2384,13 @@ int main(){
         while(l<r){
             int m=(l+r+1)>>1;
             bool ch2=0;
-            for(int i=0;i<s;i++){
+            for(int i=0;i<s;i++)
+            {
                 if(i+p[m]>n-1){ch2=0;break;}
                 if(vv[i]<d[p[m]+i]){ch2=1;break;}
                 if(vv[i]>d[p[m]+i]){ch2=0;break;}
-            }if(ch2)r=m-1;
+            }
+            if(ch2)r=m-1;
             else l=m;
         }cout << r-le+1 << '\n';
     }
