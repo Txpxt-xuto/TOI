@@ -2355,7 +2355,9 @@ int main(){
             if(cur!=prev)ord++;
             cn[p[i]]=ord-1;
         }c.swap(cn);
-    }int q;cin>>q;
+    }
+    int q;
+    cin>>q;
     while(q--)
     {
         int s;
