@@ -2359,7 +2359,7 @@ int main(){
     while(q--){
         int s;cin>>s;
         ll v[s],vv[s-1];
-        for(int i=0;i<s;i++) cin>>v[i];
+        for(int i=0;i<s;i++) cin >> v[i];
         if(s==1)
         {
             cout << n << '\n';
