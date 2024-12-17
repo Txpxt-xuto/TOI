@@ -2346,7 +2346,7 @@ int main(){
         }memset(cnt,0,sizeof cnt);
         for(int i=0;i<n;i++)cnt[c[i]]++;
         for(int i=1;i<n;i++)cnt[i]+=cnt[i-1];
-        for(int i=n-1;i>=0;i--)  p[--cnt[c[pn[i]]]] = pn[i];
+        for(int i=n-1;i>=0;i--) p[--cnt[c[pn[i]]]] = pn[i];
         {
             p[--cnt[c[pn[i]]]] = pn[i];
         }
