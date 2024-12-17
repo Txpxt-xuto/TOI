@@ -2365,9 +2365,10 @@ int main(){
         }
         for(int i=0;i<s-1;i++)vv[i]=v[i]-v[i+1];s--;
         bool ch=1;
-        for(int i=0;i<s;i++){
+        for(int i=0;i<s;i++)
+        {
             if(i+p[n-1]>n-1){ch=0;break;}
-            if(vv[i]<d[p[n-1]+i])break;
+            if(vv[i]<d[p[n-1]+i]) break;
             if(vv[i]>d[p[n-1]+i]){ch=0;break;}
         }
         if(!ch)
