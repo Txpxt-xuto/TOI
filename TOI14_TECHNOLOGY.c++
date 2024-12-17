@@ -2357,7 +2357,7 @@ int main(){
         }c.swap(cn);
     }
     int q;
-    cin>>q;
+    cin>> q;
     while(q--)
     {
         int s;
