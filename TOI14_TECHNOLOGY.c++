@@ -2355,7 +2355,7 @@ int main(){
         for(int i=1;i<n;i++)
         {
             pii cur = {c[p[i]],c[(p[i]+(1<<(h)))%n]};
-            pii prev={c[p[i-1]],c[(p[i-1]+(1<<(h)))%n]};
+            pii prev = {c[p[i-1]],c[(p[i-1]+(1<<(h)))%n]};
             if(cur!=prev) ord++;
             cn[p[i]] = ord-1;
         }
