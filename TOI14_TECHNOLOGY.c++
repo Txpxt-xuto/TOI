@@ -2349,12 +2349,14 @@ int main(){
         for(int i=n-1;i>=0;i--){
             p[--cnt[c[pn[i]]]]=pn[i];
         }cn[p[0]]=0;ord=1;
-        for(int i=1;i<n;i++){
+        for(int i=1;i<n;i++)
+        {
             pii cur = {c[p[i]],c[(p[i]+(1<<(h)))%n]};
             pii prev={c[p[i-1]],c[(p[i-1]+(1<<(h)))%n]};
             if(cur!=prev)ord++;
             cn[p[i]]=ord-1;
-        }c.swap(cn);
+        }
+        c.swap(cn);
     }
     int q;
     cin >> q;
