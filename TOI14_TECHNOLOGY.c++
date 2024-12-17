@@ -2357,7 +2357,8 @@ int main(){
         }c.swap(cn);
     }int q;cin>>q;
     while(q--){
-        int s;cin>>s;
+        int s;
+        cin >> s;
         ll v[s],vv[s-1];
         for(int i=0;i<s;i++) cin >> v[i];
         if(s==1)
