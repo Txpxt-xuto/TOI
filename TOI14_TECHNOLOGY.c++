@@ -2379,7 +2379,7 @@ int main(){
                 if(vv[i]<d[p[m]+i])break;
                 if(vv[i]>d[p[m]+i]){ch2=0;break;}
             }
-            if(ch2)r=m;
+            if(ch2) r=m;
             else l=m+1;
         }int le=l;l=0,r=n-1;
         while(l<r)
