@@ -2372,7 +2372,7 @@ int main(){
         }
         if(!ch)
         {
-            cout<<0<<'\n';continue;
+            cout << 0<<'\n';continue;
         }
         int l=0,r=n-1;
         while(l<r){
