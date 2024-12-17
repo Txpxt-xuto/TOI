@@ -2339,7 +2339,8 @@ int main(){
         if(b[p[i-1]]!=b[p[i]])ord++;
         c[p[i]]=ord-1;
     }
-    for(int h=0;(1<<h)<n;h++){
+    for(int h=0;(1<<h)<n;h++)
+    {
         for(int i=0;i<n;i++){
             pn[i]=p[i]-(1<<h);
             if(pn[i]<0)pn[i]+=n;
