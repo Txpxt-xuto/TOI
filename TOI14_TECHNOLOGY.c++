@@ -2361,7 +2361,8 @@ int main(){
         ll v[s],vv[s-1];
         for(int i=0;i<s;i++)cin>>v[i];
         if(s==1){
-            cout<<n<<'\n';continue;
+            cout<< n << '\n';
+            continue;
         }
         for(int i=0;i<s-1;i++) vv[i] = v[i]-v[i+1];s--;
         bool ch=1;
