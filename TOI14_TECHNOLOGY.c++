@@ -2356,7 +2356,8 @@ int main(){
             cn[p[i]]=ord-1;
         }c.swap(cn);
     }int q;cin>>q;
-    while(q--){
+    while(q--)
+    {
         int s;
         cin >> s;
         ll v[s],vv[s-1];
