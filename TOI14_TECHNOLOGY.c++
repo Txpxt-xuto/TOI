@@ -2382,7 +2382,7 @@ int main(){
             else l=m+1;
         }int le=l;l=0,r=n-1;
         while(l<r){
-            int m=(l+r+1)>>1;
+            int m=(l+r+1) >> 1;
             bool ch2=0;
             for(int i=0;i<s;i++)
             {
