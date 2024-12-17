@@ -2398,7 +2398,9 @@ int main(){
                 }
                 if(vv[i]>d[p[m]+i])
                 {
-                    ch2=0;break;}
+                    ch2=0;
+                    break;
+                    }
             }
             if(ch2)r=m-1;
             else l=m;
