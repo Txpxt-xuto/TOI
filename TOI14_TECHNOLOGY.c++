@@ -2388,7 +2388,8 @@ int main(){
             {
                 if(i+p[m]>n-1)
                 {
-                    ch2=0;break;
+                    ch2=0;
+                    break;
                 }
                 if(vv[i]<d[p[m]+i]){ch2=1;break;}
                 if(vv[i]>d[p[m]+i]){ch2=0;break;}
