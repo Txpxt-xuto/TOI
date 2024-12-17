@@ -2376,7 +2376,8 @@ int main(){
             continue;
         }
         int l=0,r=n-1;
-        while(l<r){
+        while(l<r)
+        {
             int m = (l+r) >> 1;
             bool ch2=1;
             for(int i=0;i<s;i++)
