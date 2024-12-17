@@ -2370,7 +2370,9 @@ int main(){
             if(vv[i]<d[p[n-1]+i])break;
             if(vv[i]>d[p[n-1]+i]){ch=0;break;}
         }
-        if(!ch){cout<<0<<'\n';continue;}
+        if(!ch)
+        {
+            cout<<0<<'\n';continue;}
         int l=0,r=n-1;
         while(l<r){
             int m = (l+r) >> 1;
