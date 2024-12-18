@@ -2447,7 +2447,7 @@ int main(){
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> k;
     for(int i=1;i<=n;i++) for(int j=1;j<=n;j++) cin >> p[i][j];
-    for(int i=1;i<=m;i++)cin >> s[i];
+    for(int i=1;i<=m;i++) cin >> s[i];
     for(int i=1;i<=m+1;i++)for(int j=0;j<=k;j++)dp[i][j]=2e9;
     for(int i=1;i<=m+1;i++){
         for(int j=0;j<=k;j++){
