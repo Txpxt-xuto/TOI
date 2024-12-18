@@ -2443,7 +2443,8 @@ const int N=305;
 int n,m,k;
 int s[N];
 int p[N][N],dp[N][N];
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> k;
     for(int i=1;i<=n;i++) for(int j=1;j<=n;j++) cin >> p[i][j];
