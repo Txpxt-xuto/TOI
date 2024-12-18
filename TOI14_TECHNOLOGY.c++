@@ -2454,8 +2454,6 @@ int main(){
         for(int j=0;j<=k;j++)
         {
             for(int l=0;i-l>=1&&l+j<=k;l++) dp[i][j+l]=min(dp[i][j+l],dp[i-l-1][j]+p[s[i-l-1]][s[i]]);
-            {
-            }
         }
     }
     cout << dp[m+1][k];
