@@ -2446,7 +2446,6 @@ const int N=305;
 int n,m,k;
 int s[N];
 int p[N][N],dp[N][N];
-
 int main(){
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> k;
