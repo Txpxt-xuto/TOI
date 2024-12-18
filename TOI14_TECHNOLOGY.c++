@@ -2442,7 +2442,6 @@ int main(){
 using namespace std;
 
 const int N=305;
-
 int n,m,k;
 int s[N];
 int p[N][N],dp[N][N];
