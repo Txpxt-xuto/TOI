@@ -2508,7 +2508,8 @@ int main()
         {
             int sz = 0;
             int cur = i;
-            while (!visited[cur]) {
+            while (!visited[cur])
+            {
                 sz++;
                 visited[cur] = true;
                 cur = p[cur];
