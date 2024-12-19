@@ -2517,7 +2517,7 @@ int main()
             cycle_sz.push_back(sz);
         }
     }
-    sort(cycle_sz.begin(), cycle_sz.end());
+    sort(cycle_sz.begin(),cycle_sz.end());
     for(int i=0;i<=N;i++) ans[i] = cycle_sz.back();
     int lptr = 0;
     for(int i=1;i<=cycle_sz.back();i++) {
