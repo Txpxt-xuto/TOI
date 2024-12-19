@@ -2518,9 +2518,9 @@ int main()
         }
     }
     sort(cycle_sz.begin(), cycle_sz.end());
-    for (int i=0;i<=N;i++) ans[i] = cycle_sz.back();
+    for(int i=0;i<=N;i++) ans[i] = cycle_sz.back();
     int lptr = 0;
-    for (int i = 1; i <= cycle_sz.back(); i++) {
+    for(int i = 1; i <= cycle_sz.back(); i++) {
         while (lptr < cycle_sz.size() && cycle_sz[lptr] <= i) lptr++;
 
         int sm = 0;
