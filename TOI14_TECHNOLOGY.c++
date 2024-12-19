@@ -2489,3 +2489,64 @@ int main()
     }
     cout<<vec.size();
 }
+
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef pair<int, int> pii;
+#define mp(x, y) make_pair(x, y)
+
+const int MAXN = 1e5+5;
+
+int N, Q, p[MAXN];
+
+bool visited[MAXN] = {false};
+vector<int> cycle_sz;
+
+int ans[MAXN];
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    cin >> N >> Q;
+    for (int i = 1; i <= N; i++) cin >> p[i];
+
+    for (int i = 1; i <= N; i++) {
+        if (!visited[i]) {
+            int sz = 0;
+            int cur = i;
+            while (!visited[cur]) {
+                sz++;
+                visited[cur] = true;
+                cur = p[cur];
+            }
+
+            cycle_sz.push_back(sz);
+        }
+    }
+
+    sort(cycle_sz.begin(), cycle_sz.end());
+
+    for (int i = 0; i <= N; i++) ans[i] = cycle_sz.back();
+
+    int lptr = 0;
+    for (int i = 1; i <= cycle_sz.back(); i++) {
+        while (lptr < cycle_sz.size() && cycle_sz[lptr] <= i) lptr++;
+
+        int sm = 0;
+        for (int j = lptr; j < cycle_sz.size(); j++) sm += (cycle_sz[j]-1)/i;
+        ans[sm] = min(i, ans[sm]);
+    }
+
+    for (int i = 1; i <= N; i++) ans[i] = min(ans[i-1], ans[i]);
+
+    while (Q--) {
+        int k;
+        cin >> k;
+        if (k > N) cout << 1 << "\n";
+        else cout << ans[k] << "\n";
+    }
+
+    return 0;
+}
