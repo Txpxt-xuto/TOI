@@ -2491,11 +2491,9 @@ int main()
 using namespace std;
 typedef pair<int, int> pii;
 #define mp(x, y) make_pair(x, y)
-
 const int MAXN = 1e5+5;
 
 int N, Q, p[MAXN];
-
 bool visited[MAXN] = {false};
 vector<int> cycle_sz;
 
