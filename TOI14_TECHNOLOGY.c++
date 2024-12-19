@@ -2503,7 +2503,8 @@ int main()
     cin >> N >> Q;
     for (int i = 1; i <= N; i++) cin >> p[i];
     for (int i = 1; i <= N; i++) {
-        if (!visited[i]) {
+        if (!visited[i])
+        {
             int sz = 0;
             int cur = i;
             while (!visited[cur]) {
