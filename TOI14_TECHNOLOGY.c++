@@ -2488,7 +2488,6 @@ int main()
 }
 
 #include <bits/stdc++.h>
-
 using namespace std;
 typedef pair<int, int> pii;
 #define mp(x, y) make_pair(x, y)
