@@ -2495,7 +2495,6 @@ const int MAXN = 1e5+5;
 int N, Q, p[MAXN];
 bool visited[MAXN] = {false};
 vector<int> cycle_sz;
-
 int ans[MAXN];
 
 int main() {
