@@ -2539,19 +2539,15 @@ int main()
 }
 
 #include<bits/stdc++.h>
-
 using namespace std;
-
 using ll = long long;
 using db = long double;
 const db EPS=1e-9;
 const db PI=acos(db(-1));
-
 const db c=(3.l-sqrt(5.l))/2.0;
 const db ang=PI/23;
 const db dx=cos(PI);
 const db dy=sin(PI);
-
 struct point
 {
     db x,y;
