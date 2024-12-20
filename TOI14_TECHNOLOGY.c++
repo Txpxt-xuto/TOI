@@ -2701,7 +2701,7 @@ void trav2(int l,int r,int i,int d,int x,int y,int dist)
     if(x<=l&&r<=y)
     {
         vis2[d][i] = true;
-        for(int x=l;x<=r;x++)if(0<=x-d+N&&x-d+N<m)go(encode(x,x-d+N),dist);
+        for(int x=l;x<=r;x++) if(0<=x-d+N&&x-d+N<m) go(encode(x,x-d+N),dist);
         return;
     }
     int m=(l+r)/2;
