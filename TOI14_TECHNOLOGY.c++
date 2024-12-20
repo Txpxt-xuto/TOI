@@ -2674,7 +2674,7 @@ int encode(int x,int y){
 
 void go(int v,int d)
 {
-    if(++d>=dp[v])return;
+    if(++d>=dp[v]) return;
     q.emplace(v);
     dp[v]=d;
 }
