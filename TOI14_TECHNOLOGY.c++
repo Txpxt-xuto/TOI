@@ -2583,7 +2583,7 @@ void runcase()
 {
     db r,x,y;
     cin >> r >> x >> y;
-    if(abs(x)<EPS&&abs(y)<EPS)return void(cout << "YES\n");
+    if(abs(x)<EPS&&abs(y)<EPS) return void(cout << "YES\n");
     db r2=r*c;
     point ray(x,y),ray2(x+100*r*dx,y+100*r*dy);
     bool ans=false;
