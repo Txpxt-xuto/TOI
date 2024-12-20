@@ -2608,3 +2608,46 @@ int main()
     cin >> t;
     while(t--)runcase();
 }
+
+#include<bits/stdc++.h>
+#define lsb(x) (x &(-x))
+
+using namespace std;
+using ll = long long;
+using pii = pair<ll, ll>;
+
+const int N = 2e5 + 5;
+ll n, q, x, s[N], tin[N], tout[N], t, pos[N], fwk[N], ans[N];
+vector<ll> v[N];
+vector<pii> u[N];
+map<ll, ll> mp;
+
+void upd (ll idx, ll val) {
+    for (; idx < N; idx += lsb(idx)) fwk[idx] += val;
+}
+
+ll qr (ll idx) {
+    ll res = 0;
+    for (; idx; idx -= lsb(idx)) res += fwk[idx];
+    return res;
+}
+
+void dfs (ll cur, ll par) {
+    tin[cur] = ++t; pos[t] = cur;
+    for (auto &e: v[cur]) if (par != e) dfs(e, cur);
+    tout[cur] = t;
+}
+
+int main() {
+    scanf("%lld %lld", &n, &q);
+    for (int i = 2; i <= n; i++) scanf("%lld", &x), v[x].emplace_back(i);
+    for (int i = 1; i <= n; i++) scanf("%lld", &s[i]);
+    dfs(1, 0);
+    for (int i = 1; i <= n; i++) u[tout[i]].emplace_back(tin[i], i);
+    for (int i = 1; i <= n; i++) {
+        if (mp[s[pos[i]]]) upd(mp[s[pos[i]]], -s[pos[i]]);
+        mp[s[pos[i]]] = i; upd(mp[s[pos[i]]], s[pos[i]]);
+        for (auto &[x, idx]: u[i]) ans[idx] = qr(i) - qr(--x);
+    }
+    while (q--) scanf("%lld", &x), printf("%lld\n", ans[x]);
+}
