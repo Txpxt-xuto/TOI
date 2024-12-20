@@ -2732,7 +2732,7 @@ int main(){
         int u=q.front();
         q.pop();
         int d=dp[u];
-        if(u==s)cout << d,exit(0);
+        if(u==s) cout << d,exit(0);
         int i=u/m,j=u%m,x=a[u];
         if(x>0)
         {
