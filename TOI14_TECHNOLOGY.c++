@@ -2727,7 +2727,7 @@ int main(){
         cin >> a[u];
         if(i==0||i==n-1||j==0||j==m-1)addsource(i,j);
     }
-    int s=encode(sx-1,sy-1);
+    int s = encode(sx-1,sy-1);
     while(!q.empty())
     {
         int u=q.front();
