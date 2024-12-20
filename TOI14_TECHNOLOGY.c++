@@ -2646,9 +2646,9 @@ int main() {
     for(int i=1;i<=n;i++) u[tout[i]].emplace_back(tin[i], i);
     for(int i=1;i<=n;i++)
     {
-        if (mp[s[pos[i]]]) upd(mp[s[pos[i]]], -s[pos[i]]);
+        if(mp[s[pos[i]]]) upd(mp[s[pos[i]]], -s[pos[i]]);
         mp[s[pos[i]]] = i; upd(mp[s[pos[i]]], s[pos[i]]);
-        for (auto &[x, idx]: u[i]) ans[idx] = qr(i) - qr(--x);
+        for(auto &[x, idx]: u[i]) ans[idx] = qr(i) - qr(--x);
     }
     while (q--) scanf("%lld", &x), printf("%lld\n", ans[x]);
 }
