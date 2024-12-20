@@ -2718,7 +2718,8 @@ void addsource(int x,int y){
     dp[u]=1;
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> sx >> sy;
     for(int i=0;i<n*m;i++)dp[i]=INF;
