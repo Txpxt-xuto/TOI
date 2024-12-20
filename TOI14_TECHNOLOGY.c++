@@ -2586,7 +2586,8 @@ void runcase(){
     db r2=r*c;
     point ray(x,y),ray2(x+100*r*dx,y+100*r*dy);
     bool ans=false;
-    for(auto [a,b]:star){
+    for(auto [a,b]:star)
+    {
         a.x*=r,a.y*=r;
         b.x*=r2,b.y*=r2;
         ans^=isect(ray,ray2,a,b);
