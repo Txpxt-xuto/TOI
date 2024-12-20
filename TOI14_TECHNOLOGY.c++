@@ -2712,7 +2712,8 @@ void trav2(int d,int x,int y,int dist){
     trav2(0,n-1,1,d+N,x,y,dist);
 }
 
-void addsource(int x,int y){
+void addsource(int x,int y)
+{
     int u=encode(x,y);
     q.emplace(u);
     dp[u]=1;
