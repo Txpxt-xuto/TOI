@@ -2552,33 +2552,35 @@ const db ang=PI/23;
 const db dx=cos(PI);
 const db dy=sin(PI);
 
-struct point{
+struct point
+{
     db x,y;
     point(db _x,db _y):x(_x),y(_y){}
     point(db a):x(cos(a)),y(sin(a)){}
 };
 
-db cross(point o,point a,point b){
+db cross(point o,point a,point b)
+{
     db x1=a.x-o.x,y1=a.y-o.y;
     db x2=b.x-o.x,y2=b.y-o.y;
     return x1*y2-x2*y1;
 }
 
-int ccw(point o,point a,point b){
+int ccw(point o,point a,point b)
+{
     db res=cross(o,a,b);
     if(res<-EPS)return -1;
     if(res>EPS)return 1;
     return 0;
 }
 
-bool isect(point a,point b,point c,point d){
+bool isect(point a,point b,point c,point d)
+{
     int x=ccw(a,b,c)*ccw(a,b,d);
     int y=ccw(c,d,a)*ccw(c,d,b);
     return x<1&&y<1;
 }
-
 vector<pair<point,point>> star;
-
 void runcase()
 {
     db r,x,y;
