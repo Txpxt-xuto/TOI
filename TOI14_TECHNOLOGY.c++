@@ -2579,7 +2579,8 @@ bool isect(point a,point b,point c,point d){
 
 vector<pair<point,point>> star;
 
-void runcase(){
+void runcase()
+{
     db r,x,y;
     cin >> r >> x >> y;
     if(abs(x)<EPS&&abs(y)<EPS)return void(cout << "YES\n");
