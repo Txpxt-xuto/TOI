@@ -2697,8 +2697,9 @@ void trav1(int d,int x,int y,int dist){
 
 void trav2(int l,int r,int i,int d,int x,int y,int dist){
     if(y<l||r<x||vis2[d][i])return;
-    if(x<=l&&r<=y){
-        vis2[d][i]=true;
+    if(x<=l&&r<=y)
+    {
+        vis2[d][i] = true;
         for(int x=l;x<=r;x++)if(0<=x-d+N&&x-d+N<m)go(encode(x,x-d+N),dist);
         return;
     }
