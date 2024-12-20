@@ -2737,7 +2737,8 @@ int main(){
         if(x>0){
             go(encode(x/m-1,x%m),d);
         }
-        else{
+        else
+        {
             x=-x;
             trav1(i+j-x,i-x,i,d);
             trav1(i+j+x,i,i+x,d);
