@@ -2528,7 +2528,7 @@ int main()
         ans[sm] = min(i, ans[sm]);
     }
     for (int i=1;i<=N;i++) ans[i] = min(ans[i-1], ans[i]);
-    while (Q--)
+    while(Q--)
     {
         int k;
         cin >> k;
