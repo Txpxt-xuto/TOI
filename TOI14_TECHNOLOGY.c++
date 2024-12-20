@@ -2652,3 +2652,4 @@ int main() {
     }
     while (q--) scanf("%lld", &x), printf("%lld\n", ans[x]);
 }
+
