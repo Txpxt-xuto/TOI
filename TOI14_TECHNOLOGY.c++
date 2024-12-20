@@ -2722,8 +2722,8 @@ int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> sx >> sy;
-    for(int i=0;i<n*m;i++)dp[i]=INF;
-    for(int i=0;i<n;i++)for(int j=0;j<m;j++)
+    for(int i=0;i<n*m;i++) dp[i]=INF;
+    for(int i=0;i<n;i++) for(int j=0;j<m;j++)
     {
         int u=encode(i,j);
         cin >> a[u];
