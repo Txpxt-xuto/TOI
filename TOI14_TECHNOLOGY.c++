@@ -2831,7 +2831,8 @@ int main() {
     }
 
     long long int sumWeight = 0;
-    for(int i = 0; i < mst.size(); ++i) {
+    for(int i = 0; i<mst.size();++i)
+    {
         auto [w, u, v, index] = mst[i];
         sumWeight += w;
     }
