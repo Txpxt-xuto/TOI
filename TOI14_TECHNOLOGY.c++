@@ -2821,7 +2821,7 @@ int main() {
         ++j;
     }
 
-    for(int i=0;i<j;++i) {
+    for(int i=0;i<j;++i) mst.pop_back();
         mst.pop_back();
     }
     for(int i = 0; i < j; ++i) {
