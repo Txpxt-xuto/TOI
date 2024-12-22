@@ -2794,13 +2794,13 @@ int main() {
     cin >> n >> m >> k;
 
     vector<tuple<int, int, int, int>> edge;
-    for(int i = 0; i < m; ++i) {
+    for(int i=0;i<m;++i)
+    {
         int u, v, w;
         cin >> u >> v >> w;
         edge.emplace_back(w, u, v, i + 1);
     }
     sort(edge.begin(), edge.end());
-    
     vector<tuple<int, int, int>> bridge;
     for(int i=0;i<k;++i)
     {
