@@ -2829,7 +2829,6 @@ int main() {
         auto [w, u, index] = bridge[i];
         mst.emplace_back(w, u, 0, index);
     }
-
     long long int sumWeight = 0;
     for(int i=0;i<mst.size();++i)
     {
