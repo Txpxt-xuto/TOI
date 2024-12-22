@@ -2782,7 +2782,6 @@ vector<tuple<int, int, int, int>> gernerateMST(int n, vector<tuple<int, int, int
             mst.emplace_back(w, u, v, index);
         }
     }
-
     return mst;
 }
 
