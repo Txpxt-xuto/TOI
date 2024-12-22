@@ -2811,7 +2811,6 @@ int main() {
 
     vector<tuple<int, int, int, int>> mst = gernerateMST(n, edge);
     sort(mst.begin(), mst.end());
-    
     int j = 0;
     for(int i=mst.size()-1;i>=0 and j<bridge.size();--i) {
         if(get<0>(bridge[j]) >= get<0>(mst[i])) break;
