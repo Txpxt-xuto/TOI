@@ -2663,7 +2663,6 @@ int a[N*N];
 int dp[N*N];
 bool vis1[2*N][K],vis2[2*N][K];
 queue<int> q;
-
 int encode(int x,int y)
 {
     return x*m+y;
