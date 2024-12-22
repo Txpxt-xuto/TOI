@@ -2808,7 +2808,6 @@ int main() {
         bridge.emplace_back(w, u, i + 1);
     }
     sort(bridge.begin(), bridge.end());
-
     vector<tuple<int, int, int, int>> mst = gernerateMST(n, edge);
     sort(mst.begin(), mst.end());
     int j = 0;
