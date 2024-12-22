@@ -2742,7 +2742,7 @@ int main()
         int i=u/m,j=u%m,x=a[u];
         if(x>0)  go(encode(x/m-1,x%m),d);
         {
-            go(en1,x%m),d);
+            go(en1,x
         }
         else
         {
