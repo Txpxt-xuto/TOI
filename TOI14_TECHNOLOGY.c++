@@ -2824,7 +2824,6 @@ int main() {
     for(int i = 0; i < j; ++i) {
         mst.pop_back();
     }
-
     for(int i = 0; i < j; ++i) {
         auto [w, u, index] = bridge[i];
         mst.emplace_back(w, u, 0, index);
