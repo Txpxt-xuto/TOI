@@ -2752,3 +2752,89 @@ int main()
     }
     cout << -1;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int dsFind(int u, vector<int> &disjointSet) {
+    if(u == disjointSet[u]) {
+        return disjointSet[u];
+    }
+
+    return disjointSet[u] = dsFind(disjointSet[u], disjointSet);
+}
+
+vector<tuple<int, int, int, int>> gernerateMST(int n, vector<tuple<int, int, int, int>> &edge) {
+    vector<int> disjointSet(n + 1);
+    for(int i = 1; i <= n; ++i) {
+        disjointSet[i] = i;
+    }
+
+    vector<tuple<int, int, int, int>> mst;
+    for(int i = 0; i < edge.size(); ++i) {
+        auto [w, u, v, index] = edge[i];
+
+        u = dsFind(u, disjointSet);
+        v = dsFind(v, disjointSet);
+        
+        if(u != v) {
+            disjointSet[u] = v;
+            mst.emplace_back(w, u, v, index);
+        }
+    }
+
+    return mst;
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    int n, m, k;
+    cin >> n >> m >> k;
+
+    vector<tuple<int, int, int, int>> edge;
+    for(int i = 0; i < m; ++i) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        edge.emplace_back(w, u, v, i + 1);
+    }
+    sort(edge.begin(), edge.end());
+    
+    vector<tuple<int, int, int>> bridge;
+    for(int i = 0; i < k; ++i) {
+        int u, w;
+        cin >> u >> w;
+        bridge.emplace_back(w, u, i + 1);
+    }
+    sort(bridge.begin(), bridge.end());
+
+    vector<tuple<int, int, int, int>> mst = gernerateMST(n, edge);
+    sort(mst.begin(), mst.end());
+    
+    int j = 0;
+    for(int i = mst.size() - 1; i >= 0 and j < bridge.size(); --i) {
+        if(get<0>(bridge[j]) >= get<0>(mst[i])) {
+            break;
+        }
+
+        ++j;
+    }
+
+    for(int i = 0; i < j; ++i) {
+        mst.pop_back();
+    }
+
+    for(int i = 0; i < j; ++i) {
+        auto [w, u, index] = bridge[i];
+        mst.emplace_back(w, u, 0, index);
+    }
+
+    long long int sumWeight = 0;
+    for(int i = 0; i < mst.size(); ++i) {
+        auto [w, u, v, index] = mst[i];
+        sumWeight += w;
+    }
+    cout << sumWeight << "\n";
+    return 0;
+}
