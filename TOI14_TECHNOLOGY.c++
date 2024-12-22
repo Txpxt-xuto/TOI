@@ -2674,6 +2674,7 @@ void go(int v,int d)
     q.emplace(v);
     dp[v]=d;
 }
+
 void trav1(int l,int r,int i,int d,int x,int y,int dist)
 {
     if(y<l||r<x||vis1[d][i]) return;
