@@ -2802,7 +2802,7 @@ int main() {
     sort(edge.begin(), edge.end());
     
     vector<tuple<int, int, int>> bridge;
-    for(int i=0;i<k; ++i)
+    for(int i=0;i<k;++i)
     {
         int u, w;
         cin >> u >> w;
