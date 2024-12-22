@@ -2814,7 +2814,7 @@ int main() {
     
     int j = 0;
     for(int i = mst.size() - 1; i >= 0 and j < bridge.size(); --i) {
-        if(get<0>(bridge[j]) >= get<0>(mst[i]))   break;
+        if(get<0>(bridge[j]) >= get<0>(mst[i])) break;
         ++j;
     }
     for(int i=0;i<j;++i) mst.pop_back();
