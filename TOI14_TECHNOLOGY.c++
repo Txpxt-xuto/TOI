@@ -2876,3 +2876,71 @@ int main()
     cout << ans;
     return 0;
 }
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    int a,DICE[6],tmp;
+    cin>>a;
+    string ro[a];
+    for(int i=0;i<a;i++){
+        cin>>ro[i];
+    }
+    char cha;
+    for(int i=0;i<6;i++){
+        DICE[i]=i+1;
+    }
+    for(int h=0;h<a;h++){
+        for(int i=0;i<ro[h].length();i++){
+            cha=(ro[h])[i];
+            if(cha=='F'){
+                tmp=DICE[0];
+                DICE[0]=DICE[4];
+                DICE[4]=DICE[5];
+                DICE[5]=DICE[1];
+                DICE[1]=tmp;
+            }
+            else if(cha=='L'){
+                tmp=DICE[0];
+                DICE[0]=DICE[3];
+                DICE[3]=DICE[5];
+                DICE[5]=DICE[2];
+                DICE[2]=tmp;
+            }
+            else if(cha=='B'){
+                tmp=DICE[0];
+                DICE[0]=DICE[1];
+                DICE[1]=DICE[5];
+                DICE[5]=DICE[4];
+                DICE[4]=tmp;
+            }
+            else if(cha=='R'){
+                tmp=DICE[0];
+                DICE[0]=DICE[2];
+                DICE[2]=DICE[5];
+                DICE[5]=DICE[3];
+                DICE[3]=tmp;
+            }
+            else if(cha=='C'){
+                tmp=DICE[1];
+                DICE[1]=DICE[3];
+                DICE[3]=DICE[4];
+                DICE[4]=DICE[2];
+                DICE[2]=tmp;
+            }
+            else{
+                tmp=DICE[1];
+                DICE[1]=DICE[2];
+                DICE[2]=DICE[4];
+                DICE[4]=DICE[3];
+                DICE[3]=tmp;
+            }
+        }
+    cout<<DICE[1]<<' ';
+        DICE[i]=i+1;
+    }
+    }
+    
+    return 0;
+}
