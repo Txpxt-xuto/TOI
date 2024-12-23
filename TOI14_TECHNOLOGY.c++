@@ -3033,7 +3033,8 @@ void hld(int u=0,int p=0,int x=0){
 }
 int query(int x,int y,int res=1e9+5)
 {
-    while(head[x]!=head[y]){
+    while(head[x]!=head[y])
+    {
         if(dep[head[x]]<dep[head[y]])swap(x,y);
         res=min(res,qr(pos[head[x]],pos[x]+1,cur));x=pr[head[x]];
     }
