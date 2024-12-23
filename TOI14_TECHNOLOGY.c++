@@ -3061,7 +3061,8 @@ int main(){
         }
     }
     for(int i=0;i<cur;i++)upd(pos[i],*ms[i].begin(),cur);
-    while(q--){
+    while(q--)
+    {
         int o,u,v;
         cin >> o >> u >> v;
         if(o==1) update(u,v);
