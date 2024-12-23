@@ -2915,7 +2915,8 @@ int main() {
                 DICE[5]=DICE[4];
                 DICE[4]=tmp;
             }
-            else if(cha=='R'){
+            else if(cha=='R')
+            {
                 tmp=DICE[0];
                 DICE[0]=DICE[2];
                 DICE[2]=DICE[5];
