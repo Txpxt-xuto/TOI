@@ -2922,14 +2922,16 @@ int main() {
                 DICE[5]=DICE[3];
                 DICE[3]=tmp;
             }
-            else if(cha=='C'){
+            else if(cha=='C')
+            {
                 tmp=DICE[1];
                 DICE[1]=DICE[3];
                 DICE[3]=DICE[4];
                 DICE[4]=DICE[2];
                 DICE[2]=tmp;
             }
-            else{
+            else
+            {
                 tmp=DICE[1];
                 DICE[1]=DICE[2];
                 DICE[2]=DICE[4];
