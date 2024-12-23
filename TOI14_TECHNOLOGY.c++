@@ -3019,7 +3019,8 @@ int qr(int l,int r,int sz,int res=1e9+5){
         if(r&1)res=min(res,seg[--r]);
     }return res;
 }
-void hld(int u=0,int p=0,int x=0){
+void hld(int u=0,int p=0,int x=0)
+{
     head[u]=x;pos[u]=ct++;
     int hv=-1,hs=-1;
     for(auto v:bct[u])
