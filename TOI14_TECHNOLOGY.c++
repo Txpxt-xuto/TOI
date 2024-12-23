@@ -2889,8 +2889,6 @@ int main() {
     }
     char cha;
     for(int i=0;i<6;i++) DICE[i]=i+1;
- 
-    }
     for(int h=0;h<a;h++)
     {
         for(int i=0;i<ro[h].length();i++)
