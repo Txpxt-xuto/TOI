@@ -2832,9 +2832,7 @@ int main()
 
 #include <bits/stdc++.h>
 #define f front()
-
 using namespace std;
-
 typedef struct Tile{
     int x, y, d, st;
 } Tile;
