@@ -2938,7 +2938,7 @@ int main() {
             }
         }
     cout<<DICE[1]<<' ';
-        DICE[i]=i+1;
+    for(int i=0;i<6;i++){
     }
     }
     
