@@ -2835,7 +2835,7 @@ int main()
 
 using namespace std;
 
-typedef struct Tile {
+typedef struct Tile{
     int x, y, d, st;
 } Tile;
 
