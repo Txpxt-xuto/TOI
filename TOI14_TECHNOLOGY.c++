@@ -3041,12 +3041,14 @@ int query(int x,int y,int res=1e9+5){
 void update(int u,int val){
     int x=id[u];ms[x].erase(ms[x].lower_bound(a[u]));
     ms[x].insert(val);upd(pos[x],*ms[x].begin(),cur);
-    if(isap[x]){
+    if(isap[x])
+    {
         for(auto v:bct[x]){
             ms[v].erase(ms[v].lower_bound(a[u]));
             ms[v].insert(val);upd(pos[v],*ms[v].begin(),cur);
         }
-    }a[u]=val;
+    }
+    a[u]=val;
 }
 int main()
 {
