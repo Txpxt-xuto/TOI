@@ -2829,3 +2829,47 @@ int main()
     cout << sumWeight << "\n";
     return 0;
 }
+
+#include <bits/stdc++.h>
+#define f front()
+
+using namespace std;
+
+typedef struct Tile {
+    int x, y, d, st;
+} Tile;
+
+int main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    int n;
+    cin >> n;
+    int arr[n][n], ans = 0;
+    vector<vector<bool>> alr(n, vector<bool> (n, false));
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++) cin >> arr[i][j];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (alr[i][j]) continue;
+            queue<Tile> q;
+            int cnt = 1;
+            bool ok = true;
+            q.push(Tile{i, j, 0, arr[i][j]});
+            alr[i][j] = true;
+            while (!q.empty()) {
+                int x = q.f.x, y = q.f.y, d = q.f.d, st = q.f.st;
+                q.pop();
+                if (d > 2 || cnt > 3 || abs(i-x) >= 2 || abs(y-j) >= 2) ok = false;
+                for (int ii = x-1; ii <= x+1; ii++) {
+                    for (int jj = y-1; jj <= y+1; jj++) {
+                        if (abs(ii-x) == abs(jj-y) || ii < 0 || ii >= n || jj < 0 || jj >= n || arr[ii][jj] != st || alr[ii][jj]) continue;
+                        q.push(Tile{ii, jj, d+1, st});
+                        alr[ii][jj] = true, cnt++;
+                    }
+                }
+            }
+            if (cnt == 3 && ok) ans++;
+        }
+    }
+    cout << ans;
+    return 0;
+}
