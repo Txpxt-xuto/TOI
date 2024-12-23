@@ -2880,7 +2880,8 @@ int main()
 #include <iostream>
 #include <string>
 using namespace std;
-int main() {
+int main()
+{
     int a,DICE[6],tmp;
     cin >> a;
     string ro[a];
