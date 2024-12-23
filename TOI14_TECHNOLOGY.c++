@@ -2863,7 +2863,7 @@ int main() {
                 {
                     for(int jj = y-1; jj <= y+1; jj++)
                     {
-                        if (abs(ii-x) == abs(jj-y) || ii < 0 || ii >= n || jj < 0 || jj >= n || arr[ii][jj] != st || alr[ii][jj]) continue;
+                        if(abs(ii-x) == abs(jj-y) || ii < 0 || ii >= n || jj < 0 || jj >= n || arr[ii][jj] != st || alr[ii][jj]) continue;
                         q.push(Tile{ii, jj, d+1, st});
                         alr[ii][jj] = true, cnt++;
                     }
