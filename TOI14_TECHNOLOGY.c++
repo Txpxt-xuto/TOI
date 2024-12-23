@@ -3057,7 +3057,6 @@ int main(){
     for(int i=1;i<=n;i++){
         ms[id[i]].insert(a[i]);
         if(isap[id[i]]) for(auto v:bct[id[i]]) ms[v].insert(a[i]);
-
     }
     for(int i=0;i<cur;i++) upd(pos[i],*ms[i].begin(),cur);
     while(q--)
