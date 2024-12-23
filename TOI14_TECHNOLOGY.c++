@@ -2857,7 +2857,7 @@ int main() {
             bool ok = true;
             q.push(Tile{i, j, 0, arr[i][j]});
             alr[i][j] = true;
-            while (!q.empty())
+            while(!q.empty())
             {
                 int x = q.f.x, y = q.f.y, d = q.f.d, st = q.f.st;
                 q.pop();
