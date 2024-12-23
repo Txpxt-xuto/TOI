@@ -2895,7 +2895,8 @@ int main() {
         for(int i=0;i<ro[h].length();i++)
         {
             cha=(ro[h])[i];
-            if(cha=='F'){
+            if(cha=='F')
+            {
                 tmp=DICE[0];
                 DICE[0]=DICE[4];
                 DICE[4]=DICE[5];
