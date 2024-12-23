@@ -2885,9 +2885,6 @@ int main() {
     cin>>a;
     string ro[a];
     for(int i=0;i<a;i++) cin >> ro[i];
-    {
-        cin>>ro[i];
-    }
     char cha;
     for(int i=0;i<6;i++) DICE[i]=i+1;
     for(int h=0;h<a;h++)
