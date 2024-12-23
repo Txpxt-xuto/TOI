@@ -2851,7 +2851,7 @@ int main() {
     {
         for(int j=0;j<n;j++)
         {
-            if (alr[i][j]) continue;
+            if(alr[i][j]) continue;
             queue<Tile> q;
             int cnt = 1;
             bool ok = true;
