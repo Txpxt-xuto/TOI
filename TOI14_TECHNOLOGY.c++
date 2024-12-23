@@ -3043,7 +3043,8 @@ void update(int u,int val){
     ms[x].insert(val);upd(pos[x],*ms[x].begin(),cur);
     if(isap[x])
     {
-        for(auto v:bct[x]){
+        for(auto v:bct[x])
+        {
             ms[v].erase(ms[v].lower_bound(a[u]));
             ms[v].insert(val);upd(pos[v],*ms[v].begin(),cur);
         }
