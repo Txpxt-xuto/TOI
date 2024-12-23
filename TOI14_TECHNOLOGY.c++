@@ -3022,11 +3022,14 @@ int qr(int l,int r,int sz,int res=1e9+5){
 void hld(int u=0,int p=0,int x=0){
     head[u]=x;pos[u]=ct++;
     int hv=-1,hs=-1;
-    for(auto v:bct[u]){
+    for(auto v:bct[u])
+    {
         if(v==p)continue;
         if(sz[v]>hs)hv=v,hs=sz[v];
-    }if(hv==-1)return;hld(hv,u,x);
-    for(auto v:bct[u]){
+    }
+    if(hv==-1)return;hld(hv,u,x);
+    for(auto v:bct[u])
+    {
         if(v==p||v==hv)continue;
         hld(v,u,v);
     }
