@@ -3025,7 +3025,7 @@ void hld(int u=0,int p=0,int x=0){
     for(auto v:bct[u])
     {
         if(v==p) continue;
-        if(sz[v]>hs)hv=v,hs=sz[v];
+        if(sz[v]>hs) hv=v,hs=sz[v];
     }
     if(hv==-1) return ;
     hld(hv,u,x);
