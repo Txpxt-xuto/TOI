@@ -2942,6 +2942,5 @@ int main() {
             DICE[i]=i+1;
         }
     }
-    
     return 0;
 }
