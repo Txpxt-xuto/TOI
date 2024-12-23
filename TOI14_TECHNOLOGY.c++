@@ -2859,7 +2859,8 @@ int main() {
                 int x = q.f.x, y = q.f.y, d = q.f.d, st = q.f.st;
                 q.pop();
                 if (d > 2 || cnt > 3 || abs(i-x) >= 2 || abs(y-j) >= 2) ok = false;
-                for (int ii = x-1; ii <= x+1; ii++) {
+                for (int ii = x-1; ii <= x+1; ii++)
+                {
                     for(int jj = y-1; jj <= y+1; jj++)
                     {
                         if (abs(ii-x) == abs(jj-y) || ii < 0 || ii >= n || jj < 0 || jj >= n || arr[ii][jj] != st || alr[ii][jj]) continue;
