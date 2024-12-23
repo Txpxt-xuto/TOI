@@ -2784,6 +2784,7 @@ vector<tuple<int, int, int, int>> gernerateMST(int n, vector<tuple<int, int, int
     }
     return mst;
 }
+
 int main()
 {
     ios_base::sync_with_stdio(0);
