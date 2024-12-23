@@ -2888,7 +2888,8 @@ int main() {
         cin>>ro[i];
     }
     char cha;
-    for(int i=0;i<6;i++){
+    for(int i=0;i<6;i++) DICE[i]=i+1;
+    {
         DICE[i]=i+1;
     }
     for(int h=0;h<a;h++)
