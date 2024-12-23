@@ -2882,7 +2882,7 @@ int main()
 using namespace std;
 int main() {
     int a,DICE[6],tmp;
-    cin>>a;
+    cin >> a;
     string ro[a];
     for(int i=0;i<a;i++) cin >> ro[i];
     char cha;
