@@ -2867,7 +2867,7 @@ int main() {
                     }
                 }
             }
-            if (cnt == 3 && ok) ans++;
+            if(cnt == 3 && ok) ans++;
         }
     }
     cout << ans;
