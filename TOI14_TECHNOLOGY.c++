@@ -2891,7 +2891,8 @@ int main() {
     for(int i=0;i<6;i++){
         DICE[i]=i+1;
     }
-    for(int h=0;h<a;h++){
+    for(int h=0;h<a;h++)
+    {
         for(int i=0;i<ro[h].length();i++)
         {
             cha=(ro[h])[i];
