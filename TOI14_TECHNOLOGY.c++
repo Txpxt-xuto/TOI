@@ -3037,7 +3037,7 @@ int query(int x,int y,int res=1e9+5)
         if(dep[head[x]]<dep[head[y]])swap(x,y);
         res=min(res,qr(pos[head[x]],pos[x]+1,cur));x=pr[head[x]];
     }
-    if(dep[x]>dep[y])swap(x,y);res=min(res,qr(pos[x],pos[y]+1,cur));
+    if(dep[x]>dep[y]) swap(x,y); res = min(res,qr(pos[x],pos[y]+1,cur));
     return res;
 }
 void update(int u,int val)
