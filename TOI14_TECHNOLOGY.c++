@@ -2855,7 +2855,8 @@ int main() {
             bool ok = true;
             q.push(Tile{i, j, 0, arr[i][j]});
             alr[i][j] = true;
-            while (!q.empty()) {
+            while (!q.empty())
+            {
                 int x = q.f.x, y = q.f.y, d = q.f.d, st = q.f.st;
                 q.pop();
                 if(d > 2 || cnt > 3 || abs(i-x) >= 2 || abs(y-j) >= 2) ok = false;
