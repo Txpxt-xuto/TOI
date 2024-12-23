@@ -3056,7 +3056,7 @@ int main(){
     ap();build(n);getsz();hld();
     for(int i=1;i<=n;i++){
         ms[id[i]].insert(a[i]);
-        if(isap[id[i]]) for(auto v:bct[id[i]])ms[v].insert(a[i]);
+        if(isap[id[i]]) for(auto v:bct[id[i]]) ms[v].insert(a[i]);
         {
             for(auto v:bct[id[i]])ms[v].insert(a[i]);
         }
