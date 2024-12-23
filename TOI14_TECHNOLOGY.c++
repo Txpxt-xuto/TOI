@@ -2947,3 +2947,126 @@ int main()
     }
     return 0;
 }
+
+#include<bits/stdc++.h>
+#define ld long double
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define all(x) x.begin(),x.end()
+#define pb push_back
+#define sz(x) (int)x.size()
+#define f first
+#define s second
+#define vi vector<int>
+#define vvi vector<vi>
+#define vpii vector<pii>
+#define ll long long
+using namespace std;
+const int N=2e5+5;
+vector<int>g[N];
+int a[N],lo[N],d[N]{0},t=0,id[N],sz[N],pr[N],dep[N],head[N],pos[N],eee=0;
+stack<int>st;
+bool vis[N]{0},isap[N]{0};
+vvi cmps,bct;
+multiset<int>ms[N];
+void ap(int u=1,int p=-1){
+    lo[u]=d[u]=++t;st.push(u);
+    int ch=0;
+    for(auto v:g[u]){
+        if(!d[v]){
+            ap(v,u);
+            lo[u]=min(lo[u],lo[v]);
+            if(d[u]<=lo[v]){
+                vis[u]=(d[u]>1||d[v]>2);
+                cmps.pb({u});
+                while(cmps.back().back()!=v){
+                    cmps.back().pb(st.top());st.pop();
+                }
+            }
+        }else if(v!=p)lo[u]=min(lo[u],d[v]);
+    }
+}int cur=0;
+void build(int n){
+    for(int i=1;i<=n;i++){
+        if(vis[i])id[i]=cur++,bct.pb({}),isap[id[i]]=1;
+    }
+    for(auto cmp : cmps){
+        bct.pb({});
+        for(auto v:cmp){
+            if(!vis[v])id[v]=cur;
+            else {
+                bct[id[v]].pb(cur);
+                bct[cur].pb(id[v]);
+            }
+        }cur++;
+    }
+}
+void getsz(int u=0,int p=0,int l=0){
+    pr[u]=p;dep[u]=l;sz[u]=1;
+    for(auto v:bct[u]){
+        if(v==p)continue;
+        getsz(v,u,l+1);sz[u]+=sz[v];
+    }
+}int ct=0;
+int seg[2*N]{0};
+void upd(int i,int amt,int sz){
+    i+=sz;seg[i]=amt;
+    for(i>>=1;i;i>>=1)seg[i]=min(seg[2*i],seg[2*i+1]);
+}
+int qr(int l,int r,int sz,int res=1e9+5){
+    for(l+=sz,r+=sz;l<r;l>>=1,r>>=1){
+        if(l&1)res=min(res,seg[l++]);
+        if(r&1)res=min(res,seg[--r]);
+    }return res;
+}
+void hld(int u=0,int p=0,int x=0){
+    head[u]=x;pos[u]=ct++;
+    int hv=-1,hs=-1;
+    for(auto v:bct[u]){
+        if(v==p)continue;
+        if(sz[v]>hs)hv=v,hs=sz[v];
+    }if(hv==-1)return;hld(hv,u,x);
+    for(auto v:bct[u]){
+        if(v==p||v==hv)continue;
+        hld(v,u,v);
+    }
+}
+int query(int x,int y,int res=1e9+5){
+    while(head[x]!=head[y]){
+        if(dep[head[x]]<dep[head[y]])swap(x,y);
+        res=min(res,qr(pos[head[x]],pos[x]+1,cur));x=pr[head[x]];
+    }if(dep[x]>dep[y])swap(x,y);res=min(res,qr(pos[x],pos[y]+1,cur));
+    return res;
+}
+void update(int u,int val){
+    int x=id[u];ms[x].erase(ms[x].lower_bound(a[u]));
+    ms[x].insert(val);upd(pos[x],*ms[x].begin(),cur);
+    if(isap[x]){
+        for(auto v:bct[x]){
+            ms[v].erase(ms[v].lower_bound(a[u]));
+            ms[v].insert(val);upd(pos[v],*ms[v].begin(),cur);
+        }
+    }a[u]=val;
+}
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n,m,q;cin>>n>>m>>q;
+    for(int i=1;i<=n;i++)cin>>a[i];
+    for(int i=1,u,v;i<=m;i++)cin>>u>>v,g[u].pb(v),g[v].pb(u);
+    ap();build(n);getsz();hld();
+    for(int i=1;i<=n;i++){
+        ms[id[i]].insert(a[i]);
+        if(isap[id[i]]){
+            for(auto v:bct[id[i]])ms[v].insert(a[i]);
+        }
+    }
+    for(int i=0;i<cur;i++)upd(pos[i],*ms[i].begin(),cur);
+    while(q--){
+        int o,u,v;cin>>o>>u>>v;
+        if(o==1)update(u,v);
+        else {
+            if(u==v)cout<<a[u]<<'\n';
+            else cout<<query(id[u],id[v])<<'\n';
+        }
+    }
+}
