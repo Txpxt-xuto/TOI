@@ -3091,3 +3091,47 @@ int main()
         }
     }
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 2e3 + 1 , M = 3e3 + 1;
+int a[N] , b[N] , dp[N][M][4];
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+    int n,m,s; cin >> n >> m >> s;
+    for(int i=1;i<=n;i++) cin >> a[i];
+    for(int i=1;i<=n;i++) cin >> b[i];
+    for(int i=1;i<=n;i++) {
+        for(int j=0;j<=m;j++) {
+            dp[i][j][0] = dp[i-1][j][0];
+            if (a[i]<0 && j+a[i]>=0) dp[i][j][0] = max(dp[i][j][0], dp[i-1][j+a[i]][0] + b[i]);
+            dp[i][j][1] = dp[i-1][j][1];
+            if (b[i]<0 && j+b[i]>=0) dp[i][j][1] = max(dp[i][j][1], dp[i-1][j+b[i]][1] + a[i]);
+        }
+    }
+    for(int i=n;i>=1;i--) {
+        for(int j=0;j<=m;j++) {
+            dp[i][j][2] = dp[i+1][j][2];
+            if (a[i]<0 && j+a[i]>=0) dp[i][j][2] = max(dp[i][j][2], dp[i+1][j+a[i]][2] + b[i]);
+            dp[i][j][3] = dp[i+1][j][3];
+            if (b[i]<0 && j+b[i]>=0) dp[i][j][3] = max(dp[i][j][3], dp[i+1][j+b[i]][3] + a[i]);
+        }
+    }
+    int ans = 0;
+    for(int i=1;i<=n;i++) if (a[i]>=0 && b[i]>=0) ans += a[i] + b[i];
+    if (s==0) cout << ans + dp[n][m][0] + dp[n][m][1];
+    if (s==1) {
+        for(int i=1;i<=n;i++) {
+            int ans1 = 0 , ans2 = 0;
+            for(int j=0;j<=m;j++) {
+                ans1 = max(ans1, dp[i][j][0] + dp[i+1][m-j][3]);
+                ans2 = max(ans2, dp[i][j][1] + dp[i+1][m-j][2]);
+            }
+            ans = max(ans, ans1 + ans2);
+        }
+        cout << ans;
+    }
+    
+    return 0;
+}
