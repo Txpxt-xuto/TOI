@@ -3098,7 +3098,8 @@ const int N = 2e3 + 1 , M = 3e3 + 1;
 int a[N] , b[N] , dp[N][M][4];
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL); cout.tie(NULL);
+    cin.tie(NULL);
+    cout.tie(NULL);
     int n,m,s; cin >> n >> m >> s;
     for(int i=1;i<=n;i++) cin >> a[i];
     for(int i=1;i<=n;i++) cin >> b[i];
