@@ -3110,8 +3110,10 @@ int main() {
             if (b[i]<0 && j+b[i]>=0) dp[i][j][1] = max(dp[i][j][1], dp[i-1][j+b[i]][1] + a[i]);
         }
     }
-    for(int i=n;i>=1;i--) {
-        for(int j=0;j<=m;j++) {
+    for(int i=n;i>=1;i--)
+    {
+        for(int j=0;j<=m;j++)
+        {
             dp[i][j][2] = dp[i+1][j][2];
             if (a[i]<0 && j+a[i]>=0) dp[i][j][2] = max(dp[i][j][2], dp[i+1][j+a[i]][2] + b[i]);
             dp[i][j][3] = dp[i+1][j][3];
