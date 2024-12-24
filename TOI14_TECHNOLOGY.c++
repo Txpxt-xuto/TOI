@@ -3107,9 +3107,9 @@ int main() {
         for(int j=0;j<=m;j++)
         {
             dp[i][j][0] = dp[i-1][j][0];
-            if (a[i]<0 && j+a[i]>=0) dp[i][j][0] = max(dp[i][j][0], dp[i-1][j+a[i]][0] + b[i]);
+            if(a[i]<0 && j+a[i]>=0) dp[i][j][0] = max(dp[i][j][0], dp[i-1][j+a[i]][0] + b[i]);
             dp[i][j][1] = dp[i-1][j][1];
-            if (b[i]<0 && j+b[i]>=0) dp[i][j][1] = max(dp[i][j][1], dp[i-1][j+b[i]][1] + a[i]);
+            if(b[i]<0 && j+b[i]>=0) dp[i][j][1] = max(dp[i][j][1], dp[i-1][j+b[i]][1] + a[i]);
         }
     }
     for(int i=n;i>=1;i--)
