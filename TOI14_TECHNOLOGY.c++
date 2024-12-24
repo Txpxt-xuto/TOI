@@ -3115,9 +3115,9 @@ int main() {
         for(int j=0;j<=m;j++)
         {
             dp[i][j][2] = dp[i+1][j][2];
-            if (a[i]<0 && j+a[i]>=0) dp[i][j][2] = max(dp[i][j][2], dp[i+1][j+a[i]][2] + b[i]);
+            if(a[i]<0 && j+a[i]>=0) dp[i][j][2] = max(dp[i][j][2], dp[i+1][j+a[i]][2] + b[i]);
             dp[i][j][3] = dp[i+1][j][3];
-            if (b[i]<0 && j+b[i]>=0) dp[i][j][3] = max(dp[i][j][3], dp[i+1][j+b[i]][3] + a[i]);
+            if(b[i]<0 && j+b[i]>=0) dp[i][j][3] = max(dp[i][j][3], dp[i+1][j+b[i]][3] + a[i]);
         }
     }
     int ans = 0;
