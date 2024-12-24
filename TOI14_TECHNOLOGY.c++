@@ -3096,7 +3096,8 @@ int main()
 using namespace std;
 const int N = 2e3 + 1 , M = 3e3 + 1;
 int a[N] , b[N] , dp[N][M][4];
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
