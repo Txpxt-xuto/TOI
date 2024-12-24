@@ -3102,8 +3102,10 @@ int main() {
     int n,m,s; cin >> n >> m >> s;
     for(int i=1;i<=n;i++) cin >> a[i];
     for(int i=1;i<=n;i++) cin >> b[i];
-    for(int i=1;i<=n;i++) {
-        for(int j=0;j<=m;j++) {
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=0;j<=m;j++)
+        {
             dp[i][j][0] = dp[i-1][j][0];
             if (a[i]<0 && j+a[i]>=0) dp[i][j][0] = max(dp[i][j][0], dp[i-1][j+a[i]][0] + b[i]);
             dp[i][j][1] = dp[i-1][j][1];
