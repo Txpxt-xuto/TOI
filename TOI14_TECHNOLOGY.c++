@@ -3187,7 +3187,8 @@ inline int chk(char a,char b){
 	return cnt;
 }
 
-inline ll rec(int l,int r){
+inline ll rec(int l,int r)
+{
 	if(dp[l][r]!=-1) return dp[l][r];
 	if(l>=r) return 1;
 	ll cnt=0;
