@@ -3171,3 +3171,36 @@ int main()
 	else ans = (s + t) + (n - t - 1 - (n - 1) / 2);
 	printf("%d", ans + 1);
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+using ll=long long int;
+const int N=505,MOD=1e9+7;
+int dp[N][N];
+int n;
+string s;
+
+inline int chk(char a,char b){
+	int cnt=0;
+	if((a=='(' || a=='?') && (b==')' || b=='?')) cnt++;
+	if((a=='[' || a=='?') && (b==']' || b=='?')) cnt++;	
+	return cnt;
+}
+
+inline ll rec(int l,int r){
+	if(dp[l][r]!=-1) return dp[l][r];
+	if(l>=r) return 1;
+	ll cnt=0;
+	for(int i=l+1;i<=r;i+=2){
+		cnt+=chk(s[l-1],s[i-1])*rec(i+1,r)*rec(l+1,i);
+		cnt%=MOD;
+	}
+	return dp[l][r]=cnt;
+}
+
+int main(){
+	ios::sync_with_stdio(0); cin.tie(0);
+	cin >> n >> s;
+	memset(dp,-1,sizeof dp);
+	cout << rec(1,n);
+}
