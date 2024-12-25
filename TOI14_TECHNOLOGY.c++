@@ -3180,7 +3180,8 @@ int dp[N][N];
 int n;
 string s;
 
-inline int chk(char a,char b){
+inline int chk(char a,char b)
+{
 	int cnt=0;
 	if((a=='(' || a=='?') && (b==')' || b=='?')) cnt++;
 	if((a=='[' || a=='?') && (b==']' || b=='?')) cnt++;	
