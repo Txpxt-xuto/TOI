@@ -3149,7 +3149,6 @@ int main()
 using namespace std;
 
 int n, ax, ay, bx, by, s, t, ans;
-
 int main() {
 	scanf("%d %d %d %d %d", &n, &ax, &ay, &bx, &by);
 	if (ax == bx && ay == by) printf("0"), exit(0);
