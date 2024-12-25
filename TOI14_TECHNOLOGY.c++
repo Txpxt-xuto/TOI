@@ -3198,8 +3198,10 @@ inline ll rec(int l,int r){
 	return dp[l][r]=cnt;
 }
 
-int main(){
-	ios::sync_with_stdio(0); cin.tie(0);
+int main()
+{
+	ios::sync_with_stdio(0);
+    cin.tie(0);
 	cin >> n >> s;
 	memset(dp,-1,sizeof dp);
 	cout << rec(1,n);
