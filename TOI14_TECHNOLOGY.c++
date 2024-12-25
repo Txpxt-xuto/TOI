@@ -3266,7 +3266,8 @@ void update(int v,int now=1,int l=1,int r=n)
     else update(v,2*now+1,mid+1,r);
     tree[now] = tree[2*now] + tree[2*now+1];
 }
-A query(int ql,int qr,int now=1,int l=1,int r=n){
+A query(int ql,int qr,int now=1,int l=1,int r=n)
+{
     if(ql <= l && r <= qr) return tree[now];
     int mid =(l+r)/2;
     if(qr <= mid) return query(ql,qr,2*now,l,mid);
