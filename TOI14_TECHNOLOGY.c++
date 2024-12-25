@@ -3271,7 +3271,8 @@ A query(int ql,int qr,int now=1,int l=1,int r=n){
     if(ql > mid) return query(ql,qr,2*now+1,mid+1,r);
     return query(ql,qr,2*now,l,mid) + query(ql,qr,2*now+1,mid+1,r);
 }
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     int q;
     cin >> n >> q;
