@@ -3191,7 +3191,8 @@ inline ll rec(int l,int r){
 	if(dp[l][r]!=-1) return dp[l][r];
 	if(l>=r) return 1;
 	ll cnt=0;
-	for(int i=l+1;i<=r;i+=2){
+	for(int i=l+1;i<=r;i+=2)
+    {
 		cnt+=chk(s[l-1],s[i-1])*rec(i+1,r)*rec(l+1,i);
 		cnt%=MOD;
 	}
