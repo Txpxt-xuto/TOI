@@ -3222,10 +3222,12 @@ struct A{
         memset(suff, 0,sizeof suff);
         sum = 0;
     }
-    A operator + (const A &o) const{
+    A operator + (const A &o) const
+    {
         A t;
         t.sum = (sum + o.sum)%3;
-        for(int i=0;i<3;i++){
+        for(int i=0;i<3;i++)
+        {
             t.cnt[i] += cnt[i] + o.cnt[i];
             t.pref[i] += pref[i];
             t.suff[i] += o.suff[i];
