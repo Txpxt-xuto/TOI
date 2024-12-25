@@ -3216,7 +3216,8 @@ using ll = long long;
 const int N = 100100;
 struct A{
     ll cnt[3], pref[3], suff[3], sum;
-    A(){
+    A()
+    {
         memset(cnt, 0,sizeof cnt);
         memset(pref, 0,sizeof pref);
         memset(suff, 0,sizeof suff);
