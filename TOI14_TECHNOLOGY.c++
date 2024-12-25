@@ -3250,8 +3250,10 @@ void build(int now=1,int l=1,int r=n){
     build(2*now,l,mid), build(2*now+1,mid+1,r);
     tree[now] = tree[2*now] + tree[2*now+1];
 }
-void update(int v,int now=1,int l=1,int r=n){
-    if(l == r){
+void update(int v,int now=1,int l=1,int r=n)
+{
+    if(l == r)
+    {
         int w = a[l];
         tree[now].sum = w;
         tree[now].cnt[0] = tree[now].pref[0] = tree[now].suff[0] = (w == 0);
