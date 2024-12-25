@@ -3282,7 +3282,8 @@ int main(){
         a[i] %= 3;
     }
     build();
-    while(q--){
+    while(q--)
+    {
         int o;
         cin >> o;
         if(o == 1)
