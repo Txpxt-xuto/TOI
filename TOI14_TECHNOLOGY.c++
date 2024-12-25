@@ -3241,7 +3241,8 @@ struct A{
 int a[N], n;
 void build(int now=1,int l=1,int r=n)
 {
-    if(l == r){
+    if(l == r)
+    {
         int w = a[l];
         tree[now].cnt[w] = tree[now].pref[w] = tree[now].suff[w] = 1;
         tree[now].sum = w;
