@@ -3285,7 +3285,8 @@ int main(){
     while(q--){
         int o;
         cin >> o;
-        if(o == 1){
+        if(o == 1)
+        {
             int x, y;
             cin >> x >> y;
             a[x] = y%3;
