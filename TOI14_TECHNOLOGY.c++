@@ -3214,7 +3214,8 @@ int main()
 using namespace std;
 using ll = long long;
 const int N = 100100;
-struct A{
+struct A
+{
     ll cnt[3], pref[3], suff[3], sum;
     A()
     {
