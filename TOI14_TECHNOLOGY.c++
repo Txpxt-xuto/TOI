@@ -3275,7 +3275,8 @@ int main(){
     cin.tie(nullptr)->sync_with_stdio(false);
     int q;
     cin >> n >> q;
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         char c;
         cin >> c;
         a[i] = c - '0';
