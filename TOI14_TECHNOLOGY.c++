@@ -3292,7 +3292,8 @@ int main(){
             a[x] = y%3;
             update(x);
         }
-        else{
+        else
+        {
             int l,r;
             cin >> l >> r;
             cout << query(l, r).cnt[0] << '\n';
