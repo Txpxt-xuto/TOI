@@ -3232,7 +3232,8 @@ struct A{
             t.pref[(i+sum)%3] += o.pref[i];
             t.suff[(i+o.sum)%3] += suff[i];
         }
-        for(int i=0;i<3;i++) for(int j=0;j<3;j++){
+        for(int i=0;i<3;i++) for(int j=0;j<3;j++) t.cnt[(i+j)%3] += suff[i] * o.pref[j];
+        {
             t.cnt[(i+j)%3] += suff[i] * o.pref[j];
         }
         return t;
