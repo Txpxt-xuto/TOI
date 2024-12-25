@@ -3209,3 +3209,93 @@ int main()
 	memset(dp,-1,sizeof dp);
 	cout << rec(1,n);
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+using ll = long long;
+const int N = 100100;
+struct A{
+    ll cnt[3], pref[3], suff[3], sum;
+    A(){
+        memset(cnt, 0,sizeof cnt);
+        memset(pref, 0,sizeof pref);
+        memset(suff, 0,sizeof suff);
+        sum = 0;
+    }
+    A operator + (const A &o) const{
+        A t;
+        t.sum = (sum + o.sum)%3;
+        for(int i=0;i<3;i++){
+            t.cnt[i] += cnt[i] + o.cnt[i];
+            t.pref[i] += pref[i];
+            t.suff[i] += o.suff[i];
+            t.pref[(i+sum)%3] += o.pref[i];
+            t.suff[(i+o.sum)%3] += suff[i];
+        }
+        for(int i=0;i<3;i++) for(int j=0;j<3;j++){
+            t.cnt[(i+j)%3] += suff[i] * o.pref[j];
+        }
+        return t;
+    }
+} tree[4*N];
+int a[N], n;
+void build(int now=1,int l=1,int r=n){
+    if(l == r){
+        int w = a[l];
+        tree[now].cnt[w] = tree[now].pref[w] = tree[now].suff[w] = 1;
+        tree[now].sum = w;
+        return;
+    }
+    int mid = (l+r)/2;
+    build(2*now,l,mid), build(2*now+1,mid+1,r);
+    tree[now] = tree[2*now] + tree[2*now+1];
+}
+void update(int v,int now=1,int l=1,int r=n){
+    if(l == r){
+        int w = a[l];
+        tree[now].sum = w;
+        tree[now].cnt[0] = tree[now].pref[0] = tree[now].suff[0] = (w == 0);
+        tree[now].cnt[1] = tree[now].pref[1] = tree[now].suff[1] = (w == 1);
+        tree[now].cnt[2] = tree[now].pref[2] = tree[now].suff[2] = (w == 2);
+        return;
+    }
+    int mid = (l+r)/2;
+    if(v <= mid) update(v,2*now,l,mid);
+    else update(v,2*now+1,mid+1,r);
+    tree[now] = tree[2*now] + tree[2*now+1];
+}
+A query(int ql,int qr,int now=1,int l=1,int r=n){
+    if(ql <= l && r <= qr) return tree[now];
+    int mid =(l+r)/2;
+    if(qr <= mid) return query(ql,qr,2*now,l,mid);
+    if(ql > mid) return query(ql,qr,2*now+1,mid+1,r);
+    return query(ql,qr,2*now,l,mid) + query(ql,qr,2*now+1,mid+1,r);
+}
+int main(){
+    cin.tie(nullptr)->sync_with_stdio(false);
+    int q;
+    cin >> n >> q;
+    for(int i=1;i<=n;i++){
+        char c;
+        cin >> c;
+        a[i] = c - '0';
+        a[i] %= 3;
+    }
+    build();
+    while(q--){
+        int o;
+        cin >> o;
+        if(o == 1){
+            int x, y;
+            cin >> x >> y;
+            a[x] = y%3;
+            update(x);
+        }
+        else{
+            int l,r;
+            cin >> l >> r;
+            cout << query(l, r).cnt[0] << '\n';
+        }
+    }
+    return 0;
+}
