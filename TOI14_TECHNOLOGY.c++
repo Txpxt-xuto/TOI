@@ -3354,7 +3354,7 @@ int main(){
   }
   vector<P> cv=getCvh(pts);
   
-    n=cv.size();
+    n = cv.size();
     db ans=0;
     for(int i=0;i<n;++i)
     {
