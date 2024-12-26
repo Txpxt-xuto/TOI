@@ -3357,9 +3357,10 @@ int main(){
   n=cv.size();
   db ans=0;
   for(int i=0;i<n;++i){
-    for(int j=i+1;j+1<n;++j){
-      for(int k=j+1;k<n;++k) ans = max(ans,area(cv[i],cv[j],cv[k]));
-    }
+        for(int j=i+1;j+1<n;++j)
+        {
+            for(int k=j+1;k<n;++k) ans = max(ans,area(cv[i],cv[j],cv[k]));
+        }
     }
     cout<<fixed<<setprecision(3)<<ans;
 }
