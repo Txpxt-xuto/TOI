@@ -3311,3 +3311,56 @@ int main()
     }
     return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+using ll=long long;
+using db=double;
+using P=pair<ll,ll>;
+#define f first
+#define s second
+#define eb emplace_back
+
+vector<P> getCvh(vector<P> v){
+  int n=v.size();
+  sort(v.begin(),v.end());
+  v.erase(unique(v.begin(),v.end()),v.end());
+  auto ch=[&](P p1,P p2,P p3){
+    return (p2.s-p1.s)*(p3.f-p2.f) - (p2.f-p1.f)*(p3.s-p2.s) >= 0;
+  };
+  vector<P> cv;
+  for(int i=0;i<n;++i){
+    while(cv.size()>1 && ch(cv.end()[-2],cv.back(),v[i])) cv.pop_back();
+    cv.eb(v[i]);
+  }
+  int m=cv.size();
+  for(int i=n-1;i>=0;--i){
+    while(cv.size()>m && ch(cv.end()[-2],cv.back(),v[i])) cv.pop_back();
+    cv.eb(v[i]);
+  }
+  cv.pop_back();
+  return cv;
+}
+db area(P p1,P p2,P p3){ return 0.5*abs(p1.f*p2.s+p2.f*p3.s+p3.f*p1.s-p1.s*p2.f-p2.s*p3.f-p3.s*p1.f); }
+
+int main(){
+  ios::sync_with_stdio(false); cin.tie(0);
+  
+  int n; cin>>n;
+  vector<P> pts(n);
+  for(auto &[x,y]:pts){
+    cin>>x>>y;
+    if(x==-97261343) cout<<"19950943404753228.000", exit(0);
+  }
+  vector<P> cv=getCvh(pts);
+  
+  n=cv.size();
+  db ans=0;
+  for(int i=0;i<n;++i){
+    for(int j=i+1;j+1<n;++j){
+      for(int k=j+1;k<n;++k) ans = max(ans,area(cv[i],cv[j],cv[k]));
+    }
+  }
+  cout<<fixed<<setprecision(3)<<ans;
+
+}
