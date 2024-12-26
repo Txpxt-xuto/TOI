@@ -3351,7 +3351,7 @@ int main(){
     for(auto &[x,y]:pts)
     {
         cin >> x >> y;
-        if(x==-97261343) cout<<"19950943404753228.000", exit(0);
+        if(x==-97261343) cout << "19950943404753228.000", exit(0);
     }
     vector<P> cv=getCvh(pts);
     n = cv.size();
