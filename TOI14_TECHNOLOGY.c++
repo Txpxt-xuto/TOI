@@ -3419,7 +3419,7 @@ void solve1(int n,int k){
         if(tt>ans)ans=tt,rs=v;
     }
     while(next_permutation(v.begin(),v.end()));
-    for(auto it : rs) cout<<it<<' ';
+    for(auto it : rs) cout << it << ' ';
 }
 void solve2(int n,int k)
 {
