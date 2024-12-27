@@ -3346,7 +3346,7 @@ db area(P p1,P p2,P p3){ return 0.5*abs(p1.f*p2.s+p2.f*p3.s+p3.f*p1.s-p1.s*p2.f-
 int main(){
   ios::sync_with_stdio(false); cin.tie(0);
   
-  int n; cin>>n;
+    int n; cin>>n;
     vector<P> pts(n);
     for(auto &[x,y]:pts)
     {
