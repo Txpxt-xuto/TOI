@@ -3322,7 +3322,7 @@ using P=pair<ll,ll>;
 #define eb emplace_back
 
 vector<P> getCvh(vector<P> v){
-  int n=v.size();
+    int n=v.size();
     sort(v.begin(),v.end());
     v.erase(unique(v.begin(),v.end()),v.end());
     auto ch=[&](P p1,P p2,P p3){
