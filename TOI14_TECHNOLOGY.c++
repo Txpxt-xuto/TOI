@@ -3338,8 +3338,8 @@ vector<P> getCvh(vector<P> v){
     while(cv.size()>m && ch(cv.end()[-2],cv.back(),v[i])) cv.pop_back();
     cv.eb(v[i]);
   }
-  cv.pop_back();
-  return cv;
+    cv.pop_back();
+    return cv;
 }
 db area(P p1,P p2,P p3){ return 0.5*abs(p1.f*p2.s+p2.f*p3.s+p3.f*p1.s-p1.s*p2.f-p2.s*p3.f-p3.s*p1.f); }
 
