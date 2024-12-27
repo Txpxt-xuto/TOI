@@ -3436,7 +3436,8 @@ int main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int n,k;cin>>n>>k;
+    int n,k;
+    cin>>n>>k;
     if(n<=9)solve1(n,k);
     else solve2(n,k);
 }
