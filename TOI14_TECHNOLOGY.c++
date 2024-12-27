@@ -3344,7 +3344,7 @@ vector<P> getCvh(vector<P> v){
 db area(P p1,P p2,P p3){ return 0.5*abs(p1.f*p2.s+p2.f*p3.s+p3.f*p1.s-p1.s*p2.f-p2.s*p3.f-p3.s*p1.f); }
 
 int main(){
-  ios::sync_with_stdio(false); cin.tie(0);
+    ios::sync_with_stdio(false); cin.tie(0);
     int n; cin>>n;
     vector<P> pts(n);
     for(auto &[x,y]:pts)
