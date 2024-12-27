@@ -3398,7 +3398,8 @@ struct mint{
         return res;
     }
 }s1;
-struct maxt{
+struct maxt
+{
     int t[2*N];
     void build(int sz)
     {
