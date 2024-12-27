@@ -3320,7 +3320,6 @@ using P=pair<ll,ll>;
 #define f first
 #define s second
 #define eb emplace_back
-
 vector<P> getCvh(vector<P> v)
 {
     int n=v.size();
