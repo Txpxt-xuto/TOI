@@ -3334,10 +3334,11 @@ vector<P> getCvh(vector<P> v){
     cv.eb(v[i]);
   }
     int m=cv.size();
-    for(int i=n-1;i>=0;--i){
+    for(int i=n-1;i>=0;--i)
+    {
     while(cv.size()>m && ch(cv.end()[-2],cv.back(),v[i])) cv.pop_back();
     cv.eb(v[i]);
-  }
+    }
     cv.pop_back();
     return cv;
 }
