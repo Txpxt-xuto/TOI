@@ -3329,7 +3329,8 @@ vector<P> getCvh(vector<P> v){
     return (p2.s-p1.s)*(p3.f-p2.f) - (p2.f-p1.f)*(p3.s-p2.s) >= 0;
   };
   vector<P> cv;
-    for(int i=0;i<n;++i){
+    for(int i=0;i<n;++i)
+    {
         while(cv.size()>1 && ch(cv.end()[-2],cv.back(),v[i])) cv.pop_back();
         cv.eb(v[i]);
     }
