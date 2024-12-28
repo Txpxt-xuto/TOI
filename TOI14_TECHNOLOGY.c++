@@ -3575,7 +3575,7 @@ int main() {
         usedEdgeAndBridge.pop();
 
         sumWeight += w;
-        if(edgeOrBridge == 0) {
+        if(edgeOrBridge == 0) edge.emplace(w, u, v, j);
             edge.emplace(w, u, v, j);
         }
         else bridge.emplace(w, v, j);
