@@ -3486,13 +3486,15 @@ int32_t main(){
 	while(m--)
     {
 		int x, y, r;
-		cin>>x >> y >> r;
+		cin >> x >> y >> r;
 		bool a=0, b=0;
-		for(int i=1;i<=n;i++){
+		for(int i=1;i<=n;i++)
+        {
 			int dx = x-pos[i].F, dy = y-pos[i].S;
 			if(dx*dx+dy*dy<=r*r) a = 1;
 			else b = 1;
-			if(a&&b){
+			if(a&&b)
+            {
 				cnt++;
 				break;
 			}
