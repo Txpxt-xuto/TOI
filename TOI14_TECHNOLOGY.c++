@@ -3458,3 +3458,43 @@ int main()
     if(n<=9) solve1(n,k);
     else solve2(n,k);
 }
+
+#include<bits/stdc++.h>
+#define F first
+#define S second
+#define ll long long
+#define int ll
+#define pii pair<ll,ll>
+#define pipii pair<ll,pii>
+#define inf 1e18
+using namespace std;
+
+const int N = 100;
+
+pii pos[N+5];
+
+int32_t main(){
+	ios_base::sync_with_stdio(0); cin.tie(0);
+	int n, m, cnt=0;
+	cin>>n>>m;
+	for(int i=1;i<=n;i++){
+		int x, y;
+		cin>>x>>y;
+		pos[i] = {x,y};
+	}
+	while(m--){
+		int x, y, r;
+		cin>>x>>y>>r;
+		bool a=0, b=0;
+		for(int i=1;i<=n;i++){
+			int dx = x-pos[i].F, dy = y-pos[i].S;
+			if(dx*dx+dy*dy<=r*r) a = 1;
+			else b = 1;
+			if(a&&b){
+				cnt++;
+				break;
+			}
+		}
+	}
+	cout<<cnt;
+}
