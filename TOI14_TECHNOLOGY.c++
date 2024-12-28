@@ -3578,7 +3578,8 @@ int main() {
         if(edgeOrBridge == 0) {
             edge.emplace(w, u, v, j);
         }
-        else {
+        else bridge.emplace(w, v, j);
+        {
             bridge.emplace(w, v, j);
         }
     }
