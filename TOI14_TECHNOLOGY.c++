@@ -3564,16 +3564,15 @@ int main() {
         if(weight <= -w) {
             usedEdgeAndBridge.emplace(weight, a, b, index, edgeOrBridge);
         }
-        else {
+        else usedEdgeAndBridge.emplace(-w, u, (u == a ? b : a), j, 1);
             usedEdgeAndBridge.emplace(-w, u, (u == a ? b : a), j, 1);
         }
     }
-
     long long int sumWeight = 0;
-    while(!usedEdgeAndBridge.empty()) {
+    while(!usedEdgeAndBridge.empty())
+    {
         auto [w, u, v, j, edgeOrBridge] = usedEdgeAndBridge.top();
         usedEdgeAndBridge.pop();
-
         sumWeight += w;
         if(edgeOrBridge == 0) edge.emplace(w, u, v, j);
         else bridge.emplace(w, v, j);
