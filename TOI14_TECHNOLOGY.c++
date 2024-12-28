@@ -3486,7 +3486,7 @@ int32_t main(){
 	while(m--)
     {
 		int x, y, r;
-		cin>>x>>y >>r ;
+		cin>>x>>y >> r;
 		bool a=0, b=0;
 		for(int i=1;i<=n;i++){
 			int dx = x-pos[i].F, dy = y-pos[i].S;
