@@ -3583,22 +3583,17 @@ int main() {
         }
     }
     cout << sumWeight << "\n";
-
     cout << edge.size() << "\n";
     while(!edge.empty()) {
         auto [w, u, v, j] = edge.top();
         edge.pop();
-
         cout << j << "\n";
     }
-
     cout << bridge.size() << "\n";
     while(!bridge.empty()) {
         auto [w, v, j] = bridge.top();
         bridge.pop();
-
         cout << j << " " << v << "\n";
     }
-
     return 0;
 }
