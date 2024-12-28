@@ -3590,7 +3590,8 @@ int main() {
         cout << j << "\n";
     }
     cout << bridge.size() << "\n";
-    while(!bridge.empty()) {
+    while(!bridge.empty())
+    {
         auto [w, v, j] = bridge.top();
         bridge.pop();
         cout << j << " " << v << "\n";
