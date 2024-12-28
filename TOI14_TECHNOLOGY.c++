@@ -3576,7 +3576,7 @@ int main() {
 
         sumWeight += w;
         if(edgeOrBridge == 0) edge.emplace(w, u, v, j);
-           
+    
         else bridge.emplace(w, v, j);
     }
     cout << sumWeight << "\n";
