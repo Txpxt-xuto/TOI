@@ -3502,3 +3502,103 @@ int32_t main()
 	}
 	cout << cnt;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int dsFind(int u, vector<int> &disjointSet) {
+    if(u == disjointSet[u]) {
+        return disjointSet[u];
+    }
+
+    return disjointSet[u] = dsFind(disjointSet[u], disjointSet);
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    int n, m, k;
+    cin >> n >> m >> k;
+
+    priority_queue<tuple<int, int, int, int>> edge;
+    for(int i = 0; i < m; ++i) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        edge.emplace(-w, u, v, i + 1);
+    }
+    
+    priority_queue<tuple<int, int, int>> bridge;
+    for(int i = 0; i < k; ++i) {
+        int u, w;
+        cin >> u >> w;
+        bridge.emplace(-w, u, i + 1);
+    }
+
+    vector<int> disjointSet(n + 1);
+    for(int i = 1; i <= n; ++i) {
+        disjointSet[i] = i;
+    }
+    
+    priority_queue<tuple<int, int, int, int, int>> usedEdgeAndBridge;
+    while(!edge.empty()) {
+        auto [w, u, v, j] = edge.top();
+        edge.pop();
+
+        int a = dsFind(u, disjointSet);
+        int b = dsFind(v, disjointSet);
+        
+        if(a != b) {
+            disjointSet[b] = a;
+            usedEdgeAndBridge.emplace(-w, u, v, j, 0);
+        }
+    }
+
+    while(!bridge.empty()) {
+        auto [w, u, j] = bridge.top();
+        bridge.pop();
+
+        auto [weight, a, b, index, edgeOrBridge] = usedEdgeAndBridge.top();
+        usedEdgeAndBridge.pop();
+
+        if(weight <= -w) {
+            usedEdgeAndBridge.emplace(weight, a, b, index, edgeOrBridge);
+        }
+        else {
+            usedEdgeAndBridge.emplace(-w, u, (u == a ? b : a), j, 1);
+        }
+    }
+
+    long long int sumWeight = 0;
+    while(!usedEdgeAndBridge.empty()) {
+        auto [w, u, v, j, edgeOrBridge] = usedEdgeAndBridge.top();
+        usedEdgeAndBridge.pop();
+
+        sumWeight += w;
+        if(edgeOrBridge == 0) {
+            edge.emplace(w, u, v, j);
+        }
+        else {
+            bridge.emplace(w, v, j);
+        }
+    }
+    cout << sumWeight << "\n";
+
+    cout << edge.size() << "\n";
+    while(!edge.empty()) {
+        auto [w, u, v, j] = edge.top();
+        edge.pop();
+
+        cout << j << "\n";
+    }
+
+    cout << bridge.size() << "\n";
+    while(!bridge.empty()) {
+        auto [w, v, j] = bridge.top();
+        bridge.pop();
+
+        cout << j << " " << v << "\n";
+    }
+
+    return 0;
+}
