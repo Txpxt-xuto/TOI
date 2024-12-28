@@ -3579,7 +3579,7 @@ int main() {
             edge.emplace(w, u, v, j);
         }
         else bridge.emplace(w, v, j);
-        {
+
             bridge.emplace(w, v, j);
     }
     cout << sumWeight << "\n";
