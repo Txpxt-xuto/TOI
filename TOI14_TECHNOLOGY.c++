@@ -3483,7 +3483,8 @@ int32_t main(){
 		cin >> x >> y;
 		pos[i] = {x,y};
 	}
-	while(m--){
+	while(m--)
+    {
 		int x, y, r;
 		cin>>x>>y>>r;
 		bool a=0, b=0;
