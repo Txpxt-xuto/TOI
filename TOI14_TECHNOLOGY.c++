@@ -3480,7 +3480,7 @@ int32_t main(){
 	for(int i=1;i<=n;i++)
     {
 		int x, y;
-		cin >> x>>y;
+		cin >> x >> y;
 		pos[i] = {x,y};
 	}
 	while(m--){
