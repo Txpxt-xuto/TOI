@@ -3566,7 +3566,7 @@ int main() {
         }
         else usedEdgeAndBridge.emplace(-w, u, (u == a ? b : a), j, 1);
             usedEdgeAndBridge.emplace(-w, u, (u == a ? b : a), j, 1);
-        }
+
     }
     long long int sumWeight = 0;
     while(!usedEdgeAndBridge.empty())
