@@ -3584,7 +3584,8 @@ int main() {
     }
     cout << sumWeight << "\n";
     cout << edge.size() << "\n";
-    while(!edge.empty()) {
+    while(!edge.empty())
+    {
         auto [w, u, v, j] = edge.top();
         edge.pop();
         cout << j << "\n";
