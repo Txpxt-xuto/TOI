@@ -3627,8 +3627,8 @@ pll solve(ll eee,int n)
         dp2[i]=min(dp2[i],dp1[i]);
         ppp x1={-w[i],dp1[i].f-pw[i]+p[i]*w[i],dp1[i].s};
         ppp x2={-p[i],pw[i]+dp2[i].f,dp2[i].s};
-        while(d2.size()>1&&ch(d2[(int)d2.size()-2],d2.back(),x2))d2.pop_back();
-        while(d1.size()>1&&ch(d1[(int)d1.size()-2],d1.back(),x1))d1.pop_back();
+        while(d2.size()>1&&ch(d2[(int)d2.size()-2],d2.back(),x2)) d2.pop_back();
+        while(d1.size()>1&&ch(d1[(int)d1.size()-2],d1.back(),x1)) d1.pop_back();
         d1.pb(x1);d2.pb(x2);
     }
     return dp2[n];
