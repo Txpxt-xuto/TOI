@@ -3629,7 +3629,8 @@ pll solve(ll eee,int n){
         d1.pb(x1);d2.pb(x2);
     }return dp2[n];
 }
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);cin.tie(0);
     int n,m;cin>>n>>m;
     for(int i=2;i<=n;i++)cin>>w[i],w[i]+=w[i-1];
@@ -3638,9 +3639,11 @@ int main(){
     for(int i=1;i<=n;i++)pw[i]=pw[i-1]+p[i]*w[i];
     for(int i=1;i<=n;i++)p[i]+=p[i-1];
     ll l=-1e18,r=1e18;
-    while(l<r){
+    while(l<r)
+    {
         ll md=(l+r)>>1;
         if(solve(md,n).s<=m)r=md;
         else l=md+1;
-    }cout<<solve(l,n).f-l*m;
+    }
+    cout<<solve(l,n).f-l*m;
 }
