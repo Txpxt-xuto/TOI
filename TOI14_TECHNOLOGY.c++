@@ -3647,5 +3647,5 @@ int main()
         if(solve(md,n).s<=m) r=md;
         else l=md+1;
     }
-    cout<<solve(l,n).f-l*m;
+    cout << solve(l,n).f-l*m;
 }
