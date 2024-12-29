@@ -3627,7 +3627,8 @@ pll solve(ll eee,int n){
         while(d2.size()>1&&ch(d2[(int)d2.size()-2],d2.back(),x2))d2.pop_back();
         while(d1.size()>1&&ch(d1[(int)d1.size()-2],d1.back(),x1))d1.pop_back();
         d1.pb(x1);d2.pb(x2);
-    }return dp2[n];
+    }
+    return dp2[n];
 }
 int main()
 {
