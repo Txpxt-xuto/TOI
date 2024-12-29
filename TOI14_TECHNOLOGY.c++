@@ -3743,8 +3743,9 @@ int32_t main(){
         int w=pq.top().f;
         int u=pq.top().s;
         pq.pop();
-        if(u==V){
-            cout<<w;
+        if(u==V)
+        {
+            cout << w;
             return 0;
         }
         for(auto &vw:adj[u])
