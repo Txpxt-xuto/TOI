@@ -3617,7 +3617,9 @@ pll solve(ll eee,int n)
 {
     deque<ppp>d1,d2;
     d2.pb({0,0,0});
-    for(int i=1;i<=n;i++){dp2[i]=dp1[i]={2e18,2e18};
+    for(int i=1;i<=n;i++)
+    { 
+        dp2[i]=dp1[i]={2e18,2e18};
         while(d2.size()>1&&get(d2[0],d2[1])<w[i])d2.pop_front();
         while(d1.size()>1&&get(d1[0],d1[1])<p[i])d1.pop_front();
         dp1[i]={d2[0].f*w[i]+d2[0].s-pw[i]+p[i]*w[i]+c[i]+eee,d2[0].t+1};
