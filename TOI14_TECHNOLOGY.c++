@@ -3607,10 +3607,12 @@ pll dp1[mxn],dp2[mxn];
 struct ppp{
     ll f,s,t;
 };
-double get(ppp a,ppp b){
+double get(ppp a,ppp b)
+{
     return (long double)(b.s-a.s)/(a.f-b.f);
 }
-bool ch(ppp a,ppp b,ppp c){
+bool ch(ppp a,ppp b,ppp c)
+{
     return (a.s-b.s)*(c.f-b.f)>=(b.s-c.s)*(b.f-a.f);
 }
 pll solve(ll eee,int n)
