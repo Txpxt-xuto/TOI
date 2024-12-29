@@ -3644,7 +3644,7 @@ int main()
     while(l<r)
     {
         ll md=(l+r)>>1;
-        if(solve(md,n).s<=m)r=md;
+        if(solve(md,n).s<=m) r=md;
         else l=md+1;
     }
     cout<<solve(l,n).f-l*m;
