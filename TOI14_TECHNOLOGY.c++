@@ -3623,7 +3623,7 @@ pll solve(ll eee,int n)
         while(d2.size()>1&&get(d2[0],d2[1])<w[i]) d2.pop_front();
         while(d1.size()>1&&get(d1[0],d1[1])<p[i]) d1.pop_front();
         dp1[i]={d2[0].f*w[i]+d2[0].s-pw[i]+p[i]*w[i]+c[i]+eee,d2[0].t+1};
-        if(i!=1)dp2[i]={d1[0].f*p[i]+d1[0].s+pw[i],d1[0].t};
+        if(i!=1) dp2[i]={d1[0].f*p[i]+d1[0].s+pw[i],d1[0].t};
         dp2[i]=min(dp2[i],dp1[i]);
         ppp x1={-w[i],dp1[i].f-pw[i]+p[i]*w[i],dp1[i].s};
         ppp x2={-p[i],pw[i]+dp2[i].f,dp2[i].s};
