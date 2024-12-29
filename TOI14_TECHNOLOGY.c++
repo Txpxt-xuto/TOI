@@ -3666,7 +3666,6 @@ using namespace std;
 #define f first
 #define s second
 
-//#define int ll
 
 const int inf=1e9+7;
 
