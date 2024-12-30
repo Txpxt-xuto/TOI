@@ -3799,7 +3799,8 @@ int main(){
         ll cou = 0;
         vis[x][y]=1;
         pq.push({x, y, a[x][y]});
-        while(!pq.empty()){
+        while(!pq.empty())
+        {
             auto [x,y,w] = pq.top();
             pq.pop();
             cou += w;
