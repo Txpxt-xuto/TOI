@@ -3791,7 +3791,6 @@ int main(){
     while(t--){
         cin >> n >> scope >> x >> y;
         for(int i=1; i<=n; i++) for(int j=1; j<=n; j++) cin >> a[i][j];
-            for(int j
         int maxx = 0;
         ll cou = 0;
         vis[x][y]=1;
