@@ -3787,7 +3787,8 @@ int xx[] = {0,0,-1,1};
 int xy[] = {-1,1,0,0};
 int main()
 {
-    ios::sync_with_stdio(0),cin.tie(0);
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     cin >> t;
     while(t--)
     {
