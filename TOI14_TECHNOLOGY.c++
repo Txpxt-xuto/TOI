@@ -3785,10 +3785,12 @@ struct DATA{
 priority_queue<DATA>pq;
 int xx[] = {0,0,-1,1};
 int xy[] = {-1,1,0,0};
-int main(){
+int main()
+{
     ios::sync_with_stdio(0),cin.tie(0);
     cin >> t;
-    while(t--){
+    while(t--)
+    {
         cin >> n >> scope >> x >> y;
         for(int i=1; i<=n; i++) for(int j=1; j<=n; j++) cin >> a[i][j];
         int maxx = 0;
