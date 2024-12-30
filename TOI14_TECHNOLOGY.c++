@@ -3804,7 +3804,8 @@ int main(){
             pq.pop();
             cou += w;
             maxx = max(maxx,w);
-            if(cou >= scope){
+            if(cou >= scope)
+            {
                 cout << maxx << '\n';
                 break;
             }
