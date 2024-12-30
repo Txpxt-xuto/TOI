@@ -3765,3 +3765,79 @@ int32_t main()
     }
     return 0;
 }
+
+#include<bits/stdc++.h>
+#define ll long long
+#define vec vector
+#define st first
+#define nd second
+using namespace std;
+const int N = 1e3+2, mod = 1e9+7;
+int n, t, x, y, a[N][N];
+bool vis[N][N];
+ll scope;
+struct DATA{
+    int x, y, w;
+    bool operator < (const DATA & d2) const{
+        return w > d2.w;
+    }
+};
+priority_queue<DATA>pq;
+int xx[] = {0,0,-1,1};
+int xy[] = {-1,1,0,0};
+int main(){
+    ios::sync_with_stdio(0),cin.tie(0);
+    cin >> t;
+    while(t--){
+        cin >> n >> scope >> x >> y;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n; j++){
+                cin >> a[i][j];
+            }
+        }
+        int maxx = 0;
+        ll cou = 0;
+        vis[x][y]=1;
+        pq.push({x, y, a[x][y]});
+        while(!pq.empty()){
+            auto [x,y,w] = pq.top();
+            pq.pop();
+            cou += w;
+            maxx = max(maxx,w);
+            if(cou >= scope){
+                cout << maxx << '\n';
+                break;
+            }
+            for(int i=0; i<4; i++){
+                int nx = x+xx[i];
+                int ny = y+xy[i];
+                if(nx>n || ny>n || nx<1 || ny<1 || vis[nx][ny]) continue;
+                vis[nx][ny]=1;
+                pq.push({nx,ny,a[nx][ny]});
+            }
+        }
+        while(!pq.empty()) pq.pop();
+        memset(vis,0,sizeof vis);
+    }
+}
+/*
+4
+2 3
+1 1
+1 1
+1 2
+2 3
+2 2
+1 1
+1 2
+3 9
+1 1
+3 1 1
+6 2 2
+2 2 2
+3 9
+2 2
+3 1 1
+6 2 2
+2 2 2
+*/
