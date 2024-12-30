@@ -3808,7 +3808,8 @@ int main(){
                 cout << maxx << '\n';
                 break;
             }
-            for(int i=0; i<4; i++){
+            for(int i=0; i<4; i++)
+            {
                 int nx = x+xx[i];
                 int ny = y+xy[i];
                 if(nx>n || ny>n || nx<1 || ny<1 || vis[nx][ny]) continue;
