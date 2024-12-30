@@ -3820,7 +3820,6 @@ int main(){
         memset(vis,0,sizeof vis);
     }
 }
-/*
 4
 1 1
 2 2
