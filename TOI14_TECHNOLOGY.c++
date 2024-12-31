@@ -3857,10 +3857,10 @@ int main()
         if (!i) {
             for (int j=0;j<3;j++)
             {
-                for (int k=0;k<n;k++) cout <<"#";
+                for (int k=0;k<n;k++) cout << "#";
                 cout << ' ';
             }
-            for (int k=0;k<n-1;k++) cout <<"#";
+            for (int k=0;k<n-1;k++) cout << "#";
             cout << '\n';
         } 
         else if(i<n-1)
