@@ -3846,7 +3846,8 @@ using namespace std;
 #define sz(x) x.size()
 #define pb push_back
 const int mod = 1e9+7,maxn=500005;
-int main(){
+int main()
+{
     lgm;
     int n;
     cin >> n;
