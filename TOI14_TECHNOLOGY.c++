@@ -3894,7 +3894,7 @@ int main(){
             }
             cout << '\n';
         } 
-        else if (i==n-1)
+        else if(i==n-1)
         {
             for (int k=0;k<n;k++) cout << "#";
             cout << ' ';
