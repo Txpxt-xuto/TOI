@@ -3921,7 +3921,6 @@ int main(){
             cout << ' ';
             cout << "#";
             for(int i=0;i<cnt;i++) cout << ' ';
-    
             cout << "#";
             cnt++;
             for(int i=cnt;i<n;i++) cout << ' ';
