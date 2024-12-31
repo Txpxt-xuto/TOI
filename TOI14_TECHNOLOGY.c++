@@ -3855,8 +3855,10 @@ int main()
     for(int i=0;i<2*n-1;i++)
     {
         if (!i) {
-            for (int j=0;j<3;j++) {
-                for (int k=0;k<n;k++) {
+            for (int j=0;j<3;j++)
+            {
+                for (int k=0;k<n;k++)
+                {
                     cout <<"#";
                 }
                 cout << ' ';
