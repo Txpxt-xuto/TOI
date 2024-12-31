@@ -3879,24 +3879,12 @@ int main()
         {
             cout << "#";
             for (int k=0;k<n;k++) cout << ' ';
-            {
-                cout <<' ';
-            }
             for (int k=0;k<n;k++) cout << "#";
-            {
-                cout <<"#";
-            }
             cout << ' ';
             cout << "#";
             for (int i=0;i<cnt;i++) cout << ' ';
-            {
-                cout << ' ';
-            }
             cout << "# ";
             for (int k=0;k<n-1;k++) cout << "#";
-            {
-                cout <<"#";
-            }
             cout << '\n';
         } 
         else if(i==n-1)
