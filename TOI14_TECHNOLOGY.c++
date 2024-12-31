@@ -3901,9 +3901,9 @@ int main(){
             cout << "#";
             for (int i=0;i<n-2;i++) cout << ' ';
             cout << "# ";
-            for (int k=0;k<n;k++) 
+            for (int k=0;k<n;k++) cout <<"#";
             {
-                cout <<"#";
+          
             }
             cout << ' ';
             cout << "#";
