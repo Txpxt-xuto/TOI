@@ -3878,22 +3878,22 @@ int main()
         else if (i==2*n-2)
         {
             cout << "#";
-            for (int k=0;k<n;k++)
+            for (int k=0;k<n;k++) cout << ' ';
             {
                 cout <<' ';
             }
-            for (int k=0;k<n;k++)
+            for (int k=0;k<n;k++) cout << "#";
             {
                 cout <<"#";
             }
             cout << ' ';
             cout << "#";
-            for (int i=0;i<cnt;i++)
+            for (int i=0;i<cnt;i++) cout << ' ';
             {
                 cout << ' ';
             }
             cout << "# ";
-            for (int k=0;k<n-1;k++)
+            for (int k=0;k<n-1;k++) cout << "#";
             {
                 cout <<"#";
             }
