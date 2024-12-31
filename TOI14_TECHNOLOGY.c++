@@ -3860,7 +3860,7 @@ int main()
                 for (int k=0;k<n;k++) cout <<"#";
                 cout << ' ';
             }
-            for (int k=0;k<n-1;k++) {
+            for (int k=0;k<n-1;k++) cout <<"#";
                 cout <<"#";
             }
             cout << '\n';
