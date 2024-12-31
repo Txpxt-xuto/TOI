@@ -3823,9 +3823,6 @@ int main()
     }
 }
 
-/********************
- * what  the  sigma *
- ********************/
 #pragma GCC optimize("O3","unroll-loops")
 #include <iostream>
 #include <vector>
