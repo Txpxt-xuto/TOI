@@ -3893,13 +3893,15 @@ int main(){
                 cout <<"#";
             }
             cout << '\n';
-        } else if (i==n-1) {
-            for (int k=0;k<n;k++) cout <<"#";
+        } 
+        else if (i==n-1)
+        {
+            for (int k=0;k<n;k++) cout << "#";
             cout << ' ';
             cout << "#";
             for(int i=0;i<n-2;i++) cout << ' ';
             cout << "# ";
-            for(int k=0;k<n;k++) cout <<"#";
+            for(int k=0;k<n;k++) cout << "#";
             cout << ' ';
             cout << "#";
             for(int i=0;i<n-2;i++) cout << ' ';
