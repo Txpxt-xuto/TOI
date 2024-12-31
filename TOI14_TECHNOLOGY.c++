@@ -3823,3 +3823,113 @@ int main()
     }
 }
 
+/********************
+ * what  the  sigma *
+ ********************/
+#pragma GCC optimize("O3","unroll-loops")
+#include <iostream>
+#include <vector>
+#include <map>
+#include <queue>
+#include <algorithm>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+#define ordered_set tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
+using namespace std;
+#define lgm cin.tie(0)->sync_with_stdio(0);
+#define be(x) x.begin(),x.end()
+#define ve vector
+#define ll long long
+#define f first
+#define s second
+#define pii pair<int, int>
+#define tii tuple<int,int,int>
+#define pll pair<ll,ll>
+#define sz(x) x.size()
+#define pb push_back
+const int mod = 1e9+7,maxn=500005;
+int main(){
+    lgm;
+    int n;
+    cin >> n;
+    int cnt=0;
+    for (int i=0;i<2*n-1;i++) {
+        if (!i) {
+            for (int j=0;j<3;j++) {
+                for (int k=0;k<n;k++) {
+                    cout <<"#";
+                }
+                cout << ' ';
+            }
+            for (int k=0;k<n-1;k++) {
+                cout <<"#";
+            }
+            cout << '\n';
+        } else if (i<n-1) {
+            cout << "#";
+            for (int i=0;i<n-1;i++) cout << ' ';
+            for (int k=0;k<3;k++) {
+                cout << " #";
+                for (int i=0;i<n-2;i++) cout << ' ';
+                cout << "#";
+            }
+            cout << '\n';
+        } else if (i==2*n-2) {
+            cout << "#";
+            for (int k=0;k<n;k++) {
+                cout <<' ';
+            }
+            for (int k=0;k<n;k++) {
+                cout <<"#";
+            }
+            cout << ' ';
+            cout << "#";
+            for (int i=0;i<cnt;i++) {
+                cout << ' ';
+            }
+            cout << "# ";
+            for (int k=0;k<n-1;k++) {
+                cout <<"#";
+            }
+            cout << '\n';
+        } else if (i==n-1) {
+            for (int k=0;k<n;k++) {
+                cout <<"#";
+            }
+            cout << ' ';
+            cout << "#";
+            for (int i=0;i<n-2;i++) cout << ' ';
+            cout << "# ";
+            for (int k=0;k<n;k++) {
+                cout <<"#";
+            }
+            cout << ' ';
+            cout << "#";
+            for (int i=0;i<n-2;i++) cout << ' ';
+            cout << "# ";
+            cout << '\n';
+        }
+        else {
+            cout << "#";
+            for (int k=0;k<n;k++) {
+                cout <<' ';
+            }
+            cout << "#";
+            for (int i=0;i<n-2;i++) cout << ' ';
+            cout << "#";
+            cout << ' ';
+            cout << "#";
+            for (int i=0;i<cnt;i++) {
+                cout << ' ';
+            }
+            cout << "#";
+            cnt++;
+            for (int i=cnt;i<n;i++) cout << ' ';
+            cout << "#";
+            for (int i=0;i<n-2;i++) cout << ' ';
+            cout << "# ";
+            cout << '\n';
+        }
+    }
+}
