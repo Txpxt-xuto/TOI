@@ -3870,11 +3870,13 @@ int main()
             for(int k=0;k<3;k++)
             {
                 cout << " #";
-                for (int i=0;i<n-2;i++) cout << ' ';
+                for(int i=0;i<n-2;i++) cout << ' ';
                 cout << "#";
             }
             cout << '\n';
-        } else if (i==2*n-2) {
+        }
+        else if (i==2*n-2)
+        {
             cout << "#";
             for (int k=0;k<n;k++) {
                 cout <<' ';
