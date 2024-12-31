@@ -3861,8 +3861,6 @@ int main()
                 cout << ' ';
             }
             for (int k=0;k<n-1;k++) cout <<"#";
-                cout <<"#";
-            }
             cout << '\n';
         } else if (i<n-1) {
             cout << "#";
