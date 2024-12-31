@@ -3920,7 +3920,7 @@ int main(){
             cout << "#";
             cout << ' ';
             cout << "#";
-            for (int i=0;i<cnt;i++) {
+            for(int i=0;i<cnt;i++) cout << ' ';
                 cout << ' ';
             }
             cout << "#";
