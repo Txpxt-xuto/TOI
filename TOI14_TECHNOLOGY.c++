@@ -3913,8 +3913,7 @@ int main(){
         else {
             cout << "#";
             for (int k=0;k<n;k++) cout <<' ';
-                cout <<' ';
-            }
+                co
             cout << "#";
             for (int i=0;i<n-2;i++) cout << ' ';
             cout << "#";
