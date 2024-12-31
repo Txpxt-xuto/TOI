@@ -3866,8 +3866,9 @@ int main()
         else if(i<n-1)
         {
             cout << "#";
-            for (int i=0;i<n-1;i++) cout << ' ';
-            for (int k=0;k<3;k++) {
+            for(int i=0;i<n-1;i++) cout << ' ';
+            for(int k=0;k<3;k++)
+            {
                 cout << " #";
                 for (int i=0;i<n-2;i++) cout << ' ';
                 cout << "#";
