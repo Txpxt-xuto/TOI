@@ -3910,7 +3910,8 @@ int main(){
             cout << "# ";
             cout << '\n';
         }
-        else {
+        else
+        {
             cout << "#";
             for(int k=0;k<n;k++) cout <<' ';
             cout << "#";
