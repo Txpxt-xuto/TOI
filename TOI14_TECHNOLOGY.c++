@@ -3937,7 +3937,7 @@ int main() {
 	} else if (ax - ay == bx - by) {
 		if (ax < bx) s = n - bx, t = bx - by;
 		else s = by - 1, t = bx - by;
-	} 
+	}
     else 
     {
 		if (ay < by) s = bx - by, t = n - bx;
