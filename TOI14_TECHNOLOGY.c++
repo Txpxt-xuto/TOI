@@ -4157,26 +4157,28 @@ int main() {
 					ans += mod;
 					ans %= mod;
 
-					if (ni+nj-2 >= 0 && n-2 >= 0) {
+					if(ni+nj-2 >= 0 && n-2 >= 0)
+                    {
 						ans -= (((((ncr[ni][1] * ncr[nj][1]) % mod) * ncr[ni+nj-2][n-2] ) % mod ) * fac[n] ) % mod;
 						ans %= mod;
 						ans += mod;
 						ans %= mod;
 					}
-					if (ni + nj + nij - 1 >= 0 && n-1 >= 0) {
+					if(ni + nj + nij - 1 >= 0 && n-1 >= 0)
+                    {
 						ans -= (((ncr[nij][1] * ncr[ni + nj + nij - 1][n-1]) % mod) * fac[n]) % mod;
 						ans %= mod;
 						ans += mod;
 						ans %= mod;
 					}
-
-					if (ni+nk-2 >= 0 && n-2 >= 0) {
+					if(ni+nk-2 >= 0 && n-2 >= 0) {
 						ans -= (((((ncr[ni][1] * ncr[nk][1]) % mod) * ncr[ni+nk-2][n-2] ) % mod ) * fac[n] ) % mod;
 						ans %= mod;
 						ans += mod;
 						ans %= mod;
 					}
-					if (ni + nk + nik - 1 >= 0 && n-1 >= 0) {
+					if (ni + nk + nik - 1 >= 0 && n-1 >= 0)
+                    {
 						ans -= (((ncr[nik][1] * ncr[ni + nk + nik - 1][n-1]) % mod) * fac[n]) % mod;
 						ans %= mod;
 						ans += mod;
