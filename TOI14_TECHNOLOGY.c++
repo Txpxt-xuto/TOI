@@ -3949,3 +3949,258 @@ int main()
 	else ans = (s + t) + (n - t - 1 - (n - 1) / 2);
 	printf("%d", ans + 1);
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define mod 1000000007
+
+const int MX = 1e3 + 5;
+const int MXP = 200;
+
+int idx[MX];
+long long ncr[MX][MX], fac[MX];
+bool isPrime[MX];
+vector<int> prime, p1[MXP], p2[MXP][MXP], p3[MXP][MXP][MXP];
+
+int main() {
+
+	int cnt = 0;
+	for (int i=2 ; i<=1000 ; i++) isPrime[i] = true;
+	for (int i=2 ; i<=1000 ; i++) {
+
+		if (isPrime[i]) {
+			idx[i] = ++cnt;
+			prime.push_back(i);
+			for (int j=i+i ; j<=1000 ; j+=i) isPrime[j] = false;
+		}
+
+		vector<int> tmp;
+		for (int p : prime) if (i%p == 0) tmp.push_back(p);
+
+		switch (tmp.size()) {
+			
+			case 1:
+				p1[idx[tmp[0]]].push_back(i);
+				break;
+
+			case 2:
+				p2[idx[tmp[0]]][idx[tmp[1]]].push_back(i);
+				break;
+
+			case 3:
+				p3[idx[tmp[0]]][idx[tmp[1]]][idx[tmp[2]]].push_back(i);
+				break;
+
+			default:
+				break;
+		}
+	}
+
+	fac[0] = 1;
+	ncr[0][0] = 1;
+	for (int i=1 ; i<=1000 ; i++) {
+
+		fac[i] = (long long)i * fac[i-1];
+		fac[i] %= mod;
+
+		ncr[i][0] = 1;
+		for (int j=1 ; j<=i ; j++) {
+			ncr[i][j] = ncr[i-1][j-1] + ncr[i-1][j];
+			ncr[i][j] %= mod;
+		}
+	}
+
+	int t;
+	scanf(" %d", &t);
+	
+	while (t--) {
+
+		int n, a, b;
+		scanf(" %d %d %d", &n, &a, &b);
+
+		long long ans = 0;
+		int l, r, ni, nj, nk, nij, nik, njk, nijk;
+		for (int i=1 ; i<=cnt ; i++) {
+
+			// ni
+			l = -1, r = p1[i].size()-1;
+			while (l != r) {
+				int mid = (l + r + 1) >> 1;
+				(b >= p1[i][mid]) ? l = mid : r = mid - 1;
+			}
+			ni = l + 1;
+			if (ni) {
+				l = 0, r = ni;
+				while (l != r) {
+					int mid = (l + r) >> 1;
+					(a <= p1[i][mid]) ? r = mid : l = mid + 1;
+				}
+				ni -= l;
+			}
+
+			for (int j=i+1 ; j<=cnt ; j++) {
+
+				// nj
+				l = -1, r = p1[j].size()-1;
+				while (l != r) {
+					int mid = (l + r + 1) >> 1;
+					(b >= p1[j][mid]) ? l = mid : r = mid - 1;
+				}
+				nj = l + 1;
+				if (nj) {
+					l = 0, r = nj;
+					while (l != r) {
+						int mid = (l + r) >> 1;
+						(a <= p1[j][mid]) ? r = mid : l = mid + 1;
+					}
+					nj -= l;
+				}
+
+				// nij
+				l = -1, r = p2[i][j].size()-1;
+				while (l != r) {
+					int mid = (l + r + 1) >> 1;
+					(b >= p2[i][j][mid]) ? l = mid : r = mid - 1;
+				}
+				nij = l + 1;
+				if (nij) {
+					l = 0, r = nij;
+					while (l != r) {
+						int mid = (l + r) >> 1;
+						(a <= p2[i][j][mid]) ? r = mid : l = mid + 1;
+					}
+					nij -= l;
+				}
+
+				for (int k=j+1 ; k<=cnt ; k++) {
+
+					// nk
+					l = -1, r = p1[k].size()-1;
+					while (l != r) {
+						int mid = (l + r + 1) >> 1;
+						(b >= p1[k][mid]) ? l = mid : r = mid - 1;
+					}
+					nk = l + 1;
+					if (nk) {
+						l = 0, r = nk;
+						while (l != r) {
+							int mid = (l + r) >> 1;
+							(a <= p1[k][mid]) ? r = mid : l = mid + 1;
+						}
+						nk -= l;
+					}
+
+					// nik
+					l = -1, r = p2[i][k].size()-1;
+					while (l != r) {
+						int mid = (l + r + 1) >> 1;
+						(b >= p2[i][k][mid]) ? l = mid : r = mid - 1;
+					}
+					nik = l + 1;
+					if (nik) {
+						l = 0, r = nik;
+						while (l != r) {
+							int mid = (l + r) >> 1;
+							(a <= p2[i][k][mid]) ? r = mid : l = mid + 1;
+						}
+						nik -= l;
+					}
+
+					// njk
+					l = -1, r = p2[j][k].size()-1;
+					while (l != r) {
+						int mid = (l + r + 1) >> 1;
+						(b >= p2[j][k][mid]) ? l = mid : r = mid - 1;
+					}
+					njk = l + 1;
+					if (njk) {
+						l = 0, r = njk;
+						while (l != r) {
+							int mid = (l + r) >> 1;
+							(a <= p2[j][k][mid]) ? r = mid : l = mid + 1;
+						}
+						njk -= l;
+					}
+
+					// nijk
+					l = -1, r = p3[i][j][k].size()-1;
+					while (l != r) {
+						int mid = (l + r + 1) >> 1;
+						(b >= p3[i][j][k][mid]) ? l = mid : r = mid - 1;
+					}
+					nijk = l + 1;
+					if (nijk) {
+						l = 0, r = nijk;
+						while (l != r) {
+							int mid = (l + r) >> 1;
+							(a <= p3[i][j][k][mid]) ? r = mid : l = mid + 1;
+						}
+						nijk -= l;
+					}
+
+					ans += (ncr[ni + nj + nk + nij + nik + njk + nijk][n] * fac[n]) % mod;
+					ans %= mod;
+
+					ans -= (ncr[ni][n] * fac[n]) % mod;
+					ans %= mod;
+					ans += mod;
+					ans %= mod;
+
+					ans -= (ncr[nj][n] * fac[n]) % mod;
+					ans %= mod;
+					ans += mod;
+					ans %= mod;
+
+					ans -= (ncr[nk][n] * fac[n]) % mod;
+					ans %= mod;
+					ans += mod;
+					ans %= mod;
+
+					if (ni+nj-2 >= 0 && n-2 >= 0) {
+						ans -= (((((ncr[ni][1] * ncr[nj][1]) % mod) * ncr[ni+nj-2][n-2] ) % mod ) * fac[n] ) % mod;
+						ans %= mod;
+						ans += mod;
+						ans %= mod;
+					}
+					if (ni + nj + nij - 1 >= 0 && n-1 >= 0) {
+						ans -= (((ncr[nij][1] * ncr[ni + nj + nij - 1][n-1]) % mod) * fac[n]) % mod;
+						ans %= mod;
+						ans += mod;
+						ans %= mod;
+					}
+
+					if (ni+nk-2 >= 0 && n-2 >= 0) {
+						ans -= (((((ncr[ni][1] * ncr[nk][1]) % mod) * ncr[ni+nk-2][n-2] ) % mod ) * fac[n] ) % mod;
+						ans %= mod;
+						ans += mod;
+						ans %= mod;
+					}
+					if (ni + nk + nik - 1 >= 0 && n-1 >= 0) {
+						ans -= (((ncr[nik][1] * ncr[ni + nk + nik - 1][n-1]) % mod) * fac[n]) % mod;
+						ans %= mod;
+						ans += mod;
+						ans %= mod;
+					}
+
+					if (nj+nk-2 >= 0 && n-2 >= 0) {
+					ans -= (((((ncr[nj][1] * ncr[nk][1]) % mod) * ncr[nj+nk-2][n-2] ) % mod ) * fac[n] ) % mod;
+					ans %= mod;
+					ans += mod;
+					ans %= mod;
+					}
+					if (nj + nk + njk - 1 >= 0 && n-1 >= 0) {
+						ans -= (((ncr[njk][1] * ncr[nj + nk + njk - 1][n-1]) % mod) * fac[n]) % mod;
+						ans %= mod;
+						ans += mod;
+						ans %= mod;
+					}
+				}
+			}
+		}
+
+		printf("%lld\n", ans);
+	}
+
+	return 0;
+}
