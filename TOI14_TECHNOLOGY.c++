@@ -3931,11 +3931,12 @@ int main()
 	if(ax == bx && ay == by) printf("0"), exit(0);
 	if(ay == by)
     {
-		if (ax < bx) s = n - bx, t = by - 1;
+		if(ax < bx) s = n - bx, t = by - 1;
 		else s = bx - by, t = by - 1;
 	}
-    else if (ax - ay == bx - by) {
-		if (ax < bx) s = n - bx, t = bx - by;
+    else if(ax - ay == bx - by)
+    {
+		if(ax < bx) s = n - bx, t = bx - by;
 		else s = by - 1, t = bx - by;
 	}
     else 
