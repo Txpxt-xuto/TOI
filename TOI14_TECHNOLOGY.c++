@@ -4100,7 +4100,8 @@ int main() {
 					nik = l + 1;
 					if (nik) {
 						l = 0, r = nik;
-						while (l != r) {
+						while (l != r)
+                        {
 							int mid = (l + r) >> 1;
 							(a <= p2[i][k][mid]) ? r = mid : l = mid + 1;
 						}
