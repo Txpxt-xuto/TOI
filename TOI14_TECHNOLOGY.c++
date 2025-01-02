@@ -3969,36 +3969,32 @@ int main() {
 	for (int i=2 ; i<=1000 ; i++) isPrime[i] = true;
 	for (int i=2 ; i<=1000 ; i++) {
 
-		if (isPrime[i]) {
+		if(isPrime[i])
+        {
 			idx[i] = ++cnt;
 			prime.push_back(i);
 			for (int j=i+i ; j<=1000 ; j+=i) isPrime[j] = false;
 		}
-
 		vector<int> tmp;
-		for (int p : prime) if (i%p == 0) tmp.push_back(p);
-
-		switch (tmp.size()) {
-			
+		for(int p : prime) if(i%p == 0) tmp.push_back(p);
+		switch (tmp.size())
+        {
 			case 1:
 				p1[idx[tmp[0]]].push_back(i);
 				break;
-
 			case 2:
 				p2[idx[tmp[0]]][idx[tmp[1]]].push_back(i);
 				break;
-
 			case 3:
 				p3[idx[tmp[0]]][idx[tmp[1]]][idx[tmp[2]]].push_back(i);
 				break;
-
 			default:
 				break;
 		}
 	}
 	fac[0] = 1;
 	ncr[0][0] = 1;
-	for (int i=1 ; i<=1000 ; i++)
+	for(int i=1 ; i<=1000 ; i++)
     {
 		fac[i] = (long long)i * fac[i-1];
 		fac[i] %= mod;
