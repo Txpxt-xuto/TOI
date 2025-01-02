@@ -4146,7 +4146,6 @@ int main() {
 					ans %= mod;
 					ans += mod;
 					ans %= mod;
-
 					ans -= (ncr[nj][n] * fac[n]) % mod;
 					ans %= mod;
 					ans += mod;
@@ -4155,7 +4154,6 @@ int main() {
 					ans %= mod;
 					ans += mod;
 					ans %= mod;
-
 					if(ni+nj-2 >= 0 && n-2 >= 0)
                     {
 						ans -= (((((ncr[ni][1] * ncr[nj][1]) % mod) * ncr[ni+nj-2][n-2] ) % mod ) * fac[n] ) % mod;
