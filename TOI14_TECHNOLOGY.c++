@@ -4151,7 +4151,6 @@ int main() {
 					ans %= mod;
 					ans += mod;
 					ans %= mod;
-
 					ans -= (ncr[nk][n] * fac[n]) % mod;
 					ans %= mod;
 					ans += mod;
