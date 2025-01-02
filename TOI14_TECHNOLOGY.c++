@@ -3996,104 +3996,104 @@ int main() {
 				break;
 		}
 	}
-
 	fac[0] = 1;
 	ncr[0][0] = 1;
-	for (int i=1 ; i<=1000 ; i++) {
-
+	for (int i=1 ; i<=1000 ; i++)
+    {
 		fac[i] = (long long)i * fac[i-1];
 		fac[i] %= mod;
-
 		ncr[i][0] = 1;
-		for (int j=1 ; j<=i ; j++) {
+		for (int j=1 ; j<=i ; j++)
+        {
 			ncr[i][j] = ncr[i-1][j-1] + ncr[i-1][j];
 			ncr[i][j] %= mod;
 		}
 	}
-
 	int t;
 	scanf(" %d", &t);
-	
-	while (t--) {
-
+	while (t--)
+    {
 		int n, a, b;
 		scanf(" %d %d %d", &n, &a, &b);
-
 		long long ans = 0;
 		int l, r, ni, nj, nk, nij, nik, njk, nijk;
-		for (int i=1 ; i<=cnt ; i++) {
-
-			// ni
+		for(int i=1 ; i<=cnt ; i++)
+        {
 			l = -1, r = p1[i].size()-1;
-			while (l != r) {
+			while(l != r) 
+            {
 				int mid = (l + r + 1) >> 1;
 				(b >= p1[i][mid]) ? l = mid : r = mid - 1;
 			}
 			ni = l + 1;
-			if (ni) {
+			if(ni)
+            {
 				l = 0, r = ni;
-				while (l != r) {
+				while(l != r)
+                {
 					int mid = (l + r) >> 1;
 					(a <= p1[i][mid]) ? r = mid : l = mid + 1;
 				}
 				ni -= l;
 			}
-
-			for (int j=i+1 ; j<=cnt ; j++) {
-
-				// nj
+			for (int j=i+1 ; j<=cnt ; j++)
+            {
 				l = -1, r = p1[j].size()-1;
-				while (l != r) {
+				while(l != r)
+                {
 					int mid = (l + r + 1) >> 1;
 					(b >= p1[j][mid]) ? l = mid : r = mid - 1;
 				}
 				nj = l + 1;
-				if (nj) {
+				if(nj)
+                {
 					l = 0, r = nj;
-					while (l != r) {
+					while (l != r)
+                    {
 						int mid = (l + r) >> 1;
 						(a <= p1[j][mid]) ? r = mid : l = mid + 1;
 					}
 					nj -= l;
 				}
-
-				// nij
 				l = -1, r = p2[i][j].size()-1;
-				while (l != r) {
+				while(l != r)
+                {
 					int mid = (l + r + 1) >> 1;
 					(b >= p2[i][j][mid]) ? l = mid : r = mid - 1;
 				}
 				nij = l + 1;
-				if (nij) {
+				if(nij)
+                {
 					l = 0, r = nij;
-					while (l != r) {
+					while(l != r)
+                    {
 						int mid = (l + r) >> 1;
 						(a <= p2[i][j][mid]) ? r = mid : l = mid + 1;
 					}
 					nij -= l;
 				}
-
-				for (int k=j+1 ; k<=cnt ; k++) {
-
-					// nk
+				for (int k=j+1 ; k<=cnt ; k++)
+                {
 					l = -1, r = p1[k].size()-1;
-					while (l != r) {
+					while(l != r)
+                    {
 						int mid = (l + r + 1) >> 1;
 						(b >= p1[k][mid]) ? l = mid : r = mid - 1;
 					}
 					nk = l + 1;
-					if (nk) {
+					if (nk)
+                    {
 						l = 0, r = nk;
-						while (l != r) {
+						while(l != r)
+                        {
 							int mid = (l + r) >> 1;
 							(a <= p1[k][mid]) ? r = mid : l = mid + 1;
 						}
 						nk -= l;
 					}
-
-					// nik
 					l = -1, r = p2[i][k].size()-1;
-					while (l != r) {
+					while(l != r)
+                    {
 						int mid = (l + r + 1) >> 1;
 						(b >= p2[i][k][mid]) ? l = mid : r = mid - 1;
 					}
