@@ -4107,7 +4107,6 @@ int main() {
 						nik -= l;
 					}
 
-					// njk
 					l = -1, r = p2[j][k].size()-1;
 					while (l != r) {
 						int mid = (l + r + 1) >> 1;
@@ -4117,7 +4116,8 @@ int main() {
 					if(njk)
                     {
 						l = 0, r = njk;
-						while (l != r) {
+						while (l != r)
+                        {
 							int mid = (l + r) >> 1;
 							(a <= p2[j][k][mid]) ? r = mid : l = mid + 1;
 						}
