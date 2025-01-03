@@ -4420,8 +4420,11 @@ int main()
     cin.tie(NULL);
     int n,q;
     cin >> n >> q;
-    for(int i=1;i<=n;i++){
-        int u,v;ll w;cin>>u>>v>>w;
+    for(int i=1;i<=n;i++)
+    {
+        int u,v;
+        ll w;
+        cin>>u>>v>>w;
         g[u].pb({v,i});
         g[v].pb({u,i});
         e[i]=w;
