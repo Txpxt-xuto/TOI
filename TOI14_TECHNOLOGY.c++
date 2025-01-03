@@ -4428,7 +4428,8 @@ int main()
         g[u].pb({v,i});
         g[v].pb({u,i});
         e[i]=w;
-    }pr[1]={1,0};
+    }
+    pr[1]={1,0};
     dfs(1,1);
     sort(cyc.begin(),cyc.end());
     build(1,0,sz(cyc)-1);
