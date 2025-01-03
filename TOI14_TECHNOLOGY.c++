@@ -4221,9 +4221,6 @@ int main(){
             exit(0);
         }
         if(w<=b) c++;
-        {
-            c++;
-        }
         u--,v--;
         if(u>v)swap(u,v);
         id.emplace_back(u);
