@@ -4220,7 +4220,8 @@ int main(){
             cout << -1;
             exit(0);
         }
-        if(w<=b){
+        if(w<=b)
+        {
             c++;
         }
         u--,v--;
