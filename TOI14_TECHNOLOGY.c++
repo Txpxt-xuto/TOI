@@ -4234,11 +4234,13 @@ int main(){
     sort(id.begin(),id.end());
     id.erase(unique(id.begin(),id.end()),id.end());
     int s=id.size();
-    for(auto &v:adj){
+    for(auto &v:adj)
+    {
         sort(v.begin(),v.end());
     }
     vector<vector<int>> dp(s,vector<int>(s));
-    for(int r=0;r<s;r++){
+    for(int r=0;r<s;r++)
+    {
         int cur=0;
         for(int l=r;l>=0;l--)
         {
