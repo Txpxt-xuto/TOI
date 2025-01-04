@@ -13408,5 +13408,4 @@ int main()
 
 int main()
 {
-    int n,m;
-    c
+    int n,m
