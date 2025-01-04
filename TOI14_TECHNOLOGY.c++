@@ -4329,9 +4329,9 @@ void u22(int i,int l,int r,int tl,int tr){
 }
 ll qr2(int i,int l,int r,int tl,int tr){
     push12(i,l,r);
-    if(r<tl||l>tr)return 0;
-    if(l>=tl&&r<=tr)return tree[i];
-    int m=(l+r)>>1;
+    if(r<tl||l>tr) return 0;
+    if(l>=tl&&r<=tr) return tree[i];
+    int m=(l+r) >> 1;
     return qr2(2*i,l,m,tl,tr)+qr2(2*i+1,m+1,r,tl,tr);
 }
 void build(int i,int l,int r){
