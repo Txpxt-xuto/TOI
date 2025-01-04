@@ -4374,7 +4374,8 @@ void u1(int i,int l,int r,int tl,int tr,ll v)
         lz[i]+=v;
         push(i,l,r);
         return;
-    }int m=(l+r)>>1;
+    }
+    int m=(l+r)>>1;
     u1(2*i,l,m,tl,tr,v);
     u1(2*i+1,m+1,r,tl,tr,v);
     if(t[2*i].f==t[2*i+1].f) t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
