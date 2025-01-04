@@ -4402,14 +4402,17 @@ void dfs(int u,int p){
             pr[v.f]={u,v.s};
             dfs(v.f,u);
         }
-        else if(vis[v.f]&&!cv[v.f]&&!cv[u]){
+        else if(vis[v.f]&&!cv[v.f]&&!cv[u])
+        {
             int x=u;
             cyc.pb(v.s);
-            while(x!=v.f){
+            while(x!=v.f)
+            {
                 cv[x]=1;
                 cyc.pb(pr[x].s);
                 x=pr[x].f;
-            }cv[v.f]=1;
+            }
+            cv[v.f]=1;
         }
     }
 }
