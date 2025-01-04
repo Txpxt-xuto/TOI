@@ -4320,9 +4320,13 @@ void u12(int i,int l,int r,int tl,int tr,ll v){
 void u22(int i,int l,int r,int tl,int tr){
     push12(i,l,r);
     if(r<tl||l>tr)return;
-    if(l>=tl&&r<=tr){
-        lazy2[i]=1;push12(i,l,r);return;
-    }int m=(l+r)>>1;
+    if(l>=tl&&r<=tr)
+    {
+        lazy2[i]=1;
+        push12(i,l,r);
+        return;
+    }
+    int m=(l+r)>>1;
     u22(2*i,l,m,tl,tr);
     u22(2*i+1,m+1,r,tl,tr);
     tree[i]=tree[2*i]+tree[2*i+1];
