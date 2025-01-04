@@ -4335,11 +4335,11 @@ ll qr2(int i,int l,int r,int tl,int tr){
     return qr2(2*i,l,m,tl,tr)+qr2(2*i+1,m+1,r,tl,tr);
 }
 void build(int i,int l,int r){
-    if(l==r)return void(t[i]={e[cyc[l]],1});
-    int m=(l+r)>>1;
+    if(l==r) return void(t[i]={e[cyc[l]],1});
+    int m=(l+r) >> 1;
     build(2*i,l,m);
     build(2*i+1,m+1,r);
-    if(t[2*i].f==t[2*i+1].f)t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
+    if(t[2*i].f==t[2*i+1].f) t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
     else t[i]=max(t[2*i],t[2*i+1]);
 }
 void push2(int i,int l,int r)
