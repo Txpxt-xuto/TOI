@@ -4388,7 +4388,7 @@ pii qr(int i,int l,int r,int tl,int tr){
     push(i,l,r);
     if(r<tl||l>tr) return {0,0};
     if(l>=tl&&r<=tr) return t[i];
-    int m=(l+r)>>1;
+    int m=(l+r) >> 1;
     pii le=qr(2*i,l,m,tl,tr);
     pii re=qr(2*i+1,m+1,r,tl,tr);
     if(le.f==re.f)return {le.f,le.s+re.s};
