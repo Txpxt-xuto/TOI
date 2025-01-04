@@ -4354,13 +4354,16 @@ void push2(int i,int l,int r){
         }lz2[i]=0;
     }
 }
-void push(int i,int l,int r){
+void push(int i,int l,int r)
+{
     push2(i,l,r);
     t[i].f+=lz[i];
-    if(l<r){
+    if(l<r)
+    {
         lz[2*i]+=lz[i];
         lz[2*i+1]+=lz[i];
-    }lz[i]=0;
+    }
+    lz[i]=0;
 }
 void u1(int i,int l,int r,int tl,int tr,ll v)
 {
