@@ -4529,5 +4529,5 @@ int main()
     for(int i=0;i<=2;i++)
         for(int j=1;j<=lim[i];j++)
         ans+=dp[n][i][j][7],ans%=MOD;
-    cout<<ans;
+    cout << ans;
 }
