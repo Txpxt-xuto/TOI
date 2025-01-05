@@ -4494,3 +4494,41 @@ int main()
         }
     }
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+ll dp[1111][3][1111][8],lim[3],route[3][3]={0,1,1,0,0,1,1,0,0};
+ll MOD=1000000007;
+int main()
+{
+    int n;cin>>n>>lim[0]>>lim[1]>>lim[2];
+    dp[1][0][1][1]=1;
+    for(int day=1;day<n;day++)
+    {
+        for(int st=0;st<=2;st++)
+        {
+            for(int stay=1;stay<=lim[st];stay++)
+            {
+                for(int com=1;com<=7;com++)
+                {
+                    if(!dp[day][st][stay][com]) continue;
+                    if(stay<lim[st]) dp[day+1][st][stay+1][com]+=dp[day][st][stay][com];
+                    for(int en=0;en<=2;en++)
+                    {
+                        if(!route[st][en]) continue;
+                        dp[day+1][en][1][com|(1<<en)]+=dp[day][st][stay][com];
+                        dp[day+1][en][1][com|(1<<en)]%=MOD;
+                    }
+                }
+            }
+
+        }
+    }
+    ll ans=0;
+    for(int i=0;i<=2;i++)
+        for(int j=1;j<=lim[i];j++)
+        ans+=dp[n][i][j][7],ans%=MOD;
+
+    cout<<ans;
+}
