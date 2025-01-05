@@ -4502,7 +4502,8 @@ ll dp[1111][3][1111][8],lim[3],route[3][3]={0,1,1,0,0,1,1,0,0};
 ll MOD=1000000007;
 int main()
 {
-    int n;cin>>n>>lim[0]>>lim[1]>>lim[2];
+    int n;
+    cin >> n >> lim[0] >> lim[1] >> lim[2];
     dp[1][0][1][1]=1;
     for(int day=1;day<n;day++)
     {
