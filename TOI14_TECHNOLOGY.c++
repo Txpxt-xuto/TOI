@@ -4289,7 +4289,8 @@ void build2(int i,int l,int r)
     build2(2*i+1,m+1,r);
     tree[i]=tree[2*i]+tree[2*i+1];
 }
-void push22(int i,int l,int r){
+void push22(int i,int l,int r)
+{
     if(lazy2[i]){
         tree[i]=0;
         if(l<r){
