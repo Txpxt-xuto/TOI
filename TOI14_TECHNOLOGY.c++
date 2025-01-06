@@ -4754,3 +4754,63 @@ int main()
     else cout << dp[X][Y];
     return 0;
 }
+
+#include <iostream>
+#include <cstring>
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <queue>
+#include <numeric>
+#include <deque>
+
+#define debug(...) Debug(#__VA_ARGS__, __VA_ARGS__)
+using namespace std;
+const bool TEST_CASE = 0;
+
+template<typename T>
+typename std::enable_if<std::is_integral<T>::value>::type
+Debug(const char* name, T value) {
+    std::cout << name << " : " << value << '\n';
+}
+
+template<typename T, typename... Args>
+typename std::enable_if<std::is_integral<T>::value>::type
+Debug(const char* names, T value, Args... args) {
+    const char* comma = strchr(names, ',');
+    std::cout.write(names, comma - names) << " : " << value << " | ";
+    Debug(comma + 1, args...);
+}
+
+void solve(){
+    int n, k;
+    cin >> n >> k;
+    deque<int> dq;
+    for (int i = 0;i < n;i++){
+        int a;
+        cin >> a;
+        while (!dq.empty() && k && dq.back() > a){
+            dq.pop_back();
+            k--;
+        }
+        dq.push_back(a);
+    }
+    while (k--)
+        dq.pop_back();
+    for (auto e:dq)
+        cout << e << ' ';
+    cout << '\n';
+}
+
+int main()
+{
+    #ifndef DORMON
+        ios_base::sync_with_stdio(0); 
+    #endif
+    cin.tie(0);
+    int q = 1; 
+    if (TEST_CASE) cin >> q;
+    while (q--){
+        solve();
+    }
+}
