@@ -4810,7 +4810,7 @@ int main()
     #endif
     cin.tie(0);
     int q = 1; 
-    if (TEST_CASE) cin >> q;
+    if(TEST_CASE) cin >> q;
     while (q--){
         solve();
     }
