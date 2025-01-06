@@ -4798,7 +4798,7 @@ void solve(){
     }
     while (k--)
         dq.pop_back();
-    for (auto e:dq) cout << e << ' ';
+    for(auto e:dq) cout << e << ' ';
     cout << '\n';
 }
 
