@@ -4806,7 +4806,7 @@ void solve(){
 int main()
 {
     #ifndef DORMON
-        ios_base::sync_with_stdio(0); 
+    ios_base::sync_with_stdio(0); 
     #endif
     cin.tie(0);
     int q = 1; 
