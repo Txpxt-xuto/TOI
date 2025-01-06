@@ -4796,8 +4796,7 @@ void solve(){
         }
         dq.push_back(a);
     }
-    while (k--)
-        dq.pop_back();
+    while(k--) dq.pop_back();
     for(auto e:dq) cout << e << ' ';
     cout << '\n';
 }
