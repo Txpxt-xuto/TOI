@@ -4776,7 +4776,8 @@ Debug(const char* name, T value) {
 
 template<typename T, typename... Args>
 typename std::enable_if<std::is_integral<T>::value>::type
-Debug(const char* names, T value, Args... args) {
+Debug(const char* names, T value, Args... args)
+{
     const char* comma = strchr(names, ',');
     std::cout.write(names, comma - names) << " : " << value << " | ";
     Debug(comma + 1, args...);
