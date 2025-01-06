@@ -4782,7 +4782,8 @@ Debug(const char* names, T value, Args... args) {
     Debug(comma + 1, args...);
 }
 
-void solve(){
+void solve()
+{
     int n, k;
     cin >> n >> k;
     deque<int> dq;
