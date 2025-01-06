@@ -4786,7 +4786,8 @@ void solve(){
     int n, k;
     cin >> n >> k;
     deque<int> dq;
-    for (int i = 0;i < n;i++){
+    for(int i = 0;i < n;i++)
+    {
         int a;
         cin >> a;
         while(!dq.empty() && k && dq.back() > a)
