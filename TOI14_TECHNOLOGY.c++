@@ -4789,7 +4789,8 @@ void solve(){
     for (int i = 0;i < n;i++){
         int a;
         cin >> a;
-        while (!dq.empty() && k && dq.back() > a){
+        while (!dq.empty() && k && dq.back() > a)
+        {
             dq.pop_back();
             k--;
         }
