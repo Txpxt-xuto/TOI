@@ -4814,3 +4814,127 @@ int main()
     while(q--) solve();
 }
 
+#include<bits/stdc++.h>
+using namespace std;
+vector<vector<int> > dpr,dpg,tb,pr,pg;
+deque<char> prt;
+int main(){
+	int n,m,mx=-1;
+	pair<pair<int,int>,int> ans;
+	string inp;
+	cin>>n >>m;
+	dpr.resize(n+1,vector<int>(m+1,0));
+	dpg.resize(n+1,vector<int>(m+1,0));
+	pr.resize(n+1,vector<int>(m+1,-1));
+	pg.resize(n+1,vector<int>(m+1,-1));
+	tb.resize(n+1,vector<int>(m+1,0));
+	for(int i=1;i<=n;i++){
+		cin>>inp;
+		for(int j=1;j<=m;j++){
+			tb[i][j]=(inp[j-1]=='G');
+		}
+	}
+	for(int i=1;i<=n;i++){
+		for(int j=1;j<=m;j++){
+			if(i==1 && j==1) dpr[i][j]=(!tb[i][j]);
+			else if(i==1){
+				pr[i][j]=0;
+				dpr[i][j]=dpr[i][j-1]+(!tb[i][j]);
+			}
+			else if(j==1){
+				pr[i][j]=1;
+				dpr[i][j]=dpr[i-1][j]+(!tb[i][j]);
+			}
+			else{
+				if(dpr[i-1][j]>dpr[i][j-1]){
+					pr[i][j]=1;
+					dpr[i][j]=dpr[i-1][j]+(!tb[i][j]);
+				}
+				else{
+					pr[i][j]=0;
+					dpr[i][j]=dpr[i][j-1]+(!tb[i][j]);
+				}
+			}
+		}
+	}
+	for(int i=n;i>=1;i--){
+		for(int j=m;j>=1;j--){
+			if(i==n && j==m) dpg[i][j]=(tb[i][j]);
+			else if(i==n){
+				pg[i][j]=0;
+				dpg[i][j]=dpg[i][j+1]+tb[i][j];
+			}
+			else if(j==m){
+				pg[i][j]=1;
+				dpg[i][j]=dpg[i+1][j]+tb[i][j];
+			}
+			else{
+				if(dpg[i][j+1]>dpg[i+1][j]){
+					pg[i][j]=0;
+					dpg[i][j]=dpg[i][j+1]+tb[i][j];
+				}
+				else{
+					pg[i][j]=1;
+					dpg[i][j]=dpg[i+1][j]+tb[i][j];
+				}
+			}
+		}
+	}
+	for(int i=1;i<=n;i++){
+		for(int j=1;j<=m;j++){
+			//right
+			if(j+1<=m && min(dpr[i][j]+n-i+m-j-dpg[i][j+1],dpg[i][j+1]+i+j-1-dpr[i][j])>mx){
+				mx=min(dpr[i][j]+n-i+m-j-dpg[i][j+1],dpg[i][j+1]+i+j-1-dpr[i][j]);
+				ans=make_pair(make_pair(i,j),'R');
+			}
+			//down
+			if(i+1<=n && min(dpr[i][j]+n-i+m-j-dpg[i+1][j],dpg[i+1][j]+i+j-1-dpr[i][j])>mx){
+				mx=min(dpr[i][j]+n-i+m-j-dpg[i+1][j],dpg[i+1][j]+i+j-1-dpr[i][j]);
+				ans=make_pair(make_pair(i,j),'D');
+			}
+		}
+	}
+	cout<<mx*2 <<"\n";
+	pair<int,int> cur=ans.first;
+	while(cur!=make_pair(1,1)){
+		if(pr[cur.first][cur.second]){
+			prt.push_front('D');
+			cur=make_pair(cur.first-1,cur.second);
+		}
+		else{
+			prt.push_front('R');
+			cur=make_pair(cur.first,cur.second-1);
+		}
+	}
+	if(ans.second=='R') cur=make_pair(ans.first.first,ans.first.second+1),prt.push_back('R');
+	else cur=make_pair(ans.first.first+1,ans.first.second),prt.push_back('D');
+	while(cur!=make_pair(n,m)){
+		if(pg[cur.first][cur.second]){
+			prt.push_back('D');
+			cur=make_pair(cur.first+1,cur.second);
+		}
+		else{
+			prt.push_back('R');
+			cur=make_pair(cur.first,cur.second+1);
+		}
+	}
+	int r=mx,g=mx;
+	cur=make_pair(1,1);
+	while(cur!=make_pair(-1,-1)){
+		if(tb[cur.first][cur.second]){
+			if(g) cout<<'Y',g--;
+			else cout<<'N';
+		}
+		else{
+			if(r) cout<<'Y',r--;
+			else cout<<'N';
+		}
+		if(prt.front()=='R') cur=make_pair(cur.first,cur.second+1);
+		else cur=make_pair(cur.first+1,cur.second);
+		cout<<" " <<prt.front() <<"\n";
+		prt.pop_front();
+		if(cur==make_pair(n,m)) cur=make_pair(-1,-1);
+	}
+	if(g>0 || r>0) cout<<'Y';
+	else cout<<'N';
+}
