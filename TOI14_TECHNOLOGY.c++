@@ -4894,7 +4894,7 @@ int main(){
 			}
 		}
 	}
-	cout<<mx*2 <<"\n";
+	cout << mx*2 << "\n";
 	pair<int,int> cur=ans.first;
 	while(cur!=make_pair(1,1))
     {
