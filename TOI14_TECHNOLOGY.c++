@@ -4925,9 +4925,10 @@ int main(){
 			if(g) cout<<'Y',g--;
 			else cout<<'N';
 		}
-		else{
-			if(r) cout<<'Y',r--;
-			else cout<<'N';
+		else
+        {
+			if(r) cout << 'Y',r--;
+			else cout << 'N';
 		}
 		if(prt.front()=='R') cur=make_pair(cur.first,cur.second+1);
 		else cur=make_pair(cur.first+1,cur.second);
