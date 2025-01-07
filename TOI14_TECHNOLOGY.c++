@@ -4897,31 +4897,38 @@ int main(){
 	cout<<mx*2 <<"\n";
 	pair<int,int> cur=ans.first;
 	while(cur!=make_pair(1,1)){
-		if(pr[cur.first][cur.second]){
+		if(pr[cur.first][cur.second])
+        {
 			prt.push_front('D');
-			cur=make_pair(cur.first-1,cur.second);
+			cur = make_pair(cur.first-1,cur.second);
 		}
-		else{
+		else
+        {
 			prt.push_front('R');
-			cur=make_pair(cur.first,cur.second-1);
+			cur = make_pair(cur.first,cur.second-1);
 		}
 	}
 	if(ans.second=='R') cur=make_pair(ans.first.first,ans.first.second+1),prt.push_back('R');
 	else cur=make_pair(ans.first.first+1,ans.first.second),prt.push_back('D');
-	while(cur!=make_pair(n,m)){
-		if(pg[cur.first][cur.second]){
+	while(cur!=make_pair(n,m))
+    {
+		if(pg[cur.first][cur.second])
+        {
 			prt.push_back('D');
-			cur=make_pair(cur.first+1,cur.second);
+			cur = make_pair(cur.first+1,cur.second);
 		}
-		else{
+		else
+        {
 			prt.push_back('R');
-			cur=make_pair(cur.first,cur.second+1);
+			cur = make_pair(cur.first,cur.second+1);
 		}
 	}
 	int r=mx,g=mx;
 	cur=make_pair(1,1);
-	while(cur!=make_pair(-1,-1)){
-		if(tb[cur.first][cur.second]){
+	while(cur!=make_pair(-1,-1))
+    {
+		if(tb[cur.first][cur.second])
+        {
 			if(g) cout << 'Y',g--;
 			else cout << 'N';
 		}
