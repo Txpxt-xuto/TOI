@@ -4936,5 +4936,5 @@ int main(){
 		if(cur==make_pair(n,m)) cur=make_pair(-1,-1);
 	}
 	if(g>0 || r>0) cout<<'Y';
-	else cout<< 'N';
+	else cout << 'N';
 }
