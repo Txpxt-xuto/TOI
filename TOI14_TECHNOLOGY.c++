@@ -4889,8 +4889,8 @@ int main(){
 			}
 			if(i+1<=n && min(dpr[i][j]+n-i+m-j-dpg[i+1][j],dpg[i+1][j]+i+j-1-dpr[i][j])>mx)
             {
-				mx=min(dpr[i][j]+n-i+m-j-dpg[i+1][j],dpg[i+1][j]+i+j-1-dpr[i][j]);
-				ans=make_pair(make_pair(i,j),'D');
+				mx = min(dpr[i][j]+n-i+m-j-dpg[i+1][j],dpg[i+1][j]+i+j-1-dpr[i][j]);
+				ans = make_pair(make_pair(i,j),'D');
 			}
 		}
 	}
