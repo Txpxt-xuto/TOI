@@ -4552,7 +4552,8 @@ int eval() {
 
     {
         dp1[0] = 0;
-        for(int i = 1; i <= N; i++) {
+        for(int i = 1; i <= N; i++)
+        {
             dp1[i] = dp1[i-1];
             dp2[i] = dp2[i-1];
 
