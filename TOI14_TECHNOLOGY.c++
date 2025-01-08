@@ -4536,11 +4536,9 @@ using namespace std;
 typedef pair<int, int> pii;
 
 const int MAXN = 1e6+5, INF = 1e9;
-
 int N, K, A[MAXN];
 
 int cnt[MAXN] = {0}, l[MAXN] = {0}, l_sp[MAXN] = {0}, cct[MAXN] = {0};
-
 int dp1[MAXN], dp2[MAXN];
 int eval()
 {
