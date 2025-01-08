@@ -4588,7 +4588,7 @@ int main()
     //precom
     for(int i=0;i<=300;i++) for(int j=0;j<=300;j++) for(int k=0;k<=300;k++) dp[i][j][k]=1e18;
         for(int j=0;j<=300;j++)
-            for(int k=0;k<=300;k++) dp[i][j][k]=1e18;
+            f
     dp[0][0][0]=0;
     for(int i=1;i<=n;i++) for(int j=1;j<=n;j++) cin >> A[i][j];
     for(int i=1;i<=m;i++) cin >> seq[i];
