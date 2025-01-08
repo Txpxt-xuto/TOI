@@ -4596,7 +4596,8 @@ int main()
     {
         for(int j=0;j<=i;j++)
         {
-            for(int k=t;k>=0;k--){
+            for(int k=t;k>=0;k--)
+            {
                 dp[i][k+1][j]=min(dp[i][k+1][j],dp[i-1][k][j]);
                 dp[i][k][i]=min(dp[i][k][i],dp[i-1][k][j]+A[seq[i]][seq[j]]);
             }
