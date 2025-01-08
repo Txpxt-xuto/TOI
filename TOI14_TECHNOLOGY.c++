@@ -4604,3 +4604,33 @@ int main()
     cout << mn;
     return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+const int N=1e6 +7;
+int n,s;
+pair<int,int> tar[N];
+vector<int> vec; 
+int main()
+{
+    cin>>n>>s;
+    for(int i=1;i<=n;i++) cin>>tar[i].first>>tar[i].second;//s,t
+    for(int i=1;i<=n;i++)
+    {
+        tar[i]={tar[i].second-tar[i].first,tar[i].first+tar[i].second};
+    }
+    sort(tar+1,tar+1+n);
+    for(int i=1;i<=n;i++)
+    {
+        if(tar[i].first<-s||tar[i].second<s) continue;
+        if(vec.empty()||vec.back()<=tar[i].second)
+        {
+            vec.emplace_back(tar[i].second);
+            continue;
+        }
+        auto it=upper_bound(vec.begin(),vec.end(),tar[i].second);
+        if(it==vec.end()) continue;
+        *it=tar[i].second;
+    }
+    cout<<vec.size();
+}
