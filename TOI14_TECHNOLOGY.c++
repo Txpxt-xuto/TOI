@@ -4569,7 +4569,6 @@ int eval() {
             }
         }
     }
-
     return K == 0 ? N-dp1[N] : min(N-dp1[N], N-dp2[N]);
 }
 
