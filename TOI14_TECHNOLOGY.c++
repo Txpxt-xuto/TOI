@@ -4581,6 +4581,5 @@ int main() {
     for (int i = 1; i <= N; i++) cin >> A[i];
 
     cout << eval();
-
     return 0;
 }
