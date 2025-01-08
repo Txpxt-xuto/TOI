@@ -4613,7 +4613,7 @@ pair<int,int> tar[N];
 vector<int> vec; 
 int main()
 {
-    cin>>n>>s;
+    cin >> n >> s;
     for(int i=1;i<=n;i++) cin>>tar[i].first>>tar[i].second;
     for(int i=1;i<=n;i++) tar[i]={tar[i].second-tar[i].first,tar[i].first+tar[i].second};
     sort(tar+1,tar+1+n);
