@@ -4632,5 +4632,5 @@ int main()
         if(it==vec.end()) continue;
         *it=tar[i].second;
     }
-    cout<<vec.size();
+    cout << vec.size();
 }
