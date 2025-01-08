@@ -4618,7 +4618,7 @@ int main()
     for(int i=1;i<=n;i++)  tar[i]={tar[i].second-tar[i].first,tar[i].first+tar[i].second};
     {
         tar[i]={tar[i].second-tar[i].first,tar[i].first+tar[i].second};
-    }
+
     sort(tar+1,tar+1+n);
     for(int i=1;i<=n;i++)
     {
