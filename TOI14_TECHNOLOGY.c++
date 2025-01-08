@@ -4592,7 +4592,6 @@ int main()
     dp[0][0][0]=0;
     for(int i=1;i<=n;i++) for(int j=1;j<=n;j++) cin >> A[i][j];
     for(int i=1;i<=m;i++) cin >> seq[i];
-    
     for(int i=1;i<=m;i++){
         for(int j=0;j<=i;j++){
             for(int k=t;k>=0;k--){
