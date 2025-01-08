@@ -4546,8 +4546,8 @@ int dp1[MAXN], dp2[MAXN];
 int eval() {
     for (int i = 1; i <= N; i++)
     {
-        if (cnt[A[i]] == 0) l[A[i]] = i;
-        else if (cnt[A[i]] == 1) l_sp[A[i]] = i;
+        if(cnt[A[i]] == 0) l[A[i]] = i;
+        else if(cnt[A[i]] == 1) l_sp[A[i]] = i;
         cct[i] = ++cnt[A[i]];
     }
     {
