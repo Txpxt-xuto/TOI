@@ -4637,11 +4637,9 @@ using namespace std;
 #define x first
 #define y second
 #define all(x) x.begin(), x.end()
-
 map<int, vector<int> > wallx, wally;
 map<pair<int, int>, int> vis;
 queue<pair<int, pair<int, int> > > q;
-
 int main()
 {
     ios_base::sync_with_stdio(false);
