@@ -4649,13 +4649,13 @@ int main() {
   cin >> n >> m >> w;
   int sx, sy, ex, ey;
   cin >> sx >> sy >> ex >> ey;
-  for (int i = 0; i < w; i++) {
-    int x, y;
-    cin >> x >> y;
-    wallx[x].push_back(y);
-    wally[y].push_back(x);
-  }
-
+    for(int i=0;i<w;i++)
+    {
+        int x, y;
+        cin >> x >> y;
+        wallx[x].push_back(y);
+        wally[y].push_back(x);
+    }
     q.push({0, {ex, ey}});
     int ans = -1;
     while(!q.empty())
