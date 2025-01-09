@@ -4643,8 +4643,8 @@ map<pair<int, int>, int> vis;
 queue<pair<int, pair<int, int> > > q;
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int n, m, w;
     cin >> n >> m >> w;
     int sx, sy, ex, ey;
