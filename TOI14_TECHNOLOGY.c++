@@ -4647,8 +4647,8 @@ int main() {
   cin.tie(NULL);
   int n, m, w;
   cin >> n >> m >> w;
-  int sx, sy, ex, ey;
-  cin >> sx >> sy >> ex >> ey;
+    int sx, sy, ex, ey;
+    cin >> sx >> sy >> ex >> ey;
     for(int i=0;i<w;i++)
     {
         int x, y;
