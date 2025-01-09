@@ -4681,7 +4681,7 @@ int main() {
 
     int idy = upper_bound(all(wallx[t.y.x]), t.y.y) - wallx[t.y.x].begin();
     if (idy == wallx[t.y.x].size())
-      q.push({t.x + 1, {t.y.x, m}});
+        q.push({t.x + 1, {t.y.x, m}});
     else
         q.push({t.x + 1, {t.y.x, wallx[t.y.x][idy] - 1}});
     if (idy == 0)
