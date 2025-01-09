@@ -4659,15 +4659,15 @@ int main()
     int ans = -1;
     while(!q.empty())
     {
-    auto t = q.front();
-    q.pop();
-    if(vis[t.y]) continue;
-    vis[t.y] = 1;
-    if(t.y == make_pair(sx, sy))
-    {
-        ans = t.x;
-        break;
-    }
+        auto t = q.front();
+        q.pop();
+        if(vis[t.y]) continue;
+        vis[t.y] = 1;
+        if(t.y == make_pair(sx, sy))
+        {
+            ans = t.x;
+            break;
+        }
     int idx = upper_bound(all(wally[t.y.y]), t.y.x) - wally[t.y.y].begin();
     if(idx == wally[t.y.y].size()) q.push({t.x + 1, {n, t.y.y}});
     else q.push({t.x + 1, {wally[t.y.y][idx] - 1, t.y.y}});
