@@ -4668,7 +4668,6 @@ int main() {
       ans = t.x;
       break;
     }
-
     int idx = upper_bound(all(wally[t.y.y]), t.y.x) - wally[t.y.y].begin();
     if (idx == wally[t.y.y].size())
         q.push({t.x + 1, {n, t.y.y}});
