@@ -4685,8 +4685,8 @@ int main() {
     else
       q.push({t.x + 1, {t.y.x, wallx[t.y.x][idy] - 1}});
     if (idy == 0)
-      q.push({t.x + 1, {t.y.x, 1}});
-        else
+        q.push({t.x + 1, {t.y.x, 1}});
+    else
         q.push({t.x + 1, {t.y.x, wallx[t.y.x][idy - 1] + 1}});
     }
     cout << ans << endl;
