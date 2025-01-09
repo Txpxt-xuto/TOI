@@ -4661,10 +4661,9 @@ int main() {
   while (!q.empty()) {
     auto t = q.front();
     q.pop();
-    if (vis[t.y]) continue;
+    if(vis[t.y]) continue;
     vis[t.y] = 1;
-
-    if (t.y == make_pair(sx, sy))
+    if(t.y == make_pair(sx, sy))
     {
         ans = t.x;
         break;
