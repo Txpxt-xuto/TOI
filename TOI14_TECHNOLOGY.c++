@@ -4683,7 +4683,7 @@ int main() {
     if (idy == wallx[t.y.x].size())
       q.push({t.x + 1, {t.y.x, m}});
     else
-      q.push({t.x + 1, {t.y.x, wallx[t.y.x][idy] - 1}});
+        q.push({t.x + 1, {t.y.x, wallx[t.y.x][idy] - 1}});
     if (idy == 0)
         q.push({t.x + 1, {t.y.x, 1}});
     else
