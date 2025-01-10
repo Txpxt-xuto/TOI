@@ -4725,7 +4725,7 @@ int main()
         adj[u].emplace_back(v);
         adj[v].emplace_back(u);
     }
-    for(int i=1;i<=n;i++) cin>>sb[i];
+    for(int i=1;i<=n;i++) cin >> sb[i];
     vl[U]=1;
     cnt[1]=1;
     dfs1(-1,U);
