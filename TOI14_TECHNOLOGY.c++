@@ -4721,7 +4721,7 @@ int main()
     for(int i=1;i<n;i++)
     {
         int u,v;
-        cin>>u>>v;
+        cin >> u >> v;
         adj[u].emplace_back(v);
         adj[v].emplace_back(u);
     }
