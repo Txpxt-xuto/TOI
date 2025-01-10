@@ -4717,7 +4717,7 @@ void dfs2(int p,int u,int cn)
 int main()
 {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);
-    cin>>n>>U>>V;
+    cin >> n >> U >> V;
     for(int i=1;i<n;i++)
     {
         int u,v;
