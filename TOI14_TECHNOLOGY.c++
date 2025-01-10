@@ -4749,10 +4749,10 @@ int main()
     cin>>n>>X>>Y;
     for(int i=0;i<=500;i++)for(int j=0;j<=500;j++)dp[i][j]=1e18+7;
     for(int i=1;i<=n;i++)cin>>point[i].first>>point[i].second>>cost[i];
-    dp[0][0]=0;
-    for(int i=1;i<=n;i++)
+    dp[0][0]=0; 
+    for(int i=1;i<=n;i++) for(int x=X;x>=0;x--) for(int y=Y;y>=0;y--) dp[x][y]=min(dp[x][y],dp[max(0,x-point[i].first)][max(0,y-point[i].second)]+cost[i]);
     {
-        for(int x=X;x>=0;x--)
+        for(int x=X;x>=0;x--) for(int y=Y;y>=0;y--) dp[x][y]=min(dp[x][y],dp[max(0,x-point[i].first)][max(0,y-point[i].second)]+cost[i]);
         {
             for(int y=Y;y>=0;y--) dp[x][y]=min(dp[x][y],dp[max(0,x-point[i].first)][max(0,y-point[i].second)]+cost[i]);
         }
