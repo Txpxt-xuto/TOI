@@ -4682,3 +4682,53 @@ int main()
     cout << ans << endl;
     return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+const int MAXN=1e5 +7;
+int n,U,V,vl[MAXN],cnt[MAXN],ans;
+char sb[MAXN];
+vector<int> adj[MAXN];
+void dfs1(int p,int u)
+{
+    if(vl[u]<0)
+    {
+        vl[u]=-1;
+        return;
+    }
+    for(auto v:adj[u])
+    {
+        if(v==p) continue;
+        vl[v]=vl[u]+(sb[v]==')'?-1:1);
+        cnt[vl[v]]++;
+        dfs1(u,v);
+    }
+}
+void dfs2(int p,int u,int cn)
+{
+    if(cn<0) return;
+    else ans+=cnt[cn];
+    for(auto v:adj[u])
+    {
+        if(v==p) continue;
+        dfs2(u,v,cn+(sb[v]=='('?-1:1));
+    }
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);cin.tie(nullptr);
+    cin>>n>>U>>V;
+    for(int i=1;i<n;i++)
+    {
+        int u,v;
+        cin>>u>>v;
+        adj[u].emplace_back(v);
+        adj[v].emplace_back(u);
+    }
+    for(int i=1;i<=n;i++) cin>>sb[i];
+    vl[U]=1;
+    cnt[1]=1;
+    dfs1(-1,U);
+    dfs2(-1,V,1);
+    cout<<ans;
+}
