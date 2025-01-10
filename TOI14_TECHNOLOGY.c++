@@ -4760,7 +4760,7 @@ int main()
             }
         }
     }
-    if(dp[X][Y]==1e18+7)cout<<"-1";
+    if(dp[X][Y]==1e18+7)cout << "-1";
     else cout<<dp[X][Y];
     return 0;
 }
