@@ -4744,7 +4744,6 @@ ll dp[507][507];
 int main()
 {
     cin.tie(nullptr)->ios::sync_with_stdio(false);
-
     int n,X,Y;
     cin >> n >> X >> Y;
     for(int i=0;i<=500;i++) for(int j=0;j<=500;j++) dp[i][j]=1e18+7;
