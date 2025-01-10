@@ -4756,7 +4756,6 @@ int main()
         {
             for(int y=Y;y>=0;y--)
             {
-                // cout<<x<<" "<<y<<" "<<dp[x-point[i].first][y-point[i].second]<<"\n";
                 dp[x][y]=min(dp[x][y],dp[max(0,x-point[i].first)][max(0,y-point[i].second)]+cost[i]);
             }
         }
