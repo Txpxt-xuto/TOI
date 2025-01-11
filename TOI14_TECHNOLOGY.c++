@@ -4831,9 +4831,6 @@ int main(){
 	for(int i=1;i<=n;i++){
 		cin>>inp;
 		for(int j=1;j<=m;j++) tb[i][j]=(inp[j-1]=='G');
-        {
-			tb[i][j]=(inp[j-1]=='G');
-		}
 	}
 	for(int i=1;i<=n;i++)
     {
