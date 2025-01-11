@@ -5052,7 +5052,7 @@ int main() {
     int lptr = 0;
     for(int i = 1; i <= cycle_sz.back(); i++)
     {
-        while (lptr < cycle_sz.size() && cycle_sz[lptr] <= i) lptr++;
+        while(lptr < cycle_sz.size() && cycle_sz[lptr] <= i) lptr++;
         int sm = 0;
         for (int j = lptr; j < cycle_sz.size(); j++) sm += (cycle_sz[j]-1)/i;
         ans[sm] = min(i, ans[sm]);
