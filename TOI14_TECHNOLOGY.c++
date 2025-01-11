@@ -4992,7 +4992,8 @@ int main(){
 		r[i]=c;
 	}
 	int ans=0;
-	for(int i=1;i<=m;i++){
+	for(int i=1;i<=m;i++)
+    {
 		bool ic=false,oc=false;
 		for(int j=1;j<=n;j++)
         {
