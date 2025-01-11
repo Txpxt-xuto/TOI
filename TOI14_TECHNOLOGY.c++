@@ -5066,6 +5066,5 @@ int main() {
         if (k > N) cout << 1 << "\n";
         else cout << ans[k] << "\n";
     }
-
     return 0;
 }
