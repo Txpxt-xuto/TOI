@@ -4864,11 +4864,13 @@ int main(){
 				pg[i][j]=0;
 				dpg[i][j]=dpg[i][j+1]+tb[i][j];
 			}
-			else if(j==m){
+			else if(j==m)
+            {
 				pg[i][j]=1;
 				dpg[i][j]=dpg[i+1][j]+tb[i][j];
 			}
-			else{
+			else
+            {
 				if(dpg[i][j+1]>dpg[i+1][j])
                 {
 					pg[i][j]=0;
