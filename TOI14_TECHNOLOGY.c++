@@ -4822,7 +4822,7 @@ int main(){
 	int n,m,mx=-1;
 	pair<pair<int,int>,int> ans;
 	string inp;
-	cin>>n >>m;
+	cin >> n >> m;
 	dpr.resize(n+1,vector<int>(m+1,0));
 	dpg.resize(n+1,vector<int>(m+1,0));
 	pr.resize(n+1,vector<int>(m+1,-1));
