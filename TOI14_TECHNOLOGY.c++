@@ -5040,7 +5040,6 @@ int main() {
                 visited[cur] = true;
                 cur = p[cur];
             }
-
             cycle_sz.push_back(sz);
         }
     }
