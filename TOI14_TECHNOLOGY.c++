@@ -4980,9 +4980,10 @@ int main(){
 	cin.tie(0);
 	int n,m;
 	cin>>n >>m;
-	for(int i=1;i<=n;i++){
+	for(int i=1;i<=n;i++)
+    {
 		long long a,b;
-		cin>>a >>b;
+		cin >> a >> b;
 		pt[i]=make_pair(a,b);
 	}
 	for(int i=1;i<=m;i++)
