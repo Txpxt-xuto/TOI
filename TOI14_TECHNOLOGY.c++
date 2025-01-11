@@ -4818,7 +4818,8 @@ int main()
 using namespace std;
 vector<vector<int> > dpr,dpg,tb,pr,pg;
 deque<char> prt;
-int main(){
+int main()
+{
 	int n,m,mx=-1;
 	pair<pair<int,int>,int> ans;
 	string inp;
