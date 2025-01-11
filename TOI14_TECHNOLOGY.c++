@@ -4963,3 +4963,42 @@ int main()
 	if(g>0 || r>0) cout << 'Y';
 	else cout << 'N';
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+const int N=110;
+const int M=3e4+10;
+pair<long long,long long> pt[N],cc[M];
+long long r[M];
+bool inc(pair<long long,long long> a,pair<long long,long long> b,long long c){
+	long long x=a.first-b.first;
+	long long y=a.second-b.second;
+	return (c*c>=(x*x+y*y));
+}
+int main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int n,m;
+	cin>>n >>m;
+	for(int i=1;i<=n;i++){
+		long long a,b;
+		cin>>a >>b;
+		pt[i]=make_pair(a,b);
+	}
+	for(int i=1;i<=m;i++){
+		long long a,b,c;
+		cin>>a >>b >>c;
+		cc[i]=make_pair(a,b);
+		r[i]=c;
+	}
+	int ans=0;
+	for(int i=1;i<=m;i++){
+		bool ic=false,oc=false;
+		for(int j=1;j<=n;j++){
+			if(inc(pt[j],cc[i],r[i])) ic=true;
+			else oc=true;
+		}
+		if(ic && oc) ans++;
+	}
+	cout << ans;
+}
