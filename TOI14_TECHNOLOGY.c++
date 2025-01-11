@@ -4834,18 +4834,23 @@ int main(){
 			tb[i][j]=(inp[j-1]=='G');
 		}
 	}
-	for(int i=1;i<=n;i++){
-		for(int j=1;j<=m;j++){
+	for(int i=1;i<=n;i++)
+    {
+		for(int j=1;j<=m;j++)
+        {
 			if(i==1 && j==1) dpr[i][j]=(!tb[i][j]);
-			else if(i==1){
+			else if(i==1)
+            {
 				pr[i][j]=0;
 				dpr[i][j]=dpr[i][j-1]+(!tb[i][j]);
 			}
-			else if(j==1){
+			else if(j==1)
+            {
 				pr[i][j]=1;
 				dpr[i][j]=dpr[i-1][j]+(!tb[i][j]);
 			}
-			else{
+			else
+            {
 				if(dpr[i-1][j]>dpr[i][j-1]){
 					pr[i][j]=1;
 					dpr[i][j]=dpr[i-1][j]+(!tb[i][j]);
