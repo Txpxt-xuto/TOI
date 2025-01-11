@@ -4988,7 +4988,7 @@ int main(){
 	for(int i=1;i<=m;i++)
     {
 		long long a,b,c;
-		cin >> a >>b >>c;
+		cin >> a >> b >> c;
 		cc[i]=make_pair(a,b);
 		r[i]=c;
 	}
