@@ -4994,7 +4994,8 @@ int main(){
 	int ans=0;
 	for(int i=1;i<=m;i++){
 		bool ic=false,oc=false;
-		for(int j=1;j<=n;j++){
+		for(int j=1;j<=n;j++)
+        {
 			if(inc(pt[j],cc[i],r[i])) ic=true;
 			else oc=true;
 		}
