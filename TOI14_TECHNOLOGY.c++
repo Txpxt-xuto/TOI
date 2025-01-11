@@ -4860,7 +4860,8 @@ int main(){
 	for(int i=n;i>=1;i--){
 		for(int j=m;j>=1;j--){
 			if(i==n && j==m) dpg[i][j]=(tb[i][j]);
-			else if(i==n){
+			else if(i==n)
+            {
 				pg[i][j]=0;
 				dpg[i][j]=dpg[i][j+1]+tb[i][j];
 			}
