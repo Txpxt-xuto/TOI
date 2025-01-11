@@ -5057,8 +5057,7 @@ int main() {
         for (int j = lptr; j < cycle_sz.size(); j++) sm += (cycle_sz[j]-1)/i;
         ans[sm] = min(i, ans[sm]);
     }
-
-    for (int i = 1; i <= N; i++) ans[i] = min(ans[i-1], ans[i]);
+    for (int i=1;i<=N;i++) ans[i] = min(ans[i-1], ans[i]);
     while (Q--) {
         int k;
         cin >> k;
