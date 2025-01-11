@@ -5008,29 +5008,21 @@ int main()
 	cout << ans;
 }
 
-
 #include <bits/stdc++.h>
-
 using namespace std;
 typedef pair<int, int> pii;
 #define mp(x, y) make_pair(x, y)
-
 const int MAXN = 1e5+5;
-
 int N, Q, p[MAXN];
-
 bool visited[MAXN] = {false};
 vector<int> cycle_sz;
-
 int ans[MAXN];
-
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
     cin >> N >> Q;
     for (int i=1;i<=N;i++) cin >> p[i];
-
     for (int i=1;i<=N;i++)
     {
         if(!visited[i])
