@@ -5029,9 +5029,9 @@ int main() {
     cin.tie(NULL);
 
     cin >> N >> Q;
-    for (int i = 1; i <= N; i++) cin >> p[i];
+    for (int i=1;i<=N;i++) cin >> p[i];
 
-    for (int i = 1; i <= N; i++)
+    for (int i=1;i<=N;i++)
     {
         if(!visited[i])
         {
