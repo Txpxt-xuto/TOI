@@ -5065,7 +5065,8 @@ using namespace std;
 const int N=210;
 const int MOD=1e9+7;
 long long dp[N][N],dp2[N][N];
-int main(){
+int main()
+{
 	int r,c;
 	cin>>r >>c;
 	dp2[1][1]=1;
