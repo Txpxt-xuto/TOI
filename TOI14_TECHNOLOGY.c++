@@ -5068,7 +5068,7 @@ long long dp[N][N],dp2[N][N];
 int main()
 {
 	int r,c;
-	cin>>r >>c;
+	cin>> r >>c;
 	dp2[1][1]=1;
 	for(int i=1;i<=(r+c-2);i++){
 		for(int ii=1;ii<=r;ii++){
