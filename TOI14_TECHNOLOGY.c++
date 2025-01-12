@@ -5023,8 +5023,8 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cin >> N >> Q;
-    for (int i=1;i<=N;i++) cin >> p[i];
-    for (int i=1;i<=N;i++)
+    for(int i=1;i<=N;i++) cin >> p[i];
+    for(int i=1;i<=N;i++)
     {
         if(!visited[i])
         {
