@@ -5070,7 +5070,8 @@ int main()
 	int r,c;
 	cin >> r >> c;
 	dp2[1][1]=1;
-	for(int i=1;i<=(r+c-2);i++){
+	for(int i=1;i<=(r+c-2);i++)
+    {
 		for(int ii=1;ii<=r;ii++){
 			for(int j=1;j<=r;j++){
 				dp[ii][j]=dp2[ii][j]%MOD;
