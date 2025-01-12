@@ -5074,8 +5074,9 @@ int main()
     {
 		for(int ii=1;ii<=r;ii++)
         {
-			for(int j=1;j<=r;j++){
-				dp[ii][j]=dp2[ii][j]%MOD;
+			for(int j=1;j<=r;j++) 
+            {
+				
 			}
 		}
 		for(int j=1;j<=r;j++){
