@@ -5054,7 +5054,7 @@ int main()
     {
         int k;
         cin >> k;
-        if (k > N) cout << 1 << "\n";
+        if(k > N) cout << 1 << "\n";
         else cout << ans[k] << "\n";
     }
     return 0;
