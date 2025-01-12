@@ -4975,6 +4975,7 @@ bool inc(pair<long long,long long> a,pair<long long,long long> b,long long c){
 	long long y=a.second-b.second;
 	return (c*c>=(x*x+y*y));
 }
+
 int main()
 {
 	ios_base::sync_with_stdio(0);
