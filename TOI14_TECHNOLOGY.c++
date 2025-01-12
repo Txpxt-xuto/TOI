@@ -5057,3 +5057,28 @@ int main()
     }
     return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+const int N=210;
+const int MOD=1e9+7;
+long long dp[N][N],dp2[N][N];
+int main(){
+	int r,c;
+	cin>>r >>c;
+	dp2[1][1]=1;
+	for(int i=1;i<=(r+c-2);i++){
+		for(int ii=1;ii<=r;ii++){
+			for(int j=1;j<=r;j++){
+				dp[ii][j]=dp2[ii][j]%MOD;
+			}
+		}
+		for(int j=1;j<=r;j++){
+			for(int k=1;k<=r;k++){
+				dp2[j][k]=(dp[j-1][k]+dp[j][k-1])%MOD;
+				if(j!=k) dp2[j][k]=(dp2[j][k]+dp[j-1][k-1]+dp[j][k])%MOD;
+			}
+		}
+	}
+	cout<<dp2[r][r]%MOD;
+}
