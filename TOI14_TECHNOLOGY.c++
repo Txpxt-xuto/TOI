@@ -5129,8 +5129,9 @@ struct maxt{
 }s2;
 ll ans=0;
 vector<int>rs;
-void solve1(int n,int k){
-    for(int i=1;i<=n;i++)v.pb(i);
+void solve1(int n,int k)
+{
+    for(int i=1;i<=n;i++) v.pb(i);
     vector<pii>qr(k);
     for(int i=0;i<k;i++) cin >> qr[i].f >> qr[i].s;
     do{
