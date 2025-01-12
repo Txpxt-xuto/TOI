@@ -5082,5 +5082,5 @@ int main()
 			}
 		}
 	}
-	cout<<dp2[r][r]%MOD;
+	cout << dp2[r][r]%MOD;
 }
