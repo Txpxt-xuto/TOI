@@ -5112,7 +5112,8 @@ struct mint{
         {
             if(l&1)res=min(res,t[l++]);
             if(r&1)res=min(res,t[--r]);
-        }return res;
+        }
+        return res;
     }
 }s1;
 struct maxt{
