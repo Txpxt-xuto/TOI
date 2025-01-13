@@ -5192,19 +5192,16 @@ struct node{
     node(db v,int f):v(v),f(f),l(nullptr),r(nullptr){}
     node(db v,int f,node *l,node *r):v(v),f(f),l(l),r(r){}
 };
-
 typedef node* nodeptr;
-
 int n,m;
 db u;
 db a[N],qs[N];
 nodeptr rt[N];
 int mp[N];
 vector<pair<db,int>> tb;
-
 void build(int l,int r,nodeptr &t){
     t=new node();
-    if(l==r)return;
+    if(l==r) return;
     int m=(l+r)/2;
     build(l,m,t->l);
     build(m+1,r,t->r);
