@@ -5246,7 +5246,8 @@ int main()
     for(int i=0;i<n;i++)mp[tb[i].second]=i+1;
     build(1,n,rt[0]);
     for(int i=1;i<=n;i++)update(1,n,rt[i],mp[i],a[i],rt[i-1]);
-    while(m--){
+    while(m--)
+    {
         int st,ed;
         cin >> st >> ed >> u;
         int sz=ed-st+1;
