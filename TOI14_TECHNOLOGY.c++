@@ -5284,6 +5284,5 @@ int main() {
 
         cout << max_d << '\n'; // แสดงผลลัพธ์
     }
-
     return 0;
 }
