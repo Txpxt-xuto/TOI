@@ -5282,7 +5282,7 @@ int main() {
                 max_d = min(max_d, abs(it->first - pos) - 1);
             }
         }
-        cout << max_d << '\n'; // แสดงผลลัพธ์
+        cout << max_d << '\n';
     }
     return 0;
 }
