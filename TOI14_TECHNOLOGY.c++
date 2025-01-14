@@ -5281,7 +5281,6 @@ int main() {
                 max_d = min(max_d, abs(it->first - pos) - 1);
             }
         }
-
         cout << max_d << '\n'; // แสดงผลลัพธ์
     }
     return 0;
