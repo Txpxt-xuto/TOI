@@ -5273,7 +5273,6 @@ int main() {
         cin >> pos >> height;
         int max_d = n;
         buildings[pos] = height;
-        // ตรวจสอบตึกที่อยู่ในช่วง
         for(auto it=buildings.begin();it!=buildings.end();++it)
         {
             if(abs(it->first - pos) > max_d) break;
