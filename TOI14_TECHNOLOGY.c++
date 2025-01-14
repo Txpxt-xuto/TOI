@@ -5280,3 +5280,187 @@ int main()
     }
     return 0;
 }
+
+#include<bits/stdc++.h>
+#define pb push_back
+#define ll long long
+#define f first
+#define s second
+#define sz(x) (int)x.size()
+#define pii pair<ll,ll>
+using namespace std;
+const int N=1e5+5;
+vector<pii>g[N];
+bool vis[N]{0},cv[N]{0};
+pii pr[N];
+ll e[N];
+vector<int>cyc;
+pii t[4*N];
+ll lz[4*N]{0},lz2[4*N]{0};
+ll tree[4*N]{0},lazy[4*N]{0},lazy2[4*N]{0};
+void build2(int i,int l,int r){
+    if(l==r)return void(tree[i]=e[l]);
+    int m=(l+r)>>1;
+    build2(2*i,l,m);
+    build2(2*i+1,m+1,r);
+    tree[i]=tree[2*i]+tree[2*i+1];
+}
+void push22(int i,int l,int r){
+    if(lazy2[i]){
+        tree[i]=0;
+        if(l<r){
+            lazy2[2*i]=lazy2[i];
+            lazy2[2*i+1]=lazy2[i];
+            lazy[2*i]=0;
+            lazy[2*i+1]=0;
+        }lazy2[i]=0;
+    }
+}
+void push12(int i,int l,int r){
+    push22(i,l,r);
+    tree[i]+=lazy[i]*(r-l+1);
+    if(l<r){
+        lazy[2*i]+=lazy[i];
+        lazy[2*i+1]+=lazy[i];
+    }lazy[i]=0;
+}
+void u12(int i,int l,int r,int tl,int tr,ll v){
+    push12(i,l,r);
+    if(r<tl||l>tr)return;
+    if(l>=tl&&r<=tr){
+        lazy[i]+=v;push12(i,l,r);return;
+    }int m=(l+r)>>1;
+    u12(2*i,l,m,tl,tr,v);
+    u12(2*i+1,m+1,r,tl,tr,v);
+    tree[i]=tree[2*i]+tree[2*i+1];
+}
+void u22(int i,int l,int r,int tl,int tr){
+    push12(i,l,r);
+    if(r<tl||l>tr)return;
+    if(l>=tl&&r<=tr){
+        lazy2[i]=1;push12(i,l,r);return;
+    }int m=(l+r)>>1;
+    u22(2*i,l,m,tl,tr);
+    u22(2*i+1,m+1,r,tl,tr);
+    tree[i]=tree[2*i]+tree[2*i+1];
+}
+ll qr2(int i,int l,int r,int tl,int tr){
+    push12(i,l,r);
+    if(r<tl||l>tr)return 0;
+    if(l>=tl&&r<=tr)return tree[i];
+    int m=(l+r)>>1;
+    return qr2(2*i,l,m,tl,tr)+qr2(2*i+1,m+1,r,tl,tr);
+}
+void build(int i,int l,int r){
+    if(l==r)return void(t[i]={e[cyc[l]],1});
+    int m=(l+r)>>1;
+    build(2*i,l,m);
+    build(2*i+1,m+1,r);
+    if(t[2*i].f==t[2*i+1].f)t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
+    else t[i]=max(t[2*i],t[2*i+1]);
+}
+void push2(int i,int l,int r){
+    if(lz2[i]){
+        t[i].f=0;
+        t[i].s=r-l+1;
+        if(l<r){
+            lz2[2*i]=lz2[i];
+            lz2[2*i+1]=lz2[i];
+            lz[2*i]=0;
+            lz[2*i+1]=0;
+        }lz2[i]=0;
+    }
+}
+void push(int i,int l,int r){
+    push2(i,l,r);
+    t[i].f+=lz[i];
+    if(l<r){
+        lz[2*i]+=lz[i];
+        lz[2*i+1]+=lz[i];
+    }lz[i]=0;
+}
+void u1(int i,int l,int r,int tl,int tr,ll v){
+    push(i,l,r);
+    if(r<tl||l>tr)return;
+    if(l>=tl&&r<=tr){
+        lz[i]+=v;push(i,l,r);return;
+    }int m=(l+r)>>1;
+    u1(2*i,l,m,tl,tr,v);
+    u1(2*i+1,m+1,r,tl,tr,v);
+    if(t[2*i].f==t[2*i+1].f)t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
+    else t[i]=max(t[2*i],t[2*i+1]);
+}
+void u2(int i,int l,int r,int tl,int tr){
+    push(i,l,r);
+    if(r<tl||l>tr)return;
+    if(l>=tl&&r<=tr){
+        lz2[i]=1;push(i,l,r);return;
+    }int m=(l+r)>>1;
+    u2(2*i,l,m,tl,tr);
+    u2(2*i+1,m+1,r,tl,tr);
+    if(t[2*i].f==t[2*i+1].f)t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
+    else t[i]=max(t[2*i],t[2*i+1]);
+}
+pii qr(int i,int l,int r,int tl,int tr){
+    push(i,l,r);
+    if(r<tl||l>tr)return {0,0};
+    if(l>=tl&&r<=tr)return t[i];
+    int m=(l+r)>>1;
+    pii le=qr(2*i,l,m,tl,tr);
+    pii re=qr(2*i+1,m+1,r,tl,tr);
+    if(le.f==re.f)return {le.f,le.s+re.s};
+    else return max(le,re);
+}
+void dfs(int u,int p){
+    vis[u]=1;
+    for(auto v:g[u]){
+        if(v.f==p)continue;
+        if(!vis[v.f]){
+            pr[v.f]={u,v.s};
+            dfs(v.f,u);
+        }
+        else if(vis[v.f]&&!cv[v.f]&&!cv[u]){
+            int x=u;
+            cyc.pb(v.s);
+            while(x!=v.f){
+                cv[x]=1;
+                cyc.pb(pr[x].s);
+                x=pr[x].f;
+            }cv[v.f]=1;
+        }
+    }
+}
+
+int main(){
+    ios_base::sync_with_stdio(false);cin.tie(NULL);
+    int n,q;cin>>n>>q;
+    for(int i=1;i<=n;i++){
+        int u,v;ll w;cin>>u>>v>>w;
+        g[u].pb({v,i});
+        g[v].pb({u,i});
+        e[i]=w;
+    }pr[1]={1,0};
+    dfs(1,1);
+    sort(cyc.begin(),cyc.end());
+    build(1,0,sz(cyc)-1);
+    build2(1,1,n);
+    while(q--){
+        int x,l,r;ll v;cin>>x>>l>>r>>v;
+        if(x==1){
+            u12(1,1,n,l,r,v);
+            l=lower_bound(cyc.begin(),cyc.end(),l)-cyc.begin();
+            r=upper_bound(cyc.begin(),cyc.end(),r)-cyc.begin()-1;
+            u1(1,0,sz(cyc)-1,l,r,v);
+            cout<<tree[1]-t[1].f<<" "<<t[1].s<<"\n";
+        }
+        else {
+            u22(1,1,n,l,r);
+            u12(1,1,n,l,r,v);
+            l=lower_bound(cyc.begin(),cyc.end(),l)-cyc.begin();
+            r=upper_bound(cyc.begin(),cyc.end(),r)-cyc.begin()-1;
+            u2(1,0,sz(cyc)-1,l,r);
+            u1(1,0,sz(cyc)-1,l,r,v);
+            cout<<tree[1]-t[1].f<<" "<<t[1].s<<"\n";
+        }
+    }
+}
