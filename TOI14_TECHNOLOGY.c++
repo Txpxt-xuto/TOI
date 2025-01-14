@@ -5260,9 +5260,7 @@ int main()
 #include <map>
 #include <cmath>
 using namespace std;
-
 map<int, int> buildings;
-
 int main()
 {
     int n, k; 
