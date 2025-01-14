@@ -5445,7 +5445,9 @@ int main(){
     build(1,0,sz(cyc)-1);
     build2(1,1,n);
     while(q--){
-        int x,l,r;ll v;cin>>x>>l>>r>>v;
+        int x,l,r;
+        ll v;
+        cin>>x >> l >> r >> v;
         if(x==1){
             u12(1,1,n,l,r,v);
             l=lower_bound(cyc.begin(),cyc.end(),l)-cyc.begin();
