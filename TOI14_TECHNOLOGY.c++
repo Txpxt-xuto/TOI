@@ -5279,7 +5279,7 @@ int main() {
             if(abs(it->first - pos) > max_d) break;
             if(it->second > height) max_d = min(max_d, abs(it->first - pos) - 1);
             { 
-                max_d = min(max_d, abs(it->first - pos) - 1);
+                
             }
         }
         cout << max_d << '\n';
