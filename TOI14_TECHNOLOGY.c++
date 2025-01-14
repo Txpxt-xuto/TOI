@@ -5451,7 +5451,7 @@ int main(){
             l=lower_bound(cyc.begin(),cyc.end(),l)-cyc.begin();
             r=upper_bound(cyc.begin(),cyc.end(),r)-cyc.begin()-1;
             u1(1,0,sz(cyc)-1,l,r,v);
-            cout<<tree[1]-t[1].f<<" "<<t[1].s<<"\n";
+            cout<<tree[1]-t[1].f<<" " << t[1].s << "\n";
         }
         else
         {
