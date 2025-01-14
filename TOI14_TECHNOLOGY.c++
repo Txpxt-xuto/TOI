@@ -5444,14 +5444,16 @@ int main(){
     sort(cyc.begin(),cyc.end());
     build(1,0,sz(cyc)-1);
     build2(1,1,n);
-    while(q--){
+    while(q--)
+    {
         int x,l,r;
         ll v;
         cin >> x >> l >> r >> v;
-        if(x==1){
+        if(x==1)
+        {
             u12(1,1,n,l,r,v);
-            l=lower_bound(cyc.begin(),cyc.end(),l)-cyc.begin();
-            r=upper_bound(cyc.begin(),cyc.end(),r)-cyc.begin()-1;
+            l = lower_bound(cyc.begin(),cyc.end(),l)-cyc.begin();
+            r = upper_bound(cyc.begin(),cyc.end(),r)-cyc.begin()-1;
             u1(1,0,sz(cyc)-1,l,r,v);
             cout << tree[1]-t[1].f << " " << t[1].s << "\n";
         }
