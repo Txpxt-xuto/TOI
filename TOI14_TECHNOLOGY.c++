@@ -5267,13 +5267,14 @@ int main() {
     int n, k; 
     cin >> n >> k;
 
-    for (int i = 0; i < k; ++i) {
+    for (int i = 0; i < k; ++i)
+    {
         int pos, height;
         cin >> pos >> height;
         int max_d = n;
         buildings[pos] = height;
         // ตรวจสอบตึกที่อยู่ในช่วง
-        for (auto it = buildings.begin(); it != buildings.end(); ++it) {
+        for(auto it = buildings.begin(); it != buildings.end(); ++it) {
             if (abs(it->first - pos) > max_d) break; // ออกจากลูปถ้าเกินระยะ d
             if (it->second > height) { // พบตึกที่สูงกว่า
                 max_d = min(max_d, abs(it->first - pos) - 1);
