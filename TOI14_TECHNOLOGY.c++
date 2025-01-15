@@ -5438,7 +5438,7 @@ int main(){
     {
         int u,v;
         ll w;
-        cin>>u>>v >> w;
+        cin>>u >> v >> w;
         g[u].pb({v,i});
         g[v].pb({u,i});
         e[i]=w;
