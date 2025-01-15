@@ -5427,7 +5427,8 @@ void dfs(int u,int p){
                 cv[x]=1;
                 cyc.pb(pr[x].s);
                 x=pr[x].f;
-            }cv[v.f]=1;
+            }
+            cv[v.f]=1;
         }
     }
 }
