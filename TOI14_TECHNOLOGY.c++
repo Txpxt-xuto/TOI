@@ -5403,12 +5403,12 @@ void u2(int i,int l,int r,int tl,int tr){
 }
 pii qr(int i,int l,int r,int tl,int tr){
     push(i,l,r);
-    if(r<tl||l>tr)return {0,0};
-    if(l>=tl&&r<=tr)return t[i];
+    if(r<tl||l>tr) return {0,0};
+    if(l>=tl&&r<=tr) return t[i];
     int m=(l+r)>>1;
     pii le=qr(2*i,l,m,tl,tr);
     pii re=qr(2*i+1,m+1,r,tl,tr);
-    if(le.f==re.f)return {le.f,le.s+re.s};
+    if(le.f==re.f) return {le.f,le.s+re.s};
     else return max(le,re);
 }
 void dfs(int u,int p)
