@@ -5602,9 +5602,6 @@ struct seg{
         under[i]=(all[2*i]>0?mid-l+1:under[2*i])+(all[2*i+1]>0? r-(mid+1)+1:under[2*i+1]);
     }
     int query() return (all[1]>0? n:under[1]);
-    {
-        return (all[1]>0? n:under[1]);
-    }
 }tree;
 vector<int> keep[2*N];
 vector<pii> todo[N];
