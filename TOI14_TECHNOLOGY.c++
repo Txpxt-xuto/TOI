@@ -5305,25 +5305,33 @@ void build2(int i,int l,int r){
     build2(2*i+1,m+1,r);
     tree[i]=tree[2*i]+tree[2*i+1];
 }
-void push22(int i,int l,int r){
-    if(lazy2[i]){
+
+void push22(int i,int l,int r)
+{
+    if(lazy2[i])
+    {
         tree[i]=0;
-        if(l<r){
+        if(l<r)
+        {
             lazy2[2*i]=lazy2[i];
             lazy2[2*i+1]=lazy2[i];
             lazy[2*i]=0;
             lazy[2*i+1]=0;
-        }lazy2[i]=0;
+        }
+        lazy2[i]=0;
     }
 }
+
 void push12(int i,int l,int r)
 {
     push22(i,l,r);
     tree[i]+=lazy[i]*(r-l+1);
-    if(l<r){
+    if(l<r)
+    {
         lazy[2*i]+=lazy[i];
         lazy[2*i+1]+=lazy[i];
-    }lazy[i]=0;
+    }
+    lazy[i]=0;
 }
 
 void u12(int i,int l,int r,int tl,int tr,ll v)
