@@ -5662,8 +5662,6 @@ int main()
     scanf("%d %d",&k,&m);
     int n = 1<<k;
     for (int i = 0; i < n+1; i++) p[i] = i;
-    {
-    }
     int a,b;
     int cnt = 0,ch = 0;
     for(int i = 0; i < m; i++)
