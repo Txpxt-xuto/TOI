@@ -5666,7 +5666,8 @@ int main()
     }
     int a,b;
     int cnt = 0,ch = 0;
-    for (int i = 0; i < m; i++){
+    for(int i = 0; i < m; i++)
+    {
         scanf("%d %d",&a,&b);
         swap(a,b);
         b = a+(1<<b);
