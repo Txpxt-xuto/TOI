@@ -5652,7 +5652,7 @@ int p[1<<21];
 
 int fin(int x)
 {
-    if (p[x] == x) return x;
+    if(p[x] == x) return x;
     else return fin(p[x]);
 }
 
