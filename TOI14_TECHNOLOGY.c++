@@ -5381,7 +5381,8 @@ void push(int i,int l,int r){
     }
     lz[i]=0;
 }
-void u1(int i,int l,int r,int tl,int tr,ll v){
+void u1(int i,int l,int r,int tl,int tr,ll v)
+{
     push(i,l,r);
     if(r<tl||l>tr) return;
     if(l>=tl&&r<=tr)
@@ -5395,7 +5396,8 @@ void u1(int i,int l,int r,int tl,int tr,ll v){
     if(t[2*i].f==t[2*i+1].f) t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
     else t[i]=max(t[2*i],t[2*i+1]);
 }
-void u2(int i,int l,int r,int tl,int tr){
+void u2(int i,int l,int r,int tl,int tr)
+{
     push(i,l,r);
     if(r<tl||l>tr) return;
     if(l>=tl&&r<=tr)
