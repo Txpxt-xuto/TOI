@@ -5500,7 +5500,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     {
         for(int j:B[i]) adj[j].push_back(i);
         {
-            adj[j].push_back(i);
         }
     }
     priority_queue<A> pq;
