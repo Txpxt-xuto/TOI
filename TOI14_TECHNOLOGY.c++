@@ -5601,7 +5601,7 @@ struct seg{
         upd(2*i+1,mid+1,r,ll,rr,val);
         under[i]=(all[2*i]>0?mid-l+1:under[2*i])+(all[2*i+1]>0? r-(mid+1)+1:under[2*i+1]);
     }
-    int query()
+    int query() return (all[1]>0? n:under[1]);
     {
         return (all[1]>0? n:under[1]);
     }
