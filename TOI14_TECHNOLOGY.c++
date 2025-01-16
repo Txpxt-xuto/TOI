@@ -5398,7 +5398,8 @@ void u2(int i,int l,int r,int tl,int tr){
         lz2[i]=1;
         push(i,l,r);
         return;
-    }int m=(l+r)>>1;
+    }
+    int m=(l+r)>>1;
     u2(2*i,l,m,tl,tr);
     u2(2*i+1,m+1,r,tl,tr);
     if(t[2*i].f==t[2*i+1].f) t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
