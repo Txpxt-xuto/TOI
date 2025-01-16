@@ -5499,8 +5499,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     for(int i = 0;i<N;i++)
     {
         for(int j:B[i]) adj[j].push_back(i);
-        {
-        }
     }
     priority_queue<A> pq;
     for(int i = 0;i<N;i++){
