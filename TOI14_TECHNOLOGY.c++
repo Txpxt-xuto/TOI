@@ -5359,7 +5359,8 @@ void build(int i,int l,int r){
     if(t[2*i].f==t[2*i+1].f)t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
     else t[i]=max(t[2*i],t[2*i+1]);
 }
-void push2(int i,int l,int r){
+void push2(int i,int l,int r)
+{
     if(lz2[i])
     {
         t[i].f=0;
