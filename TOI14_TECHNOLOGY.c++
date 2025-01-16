@@ -5344,13 +5344,16 @@ void u22(int i,int l,int r,int tl,int tr){
     u22(2*i+1,m+1,r,tl,tr);
     tree[i]=tree[2*i]+tree[2*i+1];
 }
-ll qr2(int i,int l,int r,int tl,int tr){
+
+ll qr2(int i,int l,int r,int tl,int tr)
+{
     push12(i,l,r);
     if(r<tl||l>tr)return 0;
     if(l>=tl&&r<=tr)return tree[i];
     int m=(l+r)>>1;
     return qr2(2*i,l,m,tl,tr)+qr2(2*i+1,m+1,r,tl,tr);
 }
+
 void build(int i,int l,int r)
 {
     if(l==r) return void(t[i]={e[cyc[l]],1});
@@ -5360,6 +5363,7 @@ void build(int i,int l,int r)
     if(t[2*i].f==t[2*i+1].f) t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
     else t[i]=max(t[2*i],t[2*i+1]);
 }
+
 void push2(int i,int l,int r)
 {
     if(lz2[i])
