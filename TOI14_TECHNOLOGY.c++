@@ -5672,7 +5672,8 @@ int main()
         b = a+(1<<b);
         int s = fin(a);
         int e = fin(b);
-        if (s != e){
+        if(s != e)
+        {
             cnt++;
             if (s > e) p[e] = s;
             else p[s] = e;
