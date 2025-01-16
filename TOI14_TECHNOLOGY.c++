@@ -5645,3 +5645,43 @@ signed main()
     cout << ans;
     return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+int p[1<<21];
+
+int fin(int x)
+{
+    if (p[x] == x) return x;
+    else return fin(p[x]);
+}
+
+int main()
+{
+    int k,m;
+    scanf("%d %d",&k,&m);
+    int n = 1<<k;
+    for (int i = 0; i < n+1; i++){
+        p[i] = i;
+    }
+    int a,b;
+    int cnt = 0,ch = 0;
+    for (int i = 0; i < m; i++){
+        scanf("%d %d",&a,&b);
+        swap(a,b);
+        b = a+(1<<b);
+        int s = fin(a);
+        int e = fin(b);
+        if (s != e){
+            cnt++;
+            if (s > e) p[e] = s;
+            else p[s] = e;
+        }
+        if (cnt == n && !ch){
+            ch = 1;
+            printf("%d",i+1);
+        }
+    }
+
+    return 0;
+}
