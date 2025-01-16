@@ -5677,7 +5677,8 @@ int main()
             if (s > e) p[e] = s;
             else p[s] = e;
         }
-        if (cnt == n && !ch){
+        if(cnt == n && !ch)
+        {
             ch = 1;
             printf("%d",i+1);
         }
