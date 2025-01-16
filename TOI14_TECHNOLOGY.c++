@@ -5298,8 +5298,9 @@ vector<int>cyc;
 pii t[4*N];
 ll lz[4*N]{0},lz2[4*N]{0};
 ll tree[4*N]{0},lazy[4*N]{0},lazy2[4*N]{0};
-void build2(int i,int l,int r){
-    if(l==r)return void(tree[i]=e[l]);
+void build2(int i,int l,int r)
+{
+    if(l==r) return void(tree[i]=e[l]);
     int m=(l+r)>>1;
     build2(2*i,l,m);
     build2(2*i+1,m+1,r);
