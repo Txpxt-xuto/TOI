@@ -5649,7 +5649,6 @@ signed main()
 #include <bits/stdc++.h>
 using namespace std;
 int p[1<<21];
-
 int fin(int x)
 {
     if(p[x] == x) return x;
