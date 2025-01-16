@@ -5663,7 +5663,6 @@ int main()
     int n = 1<<k;
     for (int i = 0; i < n+1; i++) p[i] = i;
     {
-        p[i] = i;
     }
     int a,b;
     int cnt = 0,ch = 0;
