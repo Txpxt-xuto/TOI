@@ -5360,7 +5360,8 @@ void build(int i,int l,int r){
     else t[i]=max(t[2*i],t[2*i+1]);
 }
 void push2(int i,int l,int r){
-    if(lz2[i]){
+    if(lz2[i])
+    {
         t[i].f=0;
         t[i].s=r-l+1;
         if(l<r)
