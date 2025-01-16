@@ -5664,7 +5664,7 @@ int main()
     for(int i=0;i<n+1;i++) p[i] = i;
     int a,b;
     int cnt = 0,ch = 0;
-    for(int i=0;i<m; i++)
+    for(int i=0;i<m;i++)
     {
         scanf("%d %d",&a,&b);
         swap(a,b);
