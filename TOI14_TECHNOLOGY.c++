@@ -5334,6 +5334,7 @@ void u12(int i,int l,int r,int tl,int tr,ll v){
     u12(2*i+1,m+1,r,tl,tr,v);
     tree[i]=tree[2*i]+tree[2*i+1];
 }
+
 void u22(int i,int l,int r,int tl,int tr){
     push12(i,l,r);
     if(r<tl||l>tr)return;
