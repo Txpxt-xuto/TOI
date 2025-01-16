@@ -5675,7 +5675,7 @@ int main()
         if(s != e)
         {
             cnt++;
-            if (s > e) p[e] = s;
+            if(s > e) p[e] = s;
             else p[s] = e;
         }
         if(cnt == n && !ch)
