@@ -5590,7 +5590,7 @@ struct seg{
     void build(){for(int i=0;i<3*N;i++)all[i]=under[i]=0;}
     void upd(int i,int l,int r,int ll,int rr,int val)
     {
-        if(rr<l||r<ll)return;
+        if(rr<l||r<ll) return;
         if(ll<=l&&r<=rr)
         {
             all[i]+=val;
