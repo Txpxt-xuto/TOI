@@ -5369,7 +5369,8 @@ void push2(int i,int l,int r){
             lz2[2*i+1]=lz2[i];
             lz[2*i]=0;
             lz[2*i+1]=0;
-        }lz2[i]=0;
+        }
+        lz2[i]=0;
     }
 }
 void push(int i,int l,int r)
