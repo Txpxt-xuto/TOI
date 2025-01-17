@@ -5928,7 +5928,8 @@ struct persist{
             return {a.f+cur->l->val-del->l->val,a.s+sum};
         }
     }
-    int qry2(node *cur,int l,int r,int pos){
+    int qry2(node *cur,int l,int r,int pos)
+    {
         if(l==r)return cur->val;
         int mid=l+(r-l)/2;
         if(pos<=mid)return qry2(cur->l,l,mid,pos);
