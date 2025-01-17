@@ -5939,7 +5939,8 @@ int ps[mxn+10];
 void init(int32_t N,std::vector<int32_t> T,std::vector<std::vector<int32_t>> road){
     n=N;
     m=T.size()-1;
-    for(int i=0;i<n-1;i++){
+    for(int i=0;i<n-1;i++)
+    {
         adj[road[i][0]].pb({road[i][1],road[i][2]});
         adj[road[i][1]].pb({road[i][0],road[i][2]});
     }
