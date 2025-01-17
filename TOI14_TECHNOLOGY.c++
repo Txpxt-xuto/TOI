@@ -5685,3 +5685,324 @@ int main()
     return 0;
 }
 
+#include <vector>
+#include<iostream>
+#include<queue>
+#include<cassert>
+#include<limits.h>
+#include<vector>
+#include<algorithm>
+#include<cstring>
+#include<stack>
+#include<map>
+#define pii pair<int,int>
+#define pb push_back
+#define all(x) x.begin(),x.end()
+#define f first
+#define s second
+#pragma GCC optimize ("03,unroll-lopps")
+using namespace std;
+const int mxn=2e5,lg=30;
+#define int long long
+using namespace std;
+vector<pii>adj[mxn+10];
+int dist[mxn+10],up[mxn+10][lg+5],n,h[mxn+10];
+const int inf=1e18,minf=-1e18;
+pair<pii,int>ex;
+void dfs(int cur,int p){
+    for(auto i:adj[cur]){
+        if(i.f==p)continue;
+        up[i.f][0]=cur;
+        h[i.f]=h[cur]+1;
+        dist[i.f]=dist[cur]+i.s;
+        dfs(i.f,cur);
+    }
+}
+int lca(int a,int b){
+    if(h[a]<h[b])swap(a,b);
+    int k=h[a]-h[b];
+    for(int i=0;i<=lg;i++)if(k&(1ll<<i))a=up[a][i];
+    if(a==b)return a;
+    for(int i=lg;i>=0;i--)if(up[a][i]!=up[b][i])a=up[a][i],b=up[b][i];
+    return up[a][0];
+}
+int getdist(int a,int b){
+    return dist[a]+dist[b]-2*dist[lca(a,b)];
+}
+pii cost[mxn+10];
+int m;
+struct node{
+    node *l,*r;
+    int val,cnt;
+    node():l(0),r(0),val(0),cnt(0){};
+};
+node* root[mxn+10];
+struct persist{
+    void build(node *&cur,int l,int r){
+        int mid=l+(r-l)/2;
+        cur=new node();
+        if(l==r)return;
+        build(cur->l,l,mid);
+        build(cur->r,mid+1,r);
+    }
+    void update(node *&cur,node *&lcur,int l,int r,int pos,int val){
+        int mid=l+(r-l)/2;
+        cur=new node(*lcur);
+        if(l==r){
+            cur->val=val;
+            cur->cnt=1;
+            return;
+        }
+        if(pos<=mid)update(cur->l,lcur->l,l,mid,pos,val);
+        else update(cur->r,lcur->r,mid+1,r,pos,val);
+        cur->val=cur->l->val+cur->r->val;
+        cur->cnt=cur->l->cnt+cur->r->cnt;
+    }
+    pii qry(node *cur,node *del,int need,int l,int r){
+        int mid=l+(r-l)/2;
+        if(l==r)return {cur->val,cur->cnt};
+        int sum=cur->l->cnt-del->l->cnt;
+        if(sum>=need)return qry(cur->l,del->l,need,l,mid);
+        else{
+            pii a=qry(cur->r,del->r,need-sum,mid+1,r);
+            return {a.f+cur->l->val-del->l->val,a.s+sum};
+        }
+    }
+    int qry2(node *cur,int l,int r,int pos){
+        if(l==r)return cur->val;
+        int mid=l+(r-l)/2;
+        if(pos<=mid)return qry2(cur->l,l,mid,pos);
+        else return qry2(cur->r,mid+1,r,pos);
+    }
+}t;
+int ps[mxn+10];
+void init(int32_t N,std::vector<int32_t> T,std::vector<std::vector<int32_t>> road){
+    n=N;
+    m=T.size()-1;
+    for(int i=0;i<n-1;i++){
+        adj[road[i][0]].pb({road[i][1],road[i][2]});
+        adj[road[i][1]].pb({road[i][0],road[i][2]});
+    }
+    ex={{road[n-1][0],road[n-1][1]},road[n-1][2]};
+    dfs(0,-1);
+    for(int i=1;i<=lg;i++)for(int j=0;j<n;j++)up[j][i]=up[up[j][i-1]][i-1];
+    for(int i=0;i<m;i++){
+        cost[i].f=getdist(T[i],T[i+1]);
+        cost[i].s=min(getdist(T[i],ex.f.f)+getdist(T[i+1],ex.f.s)+ex.s,getdist(T[i],ex.f.s)+getdist(T[i+1],ex.f.f)+ex.s);
+    }
+    vector<pii>change;
+    for(int i=0;i<m;i++)change.pb({(cost[i].s-cost[i].f),i});
+    sort(all(change));
+    vector<int>pos(m);
+    for(int i=0;i<m;i++)pos[change[i].s]=i;
+    t.build(root[0],0,m);
+    for(int i=0;i<m;i++){
+        ps[i]=cost[i].f;
+        if(i)ps[i]+=ps[i-1];
+        t.update(root[i+1],root[i],0,m,pos[i],change[pos[i]].f);
+    }
+    return;
+}
+long long min_distance(int32_t l,int32_t r,int32_t x){
+    r--;
+    int ans=ps[r];
+    if(l)ans-=ps[l-1];
+    if(x==0)return ans;
+    l++,r++;
+    ans+=t.qry(root[r],root[l-1],x,0,m).f;
+    return ans;
+}/*
+int32_t main(){
+    int32_t n,m;cin>>n>>m;
+    vector<int32_t>a(m);
+    vector<vector<int32_t>>b;
+    for(int i=0;i<m;i++)cin>>a[i];
+    for(int i=0;i<n;i++){
+        vector<int32_t>g;
+        for(int j=0;j<3;j++){
+            int k;cin>>k;
+            g.pb(k);
+        }
+        b.pb(g);
+    }
+    init(n,a,b);
+    cout<<min_distance(2,4,1)<<'\n';
+    cout<<min_distance(0,7,1)<<'\n';
+    cout<<min_distance(3,7,2)<<'\n';
+    cout<<min_distance(0,1,0)<<"\n"; 
+}*/
+
+/*
+10 8
+0 1 7 8 3 1 3 2
+0 2 10
+2 4 8
+4 5 20
+1 9 1000
+9 7 20
+9 5 30
+5 6 50
+6 8 100
+6 3 80
+0 1 11
+*/#include <vector>
+#include<iostream>
+#include<queue>
+#include<cassert>
+#include<limits.h>
+#include<vector>
+#include<algorithm>
+#include<cstring>
+#include<stack>
+#include<map>
+#define pii pair<int,int>
+#define pb push_back
+#define all(x) x.begin(),x.end()
+#define f first
+#define s second
+#pragma GCC optimize ("03,unroll-lopps")
+using namespace std;
+const int mxn=2e5,lg=30;
+#define int long long
+using namespace std;
+vector<pii>adj[mxn+10];
+int dist[mxn+10],up[mxn+10][lg+5],n,h[mxn+10];
+const int inf=1e18,minf=-1e18;
+pair<pii,int>ex;
+void dfs(int cur,int p){
+    for(auto i:adj[cur]){
+        if(i.f==p)continue;
+        up[i.f][0]=cur;
+        h[i.f]=h[cur]+1;
+        dist[i.f]=dist[cur]+i.s;
+        dfs(i.f,cur);
+    }
+}
+int lca(int a,int b){
+    if(h[a]<h[b])swap(a,b);
+    int k=h[a]-h[b];
+    for(int i=0;i<=lg;i++)if(k&(1ll<<i))a=up[a][i];
+    if(a==b)return a;
+    for(int i=lg;i>=0;i--)if(up[a][i]!=up[b][i])a=up[a][i],b=up[b][i];
+    return up[a][0];
+}
+int getdist(int a,int b){
+    return dist[a]+dist[b]-2*dist[lca(a,b)];
+}
+pii cost[mxn+10];
+int m;
+struct node{
+    node *l,*r;
+    int val,cnt;
+    node():l(0),r(0),val(0),cnt(0){};
+};
+node* root[mxn+10];
+struct persist{
+    void build(node *&cur,int l,int r){
+        int mid=l+(r-l)/2;
+        cur=new node();
+        if(l==r)return;
+        build(cur->l,l,mid);
+        build(cur->r,mid+1,r);
+    }
+    void update(node *&cur,node *&lcur,int l,int r,int pos,int val){
+        int mid=l+(r-l)/2;
+        cur=new node(*lcur);
+        if(l==r){
+            cur->val=val;
+            cur->cnt=1;
+            return;
+        }
+        if(pos<=mid)update(cur->l,lcur->l,l,mid,pos,val);
+        else update(cur->r,lcur->r,mid+1,r,pos,val);
+        cur->val=cur->l->val+cur->r->val;
+        cur->cnt=cur->l->cnt+cur->r->cnt;
+    }
+    pii qry(node *cur,node *del,int need,int l,int r){
+        int mid=l+(r-l)/2;
+        if(l==r)return {cur->val,cur->cnt};
+        int sum=cur->l->cnt-del->l->cnt;
+        if(sum>=need)return qry(cur->l,del->l,need,l,mid);
+        else{
+            pii a=qry(cur->r,del->r,need-sum,mid+1,r);
+            return {a.f+cur->l->val-del->l->val,a.s+sum};
+        }
+    }
+    int qry2(node *cur,int l,int r,int pos){
+        if(l==r)return cur->val;
+        int mid=l+(r-l)/2;
+        if(pos<=mid)return qry2(cur->l,l,mid,pos);
+        else return qry2(cur->r,mid+1,r,pos);
+    }
+}t;
+int ps[mxn+10];
+void init(int32_t N,std::vector<int32_t> T,std::vector<std::vector<int32_t>> road){
+    n=N;
+    m=T.size()-1;
+    for(int i=0;i<n-1;i++){
+        adj[road[i][0]].pb({road[i][1],road[i][2]});
+        adj[road[i][1]].pb({road[i][0],road[i][2]});
+    }
+    ex={{road[n-1][0],road[n-1][1]},road[n-1][2]};
+    dfs(0,-1);
+    for(int i=1;i<=lg;i++)for(int j=0;j<n;j++)up[j][i]=up[up[j][i-1]][i-1];
+    for(int i=0;i<m;i++){
+        cost[i].f=getdist(T[i],T[i+1]);
+        cost[i].s=min(getdist(T[i],ex.f.f)+getdist(T[i+1],ex.f.s)+ex.s,getdist(T[i],ex.f.s)+getdist(T[i+1],ex.f.f)+ex.s);
+    }
+    vector<pii>change;
+    for(int i=0;i<m;i++)change.pb({(cost[i].s-cost[i].f),i});
+    sort(all(change));
+    vector<int>pos(m);
+    for(int i=0;i<m;i++)pos[change[i].s]=i;
+    t.build(root[0],0,m);
+    for(int i=0;i<m;i++){
+        ps[i]=cost[i].f;
+        if(i)ps[i]+=ps[i-1];
+        t.update(root[i+1],root[i],0,m,pos[i],change[pos[i]].f);
+    }
+    return;
+}
+long long min_distance(int32_t l,int32_t r,int32_t x){
+    r--;
+    int ans=ps[r];
+    if(l)ans-=ps[l-1];
+    if(x==0)return ans;
+    l++,r++;
+    ans+=t.qry(root[r],root[l-1],x,0,m).f;
+    return ans;
+}/*
+int32_t main(){
+    int32_t n,m;cin>>n>>m;
+    vector<int32_t>a(m);
+    vector<vector<int32_t>>b;
+    for(int i=0;i<m;i++)cin>>a[i];
+    for(int i=0;i<n;i++){
+        vector<int32_t>g;
+        for(int j=0;j<3;j++){
+            int k;cin>>k;
+            g.pb(k);
+        }
+        b.pb(g);
+    }
+    init(n,a,b);
+    cout<<min_distance(2,4,1)<<'\n';
+    cout<<min_distance(0,7,1)<<'\n';
+    cout<<min_distance(3,7,2)<<'\n';
+    cout<<min_distance(0,1,0)<<"\n"; 
+}*/
+
+/*
+10 8
+0 1 7 8 3 1 3 2
+0 2 10
+2 4 8
+4 5 20
+1 9 1000
+9 7 20
+9 5 30
+5 6 50
+6 8 100
+6 3 80
+0 1 11
+*/
