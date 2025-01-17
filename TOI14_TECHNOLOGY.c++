@@ -5963,11 +5963,12 @@ void init(int32_t N,std::vector<int32_t> T,std::vector<std::vector<int32_t>> roa
     }
     return;
 }
-long long min_distance(int32_t l,int32_t r,int32_t x){
+long long min_distance(int32_t l,int32_t r,int32_t x)
+{
     r--;
     int ans=ps[r];
-    if(l)ans-=ps[l-1];
-    if(x==0)return ans;
+    if(l) ans-=ps[l-1];
+    if(x==0) return ans;
     l++,r++;
     ans+=t.qry(root[r],root[l-1],x,0,m).f;
     return ans;
