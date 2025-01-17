@@ -5956,9 +5956,10 @@ void init(int32_t N,std::vector<int32_t> T,std::vector<std::vector<int32_t>> roa
     vector<int>pos(m);
     for(int i=0;i<m;i++)pos[change[i].s]=i;
     t.build(root[0],0,m);
-    for(int i=0;i<m;i++){
+    for(int i=0;i<m;i++)
+    {
         ps[i]=cost[i].f;
-        if(i)ps[i]+=ps[i-1];
+        if(i) ps[i]+=ps[i-1];
         t.update(root[i+1],root[i],0,m,pos[i],change[pos[i]].f);
     }
     return;
