@@ -5930,9 +5930,9 @@ struct persist{
     }
     int qry2(node *cur,int l,int r,int pos)
     {
-        if(l==r)return cur->val;
+        if(l==r) return cur->val;
         int mid=l+(r-l)/2;
-        if(pos<=mid)return qry2(cur->l,l,mid,pos);
+        if(pos<=mid) return qry2(cur->l,l,mid,pos);
         else return qry2(cur->r,mid+1,r,pos);
     }
 }t;
