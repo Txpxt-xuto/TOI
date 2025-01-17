@@ -5923,7 +5923,8 @@ struct persist{
         if(l==r)return {cur->val,cur->cnt};
         int sum=cur->l->cnt-del->l->cnt;
         if(sum>=need)return qry(cur->l,del->l,need,l,mid);
-        else{
+        else
+        {
             pii a=qry(cur->r,del->r,need-sum,mid+1,r);
             return {a.f+cur->l->val-del->l->val,a.s+sum};
         }
