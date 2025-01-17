@@ -5982,10 +5982,3 @@ int32_t main(){
         for(int j=0;j<3;j++){
             int k;cin>>k;
             g.pb(k);
-        }
-        b.pb(g);
-    }
-    init(n,a,b);
-    cout<<min_distance(2,4,1)<<'\n';
-    cout<<min_distance(0,7,1)<<'\n';
-    cout<<min_distance(3,7,2)<<'\n';
