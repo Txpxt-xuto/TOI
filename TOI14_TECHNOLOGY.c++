@@ -5989,6 +5989,3 @@ int32_t main(){
     cout<<min_distance(2,4,1)<<'\n';
     cout<<min_distance(0,7,1)<<'\n';
     cout<<min_distance(3,7,2)<<'\n';
-    cout<<min_distance(0,1,0)<<"\n"; 
-}*/
-
