@@ -5971,14 +5971,4 @@ long long min_distance(int32_t l,int32_t r,int32_t x){
     l++,r++;
     ans+=t.qry(root[r],root[l-1],x,0,m).f;
     return ans;
-}/*
-int32_t main(){
-    int32_t n,m;cin>>n>>m;
-    vector<int32_t>a(m);
-    vector<vector<int32_t>>b;
-    for(int i=0;i<m;i++)cin>>a[i];
-    for(int i=0;i<n;i++){
-        vector<int32_t>g;
-        for(int j=0;j<3;j++){
-            int k;cin>>k;
-            g.pb(k);
+}
