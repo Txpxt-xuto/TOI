@@ -5951,10 +5951,10 @@ void init(int32_t N,std::vector<int32_t> T,std::vector<std::vector<int32_t>> roa
         cost[i].s=min(getdist(T[i],ex.f.f)+getdist(T[i+1],ex.f.s)+ex.s,getdist(T[i],ex.f.s)+getdist(T[i+1],ex.f.f)+ex.s);
     }
     vector<pii>change;
-    for(int i=0;i<m;i++)change.pb({(cost[i].s-cost[i].f),i});
+    for(int i=0;i<m;i++) change.pb({(cost[i].s-cost[i].f),i});
     sort(all(change));
     vector<int>pos(m);
-    for(int i=0;i<m;i++)pos[change[i].s]=i;
+    for(int i=0;i<m;i++) pos[change[i].s]=i;
     t.build(root[0],0,m);
     for(int i=0;i<m;i++)
     {
