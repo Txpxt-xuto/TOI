@@ -5898,7 +5898,8 @@ struct node{
 };
 node* root[mxn+10];
 struct persist{
-    void build(node *&cur,int l,int r){
+    void build(node *&cur,int l,int r)
+    {
         int mid=l+(r-l)/2;
         cur=new node();
         if(l==r) return;
