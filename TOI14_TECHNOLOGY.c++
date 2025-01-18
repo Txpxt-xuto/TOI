@@ -5758,7 +5758,8 @@ struct persist{
         cur->val=cur->l->val+cur->r->val;
         cur->cnt=cur->l->cnt+cur->r->cnt;
     }
-    pii qry(node *cur,node *del,int need,int l,int r){
+    pii qry(node *cur,node *del,int need,int l,int r)
+    {
         int mid=l+(r-l)/2;
         if(l==r)return {cur->val,cur->cnt};
         int sum=cur->l->cnt-del->l->cnt;
