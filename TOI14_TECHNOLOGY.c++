@@ -5727,7 +5727,8 @@ int lca(int a,int b)
     for(int i=lg;i>=0;i--) if(up[a][i]!=up[b][i]) a=up[a][i],b=up[b][i];
     return up[a][0];
 }
-int getdist(int a,int b){
+int getdist(int a,int b)
+{
     return dist[a]+dist[b]-2*dist[lca(a,b)];
 }
 pii cost[mxn+10];
