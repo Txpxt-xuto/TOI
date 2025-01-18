@@ -5785,7 +5785,7 @@ void init(int32_t N,std::vector<int32_t> T,std::vector<std::vector<int32_t>> roa
     }
     ex={{road[n-1][0],road[n-1][1]},road[n-1][2]};
     dfs(0,-1);
-    for(int i=1;i<=lg;i++) for(int j=0;j<n;j++)up[j][i]=up[up[j][i-1]][i-1];
+    for(int i=1;i<=lg;i++) for(int j=0;j<n;j++) up[j][i]=up[up[j][i-1]][i-1];
     for(int i=0;i<m;i++)
     {
         cost[i].f=getdist(T[i],T[i+1]);
