@@ -5748,12 +5748,13 @@ struct persist{
     void update(node *&cur,node *&lcur,int l,int r,int pos,int val){
         int mid=l+(r-l)/2;
         cur=new node(*lcur);
-        if(l==r){
+        if(l==r)
+        {
             cur->val=val;
             cur->cnt=1;
             return;
         }
-        if(pos<=mid)update(cur->l,lcur->l,l,mid,pos,val);
+        if(pos<=mid) update(cur->l,lcur->l,l,mid,pos,val);
         else update(cur->r,lcur->r,mid+1,r,pos,val);
         cur->val=cur->l->val+cur->r->val;
         cur->cnt=cur->l->cnt+cur->r->cnt;
