@@ -5869,9 +5869,11 @@ vector<pii>adj[mxn+10];
 int dist[mxn+10],up[mxn+10][lg+5],n,h[mxn+10];
 const int inf=1e18,minf=-1e18;
 pair<pii,int>ex;
-void dfs(int cur,int p){
-    for(auto i:adj[cur]){
-        if(i.f==p)continue;
+void dfs(int cur,int p)
+{
+    for(auto i:adj[cur])
+    {
+        if(i.f==p) continue;
         up[i.f][0]=cur;
         h[i.f]=h[cur]+1;
         dist[i.f]=dist[cur]+i.s;
