@@ -5905,7 +5905,8 @@ struct persist{
         build(cur->l,l,mid);
         build(cur->r,mid+1,r);
     }
-    void update(node *&cur,node *&lcur,int l,int r,int pos,int val){
+    void update(node *&cur,node *&lcur,int l,int r,int pos,int val)
+    {
         int mid=l+(r-l)/2;
         cur=new node(*lcur);
         if(l==r){
