@@ -5713,7 +5713,7 @@ void dfs(int cur,int p)
 {
     for(auto i:adj[cur])
     {
-        if(i.f==p)continue;
+        if(i.f==p) continue;
         up[i.f][0]=cur;
         h[i.f]=h[cur]+1;
         dist[i.f]=dist[cur]+i.s;
