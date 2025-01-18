@@ -5832,19 +5832,6 @@ int32_t main(){
     cout<<min_distance(0,1,0)<<"\n"; 
 }*/
 
-/*
-10 8
-0 1 7 8 3 1 3 2
-0 2 10
-2 4 8
-4 5 20
-1 9 1000
-9 7 20
-9 5 30
-5 6 50
-6 8 100
-6 3 80
-0 1 11
 */#include <vector>
 #include<iostream>
 #include<queue>
