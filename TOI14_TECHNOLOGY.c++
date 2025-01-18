@@ -5901,7 +5901,7 @@ struct persist{
     void build(node *&cur,int l,int r){
         int mid=l+(r-l)/2;
         cur=new node();
-        if(l==r)return;
+        if(l==r) return;
         build(cur->l,l,mid);
         build(cur->r,mid+1,r);
     }
