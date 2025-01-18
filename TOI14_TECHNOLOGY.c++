@@ -5878,7 +5878,8 @@ void dfs(int cur,int p){
         dfs(i.f,cur);
     }
 }
-int lca(int a,int b){
+int lca(int a,int b)
+{
     if(h[a]<h[b])swap(a,b);
     int k=h[a]-h[b];
     for(int i=0;i<=lg;i++)if(k&(1ll<<i))a=up[a][i];
