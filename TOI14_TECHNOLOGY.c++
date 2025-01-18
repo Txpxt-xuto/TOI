@@ -5884,7 +5884,7 @@ int lca(int a,int b)
     int k=h[a]-h[b];
     for(int i=0;i<=lg;i++) if(k&(1ll<<i))a=up[a][i];
     if(a==b)return a;
-    for(int i=lg;i>=0;i--) if(up[a][i]!=up[b][i])a=up[a][i],b=up[b][i];
+    for(int i=lg;i>=0;i--) if(up[a][i]!=up[b][i]) a=up[a][i],b=up[b][i];
     return up[a][0];
 }
 int getdist(int a,int b)
