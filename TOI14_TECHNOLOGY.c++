@@ -5880,7 +5880,7 @@ void dfs(int cur,int p){
 }
 int lca(int a,int b)
 {
-    if(h[a]<h[b])swap(a,b);
+    if(h[a]<h[b]) swap(a,b);
     int k=h[a]-h[b];
     for(int i=0;i<=lg;i++) if(k&(1ll<<i)) a=up[a][i];
     if(a==b)return a;
