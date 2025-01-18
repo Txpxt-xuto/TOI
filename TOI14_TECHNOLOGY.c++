@@ -5776,7 +5776,8 @@ struct persist{
     }
 }t;
 int ps[mxn+10];
-void init(int32_t N,std::vector<int32_t> T,std::vector<std::vector<int32_t>> road){
+void init(int32_t N,std::vector<int32_t> T,std::vector<std::vector<int32_t>> road)
+{
     n=N;
     m=T.size()-1;
     for(int i=0;i<n-1;i++)
