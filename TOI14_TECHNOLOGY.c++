@@ -5909,7 +5909,8 @@ struct persist{
     {
         int mid=l+(r-l)/2;
         cur=new node(*lcur);
-        if(l==r){
+        if(l==r)
+        {
             cur->val=val;
             cur->cnt=1;
             return;
