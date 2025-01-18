@@ -5811,7 +5811,8 @@ long long min_distance(int32_t l,int32_t r,int32_t x){
     l++,r++;
     ans+=t.qry(root[r],root[l-1],x,0,m).f;
     return ans;
-}/#include <vector>
+}
+#include <vector>
 #include<iostream>
 #include<queue>
 #include<cassert>
