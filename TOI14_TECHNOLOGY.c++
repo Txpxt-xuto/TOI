@@ -5991,7 +5991,7 @@ int main(){
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	int l,q;
-	cin>>k >>l >>q;
+	cin>>k >> l >> q;
 	for(int i=1;i<=15;i++)
     {
 		for(int j=1;j<=15;j++)
