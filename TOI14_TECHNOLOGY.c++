@@ -6013,7 +6013,8 @@ int main(){
 			else dist[i][j]=min(dist[i][j],trav(st[i],st[j]));
 		}
 	}
-	for(int k=1;k<=2*l;k++){
+	for(int k=1;k<=2*l;k++)
+    {
 		for(int i=1;i<=2*l;i++)
         {
 			for(int j=1;j<=2*l;j++)
