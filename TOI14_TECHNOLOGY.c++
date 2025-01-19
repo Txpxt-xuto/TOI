@@ -6027,7 +6027,8 @@ int main(){
 		int a,b,mn;
 		cin>>a >>b;
 		mn=trav(a,b);
-		for(int i=1;i<=2*l;i++){
+		for(int i=1;i<=2*l;i++)
+        {
 			int tmpa=trav(st[i],a);
 			for(int j=1;j<=2*l;j++)
             {
