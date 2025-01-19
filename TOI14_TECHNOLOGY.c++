@@ -6023,7 +6023,8 @@ int main(){
 			}
 		}
 	}
-	while(q--){
+	while(q--)
+    {
 		int a,b,mn;
 		cin >> a >> b;
 		mn=trav(a,b);
