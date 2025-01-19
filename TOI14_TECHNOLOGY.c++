@@ -5993,7 +5993,8 @@ int main(){
 	int l,q;
 	cin>>k >>l >>q;
 	for(int i=1;i<=15;i++){
-		for(int j=1;j<=15;j++){
+		for(int j=1;j<=15;j++)
+        {
 			dist[i][j]=INT_MAX;
 			if(i==j) dist[i][j]=0;
 		}
