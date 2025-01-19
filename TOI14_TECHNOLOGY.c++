@@ -5978,7 +5978,8 @@ int cnt(int a){
 	while(a!=0) a/=2,s++;
 	return s;
 }
-int trav(int a,int b){
+int trav(int a,int b)
+{
 	int d=0;
 	if(a>(1<<k) && b>(1<<k)) a-=(1<<k),b-=(1<<k);
 	if((a>(1<<k) && b<(1<<k)) || (a<(1<<k) && b>(1<<k))) return INT_MAX;
