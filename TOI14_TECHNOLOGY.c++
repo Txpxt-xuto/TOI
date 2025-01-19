@@ -6001,7 +6001,7 @@ int main(){
 	for(int i=1;i<=l;i++)
     {
 		int a,b;
-		cin>> a >> b;
+		cin >> a >> b;
 		st[i]=a,st[l+i]=b;
 		dist[i][l+i]=min(dist[i][l+i],1);
 		dist[l+i][i]=min(dist[l+i][i],1);
