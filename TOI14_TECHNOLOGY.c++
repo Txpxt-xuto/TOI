@@ -5968,3 +5968,76 @@ long long min_distance(int32_t l,int32_t r,int32_t x)
     ans+=t.qry(root[r],root[l-1],x,0,m).f;
     return ans;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+int k;
+int dist[100][100],st[20],ed[20];
+int cnt(int a){
+	int s=0;
+	while(a!=0) a/=2,s++;
+	return s;
+}
+int trav(int a,int b){
+	int d=0;
+	if(a>(1<<k) && b>(1<<k)) a-=(1<<k),b-=(1<<k);
+	if((a>(1<<k) && b<(1<<k)) || (a<(1<<k) && b>(1<<k))) return INT_MAX;
+	while(cnt(a)>cnt(b)) a/=2,d++;
+	while(cnt(b)>cnt(a)) b/=2,d++;
+	while(a!=b) a/=2,b/=2,d+=2;
+	return d;
+}
+int main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int l,q;
+	cin>>k >>l >>q;
+	for(int i=1;i<=15;i++){
+		for(int j=1;j<=15;j++){
+			dist[i][j]=INT_MAX;
+			if(i==j) dist[i][j]=0;
+		}
+	}
+	for(int i=1;i<=l;i++){
+		int a,b;
+		cin>>a >>b;
+		st[i]=a,st[l+i]=b;
+		dist[i][l+i]=min(dist[i][l+i],1);
+		dist[l+i][i]=min(dist[l+i][i],1);
+	}
+	for(int i=1;i<=2*l;i++){
+		for(int j=1;j<=2*l;j++){
+			if(i==j) continue;
+			if(abs(st[i]-st[j])>=(1<<k)) continue;
+			if(st[i]>(1<<k)) dist[i][j]=min(dist[i][j],trav((st[i]-(1<<k)),st[j]-(1<<k)));
+			else dist[i][j]=min(dist[i][j],trav(st[i],st[j]));
+		}
+	}
+	for(int k=1;k<=2*l;k++){
+		for(int i=1;i<=2*l;i++){
+			for(int j=1;j<=2*l;j++){
+				if(dist[i][k]==INT_MAX || dist[k][j]==INT_MAX) continue;
+				if(dist[i][k]+dist[k][j]<dist[i][j]){
+					dist[i][j]=dist[i][k]+dist[k][j];
+				}
+			}
+		}
+	}
+	while(q--){
+		int a,b,mn;
+		cin>>a >>b;
+		mn=trav(a,b);
+		for(int i=1;i<=2*l;i++){
+			int tmpa=trav(st[i],a);
+			for(int j=1;j<=2*l;j++){
+				int tmpb;
+				if(i==j) continue;
+				tmpb=trav(st[j],b);
+				if(dist[i][j]==INT_MAX || tmpa==INT_MAX || tmpb==INT_MAX) continue;
+				mn=min(mn,dist[i][j]+tmpa+tmpb);
+			}
+		}
+		cout<<mn <<"\n";
+	}
+	
+}
