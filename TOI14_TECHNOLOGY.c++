@@ -6006,7 +6006,8 @@ int main(){
 		dist[l+i][i]=min(dist[l+i][i],1);
 	}
 	for(int i=1;i<=2*l;i++){
-		for(int j=1;j<=2*l;j++){
+		for(int j=1;j<=2*l;j++)
+        {
 			if(i==j) continue;
 			if(abs(st[i]-st[j])>=(1<<k)) continue;
 			if(st[i]>(1<<k)) dist[i][j]=min(dist[i][j],trav((st[i]-(1<<k)),st[j]-(1<<k)));
