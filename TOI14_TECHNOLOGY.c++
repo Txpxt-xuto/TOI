@@ -5992,7 +5992,8 @@ int main(){
 	cin.tie(0);
 	int l,q;
 	cin>>k >>l >>q;
-	for(int i=1;i<=15;i++){
+	for(int i=1;i<=15;i++)
+    {
 		for(int j=1;j<=15;j++)
         {
 			dist[i][j]=INT_MAX;
