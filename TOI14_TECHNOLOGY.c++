@@ -6037,6 +6037,6 @@ int main(){
 				mn=min(mn,dist[i][j]+tmpa+tmpb);
 			}
 		}
-		cout<<mn << "\n";
+		cout<< mn << "\n";
 	}
 }
