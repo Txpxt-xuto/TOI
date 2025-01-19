@@ -5998,7 +5998,8 @@ int main(){
 			if(i==j) dist[i][j]=0;
 		}
 	}
-	for(int i=1;i<=l;i++){
+	for(int i=1;i<=l;i++)
+    {
 		int a,b;
 		cin>>a >>b;
 		st[i]=a,st[l+i]=b;
