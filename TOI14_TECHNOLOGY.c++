@@ -6015,7 +6015,8 @@ int main(){
 	}
 	for(int k=1;k<=2*l;k++){
 		for(int i=1;i<=2*l;i++){
-			for(int j=1;j<=2*l;j++){
+			for(int j=1;j<=2*l;j++)
+            {
 				if(dist[i][k]==INT_MAX || dist[k][j]==INT_MAX) continue;
 				if(dist[i][k]+dist[k][j]<dist[i][j]){
 					dist[i][j]=dist[i][k]+dist[k][j];
