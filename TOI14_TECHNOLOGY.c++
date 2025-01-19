@@ -6025,7 +6025,7 @@ int main(){
 	}
 	while(q--){
 		int a,b,mn;
-		cin>> a >>b;
+		cin>> a >> b;
 		mn=trav(a,b);
 		for(int i=1;i<=2*l;i++)
         {
