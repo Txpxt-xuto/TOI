@@ -6019,9 +6019,6 @@ int main(){
             {
 				if(dist[i][k]==INT_MAX || dist[k][j]==INT_MAX) continue;
 				if(dist[i][k]+dist[k][j]<dist[i][j]) dist[i][j]=dist[i][k]+dist[k][j];
-                {
-					
-				}
 			}
 		}
 	}
