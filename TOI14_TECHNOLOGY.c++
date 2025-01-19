@@ -5973,7 +5973,8 @@ long long min_distance(int32_t l,int32_t r,int32_t x)
 using namespace std;
 int k;
 int dist[100][100],st[20],ed[20];
-int cnt(int a){
+int cnt(int a)
+{
 	int s=0;
 	while(a!=0) a/=2,s++;
 	return s;
