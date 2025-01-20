@@ -6132,7 +6132,8 @@ int main(){
         if(o==1){
             ll i,j;cin>>i>>j;j>>=1;
             int cur=qr(1,1,n,i);
-            ll tt=j;ms.insert(i);
+            ll tt=j;
+            ms.insert(i);
             while(tt>0&&cur>0)
             {
                 int ad=min(a[cur],tt);
