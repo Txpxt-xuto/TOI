@@ -6162,7 +6162,8 @@ int main(){
             else {update2(1,1,n,1,i-1,i);}
             //for(int i=1;i<=n;i++)cout<<a[i]<<' ';cout<<'\n';*/
         }
-        else {
+        else
+        {
             int j;cin>>j;cout<<a[j]<<'\n';
         }
     }
