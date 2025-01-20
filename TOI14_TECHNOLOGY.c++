@@ -6052,3 +6052,118 @@ int main()
 		cout << mn << "\n";
 	}
 }
+
+#include<bits/stdc++.h>
+#define ll long long
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define f first
+#define s second
+#define pb push_back
+#define all(x) x.begin(),x.end()
+#define vi vector<int>
+#define vvi vector<vi>
+#define vp vector<pii>
+#define sz(x) (int)x.size()
+using namespace std;
+const int N=1e5+5;
+int t[4*N],lz[4*N];
+ll a[N];
+void build(int i,int l,int r){
+    if(l==r)return void(t[i]=l-1);
+    int m=(l+r)>>1;
+    build(2*i,l,m);build(2*i+1,m+1,r);
+}
+void push(int i,int l,int r){
+    if(lz[i]!=-1){
+        t[i]=lz[i];
+        if(l<r)lz[2*i]=lz[i],lz[2*i+1]=lz[i];
+    }lz[i]=-1;
+}
+void update(int i,int l,int r,int tl,int tr,int v){
+    push(i,l,r);
+    if(r<tl||l>tr)return;
+    if(r<=tr&&l>=tl){lz[i]=v,push(i,l,r);return;}
+    int m=(l+r)>>1;update(2*i,l,m,tl,tr,v);update(2*i+1,m+1,r,tl,tr,v);
+    t[i]=max(t[2*i],t[2*i+1]);
+}
+int qr(int i,int l,int r,int idx){
+    push(i,l,r);
+    if(r<idx||l>idx)return 0;
+    if(l==r)return t[i];
+    int m=(l+r)>>1;
+    return max(qr(2*i,l,m,idx),qr(2*i+1,m+1,r,idx));
+}
+int t2[4*N],lz2[4*N];
+void build2(int i,int l,int r){
+    if(l==r)return void(t2[i]=l+1);
+    int m=(l+r)>>1;
+    build2(2*i,l,m);build2(2*i+1,m+1,r);
+}
+void push2(int i,int l,int r){
+    if(lz2[i]!=-1){
+        t2[i]=lz2[i];
+        if(l<r)lz2[2*i]=lz2[i],lz2[2*i+1]=lz2[i];
+    }lz2[i]=-1;
+}
+void update2(int i,int l,int r,int tl,int tr,int v){
+    push2(i,l,r);
+    if(r<tl||l>tr)return;
+    if(r<=tr&&l>=tl){lz2[i]=v,push2(i,l,r);return;}
+    int m=(l+r)>>1;update2(2*i,l,m,tl,tr,v);update2(2*i+1,m+1,r,tl,tr,v);
+    t[i]=min(t[2*i],t[2*i+1]);
+}
+int qr2(int i,int l,int r,int idx){
+    push2(i,l,r);
+    if(r<idx||l>idx)return 1e9;
+    if(l==r)return t2[i];
+    int m=(l+r)>>1;
+    return min(qr2(2*i,l,m,idx),qr2(2*i+1,m+1,r,idx));
+}
+set<int>ms;
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n,q;cin>>n>>q;n--;
+    for(int i=1;i<4*N;i++)lz[i]=lz2[i]=-1;
+    for(int i=1;i<=n;i++)a[i]=10,ms.insert(i);
+    build(1,1,n);build2(1,1,n);
+    while(q--){
+        int o;cin>>o;
+        if(o==1){
+            ll i,j;cin>>i>>j;j>>=1;
+            int cur=qr(1,1,n,i);
+            ll tt=j;ms.insert(i);
+            while(tt>0&&cur>0){;
+                int ad=min(a[cur],tt);a[i]+=ad;a[cur]-=ad;tt-=ad;
+                if(a[cur]==0)ms.erase(cur),cur=qr(1,1,n,cur);
+            }update(1,1,n,cur+1,i,cur);
+            ll tt2=j;cur=qr2(1,1,n,i);
+            while(tt2>0&&cur<=n){
+                int ad=min(a[cur],tt2);a[i]+=ad;a[cur]-=ad;tt2-=ad;
+                if(a[cur]==0)ms.erase(cur),cur=qr2(1,1,n,cur);
+            }update2(1,1,n,i,cur-1,cur);
+            if(tt!=0){cur=qr2(1,1,n,i);
+                while(tt>0&&cur<=n){
+                    int ad=min(a[cur],tt);a[i]+=ad;a[cur]-=ad;tt-=ad;
+                    if(a[cur]==0)ms.erase(cur),cur=qr2(1,1,n,cur);
+                }update2(1,1,n,i,cur-1,cur);
+            }
+            if(tt2!=0){cur=qr(1,1,n,i);
+                while(tt2>0&&cur>0){
+                    int ad=min(a[cur],tt2);a[i]+=ad;a[cur]-=ad;tt2-=ad;
+                    if(a[cur]==0)ms.erase(cur),cur=qr(1,1,n,cur);
+                }update(1,1,n,cur+1,i,cur);
+            }
+            auto it = ms.upper_bound(i);
+            if(it!=ms.end()){update(1,1,n,i+1,*it,i);}
+            else {update(1,1,n,i+1,n,i);}
+            it = ms.lower_bound(i);
+            if(it!=ms.begin()){it--;update2(1,1,n,*it,i-1,i);}
+            else {update2(1,1,n,1,i-1,i);}
+            //for(int i=1;i<=n;i++)cout<<a[i]<<' ';cout<<'\n';*/
+        }
+        else {
+            int j;cin>>j;cout<<a[j]<<'\n';
+        }
+    }
+}
