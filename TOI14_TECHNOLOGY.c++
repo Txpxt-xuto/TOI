@@ -6155,7 +6155,7 @@ int main(){
                 }update(1,1,n,cur+1,i,cur);
             }
             auto it = ms.upper_bound(i);
-            if(it!=ms.end()){update(1,1,n,i+1,*it,i);}
+            if(it!=ms.end()) update(1,1,n,i+1,*it,i);
             else {update(1,1,n,i+1,n,i);}
             it = ms.lower_bound(i);
             if(it!=ms.begin()){it--;update2(1,1,n,*it,i-1,i);}
