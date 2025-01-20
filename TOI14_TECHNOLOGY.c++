@@ -6276,7 +6276,7 @@ int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> k;
-    for(int i = 1; i<=n; ++i) cin >> arr[i];
+    for(int i=1;i<=n;++i) cin >> arr[i];
     int l = 0, r = 1e9, ans = 0;
     while(l <= r){
         int mid = (l + r) >> 1;
