@@ -6147,7 +6147,8 @@ int main(){
                 {
                     int ad=min(a[cur],tt);a[i]+=ad;a[cur]-=ad;tt-=ad;
                     if(a[cur]==0)ms.erase(cur),cur=qr2(1,1,n,cur);
-                }update2(1,1,n,i,cur-1,cur);
+                }
+                update2(1,1,n,i,cur-1,cur);
             }
             if(tt2!=0)
             {
