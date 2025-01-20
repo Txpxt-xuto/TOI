@@ -6131,7 +6131,7 @@ int main(){
         int o;cin>>o;
         if(o==1){
             ll i,j;
-            cin>>i>>j;
+            cin>>i >> j;
             j>>=1;
             int cur=qr(1,1,n,i);
             ll tt=j;
