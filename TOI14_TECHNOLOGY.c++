@@ -6237,12 +6237,10 @@ int main()
 }
 
 #include<bits/stdc++.h>
-
 using namespace std;
-
 int n, m, k, arr[100100];
-
-bool solve(int mid){
+bool solve(int mid)
+{
     int l = 1, r = n, sum = 0, cnt = 0;
     vector<int> dpl(n+10, 0), dpr(n+10, 0);
     dpl[0] = dpr[n + 1] = 1;
