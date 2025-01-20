@@ -6278,7 +6278,8 @@ int main()
     cin >> n >> m >> k;
     for(int i=1;i<=n;++i) cin >> arr[i];
     int l = 0, r = 1e9, ans = 0;
-    while(l <= r){
+    while(l <= r)
+    {
         int mid = (l + r) >> 1;
         if(solve(mid))
         {
