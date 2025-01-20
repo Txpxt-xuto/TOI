@@ -6152,7 +6152,8 @@ int main(){
                 while(tt2>0&&cur>0){
                     int ad=min(a[cur],tt2);a[i]+=ad;a[cur]-=ad;tt2-=ad;
                     if(a[cur]==0)ms.erase(cur),cur=qr(1,1,n,cur);
-                }update(1,1,n,cur+1,i,cur);
+                }
+                update(1,1,n,cur+1,i,cur);
             }
             auto it = ms.upper_bound(i);
             if(it!=ms.end()) update(1,1,n,i+1,*it,i);
