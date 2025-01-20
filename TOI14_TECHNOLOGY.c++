@@ -6164,7 +6164,8 @@ int main(){
         }
         else
         {
-            int j;cin>>j;cout<<a[j]<<'\n';
+            int j;
+            cin>>j;cout<<a[j]<<'\n';
         }
     }
 }
