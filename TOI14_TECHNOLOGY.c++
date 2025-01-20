@@ -6271,7 +6271,6 @@ bool solve(int mid){
     }
     return false;
 }
-
 int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
