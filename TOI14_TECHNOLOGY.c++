@@ -6244,7 +6244,8 @@ bool solve(int mid)
     int l = 1, r = n, sum = 0, cnt = 0;
     vector<int> dpl(n+10, 0), dpr(n+10, 0);
     dpl[0] = dpr[n + 1] = 1;
-    for(int i = 1; i<=n; ++i){
+    for(int i = 1; i<=n; ++i)
+    {
         dpl[i] = dpl[i - 1];
         if(arr[i] > mid){
             r = i - 1;
