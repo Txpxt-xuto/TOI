@@ -6280,7 +6280,8 @@ int main()
     int l = 0, r = 1e9, ans = 0;
     while(l <= r){
         int mid = (l + r) >> 1;
-        if(solve(mid)){
+        if(solve(mid))
+        {
             ans = mid;
             r = mid - 1;
         }
