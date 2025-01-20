@@ -6139,7 +6139,8 @@ int main(){
                 if(a[cur]==0)ms.erase(cur),cur=qr(1,1,n,cur);
             }
             update(1,1,n,cur+1,i,cur);
-            ll tt2=j;cur=qr2(1,1,n,i);
+            ll tt2=j;
+            cur=qr2(1,1,n,i);
             while(tt2>0&&cur<=n)
             {
                 int ad=min(a[cur],tt2);
