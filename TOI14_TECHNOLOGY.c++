@@ -6155,7 +6155,8 @@ int main(){
                 {
                     int ad=min(a[cur],tt2);
                     a[i]+=ad;
-                    a[cur]-=ad;tt2-=ad;
+                    a[cur]-=ad;
+                    tt2-=ad;
                     if(a[cur]==0) ms.erase(cur),cur=qr(1,1,n,cur);
                 }
                 update(1,1,n,cur+1,i,cur);
