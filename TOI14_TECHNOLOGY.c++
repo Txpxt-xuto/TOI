@@ -6256,14 +6256,17 @@ bool solve(int mid){
         if(sum > mid || cnt > m) cnt = 1, sum = arr[i], dpl[i]++;
     }
     sum = 0, cnt = 0;
-    for(int i = n; i>0; --i){
+    for(int i=n;i>0;--i)
+    {
         dpr[i] = dpr[i+1];
-        if(arr[i] > mid){
+        if(arr[i] > mid)
+        {
             l = i + 1;
             break;
         }
-        sum+=arr[i], cnt++;
-        if(sum > mid || cnt > m) cnt = 1, sum = arr[i], dpr[i]++;
+        sum+=arr[i];
+        cnt++;
+        if(sum>mid || cnt>m) cnt = 1, sum = arr[i], dpr[i]++;
     }
     dpl[0] = dpr[n+1] = 0;
     for(int i=1;i<=n-m+1;++i)
