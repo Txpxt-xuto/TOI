@@ -6129,7 +6129,8 @@ int main(){
     build(1,1,n);build2(1,1,n);
     while(q--){
         int o;cin>>o;
-        if(o==1){
+        if(o==1)
+        {
             ll i,j;
             cin >> i >> j;
             j>>=1;
