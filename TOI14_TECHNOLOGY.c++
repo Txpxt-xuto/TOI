@@ -6134,7 +6134,7 @@ int main(){
             int cur=qr(1,1,n,i);
             ll tt=j;ms.insert(i);
             while(tt>0&&cur>0)
-            {;
+            {
                 int ad=min(a[cur],tt);
                 a[i]+=ad;
                 a[cur]-=ad;
