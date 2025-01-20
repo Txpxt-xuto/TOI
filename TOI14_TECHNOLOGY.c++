@@ -6266,8 +6266,9 @@ bool solve(int mid){
         if(sum > mid || cnt > m) cnt = 1, sum = arr[i], dpr[i]++;
     }
     dpl[0] = dpr[n+1] = 0;
-    for(int i = 1; i <= n - m + 1; ++i){
-        if(i - 1 <= r && i + m >= l && dpl[i - 1] + dpr[i + m] <= k - 1) return true;
+    for(int i = 1; i <= n - m + 1; ++i)
+    {
+        if(i-1<=r && i+m >= l && dpl[i - 1] + dpr[i + m] <= k - 1) return true;
     }
     return false;
 }
