@@ -6166,7 +6166,7 @@ int main(){
         {
             int j;
             cin>>j;
-            cout<<a[j] << '\n';
+            cout<< a[j] << '\n';
         }
     }
 }
