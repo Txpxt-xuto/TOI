@@ -6272,7 +6272,8 @@ bool solve(int mid){
     return false;
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> k;
     for(int i = 1; i<=n; ++i) cin >> arr[i];
