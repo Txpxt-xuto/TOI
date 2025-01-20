@@ -6133,10 +6133,12 @@ int main(){
             ll i,j;cin>>i>>j;j>>=1;
             int cur=qr(1,1,n,i);
             ll tt=j;ms.insert(i);
-            while(tt>0&&cur>0){;
+            while(tt>0&&cur>0)
+            {;
                 int ad=min(a[cur],tt);a[i]+=ad;a[cur]-=ad;tt-=ad;
                 if(a[cur]==0)ms.erase(cur),cur=qr(1,1,n,cur);
-            }update(1,1,n,cur+1,i,cur);
+            }
+            update(1,1,n,cur+1,i,cur);
             ll tt2=j;cur=qr2(1,1,n,i);
             while(tt2>0&&cur<=n)
             {
