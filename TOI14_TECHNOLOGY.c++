@@ -6158,7 +6158,8 @@ int main(){
             if(it!=ms.end()) update(1,1,n,i+1,*it,i);
             else {update(1,1,n,i+1,n,i);}
             it = ms.lower_bound(i);
-            if(it!=ms.begin()){it--;update2(1,1,n,*it,i-1,i);}
+            if(it!=ms.begin())
+            {it--;update2(1,1,n,*it,i-1,i);}
             else update2(1,1,n,1,i-1,i);
         }
         else
