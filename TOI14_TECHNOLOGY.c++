@@ -6160,7 +6160,6 @@ int main(){
             it = ms.lower_bound(i);
             if(it!=ms.begin()){it--;update2(1,1,n,*it,i-1,i);}
             else {update2(1,1,n,1,i-1,i);}
-            //for(int i=1;i<=n;i++)cout<<a[i]<<' ';cout<<'\n';*/
         }
         else
         {
