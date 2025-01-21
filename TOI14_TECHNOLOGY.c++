@@ -6095,12 +6095,15 @@ int qr(int i,int l,int r,int idx){
     return max(qr(2*i,l,m,idx),qr(2*i+1,m+1,r,idx));
 }
 int t2[4*N],lz2[4*N];
-void build2(int i,int l,int r){
-    if(l==r)return void(t2[i]=l+1);
+void build2(int i,int l,int r)
+{
+    if(l==r) return void(t2[i]=l+1);
     int m=(l+r)>>1;
-    build2(2*i,l,m);build2(2*i+1,m+1,r);
+    build2(2*i,l,m);
+    build2(2*i+1,m+1,r);
 }
-void push2(int i,int l,int r){
+void push2(int i,int l,int r)
+{
     if(lz2[i]!=-1)
     {
         t2[i]=lz2[i];
@@ -6108,7 +6111,8 @@ void push2(int i,int l,int r){
     }
     lz2[i]=-1;
 }
-void update2(int i,int l,int r,int tl,int tr,int v){
+void update2(int i,int l,int r,int tl,int tr,int v)
+{
     push2(i,l,r);
     if(r<tl||l>tr) return;
     if(r<=tr&&l>=tl)
