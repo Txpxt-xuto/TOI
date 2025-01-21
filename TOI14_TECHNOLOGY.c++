@@ -6235,3 +6235,55 @@ int main()
         }
     }
 }
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int n, m, k, arr[100100];
+
+bool solve(int mid){
+    int l = 1, r = n, sum = 0, cnt = 0;
+    vector<int> dpl(n+10, 0), dpr(n+10, 0);
+    dpl[0] = dpr[n + 1] = 1;
+    for(int i = 1; i<=n; ++i){
+        dpl[i] = dpl[i - 1];
+        if(arr[i] > mid){
+            r = i - 1;
+            break;
+        }
+        sum+=arr[i], cnt++;
+        if(sum > mid || cnt > m) cnt = 1, sum = arr[i], dpl[i]++;
+    }
+    sum = 0, cnt = 0;
+    for(int i = n; i>0; --i){
+        dpr[i] = dpr[i+1];
+        if(arr[i] > mid){
+            l = i + 1;
+            break;
+        }
+        sum+=arr[i], cnt++;
+        if(sum > mid || cnt > m) cnt = 1, sum = arr[i], dpr[i]++;
+    }
+    dpl[0] = dpr[n+1] = 0;
+    for(int i = 1; i <= n - m + 1; ++i){
+        if(i - 1 <= r && i + m >= l && dpl[i - 1] + dpr[i + m] <= k - 1) return true;
+    }
+    return false;
+}
+
+int main(){
+    cin.tie(nullptr)->sync_with_stdio(false);
+    cin >> n >> m >> k;
+    for(int i = 1; i<=n; ++i) cin >> arr[i];
+    int l = 0, r = 1e9, ans = 0;
+    while(l <= r){
+        int mid = (l + r) >> 1;
+        if(solve(mid)){
+            ans = mid;
+            r = mid - 1;
+        }
+        else l = mid + 1;
+    }
+    cout << ans;
+}
