@@ -6080,17 +6080,26 @@ void push(int i,int l,int r){
         if(l<r)lz[2*i]=lz[i],lz[2*i+1]=lz[i];
     }lz[i]=-1;
 }
-void update(int i,int l,int r,int tl,int tr,int v){
+void update(int i,int l,int r,int tl,int tr,int v)
+{
     push(i,l,r);
-    if(r<tl||l>tr)return;
-    if(r<=tr&&l>=tl){lz[i]=v,push(i,l,r);return;}
-    int m=(l+r)>>1;update(2*i,l,m,tl,tr,v);update(2*i+1,m+1,r,tl,tr,v);
+    if(r<tl||l>tr) return;
+    if(r<=tr&&l>=tl)
+    {
+        lz[i]=v;
+        push(i,l,r);
+        return;
+    }
+    int m=(l+r)>>1;
+    update(2*i,l,m,tl,tr,v);
+    update(2*i+1,m+1,r,tl,tr,v);
     t[i]=max(t[2*i],t[2*i+1]);
 }
-int qr(int i,int l,int r,int idx){
+int qr(int i,int l,int r,int idx)
+{
     push(i,l,r);
-    if(r<idx||l>idx)return 0;
-    if(l==r)return t[i];
+    if(r<idx||l>idx) return 0;
+    if(l==r) return t[i];
     int m=(l+r)>>1;
     return max(qr(2*i,l,m,idx),qr(2*i+1,m+1,r,idx));
 }
