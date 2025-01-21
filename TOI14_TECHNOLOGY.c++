@@ -6079,7 +6079,7 @@ void push(int i,int l,int r)
     if(lz[i]!=-1)
     {
         t[i]=lz[i];
-        if(l<r)lz[2*i]=lz[i],lz[2*i+1]=lz[i];
+        if(l<r) lz[2*i]=lz[i],lz[2*i+1]=lz[i];
     }
     lz[i]=-1;
 }
