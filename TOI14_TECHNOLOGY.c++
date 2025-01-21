@@ -6074,11 +6074,14 @@ void build(int i,int l,int r){
     int m=(l+r)>>1;
     build(2*i,l,m);build(2*i+1,m+1,r);
 }
-void push(int i,int l,int r){
-    if(lz[i]!=-1){
+void push(int i,int l,int r)
+{
+    if(lz[i]!=-1)
+    {
         t[i]=lz[i];
         if(l<r)lz[2*i]=lz[i],lz[2*i+1]=lz[i];
-    }lz[i]=-1;
+    }
+    lz[i]=-1;
 }
 void update(int i,int l,int r,int tl,int tr,int v)
 {
