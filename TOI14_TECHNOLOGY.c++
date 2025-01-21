@@ -6104,7 +6104,7 @@ void push2(int i,int l,int r){
     if(lz2[i]!=-1)
     {
         t2[i]=lz2[i];
-        if(l<r)lz2[2*i]=lz2[i],lz2[2*i+1]=lz2[i];
+        if(l<r) lz2[2*i]=lz2[i],lz2[2*i+1]=lz2[i];
     }
     lz2[i]=-1;
 }
