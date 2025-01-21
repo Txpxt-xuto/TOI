@@ -6115,8 +6115,8 @@ void update2(int i,int l,int r,int tl,int tr,int v){
 }
 int qr2(int i,int l,int r,int idx){
     push2(i,l,r);
-    if(r<idx||l>idx)return 1e9;
-    if(l==r)return t2[i];
+    if(r<idx||l>idx) return 1e9;
+    if(l==r) return t2[i];
     int m=(l+r)>>1;
     return min(qr2(2*i,l,m,idx),qr2(2*i+1,m+1,r,idx));
 }
