@@ -6069,7 +6069,8 @@ using namespace std;
 const int N=1e5+5;
 int t[4*N],lz[4*N];
 ll a[N];
-void build(int i,int l,int r){
+void build(int i,int l,int r)
+{
     if(l==r) return void(t[i]=l-1);
     int m=(l+r)>>1;
     build(2*i,l,m);build(2*i+1,m+1,r);
