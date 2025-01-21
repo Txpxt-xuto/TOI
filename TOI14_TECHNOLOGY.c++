@@ -6121,7 +6121,8 @@ int qr2(int i,int l,int r,int idx){
     return min(qr2(2*i,l,m,idx),qr2(2*i+1,m+1,r,idx));
 }
 set<int>ms;
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int n,q;
