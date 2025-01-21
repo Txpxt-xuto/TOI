@@ -6122,7 +6122,8 @@ int qr2(int i,int l,int r,int idx){
 }
 set<int>ms;
 int main(){
-    ios_base::sync_with_stdio(0);cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int n,q;
     cin >> n >> q;
     n--;
