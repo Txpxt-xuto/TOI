@@ -6101,10 +6101,12 @@ void build2(int i,int l,int r){
     build2(2*i,l,m);build2(2*i+1,m+1,r);
 }
 void push2(int i,int l,int r){
-    if(lz2[i]!=-1){
+    if(lz2[i]!=-1)
+    {
         t2[i]=lz2[i];
         if(l<r)lz2[2*i]=lz2[i],lz2[2*i+1]=lz2[i];
-    }lz2[i]=-1;
+    }
+    lz2[i]=-1;
 }
 void update2(int i,int l,int r,int tl,int tr,int v){
     push2(i,l,r);
@@ -6115,7 +6117,7 @@ void update2(int i,int l,int r,int tl,int tr,int v){
         push2(i,l,r);
         return;
     }
-    int m=(l+r)>>1;
+    int m=(l+r) >> 1;
     update2(2*i,l,m,tl,tr,v);
     update2(2*i+1,m+1,r,tl,tr,v);
     t[i]=min(t[2*i],t[2*i+1]);
