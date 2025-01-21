@@ -6124,7 +6124,7 @@ set<int>ms;
 int main(){
     ios_base::sync_with_stdio(0);cin.tie(0);
     int n,q;
-    cin>>n>>q;
+    cin >> n >> q;
     n--;
     for(int i=1;i<4*N;i++) lz[i]=lz2[i]=-1;
     for(int i=1;i<=n;i++) a[i]=10,ms.insert(i);
