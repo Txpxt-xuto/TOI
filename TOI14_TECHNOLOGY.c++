@@ -6111,7 +6111,8 @@ void update2(int i,int l,int r,int tl,int tr,int v){
     if(r<tl||l>tr)return;
     if(r<=tr&&l>=tl)
     { 
-        lz2[i]=v,push2(i,l,r);return;}
+        lz2[i]=v,push2(i,l,r);return;
+    }
     int m=(l+r)>>1;update2(2*i,l,m,tl,tr,v);update2(2*i+1,m+1,r,tl,tr,v);
     t[i]=min(t[2*i],t[2*i+1]);
 }
