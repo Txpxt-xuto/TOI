@@ -6108,7 +6108,7 @@ void push2(int i,int l,int r){
 }
 void update2(int i,int l,int r,int tl,int tr,int v){
     push2(i,l,r);
-    if(r<tl||l>tr)return;
+    if(r<tl||l>tr) return;
     if(r<=tr&&l>=tl)
     { 
         lz2[i]=v;
