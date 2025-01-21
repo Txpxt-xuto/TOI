@@ -6127,7 +6127,8 @@ int main(){
     for(int i=1;i<4*N;i++)lz[i]=lz2[i]=-1;
     for(int i=1;i<=n;i++)a[i]=10,ms.insert(i);
     build(1,1,n);build2(1,1,n);
-    while(q--){
+    while(q--)
+    {
         int o;
         cin>>o;
         if(o==1)
