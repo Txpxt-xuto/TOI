@@ -6128,7 +6128,8 @@ int main(){
     for(int i=1;i<=n;i++)a[i]=10,ms.insert(i);
     build(1,1,n);build2(1,1,n);
     while(q--){
-        int o;cin>>o;
+        int o;
+        cin>>o;
         if(o==1)
         {
             ll i,j;
