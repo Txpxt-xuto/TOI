@@ -6123,7 +6123,8 @@ int qr2(int i,int l,int r,int idx){
 set<int>ms;
 int main(){
     ios_base::sync_with_stdio(0);cin.tie(0);
-    int n,q;cin>>n>>q;n--;
+    int n,q;
+    cin>>n>>q;n--;
     for(int i=1;i<4*N;i++) lz[i]=lz2[i]=-1;
     for(int i=1;i<=n;i++) a[i]=10,ms.insert(i);
     build(1,1,n);build2(1,1,n);
