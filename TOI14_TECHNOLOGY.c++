@@ -6338,7 +6338,8 @@ int32_t main(){
     for (int i = 0; i < n; i++)
     {
         int mask = 0;
-        for (int j = 0; j < m; j++) {
+        for (int j = 0; j < m; j++)
+        {
             if (can[i][j]) mask |= (1 << j);
         }
         if(dp[mask] <= p[i]) continue;
