@@ -6450,7 +6450,7 @@ int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n;
-    for(int i=1;i<=n;i++)cin >> a[i];
+    for(int i=1;i<=n;i++) cin >> a[i];
     int lim=*max_element(a+1,a+n+1);
     rmq.build();
     solve(1,n);
