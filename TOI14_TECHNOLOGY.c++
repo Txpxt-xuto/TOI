@@ -6454,7 +6454,8 @@ int main()
     int lim=*max_element(a+1,a+n+1);
     rmq.build();
     solve(1,n);
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         int l,r;
         cin >> l >> r;
         if(l>lim)ans+=r-l+1,l=r=0;
