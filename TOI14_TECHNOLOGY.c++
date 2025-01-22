@@ -6359,7 +6359,6 @@ using pii = pair<int,int>;
 using pll = pair<ll,ll>;
 using pdd = pair<db,db>;
 const int INF=0x3fffffff;
-// const int MOD=1000000007;
 const int MOD=998244353;
 const ll LINF=0x1fffffffffffffff;
 const db DINF=numeric_limits<db>::infinity();
