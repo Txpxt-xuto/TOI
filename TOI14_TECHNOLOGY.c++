@@ -6438,7 +6438,8 @@ int solve(int l,int r){
     return m;
 }
 
-ll solve2(int l,int r){
+ll solve2(int l,int r)
+{
     int m=rmq.query(l,r).second;
     ll res=1;
     if(l<m) res=(res*(solve2(l,m-1)+cl[m]%MOD))%MOD;
