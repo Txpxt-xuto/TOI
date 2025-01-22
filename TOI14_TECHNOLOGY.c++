@@ -6293,3 +6293,58 @@ int main()
     cout << ans;
 }
 
+#include <bits/stdc++.h>
+#define int long long
+#define pii pair <int,int>
+#define tiii tuple <int, int, int>
+#define f first
+#define s second
+#define all(x) x.begin(), x.end()
+#define ub(a, b) upper_bound(a.begin(), a.end(), b) - a.begin();
+#define lb(a, b) lower_bound(a.begin(), a.end(), b) - a.begin();
+#define ve vector
+#define graph(a, n) vector <int> a[n];
+#define wgraph(a, n) vector <pii> a[n];
+#define emb emplace_back
+#define em emplace
+#define ins insert
+#define er erase
+#define iShowSpeed cin.tie(NULL)->sync_with_stdio(false)
+
+using namespace std;
+
+template <typename T>
+using greater_priority_queue = priority_queue<T, vector<T>, greater<T>>;
+
+const int mod = 1e9 + 7;
+const int inf = 1e18;
+
+int dx[4] = {1, 0, -1, 0};
+int dy[4] = {0, 1, 0, -1};
+
+int32_t main(){
+    iShowSpeed;
+    int n, m;
+    cin >> n >> m;
+    vector <int> p(n), dp(1 << m, inf);
+    vector <vector <int>> can(n, vector <int> (m));
+    for (int i = 0; i < n; i++) {
+        cin >> p[i];
+        for (int j = 0; j < m; j++) {
+            cin >> can[i][j];
+        }
+    }
+    dp[0] = 0;
+    for (int i = 0; i < n; i++) {
+        int mask = 0;
+        for (int j = 0; j < m; j++) {
+            if (can[i][j]) mask |= (1 << j);
+        }
+        if (dp[mask] <= p[i]) continue;
+        for (int j = (1 << m) - 1; j >= 0; j--) {
+            if (dp[j] == inf) continue;
+            dp[j | mask] = min(dp[j | mask], dp[j] + p[i]);
+        }
+    }
+    cout << dp[(1 << m) - 1];
+}
