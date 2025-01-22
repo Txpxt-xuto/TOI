@@ -6458,8 +6458,8 @@ int main()
     {
         int l,r;
         cin >> l >> r;
-        if(l>lim)ans+=r-l+1,l=r=0;
-        if(r>lim)ans+=r-lim,r=lim;
+        if(l>lim) ans+=r-l+1,l=r=0;
+        if(r>lim) ans+=r-lim,r=lim;
         if(l>0)s.update(l,r,1);
         for(auto [j,l,r,k]:ql[i])cl[j]+=s.query(l,r)*k;
         for(auto [j,l,r,k]:qr[i])cr[j]+=s.query(l,r)*k;
