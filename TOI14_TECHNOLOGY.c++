@@ -6445,7 +6445,6 @@ ll solve2(int l,int r){
     if(r>m)res=(res*(solve2(m+1,r)+cr[m]%MOD))%MOD;
     return res;
 }
-
 int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
