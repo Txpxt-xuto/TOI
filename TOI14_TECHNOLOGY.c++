@@ -6423,7 +6423,8 @@ struct segtree{
     }
 }s;
 
-int solve(int l,int r){
+int solve(int l,int r)
+{
     int m=rmq.query(l,r).second;
     if(l<m){
         int c=solve(l,m-1);
@@ -6437,7 +6438,6 @@ int solve(int l,int r){
     }
     return m;
 }
-
 ll solve2(int l,int r)
 {
     int m=rmq.query(l,r).second;
