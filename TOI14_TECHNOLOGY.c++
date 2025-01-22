@@ -6432,7 +6432,8 @@ int solve(int l,int r)
         ql[l-1].emplace_back(m,a[c]+1,a[m],-1);
         ql[m-1].emplace_back(m,a[c]+1,a[m],1);
     }
-    if(r>m){
+    if(r>m)
+    {
         int c=solve(m+1,r);
         qr[m].emplace_back(m,a[c]+1,a[m],-1);
         qr[r].emplace_back(m,a[c]+1,a[m],1);
