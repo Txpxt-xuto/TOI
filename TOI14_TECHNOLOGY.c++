@@ -6388,7 +6388,8 @@ struct RMQ{
         return max(t[k][l],t[k][r-(1<<k)+1]);
     }
 }rmq;
-struct segtree{
+struct segtree
+{
     ll t[K],lz[K];
     void pushlz(int l,int r,int i)
     {
