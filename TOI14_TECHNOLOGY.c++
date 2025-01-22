@@ -6423,7 +6423,8 @@ struct segtree{
         int m=(l+r)/2;
         return query(l,m,i*2,x,y)+query(m+1,r,i*2+1,x,y);
     }
-    ll query(int x,int y){
+    ll query(int x,int y)
+    {
         return query(1,N,1,x,y);
     }
 }s;
