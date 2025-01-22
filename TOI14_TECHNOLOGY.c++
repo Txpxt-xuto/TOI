@@ -6394,16 +6394,18 @@ struct segtree{
     void pushlz(int l,int r,int i)
     {
         t[i]+=lz[i]*(r-l+1);
-        if(l<r){
+        if(l<r)
+        {
             lz[i*2]+=lz[i];
             lz[i*2+1]+=lz[i];
         }
         lz[i]=0;
     }
-    void update(int l,int r,int i,int x,int y,ll v){
+    void update(int l,int r,int i,int x,int y,ll v)
+    {
         pushlz(l,r,i);
-        if(y<l||r<x)return;
-        if(x<=l&&r<=y)return lz[i]=v,pushlz(l,r,i);
+        if(y<l||r<x) return;
+        if(x<=l&&r<=y) return lz[i]=v,pushlz(l,r,i);
         int m=(l+r)/2;
         update(l,m,i*2,x,y,v);
         update(m+1,r,i*2+1,x,y,v);
