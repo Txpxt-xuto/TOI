@@ -6315,7 +6315,6 @@ using namespace std;
 
 template <typename T>
 using greater_priority_queue = priority_queue<T, vector<T>, greater<T>>;
-
 const int mod = 1e9 + 7;
 const int inf = 1e18;
 int dx[4] = {1, 0, -1, 0};
