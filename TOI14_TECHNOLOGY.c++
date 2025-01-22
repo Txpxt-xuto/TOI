@@ -6330,9 +6330,9 @@ int32_t main(){
     vector <vector <int>> can(n, vector <int> (m));
     for (int i = 0; i < n; i++) {
         cin >> p[i];
-        for(int j = 0; j < m; j++)
+        for(int j = 0; j < m; j++) cin >> can[i][j];
         {
-            cin >> can[i][j];
+            
         }
     }
     dp[0] = 0;
