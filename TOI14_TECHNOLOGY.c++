@@ -6418,8 +6418,8 @@ struct segtree{
     ll query(int l,int r,int i,int x,int y)
     {
         pushlz(l,r,i);
-        if(y<l||r<x)return 0;
-        if(x<=l&&r<=y)return t[i];
+        if(y<l||r<x) return 0;
+        if(x<=l&&r<=y) return t[i];
         int m=(l+r)/2;
         return query(l,m,i*2,x,y)+query(m+1,r,i*2+1,x,y);
     }
