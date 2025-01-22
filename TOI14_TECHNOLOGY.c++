@@ -6428,7 +6428,6 @@ struct segtree{
         return query(1,N,1,x,y);
     }
 }s;
-
 int solve(int l,int r)
 {
     int m=rmq.query(l,r).second;
