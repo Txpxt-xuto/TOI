@@ -6340,8 +6340,8 @@ int32_t main(){
         for (int j = 0; j < m; j++) {
             if (can[i][j]) mask |= (1 << j);
         }
-        if (dp[mask] <= p[i]) continue;
-        for (int j = (1 << m) - 1; j >= 0; j--)
+        if(dp[mask] <= p[i]) continue;
+        for(int j = (1 << m) - 1; j >= 0; j--)
         {
             if (dp[j] == inf) continue;
             dp[j | mask] = min(dp[j | mask], dp[j] + p[i]);
