@@ -6380,8 +6380,8 @@ struct RMQ{
     void build()
     {
         for(int i=1;i<=n;i++)t[0][i]=pii(a[i],i);
-        for(int i=0;i<M-1;i++)for(int j=1;j+(2<<i)-1<=n;j++)
-            t[i+1][j]=max(t[i][j],t[i][j+(1<<i)]);
+        for(int i=0;i<M-1;i++) for(int j=1;j+(2<<i)-1<=n;j++) t[i+1][j]=max(t[i][j],t[i][j+(1<<i)]);
+            
     }
     pii query(int l,int r)
     {
