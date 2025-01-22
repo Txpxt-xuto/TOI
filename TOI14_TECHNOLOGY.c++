@@ -6312,7 +6312,6 @@ int main()
 #define iShowSpeed cin.tie(NULL)->sync_with_stdio(false)
 
 using namespace std;
-
 template <typename T>
 using greater_priority_queue = priority_queue<T, vector<T>, greater<T>>;
 const int mod = 1e9 + 7;
