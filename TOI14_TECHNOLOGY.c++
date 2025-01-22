@@ -6328,7 +6328,8 @@ int32_t main(){
     cin >> n >> m;
     vector <int> p(n), dp(1 << m, inf);
     vector <vector <int>> can(n, vector <int> (m));
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> p[i];
         for(int j=0;j<m;j++) cin >> can[i][j];
     }
