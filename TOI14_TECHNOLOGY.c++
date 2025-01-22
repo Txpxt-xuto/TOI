@@ -6411,10 +6411,12 @@ struct segtree{
         update(m+1,r,i*2+1,x,y,v);
         t[i]=t[i*2]+t[i*2+1];
     }
-    void update(int x,int y,ll v){
+    void update(int x,int y,ll v)
+    {
         update(1,N,1,x,y,v);
     }
-    ll query(int l,int r,int i,int x,int y){
+    ll query(int l,int r,int i,int x,int y)
+    {
         pushlz(l,r,i);
         if(y<l||r<x)return 0;
         if(x<=l&&r<=y)return t[i];
