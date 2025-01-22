@@ -6335,7 +6335,8 @@ int32_t main(){
         }
     }
     dp[0] = 0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         int mask = 0;
         for (int j = 0; j < m; j++) {
             if (can[i][j]) mask |= (1 << j);
