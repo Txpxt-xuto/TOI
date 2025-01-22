@@ -6426,7 +6426,8 @@ struct segtree{
 int solve(int l,int r)
 {
     int m=rmq.query(l,r).second;
-    if(l<m){
+    if(l<m)
+    {
         int c=solve(l,m-1);
         ql[l-1].emplace_back(m,a[c]+1,a[m],-1);
         ql[m-1].emplace_back(m,a[c]+1,a[m],1);
