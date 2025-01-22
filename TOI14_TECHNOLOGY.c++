@@ -6391,7 +6391,8 @@ struct RMQ{
 
 struct segtree{
     ll t[K],lz[K];
-    void pushlz(int l,int r,int i){
+    void pushlz(int l,int r,int i)
+    {
         t[i]+=lz[i]*(r-l+1);
         if(l<r){
             lz[i*2]+=lz[i];
