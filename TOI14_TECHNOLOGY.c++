@@ -6365,16 +6365,13 @@ const ll LINF=0x1fffffffffffffff;
 const db DINF=numeric_limits<db>::infinity();
 const db EPS=1e-9;
 const db PI=acos(db(-1));
-
 const int N=1e5+5;
 const int M=17;
 const int K=1<<18;
-
 int n,lim,ans;
 int a[N];
 vector<tuple<int,int,int,int>> ql[N],qr[N];
 ll cl[N],cr[N];
-
 struct RMQ
 {
     pii t[M][N];
