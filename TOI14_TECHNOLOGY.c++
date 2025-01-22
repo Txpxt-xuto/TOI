@@ -6343,3 +6343,124 @@ int32_t main()
     }
     cout << dp[(1 << m) - 1];
 }
+
+#include<bits/stdc++.h>
+#define sz(x) (int)(x).size()
+#define all(x) (x).begin(),(x).end()
+
+using namespace std;
+
+using ll = long long;
+using db = long double;
+using vi = vector<int>;
+using vl = vector<ll>;
+using vd = vector<db>;
+using pii = pair<int,int>;
+using pll = pair<ll,ll>;
+using pdd = pair<db,db>;
+const int INF=0x3fffffff;
+// const int MOD=1000000007;
+const int MOD=998244353;
+const ll LINF=0x1fffffffffffffff;
+const db DINF=numeric_limits<db>::infinity();
+const db EPS=1e-9;
+const db PI=acos(db(-1));
+
+const int N=1e5+5;
+const int M=17;
+const int K=1<<18;
+
+int n,lim,ans;
+int a[N];
+vector<tuple<int,int,int,int>> ql[N],qr[N];
+ll cl[N],cr[N];
+
+struct RMQ{
+    pii t[M][N];
+    void build(){
+        for(int i=1;i<=n;i++)t[0][i]=pii(a[i],i);
+        for(int i=0;i<M-1;i++)for(int j=1;j+(2<<i)-1<=n;j++)
+            t[i+1][j]=max(t[i][j],t[i][j+(1<<i)]);
+    }
+    pii query(int l,int r){
+        if(r<l)return pii(-INF,-1);
+        int k=31-__builtin_clz(r-l+1);
+        return max(t[k][l],t[k][r-(1<<k)+1]);
+    }
+}rmq;
+
+struct segtree{
+    ll t[K],lz[K];
+    void pushlz(int l,int r,int i){
+        t[i]+=lz[i]*(r-l+1);
+        if(l<r){
+            lz[i*2]+=lz[i];
+            lz[i*2+1]+=lz[i];
+        }
+        lz[i]=0;
+    }
+    void update(int l,int r,int i,int x,int y,ll v){
+        pushlz(l,r,i);
+        if(y<l||r<x)return;
+        if(x<=l&&r<=y)return lz[i]=v,pushlz(l,r,i);
+        int m=(l+r)/2;
+        update(l,m,i*2,x,y,v);
+        update(m+1,r,i*2+1,x,y,v);
+        t[i]=t[i*2]+t[i*2+1];
+    }
+    void update(int x,int y,ll v){
+        update(1,N,1,x,y,v);
+    }
+    ll query(int l,int r,int i,int x,int y){
+        pushlz(l,r,i);
+        if(y<l||r<x)return 0;
+        if(x<=l&&r<=y)return t[i];
+        int m=(l+r)/2;
+        return query(l,m,i*2,x,y)+query(m+1,r,i*2+1,x,y);
+    }
+    ll query(int x,int y){
+        return query(1,N,1,x,y);
+    }
+}s;
+
+int solve(int l,int r){
+    int m=rmq.query(l,r).second;
+    if(l<m){
+        int c=solve(l,m-1);
+        ql[l-1].emplace_back(m,a[c]+1,a[m],-1);
+        ql[m-1].emplace_back(m,a[c]+1,a[m],1);
+    }
+    if(r>m){
+        int c=solve(m+1,r);
+        qr[m].emplace_back(m,a[c]+1,a[m],-1);
+        qr[r].emplace_back(m,a[c]+1,a[m],1);
+    }
+    return m;
+}
+
+ll solve2(int l,int r){
+    int m=rmq.query(l,r).second;
+    ll res=1;
+    if(l<m)res=(res*(solve2(l,m-1)+cl[m]%MOD))%MOD;
+    if(r>m)res=(res*(solve2(m+1,r)+cr[m]%MOD))%MOD;
+    return res;
+}
+
+int main(){
+    cin.tie(nullptr)->sync_with_stdio(false);
+    cin >> n;
+    for(int i=1;i<=n;i++)cin >> a[i];
+    int lim=*max_element(a+1,a+n+1);
+    rmq.build();
+    solve(1,n);
+    for(int i=1;i<=n;i++){
+        int l,r;
+        cin >> l >> r;
+        if(l>lim)ans+=r-l+1,l=r=0;
+        if(r>lim)ans+=r-lim,r=lim;
+        if(l>0)s.update(l,r,1);
+        for(auto [j,l,r,k]:ql[i])cl[j]+=s.query(l,r)*k;
+        for(auto [j,l,r,k]:qr[i])cr[j]+=s.query(l,r)*k;
+    }
+    cout << (ans+solve2(1,n))%MOD;
+}
