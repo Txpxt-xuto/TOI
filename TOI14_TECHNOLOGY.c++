@@ -6375,7 +6375,8 @@ int a[N];
 vector<tuple<int,int,int,int>> ql[N],qr[N];
 ll cl[N],cr[N];
 
-struct RMQ{
+struct RMQ
+{
     pii t[M][N];
     void build()
     {
