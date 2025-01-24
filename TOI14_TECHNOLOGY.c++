@@ -6347,9 +6347,7 @@ int32_t main()
 #include<bits/stdc++.h>
 #define sz(x) (int)(x).size()
 #define all(x) (x).begin(),(x).end()
-
 using namespace std;
-
 using ll = long long;
 using db = long double;
 using vi = vector<int>;
