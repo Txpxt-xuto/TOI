@@ -6509,4 +6509,4 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
             if(HW[i][3]==0)
             {
                 int a = max(st,HW[i][0]);
-                int rst = 
+                int 
