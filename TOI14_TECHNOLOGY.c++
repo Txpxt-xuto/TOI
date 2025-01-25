@@ -6514,4 +6514,3 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
                 rst*=HW[i][2];
                 if(rst>HW[i][1]) continue;
                 pq.push({rst,i});
-    
