@@ -9,11 +9,11 @@ y2 = [0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.3,0.6,0.8,1.0,1.3,1.4,1.6,1.9,2.4,2.8,3.3,3.
 x3 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
 y3 = [0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.2,0.7,0.9,1.0,1.7,1.9,2.6,3.5,4.0,4.6,4.7,5.1,5.4,5.8,5.9,6.3,6.7,7.2,7.7,8.2,9.4,10.3,11.2]
 
-plt.plot(x1,y1,label='p')  #ระบุ label สำหรับ legend ได้
-plt.plot(x2,y2,label='j') # plot กราฟ series ที่สอง
-plt.plot(x3,y3,label='l') # plot กราฟ series ที่สอง
-plt.xlabel('day') #ชื่อแกน x
-plt.ylabel('hight') #ชื่อแกน y
-plt.title('ChartTitle1\nChartTitle2') #ชื่อกราฟ ขึ้นบรรทัดใหม่ได้ด้วย \n
+plt.plot(x1,y1,label='Animal manure')  #ระบุ label สำหรับ legend ได้
+plt.plot(x2,y2,label='Microbial fertilizer') # plot กราฟ series ที่สอง
+plt.plot(x3,y3,label='Composted leaf fertilizer') # plot กราฟ series ที่สอง
+plt.xlabel('Time (day)') #ชื่อแกน x
+plt.ylabel('Hight (cm)') #ชื่อแกน y
+plt.title('The graph shows the relationship between the height of Hong Kong kale\nfrom each type of fertilizer and the time spent in the experiment.') #ชื่อกราฟ ขึ้นบรรทัดใหม่ได้ด้วย \n
 plt.legend()  #แสดง Legend
 plt.show()  #บรรทัดนี้ใน colab ใส่ก็ได้ ไม่ใส่ก็ได้
