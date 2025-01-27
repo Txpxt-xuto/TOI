@@ -6665,7 +6665,6 @@ inline void solution(){
 signed main(){
 	cin.tie(nullptr)->ios::sync_with_stdio(false);	
 	int q = 1;
-//	cin >> q;
 	while(q--){
 		solution();
 		cout << "\n";
