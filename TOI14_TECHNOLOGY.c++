@@ -6639,8 +6639,8 @@ inline void solution(){
 		adj[x.v].emplace_back(x.u, x.w);
 	}
 	dfs(1, 0, 1);
-	for(int state=1; state<LG; ++state)
-		for(int i=1; i<=n; ++i)lift[state][i] = lift[state - 1][lift[state - 1][i]];
+	for(int state=1; state<LG; ++state) for(int i=1; i<=n; ++i)lift[state][i] = lift[state - 1][lift[state - 1][i]];
+		
 	for(auto x: out)
     {
 		if(get_dist(x.u, x.v) != x.w)
