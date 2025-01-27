@@ -6891,14 +6891,14 @@ int main() {
                 dp[i % 2][j] = max(dp[i % 2][j], pqOutRange.top().first + qs[j] - qs[j - i]);
             }
 
-            if(j + i - 1 <= n)
+            if(j + i - 1 <= n)pqInRange.emplace(dp[(i - 1) % 2][j + i - 1], j + i - 1);
             {
-                pqInRange.emplace(dp[(i - 1) % 2][j + i - 1], j + i - 1);
+                
             }
 
-            if(j - i + 1 >= i - 1)
+            if(j - i + 1 >= i - 1)pqOutRange.emplace(dp[(i - 1) % 2][j - i + 1], j - i + 1);
             {
-                pqOutRange.emplace(dp[(i - 1) % 2][j - i + 1], j - i + 1);
+                
             }
         }
     }
