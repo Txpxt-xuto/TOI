@@ -6700,7 +6700,7 @@ int main() {
                 break;
             }
         }
-        if (can) right = mid;
+        if(can) right = mid;
         else left = mid + 1;
     }
     cout << left;
