@@ -6653,7 +6653,7 @@ inline void solution(){
 			break;
 		}
 	}
-	for(auto x: in){
+	for(auto x: in)
 		answer.emplace_back(x.u, x.v, x.w);
 	}
 	sort(answer.begin(), answer.end());
