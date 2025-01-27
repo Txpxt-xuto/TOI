@@ -6904,7 +6904,6 @@ int main() {
     //     for(int j = 1; j <= n; ++j) {
     //         cout << dp[i][j] << " ";
     //     }
-
     //     cout << "\n";
     cout << dp[n % 2][n];
     return 0;
