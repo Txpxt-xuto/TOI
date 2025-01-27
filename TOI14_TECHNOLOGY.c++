@@ -6704,6 +6704,5 @@ int main() {
         else left = mid + 1;
     }
     cout << left;
-
     return 0;
 }
