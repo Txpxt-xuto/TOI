@@ -6878,11 +6878,9 @@ int main() {
             }
 
             while(!pqOutRange.empty()) {
-                if(pqOutRange.top().second >= max(1, j - i + 1) and pqOutRange.top().second <= min(n, j + i - 2)) {
+                if(pqOutRange.top().second >= max(1, j - i + 1) and pqOutRange.top().second <= min(n, j + i - 2))
                     pqOutRange.pop();
-                }
                 else break;
-                   
             }
             if(!pqOutRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], pqOutRange.top().first + qs[j] - qs[j - i]);
             if(j + i - 1 <= n)pqInRange.emplace(dp[(i - 1) % 2][j + i - 1], j + i - 1);
