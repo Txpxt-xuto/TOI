@@ -6640,7 +6640,7 @@ inline void solution(){
 	}
 	dfs(1, 0, 1);
 	for(int state=1; state<LG; ++state){
-		for(int i=1; i<=n; ++i){lift[state][i] = lift[state - 1][lift[state - 1][i]];
+		for(int i=1; i<=n; ++i)lift[state][i] = lift[state - 1][lift[state - 1][i]];
 	}
 	for(auto x: out)
     {
