@@ -6611,8 +6611,10 @@ inline void solution(){
 	int n;
 	cin >> n;
 	for(int i=1; i<=n; ++i){
-		for(int j=1, x; j<=n; ++j){
-			if(i == j){
+		for(int j=1, x; j<=n; ++j)
+        {
+			if(i == j)
+            {
 				continue;
 			}
 			cin >> x;
