@@ -6616,7 +6616,7 @@ inline void solution(){
 				continue;
 			}
 			cin >> x;
-			if(i < j){
+			if(i < j)
 				edges.emplace_back(i, j, x);
 			}
 		}
