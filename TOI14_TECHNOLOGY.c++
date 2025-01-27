@@ -6677,8 +6677,8 @@ int main() {
         qs[x][y] = 1;
     }
 
-    for (int i = 1;i <= r;i++) {
-        for (int j = 1;j <= c;j++) {
+    for(int i = 1;i <= r;i++) {
+        for(int j = 1;j <= c;j++) {
             qs[i][j] += qs[i-1][j] + qs[i][j-1] - qs[i-1][j-1];
         }   
     }
