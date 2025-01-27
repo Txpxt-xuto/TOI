@@ -6667,8 +6667,10 @@ int main() {
         }
     }
 
-    for (int i = 0;i < n;i++) {
-        int u,v,w; cin >> u >> v >> w;
+    for (int i = 0;i < n;i++)
+    {
+        int u,v,w;
+        cin >> u >> v >> w;
         tree[i] = {u,v,w};
     }
     for(int i = 0;i < m;i++) 
