@@ -6900,8 +6900,6 @@ int main() {
         }
     }
 
-    // for(int i = 1; i 
-
     cout << dp[n % 2][n];
     return 0;
 }
