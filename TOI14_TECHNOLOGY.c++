@@ -6672,4 +6672,3 @@ signed main(){
 	}
 	return 0;
 }
-// https://github.com/MasterIceZ/archive/tree/main/cpp-template
