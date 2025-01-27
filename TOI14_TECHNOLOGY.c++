@@ -6646,3 +6646,62 @@ signed main()
 	}
 	return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 1e5 + 5;
+const int M = 5e3 + 5;
+
+struct a {
+    int u,v,w;
+} tree[N];
+
+int qs[M][M];
+int main() {
+    ios_base::sync_with_stdio(0); cout.tie(0); cin.tie(0);
+    int n,m,r,c; cin >> n >> m >> r >> c;
+    for (int i = 0;i <= r;i++) {
+        for (int j = 0;j <= c;j++) {
+            qs[i][j] = 0;
+        }
+    }
+
+    for (int i = 0;i < n;i++) {
+        int u,v,w; cin >> u >> v >> w;
+        tree[i] = {u,v,w};
+    }
+
+    for (int i = 0;i < m;i++) {
+        int x,y; cin >> x >> y;
+        qs[x][y] = 1;
+    }
+
+    for (int i = 1;i <= r;i++) {
+        for (int j = 1;j <= c;j++) {
+            qs[i][j] += qs[i-1][j] + qs[i][j-1] - qs[i-1][j-1];
+        }   
+    }
+
+    int left = 1,right = 1e6,mid;
+    while (left < right) {
+        mid = (left + right)/2;
+
+        bool can = true;
+        for (int i = 0;i < n;i++) {
+            int x = tree[i].u;
+            int y = tree[i].v;
+            int w = tree[i].w;
+            int q = qs[min(r,x + mid)][min(c,y + mid)] - qs[min(r,x + mid)][max(0,y - mid - 1)] - qs[max(0,x - mid - 1)][min(c,y + mid)] + qs[max(0,x - mid - 1)][max(0,y - mid - 1)];
+            if (q < w) {
+                can = false;
+                break;
+            }
+        }
+        if (can) right = mid;
+        else left = mid + 1;
+    }
+    cout << left;
+
+    return 0;
+}
