@@ -6629,12 +6629,14 @@ inline void solution(){
 		if(ru == rv){
 			out.emplace_back(x);
 		}
-		else{
+		else
+        {
 			parent[ru] = rv;
 			in.emplace_back(x);
 		}
 	}
-	for(auto x: in){
+	for(auto x: in)
+    {
 		adj[x.u].emplace_back(x.v, x.w);
 		adj[x.v].emplace_back(x.u, x.w);
 	}
