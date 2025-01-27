@@ -6863,7 +6863,8 @@ int main() {
             pqOutRange.emplace(dp[(i - 1) % 2][j], j);
         }
 
-        for(int j = i; j <= n; ++j) {
+        for(int j = i; j <= n; ++j)
+        {
             while(!pqInRange.empty())
             {
                 if(pqInRange.top().second < max(1, j - i + 1) or pqInRange.top().second > min(n, j + i - 2)) pqInRange.pop();
