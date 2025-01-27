@@ -6644,8 +6644,10 @@ inline void solution(){
 			lift[state][i] = lift[state - 1][lift[state - 1][i]];
 		}
 	}
-	for(auto x: out){
-		if(get_dist(x.u, x.v) != x.w){
+	for(auto x: out)
+    {
+		if(get_dist(x.u, x.v) != x.w)
+        {
 			in.emplace_back(x);
 			break;
 		}
