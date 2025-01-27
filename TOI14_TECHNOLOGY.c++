@@ -6666,13 +6666,13 @@ int main() {
             qs[i][j] = 0;
         }
     }
-    for(int i = 0;i < n;i++)
+    for(int i=0;i<n;i++)
     {
         int u,v,w;
         cin >> u >> v >> w;
         tree[i] = {u,v,w};
     }
-    for(int i = 0;i < m;i++) 
+    for(int i=0;i<m;i++) 
     {
         int x,y;
         cin >> x >> y;
