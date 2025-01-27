@@ -6659,7 +6659,7 @@ inline void solution(){
 	sort(answer.begin(), answer.end());
 	for(auto x: answer) cout << x.u << " " << x.v << " " << x.w << "\n";
 		
-	}
+	
 	return ;
 }
 signed main()
