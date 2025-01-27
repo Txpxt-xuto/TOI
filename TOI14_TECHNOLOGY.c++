@@ -6684,7 +6684,8 @@ int main() {
     }
 
     int left = 1,right = 1e6,mid;
-    while (left < right) {
+    while (left < right)
+    {
         mid = (left + right)/2;
 
         bool can = true;
