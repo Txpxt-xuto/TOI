@@ -6688,7 +6688,8 @@ int main() {
         mid = (left + right)/2;
 
         bool can = true;
-        for (int i = 0;i < n;i++) {
+        for (int i = 0;i < n;i++)
+        {
             int x = tree[i].u;
             int y = tree[i].v;
             int w = tree[i].w;
