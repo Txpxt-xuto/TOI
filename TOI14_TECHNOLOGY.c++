@@ -6897,7 +6897,6 @@ int main() {
             }
 
             if(j - i + 1 >= i - 1)pqOutRange.emplace(dp[(i - 1) % 2][j - i + 1], j - i + 1);
-            }
         }
     }
     cout << dp[n % 2][n];
