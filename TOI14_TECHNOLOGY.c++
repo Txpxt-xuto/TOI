@@ -6598,9 +6598,9 @@ inline int lca(int u, int v){
 		}
 		u = lift[state][u];
 	}
-	if(u == v)
+	if(u == v) return u;
     {
-		return u;
+		
 	}
 	for(int state=LG-1; state>=0; --state)
     {
