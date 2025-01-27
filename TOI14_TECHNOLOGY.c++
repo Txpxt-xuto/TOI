@@ -6654,7 +6654,7 @@ inline void solution(){
 		}
 	}
 	for(auto x: in) answer.emplace_back(x.u, x.v, x.w);
-	
+
 	
 	sort(answer.begin(), answer.end());
 	for(auto x: answer) cout << x.u << " " << x.v << " " << x.w << "\n";
