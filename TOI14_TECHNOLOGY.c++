@@ -6662,7 +6662,8 @@ inline void solution(){
 	}
 	return ;
 }
-signed main(){
+signed main()
+{
 	cin.tie(nullptr)->ios::sync_with_stdio(false);	
 	int q = 1;
 	while(q--){
