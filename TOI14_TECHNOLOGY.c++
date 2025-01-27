@@ -6593,9 +6593,6 @@ inline int lca(int u, int v){
 	for(int state=LG-1; state>=0; --state)
     {
 		if(level[lift[state][u]] < level[v]) continue;
-        {
-			
-		}
 		u = lift[state][u];
 	}
 	if(u == v) return u;
