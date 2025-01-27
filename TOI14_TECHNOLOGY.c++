@@ -6860,9 +6860,6 @@ int main() {
 
         priority_queue<pair<long long, int>> pqOutRange;
         for(int j = i * 2 - 1; j <= n; ++j) pqOutRange.emplace(dp[(i - 1) % 2][j], j);
-        {
-            
-        }
         for(int j = i; j <= n; ++j)
         {
             while(!pqInRange.empty())
