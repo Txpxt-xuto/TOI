@@ -6672,11 +6672,11 @@ int main() {
         tree[i] = {u,v,w};
     }
 
-    for (int i = 0;i < m;i++) {
+    for (int i = 0;i < m;i++) 
+    {
         int x,y; cin >> x >> y;
         qs[x][y] = 1;
     }
-
     for(int i = 1;i <= r;i++) for(int j = 1;j <= c;j++) qs[i][j] += qs[i-1][j] + qs[i][j-1] - qs[i-1][j-1];
     int left = 1,right = 1e6,mid;
     while(left < right)
