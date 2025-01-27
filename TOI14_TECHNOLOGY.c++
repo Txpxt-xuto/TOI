@@ -6694,7 +6694,7 @@ int main() {
             int y = tree[i].v;
             int w = tree[i].w;
             int q = qs[min(r,x + mid)][min(c,y + mid)] - qs[min(r,x + mid)][max(0,y - mid - 1)] - qs[max(0,x - mid - 1)][min(c,y + mid)] + qs[max(0,x - mid - 1)][max(0,y - mid - 1)];
-            if (q < w)
+            if(q < w)
             {
                 can = false;
                 break;
