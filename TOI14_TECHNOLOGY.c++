@@ -6865,11 +6865,8 @@ int main() {
 
         for(int j = i; j <= n; ++j) {
             while(!pqInRange.empty()) {
-                if(pqInRange.top().second < max(1, j - i + 1) or pqInRange.top().second > min(n, j + i - 2)) {
-                    pqInRange.pop();
-                }
+                if(pqInRange.top().second < max(1, j - i + 1) or pqInRange.top().second > min(n, j + i - 2)) pqInRange.pop();
                 else break;
-                    
             }
             if(!pqInRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], pqInRange.top().first + (qs[j] - qs[j - i]) / 2);
             while(!pqOutRange.empty())
