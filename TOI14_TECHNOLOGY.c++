@@ -6666,8 +6666,7 @@ int main() {
             qs[i][j] = 0;
         }
     }
-
-    for (int i = 0;i < n;i++)
+    for(int i = 0;i < n;i++)
     {
         int u,v,w;
         cin >> u >> v >> w;
