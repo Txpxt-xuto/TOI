@@ -6822,3 +6822,92 @@ int main()
     printf("%d",ans);
     return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n;
+    cin >> n;
+
+    int qs[n + 1];
+    qs[0] = 0;
+
+    for(int i = 1; i <= n; ++i) {
+        cin >> qs[i];
+        qs[i] += qs[i - 1];
+    }
+
+    long long dp[2][n + 1];
+    for(int i = 0; i <= 1; ++i) {
+        for(int j = 1; j <= n; ++j) {
+            dp[i][j] = 0;
+        }
+    }
+    
+    for(int i = 1; i <= n; ++i) {
+        dp[1][i] = qs[i] - qs[i - 1];
+    }
+
+    for(int i = 2; i <= n; ++i) {
+        priority_queue<pair<long long, int>> pqInRange;
+        for(int j = i - 1; j <= min(n, i * 2 - 2); ++j) {
+            pqInRange.emplace(dp[(i - 1) % 2][j], j);
+        }
+
+        priority_queue<pair<long long, int>> pqOutRange;
+        for(int j = i * 2 - 1; j <= n; ++j) {
+            pqOutRange.emplace(dp[(i - 1) % 2][j], j);
+        }
+
+        for(int j = i; j <= n; ++j) {
+            while(!pqInRange.empty()) {
+                if(pqInRange.top().second < max(1, j - i + 1) or pqInRange.top().second > min(n, j + i - 2)) {
+                    pqInRange.pop();
+                }
+                else {
+                    break;
+                }
+            }
+            
+            if(!pqInRange.empty()) {
+                dp[i % 2][j] = max(dp[i % 2][j], pqInRange.top().first + (qs[j] - qs[j - i]) / 2);
+            }
+
+            while(!pqOutRange.empty()) {
+                if(pqOutRange.top().second >= max(1, j - i + 1) and pqOutRange.top().second <= min(n, j + i - 2)) {
+                    pqOutRange.pop();
+                }
+                else {
+                    break;
+                }
+            }
+            
+            if(!pqOutRange.empty()) {
+                dp[i % 2][j] = max(dp[i % 2][j], pqOutRange.top().first + qs[j] - qs[j - i]);
+            }
+
+            if(j + i - 1 <= n) {
+                pqInRange.emplace(dp[(i - 1) % 2][j + i - 1], j + i - 1);
+            }
+
+            if(j - i + 1 >= i - 1) {
+                pqOutRange.emplace(dp[(i - 1) % 2][j - i + 1], j - i + 1);
+            }
+        }
+    }
+
+    // for(int i = 1; i <= n; ++i) {
+    //     for(int j = 1; j <= n; ++j) {
+    //         cout << dp[i][j] << " ";
+    //     }
+
+    //     cout << "\n";
+    // }
+
+    cout << dp[n % 2][n];
+    return 0;
+}
