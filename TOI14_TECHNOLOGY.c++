@@ -6624,10 +6624,11 @@ inline void solution(){
 	}
 	sort(edges.begin(), edges.end());
 	iota(parent + 1, parent + n + 1, 1);
-	for(auto x: edges){
+	for(auto x: edges)
+    {
 		int ru = find_root(x.u), rv = find_root(x.v);
-		if(ru == rv){
-			out.emplace_back(x);
+		if(ru == rv)out.emplace_back(x);
+			
 		}
 		else
         {
