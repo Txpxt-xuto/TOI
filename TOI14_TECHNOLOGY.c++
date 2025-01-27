@@ -6628,8 +6628,6 @@ inline void solution(){
     {
 		int ru = find_root(x.u), rv = find_root(x.v);
 		if(ru == rv)out.emplace_back(x);
-			
-		}
 		else
         {
 			parent[ru] = rv;
