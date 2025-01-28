@@ -6607,7 +6607,8 @@ inline int lca(int u, int v){
 inline int get_dist(int u, int v){
 	return mem[u] + mem[v] - 2 * mem[lca(u, v)];
 }
-inline void solution(){
+inline void solution()
+{
 	int n;
 	cin >> n;
 	for(int i=1; i<=n; ++i)
