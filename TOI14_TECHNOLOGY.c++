@@ -6604,7 +6604,8 @@ inline int lca(int u, int v){
 	}
 	return lift[0][u];
 }
-inline int get_dist(int u, int v){
+inline int get_dist(int u, int v)
+{
 	return mem[u] + mem[v] - 2 * mem[lca(u, v)];
 }
 inline void solution()
