@@ -6579,14 +6579,15 @@ void dfs(int u, int p, int l){
 	level[u] = l;
 	lift[0][u] = p;
 	for(auto x: adj[u]){
-		if(x.first == p){
+		if(x.first == p{
 			continue;
 		}
 		mem[x.first] = x.second + mem[u];
 		dfs(x.first, u, l + 1);
 	}
 }
-inline int lca(int u, int v){
+inline int lca(int u, int v)
+{
 	if(level[u] < level[v]) swap(u, v);
 	for(int state=LG-1; state>=0; --state)
     {
