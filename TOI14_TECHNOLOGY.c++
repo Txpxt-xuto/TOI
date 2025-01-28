@@ -6572,7 +6572,6 @@ int parent[MxN], mem[MxN], level[MxN], lift[LG][MxN];
 int find_root(int u){
 	if(u == parent[u]) return u;
 	
-
 	return parent[u] = find_root(parent[u]);
 }
 void dfs(int u, int p, int l)
