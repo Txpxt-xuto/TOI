@@ -6575,10 +6575,12 @@ int find_root(int u){
 	}
 	return parent[u] = find_root(parent[u]);
 }
-void dfs(int u, int p, int l){
+void dfs(int u, int p, int l)
+{
 	level[u] = l;
 	lift[0][u] = p;
-	for(auto x: adj[u]){
+	for(auto x: adj[u])
+    {
 		if(x.first == p) continue;
 		mem[x.first] = x.second + mem[u];
 		dfs(x.first, u, l + 1);
