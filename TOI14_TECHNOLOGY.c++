@@ -6587,7 +6587,7 @@ void dfs(int u, int p, int l){
 	}
 }
 inline int lca(int u, int v){
-	if(level[u] < level[v]) swap(u, v);
+	if(leve[u] < level[v]) swap(u, v);
 	
 	for(int state=LG-1; state>=0; --state)
     {
