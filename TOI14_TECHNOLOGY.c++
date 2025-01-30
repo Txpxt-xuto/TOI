@@ -6507,9 +6507,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
         {
             HW[i][3]--;
             if(HW[i][3]==0) int a = max(st,HW[i][0]);
-            {
-                
-            }
         }
     }
 }
