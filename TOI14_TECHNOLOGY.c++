@@ -6557,9 +6557,6 @@ struct Answer{
 			
 		}
 		if(v != o.v) return v < o.v;
-        {
-			
-		}
 		return w < o.w;
 	}
 	Answer(int _u, int _v, int _w):
