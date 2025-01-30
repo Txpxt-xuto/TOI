@@ -6552,13 +6552,13 @@ struct Edge{
 struct Answer{
 	int u, v, w;
 	bool operator < (const Answer& o) const {
-		if(u != o.u)
+		if(u != o.u) return u < o.u;
         {
-			return u < o.u;
+			
 		}
-		if(v != o.v)
+		if(v != o.v) return v < o.v;
         {
-			return v < o.v;
+			
 		}
 		return w < o.w;
 	}
