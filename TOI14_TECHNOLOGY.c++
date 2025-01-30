@@ -6514,7 +6514,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     }
 }
 
-
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
