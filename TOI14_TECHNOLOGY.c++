@@ -6543,7 +6543,8 @@ template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_ta
 using ll = long long;
 struct Edge{
 	int u, v, w;
-	bool operator < (const Edge& o) const {
+	bool operator < (const Edge& o) const 
+    {
 		return w < o.w;
 	}
 	Edge(int _u, int _v, int _w):
