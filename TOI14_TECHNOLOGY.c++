@@ -6514,13 +6514,7 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     }
 }
 
-/*
- * AUTHOR	: Hydrolyzed~
- * SCHOOL	: RYW
- * TASK		: o60_mar_c2_onecycle
- * ALGO		: Lowest Common Ancestor
- * DATE		: 12 Jan 2023
- * */
+
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
