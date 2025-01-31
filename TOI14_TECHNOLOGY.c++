@@ -6729,7 +6729,7 @@ int main()
     {
 		cin >> q[i].first.first;
 		if(q[i].first.first==1) cin >> q[i].first.second;
-		cin>>q[i].second.first >>q[i].second.second;
+		cin >> q[i].second.first >> q[i].second.second;
 	}
 	for(int i=1;i<N;i++){
 		if(!cnt[i]) continue;
