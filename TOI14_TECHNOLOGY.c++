@@ -6662,7 +6662,8 @@ int main() {
     ios_base::sync_with_stdio(0); cout.tie(0); cin.tie(0);
     int n,m,r,c; cin >> n >> m >> r >> c;
     for (int i = 0;i <= r;i++) {
-        for (int j = 0;j <= c;j++) {
+        for (int j = 0;j <= c;j++)
+        {
             qs[i][j] = 0;
         }
     }
@@ -6701,4 +6702,56 @@ int main() {
     }
     cout << left;
     return 0;
+}
+
+#include<bits/stdc++.h>
+using namespace std;
+const int N=1e5+10;
+int amt[N],cnt[N],ans[N],pa[N],block[N];
+pair<int,int> e[N];
+pair<pair<int,int>,pair<int,int> > q[N];
+
+int root(int x){
+	if(pa[x]==x) return x;
+	else return pa[x]=root(pa[x]);
+}
+int main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int n,m,k,que,inp;
+	cin>>n >>m >>k >>que;
+	for(int i=0;i<k;i++) cin>>inp,amt[inp]++;
+	for(int i=1;i<N;i++) if(amt[i]) cnt[amt[i]]++;
+	for(int i=1;i<=m;i++){
+		int a,b;
+		cin>>a >>b;
+		e[i]=make_pair(a,b);
+	}
+	for(int i=0;i<que;i++){
+		cin>>q[i].first.first;
+		if(q[i].first.first==1) cin>>q[i].first.second;
+		cin>>q[i].second.first >>q[i].second.second;
+	}
+	for(int i=1;i<N;i++){
+		if(!cnt[i]) continue;
+		for(int j=1;j<=n;j++) pa[j]=j;
+		for(int j=0;j<que;j++){
+			if(q[j].first.first==2) continue;
+			if(i>=q[j].second.first && i<=q[j].second.second) block[q[j].first.second]++;
+		}
+		for(int j=1;j<=m;j++){
+			if(block[j]) continue;
+			pa[root(e[j].first)]=root(e[j].second);
+		}
+		for(int j=que-1;j>=0;j--){
+			int a=q[j].first.first,b=q[j].first.second,c=q[j].second.first,d=q[j].second.second;
+			if(a==2) if(root(c)==root(d)) ans[j]+=cnt[i];
+			if(a==1){
+				if(i>=c && i<=d) block[b]--;
+				if(!block[b]) pa[root(e[b].first)]=root(e[b].second);
+			}
+		}
+	}
+	for(int i=0;i<que;i++) if(q[i].first.first==2) cout<<ans[i] <<"\n";
+	
 }
