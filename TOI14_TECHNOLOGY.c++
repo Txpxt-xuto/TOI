@@ -6745,7 +6745,8 @@ int main()
 			if(block[j]) continue;
 			pa[root(e[j].first)]=root(e[j].second);
 		}
-		for(int j=que-1;j>=0;j--){
+		for(int j=que-1;j>=0;j--)
+        {
 			int a=q[j].first.first,b=q[j].first.second,c=q[j].second.first,d=q[j].second.second;
 			if(a==2) if(root(c)==root(d)) ans[j]+=cnt[i];
 			if(a==1){
