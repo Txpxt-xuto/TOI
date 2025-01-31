@@ -6716,7 +6716,7 @@ int main(){
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	int n,m,k,que,inp;
-	cin>>n >> m >> k >>que;
+	cin>>n >> m >> k >> que;
 	for(int i=0;i<k;i++) cin>>inp,amt[inp]++;
 	for(int i=1;i<N;i++) if(amt[i]) cnt[amt[i]]++;
 	for(int i=1;i<=m;i++){
