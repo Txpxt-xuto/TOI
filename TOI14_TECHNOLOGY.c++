@@ -6757,5 +6757,4 @@ int main()
 		}
 	}
 	for(int i=0;i<que;i++) if(q[i].first.first==2) cout << ans[i] <<"\n";
-	
 }
