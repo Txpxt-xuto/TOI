@@ -6731,10 +6731,12 @@ int main()
 		if(q[i].first.first==1) cin >> q[i].first.second;
 		cin >> q[i].second.first >> q[i].second.second;
 	}
-	for(int i=1;i<N;i++){
+	for(int i=1;i<N;i++)
+    {
 		if(!cnt[i]) continue;
 		for(int j=1;j<=n;j++) pa[j]=j;
-		for(int j=0;j<que;j++){
+		for(int j=0;j<que;j++)
+        {
 			if(q[j].first.first==2) continue;
 			if(i>=q[j].second.first && i<=q[j].second.second) block[q[j].first.second]++;
 		}
