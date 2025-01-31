@@ -6749,7 +6749,8 @@ int main()
         {
 			int a=q[j].first.first,b=q[j].first.second,c=q[j].second.first,d=q[j].second.second;
 			if(a==2) if(root(c)==root(d)) ans[j]+=cnt[i];
-			if(a==1){
+			if(a==1)
+            {
 				if(i>=c && i<=d) block[b]--;
 				if(!block[b]) pa[root(e[b].first)]=root(e[b].second);
 			}
