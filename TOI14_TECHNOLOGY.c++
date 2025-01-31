@@ -6740,7 +6740,8 @@ int main()
 			if(q[j].first.first==2) continue;
 			if(i>=q[j].second.first && i<=q[j].second.second) block[q[j].first.second]++;
 		}
-		for(int j=1;j<=m;j++){
+		for(int j=1;j<=m;j++)
+        {
 			if(block[j]) continue;
 			pa[root(e[j].first)]=root(e[j].second);
 		}
