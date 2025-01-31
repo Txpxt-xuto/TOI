@@ -6707,7 +6707,8 @@ int amt[N],cnt[N],ans[N],pa[N],block[N];
 pair<int,int> e[N];
 pair<pair<int,int>,pair<int,int> > q[N];
 
-int root(int x){
+int root(int x)
+{
 	if(pa[x]==x) return x;
 	else return pa[x]=root(pa[x]);
 }
