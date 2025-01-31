@@ -6661,7 +6661,7 @@ int qs[M][M];
 int main() {
     ios_base::sync_with_stdio(0); cout.tie(0); cin.tie(0);
     int n,m,r,c; cin >> n >> m >> r >> c;
-    for(int i = 0;i <= r;i++) for(int j = 0;j<=c;j++) qs[i][j] = 0;
+    for(int i = 0;i <= r;i++) for(int j=0;j<=c;j++) qs[i][j] = 0;
         
         {
             
