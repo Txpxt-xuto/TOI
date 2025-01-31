@@ -6649,14 +6649,11 @@ signed main()
 
 #include <bits/stdc++.h>
 using namespace std;
-
 const int N = 1e5 + 5;
 const int M = 5e3 + 5;
-
 struct a {
     int u,v,w;
 } tree[N];
-
 int qs[M][M];
 int main() {
     ios_base::sync_with_stdio(0);
