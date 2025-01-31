@@ -6725,7 +6725,8 @@ int main()
 		cin >> a >> b;
 		e[i]=make_pair(a,b);
 	}
-	for(int i=0;i<que;i++){
+	for(int i=0;i<que;i++)
+    {
 		cin>>q[i].first.first;
 		if(q[i].first.first==1) cin>>q[i].first.second;
 		cin>>q[i].second.first >>q[i].second.second;
