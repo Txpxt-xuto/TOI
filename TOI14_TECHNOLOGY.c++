@@ -6722,7 +6722,7 @@ int main()
 	for(int i=1;i<N;i++) if(amt[i]) cnt[amt[i]]++;
 	for(int i=1;i<=m;i++){
 		int a,b;
-		cin>>a >>b;
+		cin>>a >> b;
 		e[i]=make_pair(a,b);
 	}
 	for(int i=0;i<que;i++){
