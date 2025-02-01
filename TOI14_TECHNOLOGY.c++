@@ -6800,7 +6800,6 @@ int main(){
                 dp[curr][r][1] = min(dp[pre][r][0] , dp[pre][r][1]) + 2;
             }
         }
-
         for(int r=2;r<=nr;r++)
         {
             dp[curr][r][0] = min(dp[curr][r][0] , dp[curr][r-1][0] + 1);
