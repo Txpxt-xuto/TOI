@@ -6790,9 +6790,9 @@ int main(){
     for(int c=2;c<=nc;c+=2){
         int curr = (c/2)&1 , pre=curr^1;
 
-        for(int r=1;r<=nr;r++){
+        for(int r=1;r<=nr;r++)
+        {
             dp[curr][r][0] = dp[curr][r][1] = 1e9;
-
             if(rock[c].first<=r && r<=rock[c].second) dp[curr][r][1] = dp[pre][r][0] + 2;
             else
             {
