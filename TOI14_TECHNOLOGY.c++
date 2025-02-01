@@ -6817,7 +6817,7 @@ int main(){
     if(nc&1){
         int lc = ((nc-1)/2)&1;
         for(int r=1;r<=nr;r++) ans = min({ans , dp[lc][r][0]+1 , dp[lc][r][1]+1});
-    
+
     }
     else
     {
