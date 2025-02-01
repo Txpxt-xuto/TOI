@@ -6761,9 +6761,7 @@ int main()
 }
 
 #include<bits/stdc++.h>
-
 using namespace std;
-
 const int mxR = 2e3 + 5 , mxN = 2e5 + 3;
 int nr,nc,n,s;
 int dp[2][mxR][2];
