@@ -6793,10 +6793,7 @@ int main(){
         for(int r=1;r<=nr;r++){
             dp[curr][r][0] = dp[curr][r][1] = 1e9;
 
-            if(rock[c].first<=r && r<=rock[c].second) dp[curr][r][1] = dp[pre][r][0] + 2;
-            {
-                
-            }else
+            if(rock[c].first<=r && r<=rock[c].second) dp[curr][r][1] = dp[pre][r][0] + 2;else
             {
                 dp[curr][r][0] = dp[pre][r][0] + 2;
                 dp[curr][r][1] = min(dp[pre][r][0] , dp[pre][r][1]) + 2;
