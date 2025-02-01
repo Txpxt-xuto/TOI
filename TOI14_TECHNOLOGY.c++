@@ -6825,7 +6825,6 @@ int main(){
             if(rock[nc].first<=r && r<=rock[nc].second) ans = min(ans , dp[lc][r][1]);
             else
                 ans = min({ans , dp[lc][r][0] , dp[lc][r][1]});
-
         }
     }
     printf("%d",ans);
