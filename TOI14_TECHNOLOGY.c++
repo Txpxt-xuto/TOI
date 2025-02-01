@@ -6822,8 +6822,8 @@ int main(){
     }else{
         int lc = (nc/2)&1;
         for(int r=1;r<=nr;r++){
-            if(rock[nc].first<=r && r<=rock[nc].second){
-                ans = min(ans , dp[lc][r][1]);
+            if(rock[nc].first<=r && r<=rock[nc].second){ans = min(ans , dp[lc][r][1]);
+                
             }else{
                 ans = min({ans , dp[lc][r][0] , dp[lc][r][1]});
             }
