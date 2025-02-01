@@ -6787,9 +6787,9 @@ int main(){
         dp[0][r][0] = dp[0][r][1] = abs(r-s) - 1;
     }
 
-    for(int c=2;c<=nc;c+=2){
+    for(int c=2;c<=nc;c+=2)
+    {
         int curr = (c/2)&1 , pre=curr^1;
-
         for(int r=1;r<=nr;r++)
         {
             dp[curr][r][0] = dp[curr][r][1] = 1e9;
