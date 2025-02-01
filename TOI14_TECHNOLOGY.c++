@@ -6759,3 +6759,78 @@ int main()
 	}
 	for(int i=0;i<que;i++) if(q[i].first.first==2) cout << ans[i] <<"\n";
 }
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+const int mxR = 2e3 + 5 , mxN = 2e5 + 3;
+int nr,nc,n,s;
+int dp[2][mxR][2];
+pair<int,int> rock[mxN];
+
+int main(){
+    cin.tie(nullptr)->sync_with_stdio(false);
+    scanf("%d %d %d",&nr,&nc,&n);
+
+    for(int i=0;i<n;i++){
+        int col,a,b;
+        scanf("%d %d %d",&col,&a,&b);
+        rock[col] = {a,b};
+    }
+
+    scanf("%d",&s);
+
+    memset(dp , 32 , sizeof(dp));
+    
+    for(int r=1;r<=nr;r++){
+        dp[0][r][0] = dp[0][r][1] = abs(r-s) - 1;
+    }
+
+    for(int c=2;c<=nc;c+=2){
+        int curr = (c/2)&1 , pre=curr^1;
+
+        for(int r=1;r<=nr;r++){
+            dp[curr][r][0] = dp[curr][r][1] = 1e9;
+
+            if(rock[c].first<=r && r<=rock[c].second){
+                dp[curr][r][1] = dp[pre][r][0] + 2;
+            }else{
+                dp[curr][r][0] = dp[pre][r][0] + 2;
+                dp[curr][r][1] = min(dp[pre][r][0] , dp[pre][r][1]) + 2;
+            }
+        }
+
+        for(int r=2;r<=nr;r++){
+            dp[curr][r][0] = min(dp[curr][r][0] , dp[curr][r-1][0] + 1);
+            dp[curr][r][1] = min(dp[curr][r][1] , dp[curr][r-1][1] + 1);
+        }
+
+        for(int r=nr-1;r>=1;r--){
+            dp[curr][r][0] = min(dp[curr][r][0] , dp[curr][r+1][0] + 1);
+            dp[curr][r][1] = min(dp[curr][r][1] , dp[curr][r+1][1] + 1);
+        }
+    }
+
+    int ans = INT_MAX;
+
+    if(nc&1){
+        int lc = ((nc-1)/2)&1;
+        for(int r=1;r<=nr;r++){
+            ans = min({ans , dp[lc][r][0]+1 , dp[lc][r][1]+1});
+        }
+    }else{
+        int lc = (nc/2)&1;
+        for(int r=1;r<=nr;r++){
+            if(rock[nc].first<=r && r<=rock[nc].second){
+                ans = min(ans , dp[lc][r][1]);
+            }else{
+                ans = min({ans , dp[lc][r][0] , dp[lc][r][1]});
+            }
+        }
+    }
+
+    printf("%d",ans);
+
+    return 0;
+}
