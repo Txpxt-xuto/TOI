@@ -6801,12 +6801,13 @@ int main(){
             }
         }
 
-        for(int r=2;r<=nr;r++){
+        for(int r=2;r<=nr;r++)
+        {
             dp[curr][r][0] = min(dp[curr][r][0] , dp[curr][r-1][0] + 1);
             dp[curr][r][1] = min(dp[curr][r][1] , dp[curr][r-1][1] + 1);
         }
-
-        for(int r=nr-1;r>=1;r--){
+        for(int r=nr-1;r>=1;r--)
+        {
             dp[curr][r][0] = min(dp[curr][r][0] , dp[curr][r+1][0] + 1);
             dp[curr][r][1] = min(dp[curr][r][1] , dp[curr][r+1][1] + 1);
         }
