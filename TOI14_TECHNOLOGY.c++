@@ -6778,11 +6778,8 @@ int main(){
         scanf("%d %d %d",&col,&a,&b);
         rock[col] = {a,b};
     }
-
     scanf("%d",&s);
-
     memset(dp , 32 , sizeof(dp));
-    
     for(int r=1;r<=nr;r++) dp[0][r][0] = dp[0][r][1] = abs(r-s) - 1;
     for(int c=2;c<=nc;c+=2)
     {
