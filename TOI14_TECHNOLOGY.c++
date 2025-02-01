@@ -6769,11 +6769,12 @@ int nr,nc,n,s;
 int dp[2][mxR][2];
 pair<int,int> rock[mxN];
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     scanf("%d %d %d",&nr,&nc,&n);
-
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         int col,a,b;
         scanf("%d %d %d",&col,&a,&b);
         rock[col] = {a,b};
