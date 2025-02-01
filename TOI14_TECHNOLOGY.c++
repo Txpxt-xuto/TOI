@@ -6811,10 +6811,9 @@ int main(){
             dp[curr][r][1] = min(dp[curr][r][1] , dp[curr][r+1][1] + 1);
         }
     }
-
     int ans = INT_MAX;
-
-    if(nc&1){
+    if(nc&1)
+    {
         int lc = ((nc-1)/2)&1;
         for(int r=1;r<=nr;r++) ans = min({ans , dp[lc][r][0]+1 , dp[lc][r][1]+1});
     }
