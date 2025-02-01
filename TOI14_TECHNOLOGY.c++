@@ -6819,7 +6819,9 @@ int main(){
         for(int r=1;r<=nr;r++){
             ans = min({ans , dp[lc][r][0]+1 , dp[lc][r][1]+1});
         }
-    }else{
+    }
+    else
+    {
         int lc = (nc/2)&1;
         for(int r=1;r<=nr;r++)
         {
