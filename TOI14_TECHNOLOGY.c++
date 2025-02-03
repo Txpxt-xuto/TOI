@@ -6916,7 +6916,8 @@ int main()
     a[0]=0;
     a[1]=1;
     map<int,int> m1,m2;
-    for(int i=1;i<=N;i++){
+    for(int i=1;i<=N;i++)
+    {
         int b=a[0],c=a[1];
         a[0]=0;
         a[1]=0;
