@@ -6836,11 +6836,11 @@ int main() {
     int qs[n + 1];
     qs[0] = 0;
 
-    for(int i = 1; i <= n; ++i) {
+    for(int i=1;i<=n;++i)
+    {
         cin >> qs[i];
         qs[i] += qs[i - 1];
     }
-
     long long dp[2][n + 1];
     for(int i=0; i<=1;++i) for(int j=1;j<=n;++j) dp[i][j] = 0;
     for(int i=1; i<=n;++i) dp[1][i] = qs[i] - qs[i - 1];
