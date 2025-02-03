@@ -6842,10 +6842,9 @@ int main() {
     }
 
     long long dp[2][n + 1];
-    for(int i = 0; i <= 1; ++i) for(int j = 1; j <= n; ++j) dp[i][j] = 0;
-
-    for(int i = 1; i <= n; ++i)dp[1][i] = qs[i] - qs[i - 1];
-    for(int i = 2; i <= n; ++i)
+    for(int i=0; i<=1;++i) for(int j=1;j<=n;++j) dp[i][j] = 0;
+    for(int i=1; i<=n;++i) dp[1][i] = qs[i] - qs[i - 1];
+    for(int i=2; i<=n;++i)
     {
         priority_queue<pair<long long, int>> pqInRange;
         for(int j = i - 1; j <= min(n, i * 2 - 2); ++j) pqInRange.emplace(dp[(i - 1) % 2][j], j);
