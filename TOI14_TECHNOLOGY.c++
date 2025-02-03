@@ -6854,9 +6854,8 @@ int main() {
 
     for(int i = 2; i <= n; ++i) {
         priority_queue<pair<long long, int>> pqInRange;
-        for(int j = i - 1; j <= min(n, i * 2 - 2); ++j)
-            pqInRange.emplace(dp[(i - 1) % 2][j], j);
-        }
+        for(int j = i - 1; j <= min(n, i * 2 - 2); ++j) pqInRange.emplace(dp[(i - 1) % 2][j], j);
+           
         priority_queue<pair<long long, int>> pqOutRange;
         for(int j = i * 2 - 1; j <= n; ++j) pqOutRange.emplace(dp[(i - 1) % 2][j], j);
         for(int j = i; j <= n; ++j)
