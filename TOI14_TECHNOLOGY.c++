@@ -6847,9 +6847,7 @@ int main() {
             dp[i][j] = 0;
         }
     }
-    
     for(int i = 1; i <= n; ++i)dp[1][i] = qs[i] - qs[i - 1];
-
     for(int i = 2; i <= n; ++i)
     {
         priority_queue<pair<long long, int>> pqInRange;
