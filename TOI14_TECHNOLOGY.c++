@@ -6847,10 +6847,10 @@ int main() {
     for(int i=2; i<=n;++i)
     {
         priority_queue<pair<long long, int>> pqInRange;
-        for(int j = i - 1; j <= min(n, i * 2 - 2); ++j) pqInRange.emplace(dp[(i - 1) % 2][j], j);
+        for(int j=i-1;j <= min(n,i*2-2);+-+j) pqInRange.emplace(dp[(i - 1) % 2][j], j);
         priority_queue<pair<long long, int>> pqOutRange;
-        for(int j = i * 2 - 1; j <= n; ++j) pqOutRange.emplace(dp[(i - 1) % 2][j], j);
-        for(int j = i; j <= n; ++j)
+        for(int j=i*2-1;j<=n;++j) pqOutRange.emplace(dp[(i - 1) % 2][j], j);
+        for(int j=i;j<=n;++j)
         {
             while(!pqInRange.empty())
             {
@@ -6864,8 +6864,8 @@ int main() {
                 else break;
             }
             if(!pqOutRange.empty()) dp[i % 2][j] = max(dp[i % 2][j], pqOutRange.top().first + qs[j] - qs[j - i]);
-            if(j + i - 1 <= n)pqInRange.emplace(dp[(i - 1) % 2][j + i - 1], j + i - 1);
-            if(j - i + 1 >= i - 1)pqOutRange.emplace(dp[(i - 1) % 2][j - i + 1], j - i + 1);
+            if(j+i-1 <= n)pqInRange.emplace(dp[(i - 1) % 2][j + i - 1], j + i - 1);
+            if(j-i+1 >= i-1)pqOutRange.emplace(dp[(i - 1) % 2][j - i + 1], j - i + 1);
         }
     }
     cout << dp[n % 2][n];
