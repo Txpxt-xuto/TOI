@@ -6926,7 +6926,5 @@ int main()
         m2[i]=a[0]+a[1]+1;
     }
     for(int i=0;i<sum;i++) cout << m1[n[i]] << ' ' << m2[n[i]] << '\n';
-    {
-        cout<<m1[n[i]]<<' '<<m2[n[i]]<<'\n';
-    }
+ 
 }
