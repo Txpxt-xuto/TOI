@@ -6868,3 +6868,64 @@ int main()
     cout << dp[n % 2][n];
     return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string s,ss;
+    getline(cin,s);
+    int sum=0,nn;
+    for(int i=0;i<s.length();i++){
+        if(s[i]==' '){
+            sum++;
+        }
+        else if(s[i]=='-'){
+            break;
+        }
+    }
+    int n[sum];
+    sum=0;
+    for(int i=0;i<s.length();i++){
+        //if(s[i]==' ') cout<<'a';
+        if(s[i]!=' ' && s[i]!='-'){
+            ss=ss+s[i];
+            //cout<<'a';
+        }
+        else if(s[i]==' '){
+            sum++;
+            n[sum-1]=stoi(ss);
+            ss="";
+            //cout<<'b';
+        }
+        else if(s[i]=='-'){
+            //cout<<'c';
+            break;
+        }
+    }
+    //cout<<s.length();
+    //cout<<sum;
+    int N=n[0];
+    for(int i=1;i<sum;i++){
+        //cout<<n[i]<<'\n';
+        N=max(n[i],N);
+    }
+    int a[2];
+    a[0]=0;
+    a[1]=1;
+    map<int,int> m1,m2;
+    for(int i=1;i<=N;i++){
+        int b=a[0],c=a[1];
+        a[0]=0;
+        a[1]=0;
+        a[0]+=c;
+        a[1]+=b+c+1;
+        m1[i]=a[1];
+        m2[i]=a[0]+a[1]+1;
+    }
+    for(int i=0;i<sum;i++){
+        cout<<m1[n[i]]<<' '<<m2[n[i]]<<'\n';
+    }
+}
