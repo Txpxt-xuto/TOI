@@ -6906,7 +6906,7 @@ int main()
         }
     }
     //cout<<s.length();
-    //cout<<sum
+    //cout<<su
     int N=n[0];
     for(int i=1;i<sum;i++)
     {
