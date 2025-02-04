@@ -6908,7 +6908,8 @@ int main()
     //cout<<s.length();
     //cout<<sum;
     int N=n[0];
-    for(int i=1;i<sum;i++){
+    for(int i=1;i<sum;i++)
+    {
         N=max(n[i],N);
     }
     int a[2];
