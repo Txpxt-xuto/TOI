@@ -6906,7 +6906,7 @@ int main()
         }
     }
     int N=n[0];
-    for(int i=1;i<sum;i++)N = max(n[i],N);
+    for(int i=1;i<sum;i++) N = max(n[i],N);
     {
         
     }
