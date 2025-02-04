@@ -6909,7 +6909,7 @@ int main()
     for(int i=1;i<sum;i++) N = max(n[i],N);
     {
         
-    }
+    
     int a[2];
     a[0]=0;
     a[1]=1;
