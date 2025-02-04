@@ -6905,7 +6905,7 @@ int main()
             break;
         }
     }
-    /ength();
+    /egth();
     //cout<<su
     int N=n[0];
     for(int i=1;i<sum;i++)
