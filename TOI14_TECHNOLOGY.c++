@@ -6897,9 +6897,6 @@ int main()
             ss="";
         }
         else if(s[i]=='-') break;
-        {
-            
-        }
     }
     int N=n[0];
     for(int i=1;i<sum;i++) N = max(n[i],N);
