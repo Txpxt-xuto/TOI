@@ -6880,9 +6880,9 @@ int main()
     int sum=0,nn;
     for(int i=0;i<s.length();i++)
     {
-        if(s[i]==' ')
+        if(s[i]==' ') 
         {
-            sum++;
+            
         }
         else if(s[i]=='-') break;
     }
