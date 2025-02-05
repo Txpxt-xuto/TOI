@@ -6894,7 +6894,8 @@ int main()
         {
             sum++;
             n[sum-1]=stoi(ss);
-
+            ss="";
+            //cout<<'b';
         }
         else if(s[i]=='-'){
             //cout<<'c';
