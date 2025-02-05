@@ -6889,7 +6889,7 @@ int main()
     int n[sum];
     sum=0;
     for(int i=0;i<s.length();i++){
-        //if(s[i]==' ') cout<<'       if(s[i]!=' ' && s[i]!='-'){
+        //if(s[i]==' ') cout       if(s[i]!=' ' && s[i]!='-'){
             ss=ss+s[i];
             //cout<<'a';
         }
