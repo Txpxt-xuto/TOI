@@ -6889,8 +6889,8 @@ int main()
     int n[sum];
     sum=0;
     for(int i=0;i<s.length();i++){
-        if(s[i]!=' ' && s[i]!='-'){
-            ss=ss+s[i];
+        if(s[i]!=' ' && s[i]!='-') ss=ss+s[i];
+            
         }
         else if(s[i]==' '){
             sum++;
