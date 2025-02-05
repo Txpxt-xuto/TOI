@@ -6878,7 +6878,8 @@ int main()
     string s,ss;
     getline(cin,s);
     int sum=0,nn;
-    for(int i=0;i<s.length();i++){
+    for(int i=0;i<s.length();i++)
+    {
         if(s[i]==' '){
             sum++;
         }
