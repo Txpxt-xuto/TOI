@@ -6897,7 +6897,6 @@ int main()
             ss="";
         }
         else if(s[i]=='-'){
-            //cout<<'c';
             break;
         }
     }
