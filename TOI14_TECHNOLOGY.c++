@@ -6883,6 +6883,7 @@ int main()
             sum++;
         }
         else if(s[i]=='-'){
+            
             break;
         }
     }
