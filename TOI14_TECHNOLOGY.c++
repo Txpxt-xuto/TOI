@@ -6896,7 +6896,8 @@ int main()
             n[sum-1]=stoi(ss);
             ss="";
         }
-        else if(s[i]=='-'){
+        else if(s[i]=='-')
+        {
             break;
         }
     }
