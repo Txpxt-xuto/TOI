@@ -6882,9 +6882,8 @@ int main()
         if(s[i]==' '){
             sum++;
         }
-        else if(s[i]=='-'){
+        else if(s[i]=='-') break;
             
-            break;
         }
     }
     int n[sum];
