@@ -6947,7 +6947,7 @@ int main()
         for(int x:a)if(x>mid)v.push_back(x);
         for(int i=0;i<v.size()-1;i++)
         {
-            if(v[i]==v[i+1])i++;
+            if(v[i]==v[i+1]) i++;
             else {chk=0; break;}
         }
         if(chk) r=mid;
