@@ -6931,7 +6931,8 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    int n; cin>>n;
+    int n;
+    cin>>n;
     ll a[n];
     ll l=0,r=-1e18,mid;
     for(int i=0;i<n;i++){
