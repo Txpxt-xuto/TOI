@@ -6945,7 +6945,8 @@ int main()
         vector<ll> v;
         bool chk=1;
         for(int x:a)if(x>mid)v.push_back(x);
-        for(int i=0;i<v.size()-1;i++){
+        for(int i=0;i<v.size()-1;i++)
+        {
             if(v[i]==v[i+1])i++;
             else {chk=0; break;}
         }
