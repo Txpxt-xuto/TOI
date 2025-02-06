@@ -6935,8 +6935,9 @@ int main()
     cin >> n;
     ll a[n];
     ll l=0,r=-1e18,mid;
-    for(int i=0;i<n;i++){
-        cin>>a[i];
+    for(int i=0;i<n;i++)
+    {
+        cin >> a[i];
         maxx(r,a[i]);
     }
     while(l<r){
