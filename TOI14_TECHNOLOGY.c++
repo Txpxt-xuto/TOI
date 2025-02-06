@@ -6948,7 +6948,11 @@ int main()
         for(int i=0;i<v.size()-1;i++)
         {
             if(v[i]==v[i+1]) i++;
-            else {chk=0; break;}
+            else
+            {
+                chk=0;
+                break;
+            }
         }
         if(chk) r=mid;
         else l=mid+1;
