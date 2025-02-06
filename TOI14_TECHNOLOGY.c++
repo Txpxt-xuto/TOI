@@ -6914,3 +6914,39 @@ int main()
     }
     for(int i=0;i<sum;i++) cout << m1[n[i]] << ' ' << m2[n[i]] << '\n';
 }
+
+#include<bits/stdc++.h>
+#define en '\n'
+#define sp ' '
+#define ll long long
+#define pii pair<int, int>
+#define piii pair<int, pair<int, int>>
+#define st first
+#define nd second
+#define maxx(a,b) a=max(a,b)
+#define minn(a,b) a=min(a,b)
+using namespace std;
+
+int main() {ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    int n; cin>>n;
+    ll a[n];
+    ll l=0,r=-1e18,mid;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+        maxx(r,a[i]);
+    }
+    while(l<r){
+        mid=(l+r)/2;
+        vector<ll> v;
+        bool chk=1;
+        for(int x:a)if(x>mid)v.push_back(x);
+        for(int i=0;i<v.size()-1;i++){
+            if(v[i]==v[i+1])i++;
+            else {chk=0; break;}
+        }
+        if(chk) r=mid;
+        else l=mid+1;
+    }
+    cout<<l;
+    return 0;
+}
