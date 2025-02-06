@@ -6957,6 +6957,6 @@ int main()
         if(chk) r=mid;
         else l=mid+1;
     }
-    cout<< l;
+    cout << l;
     return 0;
 }
