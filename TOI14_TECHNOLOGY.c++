@@ -6983,12 +6983,12 @@ int main(){
     }
 
     lli sum_pos = 0;
-    for(lli i=1;i<=n;i++){
+    for(lli i=1;i<=n;i++)
+    {
         scanf("%lld", &pos[i]);
         sum_pos += pos[i];
         ar[i] = {pos[i], height[i]};
     }
-
     sort(ar + 1, ar + n + 1);
     for(lli i=1;i<=n;i++) qs_height[i] = qs_height[i-1] + ar[i].second;
     sort(pos + 1, pos + n + 1);
