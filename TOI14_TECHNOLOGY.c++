@@ -7000,7 +7000,7 @@ int main(){
         lli h = pos[i];
         if(h > min_height) continue;
         while(idx + 1 <= n and ar[idx + 1].first < h) idx ++;
-        
+    
         lli sum = sum_pos - h * n + qs_height[idx];
         if(sum < ans_sum)
         {
