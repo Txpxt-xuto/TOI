@@ -6981,7 +6981,6 @@ int main(){
         scanf("%lld", &height[i]);
         min_height = min(min_height, height[i]);
     }
-
     lli sum_pos = 0;
     for(lli i=1;i<=n;i++)
     {
