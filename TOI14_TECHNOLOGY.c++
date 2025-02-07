@@ -6990,8 +6990,8 @@ int main(){
     }
 
     sort(ar + 1, ar + n + 1);
-    for(lli i=1;i<=n;i++)
-        qs_height[i] = qs_height[i-1] + ar[i].second;
+    for(lli i=1;i<=n;i++) qs_height[i] = qs_height[i-1] + ar[i].second;
+        
     sort(pos + 1, pos + n + 1);
     lli ans_height = INF, ans_sum = INF, idx = 0;
     for(lli i=1;i<=n;i++)
