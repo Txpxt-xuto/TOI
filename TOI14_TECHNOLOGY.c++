@@ -6996,7 +6996,8 @@ int main(){
     sort(pos + 1, pos + n + 1);
 
     lli ans_height = INF, ans_sum = INF, idx = 0;
-    for(lli i=1;i<=n;i++){
+    for(lli i=1;i<=n;i++)
+    {
         lli h = pos[i];
         if(h > min_height) continue;
         while(idx + 1 <= n and ar[idx + 1].first < h) idx ++;
