@@ -6970,7 +6970,6 @@ const lli INF = 1e18;
 using pl = pair <lli, lli>;
 lli height[N], pos[N], qs_height[N];
 pl ar[N];
-
 int main()
 {
     lli n;
