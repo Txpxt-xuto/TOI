@@ -6994,7 +6994,6 @@ int main(){
         qs_height[i] = qs_height[i-1] + ar[i].second;
 
     sort(pos + 1, pos + n + 1);
-
     lli ans_height = INF, ans_sum = INF, idx = 0;
     for(lli i=1;i<=n;i++)
     {
