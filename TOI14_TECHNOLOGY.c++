@@ -6971,8 +6971,8 @@ using pl = pair <lli, lli>;
 lli height[N], pos[N], qs_height[N];
 pl ar[N];
 
-int main(){
-
+int main()
+{
     lli n;
     scanf("%lld", &n);
     lli min_height = INF;
