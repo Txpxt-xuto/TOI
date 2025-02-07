@@ -7007,7 +7007,6 @@ int main(){
             ans_sum = sum;
         }
     }
-
     printf("%lld %lld", ans_height, ans_sum);
     return 0;
 }
