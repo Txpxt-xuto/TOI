@@ -6960,3 +6960,54 @@ int main()
     cout << l;
     return 0;
 }
+
+#include <bits/stdc++.h>
+
+using namespace std;
+using lli = long long;
+const lli N = 5e5 + 10;
+const lli INF = 1e18;
+using pl = pair <lli, lli>;
+lli height[N], pos[N], qs_height[N];
+pl ar[N];
+
+int main(){
+
+    lli n;
+    scanf("%lld", &n);
+
+    lli min_height = INF;
+    for(lli i=1;i<=n;i++){
+        scanf("%lld", &height[i]);
+        min_height = min(min_height, height[i]);
+    }
+
+    lli sum_pos = 0;
+    for(lli i=1;i<=n;i++){
+        scanf("%lld", &pos[i]);
+        sum_pos += pos[i];
+        ar[i] = {pos[i], height[i]};
+    }
+
+    sort(ar + 1, ar + n + 1);
+    for(lli i=1;i<=n;i++)
+        qs_height[i] = qs_height[i-1] + ar[i].second;
+
+    sort(pos + 1, pos + n + 1);
+
+    lli ans_height = INF, ans_sum = INF, idx = 0;
+    for(lli i=1;i<=n;i++){
+        lli h = pos[i];
+        if(h > min_height) continue;
+        while(idx + 1 <= n and ar[idx + 1].first < h)
+            idx ++;
+        lli sum = sum_pos - h * n + qs_height[idx];
+        if(sum < ans_sum){
+            ans_height = h;
+            ans_sum = sum;
+        }
+    }
+
+    printf("%lld %lld", ans_height, ans_sum);
+    return 0;
+}
