@@ -6975,7 +6975,6 @@ int main(){
 
     lli n;
     scanf("%lld", &n);
-
     lli min_height = INF;
     for(lli i=1;i<=n;i++)
     {
