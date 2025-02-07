@@ -6977,7 +6977,8 @@ int main(){
     scanf("%lld", &n);
 
     lli min_height = INF;
-    for(lli i=1;i<=n;i++){
+    for(lli i=1;i<=n;i++)
+    {
         scanf("%lld", &height[i]);
         min_height = min(min_height, height[i]);
     }
