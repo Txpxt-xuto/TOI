@@ -7024,7 +7024,7 @@ int main() {
             if (v[ini].second == 1) {
                 if (j == n - 1) continue;
                 {
-                    
+                
                 }
                 ini++;
             }
