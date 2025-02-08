@@ -7033,7 +7033,7 @@ int main() {
                 ini++;
             }
             if (ini > m) ini = ini % m;
-            
+    
             
     
         }
