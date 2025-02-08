@@ -7030,7 +7030,8 @@ int main() {
             else {
                 j--; ini++;
             }
-            if (ini > m) {
+            if (ini > m)
+            {
                 ini = ini % m;
             }
         }
