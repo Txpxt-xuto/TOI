@@ -7033,7 +7033,7 @@ int main() {
                 ini++;
             }
             if (ini > m) ini = ini % m;
-        
+    
         }
         cout << v[ini].first << " ";
         v[ini].second = 0;
