@@ -7034,7 +7034,7 @@ int main() {
             }
             if (ini > m) ini = ini % m;
             
-                
+            
             
         }
         cout << v[ini].first << " ";
