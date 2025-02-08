@@ -7032,9 +7032,9 @@ int main() {
                 j--;
                 ini++;
             }
-            if (ini > m)
+            if (ini > m) ini = ini % m;
             {
-                ini = ini % m;
+                
             }
         }
         cout << v[ini].first << " ";
