@@ -7023,9 +7023,6 @@ int main() {
         for (int j = 0; j <= n - 1; j++) {
             if (v[ini].second == 1) {
                 if (j == n - 1) continue;
-                
-                
-                
                 ini++;
             }
             else
