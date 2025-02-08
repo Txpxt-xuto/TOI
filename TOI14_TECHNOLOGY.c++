@@ -7029,7 +7029,8 @@ int main() {
             }
             else
             {
-                j--; ini++;
+                j--;
+                ini++;
             }
             if (ini > m)
             {
