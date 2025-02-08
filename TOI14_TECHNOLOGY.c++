@@ -7005,3 +7005,36 @@ int main()
     printf("%lld %lld", ans_height, ans_sum);
     return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0);
+    int m, n; cin >> m >> n;
+    vector<pair<int, int>> v(m+1);
+    for (int i = 1; i <= m; i++) {
+        v[i].first = i;
+        v[i].second = 1;
+    }
+    int ini = 1;
+    for (int i = 0; i <= m - 1; i++) {
+        for (int j = 0; j <= n - 1; j++) {
+            if (v[ini].second == 1) {
+                if (j == n - 1) {
+                    continue;
+                }
+                ini++;
+            }
+            else {
+                j--; ini++;
+            }
+            if (ini > m) {
+                ini = ini % m;
+            }
+        }
+        cout << v[ini].first << " ";
+        v[ini].second = 0;
+    }
+}
