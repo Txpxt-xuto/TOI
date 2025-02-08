@@ -7011,10 +7011,13 @@ using namespace std;
 
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(0); cout.tie(0);
-    int m, n; cin >> m >> n;
+    cin.tie(0);
+    cout.tie(0);
+    int m, n;
+    cin >> m >> n;
     vector<pair<int, int>> v(m+1);
-    for (int i = 1; i <= m; i++) {
+    for(int i = 1; i <= m; i++)
+    {
         v[i].first = i;
         v[i].second = 1;
     }
