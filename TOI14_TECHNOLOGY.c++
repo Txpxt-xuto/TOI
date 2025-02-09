@@ -7067,7 +7067,7 @@ ll dfs(int i, int j) {
     {
         if(s[k] == '[') brac++;
         else if(s[k] == ']') brac--;
-        else if (s[k] == '3' && brac == 0) return (dfs(i, k-1) + dfs(k+1, j))*116LL/100LL;
+        else if(s[k] == '3' && brac == 0) return (dfs(i, k-1) + dfs(k+1, j))*116LL/100LL;
     }
     return dfs(i+1, j-1);
 }
