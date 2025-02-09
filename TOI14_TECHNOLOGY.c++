@@ -7070,7 +7070,7 @@ ll dfs(int i, int j) {
   return dfs(i+1, j-1);
 }
 
-int main() {
+int main(){
   ios_base::sync_with_stdio(0);
   cin.tie(0);
   cin >> s;
