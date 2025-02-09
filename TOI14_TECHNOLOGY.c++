@@ -7115,14 +7115,12 @@ void dfs(int i, int j, vector<int> &vec)
         vec.pop_back();
     }
 
-   //ไม่เอียง ตรงไป
     if(i+1 < t && mp[i+1][j] == 0  )
     {
         vec.push_back(3);
         dfs(i+1, j, vec);
         vec.pop_back();
     }
-
 }
 
 int main()
