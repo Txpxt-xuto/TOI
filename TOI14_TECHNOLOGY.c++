@@ -7079,3 +7079,62 @@ int main()
     cin >> s;
     cout << dfs(0, s.size()-1);
 }
+
+//TOI_7 ขับรถหลบสิ่งกีดขวาง
+#include<bits/stdc++.h>
+using namespace std;
+using pii= pair<int,int>;
+vector<vector<int>> mp;
+vector<vector<bool>> visited;
+int m, n, t;
+
+void dfs(int i, int j, vector<int> &vec)
+{
+    if(i >= 0 && i < t && j >= 0 && j < m && visited[i][j]) return;
+    if(i >= 0 && i < t && j >= 0 && j < m)
+        visited[i][j] = true;
+    if(i + 1 == t )
+    {
+        for(auto e : vec)  cout << e << "\n";
+        return;
+    }
+
+    // เอียงซ้าย
+    if(i+1 < t && j-1 >= 0 && mp[i+1][j-1] == 0  )
+    {
+        vec.push_back(1);
+        dfs(i+1, j-1 , vec);
+        vec.pop_back();
+    }
+
+    //เอียงขวา
+    if(i+1 < t && j + 1 < m && mp[i+1][j+1] == 0  )
+    {
+        vec.push_back(2);
+        dfs(i+1, j+1, vec);
+        vec.pop_back();
+    }
+
+   //ไม่เอียง ตรงไป
+    if(i+1 < t && mp[i+1][j] == 0  )
+    {
+        vec.push_back(3);
+        dfs(i+1, j, vec);
+        vec.pop_back();
+    }
+
+}
+
+int main() {
+    ios::sync_with_stdio(false); cin.tie(0);
+    cin >> m >> n >> t;
+    mp.resize(t, vector<int> (m));
+    visited.resize(t,vector<bool>(m, false));
+    
+    
+    for(int i = 0 ; i < t ; ++i) for(int j = 0 ; j < m ; ++j) cin >> mp[i][j];
+    vector<int> vec;
+    dfs(-1,n-1, vec);
+
+    return 0;
+}
