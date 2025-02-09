@@ -7130,7 +7130,7 @@ int main() {
     cin >> m >> n >> t;
     mp.resize(t, vector<int> (m));
     visited.resize(t,vector<bool>(m, false));
-    for(int i = 0 ; i < t ; ++i) for(int j = 0 ; j < m ; ++j) cin >> mp[i][j];
+    for(int i=0;i<t; ++i) for(int j = 0 ; j < m ; ++j) cin >> mp[i][j];
     vector<int> vec;
     dfs(-1,n-1, vec);
     return 0;
