@@ -7052,10 +7052,11 @@ string s;
 ll dfs(int i, int j) {
     if (i==j) return 20;
     int brac = 0;
-    for (int k = j; k >= i; k--) {
-    if (s[k] == '[') brac++;
-    else if (s[k] == ']') brac--;
-    else if (s[k] == '1' && brac == 0) return (dfs(i, k-1) + dfs(k+1, j))*104LL/100LL;
+    for (int k = j; k >= i; k--)
+    {
+    if(s[k] == '[') brac++;
+    else if(s[k] == ']') brac--;
+    else if(s[k] == '1' && brac == 0) return (dfs(i, k-1) + dfs(k+1, j))*104LL/100LL;
     }
     for(int k=j;k>=i;k--)
     {
