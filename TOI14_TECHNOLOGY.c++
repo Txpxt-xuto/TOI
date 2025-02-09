@@ -7051,7 +7051,7 @@ ll dfs(int i, int j)
 {
     if(i==j) return 20;
     int brac = 0;
-    for int k=j;k>=i;k--)
+    for (int k=j;k>=i;k--)
     {
         if(s[k] == '[') brac++;
         else if(s[k] == ']') brac--;
