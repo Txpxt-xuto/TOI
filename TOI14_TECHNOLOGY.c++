@@ -7095,7 +7095,7 @@ void dfs(int i, int j, vector<int> &vec)
         visited[i][j] = true;
     if(i + 1 == t )
     {
-        for(auto e : vec)  cout << e << "\n";
+        for(auto e : vec) cout << e << "\n";
         return;
     }
     if(i+1 < t && j-1 >= 0 && mp[i+1][j-1] == 0  )
