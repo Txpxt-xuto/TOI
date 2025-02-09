@@ -7080,7 +7080,6 @@ int main()
     cout << dfs(0, s.size()-1);
 }
 
-//TOI_7 ขับรถหลบสิ่งกีดขวาง
 #include<bits/stdc++.h>
 using namespace std;
 using pii= pair<int,int>;
