@@ -7050,7 +7050,7 @@ using namespace std;
 string s;
 
 ll dfs(int i, int j) {
-    if (i==j) return 20;
+    if(i==j) return 20;
     int brac = 0;
     for (int k = j; k >= i; k--)
     {
