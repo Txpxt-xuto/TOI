@@ -7098,7 +7098,6 @@ void dfs(int i, int j, vector<int> &vec)
         for(auto e : vec)  cout << e << "\n";
         return;
     }
-
     if(i+1 < t && j-1 >= 0 && mp[i+1][j-1] == 0  )
     {
         vec.push_back(1);
