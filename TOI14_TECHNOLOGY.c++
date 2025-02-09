@@ -7099,7 +7099,6 @@ void dfs(int i, int j, vector<int> &vec)
         return;
     }
 
-
     if(i+1 < t && j-1 >= 0 && mp[i+1][j-1] == 0  )
     {
         vec.push_back(1);
