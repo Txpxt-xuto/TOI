@@ -7046,9 +7046,7 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-
 string s;
-
 ll dfs(int i, int j)
 {
     if(i==j) return 20;
