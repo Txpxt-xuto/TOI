@@ -7092,7 +7092,6 @@ void dfs(int i, int j, vector<int> &vec)
 {
     if(i >= 0 && i < t && j >= 0 && j < m && visited[i][j]) return;
     if(i >= 0 && i < t && j >= 0 && j < m) visited[i][j] = true;
-    
     if(i + 1 == t )
     {
         for(auto e : vec) cout << e << "\n";
