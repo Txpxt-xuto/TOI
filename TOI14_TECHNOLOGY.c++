@@ -7063,7 +7063,7 @@ ll dfs(int i, int j) {
     else if(s[k] == ']') brac--;
     else if(s[k] == '2' && brac == 0) return (dfs(i, k-1) + dfs(k+1, j))*108LL/100LL;
     }
-    for(int k = j; k >= i; k--)
+    for(int k = j;k>=i;k--)
     {
         if(s[k] == '[') brac++;
         else if(s[k] == ']') brac--;
