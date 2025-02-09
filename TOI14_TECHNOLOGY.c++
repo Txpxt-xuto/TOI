@@ -7125,8 +7125,10 @@ void dfs(int i, int j, vector<int> &vec)
 
 }
 
-int main() {
-    ios::sync_with_stdio(false); cin.tie(0);
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     cin >> m >> n >> t;
     mp.resize(t, vector<int> (m));
     visited.resize(t,vector<bool>(m, false));
