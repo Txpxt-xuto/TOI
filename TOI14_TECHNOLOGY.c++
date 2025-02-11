@@ -7171,7 +7171,6 @@ int main(){
         else ans[i]=0;
     }
     while(p--)
-
     {
         int x;cin>>x;
         cout<<ans[x]<<'\n';
