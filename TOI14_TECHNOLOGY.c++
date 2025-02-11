@@ -7174,6 +7174,6 @@ int main(){
     {
         int x;
         cin >> x;
-        cout<< ans[x] << '\n';
+        cout << ans[x] << '\n';
     }
 }
