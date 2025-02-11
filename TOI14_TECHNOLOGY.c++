@@ -7152,7 +7152,8 @@ int main(){
     vector<vector<int>> adj(n+1);
     vector<int> ans(2e5+2),flag(2e5+2);
     while(m--){
-        int u,v;cin>>u>>v;
+        int u,v;
+        cin>>u>>v;
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
