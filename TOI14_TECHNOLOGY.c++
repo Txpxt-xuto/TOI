@@ -7154,7 +7154,7 @@ int main(){
     while(m--)
     {
         int u,v;
-        cin>>u >> v;
+        cin>> u >> v;
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
