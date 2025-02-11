@@ -7166,7 +7166,7 @@ int main(){
     int now=1;
     for(int i=0;i<=2e5+1;i++)
     {
-        while(now<=n&&db[now].first<=i) flag[db[now].second]=1,now++    ;
+        while(now<=n&&db[now].first<=i) flag[db[now].second]=1,now++   ;
         while(pq.size()&&flag[pq.top().second]) pq.pop();
         if(pq.size()) ans[i]=pq.top().first;
         else ans[i]=0;
