@@ -7174,5 +7174,4 @@ int main(){
         int x;cin>>x;
         cout<<ans[x]<<'\n';
     }
-
 }
