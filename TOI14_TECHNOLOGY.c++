@@ -7141,7 +7141,8 @@ void dd(vector<pii> &dis,vector<vector<int>> adj,int s){
         pq.pop();
         for(int x:adj[u])
         {
-            if(dis[x].first>dis[u].first+1){
+            if(dis[x].first>dis[u].first+1)
+            {
                 dis[x].first=dis[u].first+1;
                 pq.push(x);
             }
