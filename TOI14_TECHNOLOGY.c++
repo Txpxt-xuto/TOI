@@ -7132,7 +7132,8 @@ int main()
 using namespace std;
 using pii=pair<int,int>;
 int n;
-void dd(vector<pii> &dis,vector<vector<int>> adj,int s){
+void dd(vector<pii> &dis,vector<vector<int>> adj,int s)
+{
     queue<int> pq;
     pq.push(s);
     for(int i=1;i<=n;i++) dis[i].second=i;
