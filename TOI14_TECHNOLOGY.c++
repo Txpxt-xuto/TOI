@@ -7170,7 +7170,9 @@ int main(){
         if(pq.size()) ans[i]=pq.top().first;
         else ans[i]=0;
     }
-    while(p--){
+    while(p--)
+    
+    {
         int x;cin>>x;
         cout<<ans[x]<<'\n';
     }
