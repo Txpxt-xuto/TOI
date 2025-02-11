@@ -7164,7 +7164,8 @@ int main(){
     for(int i=1;i<=n;i++) pq.push({da[i].first,i});
     sort(db.begin()+1,db.end());
     int now=1;
-    for(int i=0;i<=2e5+1;i++){
+    for(int i=0;i<=2e5+1;i++)
+    {
         while(now<=n&&db[now].first<=i) flag[db[now].second]=1,now++    ;
         while(pq.size()&&flag[pq.top().second]) pq.pop();
         if(pq.size()) ans[i]=pq.top().first;
