@@ -7147,7 +7147,8 @@ void dd(vector<pii> &dis,vector<vector<int>> adj,int s){
         }
     }
 }
-int main(){
+int main()
+{
     int m,p,a,b;
     cin>>n>>m>>p>>a>>b;
     vector<vector<int>> adj(n+1);
