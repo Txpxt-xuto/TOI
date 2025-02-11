@@ -7172,7 +7172,8 @@ int main(){
     }
     while(p--)
     {
-        int x;cin>>x;
+        int x;
+        cin>>x;
         cout<<ans[x]<<'\n';
     }
 }
