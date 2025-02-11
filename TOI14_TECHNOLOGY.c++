@@ -7127,3 +7127,52 @@ int main()
     dfs(-1,n-1, vec);
     return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+using pii=pair<int,int>;
+int n;
+void dd(vector<pii> &dis,vector<vector<int>> adj,int s){
+    queue<int> pq;
+    pq.push(s);
+    for(int i=1;i<=n;i++) dis[i].second=i;
+    while(pq.size()){
+        int u=pq.front();pq.pop();
+        //cout<<u<<' '<<dis[u].first<<'\n';
+        for(int x:adj[u]){
+            if(dis[x].first>dis[u].first+1){
+                dis[x].first=dis[u].first+1;
+                pq.push(x);
+            }
+        }
+    }
+}
+int main(){
+    int m,p,a,b;cin>>n>>m>>p>>a>>b;
+    vector<vector<int>> adj(n+1);
+    vector<int> ans(2e5+2),flag(2e5+2);
+    while(m--){
+        int u,v;cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    vector<pii> da(n+1,{1e9,0}),db(n+1,{1e9,0});
+    da[a].first=db[b].first=0;
+    priority_queue<pair<int,int>> pq;
+    dd(da,adj,a);
+    dd(db,adj,b);
+    for(int i=1;i<=n;i++) pq.push({da[i].first,i});
+    sort(db.begin()+1,db.end());
+    int now=1;
+    for(int i=0;i<=2e5+1;i++){
+        while(now<=n&&db[now].first<=i) flag[db[now].second]=1,now++    ;
+        while(pq.size()&&flag[pq.top().second]) pq.pop();
+        if(pq.size()) ans[i]=pq.top().first;
+        else ans[i]=0;
+    }
+    while(p--){
+        int x;cin>>x;
+        cout<<ans[x]<<'\n';
+    }
+    
+}
