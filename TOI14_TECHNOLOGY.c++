@@ -7215,7 +7215,8 @@ int main()
         minn(mn,a[i]);
         maxx(mx,a[i]);
     }
-    while(k--){
+    while(k--)
+    {
         vector<int> st,end;
         for(int i=0;i<m;i++)
         {
