@@ -7199,7 +7199,6 @@ int main()
 #define maxx(a,b) a=max(a,b)
 #define minn(a,b) a=min(a,b)
 using namespace std;
-
 int main()
 {
     ios::sync_with_stdio(0);
