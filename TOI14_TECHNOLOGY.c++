@@ -7187,3 +7187,40 @@ int main()
         cout << ans[x] << '\n';
     }
 }
+
+#include<bits/stdc++.h>
+#define en '\n'
+#define sp ' '
+#define ll long long
+#define pii pair<int, int>
+#define piii pair<int, pair<int, int>>
+#define st first
+#define nd second
+#define maxx(a,b) a=max(a,b)
+#define minn(a,b) a=min(a,b)
+using namespace std;
+
+int main(){ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    int n,m,k,l; cin>>n>>m>>k>>l;
+    int a[n];
+    int mx=-1e9,mn=1e9;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+        minn(mn,a[i]);
+        maxx(mx,a[i]);
+    }
+    while(k--){
+        vector<int> st,end;
+        for(int i=0;i<m;i++){
+            int x; cin>>x;
+            if(x+l<mn||x-l>mx) continue;
+            else if(st.empty()||x-l>end.back()){st.push_back(x-l); end.push_back(x+l);}
+            else if(x-l<=end.back()) end[end.size()-1]=x+l;
+        }
+        int cnt=0;
+        for(int i=0;i<st.size();i++)
+            cnt+=upper_bound(a,a+n,end[i])-lower_bound(a,a+n,st[i]);
+        cout<<cnt<<en;
+    }
+    return 0;
+}
