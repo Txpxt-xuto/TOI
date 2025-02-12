@@ -7224,8 +7224,8 @@ int main()
             else if(x-l<=end.back()) end[end.size()-1]=x+l;
         }
         int cnt=0;
-        for(int i=0;i<st.size();i++)
-            cnt+=upper_bound(a,a+n,end[i])-lower_bound(a,a+n,st[i]);
+        for(int i=0;i<st.size();i++)cnt+=upper_bound(a,a+n,end[i])-lower_bound(a,a+n,st[i]);
+            
         cout<<cnt<<en;
     }
     return 0;
