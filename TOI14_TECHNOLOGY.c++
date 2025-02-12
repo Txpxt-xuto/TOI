@@ -7219,7 +7219,7 @@ int main()
         vector<int> st,end;
         for(int i=0;i<m;i++)
         {
-            int x; cin>>x;
+            int x;cin>>x;
             if(x+l<mn||x-l>mx) continue;
             else if(st.empty()||x-l>end.back()){st.push_back(x-l); end.push_back(x+l);}
             else if(x-l<=end.back()) end[end.size()-1]=x+l;
