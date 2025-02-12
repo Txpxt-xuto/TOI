@@ -7219,7 +7219,7 @@ int main()
         vector<int> st,end;
         for(int i=0;i<m;i++)
         {
-            int x;
+            int x;                                           
             cin >> x;
             if(x+l<mn||x-l>mx) continue;
             else if(st.empty()||x-l>end.back())
@@ -7234,4 +7234,3 @@ int main()
         cout << cnt << en;
     }
     return 0;
-}
