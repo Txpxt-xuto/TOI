@@ -7206,7 +7206,7 @@ int main(){ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
     int mx=-1e9,mn=1e9;
     for(int i=0;i<n;i++)
     {
-        cin> >a[i];
+        cin>>a[i];
         minn(mn,a[i]);
         maxx(mx,a[i]);
     }
