@@ -7217,7 +7217,8 @@ int main()
     }
     while(k--){
         vector<int> st,end;
-        for(int i=0;i<m;i++){
+        for(int i=0;i<m;i++)
+        {
             int x; cin>>x;
             if(x+l<mn||x-l>mx) continue;
             else if(st.empty()||x-l>end.back()){st.push_back(x-l); end.push_back(x+l);}
