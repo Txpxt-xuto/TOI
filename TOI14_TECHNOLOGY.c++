@@ -7342,7 +7342,8 @@ int main(){
     for(int i=1;i<=n;i++)cin>>a[i];
     for(int i=1,u,v;i<=m;i++)cin>>u>>v,g[u].pb(v),g[v].pb(u);
     ap();build(n);getsz();hld();
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         ms[id[i]].insert(a[i]);
         if(isap[id[i]]){
             for(auto v:bct[id[i]])ms[v].insert(a[i]);
