@@ -7395,9 +7395,9 @@ int main() {
 
     sort(arr + 1, arr + n + 1);
 
-    for (int i = 1; i <= A - 1; i++) st1.emplace(arr[i]);
-    for (int i = A; i <= B; i++) st2.emplace(arr[i]);
-    for (int i = B + 1; i <= n; i++) vec.emplace_back(arr[i]);
+    for(int i = 1; i <= A - 1; i++) st1.emplace(arr[i]);
+    for(int i = A; i <= B; i++) st2.emplace(arr[i]);
+    for(int i = B + 1; i <= n; i++) vec.emplace_back(arr[i]);
     while(l--)
     {
         if(st2.size() > 1)
