@@ -7410,7 +7410,7 @@ int main() {
 
             st2.insert(abs(f - last));
             st2.insert((f + last) / 2);
-        } else if(!st2.empty()) {
+        } else if(!st2.empty())
             st2.erase(st2.begin());
         }
         if(!st1.empty() && !st2.empty())
