@@ -7399,7 +7399,8 @@ int main() {
     for (int i = A; i <= B; i++) st2.emplace(arr[i]);
     for (int i = B + 1; i <= n; i++) vec.emplace_back(arr[i]);
 
-    while (l--) {
+    while (l--)
+    {
         if(st2.size() > 1)
         {
             auto it1 = st2.begin();
