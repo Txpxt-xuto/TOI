@@ -7355,7 +7355,7 @@ int main(){
         if(o==1)update(u,v);
         else
         {
-            if(u==v) cout << a[u]<<'\n';
+            if(u==v) cout << a[u] << '\n';
             else cout<<query(id[u],id[v])<<'\n';
         }
     }
