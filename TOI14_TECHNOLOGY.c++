@@ -7379,13 +7379,11 @@ int main()
 using namespace std;
 
 const int N = 2000003;
-
 multiset<int> st1, st2;
 int A, B, n;
 ll l;
 vector<int> vec;
 int arr[N];
-
 int main()
 {
     ios_base::sync_with_stdio(0);
