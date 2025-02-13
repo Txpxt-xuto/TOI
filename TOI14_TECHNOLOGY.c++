@@ -7334,7 +7334,8 @@ void update(int u,int val){
         for(auto v:bct[x])
         {
             ms[v].erase(ms[v].lower_bound(a[u]));
-            ms[v].insert(val);upd(pos[v],*ms[v].begin(),cur);
+            ms[v].insert(val);
+            upd(pos[v],*ms[v].begin(),cur);
         }
     }
     a[u]=val;
