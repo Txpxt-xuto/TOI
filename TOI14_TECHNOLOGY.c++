@@ -7356,7 +7356,7 @@ int main(){
         else
         {
             if(u==v) cout << a[u] << '\n';
-            else cout << query(id[u],id[v])<<'\n';
+            else cout << query(id[u],id[v]) << '\n';
         }
     }
 }
