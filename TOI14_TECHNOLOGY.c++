@@ -7400,7 +7400,8 @@ int main() {
     for (int i = B + 1; i <= n; i++) vec.emplace_back(arr[i]);
 
     while (l--) {
-        if (st2.size() > 1) {
+        if(st2.size() > 1)
+        {
             auto it1 = st2.begin();
             auto it2 = prev(st2.end());
             int f = *it1, last = *it2;
