@@ -7335,7 +7335,8 @@ void update(int u,int val){
             ms[v].erase(ms[v].lower_bound(a[u]));
             ms[v].insert(val);upd(pos[v],*ms[v].begin(),cur);
         }
-    }a[u]=val;
+    }
+    a[u]=val;
 }
 int main()
 {
