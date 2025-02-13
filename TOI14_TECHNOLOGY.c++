@@ -7431,7 +7431,5 @@ int main() {
     for (int x : st1) cout << x << " ";
     for (int x : st2) cout << x << " ";
     for (int x : vec) cout << x << " ";
-
-
     return 0;
 }
