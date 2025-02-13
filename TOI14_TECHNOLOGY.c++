@@ -7330,7 +7330,8 @@ void update(int u,int val)
 {
     int x=id[u];
     ms[x].erase(ms[x].lower_bound(a[u]));
-    ms[x].insert(val);upd(pos[x],*ms[x].begin(),cur);
+    ms[x].insert(val);
+    upd(pos[x],*ms[x].begin(),cur);
     if(isap[x])
     {
         for(auto v:bct[x])
