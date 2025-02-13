@@ -7351,7 +7351,7 @@ int main(){
     while(q--)
     {
         int o,u,v;
-        cin >>o>>u>>v;
+        cin >> o>>u>>v;
         if(o==1)update(u,v);
         else {
             if(u==v)cout<<a[u]<<'\n';
