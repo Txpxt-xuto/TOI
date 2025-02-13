@@ -7419,7 +7419,6 @@ int main() {
             auto it1 = st2.begin();
             auto it2 = prev(st1.end());
             int f = *it1, last = *it2;
-
             if(f < last)
             {
                 st2.erase(it1);
