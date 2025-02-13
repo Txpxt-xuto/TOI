@@ -7338,7 +7338,8 @@ void update(int u,int val){
 }
 int main()
 {
-    ios_base::sync_with_stdio(0);cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int n,m,q;
     cin >> n >> m >> q;
     for(int i=1;i<=n;i++) cin >> a[i];
