@@ -7326,8 +7326,10 @@ int query(int x,int y,int res=1e9+5){
     }if(dep[x]>dep[y])swap(x,y);res=min(res,qr(pos[x],pos[y]+1,cur));
     return res;
 }
-void update(int u,int val){
-    int x=id[u];ms[x].erase(ms[x].lower_bound(a[u]));
+void update(int u,int val)
+{
+    int x=id[u];
+    ms[x].erase(ms[x].lower_bound(a[u]));
     ms[x].insert(val);upd(pos[x],*ms[x].begin(),cur);
     if(isap[x])
     {
