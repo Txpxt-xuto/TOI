@@ -7405,10 +7405,8 @@ int main() {
             auto it1 = st2.begin();
             auto it2 = prev(st2.end());
             int f = *it1, last = *it2;
-
             st2.erase(it1);
             if (it1 != it2) st2.erase(it2);
-
             st2.insert(abs(f - last));
             st2.insert((f + last) / 2);
         }
