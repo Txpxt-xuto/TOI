@@ -7372,3 +7372,79 @@ int main()
         }
     }
 }
+
+#include <bits/stdc++.h>
+#define ll long long
+#define endl '\n'
+using namespace std;
+
+const int N = 2000003;
+
+multiset<int> st1, st2;
+int A, B, n;
+ll l;
+vector<int> vec;
+int arr[N];
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    cin >> n >> l >> A >> B;
+    for (int i = 1; i <= n; i++) cin >> arr[i];
+
+    sort(arr + 1, arr + n + 1);
+
+    for (int i = 1; i <= A - 1; i++) st1.emplace(arr[i]);
+    for (int i = A; i <= B; i++) st2.emplace(arr[i]);
+    for (int i = B + 1; i <= n; i++) vec.emplace_back(arr[i]);
+
+    while (l--) {
+        if (st2.size() > 1) {
+            auto it1 = st2.begin();
+            auto it2 = prev(st2.end());
+            int f = *it1, last = *it2;
+
+            st2.erase(it1);
+            if (it1 != it2) st2.erase(it2);
+
+            st2.insert(abs(f - last));
+            st2.insert((f + last) / 2);
+        } else if (!st2.empty()) {
+            st2.erase(st2.begin());
+        }
+
+        if (!st1.empty() && !st2.empty()) {
+            auto it1 = st2.begin();
+            auto it2 = prev(st1.end());
+            int f = *it1, last = *it2;
+
+            if (f < last) {
+                st2.erase(it1);
+                st2.insert(last);
+                st1.erase(it2);
+                st1.insert(f);
+            }
+        }
+    }
+
+    for (int x : st1) cout << x << " ";
+    for (int x : st2) cout << x << " ";
+    for (int x : vec) cout << x << " ";
+
+
+    return 0;
+}
+
+/*
+
+5 3
+1 3
+40
+20
+10
+30
+50
+
+
+*/
