@@ -7376,8 +7376,7 @@ int main()
 #include <bits/stdc++.h>
 #define ll long long
 #define endl '\n'
-using namepace std;
-
+using namespace std;
 const int N = 2000003;
 multiset<int> st1, st2;
 int A, B, n;
