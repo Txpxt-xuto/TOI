@@ -7583,5 +7583,4 @@ int32_t main()
     int q = 1; 
     if (TEST_CASE) cin >> q;
     while (q--) solve();
-
 }
