@@ -7563,7 +7563,7 @@ void solve(){
     for(int t = mx;t >= 1;t--)
     {
         for(auto e:computer[t]) pq.push(e);
-            
+        
         if(pq.empty()) continue;
         ans += max(0ll, pq.top());
         pq.pop();
