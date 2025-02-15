@@ -7560,7 +7560,7 @@ void solve(){
     }
     priority_queue<int> pq;
     int ans = 0ll;
-    for (int t = mx;t >= 1;t--)
+    for(int t = mx;t >= 1;t--)
     {
         for (auto e:computer[t])
             pq.push(e);
