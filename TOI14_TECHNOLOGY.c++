@@ -7425,3 +7425,75 @@ int main()
     for(int x : vec) cout << x << " ";
     return 0;
 }
+
+#include <iostream>
+#include <cstring>
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <queue>
+#include <numeric>
+
+#define debug(...) Debug(#__VA_ARGS__, __VA_ARGS__)
+using namespace std;
+const bool TEST_CASE = 0;
+
+template<typename T>
+typename std::enable_if<std::is_integral<T>::value>::type
+Debug(const char* name, T value) {
+    std::cout << name << " : " << value << '\n';
+}
+
+
+template<typename T, typename... Args>
+typename std::enable_if<std::is_integral<T>::value>::type
+Debug(const char* names, T value, Args... args) {
+    const char* comma = strchr(names, ',');
+    std::cout.write(names, comma - names) << " : " << value << " | ";
+    Debug(comma + 1, args...);
+}
+template<typename T> ostream& operator<<(ostream& out, vector<T>& a) {
+    for(auto &x : a) out << x << ' '; 
+    return out;
+};
+
+const int N = 502, K = 52;
+
+int dp[2][N][K], a[N][N];
+
+void solve(){
+    int n, l;
+    cin >> n >> l;
+
+    for (int i = 1;i <= n;i++)
+        for (int j = 1;j <= n;j++)
+            cin >> a[i][j];
+
+    for (int i = 1;i <= n;i++){
+        int cur = i&1, pre = 1 - cur;
+        for (int j = 1;j <= n;j++){
+            for (int k = 0;k <= l;k++)
+                dp[cur][j][0] = max(dp[cur][j][0], max(dp[cur][j-1][k], dp[pre][j][k]));
+            for (int k = 1;k <= l;k++){
+                dp[cur][j][k] = max(dp[cur][j-1][k-1], dp[pre][j][k-1]) + a[i][j];
+            }
+        }
+    }
+    int ans = 0;
+    for (int i = 0;i <= l;i++)
+        ans = max(ans, dp[n&1][n][i]);
+    cout << ans << '\n';
+}
+
+int main()
+{
+    #ifndef DORMON
+        ios_base::sync_with_stdio(false); 
+    #endif
+    cin.tie(0);
+    int q = 1; 
+    if (TEST_CASE) cin >> q;
+    while (q--){
+        solve();
+    }
+}
