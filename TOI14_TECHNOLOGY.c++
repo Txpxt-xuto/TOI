@@ -7539,13 +7539,13 @@ void solve(){
 
     for (int i = 1;i <= n;i++)
         cin >> a[i];
-    for (int i = 1;i <= m;i++){
+    for (int i = 1;i <= m;i++)
+    {
         int u, v;
         cin >> u >> v;
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
-
     int mx = 0ll;
     queue<pair<int, int>> q;
     q.push({k, 0ll});
