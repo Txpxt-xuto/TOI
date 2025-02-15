@@ -7551,7 +7551,8 @@ void solve(){
     q.push({k, 0ll});
     while (!q.empty())
     {
-        auto [u, t] = q.front(); q.pop();
+        auto [u, t] = q.front();
+        q.pop();
         if(vis[u] != -1) continue;
         vis[u] = t;
         mx = max(mx, t);
