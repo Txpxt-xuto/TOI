@@ -7549,9 +7549,10 @@ void solve(){
     int mx = 0ll;
     queue<pair<int, int>> q;
     q.push({k, 0ll});
-    while (!q.empty()){
+    while (!q.empty())
+    {
         auto [u, t] = q.front(); q.pop();
-        if (vis[u] != -1) continue;
+        if(vis[u] != -1) continue;
         vis[u] = t;
         mx = max(mx, t);
         computer[t].push_back(a[u]);
