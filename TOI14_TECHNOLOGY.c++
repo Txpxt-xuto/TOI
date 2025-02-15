@@ -7577,7 +7577,7 @@ void solve(){
 int32_t main()
 {
     #ifndef DORMON
-        ios_base::sync_with_stdio(false); 
+    ios_base::sync_with_stdio(false); 
     #endif
     cin.tie(0);
     int q = 1; 
