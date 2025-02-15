@@ -7555,8 +7555,8 @@ void solve(){
         vis[u] = t;
         mx = max(mx, t);
         computer[t].push_back(a[u]);
-        for (auto v:adj[u])
-            q.push({v, t+1});
+        for (auto v:adj[u]) q.push({v, t+1});
+            
     }
     priority_queue<int> pq;
     int ans = 0ll;
