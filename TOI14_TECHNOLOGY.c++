@@ -7531,7 +7531,8 @@ template<typename T> ostream& operator<<(ostream& out, vector<T>& a) {
 
 #define int long long
 
-void solve(){
+void solve()
+{
     int n, m, k;
     cin >> n >> m >> k;
     vector<int> a(n+1), vis(n+1, -1);
