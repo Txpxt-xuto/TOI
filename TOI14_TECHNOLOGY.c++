@@ -7505,7 +7505,6 @@ int main()
 #include <functional>
 #include <queue>
 #include <numeric>
-
 #define debug(...) Debug(#__VA_ARGS__, __VA_ARGS__)
 using namespace std;
 const bool TEST_CASE = 0;
