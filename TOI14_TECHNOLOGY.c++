@@ -7509,7 +7509,6 @@ int main()
 #define debug(...) Debug(#__VA_ARGS__, __VA_ARGS__)
 using namespace std;
 const bool TEST_CASE = 0;
-
 template<typename T>
 typename std::enable_if<std::is_integral<T>::value>::type
 Debug(const char* name, T value) {
