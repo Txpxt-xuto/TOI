@@ -7566,7 +7566,7 @@ void solve()
         ans += max(0ll, pq.top());
         pq.pop();
     }
-    for(int i=1;i <= n;i++) if(vis[i] == -1) ans += max(0ll, a[i]);
+    for(int i=1;i<=n;i++) if(vis[i] == -1) ans += max(0ll, a[i]);
     cout << ans << '\n';
 }
 
