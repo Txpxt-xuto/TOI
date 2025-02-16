@@ -7524,7 +7524,8 @@ Debug(const char* names, T value, Args... args)
     std::cout.write(names, comma - names) << " : " << value << " | ";
     Debug(comma + 1, args...);
 }
-template<typename T> ostream& operator<<(ostream& out, vector<T>& a) {
+template<typename T> ostream& operator<<(ostream& out, vector<T>& a)
+{
     for(auto &x : a) out << x << ' '; 
     return out;
 };
