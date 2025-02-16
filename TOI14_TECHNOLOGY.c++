@@ -7570,7 +7570,7 @@ void solve()
 int32_t main()
 {
     #ifndef DORMON
-    ios_base::sync_with_stdio(false); 
+    ios_base::sync_with_stdio(false);
     #endif
     cin.tie(0);
     int q = 1; 
@@ -7598,7 +7598,8 @@ signed main()
     cin >> start >> end >> maxFuel >> m;
     start--, end--;
     vector<vector<pii>> adj(n);
-    while (m--) {
+    while (m--)
+    {
         int u, v, w;
         cin >> u >> v >> w;
         u--, v--;
