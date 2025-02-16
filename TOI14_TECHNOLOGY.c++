@@ -7493,8 +7493,7 @@ int main()
     cin.tie(0);
     int q = 1; 
     if (TEST_CASE) cin >> q;
-    while (q--)solve();
-        
+    while (q--) solve();
 }
 
 #include <iostream>
