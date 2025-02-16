@@ -7537,7 +7537,7 @@ void solve()
     vector<int> a(n+1), vis(n+1, -1);
     vector<vector<int>> adj(n+1), computer(n+1);
     for(int i=1;i<=n;i++) cin >> a[i];
-    
+
     for(int i=1;i<=m;i++)
     {
         int u, v;
