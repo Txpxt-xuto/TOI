@@ -7496,7 +7496,7 @@ int main()
     while (q--)
         solve();
     
-}
+
 
 #include <iostream>
 #include <cstring>
