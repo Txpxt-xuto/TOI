@@ -7530,7 +7530,6 @@ template<typename T> ostream& operator<<(ostream& out, vector<T>& a) {
 };
 
 #define int long long
-
 void solve()
 {
     int n, m, k;
