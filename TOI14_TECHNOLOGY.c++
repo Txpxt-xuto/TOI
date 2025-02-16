@@ -7611,7 +7611,8 @@ signed main()
     priority_queue<t4i, vector<t4i>, greater<t4i>> q;
     q.emplace(0, start, 0, 0);
     dis[0][start][0] = dis[1][start][0] = 0;
-    while (!q.empty(){
+    while(!q.empty())
+    {
         auto [cost, cur, oil, used] = q.top();
         q.pop();
         if (cost > dis[used][cur][oil]) continue;
