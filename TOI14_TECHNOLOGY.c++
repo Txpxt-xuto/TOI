@@ -7511,7 +7511,8 @@ using namespace std;
 const bool TEST_CASE = 0;
 template<typename T>
 typename std::enable_if<std::is_integral<T>::value>::type
-Debug(const char* name, T value) {
+Debug(const char* name, T value)
+{
     std::cout << name << " : " << value << '\n';
 }
 
