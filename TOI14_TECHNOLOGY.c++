@@ -7582,3 +7582,52 @@ int32_t main()
     if (TEST_CASE) cin >> q;
     while (q--) solve();
 }
+
+#include <bits/stdc++.h>
+#define int long long
+#define pii pair<int, int>
+#define t4i tuple<int, int, int, int>
+#define f first
+#define s second
+#define inf 1e14
+
+using namespace std;
+
+signed main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    int n;
+    cin >> n;
+    vector<int> price(n);
+    for (auto &e : price) cin >> e;
+    int m, start, end, maxFuel;
+    cin >> start >> end >> maxFuel >> m;
+    start--, end--;
+    vector<vector<pii>> adj(n);
+    while (m--) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        u--, v--;
+        adj[u].emplace_back(w, v);
+        adj[v].emplace_back(w, u);
+    }
+    
+    vector<vector<vector<int>>> dis(2, vector<vector<int>>(n, vector<int> (maxFuel + 1, inf)));
+    priority_queue<t4i, vector<t4i>, greater<t4i>> q;
+    q.emplace(0, start, 0, 0);
+    dis[0][start][0] = dis[1][start][0] = 0;
+    while (!q.empty()) {
+        auto [cost, cur, oil, used] = q.top();
+        q.pop();
+        if (cost > dis[used][cur][oil]) continue;
+        if (!used && oil < maxFuel && cost < dis[1][cur][maxFuel])
+            dis[1][cur][maxFuel] = cost, q.emplace(cost, cur, maxFuel, 1);
+        if (oil < maxFuel && cost + price[cur] < dis[used][cur][oil+1])
+            dis[used][cur][oil+1] = cost + price[cur], q.emplace(cost + price[cur], cur, oil + 1, used);
+        for (auto &[x, y] : adj[cur]) {
+            if (oil >= x && cost < dis[used][y][oil-x])
+                dis[used][y][oil-x] = cost, q.emplace(cost, y, oil - x, used);
+        }
+    }
+    cout << min(dis[0][end][maxFuel], dis[1][end][maxFuel]);
+    return 0;
+}
