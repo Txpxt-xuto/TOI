@@ -7590,7 +7590,7 @@ int32_t main()
 #define inf 1e14
 using namespace std;
 signed main() {
-    ios_base::sync_with_stdio(0); cin.tie(0);
+    ios_base:sync_with_stdio(0); cin.tie(0);
     int n;
     cin >> n;
     vector<int> price(n);
