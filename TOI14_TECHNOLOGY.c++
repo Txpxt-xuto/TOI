@@ -7515,7 +7515,6 @@ Debug(const char* name, T value)
 {
     std::cout << name << " : " << value << '\n';
 }
-
 template<typename T, typename... Args>
 typename std::enable_if<std::is_integral<T>::value>::type
 Debug(const char* names, T value, Args... args)
