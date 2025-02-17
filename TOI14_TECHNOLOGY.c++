@@ -7605,8 +7605,7 @@ signed main()
         u--, v--;
         adj[u].emplace_back(w, v);
         adj[v].emplace_back(w, u);
-    
-    
+    }
     vector<vector<vector<int>>> dis(2, vector<vector<int>>(n, vector<int> (maxFuel + 1, inf)));
     priority_queue<t4i, vector<t4i>, greater<t4i>> q;
     q.emplace(0, start, 0, 0);
