@@ -7622,7 +7622,7 @@ signed main()
         for(auto &[x, y] : adj[cur]) if(oil >= x && cost < dis[used][y][oil-x]) dis[used][y][oil-x] = cost, q.emplace(cost, y, oil - x, used);
         {
         }
-    }
+    
     cout << min(dis[0][end][maxFuel], dis[1][end][maxFuel]);
     return 0;
 }
