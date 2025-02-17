@@ -7619,7 +7619,7 @@ signed main()
         if (!used && oil < maxFuel && cost < dis[1][cur][maxFuel]) dis[1][cur][maxFuel] = cost, q.emplace(cost, cur, maxFuel, 1);
         if (oil < maxFuel && cost + price[cur] < dis[used][cur][oil+1])
             dis[used][cur][oil+1] = cost + price[cur], q.emplace(cost + price[cur], cur, oil + 1, used);
-        for (auto &[x, y] : adj[cur]) {
+        for (auto &[x, y] : adj[cur]){
             if (oil >= x && cost < dis[used][y][oil-x])
                 dis[used][y][oil-x] = cost, q.emplace(cost, y, oil - x, used);
         }
