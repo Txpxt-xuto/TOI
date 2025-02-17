@@ -7602,7 +7602,8 @@ signed main()
     {
         int u, v, w;
         cin >> u >> v >> w;
-        u--, v--;
+        u--;
+        v--;
         adj[u].emplace_back(w, v);
         adj[v].emplace_back(w, u);
     }
