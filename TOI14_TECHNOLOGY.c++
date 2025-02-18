@@ -7714,7 +7714,8 @@ int main(){
 				if(x<=a[i]&&a[i]<=y)ans+=cnt1[br-1][a[i]]-cnt1[bl][a[i]]-cnt1[br-1][x-1]+cnt1[bl][x-1];
 			}
 			int lt=0,rt=0;
-			for(int i=0;i<A;++i){
+			for(int i=0;i<A;++i)
+            {
 				if(rk0[bl][i]>=l&&x<=a[rk0[bl][i]]&&a[rk0[bl][i]]<=y)L[++lt]=rk0[bl][i];
 				if(rk0[br][i]<=r&&x<=a[rk0[br][i]]&&a[rk0[br][i]]<=y)R[++rt]=rk0[br][i];
 			}
