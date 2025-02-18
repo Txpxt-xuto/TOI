@@ -7623,3 +7623,111 @@ signed main()
     cout << min(dis[0][end][maxFuel], dis[1][end][maxFuel]);
     return 0;
 }
+
+#include<bits/stdc++.h>
+typedef long long ll;
+using namespace std;
+#define getchar() (p1==p2 && (p2=(p1=buf)+fread(buf,1,1<<21,stdin),p1==p2)?EOF:*p1++)
+char buf[1<<21],*p1=buf,*p2=buf;
+inline int Read()
+{
+	int x=0;char c=getchar();
+	while(c<'0' || c>'9') c=getchar();
+	while(c>='0' && c<='9') x=x*10+(c&15),c=getchar();
+	return x;
+}
+const int N=101111,A=460,BS=A+10;
+ll cp0[BS][BS][BS];
+int a[N],rk0[BS][BS],cnt0[BS][N],cp1[BS][BS][BS],lb[BS][N],rk1[N],cnt1[BS][N],L[BS],R[BS];
+bool cmp(int x,int y) { return a[x]<a[y]; }
+namespace IO{
+    const int sz=1<<22;
+    char a[sz+5],b[sz+5],*p1=a,*p2=a,*t=b,p[105];
+    inline char gc(){
+        return p1==p2?(p2=(p1=a)+fread(a,1,sz,stdin),p1==p2?EOF:*p1++):*p1++;
+    }
+    template<class T> void gi(T& x){
+        x=0; char c=gc();
+        for(;c<'0'||c>'9';c=gc());
+        for(;c>='0'&&c<='9';c=gc())
+            x=(x<<3)+(x<<1)+(c-'0');
+    }
+    inline void flush(){fwrite(b,1,t-b,stdout),t=b; }
+    inline void pc(char x){*t++=x; if(t-b==sz) flush(); }
+    template<class T> void pi(T x,char c='\n'){
+        if(x<0) x=-x;
+        if(x==0) pc('0'); int t=0;
+        for(;x;x/=10) p[++t]=x%10+'0';
+        for(;t;--t) pc(p[t]); pc(c);
+    }
+    struct F{~F(){flush();}}f; 
+}
+using IO::gi;
+using IO::pi;
+inline int read() { int r; gi(r); return r; }
+int main(){
+#ifdef ONLINE_JUDGE
+	freopen("tears.in","r",stdin);
+	freopen("tears.out","w",stdout);
+#endif
+	int n=read(),m=read(),B=n/A;
+	for(int i=0;i<n;++i)a[i]=read();
+	for(int i=n;i<(B+1)*A;++i)a[i]=i;
+	for(int i=0;i<=B;++i){
+		for(int j=i*A,k=0;k<A;++j,++k)rk0[i][k]=j;
+		sort(rk0[i],rk0[i]+A,[](int x,int y){return a[x]<a[y];});
+		for(int j=0;j<A;++j)rk1[rk0[i][j]]=j,cnt0[j][rk0[i][j]]=1;
+		for(int j=i*A+1;j<(i+1)*A;++j)
+			for(int k=0;k<A;++k)cnt0[k][j]+=cnt0[k][j-1];
+		for(int j=i*A;j<(i+1)*A;++j)
+			for(int k=1;k<A;++k)cnt0[k][j]+=cnt0[k-1][j];
+		for(int j=i*A;j<(i+1)*A;++j)++cnt1[i][a[j]];
+		if(i)for(int j=1;j<=101000;++j)cnt1[i][j]+=cnt1[i-1][j];
+		for(int j=1,k=0;j<=101000;++j)(k<A)&&(j>=a[rk0[i][k]])&&(++k),lb[i][j]=k;
+	}
+	for(int i=0;i<=B;++i)
+		for(int j=1;j<=101000;++j)cnt1[i][j]+=cnt1[i][j-1];
+	for(int i=1;i<B;++i)for(int j=0;j<i;++j)for(int k=0;k<A;++k)
+		cp0[i][j][k+1]=cnt1[j][a[rk0[i][k]]]+cp0[i][j][k];
+	for(int i=0;i<B;++i)for(int j=0;j<A;++j)for(int k=j+1;k<A;++k)
+		cp1[i][j][k]=cp1[i][j][k-1]+cnt0[k-1][rk0[i][k]]-((j==0)?0:cnt0[j-1][rk0[i][k]]);
+	for(;m;--m){
+		int l=read()-1,r=read()-1,x=read(),y=read(),bl=l/A,br=r/A;
+		if(bl==br){
+			int ans=0;
+			for(int i=l;i<=r;++i){
+				if(x<=a[i]&&a[i]<=y&&rk1[i])ans+=cnt0[rk1[i]-1][i]-((l%A)?cnt0[rk1[i]-1][l-1]:0);
+				if(lb[bl][x-1]&&x<=a[i]&&a[i]<=y)ans-=cnt0[lb[bl][x-1]-1][i]-((l%A&&lb[bl][x-1])?cnt0[lb[bl][x-1]-1][l-1]:0);
+			}
+			pi(ans);
+		}
+		else{
+			ll ans=0;
+			for(int i=l;i<(bl+1)*A;++i){
+				if(x<=a[i]&&a[i]<=y&&rk1[i])ans+=cnt0[rk1[i]-1][i]-((l%A)?cnt0[rk1[i]-1][l-1]:0);
+				if(lb[bl][x-1]&&x<=a[i]&&a[i]<=y)ans-=cnt0[lb[bl][x-1]-1][i]-((l%A&&lb[bl][x-1])?cnt0[lb[bl][x-1]-1][l-1]:0);
+				if(x<=a[i]&&a[i]<=y)ans+=cnt1[br-1][y]-cnt1[bl][y]-cnt1[br-1][a[i]]+cnt1[bl][a[i]];
+			}
+			for(int i=br*A;i<=r;++i){
+				if(x<=a[i]&&a[i]<=y&&rk1[i])ans+=cnt0[rk1[i]-1][i];
+				if(lb[br][x-1]&&x<=a[i]&&a[i]<=y)ans-=cnt0[lb[br][x-1]-1][i];
+				if(x<=a[i]&&a[i]<=y)ans+=cnt1[br-1][a[i]]-cnt1[bl][a[i]]-cnt1[br-1][x-1]+cnt1[bl][x-1];
+			}
+			int lt=0,rt=0;
+			for(int i=0;i<A;++i){
+				if(rk0[bl][i]>=l&&x<=a[rk0[bl][i]]&&a[rk0[bl][i]]<=y)L[++lt]=rk0[bl][i];
+				if(rk0[br][i]<=r&&x<=a[rk0[br][i]]&&a[rk0[br][i]]<=y)R[++rt]=rk0[br][i];
+			}
+			for(int i=1,t=1;i<=rt;++i){
+				while(t<=lt&&a[L[t]]<a[R[i]])++t;
+				ans+=t-1;
+			}
+			for(int i=bl+1;i<br;++i)if(lb[i][y])ans+=cp1[i][lb[i][x-1]][lb[i][y]-1];
+			for(int i=bl+2;i<br;++i)
+				ans+=cp0[i][i-1][lb[i][y]]-cp0[i][bl][lb[i][y]]-cp0[i][i-1][lb[i][x-1]]+cp0[i][bl][lb[i][x-1]],
+				ans-=ll(cnt1[i][y]-cnt1[i-1][y]-cnt1[i][x-1]+cnt1[i-1][x-1])*(cnt1[i-1][x-1]-cnt1[bl][x-1]);
+			pi(ans);
+		}
+	}
+	return 0;
+}
