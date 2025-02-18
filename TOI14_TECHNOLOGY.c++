@@ -7693,7 +7693,8 @@ int main(){
 		cp1[i][j][k]=cp1[i][j][k-1]+cnt0[k-1][rk0[i][k]]-((j==0)?0:cnt0[j-1][rk0[i][k]]);
 	for(;m;--m){
 		int l=read()-1,r=read()-1,x=read(),y=read(),bl=l/A,br=r/A;
-		if(bl==br){
+		if(bl==br)
+        {
 			int ans=0;
 			for(int i=l;i<=r;++i)
             {
