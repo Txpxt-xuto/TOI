@@ -7680,7 +7680,7 @@ int main()
 		sort(rk0[i],rk0[i]+A,[](int x,int y){return a[x]<a[y];});
 		for(int j=0;j<A;++j) rk1[rk0[i][j]]=j,cnt0[j][rk0[i][j]]=1;
 		for(int j=i*A+1;j<(i+1)*A;++j) for(int k=0;k<A;++k) cnt0[k][j]+=cnt0[k][j-1];
-		
+	
 		for(int j=i*A;j<(i+1)*A;++j)
 			for(int k=1;k<A;++k)cnt0[k][j]+=cnt0[k-1][j];
 		for(int j=i*A;j<(i+1)*A;++j)++cnt1[i][a[j]];
