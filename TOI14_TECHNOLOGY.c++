@@ -7722,7 +7722,7 @@ int main(){
 				while(t<=lt&&a[L[t]]<a[R[i]])++t;
 				ans+=t-1;
 			}
-			for(int i=bl+1;i<br;++i)if(lb[i][y])ans+=cp1[i][lb[i][x-1]][lb[i][y]-1];
+			for(int i=bl+1;i<br;++i) if(lb[i][y])ans+=cp1[i][lb[i][x-1]][lb[i][y]-1];
 			for(int i=bl+2;i<br;++i)
 				ans+=cp0[i][i-1][lb[i][y]]-cp0[i][bl][lb[i][y]]-cp0[i][i-1][lb[i][x-1]]+cp0[i][bl][lb[i][x-1]],
 				ans-=ll(cnt1[i][y]-cnt1[i-1][y]-cnt1[i][x-1]+cnt1[i-1][x-1])*(cnt1[i-1][x-1]-cnt1[bl][x-1]);
