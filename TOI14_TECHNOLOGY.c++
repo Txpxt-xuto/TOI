@@ -7695,7 +7695,8 @@ int main(){
 		int l=read()-1,r=read()-1,x=read(),y=read(),bl=l/A,br=r/A;
 		if(bl==br){
 			int ans=0;
-			for(int i=l;i<=r;++i){
+			for(int i=l;i<=r;++i)
+            {
 				if(x<=a[i]&&a[i]<=y&&rk1[i])ans+=cnt0[rk1[i]-1][i]-((l%A)?cnt0[rk1[i]-1][l-1]:0);
 				if(lb[bl][x-1]&&x<=a[i]&&a[i]<=y)ans-=cnt0[lb[bl][x-1]-1][i]-((l%A&&lb[bl][x-1])?cnt0[lb[bl][x-1]-1][l-1]:0);
 			}
