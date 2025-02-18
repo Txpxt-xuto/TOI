@@ -7705,9 +7705,9 @@ int main(){
 			ll ans=0;
 			for(int i=l;i<(bl+1)*A;++i)
             {
-				if(x<=a[i]&&a[i]<=y&&rk1[i])ans+=cnt0[rk1[i]-1][i]-((l%A)?cnt0[rk1[i]-1][l-1]:0);
-				if(lb[bl][x-1]&&x<=a[i]&&a[i]<=y)ans-=cnt0[lb[bl][x-1]-1][i]-((l%A&&lb[bl][x-1])?cnt0[lb[bl][x-1]-1][l-1]:0);
-				if(x<=a[i]&&a[i]<=y)ans+=cnt1[br-1][y]-cnt1[bl][y]-cnt1[br-1][a[i]]+cnt1[bl][a[i]];
+				if(x<=a[i]&&a[i]<=y && rk1[i]) ans+=cnt0[rk1[i]-1][i]-((l%A)?cnt0[rk1[i]-1][l-1]:0);
+				if(lb[bl][x-1] && x<=a[i]&&a[i]<=y) ans-=cnt0[lb[bl][x-1]-1][i]-((l%A&&lb[bl][x-1])?cnt0[lb[bl][x-1]-1][l-1]:0);
+				if(x<=a[i] && a[i]<=y) ans+=cnt1[br-1][y]-cnt1[bl][y]-cnt1[br-1][a[i]]+cnt1[bl][a[i]];
 			}
 			for(int i=br*A;i<=r;++i)
             {
