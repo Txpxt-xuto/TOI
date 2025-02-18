@@ -7720,7 +7720,7 @@ int main(){
 			}
 			for(int i=1,t=1;i<=rt;++i)
             {
-				while(t<=lt&&a[L[t]]<a[R[i]])++t;
+				while(t<=lt&&a[L[t]]<a[R[i]]) ++t;
 				ans+=t-1;
 			}
 			for(int i=bl+1;i<br;++i) if(lb[i][y]) ans+=cp1[i][lb[i][x-1]][lb[i][y]-1];
