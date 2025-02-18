@@ -7701,7 +7701,8 @@ int main(){
 			}
 			pi(ans);
 		}
-		else{
+		else
+        {
 			ll ans=0;
 			for(int i=l;i<(bl+1)*A;++i)
             {
