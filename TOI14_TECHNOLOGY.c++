@@ -7681,7 +7681,6 @@ int main()
 		for(int j=0;j<A;++j) rk1[rk0[i][j]]=j,cnt0[j][rk0[i][j]]=1;
 		for(int j=i*A+1;j<(i+1)*A;++j) for(int k=0;k<A;++k) cnt0[k][j]+=cnt0[k][j-1];
 		for(int j=i*A;j<(i+1)*A;++j) for(int k=1;k<A;++k) cnt0[k][j]+=cnt0[k-1][j];
-
 		for(int j=i*A;j<(i+1)*A;++j)++cnt1[i][a[j]];
 		if(i)for(int j=1;j<=101000;++j)cnt1[i][j]+=cnt1[i-1][j];
 		for(int j=1,k=0;j<=101000;++j)(k<A)&&(j>=a[rk0[i][k]])&&(++k),lb[i][j]=k;
