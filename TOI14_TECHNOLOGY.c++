@@ -7673,7 +7673,8 @@ int main(){
 	int n=read(),m=read(),B=n/A;
 	for(int i=0;i<n;++i)a[i]=read();
 	for(int i=n;i<(B+1)*A;++i)a[i]=i;
-	for(int i=0;i<=B;++i){
+	for(int i=0;i<=B;++i)
+    {
 		for(int j=i*A,k=0;k<A;++j,++k)rk0[i][k]=j;
 		sort(rk0[i],rk0[i]+A,[](int x,int y){return a[x]<a[y];});
 		for(int j=0;j<A;++j)rk1[rk0[i][j]]=j,cnt0[j][rk0[i][j]]=1;
