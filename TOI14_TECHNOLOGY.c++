@@ -7687,7 +7687,7 @@ int main(){
 	}
 	for(int i=0;i<=B;++i)
 		for(int j=1;j<=101000;++j)cnt1[i][j]+=cnt1[i][j-1];
-	for(int i=1;i<B;++i)for(int j=0;j<i;++j)for(int k=0;k<A;++k)cp0[i][j][k+1]=cnt1[j][a[rk0[i][k]]]+cp0[i][j][k];
+	for(int i=1;i<B;++i)for(int j=0;j<i;++j)for(int k=0;k<A;++k) cp0[i][j][k+1]=cnt1[j][a[rk0[i][k]]]+cp0[i][j][k];
 		
 	for(int i=0;i<B;++i) for(int j=0;j<A;++j) for(int k=j+1;k<A;++k) cp1[i][j][k]=cp1[i][j][k-1]+cnt0[k-1][rk0[i][k]]-((j==0)?0:cnt0[j-1][rk0[i][k]]);
 	for(;m;--m)
