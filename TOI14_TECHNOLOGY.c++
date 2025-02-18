@@ -7710,7 +7710,7 @@ int main(){
 			}
 			for(int i=br*A;i<=r;++i){
 				if(x<=a[i]&&a[i]<=y&&rk1[i]) ans+=cnt0[rk1[i]-1][i];
-				if(lb[br][x-1]&&x<=a[i]&&a[i]<=y)ans-=cnt0[lb[br][x-1]-1][i];
+				if(lb[br][x-1]&&x<=a[i]&&a[i]<=y) ans-=cnt0[lb[br][x-1]-1][i];
 				if(x<=a[i]&&a[i]<=y)ans+=cnt1[br-1][a[i]]-cnt1[bl][a[i]]-cnt1[br-1][x-1]+cnt1[bl][x-1];
 			}
 			int lt=0,rt=0;
