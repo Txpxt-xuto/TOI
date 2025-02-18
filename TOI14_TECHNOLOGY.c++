@@ -7665,7 +7665,8 @@ namespace IO{
 using IO::gi;
 using IO::pi;
 inline int read() { int r; gi(r); return r; }
-int main(){
+int main()
+{
 #ifdef ONLINE_JUDGE
 	freopen("tears.in","r",stdin);
 	freopen("tears.out","w",stdout);
