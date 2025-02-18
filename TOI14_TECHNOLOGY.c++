@@ -7716,8 +7716,8 @@ int main(){
 			int lt=0,rt=0;
 			for(int i=0;i<A;++i)
             {
-				if(rk0[bl][i]>=l&&x<=a[rk0[bl][i]]&&a[rk0[bl][i]]<=y)L[++lt]=rk0[bl][i];
-				if(rk0[br][i]<=r&&x<=a[rk0[br][i]]&&a[rk0[br][i]]<=y)R[++rt]=rk0[br][i];
+				if(rk0[bl][i]>=l&&x<=a[rk0[bl][i]]&&a[rk0[bl][i]]<=y) L[++lt]=rk0[bl][i];
+				if(rk0[br][i]<=r&&x<=a[rk0[br][i]]&&a[rk0[br][i]]<=y) R[++rt]=rk0[br][i];
 			}
 			for(int i=1,t=1;i<=rt;++i)
             {
