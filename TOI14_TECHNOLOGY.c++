@@ -7743,7 +7743,8 @@ int main()
 using namespace std;
 stack<int>val,opr;
 string a;
-void pack(){
+void pack()
+{
     int a = val.top();val.pop();
     int b = val.top();val.pop();
     int o = opr.top();opr.pop();
