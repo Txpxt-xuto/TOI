@@ -7755,7 +7755,8 @@ int main()
 {
     cin.tie(0)->sync_with_stdio(0);
     cin >> a;
-    for(char &x:a){
+    for(char &x:a)
+    {
         if(isalpha(x))val.push(20);
         else if(isdigit(x)){
             int xx = 1<<(x-'0'+1);
