@@ -7765,7 +7765,8 @@ int main()
             opr.push(xx);
         }
         else if(x == '[')opr.push(-1);
-        else{
+        else
+        {
             while(opr.top() != -1)pack();
             opr.pop();
         }
