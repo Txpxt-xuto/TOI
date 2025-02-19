@@ -7774,3 +7774,71 @@ int main()
     while(opr.size()) pack();
     cout << val.top();
 }
+
+#include <bits/stdc++.h>
+#define int long long
+#define pii pair <int,int>
+#define tiii tuple <int, int, int>
+#define f first
+#define s second
+#define all(x) x.begin(), x.end()
+#define iShowSpeed cin.tie(NULL)->sync_with_stdio(false)
+
+using namespace std;
+
+const int mod = 1e9 + 7;
+const int inf = 1e18;
+
+int dx[4] = {1, 0, -1, 0};
+int dy[4] = {0, 1, 0, -1};
+
+int q, x, n, cnt, ans, a[405], dp[405][405];
+
+void solve(){
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        cin >> a[i];
+        dp[i][i] = 1;
+    }
+    for (int siz = 1; siz < n; siz++) {
+        for (int i = 1; i + siz <= n; i++) {
+            int j = i + siz;
+            dp[i][j] = inf;
+            if (a[i] == a[j]) {
+                cnt = 0;
+                for (int k = j; k >= i; k--) {
+                    if (a[k] == a[i]) cnt++;
+                    else break;
+                }
+                if (cnt <= x) dp[i][j] = dp[i][j - 1];
+                else dp[i][j] = dp[i][j - 1] + 1;
+            }
+            for (int k = j - 1; k >= i; k--) {
+                dp[i][j] = min(dp[i][j], dp[i][k] + dp[k + 1][j]);
+            }
+        }
+        // cout << "siz = " << siz << ": \n";
+        // for (int i = 1; i <= n; i++) {
+        //     for (int j = 1; j <= n; j++) {
+        //         cout << dp[i][j] << ' ';
+        //     }
+        //     cout << "\n";
+        // }
+        // cout << "--------------------------------------\n";
+    }
+    // for (int i = 1; i <= n; i++) {
+    //     for (int j = 1; j <= n; j++) {
+    //         cout << dp[i][j] << ' ';
+    //     }
+    //     cout << "\n";
+    // }
+    // cout << "--------------------------------------\n";
+    ans = max(ans, dp[1][n]);
+}
+
+int32_t main(){
+    iShowSpeed;
+    cin >> q >> x;
+    while (q--) solve();
+    cout << ans;
+}
