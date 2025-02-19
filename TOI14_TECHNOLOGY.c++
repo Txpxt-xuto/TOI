@@ -7837,6 +7837,6 @@ int32_t main()
 {
     iShowSpeed;
     cin >> q >> x;
-    while (q--) solve();
+    while(q--) solve();
     cout << ans;
 }
