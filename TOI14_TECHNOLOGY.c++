@@ -7738,3 +7738,33 @@ int main()
 	}
 	return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+stack<int>val,opr;
+string a;
+void pack(){
+    int a = val.top();val.pop();
+    int b = val.top();val.pop();
+    int o = opr.top();opr.pop();
+    val.push((a+b)*o/100 + a+b);
+}
+int main(){
+    cin.tie(0)->sync_with_stdio(0);
+    cin>>a;
+    for(char &x:a){
+        if(isalpha(x))val.push(20);
+        else if(isdigit(x)){
+            int xx = 1<<(x-'0'+1);
+            while(opr.size() && xx <= opr.top())pack();
+            opr.push(xx);
+        }
+        else if(x == '[')opr.push(-1);
+        else{
+            while(opr.top() != -1)pack();
+            opr.pop();
+        }
+    }
+    while(opr.size())pack();
+    cout<<val.top();
+}
