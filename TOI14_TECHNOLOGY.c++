@@ -7836,7 +7836,8 @@ void solve(){
     ans = max(ans, dp[1][n]);
 }
 
-int32_t main(){
+int32_t main()
+{
     iShowSpeed;
     cin >> q >> x;
     while (q--) solve();
