@@ -7750,7 +7750,8 @@ void pack()
     int o = opr.top();opr.pop();
     val.push((a+b)*o/100 + a+b);
 }
-int main(){
+int main()
+{
     cin.tie(0)->sync_with_stdio(0);
     cin>>a;
     for(char &x:a){
