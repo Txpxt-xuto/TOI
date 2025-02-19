@@ -7761,7 +7761,7 @@ int main()
         else if(isdigit(x))
         {
             int xx = 1<<(x-'0'+1);
-            while(opr.size() && xx <= opr.top())pack();
+            while(opr.size() && xx <= opr.top()) pack();
             opr.push(xx);
         }
         else if(x == '[')opr.push(-1);
