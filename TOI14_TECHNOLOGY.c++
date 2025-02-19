@@ -7771,6 +7771,6 @@ int main()
             opr.pop();
         }
     }
-    while(opr.size())pack();
+    while(opr.size()) pack();
     cout << val.top();
 }
