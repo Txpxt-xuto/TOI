@@ -7754,7 +7754,7 @@ void pack()
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
-    cin>>a;
+    cin>> a;
     for(char &x:a){
         if(isalpha(x))val.push(20);
         else if(isdigit(x)){
