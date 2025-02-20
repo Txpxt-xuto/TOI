@@ -7796,7 +7796,8 @@ int q, x, n, cnt, ans, a[405], dp[405][405];
 
 void solve(){
     cin >> n;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++)
+    {
         cin >> a[i];
         dp[i][i] = 1;
     }
