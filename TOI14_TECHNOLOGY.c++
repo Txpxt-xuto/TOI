@@ -7800,7 +7800,7 @@ void solve(){
         cin >> a[i];
         dp[i][i] = 1;
     }
-    for(int siz = 1; siz < n; siz++)
+    for(int siz=1;siz < n; siz++)
     {
         for(int i = 1; i + siz <= n; i++)
         {
