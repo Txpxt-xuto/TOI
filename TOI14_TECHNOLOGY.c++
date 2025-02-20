@@ -7785,10 +7785,8 @@ int main()
 #define iShowSpeed cin.tie(NULL)->sync_with_stdio(false)
 
 using namespace std;
-
 const int mod = 1e9 + 7;
 const int inf = 1e18;
-
 int dx[4] = {1, 0, -1, 0};
 int dy[4] = {0, 1, 0, -1};
 
