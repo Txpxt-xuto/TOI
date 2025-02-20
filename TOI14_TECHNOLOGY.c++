@@ -7804,7 +7804,8 @@ void solve(){
         for (int i = 1; i + siz <= n; i++) {
             int j = i + siz;
             dp[i][j] = inf;
-            if (a[i] == a[j]){
+            if (a[i] == a[j])
+            {
                 cnt = 0;
                 for (int k = j; k >= i; k--) {
                     if (a[k] == a[i]) cnt++;
