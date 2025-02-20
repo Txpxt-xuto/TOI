@@ -7788,7 +7788,6 @@ const int mod = 1e9 + 7;
 const int inf = 1e18;
 int dx[4] = {1, 0, -1, 0};
 int dy[4] = {0, 1, 0, -1};
-
 int q, x, n, cnt, ans, a[405], dp[405][405];
 
 void solve()
