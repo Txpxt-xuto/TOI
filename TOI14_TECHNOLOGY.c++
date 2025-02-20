@@ -7807,7 +7807,8 @@ void solve(){
             if(a[i] == a[j])
             {
                 cnt = 0;
-                for (int k = j; k >= i; k--) {
+                for int k = j; k >= i; k--)
+                {
                     if (a[k] == a[i]) cnt++;
                     else break;
                 }
