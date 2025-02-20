@@ -7815,7 +7815,7 @@ void solve(){
                 if(cnt <= x) dp[i][j] = dp[i][j - 1];
                 else dp[i][j] = dp[i][j - 1] + 1;
             }
-            for(int k = j - 1; k >= i; k--) {dp[i][j] = min(dp[i][j], dp[i][k] + dp[k + 1][j]);
+            for(int k = j - 1; k >= i; k--) dp[i][j] = min(dp[i][j], dp[i][k] + dp[k + 1][j]);
                 
             }
         }
