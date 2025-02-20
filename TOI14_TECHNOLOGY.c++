@@ -7794,7 +7794,8 @@ int dy[4] = {0, 1, 0, -1};
 
 int q, x, n, cnt, ans, a[405], dp[405][405];
 
-void solve(){
+void solve()
+{
     cin >> n;
     for (int i = 1;i <= n; i++)
     {
