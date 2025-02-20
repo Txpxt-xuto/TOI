@@ -7809,7 +7809,7 @@ void solve(){
                 cnt = 0;
                 for(int k=j;k>=i;k--)
                 {
-                    if (a[k] == a[i]) cnt++;
+                    if(a[k] == a[i]) cnt++;
                     else break;
                 }
                 if(cnt <= x) dp[i][j] = dp[i][j - 1];
