@@ -7783,7 +7783,6 @@ int main()
 #define s second
 #define all(x) x.begin(), x.end()
 #define iShowSpeed cin.tie(NULL)->sync_with_stdio(false)
-
 using namespace std;
 const int mod = 1e9 + 7;
 const int inf = 1e18;
