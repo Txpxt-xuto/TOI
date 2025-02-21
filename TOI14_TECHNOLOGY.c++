@@ -7837,7 +7837,6 @@ struct pts
 {
     int xf, xs, yf, ys;
 } p[20005];
-
 struct segtree
 {
     int a[1<<21];
