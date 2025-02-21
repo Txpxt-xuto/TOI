@@ -7883,7 +7883,7 @@ int main()
     {
         s1.build(1, X, 1);
         s2.build(1, X, 1);
-        for (int l=1; l<=X; l++)
+        for(int l=1; l<=X; l++)
         {
             for(auto c:O[l])
             {
