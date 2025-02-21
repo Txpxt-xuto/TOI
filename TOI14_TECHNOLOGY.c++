@@ -7833,7 +7833,6 @@ int32_t main()
 using namespace std;
 int Y, X, K, P, dp[18][20005], ans=1e9, idx;
 vector<vector<int>> I(1000005), O(1000005);
-
 struct pts
 {
     int xf, xs, yf, ys;
