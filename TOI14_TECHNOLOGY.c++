@@ -7909,5 +7909,5 @@ int main()
             if (X+Y-p[j].xs-p[j].ys+dp[i][j]<ans)
                 ans=X+Y-p[j].xs-p[j].ys+dp[i][j], idx=i;
     }
-    cout << ans<<' '<<idx;
+    cout << ans <<' '<<idx;
 }
