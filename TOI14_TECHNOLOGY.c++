@@ -7891,7 +7891,6 @@ int main()
                 s2.update(1, X, 1, p[c].ys, dp[i-1][c]-p[c].xs+p[c].ys);
             }
             for(auto c:I[l]) dp[i][c]=min({dp[i][c], p[c].xf+p[c].yf+s1.query(1, X, 1, 1, p[c].yf), p[c].xf-p[c].yf+s2.query(1, X, 1, p[c].yf, X)});
-                
         }
         s1.build(1, X, 1);
         s2.build(1, X, 1);
