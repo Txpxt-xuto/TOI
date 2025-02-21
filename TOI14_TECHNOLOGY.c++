@@ -7865,7 +7865,6 @@ struct segtree
         return min(query(l, md, 2*i, ql, qr), query(md+1, r, 2*i+1, ql, qr));
     }
 } s1, s2;
-
 int main()
 {
     cin.tie(NULL)->sync_with_stdio(false);
