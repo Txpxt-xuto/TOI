@@ -7897,7 +7897,7 @@ int main()
         s2.build(1, X, 1);
         for (int l=X; l>=1; l--)
         {
-            for (auto c:O[l])
+            for(auto c:O[l])
             {
                 s1.update(1, X, 1, p[c].ys, dp[i-1][c]+p[c].xs-p[c].ys);
                 s2.update(1, X, 1, p[c].ys, dp[i-1][c]+p[c].xs+p[c].ys);
