@@ -7828,3 +7828,91 @@ int32_t main()
     while(q--) solve();
     cout << ans;
 }
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int Y, X, K, P, dp[18][20005], ans=1e9, idx;
+vector<vector<int>> I(1000005), O(1000005);
+
+struct pts
+{
+    int xf, xs, yf, ys;
+} p[20005];
+
+struct segtree
+{
+    int a[1<<21];
+    void build(int l, int r, int i)
+    {
+        a[i]=1e9;
+        if (l==r) return;
+        int md=(l+r)/2;
+        build(l, md, 2*i);
+        build(md+1, r, 2*i+1);
+    }
+    void update(int l, int r, int i, int idx, int val)
+    {
+        if (idx<l||r<idx) return;
+        if (l==r) return void(a[i]=val);
+        int md=(l+r)/2;
+        update(l, md, 2*i, idx, val);
+        update(md+1, r, 2*i+1, idx, val);
+        a[i]=min(a[2*i], a[2*i+1]);
+    }
+    int query(int l, int r, int i, int ql, int qr)
+    {
+        if (qr<l||r<ql) return 1e9;
+        if (ql<=l&&r<=qr) return a[i];
+        int md=(l+r)/2;
+        return min(query(l, md, 2*i, ql, qr), query(md+1, r, 2*i+1, ql, qr));
+    }
+} s1, s2;
+
+int main()
+{
+    cin.tie(NULL)->sync_with_stdio(false);
+    cin>>Y>>X>>K>>P;
+    ans=Y+X-2; idx=0;
+    for (int i=1; i<=K; i++)
+    {
+        cin>>p[i].yf>>p[i].xf>>p[i].ys>>p[i].xs;
+        I[p[i].xf].push_back(i);
+        O[p[i].xs].push_back(i);
+        dp[1][i]=p[i].yf+p[i].xf-2;
+        if (ans<dp[1][i]+X+Y-p[i].xs-p[i].ys) ans=dp[1][i]+X+Y-p[i].xs-p[i].ys, idx=1;
+        for (int j=2; j<=P; j++) dp[j][i]=1e9;
+    }
+    for (int i=2; i<=P; i++)
+    {
+        s1.build(1, X, 1);
+        s2.build(1, X, 1);
+        for (int l=1; l<=X; l++)
+        {
+            for (auto c:O[l])
+            {
+                s1.update(1, X, 1, p[c].ys, dp[i-1][c]-p[c].xs-p[c].ys);
+                s2.update(1, X, 1, p[c].ys, dp[i-1][c]-p[c].xs+p[c].ys);
+            }
+            for (auto c:I[l])
+                dp[i][c]=min({dp[i][c], p[c].xf+p[c].yf+s1.query(1, X, 1, 1, p[c].yf), p[c].xf-p[c].yf+s2.query(1, X, 1, p[c].yf, X)});
+        }
+        s1.build(1, X, 1);
+        s2.build(1, X, 1);
+        for (int l=X; l>=1; l--)
+        {
+            for (auto c:O[l])
+            {
+                s1.update(1, X, 1, p[c].ys, dp[i-1][c]+p[c].xs-p[c].ys);
+                s2.update(1, X, 1, p[c].ys, dp[i-1][c]+p[c].xs+p[c].ys);
+            }
+            for (auto c:I[l])
+                dp[i][c]=min({dp[i][c], -p[c].xf+p[c].yf+s1.query(1, X, 1, 1, p[c].yf), -p[c].xf-p[c].yf+s2.query(1, X, 1, p[c].yf, X)});
+        }
+        for (int j=1; j<=K; j++)
+            if (X+Y-p[j].xs-p[j].ys+dp[i][j]<ans)
+                ans=X+Y-p[j].xs-p[j].ys+dp[i][j], idx=i;
+    }
+    cout<<ans<<' '<<idx;
+}
