@@ -7905,8 +7905,8 @@ int main()
             for (auto c:I[l])
                 dp[i][c]=min({dp[i][c], -p[c].xf+p[c].yf+s1.query(1, X, 1, 1, p[c].yf), -p[c].xf-p[c].yf+s2.query(1, X, 1, p[c].yf, X)});
         }
-        for (int j=1; j<=K; j++)
-            if(X+Y-p[j].xs-p[j].ys+dp[i][j]<ans) ans=X+Y-p[j].xs-p[j].ys+dp[i][j], idx=i;
+        for (int j=1; j<=K; j++) if(X+Y-p[j].xs-p[j].ys+dp[i][j]<ans) ans=X+Y-p[j].xs-p[j].ys+dp[i][j], idx=i;
+            
                 
     }
     cout << ans << ' ' << idx;
