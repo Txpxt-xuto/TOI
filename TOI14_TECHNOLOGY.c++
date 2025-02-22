@@ -7907,3 +7907,42 @@ int main()
     }
     cout << ans << ' ' << idx;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+const int mx = 5e5 + 5;
+
+int cnt = 0, cpn = 0;
+vector<int> adj[mx];
+bool vis[mx];
+int mn[mx],dis[mx];
+void dfs(int u,int p) {
+    if (vis[u]) return;
+    vis[u] = 1;
+    dis[u] = mn[u] = ++cnt;
+    for (int v : adj[u]) {
+        if (v == p) continue;
+        if (!vis[v]) {
+            dfs(v,u);
+        }
+        mn[u] = min(mn[u],mn[v]);
+    }
+    if (mn[u] == dis[u]) cpn++;
+    return;
+}
+
+int main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    int n,m; cin >> n >> m;
+    while (m--) {
+        int u,v; cin >> u >> v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+
+    for (int i = 1;i <= n;i++) dfs(i,-1);
+    cout << cpn;
+
+    return 0;
+}
