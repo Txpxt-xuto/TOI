@@ -7918,7 +7918,7 @@ vector<int> adj[mx];
 bool vis[mx];
 int mn[mx],dis[mx];
 void dfs(int u,int p) {
-    if (vis[u]) return;
+    if(vis[u]) return;
     vis[u] = 1;
     dis[u] = mn[u] = ++cnt;
     for(int v : adj[u])
