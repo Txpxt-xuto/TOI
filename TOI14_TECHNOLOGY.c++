@@ -7940,7 +7940,7 @@ int main() {
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
-    for(int i = 1;i <= n;i++) dfs(i,-1);
+    for(int i=1;i<=n;i++) dfs(i,-1);
     cout << cpn;
     return 0;
 }
