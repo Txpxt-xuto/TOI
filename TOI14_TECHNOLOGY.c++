@@ -7879,7 +7879,7 @@ int main()
         if (ans<dp[1][i]+X+Y-p[i].xs-p[i].ys) ans=dp[1][i]+X+Y-p[i].xs-p[i].ys, idx=1;
         for (int j=2; j<=P; j++) dp[j][i]=1e9;
     }
-    for (int i=2; i<=P; i++)
+    for(int i=2; i<=P; i++)
     {
         s1.build(1, X, 1);
         s2.build(1, X, 1);
