@@ -7934,7 +7934,8 @@ void dfs(int u,int p) {
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
-    int n,m; cin >> n >> m;
+    int n,m;
+    cin >> n >> m;
     while(m--)
     {
         int u,v; cin >> u >> v;
