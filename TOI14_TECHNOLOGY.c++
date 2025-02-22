@@ -7894,7 +7894,7 @@ int main()
         }
         s1.build(1, X, 1);
         s2.build(1, X, 1);
-        for(int l=X; l>=1; l--)
+        for(int l=X;l>=1; l--)
         {
             for(auto c:O[l])
             {
