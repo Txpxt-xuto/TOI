@@ -7931,7 +7931,6 @@ void dfs(int u,int p) {
     if (mn[u] == dis[u]) cpn++;
     return;
 }
-
 int main()
 {
     ios_base::sync_with_stdio(0);
