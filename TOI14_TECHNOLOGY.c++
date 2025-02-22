@@ -7873,7 +7873,7 @@ int main()
     for (int i=1; i<=K; i++)
     {
         cin >> p[i].yf>>p[i].xf>>p[i].ys>>p[i].xs;
-    
+
         I[p[i].xf].push_back(i);
         O[p[i].xs].push_back(i);
         dp[1][i]=p[i].yf+p[i].xf-2;
