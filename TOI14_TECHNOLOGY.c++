@@ -7924,8 +7924,7 @@ void dfs(int u,int p) {
     for(int v : adj[u])
     {
         if(v == p) continue;
-        if(!vis[v]) {
-dfs(v,u);
+        if(!vis[v]) {dfs(v,u);
         }
         mn[u] = min(mn[u],mn[v]);
     }
