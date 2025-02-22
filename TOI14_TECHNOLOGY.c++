@@ -7921,7 +7921,7 @@ void dfs(int u,int p) {
     if (vis[u]) return;
     vis[u] = 1;
     dis[u] = mn[u] = ++cnt;
-    for (int v : adj[u])
+    for(int v : adj[u])
     {
         if (v == p) continue;
         if (!vis[v]) {
