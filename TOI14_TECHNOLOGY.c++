@@ -7911,7 +7911,7 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 
-const int mx = 5e5 + 5;
+cont int mx = 5e5 + 5;
 int cnt = 0, cpn = 0;
 vector<int> adj[mx];
 bool vis[mx];
