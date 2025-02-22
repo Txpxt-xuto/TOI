@@ -7917,7 +7917,8 @@ int cnt = 0, cpn = 0;
 vector<int> adj[mx];
 bool vis[mx];
 int mn[mx],dis[mx];
-void dfs(int u,int p) {
+void dfs(int u,int p)
+{
     if(vis[u]) return;
     vis[u] = 1;
     dis[u] = mn[u] = ++cnt;
