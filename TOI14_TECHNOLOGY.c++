@@ -7877,7 +7877,7 @@ int main()
         O[p[i].xs].push_back(i);
         dp[1][i]=p[i].yf+p[i].xf-2;
         if (ans<dp[1][i]+X+Y-p[i].xs-p[i].ys) ans=dp[1][i]+X+Y-p[i].xs-p[i].ys, idx=1;
-        forZint j=2; j<=P; j++) dp[j][i]=1e9;
+        for(int j=2; j<=P; j++) dp[j][i]=1e9;
     }
     for(int i=2;i<=P;i++)
     {
