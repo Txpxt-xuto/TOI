@@ -7925,7 +7925,7 @@ void dfs(int u,int p) {
     {
         if(v == p) continue;
         if(!vis[v]) dfs(v,u);
-        }
+
         mn[u] = min(mn[u],mn[v]);
     }
     if(mn[u] == dis[u]) cpn++;
