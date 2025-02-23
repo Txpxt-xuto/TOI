@@ -8010,11 +8010,11 @@ int main()
 				    chk[x][y]=true;
 				    cnt--;
 				    if(cnt<=0) goto cal;
-			}
-			if(cnt<=0) goto cal;
-			x++;
-			while(x<=k-1)
-            {
+			    }
+			    if(cnt<=0) goto cal;
+			    x++;
+			    while(x<=k-1)
+                {
 				chk[x][y]=true;
 				key[x][y]=cnti;
 				cnti++;
