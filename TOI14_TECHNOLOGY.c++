@@ -8015,12 +8015,12 @@ int main()
 			    x++;
 			    while(x<=k-1)
                 {
-				chk[x][y]=true;
-				key[x][y]=cnti;
-				cnti++;
-				x++;
-				cnt--;
-				if(cnt<=0) goto cal;
+				    chk[x][y]=true;
+				    key[x][y]=cnti;
+				    cnti++;
+				    x++;
+				    cnt--;
+				    if(cnt<=0) goto cal;
 			}
 			    if(cnt<=0) goto cal;
 			    if(x>k-1) x=k-1;
