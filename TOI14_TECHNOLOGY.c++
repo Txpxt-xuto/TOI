@@ -8005,11 +8005,11 @@ int main()
 			    for(int i=0;i<k-1;i++)
                 {
 				    y++;
-				key[x][y]=cnti;
-				cnti++;
-				chk[x][y]=true;
-				cnt--;
-				if(cnt<=0) goto cal;
+				    key[x][y]=cnti;
+				    cnti++;
+				    chk[x][y]=true;
+				    cnt--;
+				    if(cnt<=0) goto cal;
 			}
 			if(cnt<=0) goto cal;
 			x++;
