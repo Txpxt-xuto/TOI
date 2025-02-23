@@ -7994,10 +7994,10 @@ int main()
 				        cnt--;
 				        if(cnt<=0) goto cal;
 			        }
-			    first=true;
-			    rem=true;
-			    if(cnt<=0) goto cal;
-			}
+			        first=true;
+			        rem=true;
+			        if(cnt<=0) goto cal;
+			    }
 		}
 		if(x<0) x=0;
 		if(x==0)
