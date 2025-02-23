@@ -7994,7 +7994,7 @@ int main()
 				cnt--;
 				if(cnt<=0) goto cal;
 			}
-			first=true;
+			    first=true;
 			    rem=true;
 			if(cnt<=0) goto cal;
 			}
