@@ -8005,7 +8005,6 @@ int main()
 			for(int i=0;i<k-1;i++)
             {
 				y++;
-				//cout<<x<<" "<<y<<endl;
 				key[x][y]=cnti;
 				cnti++;
 				chk[x][y]=true;
