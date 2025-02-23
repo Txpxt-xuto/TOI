@@ -8000,8 +8000,8 @@ int main()
 			    }
 		    }
 		    if(x<0) x=0;
-		if(x==0)
-        {
+		    if(x==0)
+            {
 			for(int i=0;i<k-1;i++)
             {
 				y++;
