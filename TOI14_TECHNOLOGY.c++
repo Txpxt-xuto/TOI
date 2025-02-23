@@ -7953,7 +7953,7 @@ int main()
 {
 	int k;
 	string str;
-	cin>>k>>str;
+	cin>>k >>str;
 	bool chk[k][1000]={},first=true,rem=false;
 	int key[k][1000];
 	char ans[str.size()];
