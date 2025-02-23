@@ -7991,8 +7991,8 @@ int main()
 				        key[x][y]=cnti;
 				        cnti++;
 				        chk[x][y]=true;
-				cnt--;
-				if(cnt<=0) goto cal;
+				    cnt--;
+				    if(cnt<=0) goto cal;
 			    }
 			    first=true;
 			    rem=true;
