@@ -8021,7 +8021,7 @@ int main()
 				    x++;
 				    cnt--;
 				    if(cnt<=0) goto cal;
-			}
+			    }
 			    if(cnt<=0) goto cal;
 			    if(x>k-1) x=k-1;
 			}
