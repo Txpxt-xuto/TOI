@@ -8006,7 +8006,6 @@ int main(){
 			if(cnt<=0) goto cal;
 			x++;
 			while(x<=k-1){
-				//cout<<x<<" "<<y<<endl;
 				chk[x][y]=true;
 				key[x][y]=cnti;
 				cnti++;
