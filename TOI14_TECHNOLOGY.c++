@@ -7972,8 +7972,8 @@ int main()
 			    if(first)
                 {
 				    first=false;
-				while(x>=0)
-                {
+				    while(x>=0)
+                    {
 					chk[x][y]=true;
 					key[x][y]=cnti;
 					cnti++;
