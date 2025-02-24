@@ -7958,7 +7958,8 @@ int main()
 	int key[k][1000];
 	char ans[str.size()];
 	int x=k-1,y=0,cnt=str.size(),tmp=0,cnti=0;
-	if(k!=1){
+	if(k!=1)
+    {
 	while(1)
     {
 		if(x==k-1)
