@@ -7973,7 +7973,7 @@ int main()
 				first=false;
 				while(x>=0)
                 {
-					//cout<<x<<" "<<y<<endl;
+					
 					chk[x][y]=true;
 					key[x][y]=cnti;
 					cnti++;
