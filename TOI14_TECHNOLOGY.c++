@@ -7993,7 +7993,8 @@ int main(){
 			}
 		}
 		if(x<0) x=0;
-		if(x==0){
+		if(x==0)
+        {
 			for(int i=0;i<k-1;i++){
 				y++;
 				//cout<<x<<" "<<y<<endl;
@@ -8014,8 +8015,8 @@ int main(){
 				cnt--;
 				if(cnt<=0) goto cal;
 			}
-			if(cnt<=0) goto cal;
-			if(x>k-1) x=k-1;
+			    if(cnt<=0) goto cal;
+			    if(x>k-1) x=k-1;
 			}
 		}
 	}
