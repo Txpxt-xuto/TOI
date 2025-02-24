@@ -8032,7 +8032,6 @@ int main(){
 			if(chk[i][j]){
 				if(tmp<str.size())
                 {
-				//cout<<"key = "<<key[i][j]<<endl;
 				ans[key[i][j]]=str[tmp];
 				tmp++;
 				}
