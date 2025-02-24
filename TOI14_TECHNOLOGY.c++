@@ -7983,7 +7983,8 @@ int main()
 				    }
 				    if(cnt<=0) goto cal;
 			    }
-			    else{
+			    else
+                {
 				    for(int i=0;i<k-1;i++)
                     {
 				        y++;
