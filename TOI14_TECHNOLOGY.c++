@@ -7946,3 +7946,94 @@ int main()
     cout << cpn;
     return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int k;
+	string str;
+	cin>>k>>str;
+	bool chk[k][1000]={},first=true,rem=false;
+	int key[k][1000];
+	char ans[str.size()];
+	int x=k-1,y=0,cnt=str.size(),tmp=0,cnti=0;
+	if(k!=1){
+	while(1){
+		if(x==k-1){
+			if(rem){
+				x--;
+				rem=false;
+			}
+			if(first){
+				first=false;
+				while(x>=0){
+					//cout<<x<<" "<<y<<endl;
+					chk[x][y]=true;
+					key[x][y]=cnti;
+					cnti++;
+					x--;
+					cnt--;
+					if(cnt<=0) goto cal;
+				}
+				if(cnt<=0) goto cal;
+			}
+			else{
+				for(int i=0;i<k-1;i++){
+				y++;
+				//cout<<x<<" "<<y<<endl;
+				key[x][y]=cnti;
+				cnti++;
+				chk[x][y]=true;
+				cnt--;
+				if(cnt<=0) goto cal;
+			}
+			first=true;
+			rem=true;
+			if(cnt<=0) goto cal;
+			}
+		}
+		if(x<0) x=0;
+		if(x==0){
+			for(int i=0;i<k-1;i++){
+				y++;
+				//cout<<x<<" "<<y<<endl;
+				key[x][y]=cnti;
+				cnti++;
+				chk[x][y]=true;
+				cnt--;
+				if(cnt<=0) goto cal;
+			}
+			if(cnt<=0) goto cal;
+			x++;
+			while(x<=k-1){
+				//cout<<x<<" "<<y<<endl;
+				chk[x][y]=true;
+				key[x][y]=cnti;
+				cnti++;
+				x++;
+				cnt--;
+				if(cnt<=0) goto cal;
+			}
+			if(cnt<=0) goto cal;
+			if(x>k-1) x=k-1;
+			}
+		}
+	}
+	else{
+		cout<<str;
+		return 0;
+	}
+	cal:
+	for(int i=0;i<k;i++){
+		for(int j=0;j<1000;j++){
+			if(chk[i][j]){
+				if(tmp<str.size()){
+				//cout<<"key = "<<key[i][j]<<endl;
+				ans[key[i][j]]=str[tmp];
+				tmp++;
+				}
+			}
+		}
+	}
+	for(int i=0;i<str.size();i++) cout<<ans[i];
+}
