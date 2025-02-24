@@ -7962,8 +7962,8 @@ int main()
     {
 	    while(1)
         {
-		if(x==k-1)
-        {
+		    if(x==k-1)
+            {
 			if(rem)
             {
 				x--;
