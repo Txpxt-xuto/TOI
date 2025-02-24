@@ -8005,7 +8005,8 @@ int main(){
 			}
 			if(cnt<=0) goto cal;
 			x++;
-			while(x<=k-1){
+			while(x<=k-1)
+            {
 				chk[x][y]=true;
 				key[x][y]=cnti;
 				cnti++;
