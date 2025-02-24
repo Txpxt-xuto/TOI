@@ -7966,9 +7966,9 @@ int main()
             {
 			    if(rem)
                 {
-				x--;
-				rem=false;
-			}
+				    x--;
+				    rem=false;
+			    }
 			if(first)
             {
 				first=false;
