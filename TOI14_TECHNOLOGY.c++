@@ -7963,7 +7963,8 @@ int main()
     {
 		if(x==k-1)
         {
-			if(rem){
+			if(rem)
+            {
 				x--;
 				rem=false;
 			}
