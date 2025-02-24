@@ -8030,7 +8030,8 @@ int main(){
 		for(int j=0;j<1000;j++)
         {
 			if(chk[i][j]){
-				if(tmp<str.size()){
+				if(tmp<str.size())
+                {
 				//cout<<"key = "<<key[i][j]<<endl;
 				ans[key[i][j]]=str[tmp];
 				tmp++;
