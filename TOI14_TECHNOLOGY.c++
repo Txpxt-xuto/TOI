@@ -8019,7 +8019,8 @@ int main(){
 			}
 		}
 	}
-	else{
+	else
+    {
 		cout<<str;
 		return 0;
 	}
