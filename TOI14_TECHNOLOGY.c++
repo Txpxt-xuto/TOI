@@ -7979,7 +7979,7 @@ int main()
 					    cnti++;
 					    x--;
 					    cnt--;
-					i   f(cnt<=0) goto cal;
+					    if(cnt<=0) goto cal;
 				}
 				if(cnt<=0) goto cal;
 			}
