@@ -8029,7 +8029,8 @@ int main(){
     {
 		for(int j=0;j<1000;j++)
         {
-			if(chk[i][j]){
+			if(chk[i][j])
+            {
 				if(tmp<str.size())
                 {
 				    ans[key[i][j]]=str[tmp];
@@ -8038,5 +8039,5 @@ int main(){
 			}
 		}
 	}
-	for(int i=0;i<str.size();i++) cout<<ans[i];
+	for(int i=0;i<str.size();i++) cout << ans[i];
 }
