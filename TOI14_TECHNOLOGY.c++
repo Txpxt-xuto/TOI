@@ -7977,7 +7977,7 @@ int main()
 					    chk[x][y]=true;
 					    key[x][y]=cnti;
 					    cnti++;
-					x--;
+					    x--;
 					cnt--;
 					if(cnt<=0) goto cal;
 				}
