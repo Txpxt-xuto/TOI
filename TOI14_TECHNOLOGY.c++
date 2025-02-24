@@ -7968,7 +7968,8 @@ int main()
 				x--;
 				rem=false;
 			}
-			if(first){
+			if(first)
+            {
 				first=false;
 				while(x>=0){
 					//cout<<x<<" "<<y<<endl;
