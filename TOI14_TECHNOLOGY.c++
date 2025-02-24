@@ -7969,9 +7969,9 @@ int main()
 				    x--;
 				    rem=false;
 			    }
-			if(first)
-            {
-				first=false;
+			    if(first)
+                {
+				    f  irst=false;
 				while(x>=0)
                 {
 					chk[x][y]=true;
