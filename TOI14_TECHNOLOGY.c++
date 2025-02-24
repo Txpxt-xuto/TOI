@@ -8032,8 +8032,8 @@ int main(){
 			if(chk[i][j]){
 				if(tmp<str.size())
                 {
-				ans[key[i][j]]=str[tmp];
-				tmp++;
+				    ans[key[i][j]]=str[tmp];
+				    tmp++;
 				}
 			}
 		}
