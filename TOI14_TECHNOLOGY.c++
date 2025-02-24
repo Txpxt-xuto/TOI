@@ -7984,7 +7984,8 @@ int main()
 				    if(cnt<=0) goto cal;
 			    }
 			    else{
-				    for(int i=0;i<k-1;i++){
+				    for(int i=0;i<k-1;i++)
+                    {
 				    y++;
 				//cout<<x<<" "<<y<<endl;
 				key[x][y]=cnti;
