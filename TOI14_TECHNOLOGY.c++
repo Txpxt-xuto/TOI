@@ -8025,7 +8025,8 @@ int main(){
 		return 0;
 	}
 	cal:
-	for(int i=0;i<k;i++){
+	for(int i=0;i<k;i++)
+    {
 		for(int j=0;j<1000;j++){
 			if(chk[i][j]){
 				if(tmp<str.size()){
