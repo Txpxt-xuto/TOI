@@ -8021,7 +8021,7 @@ int main(){
 	}
 	else
     {
-		cout<<str;
+		cout<< str;
 		return 0;
 	}
 	cal:
