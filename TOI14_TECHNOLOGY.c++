@@ -7949,7 +7949,8 @@ int main()
 
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
 	int k;
 	string str;
 	cin>>k>>str;
