@@ -8141,7 +8141,7 @@ ll whipped_cream_price(int N, int M, vector<int> X, vector<int> Y) {
         if (solve(mid).s <= m) {
             r=mid;
         }
-        else 
+        elsel=mid+1;
         {
             
         }
