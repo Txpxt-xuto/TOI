@@ -8131,7 +8131,8 @@ pll solve(ll lambda) {// from icy
 }
 ll whipped_cream_price(int N, int M, vector<int> X, vector<int> Y) {
     n = N; m = M;
-    for (int i=1;i<=n;i++){
+    for (int i=1;i<=n;i++)
+    {
         x[i]=X[i - 1];
         y[i]=Y[i - 1];
     }
