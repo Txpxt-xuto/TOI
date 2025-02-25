@@ -8141,7 +8141,103 @@ ll whipped_cream_price(int N, int M, vector<int> X, vector<int> Y) {
         if (solve(mid).s <= m) {
             r=mid;
         }
-        else 
+        else /********************
+        * what  the  sigma *
+        ********************/
+       #include <iostream>
+       #include <vector>
+       #include <map>
+       #include <queue>
+       #include <algorithm>
+       #include <stack>
+       #include <ext/pb_ds/assoc_container.hpp>
+       #include <ext/pb_ds/tree_policy.hpp>
+       using namespace __gnu_pbds;
+       #define ordered_set(x) tree<x, null_type, less<x>, rb_tree_tag, tree_order_statistics_node_update>
+       using namespace std;
+       #define lgm cin.tie(0)->sync_with_stdio(0);
+       #define be(x) x.begin(),x.end()
+       #define ve vector
+       #define ll long long
+       #define ld long double
+       bool enabledb=0;
+       #define DB(CODE) cout<<'\t'<<CODE<<endl;
+       #define SP <<' '<<
+       #define ull unsigned ll
+       #define f first
+       #define s second
+       #define pii pair<int, int>
+       #define tii tuple<int,int,int>
+       #define pll pair<ll,ll>
+       #define sz(x) (int)x.size()
+       #define pb push_back
+       const ll mod = 1e9+7,maxn=200005;
+       const ll INF=(ll)1e15;
+       struct range {
+         int l,r,opt;
+           range(int _l, int _r, int _opt):
+               l(_l), r(_r), opt(_opt) {}
+       };
+       int n, m;
+       ll x[maxn], y[maxn];
+       pll dp[maxn];
+       pll solve(ll lambda) {// from icy
+           deque<range> opt_range;
+           dp[1] = make_pair(0ll, 0);
+           opt_range.pb({2,n,1});
+           auto cal_dp = [&](int i, int opt) {
+               return make_pair(lambda+dp[opt].first+(x[i]-x[opt])*(y[i]-y[opt]),dp[opt].s+1);
+           };
+           for (int i=2;i<=n;i++) {
+               int opt=opt_range[0].opt;
+               dp[i]=cal_dp(i,opt);
+               if (++opt_range[0].l>opt_range[0].r) {
+                   opt_range.pop_front();
+               }
+               auto bad = [&](range it) {
+                   return cal_dp(it.l, it.opt)>cal_dp(it.l, i);
+               };
+               while (!opt_range.empty() && bad(opt_range.back())) {
+                   opt_range.pop_back();
+               }
+               int start = i+1;
+               if (!opt_range.empty()) {
+                   auto [l,r,opt]=opt_range.back();
+                   while(l<r) {
+                       int mid = (l+r+1) >> 1;
+                       if(cal_dp(mid,opt)>cal_dp(mid,i)) {
+                           r=mid-1;
+                       } else {
+                           l=mid;
+                       }
+                   }
+                   start = l + 1;
+                   opt_range.back().r = l;
+               }
+               if (start<=n) {
+                   opt_range.pb({start, n, i});
+               }
+           }
+           return dp[n];
+       }
+       ll whipped_cream_price(int N, int M, vector<int> X, vector<int> Y) {
+           n = N; m = M;
+           for (int i=1;i<=n;i++) {
+               x[i]=X[i - 1];
+               y[i]=Y[i - 1];
+           }
+           ll l=0,r=4e12,mid;
+           while (l < r) {
+               mid = (l+r)>>1;
+               if (solve(mid).s <= m) {
+                   r=mid;
+               } else {
+                   l=mid+1;
+               }
+           }
+           pll x = solve(l);
+           return x.f-m*l;
+       }
         {
             
         }
