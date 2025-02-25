@@ -8124,8 +8124,6 @@ pll solve(ll lambda) {// from icy
 			opt_range.back().r = l;
 		}
 		if (start<=n) opt_range.pb({start, n, i});
-		
-		
 	}
 	return dp[n];
 }
