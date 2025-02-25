@@ -8136,7 +8136,7 @@ ll whipped_cream_price(int N, int M, vector<int> X, vector<int> Y) {
         y[i]=Y[i - 1];
     }
     ll l=0,r=4e12,mid;
-    while (l < r){
+    while(l < r){
         mid = (l+r)>>1;
         if(solve(mid).s <= m) r=mid;
             
