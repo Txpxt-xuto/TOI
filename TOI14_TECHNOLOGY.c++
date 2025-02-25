@@ -8123,7 +8123,7 @@ pll solve(ll lambda) {// from icy
 			start = l + 1;
 			opt_range.back().r = l;
 		}
-		if (start<=n){opt_range.pb({start, n, i});
+		if (start<=n){ opt_range.pb({start, n, i});
 			
 		}
 	}
