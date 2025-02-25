@@ -8144,7 +8144,7 @@ ll whipped_cream_price(int N, int M, vector<int> X, vector<int> Y) {
         else l=mid+1;
         {
             
-        }
+        
     }
     pll x = solve(l);
     return x.f-m*l;
