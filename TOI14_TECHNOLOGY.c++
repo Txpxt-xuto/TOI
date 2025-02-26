@@ -8204,7 +8204,7 @@ int main(){
         int ans=cal(a,b);
         for(int i=0;i<node.size();i++)
     
-            for(int j=i;j<node.size();j++) ans = min(ans,min(d[i][a]+d[j][b],d[i][b]+d[j][a])+d[i][node[j]]);
+        for(int j=i;j<node.size();j++) ans = min(ans,min(d[i][a]+d[j][b],d[i][b]+d[j][a])+d[i][node[j]]);
                 
 
     
