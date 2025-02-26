@@ -8189,7 +8189,8 @@ int main(){
         queue<int>Q;Q.push(node[i]);
         while(!Q.empty()){
             auto u=Q.front();Q.pop();
-            for(auto v:g[u]){
+            for(auto v:g[u])
+            {
                 if(!vis[v])
                 {
                     d[i][v]=d[i][u]+1;
