@@ -8145,3 +8145,65 @@ ll whipped_cream_price(int N, int M, vector<int> X, vector<int> Y) {
     pll x = solve(l);
     return x.f-m*l;
 }
+
+#include "bits/stdc++.h"
+#define f first
+#define s second
+#define ll long long
+#define pb push_back
+#define pii pair<ll,ll>
+using namespace std;
+int add;
+const int N=(1<<18)+5;
+vector<int>g[N];
+int d[15][N]{0};
+bool vis[N]{0};
+int cal(int a,int b){
+    if((a<add&&b>add)||(a>add&&b<add))return 1e9;
+    int cnt=0;
+    if(a>add)a-=add,b-=add;
+    while(a!=b){
+        if(a>b)a>>=1;
+        else b>>=1;
+        cnt++;
+    }return cnt;
+}
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int k,q,l;cin>>k>>l>>q;
+    add =(1<<k);
+    for(int i=1;i<=(1<<(k-1))-1;i++){
+        g[i].pb(2*i);g[i].pb(2*i+1);
+        g[2*i].pb(i);g[2*i+1].pb(i);
+        g[i+add].pb(2*i+add);g[i+add].pb(2*i+add+1);
+        g[2*i+add].pb(i+add);g[2*i+1+add].pb(i+add);
+    }vector<int>node;
+    for(int i=1;i<=l;i++){
+        int u,v;cin>>u>>v;g[u].pb(v);g[v].pb(u);
+        node.pb(v);node.pb(u);
+    }sort(node.begin(),node.end());
+    node.erase(unique(node.begin(),node.end()),node.end());
+    for(int i=0;i<node.size();i++){
+        d[i][node[i]]=0;
+        vis[node[i]]=1;
+        queue<int>Q;Q.push(node[i]);
+        while(!Q.empty()){
+            auto u=Q.front();Q.pop();
+            for(auto v:g[u]){
+                if(!vis[v]){
+                    d[i][v]=d[i][u]+1;
+                    vis[v]=1;Q.push(v);
+                }
+            }
+        }memset(vis,0,sizeof vis);
+    }
+    while(q--){
+        int a,b;cin>>a>>b;
+        int ans=cal(a,b);
+        for(int i=0;i<node.size();i++){
+            for(int j=i;j<node.size();j++){
+                ans=min(ans,min(d[i][a]+d[j][b],d[i][b]+d[j][a])+d[i][node[j]]);
+            }
+        }cout<<ans<<"\n";
+    }
+}
