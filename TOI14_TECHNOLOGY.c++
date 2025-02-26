@@ -8199,7 +8199,8 @@ int main(){
             }
         }memset(vis,0,sizeof vis);
     }
-    while(q--){
+    while(q--)
+    {
         int a,b;
         cin >> a >> b;
         int ans=cal(a,b);
