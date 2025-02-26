@@ -8200,7 +8200,8 @@ int main(){
         }memset(vis,0,sizeof vis);
     }
     while(q--){
-        int a,b;cin>>a>>b;
+        int a,b;
+        cin>>a>>b;
         int ans=cal(a,b);
         for(int i=0;i<node.size();i++)
     
