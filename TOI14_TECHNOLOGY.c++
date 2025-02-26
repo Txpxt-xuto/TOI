@@ -8190,7 +8190,8 @@ int main(){
         while(!Q.empty()){
             auto u=Q.front();Q.pop();
             for(auto v:g[u]){
-                if(!vis[v]){
+                if(!vis[v])
+                {
                     d[i][v]=d[i][u]+1;
                     vis[v]=1;Q.push(v);
                 }
