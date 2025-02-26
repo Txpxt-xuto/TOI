@@ -8187,7 +8187,8 @@ int main(){
         d[i][node[i]]=0;
         vis[node[i]]=1;
         queue<int>Q;Q.push(node[i]);
-        while(!Q.empty()){
+        while(!Q.empty())
+        {
             auto u=Q.front();Q.pop();
             for(auto v:g[u])
             {
