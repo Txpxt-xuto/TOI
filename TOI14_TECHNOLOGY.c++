@@ -8206,7 +8206,7 @@ int main(){
         
             for(int j=i;j<node.size();j++) ans = min(ans,min(d[i][a]+d[j][b],d[i][b]+d[j][a])+d[i][node[j]]);
                 
-    
+
         }
         cout<<ans<<"\n";
     }
