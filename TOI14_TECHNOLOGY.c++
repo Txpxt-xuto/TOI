@@ -8201,7 +8201,7 @@ int main(){
     }
     while(q--){
         int a,b;
-        cin>>a>>b;
+        cin>>a>> b;
         int ans=cal(a,b);
         for(int i=0;i<node.size();i++)
     
