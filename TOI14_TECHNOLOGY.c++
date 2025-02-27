@@ -8222,6 +8222,6 @@ int main()
         cin >> a >> b;
         int ans=cal(a,b);
         for(int i=0;i<node.size();i++) for(int j=i;j<node.size();j++) ans = min(ans,min(d[i][a]+d[j][b],d[i][b]+d[j][a])+d[i][node[j]]);
-        cout<<ans<< "\n";
+        cout<<ans << "\n";
     }
 }
