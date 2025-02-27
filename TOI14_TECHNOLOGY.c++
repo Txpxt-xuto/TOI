@@ -8189,7 +8189,7 @@ int main()
     for(int i=1;i<=l;i++)
     {
         int u,v;
-        cin>>u>>v;g[u].pb(v);g[v].pb(u);
+        cin >>u>>v;g[u].pb(v);g[v].pb(u);
         node.pb(v);node.pb(u);
     }
     sort(node.begin(),node.end());
