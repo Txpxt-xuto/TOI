@@ -8190,7 +8190,8 @@ int main()
     {
         int u,v;cin>>u>>v;g[u].pb(v);g[v].pb(u);
         node.pb(v);node.pb(u);
-    }sort(node.begin(),node.end());
+    }
+    sort(node.begin(),node.end());
     node.erase(unique(node.begin(),node.end()),node.end());
     for(int i=0;i<node.size();i++){
         d[i][node[i]]=0;
