@@ -8176,7 +8176,7 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int k,q,l;
-    cin>>k>> l >>q;
+    cin>>k>> l >> q;
     add =(1<<k);
     for(int i=1;i<=(1<<(k-1))-1;i++){
         g[i].pb(2*i);g[i].pb(2*i+1);
