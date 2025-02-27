@@ -8186,7 +8186,8 @@ int main()
         g[2*i+add].pb(i+add);g[2*i+1+add].pb(i+add);
     }
     vector<int>node;
-    for(int i=1;i<=l;i++){
+    for(int i=1;i<=l;i++)
+    {
         int u,v;cin>>u>>v;g[u].pb(v);g[v].pb(u);
         node.pb(v);node.pb(u);
     }sort(node.begin(),node.end());
