@@ -8158,7 +8158,8 @@ const int N=(1<<18)+5;
 vector<int>g[N];
 int d[15][N]{0};
 bool vis[N]{0};
-int cal(int a,int b){
+int cal(int a,int b)
+{
     if((a<add&&b>add)||(a>add&&b<add))return 1e9;
     int cnt=0;
     if(a>add)a-=add,b-=add;
