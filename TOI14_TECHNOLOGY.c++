@@ -8173,7 +8173,8 @@ int cal(int a,int b)
 }
 int main()
 {
-    ios_base::sync_with_stdio(0);cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int k,q,l;cin>>k>>l>>q;
     add =(1<<k);
     for(int i=1;i<=(1<<(k-1))-1;i++){
