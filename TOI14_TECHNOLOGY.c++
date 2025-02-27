@@ -8213,7 +8213,8 @@ int main()
                     vis[v]=1;Q.push(v);
                 }
             }
-        }memset(vis,0,sizeof vis);
+        }
+        memset(vis,0,sizeof vis);
     }
     while(q--)
     {
