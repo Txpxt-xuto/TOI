@@ -8168,7 +8168,8 @@ int cal(int a,int b)
         if(a>b) a>>=1;
         else b>>=1;
         cnt++;
-    }return cnt;
+    }
+    return cnt;
 }
 int main(){
     ios_base::sync_with_stdio(0);cin.tie(0);
