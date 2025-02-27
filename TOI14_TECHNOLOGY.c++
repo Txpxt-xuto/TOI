@@ -8189,7 +8189,7 @@ int main()
     for(int i=1;i<=l;i++)
     {
         int u,v;
-        cin >> u >>v;
+        cin >> u >> v;
         g[u].pb(v);
         g[v].pb(u);
         node.pb(v);
@@ -8197,7 +8197,8 @@ int main()
     }
     sort(node.begin(),node.end());
     node.erase(unique(node.begin(),node.end()),node.end());
-    for(int i=0;i<node.size();i++){
+    for(int i=0;i<node.size();i++)
+    {
         d[i][node[i]]=0;
         vis[node[i]]=1;
         queue<int>Q;Q.push(node[i]);
