@@ -8190,7 +8190,8 @@ int main()
     {
         int u,v;
         cin >>u >>v;
-        g[u].pb(v);g[v].pb(u);
+        g[u].pb(v);
+        g[v].pb(u);
         node.pb(v);node.pb(u);
     }
     sort(node.begin(),node.end());
