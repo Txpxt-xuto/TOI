@@ -8162,7 +8162,7 @@ int cal(int a,int b)
 {
     if((a<add&&b>add)||(a>add&&b<add)) return 1e9;
     int cnt=0;
-    if(a>add)a-=add,b-=add;
+    if(a>add) a-=add,b-=add;
     while(a!=b){
         if(a>b)a>>=1;
         else b>>=1;
