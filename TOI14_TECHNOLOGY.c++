@@ -8160,7 +8160,7 @@ int d[15][N]{0};
 bool vis[N]{0};
 int cal(int a,int b)
 {
-    if((a<add&&b>add)||(a>add&&b<add))return 1e9;
+    if((a<add&&b>add)||(a>add&&b<add)) return 1e9;
     int cnt=0;
     if(a>add)a-=add,b-=add;
     while(a!=b){
