@@ -8165,7 +8165,7 @@ int cal(int a,int b)
     if(a>add) a-=add,b-=add;
     while(a!=b)
     {
-        if(a>b)a>>=1;
+        if(a>b) a>>=1;
         else b>>=1;
         cnt++;
     }return cnt;
