@@ -8177,8 +8177,9 @@ int main()
     cin.tie(0);
     int k,q,l;
     cin >> k >> l >> q;
-    add =(1<<k);
-    for(int i=1;i<=(1<<(k-1))-1;i++){
+    add = (1<<k);
+    for(int i=1;i<=(1<<(k-1))-1;i++)
+    {
         g[i].pb(2*i);g[i].pb(2*i+1);
         g[2*i].pb(i);g[2*i+1].pb(i);
         g[i+add].pb(2*i+add);g[i+add].pb(2*i+add+1);
