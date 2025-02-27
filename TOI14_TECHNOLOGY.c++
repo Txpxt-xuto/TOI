@@ -8192,7 +8192,8 @@ int main()
         cin >>u >>v;
         g[u].pb(v);
         g[v].pb(u);
-        node.pb(v);node.pb(u);
+        node.pb(v);
+        node.pb(u);
     }
     sort(node.begin(),node.end());
     node.erase(unique(node.begin(),node.end()),node.end());
