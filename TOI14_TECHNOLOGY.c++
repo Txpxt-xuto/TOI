@@ -8097,8 +8097,7 @@ pll solve(ll lambda)
     {
 		int opt=opt_range[0].opt;
 		dp[i]=cal_dp(i,opt);
-		if (++opt_range[0].l>opt_range[0].r)
-			opt_range.pop_front();
+		if (++opt_range[0].l>opt_range[0].r)opt_range.pop_front();
 		auto bad = [&](range it) {
 			return cal_dp(it.l, it.opt)>cal_dp(it.l, i);
 		};
