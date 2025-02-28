@@ -8099,7 +8099,7 @@ pll solve(ll lambda)
 		dp[i]=cal_dp(i,opt);
 		if (++opt_range[0].l>opt_range[0].r) opt_range.pop_front();
 		auto bad = [&](range it) return cal_dp(it.l, it.opt)>cal_dp(it.l, i);
-
+		while (!opt_range.empty() && bad(opt_range.back())) opt_range.pop_back();
 		int start = i+1;
 		if (!opt_range.empty()) {
 			auto [l,r,opt]=opt_range.back();
