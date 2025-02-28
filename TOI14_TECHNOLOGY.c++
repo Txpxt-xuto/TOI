@@ -8105,8 +8105,8 @@ pll solve(ll lambda)
 			auto [l,r,opt]=opt_range.back();
 			while(l<r) {
 				int mid = (l+r+1) >> 1;
-				if(cal_dp(mid,opt)>cal_dp(mid,i)) {
-					r=mid-1;
+				if(cal_dp(mid,opt)>cal_dp(mid,i)) r=mid-1;
+					
 				else l=mid;
 					
 				
