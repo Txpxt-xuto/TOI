@@ -8087,7 +8087,8 @@ struct range {
 int n, m;
 ll x[maxn], y[maxn];
 pll dp[maxn];
-pll solve(ll lambda) {
+pll solve(ll lambda)
+{
 	deque<range> opt_range;
     dp[1] = make_pair(0ll, 0);
 	opt_range.pb({2,n,1});
