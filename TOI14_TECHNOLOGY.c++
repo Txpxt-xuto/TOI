@@ -8109,7 +8109,7 @@ pll solve(ll lambda)
 					r=mid-1;
 				else
 					l=mid;
-				}
+				
 			}
 			start = l + 1;
 			opt_range.back().r = l;
