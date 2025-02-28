@@ -8086,7 +8086,7 @@ struct range {
 };
 int n, m;
 ll x[maxn], y[maxn];
-pll dp[maxn]
+pll dp[maxn];
 pll solve(ll lambda) {// fro
 	deque<range> opt_range;
     dp[1] = make_pair(0ll, 0);
