@@ -8092,7 +8092,7 @@ pll solve(ll lambda)
 	deque<range> opt_range;
     dp[1] = make_pair(0ll, 0);
 	opt_range.pb({2,n,1});
-	auto cal_dp = [&](int i, int opt) {return make_pair(lambda+dp[opt].first+(x[i]-x[opt])*(y[i]-y[opt]),dp[opt].s+1);
+	auto cal_dp = [&](int i, int opt) return make_pair(lambda+dp[opt].first+(x[i]-x[opt])*(y[i]-y[opt]),dp[opt].s+1);
 		
 	};
 	for (int i=2;i<=n;i++) {
