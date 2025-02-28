@@ -8050,9 +8050,6 @@ int main()
 	for(int i=0;i<str.size();i++) cout << ans[i];
 }
 
-/********************
- * what  the  sigma *
- ********************/
 #include <iostream>
 #include <vector>
 #include <map>
