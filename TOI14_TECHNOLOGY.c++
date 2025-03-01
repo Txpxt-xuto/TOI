@@ -8506,7 +8506,8 @@ int main(){
         cin >> st >> ed >> u;
         int sz=ed-st+1;
         int l=0,r=sz;
-        while(l<r){
+        while(l<r)
+        {
             int mid=(l+r+1)/2;
             if(query(1,n,rt[st-1],rt[ed],mid)>=u*mid)l=mid;
             else r=mid-1;
