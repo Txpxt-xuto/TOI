@@ -8420,7 +8420,8 @@ int main(){
             u1(1,0,sz(cyc)-1,l,r,v);
             cout<<tree[1]-t[1].f<<" "<<t[1].s<<"\n";
         }
-        else {
+        else
+        {
             u22(1,1,n,l,r);
             u12(1,1,n,l,r,v);
             l=lower_bound(cyc.begin(),cyc.end(),l)-cyc.begin();
