@@ -8435,10 +8435,8 @@ int main(){
 #include<bits/stdc++.h>
 
 using namespace std;
-
 typedef long long ll;
 typedef double db;
-
 const int N=1e5+5;
 
 struct node{
