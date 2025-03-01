@@ -8510,7 +8510,7 @@ int main(){
         while(l<r)
         {
             int mid=(l+r+1)/2;
-            if(query(1,n,rt[st-1],rt[ed],mid)>=u*mid)l=mid;
+            if(query(1,n,rt[st-1],rt[ed],mid)>=u*mid) l=mid;
             else r=mid-1;
         }
         cout << (l>0?sz-l:-1) << '\n';
