@@ -8476,7 +8476,7 @@ void update(int l,int r,nodeptr &t,int x,db v,nodeptr k)
     t->f++;
     if(l==r) return;
     int m=(l+r)/2;
-    if(x<=m)u pdate(l,m,t->l,x,v,k->l);
+    if(x<=m) update(l,m,t->l,x,v,k->l);
     else update(m+1,r,t->r,x,v,k->r);
 }
 
