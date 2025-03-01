@@ -8479,9 +8479,10 @@ void update(int l,int r,nodeptr &t,int x,db v,nodeptr k){
     else update(m+1,r,t->r,x,v,k->r);
 }
 
-db query(int l,int r,nodeptr t,nodeptr k,int v){
-    if(v<=0)return 0;
-    if(l==r)return k->v-t->v;
+db query(int l,int r,nodeptr t,nodeptr k,int v)
+{
+    if(v<=0) eturn 0;
+    if(l==r) return k->v-t->v;
     db sum=k->r->v-t->r->v;
     int freq=k->r->f-t->r->f;
     int m=(l+r)/2;
