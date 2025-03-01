@@ -8386,7 +8386,8 @@ void dfs(int u,int p){
             pr[v.f]={u,v.s};
             dfs(v.f,u);
         }
-        else if(vis[v.f]&&!cv[v.f]&&!cv[u]){
+        else if(vis[v.f]&&!cv[v.f]&&!cv[u])
+        {
             int x=u;
             cyc.pb(v.s);
             while(x!=v.f)
