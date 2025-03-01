@@ -8543,11 +8543,12 @@ int main()
     cin.tie(nullptr)->sync_with_stdio(false);
     int n,m,a,b;
     cin >> n >> m >> a >> b;
-    if(a>b)swap(a,b);
+    if(a>b) swap(a,b);
     vector<vector<int>> adj(n);
     vector<int> c(m);
     vector<int> id;
-    for(auto &w:c){
+    for(auto &w:c)
+    {
         int u,v;
         cin >> u >> v >> w;
         u--,v--;
