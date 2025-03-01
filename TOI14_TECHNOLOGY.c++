@@ -8162,6 +8162,7 @@ int cal(int a,int b)
     }
     return cnt;
 }
+
 int main()
 {
     ios_base::sync_with_stdio(0);
