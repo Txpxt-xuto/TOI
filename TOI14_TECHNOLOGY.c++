@@ -8439,7 +8439,8 @@ typedef long long ll;
 typedef double db;
 const int N=1e5+5;
 
-struct node{
+struct node
+{
     db v;
     int f;
     node *l,*r;
