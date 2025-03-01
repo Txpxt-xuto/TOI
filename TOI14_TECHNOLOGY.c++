@@ -8277,7 +8277,8 @@ void u12(int i,int l,int r,int tl,int tr,ll v)
     {
         lazy[i]+=v;push12(i,l,r);
         return;
-    }int m=(l+r)>>1;
+    }
+    int m=(l+r)>>1;
     u12(2*i,l,m,tl,tr,v);
     u12(2*i+1,m+1,r,tl,tr,v);
     tree[i]=tree[2*i]+tree[2*i+1];
