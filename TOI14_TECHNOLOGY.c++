@@ -8413,7 +8413,8 @@ int main(){
     build2(1,1,n);
     while(q--)
     {
-        int x,l,r;ll v;cin>>x>>l>>r>>v;
+        int x,l,r;ll v;
+        cin>>x>>l>>r>>v;
         if(x==1)
         {
             u12(1,1,n,l,r,v);
