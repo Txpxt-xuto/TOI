@@ -8489,7 +8489,8 @@ db query(int l,int r,nodeptr t,nodeptr k,int v){
     return query(m+1,r,t->r,k->r,v);
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m;
     for(int i=1;i<=n;i++)
