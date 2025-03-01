@@ -8289,7 +8289,8 @@ void u22(int i,int l,int r,int tl,int tr)
     if(r<tl||l>tr)return;
     if(l>=tl&&r<=tr)
     {
-        lazy2[i]=1;push12(i,l,r);
+        lazy2[i]=1;
+        push12(i,l,r);
         return;
     }
     int m=(l+r)>>1;
