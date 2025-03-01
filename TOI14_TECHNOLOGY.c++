@@ -8401,12 +8401,15 @@ void dfs(int u,int p){
 int main(){
     ios_base::sync_with_stdio(false);cin.tie(NULL);
     int n,q;cin>>n>>q;
-    for(int i=1;i<=n;i++){
-        int u,v;ll w;cin>>u>>v>>w;
+    for(int i=1;i<=n;i++)
+    {
+        int u,v;ll w;
+        cin>>u>>v>>w;
         g[u].pb({v,i});
         g[v].pb({u,i});
         e[i]=w;
-    }pr[1]={1,0};
+    }
+    pr[1]={1,0};
     dfs(1,1);
     sort(cyc.begin(),cyc.end());
     build(1,0,sz(cyc)-1);
