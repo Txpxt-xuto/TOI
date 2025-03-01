@@ -8345,8 +8345,11 @@ void u1(int i,int l,int r,int tl,int tr,ll v)
 {
     push(i,l,r);
     if(r<tl||l>tr)return;
-    if(l>=tl&&r<=tr){
-        lz[i]+=v;push(i,l,r);return;
+    if(l>=tl&&r<=tr)
+    {
+        lz[i]+=v;
+        push(i,l,r);
+        return;
     }int m=(l+r)>>1;
     u1(2*i,l,m,tl,tr,v);
     u1(2*i+1,m+1,r,tl,tr,v);
