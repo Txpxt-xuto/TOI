@@ -8415,7 +8415,7 @@ int main(){
     {
         int x,l,r;
         ll v;
-        cin>>x >> l >> r>>v;
+        cin>>x >> l >> r >> v;
         if(x==1)
         {
             u12(1,1,n,l,r,v);
