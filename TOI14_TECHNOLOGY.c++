@@ -8269,7 +8269,8 @@ void push12(int i,int l,int r)
     }
     lazy[i]=0;
 }
-void u12(int i,int l,int r,int tl,int tr,ll v){
+void u12(int i,int l,int r,int tl,int tr,ll v)
+{
     push12(i,l,r);
     if(r<tl||l>tr)return;
     if(l>=tl&&r<=tr){
