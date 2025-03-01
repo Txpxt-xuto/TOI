@@ -8245,7 +8245,8 @@ void build2(int i,int l,int r)
 }
 void push22(int i,int l,int r)
 {
-    if(lazy2[i]){
+    if(lazy2[i])
+    {
         tree[i]=0;
         if(l<r){
             lazy2[2*i]=lazy2[i];
