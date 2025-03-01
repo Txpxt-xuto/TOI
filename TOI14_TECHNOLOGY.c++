@@ -8275,7 +8275,8 @@ void u12(int i,int l,int r,int tl,int tr,ll v)
     if(r<tl||l>tr) return;
     if(l>=tl&&r<=tr)
     {
-        lazy[i]+=v;push12(i,l,r);return;
+        lazy[i]+=v;push12(i,l,r);
+        return;
     }int m=(l+r)>>1;
     u12(2*i,l,m,tl,tr,v);
     u12(2*i+1,m+1,r,tl,tr,v);
