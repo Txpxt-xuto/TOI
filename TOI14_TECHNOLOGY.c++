@@ -8486,7 +8486,7 @@ db query(int l,int r,nodeptr t,nodeptr k,int v)
     db sum=k->r->v-t->r->v;
     int freq=k->r->f-t->r->f;
     int m=(l+r)/2;
-    if(freq<=v)return sum+query(l,m,t->l,k->l,v-freq);
+    if(freq<=v) return sum+query(l,m,t->l,k->l,v-freq);
     return query(m+1,r,t->r,k->r,v);
 }
 
