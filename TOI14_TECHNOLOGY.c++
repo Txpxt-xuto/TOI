@@ -8469,7 +8469,8 @@ void build(int l,int r,nodeptr &t){
     t->f=t->l->f+t->r->f;
 }
 
-void update(int l,int r,nodeptr &t,int x,db v,nodeptr k){
+void update(int l,int r,nodeptr &t,int x,db v,nodeptr k)
+{
     t=new node(*k);
     t->v+=v;
     t->f++;
