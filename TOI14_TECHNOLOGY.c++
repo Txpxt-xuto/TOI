@@ -8254,7 +8254,8 @@ void push22(int i,int l,int r)
             lazy2[2*i+1]=lazy2[i];
             lazy[2*i]=0;
             lazy[2*i+1]=0;
-        }lazy2[i]=0;
+        }
+        lazy2[i]=0;
     }
 }
 void push12(int i,int l,int r){
