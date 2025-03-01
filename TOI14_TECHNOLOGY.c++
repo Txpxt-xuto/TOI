@@ -8411,7 +8411,8 @@ int main(){
     sort(cyc.begin(),cyc.end());
     build(1,0,sz(cyc)-1);
     build2(1,1,n);
-    while(q--){
+    while(q--)
+    {
         int x,l,r;ll v;cin>>x>>l>>r>>v;
         if(x==1)
         {
