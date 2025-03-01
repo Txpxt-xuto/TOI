@@ -8563,7 +8563,8 @@ int main()
     sort(id.begin(),id.end());
     id.erase(unique(id.begin(),id.end()),id.end());
     int s=id.size();
-    if(m>0&&c[0]<=a){
+    if(m>0&&c[0]<=a)
+    {
         cout << -1;
         exit(0);
     }
