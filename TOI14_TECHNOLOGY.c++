@@ -8318,7 +8318,8 @@ void build(int i,int l,int r)
 }
 void push2(int i,int l,int r)
 {
-    if(lz2[i]){
+    if(lz2[i])
+    {
         t[i].f=0;
         t[i].s=r-l+1;
         if(l<r){
