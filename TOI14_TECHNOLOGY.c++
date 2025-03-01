@@ -8459,7 +8459,8 @@ nodeptr rt[N];
 int mp[N];
 vector<pair<db,int>> tb;
 
-void build(int l,int r,nodeptr &t){
+void build(int l,int r,nodeptr &t)
+{
     t=new node();
     if(l==r)return;
     int m=(l+r)/2;
