@@ -8262,7 +8262,8 @@ void push12(int i,int l,int r)
 {
     push22(i,l,r);
     tree[i]+=lazy[i]*(r-l+1);
-    if(l<r){
+    if(l<r)
+    {
         lazy[2*i]+=lazy[i];
         lazy[2*i+1]+=lazy[i];
     }lazy[i]=0;
