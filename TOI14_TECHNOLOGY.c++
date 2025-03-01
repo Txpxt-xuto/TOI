@@ -8498,7 +8498,7 @@ int main(){
         tb.emplace_back(a[i],i);
     }
     sort(tb.begin(),tb.end());
-    for(int i=0;i<n;i++)mp[tb[i].second]=i+1;
+    for(int i=0;i<n;i++) mp[tb[i].second]=i+1;
     build(1,n,rt[0]);
     for(int i=1;i<=n;i++) update(1,n,rt[i],mp[i],a[i],rt[i-1]);
     while(m--)
