@@ -8439,7 +8439,7 @@ int main()
             r=upper_bound(cyc.begin(),cyc.end(),r)-cyc.begin()-1;
             u2(1,0,sz(cyc)-1,l,r);
             u1(1,0,sz(cyc)-1,l,r,v);
-            cout << tree[1]-t[1].f<<" " << t[1].s<< "\n";
+            cout << tree[1]-t[1].f << " " << t[1].s << "\n";
         }
     }
 }
