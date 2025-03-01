@@ -8380,7 +8380,8 @@ pii qr(int i,int l,int r,int tl,int tr){
 }
 void dfs(int u,int p){
     vis[u]=1;
-    for(auto v:g[u]){
+    for(auto v:g[u])
+    {
         if(v.f==p)continue;
         if(!vis[v.f])
         {
