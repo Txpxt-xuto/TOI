@@ -8080,7 +8080,7 @@ bool enabledb=0;
 const ll mod = 1e9+7,maxn=200005;
 const ll INF=(ll)1e15;
 struct range {
-  int l,r,opt;
+    int l,r,opt;
 	range(int _l, int _r, int _opt):
 		l(_l), r(_r), opt(_opt) {}
 };
