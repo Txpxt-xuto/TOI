@@ -8344,7 +8344,7 @@ void push(int i,int l,int r)
 void u1(int i,int l,int r,int tl,int tr,ll v)
 {
     push(i,l,r);
-    if(r<tl||l>tr)return;
+    if(r<tl||l>tr) return;
     if(l>=tl&&r<=tr)
     {
         lz[i]+=v;
