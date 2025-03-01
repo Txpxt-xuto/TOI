@@ -8299,7 +8299,8 @@ void u22(int i,int l,int r,int tl,int tr)
     u22(2*i+1,m+1,r,tl,tr);
     tree[i]=tree[2*i]+tree[2*i+1];
 }
-ll qr2(int i,int l,int r,int tl,int tr){
+ll qr2(int i,int l,int r,int tl,int tr)
+{
     push12(i,l,r);
     if(r<tl||l>tr)return 0;
     if(l>=tl&&r<=tr)return tree[i];
