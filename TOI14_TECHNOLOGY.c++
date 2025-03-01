@@ -8451,7 +8451,6 @@ struct node{
 };
 
 typedef node* nodeptr;
-
 int n,m;
 db u;
 db a[N],qs[N];
