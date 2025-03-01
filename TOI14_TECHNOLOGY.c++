@@ -8492,7 +8492,8 @@ db query(int l,int r,nodeptr t,nodeptr k,int v){
 int main(){
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m;
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         cin >> a[i];
         qs[i]=a[i]+qs[i-1];
         tb.emplace_back(a[i],i);
