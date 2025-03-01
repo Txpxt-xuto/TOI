@@ -8462,7 +8462,7 @@ vector<pair<db,int>> tb;
 void build(int l,int r,nodeptr &t)
 {
     t=new node();
-    if(l==r)return;
+    if(l==r) return;
     int m=(l+r)/2;
     build(l,m,t->l);
     build(m+1,r,t->r);
