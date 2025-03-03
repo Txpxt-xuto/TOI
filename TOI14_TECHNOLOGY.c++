@@ -8360,7 +8360,7 @@ void u1(int i,int l,int r,int tl,int tr,ll v)
 void u2(int i,int l,int r,int tl,int tr)
 {
     push(i,l,r);
-    if(r<tl||l>tr)return;
+    if(r<tl||l>tr) return;
     if(l>=tl&&r<=tr)
     {
         lz2[i]=1;
