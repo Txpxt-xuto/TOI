@@ -8571,7 +8571,7 @@ int main()
     int cnt=0;
     for(int i=0;i<m;i++){
         if(c[i]<=b) cnt++;
-           
+
         }
     }
     for(auto &v:adj) sort(v.begin(),v.end());
