@@ -8381,7 +8381,7 @@ pii qr(int i,int l,int r,int tl,int tr)
     int m=(l+r)>>1;
     pii le=qr(2*i,l,m,tl,tr);
     pii re=qr(2*i+1,m+1,r,tl,tr);
-    if(le.f==re.f)return {le.f,le.s+re.s};
+    if(le.f==re.f) return {le.f,le.s+re.s};
     else return max(le,re);
 }
 void dfs(int u,int p)
