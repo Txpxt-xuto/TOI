@@ -8373,10 +8373,11 @@ void u2(int i,int l,int r,int tl,int tr)
     if(t[2*i].f==t[2*i+1].f)t[i]={t[2*i].f,t[2*i].s+t[2*i+1].s};
     else t[i]=max(t[2*i],t[2*i+1]);
 }
-pii qr(int i,int l,int r,int tl,int tr){
+pii qr(int i,int l,int r,int tl,int tr)
+{
     push(i,l,r);
-    if(r<tl||l>tr)return {0,0};
-    if(l>=tl&&r<=tr)return t[i];
+    if(r<tl||l>tr) return {0,0};
+    if(l>=tl&&r<=tr) return t[i];
     int m=(l+r)>>1;
     pii le=qr(2*i,l,m,tl,tr);
     pii re=qr(2*i+1,m+1,r,tl,tr);
