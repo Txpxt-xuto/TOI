@@ -8575,8 +8575,6 @@ int main()
         }
     }
     for(auto &v:adj){sort(v.begin(),v.end());
-        
-    }
     vector<vector<int>> dp(s,vector<int>(s));
     for(int r=0;r<s;r++){
         int cur=0;
