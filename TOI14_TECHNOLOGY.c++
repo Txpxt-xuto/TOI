@@ -8606,4 +8606,5 @@ int main()
     }
     int v=dp2[s][cnt];
     cout << 1LL*a*v+1LL*(n-1-v)*b;
-}ฃ
+}
+
