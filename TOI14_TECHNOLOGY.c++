@@ -8627,7 +8627,7 @@ void dfs(int n) {
     int curC = 1;
     ll best = 0;
     ll sb = 0;
-    for (auto c: adj[n])
+    for(auto c: adj[n])
     {
         if(!visited[c])
         {
