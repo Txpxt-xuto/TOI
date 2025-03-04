@@ -8608,3 +8608,68 @@ int main()
     cout << 1LL*a*v+1LL*(n-1-v)*b;
 }
 
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+#define ll long long int
+const int mmm = 100005;
+int par[mmm];
+int visited[mmm];
+int nc[mmm];
+int ms[mmm];
+vector<int> adj[mmm];
+ll ans = 0;
+int N;
+void dfs(int n) {
+    if (visited[n]) return;
+    //cout << n;
+    visited[n] = 1;
+    int curC = 1;
+    ll best = 0;
+    ll sb = 0;
+    for (auto c: adj[n]) {
+        if (!visited[c]) {
+            par[c] = n;
+            dfs(c);
+            curC+=nc[c];
+            if (nc[c]>sb) {
+                sb = nc[c];
+                if (sb>best) {
+                    swap(best, sb);
+                }
+            }
+        }
+    }
+    nc[n] = curC;
+    ms[n] = best;
+    for (auto c: adj[n]) {
+        if (par[c] == n) {
+            if (best!=nc[c]) {
+                ans = max((ll)(N-nc[n])*ms[c], max(best*ms[c], ans));
+                //cout << "    A " << n << ' ' << ans << ' ';
+            } else {
+                ans = max((ll)(N-nc[n])*ms[c], max(sb*ms[c], ans));
+                //cout << "    B " << n << ' ' << ans << ' ';
+            }
+        }
+    }
+} 
+int main()
+{
+    cin >> N;
+    
+    for (int i=0;i<N-1;i++) {
+        int t1,t2;
+        cin>>t1>>t2;
+        adj[t1].push_back(t2);
+        adj[t2].push_back(t1);
+    }
+    dfs(1);
+    /*
+    for (int i=1;i<=N;i++) {
+        cout << nc[i] << ' ' << ms[i] << endl;
+        
+    }*/
+    cout << ans;
+    return 0;
+}
