@@ -8666,6 +8666,8 @@ int main()
     }
     dfs(1);
     for (int i=1;i<=N;i+
+
+        
         cout << nc[i] << ' ' << ms[i] << endl;
     cout << ans;
     return 0;
