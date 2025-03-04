@@ -8628,7 +8628,7 @@ void dfs(int n) {
     ll best = 0;
     ll sb = 0;
     for (auto c: adj[n]) {
-        if (!visited[c]) {
+        if(!visited[c]) {
             par[c] = n;
             dfs(c);
             curC+=nc[c];
