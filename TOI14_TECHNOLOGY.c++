@@ -8648,8 +8648,7 @@ void dfs(int n) {
                 
             else ans = max((ll)(N-nc[n])*ms[c], max(sb*ms[c], ans));
                 
-                //cout << "    B " << n << ' ' << ans << ' ';
-            }
+
         }
     }
 } 
