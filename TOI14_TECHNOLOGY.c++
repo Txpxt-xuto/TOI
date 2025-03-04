@@ -8661,7 +8661,7 @@ int main()
     for (int i=0;i<N-1;i++)
     {
         int t1,t2;
-        cin>>t1 >> t2;
+        cin >> t1 >> t2;
         adj[t1].push_back(t2);
         adj[t2].push_back(t1);
     }
