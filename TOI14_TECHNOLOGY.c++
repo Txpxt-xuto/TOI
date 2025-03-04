@@ -8622,7 +8622,6 @@ ll ans = 0;
 int N;
 void dfs(int n) {
     if (visited[n]) return;
-    //cout << n;
     visited[n] = 1;
     int curC = 1;
     ll best = 0;
