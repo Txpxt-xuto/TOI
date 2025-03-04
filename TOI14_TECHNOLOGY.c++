@@ -8657,7 +8657,6 @@ void dfs(int n) {
 int main()
 {
     cin >> N;
-    
     for (int i=0;i<N-1;i++)
     {
         int t1,t2;
