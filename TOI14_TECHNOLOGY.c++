@@ -8634,7 +8634,7 @@ void dfs(int n) {
             curC+=nc[c];
             if (nc[c]>sb) {
                 sb = nc[c];
-                if (sb>best) {swap(best, sb);
+                if (sb>best) swap(best, sb);
                     
                 }
             }
