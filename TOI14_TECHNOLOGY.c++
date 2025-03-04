@@ -8666,7 +8666,6 @@ int main()
     }
     dfs(1);
 
-
         cout << nc[i] << ' ' << ms[i] << endl;
     cout << ans;
     return 0;
