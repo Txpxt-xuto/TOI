@@ -8632,7 +8632,8 @@ void dfs(int n) {
             par[c] = n;
             dfs(c);
             curC+=nc[c];
-            if (nc[c]>sb) {
+            if (nc[c]>sb)
+            {
                 sb = nc[c];
                 if(sb>best) swap(best, sb);
             }
