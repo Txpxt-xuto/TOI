@@ -8642,8 +8642,9 @@ void dfs(int n) {
     }
     nc[n] = curC;
     ms[n] = best;
-    for (auto c: adj[n]) {
-        if (par[c] == n){
+    for (auto c: adj[n]){
+        if (par[c] == n)
+        {
             if (best!=nc[c]) ans = max((ll)(N-nc[n])*ms[c], max(best*ms[c], ans));
                 
             else ans = max((ll)(N-nc[n])*ms[c], max(sb*ms[c], ans));
