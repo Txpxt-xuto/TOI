@@ -8665,9 +8665,8 @@ int main()
         adj[t2].push_back(t1);
     }
     dfs(1);
-    for (int i=1;i<=N;i+
 
-        
+
         cout << nc[i] << ' ' << ms[i] << endl;
     cout << ans;
     return 0;
