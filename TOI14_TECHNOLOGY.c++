@@ -8667,7 +8667,7 @@ int main()
     }
     dfs(1);
 
-        cout << nc[i] << ' ' << m
+        cout << nc[i] << ' '
     cout << ans;
     return 0;
 }
