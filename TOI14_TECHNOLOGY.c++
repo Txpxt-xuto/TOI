@@ -8635,8 +8635,6 @@ void dfs(int n) {
             if (nc[c]>sb) {
                 sb = nc[c];
                 if (sb>best) swap(best, sb);
-                    
-                }
             }
         }
     }
