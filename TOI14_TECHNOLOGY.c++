@@ -8666,8 +8666,6 @@ int main()
         adj[t2].push_back(t1);
     }
     dfs(1);
-
-        cout << n
     cout << ans;
     return 0;
 }
