@@ -8754,7 +8754,8 @@ int32_t main(){
         int w=pq.top().f;
         int u=pq.top().s;
         pq.pop();
-        if(u==V){
+        if(u==V)
+        {
             cout<<w;
             return 0;
         }
