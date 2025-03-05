@@ -8678,7 +8678,6 @@ using namespace std;
 #define s second
 
 //#define int ll
-
 const int inf=1e9+7;
 
 int n,L;
