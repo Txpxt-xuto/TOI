@@ -8724,7 +8724,8 @@ int32_t main(){
             adj[u].pb({v,w});
             adj[v].pb({u,w});
         }
-        else if(e.f==0){
+        else if(e.f==0)
+        {
             mn0=min(mn0,e.s);
             mx0=max(mx0,e.s);
         }
