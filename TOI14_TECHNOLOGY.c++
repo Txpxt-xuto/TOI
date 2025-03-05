@@ -8698,7 +8698,8 @@ int32_t main(){
 
     cin>>n>>L;
     vector<pii> vec;
-    for(int i=1;i<=n;++i){
+    for(int i=1;i<=n;++i)
+    {
         int a,b,c,d,w; cin>>a>>b>>c>>d>>w;
         mp2[{{a,b},{c,d}}]=w;
         mp2[{{c,d},{a,b}}]=w;
