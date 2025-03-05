@@ -8676,10 +8676,8 @@ using namespace std;
 #define pii pair<int,int>
 #define f first
 #define s second
-
 //#define int ll
 const int inf=1e9+7;
-
 int n,L;
 map<pii,int> mp;
 map<pair<pii,pii>,int> mp2;
