@@ -8816,7 +8816,8 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
         for(int i:adj[now.num])
         {
             HW[i][3]--;
-            if(HW[i][3]==0){
+            if(HW[i][3]==0)
+            {
                 int a = max(st,HW[i][0]);
                 int rst =  a/HW[i][2];
                 if(a%HW[i][2]) rst++;
