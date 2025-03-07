@@ -8845,7 +8845,6 @@ struct CHT {
     void insert(line x)
     {
         while((int)dq.size() > 1 && replace(dq[dq.size() - 2], dq.back(), x)) dq.pop_back();
-
         dq.push_back(x);
     }
     ll query(ll x)
