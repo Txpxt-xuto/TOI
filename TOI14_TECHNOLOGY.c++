@@ -8831,7 +8831,8 @@ using namespace std;
 using ll = long long;
 const int N = 50050;
 struct CHT {
-    struct line {
+    struct line
+    {
         ll m, c;
         ll val(ll x) {
             return m * x + c;
