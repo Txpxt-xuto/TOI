@@ -8834,7 +8834,8 @@ struct CHT {
     struct line
     {
         ll m, c;
-        ll val(ll x) {
+        ll val(ll x)
+        {
             return m * x + c;
         }
     };
