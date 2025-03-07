@@ -8869,7 +8869,7 @@ int main() {
     vector<pair<int, int>> a;
     a.push_back({ 0, 0 });
     for (auto& x : v) {
-        if (a.empty()) {
+        if (a.empty()){
             a.push_back(x);
             continue;
         }
