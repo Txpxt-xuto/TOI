@@ -8851,7 +8851,7 @@ struct CHT {
     {
         p = min(p, (int)dq.size() - 1);
         while (p != (int)dq.size() - 1 && dq[p + 1].c - dq[p].c < x * (dq[p].m - dq[p + 1].m)) p++;
-           
+
         return dq[p].val(x);
     }
 } cht;
