@@ -8847,7 +8847,8 @@ struct CHT {
             dq.pop_back();
         dq.push_back(x);
     }
-    ll query(ll x) {
+    ll query(ll x)
+    {
         p = min(p, (int)dq.size() - 1);
         while (p != (int)dq.size() - 1 && dq[p + 1].c - dq[p].c < x * (dq[p].m - dq[p + 1].m))
             p++;
