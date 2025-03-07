@@ -8825,3 +8825,63 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     }
     return cnt;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+const int N = 50050;
+struct CHT {
+    struct line {
+        ll m, c;
+        ll val(ll x) {
+            return m * x + c;
+        }
+    };
+    deque<line> dq;
+    int p;
+    bool replace(line i, line j, line k) {
+        return (j.c - i.c) * (j.m - k.m) >= (k.c - j.c) * (i.m - j.m);
+    }
+    void insert(line x) {
+        while ((int)dq.size() > 1 && replace(dq[dq.size() - 2], dq.back(), x))
+            dq.pop_back();
+        dq.push_back(x);
+    }
+    ll query(ll x) {
+        p = min(p, (int)dq.size() - 1);
+        while (p != (int)dq.size() - 1 && dq[p + 1].c - dq[p].c < x * (dq[p].m - dq[p + 1].m))
+            p++;
+        return dq[p].val(x);
+    }
+} cht;
+ll dp[50050];
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+    int n;
+    cin >> n;
+    vector<pair<int, int>> v;
+    for (int i = 1;i <= n;i++) {
+        int a, h, z;
+        cin >> a >> h >> z;
+        v.push_back({ a * h, z });
+    }
+    sort(v.rbegin(), v.rend());
+    vector<pair<int, int>> a;
+    a.push_back({ 0, 0 });
+    for (auto& x : v) {
+        if (a.empty()) {
+            a.push_back(x);
+            continue;
+        }
+        if (a.back().first == x.first) continue;
+        if (a.back().second <= x.second) a.push_back(x);
+    }
+    n = a.size() - 1;
+    cht.p = 0;
+    for (int i = 1;i <= n;i++) {
+        cht.insert({ a[i].first, dp[i - 1] });
+        dp[i] = min(1ll * a[i].second * a[1].first, cht.query(a[i].second));
+    }
+    cout << dp[n];
+    return 0;
+}
