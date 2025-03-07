@@ -8878,7 +8878,8 @@ int main() {
     }
     n = a.size() - 1;
     cht.p = 0;
-    for (int i = 1;i <= n;i++){
+    for (int i = 1;i <= n;i++)
+    {
         cht.insert({ a[i].first, dp[i - 1] });
         dp[i] = min(1ll * a[i].second * a[1].first, cht.query(a[i].second));
     }
