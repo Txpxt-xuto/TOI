@@ -8868,7 +8868,8 @@ int main() {
     sort(v.rbegin(), v.rend());
     vector<pair<int, int>> a;
     a.push_back({ 0, 0 });
-    for (auto& x : v) {
+    for (auto& x : v)
+    {
         if(a.empty())
         {
             a.push_back(x);
