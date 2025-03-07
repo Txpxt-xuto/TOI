@@ -8839,7 +8839,8 @@ struct CHT {
     };
     deque<line> dq;
     int p;
-    bool replace(line i, line j, line k) {
+    bool replace(line i, line j, line k)
+    {
         return (j.c - i.c) * (j.m - k.m) >= (k.c - j.c) * (i.m - j.m);
     }
     void insert(line x)
