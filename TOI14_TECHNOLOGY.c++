@@ -8875,7 +8875,7 @@ int main() {
             continue;
         }
         if (a.back().first == x.first) continue;
-        if (a.back().second <= x.second) a.push_back(x);
+        if(a.back().second <= x.second) a.push_back(x);
     }
     n = a.size() - 1;
     cht.p = 0;
