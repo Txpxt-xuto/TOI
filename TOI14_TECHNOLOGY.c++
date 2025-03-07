@@ -8855,7 +8855,8 @@ struct CHT {
     }
 } cht;
 ll dp[50050];
-int main() {
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     int n;
     cin >> n;
