@@ -8830,7 +8830,8 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
 using namespace std;
 using ll = long long;
 const int N = 50050;
-struct CHT{
+struct CHT
+{
     struct line
     {
         ll m, c;
