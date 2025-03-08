@@ -8939,7 +8939,8 @@ signed main(int argc, char *argv[])
 	for(int i=1; i<=n; ++i) cin >> a[i];
 
 
-	for(int i=2, u, v; i<=n; ++i) {
+	for(int i=2, u, v; i<=n; ++i)
+    {
 		cin >> u >> v;
 		u++, v++;
 		adj[u].emplace_back(v);
