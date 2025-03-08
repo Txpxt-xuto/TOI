@@ -8931,7 +8931,7 @@ void dfs(int u, int p) {
 	s[u].emplace(a[u]);
 }	
 
-signed main(int argc, char *argv[]) {
+signed main(int argc, char *argv[]){
 	cin.tie(nullptr)->ios::sync_with_stdio(false);
 	int n;
 	cin >> n;
