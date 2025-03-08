@@ -8921,7 +8921,6 @@ void dfs(int u, int p){
     {
 		if(x == p)
 	continue;
-
 		dfs(x, u);
 		merge(s[u], s[x]);
 	}
