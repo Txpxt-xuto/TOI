@@ -8938,7 +8938,7 @@ signed main(int argc, char *argv[])
 	cin >> n;
 	for(int i=1; i<=n; ++i) cin >> a[i];
     
-		
+	
 	
 	for(int i=2, u, v; i<=n; ++i) {
 		cin >> u >> v;
