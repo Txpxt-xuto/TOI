@@ -8916,7 +8916,7 @@ inline void merge(multiset<int> &x, multiset<int> &y) {
 	}
 }
 
-void dfs(int u, int p) {
+void dfs(int u, int p){
 	for(auto x: adj[u]) {
 		if(x == p) {
 			continue;
