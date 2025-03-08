@@ -8920,7 +8920,7 @@ void dfs(int u, int p){
 	for(auto x: adj[u])
     {
 		if(x == p)
-	continue;
+continue;
 		dfs(x, u);
 		merge(s[u], s[x]);
 	}
