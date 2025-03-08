@@ -8927,7 +8927,6 @@ void dfs(int u, int p){
 	}
 	auto it = s[u].upper_bound(a[u]);
 	if(it != s[u].end()) s[u].erase(it);
-
 	s[u].emplace(a[u]);
 }	
 
