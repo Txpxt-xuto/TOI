@@ -8981,7 +8981,7 @@ signed main()
     for(int i=1;i<=n;i++)
     {
         int a;
-        cin>>a;
+        cin >> a;
         if(keep[a].empty())keep[a].push_back(0);
         keep[a].push_back(i);
         int sz=keep[a].size();
