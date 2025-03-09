@@ -8902,7 +8902,6 @@ using namespace std;
 using ll = long long;
 
 const int MxN = 100010;
-
 int a[MxN];
 vector<int> adj[MxN];
 multiset<int> s[MxN];
