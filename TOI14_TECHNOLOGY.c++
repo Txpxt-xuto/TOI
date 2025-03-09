@@ -8945,3 +8945,76 @@ signed main(int argc, char *argv[])
 	cout << n - (int) s[1].size() << "\n";
 	return 0;
 }
+
+#include<bits/stdc++.h>
+#define int long long
+#define pii pair<int,int>
+#define fi first
+#define se second
+using namespace std;
+int const N=1e5+10;
+int n;
+struct seg{
+    int all[3*N];
+    int under[3*N];
+    void build(){for(int i=0;i<3*N;i++)all[i]=under[i]=0;}
+    void upd(int i,int l,int r,int ll,int rr,int val)
+    {
+        if(rr<l||r<ll) return;
+        if(ll<=l&&r<=rr)
+        {
+            all[i]+=val;
+            return;
+        }
+        int mid=(l+r)>>1;
+        upd(2*i,l,mid,ll,rr,val);
+        upd(2*i+1,mid+1,r,ll,rr,val);
+        under[i]=(all[2*i]>0?mid-l+1:under[2*i])+(all[2*i+1]>0? r-(mid+1)+1:under[2*i+1]);
+    }
+    int query()
+    {
+        return (all[1]>0? n:under[1]);
+    }
+}tree;
+vector<int> keep[2*N];
+vector<pii> todo[N];
+signed main()
+{
+    cin.tie(nullptr)->sync_with_stdio(false);
+    cin>>n;
+    tree.build();
+    for(int i=1;i<=n;i++)
+    {
+        int a;
+        cin>>a;
+        if(keep[a].empty())keep[a].push_back(0);
+        keep[a].push_back(i);
+        int sz=keep[a].size();
+        if(sz>=7)
+        {
+            todo[keep[a][sz-7]+1].push_back({keep[a][sz-2],keep[a][sz-1]-1});
+            todo[keep[a][sz-6]+1].push_back({-keep[a][sz-2],keep[a][sz-1]-1});
+        }
+    }
+    for(int i=0;i<2*N;i++)
+    {
+        int sz=keep[i].size();
+        if(sz>=6)
+        {
+            todo[keep[i][sz-6]+1].push_back({keep[i][sz-1],n});
+            todo[keep[i][sz-5]+1].push_back({-keep[i][sz-1],n});
+        }
+    }
+    int ans=0;
+    for(int i=1;i<=n;i++)
+    {
+        for(auto it:todo[i])
+        {
+            if(it.fi>=0) tree.upd(1,1,n,it.fi,it.se,1);
+            else tree.upd(1,1,n,-it.fi,it.se,-1);
+        }
+        ans+=tree.query();
+    }
+    cout<<ans;
+    return 0;
+}
