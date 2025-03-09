@@ -9010,6 +9010,6 @@ signed main()
         }
         ans+=tree.query();
     }
-    cout<<ans;
+    cout<< ans;
     return 0;
 }
