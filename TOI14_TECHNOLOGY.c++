@@ -8982,7 +8982,7 @@ signed main()
     {
         int a;
         cin >> a;
-        if(keep[a].empty())keep[a].push_back(0);
+        if(keep[a].empty()) keep[a].push_back(0);
         keep[a].push_back(i);
         int sz=keep[a].size();
         if(sz>=7)
