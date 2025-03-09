@@ -8909,7 +8909,7 @@ multiset<int> s[MxN];
 
 inline void merge(multiset<int> &x, multiset<int> &y)
 {
-	if(x.size() < y.size()) {
+	if(x.size() < y.size()){
 		swap(x, y);
 	}
 	for(auto e: y) x.emplace(e);
