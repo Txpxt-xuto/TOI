@@ -9082,7 +9082,8 @@ void init(int N,std::vector<int> T,std::vector<std::vector<int>> Road){
     for(int i=0;i<N-1;i++){
         g[Road[i][0]].pb({Road[i][1],Road[i][2]});
         g[Road[i][1]].pb({Road[i][0],Road[i][2]});
-    }dfs(0,0,0);getdist(Road.back()[0],Road.back()[0],0);getdist(Road.back()[1],Road.back()[1],1);
+    }
+    dfs(0,0,0);getdist(Road.back()[0],Road.back()[0],0);getdist(Road.back()[1],Road.back()[1],1);
     for(int i=1;i<T.size();i++)
     {
         ll tt=cal(T[i-1],T[i]);
