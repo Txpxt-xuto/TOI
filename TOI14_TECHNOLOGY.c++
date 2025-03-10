@@ -9091,6 +9091,6 @@ void init(int N,std::vector<int> T,std::vector<std::vector<int>> Road){
     root[0]=build(1,n);for(int i=0;i<x.size();i++)root[i+1]=upd(root[i],1,n,upper_bound(y.begin(),y.end(),x[i])-y.begin(),x[i]);
 
 }
-long long min_distance(int L,int R,int X) {
+long long min_distance(int L,int R,int X){
     return qs[R]-qs[L]+qr(root[L],root[R],1,n,X);
 }
