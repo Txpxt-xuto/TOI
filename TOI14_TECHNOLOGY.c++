@@ -9079,7 +9079,8 @@ ll cal(int a,int b){
     return d[a]+d[b]-2*d[get(a,b)];
 }
 void init(int N,std::vector<int> T,std::vector<std::vector<int>> Road){
-    for(int i=0;i<N-1;i++){
+    for(int i=0;i<N-1;i++)
+    {
         g[Road[i][0]].pb({Road[i][1],Road[i][2]});
         g[Road[i][1]].pb({Road[i][0],Road[i][2]});
     }
