@@ -9089,7 +9089,8 @@ void init(int N,std::vector<int> T,std::vector<std::vector<int>> Road){
         x.pb(rs),y.pb(rs);qs[i]=qs[i-1]+tt;
     }
     sort(y.begin(),y.end());
-    y.erase(unique(y.begin(),y.end()),y.end());n=y.size();
+    y.erase(unique(y.begin(),y.end()),y.end());
+    n=y.size();
     root[0]=build(1,n);for(int i=0;i<x.size();i++)root[i+1]=upd(root[i],1,n,upper_bound(y.begin(),y.end(),x[i])-y.begin(),x[i]);
 
 }
