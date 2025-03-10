@@ -9071,7 +9071,7 @@ void getdist(int u,int p,int i){
 int get(int a,int b){
     if(dep[a]>dep[b])swap(a,b);
     for(int i=19;i>=0;i--)if(dep[b]-(1<<i)>=dep[a])b=pr[b][i];
-    if(a==b)return a;
+    if(a==b) return a;
     for(int i=19;i>=0;i--)if(pr[a][i]!=pr[b][i])a=pr[a][i],b=pr[b][i];
     return pr[a][0];
 }
