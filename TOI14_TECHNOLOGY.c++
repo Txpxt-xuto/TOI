@@ -9065,7 +9065,7 @@ void getdist(int u,int p,int i)
 {
     for(auto v:g[u])
     {
-        if(v.f==p)continue;
+        if(v.f==p) continue;
         di[i][v.f]=di[i][u]+v.s;
         getdist(v.f,u,i);
     }
