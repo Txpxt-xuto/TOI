@@ -9068,7 +9068,8 @@ void getdist(int u,int p,int i){
         getdist(v.f,u,i);
     }
 }
-int get(int a,int b){
+int get(int a,int b)
+{
     if(dep[a]>dep[b]) swap(a,b);
     for(int i=19;i>=0;i--) if(dep[b]-(1<<i)>=dep[a]) b=pr[b][i];
     if(a==b) return a;
