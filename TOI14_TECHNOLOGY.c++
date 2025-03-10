@@ -9075,7 +9075,8 @@ int get(int a,int b){
     for(int i=19;i>=0;i--)if(pr[a][i]!=pr[b][i])a=pr[a][i],b=pr[b][i];
     return pr[a][0];
 }
-ll cal(int a,int b){
+ll cal(int a,int b)
+{
     return d[a]+d[b]-2*d[get(a,b)];
 }
 void init(int N,std::vector<int> T,std::vector<std::vector<int>> Road){
