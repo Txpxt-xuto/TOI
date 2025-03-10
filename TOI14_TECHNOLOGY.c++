@@ -9013,3 +9013,84 @@ signed main()
     cout << ans;
     return 0;
 }
+
+#include<bits/stdc++.h>
+#define f first
+#define s second
+#define pb push_back
+#define pii pair<ll,ll>
+#define ll long long
+#define sz(x) (ll)x.size()
+using namespace std;
+const int mxn=2e5+5;
+vector<pii>g[mxn];
+ll d[mxn]{0},di[2][mxn]{0},qs[mxn]{0};
+int dep[mxn]{0},pr[mxn][20],n;
+vector<ll>x,y;
+struct node{
+    int v;ll tt;
+    node*l,*r;
+    node(int v,ll tt): v(v),tt(tt),l(NULL),r(NULL){};
+    node(node*l,node*r): v(l->v+r->v),tt(l->tt+r->tt),l(l),r(r){};
+};
+node*root[mxn];
+node* build(int l,int r){
+    if(l==r)return new node(0,0);
+    int m=(l+r)>>1;
+    return new node(build(l,m),build(m+1,r));
+}
+node* upd(node*t,int l,int r,int idx,ll amt){
+    if(l==r)return new node(t->v+1,t->tt+amt);
+    int m=(l+r)>>1;
+    if(m<idx)return new node(t->l,upd(t->r,m+1,r,idx,amt));
+    else return new node(upd(t->l,l,m,idx,amt),t->r);
+}
+ll qr(node*tl,node*tr,int l,int r,int k){
+    if(l==r){
+        return y[l-1]*k;
+    }int m=(l+r)>>1;
+    int tt = tr->l->v-tl->l->v;
+    if(tt>k)return qr(tl->l,tr->l,l,m,k);
+    else return tr->l->tt-tl->l->tt+qr(tl->r,tr->r,m+1,r,k-tt);
+}
+void dfs(int u,int p,int l){
+    pr[u][0]=p;dep[u]=l;
+    for(int i=1;i<20;i++)pr[u][i]=pr[pr[u][i-1]][i-1];
+    for(auto v:g[u]){
+        if(v.f==p)continue;
+        d[v.f]=d[u]+v.s;dfs(v.f,u,l+1);
+    }
+}
+void getdist(int u,int p,int i){
+    for(auto v:g[u]){
+        if(v.f==p)continue;
+        di[i][v.f]=di[i][u]+v.s;
+        getdist(v.f,u,i);
+    }
+}
+int get(int a,int b){
+    if(dep[a]>dep[b])swap(a,b);
+    for(int i=19;i>=0;i--)if(dep[b]-(1<<i)>=dep[a])b=pr[b][i];
+    if(a==b)return a;
+    for(int i=19;i>=0;i--)if(pr[a][i]!=pr[b][i])a=pr[a][i],b=pr[b][i];
+    return pr[a][0];
+}
+ll cal(int a,int b){
+    return d[a]+d[b]-2*d[get(a,b)];
+}
+void init(int N,std::vector<int> T,std::vector<std::vector<int>> Road){
+    for(int i=0;i<N-1;i++){
+        g[Road[i][0]].pb({Road[i][1],Road[i][2]});
+        g[Road[i][1]].pb({Road[i][0],Road[i][2]});
+    }dfs(0,0,0);getdist(Road.back()[0],Road.back()[0],0);getdist(Road.back()[1],Road.back()[1],1);
+    for(int i=1;i<T.size();i++){
+        ll tt=cal(T[i-1],T[i]);
+        ll rs=min(di[0][T[i-1]]+di[1][T[i]],di[1][T[i-1]]+di[0][T[i]])+Road.back()[2]-tt;
+        x.pb(rs),y.pb(rs);qs[i]=qs[i-1]+tt;
+    }sort(y.begin(),y.end());y.erase(unique(y.begin(),y.end()),y.end());n=y.size();
+    root[0]=build(1,n);for(int i=0;i<x.size();i++)root[i+1]=upd(root[i],1,n,upper_bound(y.begin(),y.end(),x[i])-y.begin(),x[i]);
+
+}
+long long min_distance(int L,int R,int X) {
+    return qs[R]-qs[L]+qr(root[L],root[R],1,n,X);
+}
