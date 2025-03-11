@@ -9199,7 +9199,7 @@ int lca(int u, int v)
 {
     if(L[u] < L[v]) return lca(v, u);
     int dt = L[u] - L[v];
-    for(int i = 20; i--;) if (dt & (1 << i)) u = P[i][u];
+    for(int i=20;i--;) if (dt & (1 << i)) u = P[i][u];
     if(u == v) return u;
     for (int i = 20; i--;) if (P[i][u] != P[i][v]) u = P[i][u], v = P[i][v];
     return P[0][u];
