@@ -9192,7 +9192,7 @@ void hld(int u, int h)
 {
     T[(CI[u] = timer++) + V] = PW[u]; CH[u] = h;
     if(H[u] != -1) hld(H[u], h);
-    for(auto [w, v] : G[u]) if (v != P[0][u] && v != H[u]) hld(v, v);
+    for(auto [w, v] : G[u]) if(v != P[0][u] && v != H[u]) hld(v, v);
 }
 
 int lca(int u, int v)
