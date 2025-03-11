@@ -9214,8 +9214,7 @@ int kth(int u, int k)
 long long qryup(int u, int a)
 {
     int z = INT_MAX;
-    for(;CH[u] != CH[a];u=P[0][CH[u]])
-        z = min(z, qry(CI[CH[u]], CI[u]));
+    for(;CH[u] != CH[a];u=P[0][CH[u]]) z = min(z, qry(CI[CH[u]], CI[u]));
     return min(z, qry(CI[a], CI[u]));
 }
 
