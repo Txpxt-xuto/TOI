@@ -9207,7 +9207,7 @@ int lca(int u, int v)
 
 int kth(int u, int k)
 {
-    for (int i = 20; i--;) if (k & (1 << i)) u = P[i][u];
+    for(int i = 20; i--;) if (k & (1 << i)) u = P[i][u];
     return u;
 }
 
