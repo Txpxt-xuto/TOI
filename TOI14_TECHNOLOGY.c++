@@ -9179,10 +9179,10 @@ int dfs(int u)
     int sz = 1, hv = 0;
     for (auto [w, v] : G[u]) 
     {
-        if (v == P[0][u]) continue;
+        if(v == P[0][u]) continue;
         L[v] = L[u] + 1;
         int sub = dfs(v);
-        if (sub > hv) H[u] = v, hv = sub;
+        if(sub > hv) H[u] = v, hv = sub;
         sz += sub;
     }
     return sz;
