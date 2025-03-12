@@ -9106,3 +9106,4 @@ long long min_distance(int L,int R,int X)
 {
     return qs[R]-qs[L]+qr(root[L],root[R],1,n,X);
 }
+
