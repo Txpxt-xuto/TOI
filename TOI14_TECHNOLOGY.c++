@@ -9108,7 +9108,6 @@ long long min_distance(int L,int R,int X)
 }
 
 #include<bits/stdc++.h>
-
 #include "homework.h"
 using namespace std;
 struct A
