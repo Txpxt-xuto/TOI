@@ -9130,7 +9130,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
             int rst =  HW[i][0]/HW[i][2];
             if(HW[i][0]%HW[i][2])
                 rst++;
-            
             rst*=HW[i][2];
             if(rst>HW[i][1]) continue;
             pq.push({rst,i});
