@@ -9236,7 +9236,7 @@ int main()
         int anc = lca(a1, a2);
         long long r = (a1 == a2 ? 0 : INT_MAX);
         if(a1 != anc) r = min(r, qryup(a1, kth(a1, L[a1] - L[anc] - 1)));
-        if (a2 != anc) r = min(r, qryup(a2, kth(a2, L[a2] - L[anc] - 1)));
+        if(a2 != anc) r = min(r, qryup(a2, kth(a2, L[a2] - L[anc] - 1)));
         printf("%lld\n", r);
         a1 = a2;
         a2 = ((1ll *  k * a1 + r) % m) % V;
