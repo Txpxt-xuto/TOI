@@ -9252,6 +9252,7 @@ void update(int idx){
         fw[idx]++;
     }
 }
+
 int query(int idx)
 {
     int res = 0;
