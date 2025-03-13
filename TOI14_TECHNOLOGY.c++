@@ -9258,6 +9258,7 @@ int query(int idx)
     for(; idx > 0; idx -= idx & -idx) res += fw[idx];
     return res;
 }
+
 void solve(int mode)
 {
     long long res = 0;
