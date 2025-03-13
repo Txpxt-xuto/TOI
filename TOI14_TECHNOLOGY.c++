@@ -9241,3 +9241,48 @@ int main()
     }
     return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string a, b;
+int fw[1000005];
+void update(int idx){
+    for(; idx < a.size(); idx += idx & -idx){
+        fw[idx]++;
+    }
+}
+int query(int idx){
+    int res = 0;
+    for(; idx > 0; idx -= idx & -idx){
+        res += fw[idx];
+    }
+    return res;
+}
+void solve(int mode){
+    long long res = 0;
+    int cnt[26]{};
+    vector<int> indexs[30];
+    for(int i = 1; i < a.size(); ++i){
+        indexs[a[i]-'a'].emplace_back(i);
+    }
+    for(char c : b){
+        if(cnt[c-'a'] >= indexs[c-'a'].size()){
+            cout << -1;
+            return;
+        }
+        res += 1LL*indexs[c-'a'][cnt[c-'a']++];
+        if(mode == 0) continue;
+        res -= 1LL*query(indexs[c-'a'][cnt[c-'a']-1]);
+        update(indexs[c-'a'][cnt[c-'a']-1]);
+    }
+    cout << res;
+}
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int mode;
+    cin >> mode >> a >> b;
+    a = '.' + a;
+    solve(mode);
+}
