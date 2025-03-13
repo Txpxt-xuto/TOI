@@ -9230,7 +9230,6 @@ int main()
     hld(0, 0);
 
     for (int p = V; --p;) T[p] = min(T[p<<1], T[p<<1|1]);
-
     long long q, k, m, a1, a2;
     scanf("%lld%lld%lld%lld%lld", &q, &k, &m, &a1, &a2);
     for (int i = 1; i <= q; ++i)
