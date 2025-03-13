@@ -9233,7 +9233,6 @@ int main()
 
     long long q, k, m, a1, a2;
     scanf("%lld%lld%lld%lld%lld", &q, &k, &m, &a1, &a2);
-
     for (int i = 1; i <= q; ++i)
     {
         int anc = lca(a1, a2);
