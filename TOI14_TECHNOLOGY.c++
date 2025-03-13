@@ -9244,7 +9244,6 @@ int main()
 
 #include <bits/stdc++.h>
 using namespace std;
-
 string a, b;
 int fw[1000005];
 void update(int idx)
