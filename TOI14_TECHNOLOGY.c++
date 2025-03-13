@@ -9267,7 +9267,8 @@ void solve(int mode){
         indexs[a[i]-'a'].emplace_back(i);
     }
     for(char c : b){
-        if(cnt[c-'a'] >= indexs[c-'a'].size()){
+        if(cnt[c-'a'] >= indexs[c-'a'].size())
+        {
             cout << -1;
             return;
         }
