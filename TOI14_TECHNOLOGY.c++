@@ -9263,8 +9263,8 @@ void solve(int mode){
     long long res = 0;
     int cnt[26]{};
     vector<int> indexs[30];
-    for(int i = 1; i < a.size(); ++i){
-        indexs[a[i]-'a'].emplace_back(i);
+    for(int i = 1; i < a.size(); ++i) indexs[a[i]-'a'].emplace_back(i);
+        
     }
     for(char c : b)
     {
