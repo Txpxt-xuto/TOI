@@ -9244,6 +9244,5 @@ int main()
         a1 = a2;
         a2 = ((1ll *  k * a1 + r) % m) % V;
     }
-
     return 0;
 }
