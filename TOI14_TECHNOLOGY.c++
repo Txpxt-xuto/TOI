@@ -9265,7 +9265,7 @@ void solve(int mode)
     int cnt[26]{};
     vector<int> indexs[30];
     for(int i = 1; i < a.size(); ++i) indexs[a[i]-'a'].emplace_back(i);
-    
+
 
     for(char c : b)
     {
