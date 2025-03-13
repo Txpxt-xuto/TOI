@@ -9156,3 +9156,94 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     }
     return cnt;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 100005;
+int V, CH[N], CI[N], P[20][N], L[N], H[N], timer, T[N<<1], PW[N];
+vector<pair<int, int>> G[N];
+
+int qry(int l, int r, int z = INT_MAX)
+{
+    for (l += V, r += V + 1; l < r; l >>= 1, r >>= 1)
+    {
+        if (l & 1) z = min(z, T[l++]);
+        if (r & 1) z = min(T[--r], z);
+    }
+    return z;
+}
+
+int dfs(int u)
+{
+    int sz = 1, hv = 0;
+    for (auto [w, v] : G[u]) 
+    {
+        if (v == P[0][u]) continue;
+        L[v] = L[u] + 1;
+        int sub = dfs(v);
+        if (sub > hv) H[u] = v, hv = sub;
+        sz += sub;
+    }
+    return sz;
+}
+
+void hld(int u, int h)
+{
+    T[(CI[u] = timer++) + V] = PW[u]; CH[u] = h;
+    if (H[u] != -1) hld(H[u], h);
+    for (auto [w, v] : G[u]) if (v != P[0][u] && v != H[u]) hld(v, v);
+}
+
+int lca(int u, int v)
+{
+    if (L[u] < L[v]) return lca(v, u);
+    int dt = L[u] - L[v];
+    for (int i = 20; i--;) if (dt & (1 << i)) u = P[i][u];
+    if (u == v) return u;
+    for (int i = 20; i--;) if (P[i][u] != P[i][v]) u = P[i][u], v = P[i][v];
+    return P[0][u];
+}
+
+int kth(int u, int k)
+{
+    for (int i = 20; i--;) if (k & (1 << i)) u = P[i][u];
+    return u;
+}
+
+long long qryup(int u, int a)
+{
+    int z = INT_MAX;
+    for (; CH[u] != CH[a]; u = P[0][CH[u]])
+        z = min(z, qry(CI[CH[u]], CI[u]));
+    return min(z, qry(CI[a], CI[u]));
+}
+
+int main()
+{
+    scanf("%d", &V);
+    for (int v = 1, u, w; v < V; ++v) scanf("%d%d", &u, &w), G[u].emplace_back(w, v), P[0][v] = u, PW[v] = w;
+    for (int j = 1; j < 20; ++j) for (int i = 0; i < V; ++i) P[j][i] = P[j-1][P[j-1][i]];
+
+    memset(H, -1, sizeof H);
+    dfs(0);
+    hld(0, 0);
+
+    for (int p = V; --p;) T[p] = min(T[p<<1], T[p<<1|1]);
+
+    long long q, k, m, a1, a2;
+    scanf("%lld%lld%lld%lld%lld", &q, &k, &m, &a1, &a2);
+
+    for (int i = 1; i <= q; ++i)
+    {
+        int anc = lca(a1, a2);
+        long long r = (a1 == a2 ? 0 : INT_MAX);
+        if (a1 != anc) r = min(r, qryup(a1, kth(a1, L[a1] - L[anc] - 1)));
+        if (a2 != anc) r = min(r, qryup(a2, kth(a2, L[a2] - L[anc] - 1)));
+        printf("%lld\n", r);
+        a1 = a2;
+        a2 = ((1ll *  k * a1 + r) % m) % V;
+    }
+
+    return 0;
+}
