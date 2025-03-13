@@ -9222,7 +9222,7 @@ long long qryup(int u, int a)
 int main()
 {
     scanf("%d", &V);
-    for(int v = 1, u, w; v < V; ++v) scanf("%d%d", &u, &w), G[u].emplace_back(w, v), P[0][v] = u, PW[v] = w;
+    for(int v = 1,u,w; v < V; ++v) scanf("%d%d", &u, &w), G[u].emplace_back(w, v), P[0][v] = u, PW[v] = w;
     for(int j = 1; j < 20; ++j) for (int i = 0; i < V; ++i) P[j][i] = P[j-1][P[j-1][i]];
     memset(H, -1, sizeof H);
     dfs(0);
