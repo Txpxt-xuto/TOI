@@ -9255,7 +9255,6 @@ void update(int idx){
 int query(int idx){
     int res = 0;
     for(; idx > 0; idx -= idx & -idx) res += fw[idx];
-    
     return res;
 }
 void solve(int mode)
