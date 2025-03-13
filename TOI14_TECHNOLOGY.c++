@@ -9249,7 +9249,7 @@ string a, b;
 int fw[1000005];
 void update(int idx){
     for(; idx < a.size(); idx += idx & -idx)
-    
+
         fw[idx]++;
 
 }
