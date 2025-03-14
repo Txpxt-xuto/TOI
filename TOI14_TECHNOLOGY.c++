@@ -9166,7 +9166,7 @@ vector<pair<int, int>> G[N];
 
 int qry(int l, int r, int z = INT_MAX)
 {
-    for (l += V, r += V + 1; l < r; l >>= 1, r >>= 1)
+    for(l += V, r += V + 1; l < r; l >>= 1, r >>= 1)
     {
         if(l & 1) z = min(z, T[l++]);
         if(r & 1) z = min(T[--r], z);
