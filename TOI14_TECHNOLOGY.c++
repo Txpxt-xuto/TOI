@@ -9317,6 +9317,7 @@ void update(int l,int r,int idx,int a,int b)
 	s[idx].u|=s[idx*2].u && s[idx*2+1].u;
 
 }
+
 int main()
 {
 	ios_base::sync_with_stdio(0);
