@@ -9287,3 +9287,60 @@ int main()
     a = '.' + a;
     solve(mode);
 }
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+const int N=1<<21;
+struct node{
+	bool u,c;
+}s[N];
+
+
+void update(int l,int r,int idx,int a,int b){
+	//cout<<l <<" " <<r <<" " <<idx <<' ' <<a <<" " <<b <<"\n";
+	int m=(l+r)/2;
+	if(a>r || b<l) return;
+	if(l==a && r==b){
+		s[idx].u=true;
+		if(l==r) s[idx].c=true;
+
+		if(s[idx*2].u && (!s[idx*2+1].u)) s[idx*2+1].u=true,update(m+1,r,idx*2+1,m+1,r);
+		if(s[idx*2+1].u && (!s[idx*2].u)) s[idx*2].u=true,update(l,m,idx*2,l,m);
+		if(l!=r) s[idx].c=s[idx*2].c && s[idx*2+1].c;
+		
+		return;
+	}
+	update(l,m,idx*2,a,b);
+	update(m+1,r,idx*2+1,a,b);
+	if(s[idx].u && s[idx*2].u && (!s[idx*2+1].u)) s[idx*2+1].u=true,update(m+1,r,idx*2+1,m+1,r);
+	if(s[idx].u && s[idx*2+1].u && (!s[idx*2].u)) s[idx*2].u=true,update(l,m,idx*2,l,m);
+	s[idx].c=s[idx*2].c && s[idx*2+1].c;
+	s[idx].u|=s[idx*2].u && s[idx*2+1].u;
+
+}
+int main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int n,m;
+	cin>>n >>m;
+	for(int i=0;i<N;i++) s[i].u=s[i].c=false;
+	for(int i=1;i<=m;i++){
+		int a,b;
+		cin>>a >>b;
+		a=b+(1<<a)-1;
+		swap(a,b);
+		update(0,(1<<n)-1,1,a,b);
+		/*for(int j=1;j<=7;j++){
+			cout<<s[j].u <<" " <<s[j].c <<"\n";
+		}*/
+		if(s[1].c){
+			/*for(int j=1;j<=7;j++){
+				cout<<s[j].u <<" " <<s[j].c <<"\n";
+			}*/
+			for(int j=i+1;j<=m;j++) cin>>a >>b;
+			cout<<i <<"\n";
+			return 0;
+		}
+	}
+}
