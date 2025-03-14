@@ -9297,7 +9297,6 @@ struct node{
 	bool u,c;
 }s[N];
 void update(int l,int r,int idx,int a,int b){
-	//cout<<l <<" " <<r <<" " <<idx <<' ' <<a <<" " <<b <<"\n";
 	int m=(l+r)/2;
 	if(a>r || b<l) return;
 	if(l==a && r==b){
