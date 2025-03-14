@@ -9278,6 +9278,7 @@ void solve(int mode)
     }
     cout << res;
 }
+
 int main()
 {
     ios_base::sync_with_stdio(false);
