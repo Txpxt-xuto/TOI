@@ -9315,7 +9315,6 @@ void update(int l,int r,int idx,int a,int b)
 	if(s[idx].u && s[idx*2+1].u && (!s[idx*2].u)) s[idx*2].u=true,update(l,m,idx*2,l,m);
 	s[idx].c=s[idx*2].c && s[idx*2+1].c;
 	s[idx].u|=s[idx*2].u && s[idx*2+1].u;
-
 }
 
 int main()
@@ -9323,7 +9322,7 @@ int main()
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	int n,m;
-	cin>>n >>m;
+	cin>> n >>m;
 	for(int i=0;i<N;i++) s[i].u=s[i].c=false;
 	for(int i=1;i<=m;i++){
 		int a,b;
