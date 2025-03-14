@@ -9296,7 +9296,6 @@ const int N=1<<21;
 struct node{
 	bool u,c;
 }s[N];
-
 void update(int l,int r,int idx,int a,int b){
 	//cout<<l <<" " <<r <<" " <<idx <<' ' <<a <<" " <<b <<"\n";
 	int m=(l+r)/2;
