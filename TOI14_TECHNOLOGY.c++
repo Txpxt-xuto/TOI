@@ -9324,7 +9324,8 @@ int main()
 	int n,m;
 	cin >> n >> m;
 	for(int i=0;i<N;i++) s[i].u=s[i].c=false;
-	for(int i=1;i<=m;i++){
+	for(int i=1;i<=m;i++)
+    {
 		int a,b;
 		cin>>a >>b;
 		a=b+(1<<a)-1;
