@@ -9322,7 +9322,7 @@ int main()
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	int n,m;
-	cin>> n >>m;
+	cin >> n >> m;
 	for(int i=0;i<N;i++) s[i].u=s[i].c=false;
 	for(int i=1;i<=m;i++){
 		int a,b;
