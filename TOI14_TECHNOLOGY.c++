@@ -9296,7 +9296,8 @@ const int N=1<<21;
 struct node{
 	bool u,c;
 }s[N];
-void update(int l,int r,int idx,int a,int b){
+void update(int l,int r,int idx,int a,int b)
+{
 	int m=(l+r)/2;
 	if(a>r || b<l) return;
 	if(l==a && r==b){
