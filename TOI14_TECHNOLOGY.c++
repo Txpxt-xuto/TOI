@@ -9304,7 +9304,6 @@ void update(int l,int r,int idx,int a,int b)
     {
 		s[idx].u=true;
 		if(l==r) s[idx].c=true;
-
 		if(s[idx*2].u && (!s[idx*2+1].u)) s[idx*2+1].u=true,update(m+1,r,idx*2+1,m+1,r);
 		if(s[idx*2+1].u && (!s[idx*2].u)) s[idx*2].u=true,update(l,m,idx*2,l,m);
 		if(l!=r) s[idx].c=s[idx*2].c && s[idx*2+1].c;
