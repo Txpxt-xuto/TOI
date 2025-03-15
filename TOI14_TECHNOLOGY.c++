@@ -9342,7 +9342,6 @@ int main()
 
 #include <iostream>
 using namespace std;
-
 int a[1000001], n, m, fw[2][1000001], cnt[2];
 bool f[1000001];
 long long sum = 0;
