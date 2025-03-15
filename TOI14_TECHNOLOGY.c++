@@ -9353,7 +9353,8 @@ long long qry (bool flip, int v)
     return sum;
 }
 
-void upd(bool flip, int v, int w) {
+void upd(bool flip, int v, int w)
+{
     sum += v*w; cnt[flip] += w;
     for (int i = v+1; i <= m+1; i+=i&-i) fw[flip][i] += w;
 }
