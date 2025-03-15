@@ -9370,7 +9370,8 @@ int main()
     for(int i=1;i<=n;i++) for(int j=1;j<=m+1;j+=j&-j) ++fw[0][j];
     while(q--)
     {
-        char cmd; cin >> cmd;
+        char cmd;
+        cin >> cmd;
         if(cmd == 's')
         {
             int x, y;
