@@ -9332,7 +9332,6 @@ int main()
 		swap(a,b);
 		update(0,(1<<n)-1,1,a,b);
 		/*for(int j=1;j<=7;j++){
- [j].c <<"\n";
 		}*/
 		if(s[1].c)
         {
