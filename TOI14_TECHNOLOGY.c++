@@ -9379,7 +9379,8 @@ int main()
         }
         else if(cmd == 'f')
         {
-            int x; cin >> x;
+            int x;
+            cin >> x;
             upd(f[x], a[x], -1);
             upd(f[x] = f[x]^1, a[x] = (m-a[x])%m, 1);
         }
