@@ -9346,7 +9346,8 @@ int a[1000001], n, m, fw[2][1000001], cnt[2];
 bool f[1000001];
 long long sum = 0;
 
-long long qry (bool flip, int v) {
+long long qry (bool flip, int v)
+{
     long long sum = 0;
     for (int i = v+1; i > 0; i-=i&-i) sum += fw[flip][i];
     return sum;
