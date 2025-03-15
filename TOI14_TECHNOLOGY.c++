@@ -9373,7 +9373,8 @@ int main()
         char cmd; cin >> cmd;
         if(cmd == 's')
         {
-            int x, y; cin >> x >> y;
+            int x, y;
+            cin >> x >> y;
             upd(f[x], a[x], -1);
             upd(f[x], a[x] = (f[x] ? (a[x]+y)%m : (a[x]-y+m)%m), 1);
         }
