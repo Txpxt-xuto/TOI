@@ -9345,3 +9345,45 @@ int main()
 	}
 }
 
+#include <iostream>
+using namespace std;
+
+int a[1000001], n, m, fw[2][1000001], cnt[2];
+bool f[1000001];
+long long sum = 0;
+
+long long qry (bool flip, int v) {
+    long long sum = 0;
+    for (int i = v+1; i > 0; i-=i&-i) sum += fw[flip][i];
+    return sum;
+}
+
+void upd(bool flip, int v, int w) {
+    sum += v*w; cnt[flip] += w;
+    for (int i = v+1; i <= m+1; i+=i&-i) fw[flip][i] += w;
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cout.tie(0);
+    cin.tie(0);
+
+    int q; cin >> n >> m >> q;
+    cnt[0] = n;
+    for (int i = 1; i <= n; i++) for (int j = 1; j <= m+1; j+=j&-j) ++fw[0][j];
+    while (q--) {
+        char cmd; cin >> cmd;
+        if (cmd == 's') {
+            int x, y; cin >> x >> y;
+            upd(f[x], a[x], -1);
+            upd(f[x], a[x] = (f[x] ? (a[x]+y)%m : (a[x]-y+m)%m), 1);
+        } else if (cmd == 'f') {
+            int x; cin >> x;
+            upd(f[x], a[x], -1);
+            upd(f[x] = f[x]^1, a[x] = (m-a[x])%m, 1);
+        } else {
+            int x; cin >> x;
+            cout << x*qry(0, m-x) - (m-x)*(cnt[0]-qry(0, m-x)) + (m-x)*qry(1, x) - x*(cnt[1]-qry(1, x)) + sum << "\n";
+        }
+    }
+}
