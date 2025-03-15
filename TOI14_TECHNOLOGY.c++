@@ -9371,7 +9371,7 @@ int main()
     while(q--)
     {
         char cmd; cin >> cmd;
-        if (cmd == 's')
+        if(cmd == 's')
         {
             int x, y; cin >> x >> y;
             upd(f[x], a[x], -1);
