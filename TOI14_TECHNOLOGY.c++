@@ -9359,7 +9359,8 @@ void upd(bool flip, int v, int w)
     for(int i=v+1;i<=m+1;i+=i&-i) fw[flip][i] += w;
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
     cout.tie(0);
     cin.tie(0);
