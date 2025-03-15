@@ -9334,7 +9334,8 @@ int main()
 		/*for(int j=1;j<=7;j++){
 			cout<<s[j].u <<" " <<s[j].c <<"\n";
 		}*/
-		if(s[1].c){
+		if(s[1].c)
+        {
 			for(int j=i+1;j<=m;j++) cin>>a >>b;
 			cout<<i <<"\n";
 			return 0;
