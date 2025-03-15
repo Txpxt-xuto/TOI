@@ -9368,7 +9368,7 @@ int main()
     cin >> n >> m >> q;
     cnt[0] = n;
     for(int i = 1; i <= n; i++) for(int j = 1; j <= m+1; j+=j&-j) ++fw[0][j];
-    while (q--)
+    while(q--)
     {
         char cmd; cin >> cmd;
         if (cmd == 's') {
