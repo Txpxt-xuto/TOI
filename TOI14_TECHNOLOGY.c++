@@ -9331,7 +9331,6 @@ int main()
 		a=b+(1<<a)-1;
 		swap(a,b);
 		update(0,(1<<n)-1,1,a,b);
-		
 		if(s[1].c)
         {
 			for(int j=i+1;j<=m;j++) cin >> a >> b;
