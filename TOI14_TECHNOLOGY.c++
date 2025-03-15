@@ -9376,7 +9376,8 @@ int main()
             int x, y; cin >> x >> y;
             upd(f[x], a[x], -1);
             upd(f[x], a[x] = (f[x] ? (a[x]+y)%m : (a[x]-y+m)%m), 1);
-        } else if (cmd == 'f') {
+        }
+        else if (cmd == 'f') {
             int x; cin >> x;
             upd(f[x], a[x], -1);
             upd(f[x] = f[x]^1, a[x] = (m-a[x])%m, 1);
