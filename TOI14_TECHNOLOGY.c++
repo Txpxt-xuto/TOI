@@ -9382,7 +9382,8 @@ int main()
             int x; cin >> x;
             upd(f[x], a[x], -1);
             upd(f[x] = f[x]^1, a[x] = (m-a[x])%m, 1);
-        } else {
+        }
+        else {
             int x; cin >> x;
             cout << x*qry(0, m-x) - (m-x)*(cnt[0]-qry(0, m-x)) + (m-x)*qry(1, x) - x*(cnt[1]-qry(1, x)) + sum << "\n";
         }
