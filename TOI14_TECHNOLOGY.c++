@@ -9337,7 +9337,7 @@ int main()
 		if(s[1].c)
         {
 			for(int j=i+1;j<=m;j++) cin>>a >>b;
-			cout<<i <<"\n";
+			cout<< i <<"\n";
 			return 0;
 		}
 	}
