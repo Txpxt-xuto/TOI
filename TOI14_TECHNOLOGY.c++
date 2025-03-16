@@ -9558,7 +9558,7 @@ int main(){
         vector<int> &members = grp.second;
         cout << members.size();
         for(int mem : members) cout << " " << mem;
-            
+    
         cout << "\n";
     }
     return 0;
