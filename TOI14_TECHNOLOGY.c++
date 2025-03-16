@@ -9553,7 +9553,7 @@ int main(){
         result.push_back({rep, members});
     }
     
-    // บร
+
     cout << p << "\n";
     
     for (auto &grp : result) {
