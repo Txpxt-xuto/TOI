@@ -9553,7 +9553,6 @@ int main(){
         result.push_back({rep, members});
     }
     
-    // แส
     // บร
     cout << p << "\n";
     
