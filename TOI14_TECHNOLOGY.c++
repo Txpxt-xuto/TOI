@@ -9554,7 +9554,7 @@ int main(){
     }
     
     // แส
-    // บรรทัด
+    // บร
     cout << p << "\n";
     
     for (auto &grp : result) {
