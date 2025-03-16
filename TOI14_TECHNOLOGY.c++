@@ -9560,6 +9560,5 @@ int main(){
             cout << " " << mem;
         cout << "\n";
     }
-    
     return 0;
 }
