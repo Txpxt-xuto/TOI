@@ -9394,3 +9394,176 @@ int main()
     }
 }
 
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// กำหนดขนาดสูงสุดของพรรคการเมือง (n ≤ 20,000)
+const int MAXN = 20005;
+ 
+// Global arrays สำหรับ DSU
+int parent[MAXN], rnk[MAXN];
+ 
+// ฟังก์ชัน root: หาตัวแทนของกลุ่มโดยใช้เทคนิค Path Compression
+int root(int u) {
+    if (parent[u] == u)
+        return u;
+    return parent[u] = root(parent[u]);
+}
+ 
+// ฟังก์ชัน is_same: ตรวจสอบว่า u และ v อยู่ในกลุ่มเดียวกันหรือไม่
+bool is_same(int u, int v) {
+    return root(u) == root(v);
+}
+ 
+// ฟังก์ชัน merge: รวมกลุ่มของ u และ v โดยใช้ Union by Rank
+void mergeDSU(int u, int v) {
+    u = root(u); v = root(v);
+    if(u == v) return;
+    if(rnk[u] > rnk[v]) {
+        rnk[u] += rnk[v];
+        parent[v] = u;
+    } else {
+        rnk[v] += rnk[u];
+        parent[u] = v;
+    }
+}
+ 
+// โครงสร้างข้อมูลสำหรับเก็บกราฟ directed ระหว่างกลุ่มของพรรคการเมือง
+// แต่ละ vertex คือ representative ของกลุ่มที่รวมกันแล้ว
+// graph[u] เก็บรายชื่อ vertex ที่มี edge u -> v (หมายความว่า กลุ่ม u มีคะแนนน้อยกว่า v)
+vector<int> graph[MAXN];
+ 
+// inDeg[u] เก็บค่า in-degree ของ vertex u ในกราฟ
+int inDeg[MAXN];
+ 
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    int n, w; // n: จำนวนพรรคการเมือง, w: จำนวนข้อมูลที่จำได้
+    cin >> n >> w;
+    
+    // กำหนด DSU เริ่มต้น: ทุกพรรคอยู่ในกลุ่มของตัวเอง
+    for (int i = 1; i <= n; i++){
+        parent[i] = i;
+        rnk[i] = 1;
+    }
+    
+    // เราจะเก็บข้อมูลจำได้ทั้ง 3 ประเภทไว้ใน vector เพื่อประมวลผล constraint ที่ไม่ใช่ T=3 หลัง DSU
+    // constraintsT1: ข้อมูล T=1 (a > b และ a > c)
+    // constraintsT2: ข้อมูล T=2 (a < b และ a < c)
+    vector<array<int,4>> constraintsT1, constraintsT2;
+    
+    // อ่านข้อมูล w รายการ
+    // แต่ละรายการมี 4 ตัวเลข: T, a, b, c
+    for (int i = 0; i < w; i++){
+        int T, a, b, c;
+        cin >> T >> a >> b >> c;
+        if(T == 3){
+            // ถ้า T == 3 ให้รวมพรรค a, b, c เข้าด้วยกัน (เท่ากับคะแนน)
+            mergeDSU(a, b);
+            mergeDSU(a, c);
+        } else if(T == 1){
+            // T == 1: พรรค a ได้คะแนนมากกว่า b และ c
+            // เก็บ constraint ไว้เพื่อประมวลภายหลัง
+            constraintsT1.push_back({T, a, b, c});
+        } else if(T == 2){
+            // T == 2: พรรค a ได้คะแนนน้อยกว่าบวก c
+            constraintsT2.push_back({T, a, b, c});
+        }
+    }
+    
+    // หลังจาก DSU แล้ว แต่ละพรรคจะมี representative ซึ่งระบุว่าพรรคใดเท่ากัน
+    // สร้าง mapping จาก representative ไปยังรายชื่อสมาชิกในกลุ่ม (เรียงจากน้อยไปมาก)
+    map<int, vector<int>> groups;
+    for (int i = 1; i <= n; i++){
+        int rep = root(i);
+        groups[rep].push_back(i);
+    }
+    // กำหนดให้ทุกกลุ่มมี vertex id ใหม่ ซึ่งเราจะใช้ representative valueเป็น vertex id ในกราฟใหม่
+    // (เราอาจจะใช้ rep ได้โดยตรง)
+    
+    // ประมวลผล constraints แบบ T=1: a > b และ a > c
+    // สำหรับแต่ละ constraint ให้หาตัวแทนของ a, b, c
+    // เพิ่ม edge จาก representative ของ b ไปยัง representative ของ a และจาก c ไปยัง a
+    for (auto &arr : constraintsT1) {
+        int T = arr[0], a = arr[1], b = arr[2], c = arr[3];
+        int repA = root(a), repB = root(b), repC = root(c);
+        if(repB != repA){
+            graph[repB].push_back(repA);
+            inDeg[repA]++;
+        }
+        if(repC != repA){
+            graph[repC].push_back(repA);
+            inDeg[repA]++;
+        }
+    }
+    // ประมวลผล constraints แบบ T=2: a < b และ a < c
+    // สำหรับแต่ละ constraint ให้เพิ่ม edgeจาก representative ของ a ไปยัง representativeของ b และ c
+    for (auto &arr : constraintsT2) {
+        int T = arr[0], a = arr[1], b = arr[2], c = arr[3];
+        int repA = root(a), repB = root(b), repC = root(c);
+        if(repA != repB){
+            graph[repA].push_back(repB);
+            inDeg[repB]++;
+        }
+        if(repA != repC){
+            graph[repA].push_back(repC);
+            inDeg[repC]++;
+        }
+    }
+    
+    // จำนวนกลุ่ม (vertex ในกราฟใหม่) คือ groups.size()
+    int p = groups.size();
+    
+    // ทำ Topological Sorting โดยใช้ Kahn's Algorithm
+    queue<int> Q;
+    // นำ vertex (representative) ที่มี in-degree = 0 ใส่ลงในคิว
+    for (auto &entry : groups) {
+        int rep = entry.first;
+        if (inDeg[rep] == 0)
+            Q.push(rep);
+    }
+    
+    vector<int> topo;
+    while (!Q.empty()){
+        int u = Q.front();
+        Q.pop();
+        topo.push_back(u);
+        for (int v : graph[u]){
+            inDeg[v]--;
+            if(inDeg[v] == 0)
+                Q.push(v);
+        }
+    }
+    
+    // หากจำนวน vertex ใน topo ไม่เท่ากับจำนวนกลุ่ม แปลว่ามี cycle (แต่โจทย์รับประกันว่าข้อมูลถูกต้อง)
+    if(topo.size() != groups.size()){
+        cout << -1 << "\n";
+        return 0;
+    }
+    
+    // ตอนนี้ topo มีลำดับจากคะแนนต่ำสุดไปหาสูงสุด (เพราะ edge u->v หมายถึง u มีคะแนนน้อยกว่า v)
+    // สร้างผลลัพธ์ โดยเรียงกลุ่มตาม topo order
+    // แต่ละกลุ่มให้เรียงสมาชิกภายในกลุ่มจากน้อยไปมาก
+    vector<pair<int, vector<int>>> result;
+    for (int rep : topo) {
+        vector<int> members = groups[rep];
+        sort(members.begin(), members.end());
+        result.push_back({rep, members});
+    }
+    
+    // แสดงผลลัพธ์:
+    // บรรทัดแรก: จำนวน p (จำนวนกลุ่มที่มีคะแนนแตกต่างกัน)
+    cout << p << "\n";
+    // จากนั้น p บรรทัด สำหรับแต่ละกลุ่ม ให้แสดงจำนวนสมาชิกในกลุ่มและรายชื่อสมาชิก (เรียงจากน้อยไปมาก)
+    for (auto &grp : result) {
+        vector<int> &members = grp.second;
+        cout << members.size();
+        for (int mem : members)
+            cout << " " << mem;
+        cout << "\n";
+    }
+    
+    return 0;
+}
