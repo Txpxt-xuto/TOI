@@ -9554,7 +9554,7 @@ int main(){
     }
     
     cout << p << "\n";
-    
+
     for (auto &grp : result) {
         vector<int> &members = grp.second;
         cout << members.size();
