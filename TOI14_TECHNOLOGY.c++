@@ -9553,7 +9553,7 @@ int main(){
         result.push_back({rep, members});
     }
     
-    // แสดงผลลัพธ์:
+    // แสดงผล
     // บรรทัด
     cout << p << "\n";
     
