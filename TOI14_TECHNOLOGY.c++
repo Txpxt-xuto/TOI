@@ -9556,7 +9556,7 @@ int main(){
     // แสดงผลลัพธ์:
     // บรรทัดแรก: จำน
     cout << p << "\n";
-    ละรายชื่อสมาชิก (เรียงจากน้อยไปมาก)
+    
     for (auto &grp : result) {
         vector<int> &members = grp.second;
         cout << members.size();
