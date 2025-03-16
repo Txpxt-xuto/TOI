@@ -9547,7 +9547,8 @@ int main(){
     // สร้างผลลัพธ์ โดยเรียงกลุ่มตาม topo order
     // แต่ละกลุ่มให้เรียงสมาชิกภายในกลุ่มจากน้อยไปมาก
     vector<pair<int, vector<int>>> result;
-    for (int rep : topo) {
+    for (int rep : topo)
+    {
         vector<int> members = groups[rep];
         sort(members.begin(), members.end());
         result.push_back({rep, members});
