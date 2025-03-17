@@ -9537,7 +9537,6 @@ int main(){
             if(inDeg[v] == 0) Q.push(v);
         }
     }
-    
     if(topo.size() != groups.size())
     {
         cout << -1 << "\n";
