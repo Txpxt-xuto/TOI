@@ -9544,7 +9544,6 @@ int main(){
     }
     // ตอน
     // 
-    // แต
     vector<pair<int, vector<int>>> result;
     for(int rep : topo)
     {
