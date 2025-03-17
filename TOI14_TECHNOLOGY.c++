@@ -9538,7 +9538,6 @@ int main(){
         }
     }
     
-    
     if(topo.size() != groups.size())
     {
         cout << -1 << "\n";
