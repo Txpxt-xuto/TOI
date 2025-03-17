@@ -9529,7 +9529,7 @@ int main(){
         int u = Q.front();
         Q.pop();
         topo.push_back(u);
-        for (int v : graph[u])
+        for(int v : graph[u])
         {
             inDeg[v]--;
             if(inDeg[v] == 0) Q.push(v);
