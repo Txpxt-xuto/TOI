@@ -9525,7 +9525,8 @@ int main(){
             Q.push(rep);
     }
     vector<int> topo;
-    while (!Q.empty()){
+    while (!Q.empty())
+    {
         int u = Q.front();
         Q.pop();
         topo.push_back(u);
