@@ -9513,7 +9513,6 @@ int main(){
             inDeg[repC]++;
         }
     }
-    
     // จำนวนกลุ่ม (vertex ในกราฟใหม่) คือ groups.size()
     int p = groups.size();
     
