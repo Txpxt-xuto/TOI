@@ -9518,7 +9518,7 @@ int main(){
     // ทำ Topological Sorting โดยใช้ Kahn's Algorithm
     queue<int> Q;
     // นำ vertex (representative) ที่มี in-degree = 0 ใส่ลงในคิว
-    for (auto &entry : groups)
+    for(auto &entry : groups)
     {
         int rep = entry.first;
         if (inDeg[rep] == 0)
