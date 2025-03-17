@@ -9533,7 +9533,6 @@ int main(){
         {
             inDeg[v]--;
             if(inDeg[v] == 0) Q.push(v);
-        
         }
     }
     
