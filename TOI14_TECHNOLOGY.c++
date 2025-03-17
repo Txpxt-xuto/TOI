@@ -9532,8 +9532,8 @@ int main(){
         for (int v : graph[u])
         {
             inDeg[v]--;
-            if(inDeg[v] == 0)
-                Q.push(v);
+            if(inDeg[v] == 0)Q.push(v);
+                
         }
     }
     
