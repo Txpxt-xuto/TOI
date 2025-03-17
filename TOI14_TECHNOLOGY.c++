@@ -9503,7 +9503,8 @@ int main(){
     for (auto &arr : constraintsT2) {
         int T = arr[0], a = arr[1], b = arr[2], c = arr[3];
         int repA = root(a), repB = root(b), repC = root(c);
-        if(repA != repB){
+        if(repA != repB)
+        {
             graph[repA].push_back(repB);
             inDeg[repB]++;
         }
