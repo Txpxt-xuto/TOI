@@ -9543,9 +9543,9 @@ int main(){
         return 0;
     }
     // ตอน
-    // สร้าง
+    // สร
     // แต่ละกลุ่มให้เรียงสมาชิก
-    vector<pair<int, vetor<int>>> result;
+    vector<pair<int, vector<int>>> result;
     for(int rep : topo)
     {
         vector<int> members = groups[rep];
