@@ -9543,7 +9543,7 @@ int main(){
         return 0;
     }
     // ตอน
-    // สร
+    // 
     // แต่ละกลุ่มให้เรียงสมาชิก
     vector<pair<int, vector<int>>> result;
     for(int rep : topo)
