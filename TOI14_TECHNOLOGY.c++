@@ -9542,8 +9542,6 @@ int main(){
         cout << -1 << "\n";
         return 0;
     }
-    // ตอน
-    // 
     vector<pair<int, vector<int>>> result;
     for(int rep : topo)
     {
