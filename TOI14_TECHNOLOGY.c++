@@ -9544,7 +9544,7 @@ int main(){
     }
     // ตอน
     // 
-    // แต่ละกลุ่มให้เรียงสมาชิก
+    // แต่ละกลุ่มให้เรียง
     vector<pair<int, vector<int>>> result;
     for(int rep : topo)
     {
