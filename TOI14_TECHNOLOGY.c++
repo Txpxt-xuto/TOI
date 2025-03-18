@@ -9616,7 +9616,8 @@ void solve1(int n,int k){
     }while(next_permutation(v.begin(),v.end()));
     for(auto it : rs)cout<<it<<' ';
 }
-void solve2(int n,int k){
+void solve2(int n,int k)
+{
     int ro=4e4;
     for(int i=1;i<=n;i++)v.pb(i);
     vector<pii>qr(k);
