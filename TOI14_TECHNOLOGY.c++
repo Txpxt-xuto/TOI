@@ -9640,7 +9640,8 @@ void gen(int n,int i)
     tmp.pop_back();
 }
 
-void solve3(int n,int k){
+void solve3(int n,int k)
+{
     v.resize(n,0);
     for(int i=0;i<k;i++)cin>>qr[i].f>>qr[i].s;
     for(int i=0;i<(1<<k);i++)
