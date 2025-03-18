@@ -9607,9 +9607,9 @@ ll ans=0;
 vector<int>rs;
 void solve1(int n,int k)
 {
-    for(int i=1;i<=n;i++)v.pb(i);
+    for(int i=1;i<=n;i++) v.pb(i);
     vector<pii>qr(k);
-    for(int i=0;i<k;i++)cin>>qr[i].f>>qr[i].s;
+    for(int i=0;i<k;i++) cin>>qr[i].f>>qr[i].s;
     do{
         s1.build(n);s2.build(n);ll tt=0;
         for(auto it : qr) tt+=s2.qr(it.f-1,it.s,n)-s1.qr(it.f-1,it.s,n);
