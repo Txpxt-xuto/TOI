@@ -9634,7 +9634,7 @@ pii a[16];
 void gen(int n,int i)
 {
     if(i==n
-    
+
     tmp.pb(0);
     gen(n,i+1);
     tmp.pop_back();
