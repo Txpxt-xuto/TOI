@@ -9626,7 +9626,7 @@ void solve2(int n,int k)
     {
         shuffle(v.begin(),v.end(),rng);
         s1.build(n);s2.build(n);ll tt=0;
-        for(auto it : qr)tt+=s2.qr(it.f-1,it.s,n)-s1.qr(it.f-1,it.s,n);
+        for(auto it : qr) tt+=s2.qr(it.f-1,it.s,n)-s1.qr(it.f-1,it.s,n);
         if(tt>ans)ans=tt,rs=v;
     }
     for(auto it : rs) cout << it << ' ';
