@@ -9632,7 +9632,7 @@ vector<pii>qr(4);
 vector<int>tmp;
 pii a[16];
 void gen(int n,int i)
-{
+
     if(i==n
 
     tmp.pb(0);
