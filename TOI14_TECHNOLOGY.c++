@@ -9655,6 +9655,6 @@ int main()
     int n,k;
     cin >> n >> k;
     if(n<=9) solve1(n,k);
-    if(k>=2&&k<=4)solve3(n,k);
+    if(k>=2&&k<=4) solve3(n,k);
     else solve2(n,k);
 }
