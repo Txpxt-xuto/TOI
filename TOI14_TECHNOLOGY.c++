@@ -9561,3 +9561,98 @@ int main(){
     return 0;
 }
 
+#include<bits/stdc++.h>
+#define f first
+#define s second
+#define ll long long
+#define pb push_back
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define sz(x) (int)x.size()
+#define all(x) x.begin(),x.end()
+#define vi vector<int>
+#define vvi vector<vi>
+#define vll vector<ll>
+using namespace std;
+const int N=505;
+vector<int>v;
+mt19937 rng(time(0));
+struct mint{
+    int t[2*N];
+    void build(int sz){
+        for(int i=0;i<sz;i++)t[i+sz]=v[i];
+        for(int i=sz-1;i>0;i--)t[i]=min(t[2*i],t[2*i+1]);
+    }
+    int qr(int l,int r,int sz,int res=1e9){
+        for(l+=sz,r+=sz;l<r;l>>=1,r>>=1){
+            if(l&1)res=min(res,t[l++]);
+            if(r&1)res=min(res,t[--r]);
+        }return res;
+    }
+}s1;
+struct maxt{
+    int t[2*N];
+    void build(int sz){
+        for(int i=0;i<sz;i++)t[i+sz]=v[i];
+        for(int i=sz-1;i>0;i--)t[i]=max(t[2*i],t[2*i+1]);
+    }
+    int qr(int l,int r,int sz,int res=0){
+        for(l+=sz,r+=sz;l<r;l>>=1,r>>=1){
+            if(l&1)res=max(res,t[l++]);
+            if(r&1)res=max(res,t[--r]);
+        }return res;
+    }
+}s2;
+ll ans=0;
+vector<int>rs;
+void solve1(int n,int k){
+    for(int i=1;i<=n;i++)v.pb(i);
+    vector<pii>qr(k);
+    for(int i=0;i<k;i++)cin>>qr[i].f>>qr[i].s;
+    do{
+        s1.build(n);s2.build(n);ll tt=0;
+        for(auto it : qr)tt+=s2.qr(it.f-1,it.s,n)-s1.qr(it.f-1,it.s,n);
+        if(tt>ans)ans=tt,rs=v;
+    }while(next_permutation(v.begin(),v.end()));
+    for(auto it : rs)cout<<it<<' ';
+}
+void solve2(int n,int k){
+    int ro=4e4;
+    for(int i=1;i<=n;i++)v.pb(i);
+    vector<pii>qr(k);
+    for(int i=0;i<k;i++)cin>>qr[i].f>>qr[i].s;
+    while(ro--){
+        shuffle(v.begin(),v.end(),rng);
+        s1.build(n);s2.build(n);ll tt=0;
+        for(auto it : qr)tt+=s2.qr(it.f-1,it.s,n)-s1.qr(it.f-1,it.s,n);
+        if(tt>ans)ans=tt,rs=v;
+    }for(auto it : rs)cout<<it<<' ';
+}
+vector<pii>qr(4);
+vector<int>tmp;
+pii a[16];
+void gen(int n,int i){
+    if(i==n){
+
+    }tmp.pb(0);gen(n,i+1);
+    tmp.pop_back();
+    tmp.pb(1);gen(n,i+1);
+    tmp.pop_back();
+}
+void solve3(int n,int k){
+    v.resize(n,0);
+    for(int i=0;i<k;i++)cin>>qr[i].f>>qr[i].s;
+    for(int i=0;i<(1<<k);i++){
+        int mxl=0,mnr=1e9;
+        for(int j=0;j<k;j++)if(i&(1<<j))mxl=max(mxl,qr[j].f),mnr=min(mnr,qr[j].s);
+        a[i]={mxl,mnr};
+    }
+    gen(k*k,0);
+}
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n,k;cin>>n>>k;
+    if(n<=9)solve1(n,k);
+    if(k>=2&&k<=4)solve3(n,k);
+    else solve2(n,k);
+}
