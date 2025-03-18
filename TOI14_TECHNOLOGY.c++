@@ -9642,7 +9642,8 @@ void gen(int n,int i){
 void solve3(int n,int k){
     v.resize(n,0);
     for(int i=0;i<k;i++)cin>>qr[i].f>>qr[i].s;
-    for(int i=0;i<(1<<k);i++){
+    for(int i=0;i<(1<<k);i++)
+    {
         int mxl=0,mnr=1e9;
         for(int j=0;j<k;j++)if(i&(1<<j))mxl=max(mxl,qr[j].f),mnr=min(mnr,qr[j].s);
         a[i]={mxl,mnr};
