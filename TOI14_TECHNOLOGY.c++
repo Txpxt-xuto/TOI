@@ -9652,7 +9652,8 @@ void solve3(int n,int k){
 }
 int main()
 {
-    ios_base::sync_with_stdio(0);cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int n,k;
     cin >> n >> k;
     if(n<=9) solve1(n,k);
