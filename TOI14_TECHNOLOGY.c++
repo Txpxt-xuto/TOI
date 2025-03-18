@@ -9631,7 +9631,8 @@ void solve2(int n,int k){
 vector<pii>qr(4);
 vector<int>tmp;
 pii a[16];
-void gen(int n,int i){
+void gen(int n,int i)
+{
     if(i==n){
 
     }tmp.pb(0);gen(n,i+1);
