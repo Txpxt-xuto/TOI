@@ -9633,7 +9633,6 @@ vector<int>tmp;
 pii a[16];
 void gen(int n,int i)
 {
-    
     tmp.pb(0);
     gen(n,i+1);
     tmp.pop_back();
