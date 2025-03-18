@@ -9621,7 +9621,7 @@ void solve2(int n,int k)
     int ro=4e4;
     for(int i=1;i<=n;i++) v.pb(i);
     vector<pii>qr(k);
-    for(int i=0;i<k;i++)cin>>qr[i].f>>qr[i].s;
+    for(int i=0;i<k;i++) cin>>qr[i].f>>qr[i].s;
     while(ro--){
         shuffle(v.begin(),v.end(),rng);
         s1.build(n);s2.build(n);ll tt=0;
