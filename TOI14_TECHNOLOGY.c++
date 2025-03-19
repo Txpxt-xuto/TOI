@@ -9577,7 +9577,8 @@ using namespace std;
 const int N=505;
 vector<int>v;
 mt19937 rng(time(0));
-struct mint{
+struct mint
+{
     int t[2*N];
     void build(int sz)
     {
