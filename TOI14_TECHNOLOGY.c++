@@ -9467,7 +9467,7 @@ int main(){
             // T == 1: พรรค a ได้คะแนนมากกว่า b และ c
             // เก็บ constraint ไว้เพื่อประมวลภายหลัง
             constraintsT1.push_back({T, a, b, c});
-        } else if(T == 2) constraintsT2.push_back({T, a, b, c});
+        }else if(T == 2) constraintsT2.push_back({T, a, b, c});
         {
         }
     }
