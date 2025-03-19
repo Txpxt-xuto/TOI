@@ -9486,7 +9486,7 @@ int main(){
     // ประมวลผล constraints แบบ T=1: a > b และ a > c
     // สำหรับแต่ละ constraint ให้หาตัวแทนของ a, b, c
     // เพิ่ม edge จาก representative ของ b ไปยัง representative ของ a และจาก c ไปยัง a
-    for (auto &arr : constraintsT1)
+    for(auto &arr : constraintsT1)
     {
         int T = arr[0], a = arr[1], b = arr[2], c = arr[3];
         int repA = root(a), repB = root(b), repC = root(c);
