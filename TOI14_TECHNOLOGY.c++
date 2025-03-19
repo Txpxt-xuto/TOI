@@ -9521,7 +9521,6 @@ int main(){
     {
         int rep = entry.first;
         if (inDeg[rep] == 0) Q.push(rep);
-           
     }
     vector<int> topo;
     while (!Q.empty())
