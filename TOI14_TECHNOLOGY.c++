@@ -9469,7 +9469,7 @@ int main(){
             constraintsT1.push_back({T, a, b, c});
         } else if(T == 2) constraintsT2.push_back({T, a, b, c});
         {
-            // T == 2: พรรค a ได้คะแนนน้อยกว่าบวก c
+            /คะแนนน้อยกว่าบวก c
             
         }
     }
