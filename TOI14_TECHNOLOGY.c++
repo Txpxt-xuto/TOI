@@ -9581,7 +9581,7 @@ struct mint{
     int t[2*N];
     void build(int sz)
     {
-        for(int i=0;i<sz;i++)t[i+sz]=v[i];
+        for(int i=0;i<sz;i++) t[i+sz]=v[i];
         for(int i=sz-1;i>0;i--)t[i]=min(t[2*i],t[2*i+1]);
     }
     int qr(int l,int r,int sz,int res=1e9)
