@@ -9598,7 +9598,8 @@ struct maxt{
         for(int i=sz-1;i>0;i--) t[i]=max(t[2*i],t[2*i+1]);
     }
     int qr(int l,int r,int sz,int res=0){
-        for(l+=sz,r+=sz;l<r;l>>=1,r>>=1){
+        for(l+=sz,r+=sz;l<r;l>>=1,r>>=1)
+        {
             if(l&1)res=max(res,t[l++]);
             if(r&1)res=max(res,t[--r]);
         }return res;
