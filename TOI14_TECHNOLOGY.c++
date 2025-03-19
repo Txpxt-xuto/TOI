@@ -9579,7 +9579,8 @@ vector<int>v;
 mt19937 rng(time(0));
 struct mint{
     int t[2*N];
-    void build(int sz){
+    void build(int sz)
+    {
         for(int i=0;i<sz;i++)t[i+sz]=v[i];
         for(int i=sz-1;i>0;i--)t[i]=min(t[2*i],t[2*i+1]);
     }
