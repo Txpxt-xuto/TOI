@@ -9495,7 +9495,8 @@ int main(){
             graph[repB].push_back(repA);
             inDeg[repA]++;
         }
-        if(repC != repA){
+        if(repC != repA)
+        {
             graph[repC].push_back(repA);
             inDeg[repA]++;
         }
