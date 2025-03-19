@@ -9616,7 +9616,8 @@ void solve1(int n,int k)
         s1.build(n);s2.build(n);ll tt=0;
         for(auto it : qr) tt+=s2.qr(it.f-1,it.s,n)-s1.qr(it.f-1,it.s,n);
         if(tt>ans) ans=tt,rs=v;
-    }while(next_permutation(v.begin(),v.end()));
+    }
+    while(next_permutation(v.begin(),v.end()));
     for(auto it : rs) cout << it << ' ';
 }
 
