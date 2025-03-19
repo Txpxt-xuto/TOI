@@ -9587,7 +9587,7 @@ struct mint{
     {
         for(l+=sz,r+=sz;l<r;l>>=1,r>>=1)
         {
-            if(l&1)res=min(res,t[l++]);
+            if(l&1) res=min(res,t[l++]);
             if(r&1)res=min(res,t[--r]);
         }
         return res;
