@@ -9600,7 +9600,7 @@ struct maxt{
     int qr(int l,int r,int sz,int res=0){
         for(l+=sz,r+=sz;l<r;l>>=1,r>>=1)
         {
-            if(l&1)res=max(res,t[l++]);
+            if(l&1) res=max(res,t[l++]);
             if(r&1)res=max(res,t[--r]);
         }
         return res;
