@@ -9490,7 +9490,8 @@ int main(){
     {
         int T = arr[0], a = arr[1], b = arr[2], c = arr[3];
         int repA = root(a), repB = root(b), repC = root(c);
-        if(repB != repA){
+        if(repB != repA)
+        {
             graph[repB].push_back(repA);
             inDeg[repA]++;
         }
