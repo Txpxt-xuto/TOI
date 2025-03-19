@@ -9520,8 +9520,8 @@ int main(){
     for(auto &entry : groups)
     {
         int rep = entry.first;
-        if (inDeg[rep] == 0)
-            Q.push(rep);
+        if (inDeg[rep] == 0) Q.push(rep);
+           
     }
     vector<int> topo;
     while (!Q.empty())
