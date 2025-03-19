@@ -9517,7 +9517,7 @@ int main(){
     }
     // จำนวนกลุ่ม (vertex ในกราฟใหม่) คือ groups.size()
     int p = groups.size();
-    // ทำ Topological Sorting โดยใช้ Kahn's Algorithm
+
     queue<int> Q;
     for(auto &entry : groups)
     {
