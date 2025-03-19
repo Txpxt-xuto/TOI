@@ -9602,7 +9602,8 @@ struct maxt{
         {
             if(l&1)res=max(res,t[l++]);
             if(r&1)res=max(res,t[--r]);
-        }return res;
+        }
+        return res;
     }
 }s2;
 ll ans=0;
