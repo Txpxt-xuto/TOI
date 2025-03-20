@@ -9472,7 +9472,6 @@ int main(){
         {
     }
     
-    // หลังจาก DSU แล้ว แต่ละพรรคจะมี representative ซึ่งระบุว่าพรรคใดเท่ากัน
     // สร้าง mapping จาก representative ไปยังรายชื่อสมาชิกในกลุ่ม (เรียงจากน้อยไปมาก)
     map<int, vector<int>> groups;
     for(int i=1;i<=n;i++)
