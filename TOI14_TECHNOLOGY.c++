@@ -9459,7 +9459,8 @@ int main(){
     for (int i = 0; i < w; i++){
         int T, a, b, c;
         cin >> T >> a >> b >> c;
-        if(T == 3){
+        if(T == 3)
+        {
             mergeDSU(a, b);
             mergeDSU(a, c);
         }
