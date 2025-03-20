@@ -9471,7 +9471,7 @@ int main(){
         else if(T == 2) constraintsT2.push_back({T, a, b, c});
         {
     }
-    // สร้าง mapping จาก representative ไปยังรายชื่อสมาชิกในกลุ่ม (เรียงจากน้อยไปมาก)
+
     map<int, vector<int>> groups;
     for(int i=1;i<=n;i++)
     {
