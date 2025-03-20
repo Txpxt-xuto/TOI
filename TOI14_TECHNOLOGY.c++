@@ -9460,7 +9460,6 @@ int main(){
         int T, a, b, c;
         cin >> T >> a >> b >> c;
         if(T == 3){
-            // ถ้า T == 3 ให้รวมพรรค a, b, c เข้าด้วยกัน (เท่ากับคะแนน)
             mergeDSU(a, b);
             mergeDSU(a, c);
         }
