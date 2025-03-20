@@ -9463,8 +9463,8 @@ int main(){
             // ถ้า T == 3 ให้รวมพรรค a, b, c เข้าด้วยกัน (เท่ากับคะแนน)
             mergeDSU(a, b);
             mergeDSU(a, c);
-        } else if(T == 1){
-            constraintsT1.push_back({T, a, b, c});
+        } else if(T == 1) constraintsT1.push_back({T, a, b, c});
+            
         }
         else if(T == 2) constraintsT2.push_back({T, a, b, c});
     }
