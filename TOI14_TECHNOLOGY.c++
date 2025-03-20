@@ -9480,7 +9480,6 @@ int main(){
         groups[rep].push_back(i);
     }
 
-    // (เราอาจจะใช้ rep ได้โดยตรง)
     // ประมวลผล constraints แบบ T=1: a > b และ a > c
     // สำหรับแต่ละ constraint ให้หาตัวแทนของ a, b, c
     // เพิ่ม edge จาก representative ของ b ไปยัง representative ของ a และจาก c ไปยัง a
