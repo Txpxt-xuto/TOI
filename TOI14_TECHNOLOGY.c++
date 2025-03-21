@@ -9448,7 +9448,6 @@ int main(){
         parent[i] = i;
         rnk[i] = 1;
     }
-    
     vector<array<int,4>> constraintsT1, constraintsT2;
     for(int i = 0; i < w; i++)
     {
