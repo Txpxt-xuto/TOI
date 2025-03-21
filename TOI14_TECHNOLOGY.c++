@@ -9432,7 +9432,6 @@ void mergeDSU(int u, int v) {
 // แต่ละ vertex คือ representative ของกลุ่มที่รวมกันแล้ว
 // graph[u] เก็บรายชื่อ vertex ที่มี edge u -> v (หมายความว่า กลุ่ม u มีคะแนนน้อยกว่า v)
 vector<int> graph[MAXN];
- 
 // inDeg[u] เก็บค่า in-degree ของ vertex u ในกราฟ
 int inDeg[MAXN];
 int main()
