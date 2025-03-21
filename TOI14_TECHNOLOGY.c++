@@ -9454,8 +9454,8 @@ int main(){
     // constraintsT2: ข้อมูล T=2 (a < b และ a < c)
     vector<array<int,4>> constraintsT1, constraintsT2;
     
-    // อ่านข้อมูล w รายการ
-    // แต่ละรายการมี 4 ตัวเลข: T, a, b, c = 0; i < w; i++)
+    // อ่านข้อมูล w รายก
+    for(int i = 0; i < w; i++)
     {
         int T, a, b, c;
         cin >> T >> a >> b >> c;
