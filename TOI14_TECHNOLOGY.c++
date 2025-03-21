@@ -9431,10 +9431,6 @@ void mergeDSU(int u, int v)
         parent[u] = v;
     }
 }
-
-// โครงสร้างข้อมูลสำหรับเก็บกราฟ directed ระหว่างกลุ่มของพรรคการเมือง
-// แต่ละ vertex คือ representative ของกลุ่มที่รวมกันแล้ว
-// graph[u] เก็บรายชื่อ vertex ที่มี edge u -> v (หมายความว่า กลุ่ม u มีคะแนนน้อยกว่า v)
 vector<int> graph[MAXN];
 int inDeg[MAXN];
 int main()
