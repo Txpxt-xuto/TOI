@@ -9388,7 +9388,8 @@ int main()
         }
         else
         {
-            int x; cin >> x;
+            int x;
+            cin >> x;
             cout << x*qry(0, m-x) - (m-x)*(cnt[0]-qry(0, m-x)) + (m-x)*qry(1, x) - x*(cnt[1]-qry(1, x)) + sum << "\n";
         }
     }
