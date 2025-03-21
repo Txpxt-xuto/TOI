@@ -9406,8 +9406,7 @@ int parent[MAXN], rnk[MAXN];
 // ฟังก์ชัน root: หาตัวแทนของกลุ่มโดยใช้เทคนิค Path Compression
 int root(int u)
 {
-    if (parent[u] == u)
-        return u;
+    if (parent[u] == u)return u;
     return parent[u] = root(parent[u]);
 }
 bool is_same(int u, int v)
