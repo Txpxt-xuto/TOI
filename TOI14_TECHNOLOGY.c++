@@ -9396,8 +9396,6 @@ int main()
 
 #include <bits/stdc++.h>
 using namespace std;
- 
-// กำหนดขนาดสูงสุดของพรรคการเมือง (n ≤ 20,000)
 const int MAXN = 20005;
 int parent[MAXN], rnk[MAXN];
 int root(int u)
