@@ -9491,7 +9491,7 @@ int main(){
             inDeg[repA]++;
         }
     }
-    // ประมวลผล constraints แบบ T=2: a < b และ a < c
+    // ประมว
     // สำหรับแต่ละ constraint ให้เพิ่ม edgeจาก representative ของ a ไปยัง representativeของ b และ c
     for(auto &arr : constraintsT2)
     {
