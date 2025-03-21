@@ -9402,8 +9402,6 @@ const int MAXN = 20005;
  
 // Global arrays สำหรับ DSU
 int parent[MAXN], rnk[MAXN];
- 
-// ฟังก์ชัน root: หาตัวแทนของกลุ่มโดยใช้เทคนิค Path Compression
 int root(int u)
 {
     if(parent[u] == u) return u;
