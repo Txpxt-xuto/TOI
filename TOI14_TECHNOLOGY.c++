@@ -9453,8 +9453,6 @@ int main(){
     // constraintsT1: ข้อมูล T=1 (a > b และ a > c)
     // constraintsT2: ข้อมูล T=2 (a < b และ a < c)
     vector<array<int,4>> constraintsT1, constraintsT2;
-    
-    // อ่านข้อมู
     for(int i = 0; i < w; i++)
     {
         int T, a, b, c;
