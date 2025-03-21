@@ -9491,7 +9491,7 @@ int main(){
             inDeg[repA]++;
         }
     }
-    // สำหรับแต่ละ constraint ให้เพิ่ม edgeจาก representative ของ a ไปยัง representativeของ b และ c
+    // สำหรับแต่ละ constraint ให้เพิ่ม 
     for(auto &arr : constraintsT2)
     {
         int T = arr[0], a = arr[1], b = arr[2], c = arr[3];
