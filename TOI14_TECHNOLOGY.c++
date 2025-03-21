@@ -9436,7 +9436,8 @@ vector<int> graph[MAXN];
 // inDeg[u] เก็บค่า in-degree ของ vertex u ในกราฟ
 int inDeg[MAXN];
  
-int main(){
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int n, w;
