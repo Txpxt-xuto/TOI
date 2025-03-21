@@ -9439,7 +9439,6 @@ int inDeg[MAXN];
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    
     int n, w;
     cin >> n >> w;
     for(int i = 1; i <= n; i++)
