@@ -9474,7 +9474,6 @@ int main(){
         groups[rep].push_back(i);
     }
     // ประมวลผ
-    // สำหรับแ
     // เพิ่ม edge จาก representative ของ b ไปยัง representative ของ a และจาก c ไปยัง a
     for(auto &arr : constraintsT1)
     {
