@@ -9450,7 +9450,6 @@ int main(){
     }
     
     // เราจะเก็บข้อมูลจำได้ทั้ง 3 ประเภทไว้ใน vector เพื่อประมวลผล constraint ที่ไม่ใช่ T=3 หลัง DSU
-    // constraints
     vector<array<int,4>> constraintsT1, constraintsT2;
     for(int i = 0; i < w; i++)
     {
