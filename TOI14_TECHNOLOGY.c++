@@ -9422,7 +9422,9 @@ void mergeDSU(int u, int v) {
     if(rnk[u] > rnk[v]) {
         rnk[u] += rnk[v];
         parent[v] = u;
-    } else {
+    }
+    else
+    {
         rnk[v] += rnk[u];
         parent[u] = v;
     }
