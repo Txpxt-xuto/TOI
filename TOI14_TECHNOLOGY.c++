@@ -9456,7 +9456,7 @@ int main(){
     
     // อ่านข้อมูล w รายการ
     // แต่ละรายการมี 4 ตัวเลข: T, a, b, c
-    for (int i = 0; i < w; i++)
+    for(int i = 0; i < w; i++)
     {
         int T, a, b, c;
         cin >> T >> a >> b >> c;
