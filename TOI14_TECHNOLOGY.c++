@@ -9473,7 +9473,6 @@ int main(){
         int rep = root(i);
         groups[rep].push_back(i);
     }
-    // เพิ่ม edge จาก re
     for(auto &arr : constraintsT1)
     {
         int T = arr[0], a = arr[1], b = arr[2], c = arr[3];
