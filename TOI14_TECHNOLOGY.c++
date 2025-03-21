@@ -9419,7 +9419,8 @@ bool is_same(int u, int v) {
 void mergeDSU(int u, int v) {
     u = root(u); v = root(v);
     if(u == v) return;
-    if(rnk[u] > rnk[v]) {
+    if(rnk[u] > rnk[v])
+    {
         rnk[u] += rnk[v];
         parent[v] = u;
     }
