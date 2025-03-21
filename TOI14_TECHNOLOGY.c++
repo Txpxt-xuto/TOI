@@ -9416,7 +9416,8 @@ bool is_same(int u, int v) {
 }
  
 // ฟังก์ชัน merge: รวมกลุ่มของ u และ v โดยใช้ Union by Rank
-void mergeDSU(int u, int v) {
+void mergeDSU(int u, int v)
+{
     u = root(u); v = root(v);
     if(u == v) return;
     if(rnk[u] > rnk[v])
