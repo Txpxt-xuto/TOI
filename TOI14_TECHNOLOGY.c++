@@ -9444,7 +9444,7 @@ int main(){
     cin >> n >> w;
     
     // กำหนด DSU เริ่มต้น: ทุกพรรคอยู่ในกลุ่มของตัวเอง
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
     {
         parent[i] = i;
         rnk[i] = 1;
