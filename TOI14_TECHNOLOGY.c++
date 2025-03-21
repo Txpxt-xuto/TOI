@@ -9409,7 +9409,6 @@ int root(int u) {
         return u;
     return parent[u] = root(parent[u]);
 }
- 
 bool is_same(int u, int v)
 {
     return root(u) == root(v);
