@@ -9410,7 +9410,6 @@ int root(int u) {
     return parent[u] = root(parent[u]);
 }
  
-// ฟังก์ชัน is_same: ตรวจสอบว่า u และ v อยู่ในกลุ่มเดียวกันหรือไม่
 bool is_same(int u, int v)
 {
     return root(u) == root(v);
