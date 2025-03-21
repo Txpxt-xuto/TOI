@@ -9449,7 +9449,6 @@ int main(){
         rnk[i] = 1;
     }
     
-    // เราจะเก็บข้อมูลจำได้ทั้ง 3 ป
     vector<array<int,4>> constraintsT1, constraintsT2;
     for(int i = 0; i < w; i++)
     {
