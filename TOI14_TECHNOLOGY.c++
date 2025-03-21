@@ -9491,7 +9491,6 @@ int main(){
             inDeg[repA]++;
         }
     }
-
     for(auto &arr : constraintsT2)
     {
         int T = arr[0], a = arr[1], b = arr[2], c = arr[3];
