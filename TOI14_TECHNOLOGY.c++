@@ -9687,7 +9687,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
         // cout << now.num<<'\n';
         for(int i:adj[now.num]){
             HW[i][3]--;
-            // cout << i<<'\n';
             // cout << HW[i][3]<<'\n';
             if(HW[i][3]==0)
             {
