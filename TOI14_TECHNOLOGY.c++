@@ -9684,7 +9684,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
         pq.pop();
         cnt++;
         int st = now.st+1;
-        
         for(int i:adj[now.num])
         {
             HW[i][3]--;
