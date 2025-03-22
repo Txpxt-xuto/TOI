@@ -9666,7 +9666,8 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
         }
     }
     priority_queue<A> pq;
-    for(int i = 0;i<N;i++){
+    for(int i = 0;i<N;i++)
+    {
         if(HW[i][3]==0)
         {
             int rst =  HW[i][0]/HW[i][2];
