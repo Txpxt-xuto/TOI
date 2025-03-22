@@ -9679,7 +9679,8 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
         }   
     }
     int cnt = 0;
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         A now = pq.top();
         pq.pop();
         cnt++;
