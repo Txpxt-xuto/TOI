@@ -9687,7 +9687,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
         
         for(int i:adj[now.num]){
             HW[i][3]--;
-            // cout << HW[i][3]<<'\n';
             if(HW[i][3]==0)
             {
                 int a = max(st,HW[i][0]);
