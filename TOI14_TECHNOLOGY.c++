@@ -9748,6 +9748,5 @@ int main(){
         
         cout << (H == RH ? "YES\n" : "NO\n");
     }
-    
     return 0;
 }
