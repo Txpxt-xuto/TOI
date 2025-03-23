@@ -9732,7 +9732,8 @@ int main(){
         return rev[n-l] - rev[n-r]*powb[r-l];
     };
     
-    while(q--){
+    while(q--)
+    {
         int a, b, c, d;
         cin >> a >> b >> c >> d;
         a--;
