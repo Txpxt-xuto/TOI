@@ -9731,7 +9731,6 @@ int main(){
     auto getRev = [&](int l, int r) -> ull {
         return rev[n-l] - rev[n-r]*powb[r-l];
     };
-    
     while(q--)
     {
         int a, b, c, d;
