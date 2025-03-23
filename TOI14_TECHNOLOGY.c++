@@ -9717,7 +9717,8 @@ int main(){
     vector<ull> fwd(n+1, 0), rev(n+1, 0), powb(n+1, 0);
     ull base = 131ULL;
     powb[0] = 1;
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         fwd[i+1] = fwd[i]*base + (s[i]-'a'+1);
         powb[i+1] = powb[i]*base;
     }
