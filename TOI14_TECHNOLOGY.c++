@@ -9721,7 +9721,8 @@ int main(){
         fwd[i+1] = fwd[i]*base + (s[i]-'a'+1);
         powb[i+1] = powb[i]*base;
     }
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         rev[i+1] = rev[i]*base + (s[n-1-i]-'a'+1);
     }
     auto getFwd = [&](int l, int r) -> ull
