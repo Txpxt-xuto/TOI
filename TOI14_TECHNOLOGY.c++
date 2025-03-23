@@ -9735,7 +9735,8 @@ int main(){
     while(q--){
         int a, b, c, d;
         cin >> a >> b >> c >> d;
-        a--; c--;
+        a--;
+        c--;
         int len1 = b - a;
         int len2 = d - c;
         ull h1 = getFwd(a, b);
