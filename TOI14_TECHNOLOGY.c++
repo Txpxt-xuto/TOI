@@ -9724,7 +9724,6 @@ int main(){
     for (int i = 0; i < n; i++){
         rev[i+1] = rev[i]*base + (s[n-1-i]-'a'+1);
     }
-    
     auto getFwd = [&](int l, int r) -> ull
     {
         return fwd[r] - fwd[l]*powb[r-l];
