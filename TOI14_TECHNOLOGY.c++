@@ -9745,7 +9745,6 @@ int main(){
         ull r1 = getRev(a, b); 
         ull r2 = getRev(c, d); 
         ull RH = r2 * powb[len1] + r1;
-        
         cout << (H == RH ? "YES\n" : "NO\n");
     }
     return 0;
