@@ -9700,3 +9700,54 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     return cnt;
 }
 // int main(){{7,16,12,1}, {0,21,1,2}, {5,13,6,1}, 
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef unsigned long long ull;
+ 
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    int n, q;
+    cin >> n >> q;
+    string s;
+    cin >> s;
+    
+    vector<ull> fwd(n+1, 0), rev(n+1, 0), powb(n+1, 0);
+    ull base = 131ULL;
+    powb[0] = 1;
+    for (int i = 0; i < n; i++){
+        fwd[i+1] = fwd[i]*base + (s[i]-'a'+1);
+        powb[i+1] = powb[i]*base;
+    }
+    for (int i = 0; i < n; i++){
+        rev[i+1] = rev[i]*base + (s[n-1-i]-'a'+1);
+    }
+    
+    auto getFwd = [&](int l, int r) -> ull {
+        return fwd[r] - fwd[l]*powb[r-l];
+    };
+    auto getRev = [&](int l, int r) -> ull {
+        return rev[n-l] - rev[n-r]*powb[r-l];
+    };
+    
+    while(q--){
+        int a, b, c, d;
+        cin >> a >> b >> c >> d;
+        a--; c--;
+        int len1 = b - a;
+        int len2 = d - c;
+        ull h1 = getFwd(a, b);
+        ull h2 = getFwd(c, d);
+        ull H = h1 * powb[len2] + h2;
+        
+        ull r1 = getRev(a, b); 
+        ull r2 = getRev(c, d); 
+        ull RH = r2 * powb[len1] + r1;
+        
+        cout << (H == RH ? "YES\n" : "NO\n");
+    }
+    
+    return 0;
+}
