@@ -9699,7 +9699,7 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     }
     return cnt;
 }
-// int main(){{7,16,12,1}, {0,21,1,2}, {5,13,6,1}, 
+// int main(){{7,16,12,1}, {0,21,1,
 
 #include <bits/stdc++.h>
 using namespace std;
