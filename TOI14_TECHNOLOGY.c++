@@ -9741,7 +9741,6 @@ int main(){
         ull h1 = getFwd(a, b);
         ull h2 = getFwd(c, d);
         ull H = h1 * powb[len2] + h2;
-        
         ull r1 = getRev(a, b); 
         ull r2 = getRev(c, d); 
         ull RH = r2 * powb[len1] + r1;
