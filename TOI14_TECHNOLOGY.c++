@@ -9704,7 +9704,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
 #include <bits/stdc++.h>
 using namespace std;
 typedef unsigned long long ull;
- 
 int main()
 {
     ios::sync_with_stdio(false);
