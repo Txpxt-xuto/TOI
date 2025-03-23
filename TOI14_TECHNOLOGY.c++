@@ -9728,7 +9728,8 @@ int main(){
     auto getFwd = [&](int l, int r) -> ull {
         return fwd[r] - fwd[l]*powb[r-l];
     };
-    auto getRev = [&](int l, int r) -> ull {
+    auto getRev = [&](int l, int r) -> ull
+    {
         return rev[n-l] - rev[n-r]*powb[r-l];
     };
     while(q--)
