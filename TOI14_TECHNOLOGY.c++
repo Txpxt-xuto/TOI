@@ -9753,7 +9753,8 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
     int n, i, j, x;
     cin >> n;
     if (n % 2 == 1) {
