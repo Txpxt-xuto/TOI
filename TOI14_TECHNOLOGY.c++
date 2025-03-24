@@ -9754,9 +9754,9 @@ int main()
 using namespace std;
 
 int main() {
-   int n, i, j, x;
+    int n, i, j, x;
    cin >> n;
-   if (n % 2 == 1) {
+    if (n % 2 == 1) {
     char arr[n][n];
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
