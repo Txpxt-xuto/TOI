@@ -9750,3 +9750,73 @@ int main()
     return 0;
 }
 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+   int n, i, j, x;
+   cin >> n;
+   if (n % 2 == 1) {
+    char arr[n][n];
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            arr[i][j] = '-';
+        }
+    }
+    for (i = 0; i <= (n - 1) / 2; i++) {
+        if (i == 0) {
+            arr[i][(n - 1) / 2] = '*';
+        } else {
+            arr[i][(n - 1) / 2 - i] = '*';
+            arr[i][(n - 1) / 2 + i] = '*';
+        }
+    }
+    x = 0;
+    for (i = n - 1; i > (n - 1) / 2; i--) {
+        if (i == n - 1) {
+            arr[i][(n - 1) / 2] = '*';
+        } else {
+            arr[i][(n - 1) / 2 - x] = '*';
+            arr[i][(n - 1) / 2 + x] = '*';
+        }
+        x = x + 1;
+    }
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            cout << arr[i][j];
+        }
+        cout << endl;
+    }
+   } else {
+    char arr[n][n - 1];
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n - 1; j++) {
+            arr[i][j] = '-';
+        }
+    }
+    for (i = 0; i <= n / 2 - 1; i++) {
+        if (i == 0) {
+            arr[i][n / 2 - 1] = '*';
+        } else {
+            arr[i][n / 2 - 1 - i] = '*';
+            arr[i][n / 2 - 1 + i] = '*';
+        }
+    }
+    x = 0;
+    for (i = n - 1; i > (n - 1) / 2; i--) {
+        if (i == n - 1) {
+            arr[i][(n - 1) / 2] = '*';
+        } else {
+            arr[i][(n - 1) / 2 - x] = '*';
+            arr[i][(n - 1) / 2 + x] = '*';
+        }
+        x = x + 1;
+    }
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n - 1; j++) {
+            cout << arr[i][j];
+        }
+        cout << endl;
+    }
+   }
+}
