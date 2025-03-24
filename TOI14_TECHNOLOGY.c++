@@ -9761,7 +9761,7 @@ int main()
         char arr[n][n];
         for(i=0;i<n;i++) for(j=0;j<n;j++) arr[i][j] = '-';
     }
-    for(i=0;i <= (n-1) / 2; i++) {
+    for(i=0;i<=(n-1) / 2; i++) {
         if (i == 0) {
             arr[i][(n - 1) / 2] = '*';
         } else {
