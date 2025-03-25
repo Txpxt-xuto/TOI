@@ -9851,7 +9851,7 @@ int main(){
     }
     vis[X+1]=true;
     ans=calc(1);
-    for(int i=2;i<=X;i++) if(!vis[i])pq.emplace(calc(i));
+    for(int i=2;i<=X;i++) if(!vis[i]) pq.emplace(calc(i));
     while(!pq.empty()&&m>0)
     {
         ans+=pq.top()+2;
