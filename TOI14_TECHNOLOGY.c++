@@ -9842,7 +9842,7 @@ int calc(int x){
 int main(){
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m;
-    for(int i=1;i<=X;i++)nxt[i]={i+1,0};
+    for(int i=1;i<=X;i++) nxt[i]={i+1,0};
     for(int i=0;i<n;i++)
     {
         int l,r;
