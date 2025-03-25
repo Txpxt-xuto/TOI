@@ -9832,7 +9832,6 @@ pair<int,int> nxt[X+5];
 bool vis[X+5];
 int ans;
 priority_queue<int> pq;
-
 int calc(int x)
 {
     if(vis[x]) return 0;
