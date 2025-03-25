@@ -9773,7 +9773,7 @@ int main()
     x = 0;
     for(i=n-1;i>(n-1)/2;i--)
     {
-        if(i == n - 1)arr[i][(n - 1) / 2] = '*';
+        if(i == n - 1) arr[i][(n - 1) / 2] = '*';
         {
             
         } else {
