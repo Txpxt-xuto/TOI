@@ -9826,7 +9826,6 @@ int main()
 using namespace std;
 
 const int X=2e6;
-
 int n,m;
 pair<int,int> nxt[X+5];
 bool vis[X+5];
