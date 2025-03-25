@@ -9792,9 +9792,6 @@ int main()
     {
         char arr[n][n - 1];
         for (i = 0; i < n; i++) for (j = 0; j < n - 1; j++) arr[i][j] = '-';
-        
-            
-        }
     }
     for (i = 0; i <= n / 2 - 1; i++) {
         if (i == 0) {
