@@ -9813,9 +9813,9 @@ int main()
         x = x + 1;
     }
     for (i = 0; i < n; i++) {
-        for (j = 0; j < n - 1; j++) {
-            cout << arr[i][j];
-        }
+        for (j = 0; j < n - 1; j++) cout << arr[i][j];
+            
+        
         cout << endl;
     }
     }
@@ -9829,6 +9829,7 @@ pair<int,int> nxt[X+5];
 bool vis[X+5];
 int ans;
 priority_queue<int> pq;
+
 int calc(int x)
 {
     if(vis[x]) return 0;
