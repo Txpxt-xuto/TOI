@@ -9788,7 +9788,8 @@ int main()
         }
         cout << endl;
     }
-    else {
+    else
+    {
     char arr[n][n - 1];
     for (i = 0; i < n; i++) {
         for (j = 0; j < n - 1; j++) {
