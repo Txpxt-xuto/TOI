@@ -9813,9 +9813,7 @@ int main()
         for(j=0;j<n-1;j++) cout << arr[i][j];
         cout << endl;
     }
-    }
 }
-
 #include<bits/stdc++.h>
 using namespace std;
 const int X=2e6;
