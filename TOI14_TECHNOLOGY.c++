@@ -9839,7 +9839,8 @@ int calc(int x){
     return calc(nxt[x].first)+nxt[x].second;
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m;
     for(int i=1;i<=X;i++) nxt[i]={i+1,0};
