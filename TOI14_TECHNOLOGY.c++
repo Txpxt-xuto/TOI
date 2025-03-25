@@ -9835,7 +9835,7 @@ priority_queue<int> pq;
 
 int calc(int x)
 {
-    if(vis[x])return 0;
+    if(vis[x]) return 0;
     vis[x]=true;
     return calc(nxt[x].first)+nxt[x].second;
 }
