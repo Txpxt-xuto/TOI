@@ -9790,7 +9790,7 @@ int main()
     }
     for (i = 0; i <= n / 2 - 1; i++)
     {
-        if(i == 0) arr[i][n / 2 - 1] = '*';
+        if(i == 0) arr[i][n /2-1] = '*';
             
         else
         {
