@@ -9898,7 +9898,6 @@ int main() {
                 dp2[k] = (dp2[k] + 1ll * nCr[m][i] * dp2[k - i] % MOD + MOD) % MOD;
             }
             else dp2[k] = (dp2[k] - 1ll * nCr[m][i] * dp2[k - i] % MOD + MOD) % MOD;
-            
         }
     }
     printf("%d", dp2[r + c - 2]);
