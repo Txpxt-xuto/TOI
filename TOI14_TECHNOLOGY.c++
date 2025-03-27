@@ -9879,7 +9879,8 @@ int main() {
     }
     for (int k = 1;k <= 3 * r - 4;k++) {
         int now = k & 1;
-        for (int i = 1;i <= r;i++) {
+        for (int i = 1;i <= r;i++)
+        {
             for (int j=1;j<=r;j++)
             {
                 if(k < max(i,j)-1) continue;
