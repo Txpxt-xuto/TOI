@@ -9855,3 +9855,53 @@ int main()
     }
     cout << ans+m/2*4+m%2;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+int dp[202][202][2], dp2[130030];
+int nCr[444][444];
+const long long MOD = 1e9 + 7;
+int play(int i, int j, int n) {
+    if (i < 1 || j < 1 || n < max(i, j) - 1) return 0;
+    return dp[i][j][n & 1];
+}
+int main() {
+    int r, c;
+    scanf("%d %d", &r, &c);
+    dp[1][1][0] = 1;
+    dp2[0] = 1;
+    nCr[0][0] = 1;
+    for (int i = 1;i <= 2 * r - 3;i++) {
+        nCr[i][0] = 1;
+        for (int j = 1;j <= i;j++) {
+            nCr[i][j] = (nCr[i - 1][j] + nCr[i - 1][j - 1]) % MOD;
+        }
+    }
+    for (int k = 1;k <= 3 * r - 4;k++) {
+        int now = k & 1;
+        for (int i = 1;i <= r;i++) {
+            for (int j = 1;j <= r;j++) {
+                if (k < max(i, j) - 1) continue;
+                dp[i][j][now] = (play(i - 1, j, k - 1) + play(i, j - 1, k - 1)) % MOD;
+                if (i != j) {
+                    dp[i][j][now] = (dp[i][j][now] + play(i, j, k - 1)) % MOD;
+                    dp[i][j][now] = (dp[i][j][now] + play(i - 1, j - 1, k - 1)) % MOD;
+                }
+            }
+        }
+        dp2[k] = dp[r][r][now];
+    }
+    int m = 2 * r - 3;
+    for (int k = 3 * r - 3;k <= r + c - 2;k++) {
+        for (int i = 0;i <= m;i++) {
+            if (i & 1) {
+                dp2[k] = (dp2[k] + 1ll * nCr[m][i] * dp2[k - i] % MOD + MOD) % MOD;
+            }
+            else {
+                dp2[k] = (dp2[k] - 1ll * nCr[m][i] * dp2[k - i] % MOD + MOD) % MOD;
+            }
+        }
+    }
+    printf("%d", dp2[r + c - 2]);
+    return 0;
+}
