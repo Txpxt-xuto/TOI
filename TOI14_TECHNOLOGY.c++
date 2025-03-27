@@ -9892,7 +9892,7 @@ int main() {
         dp2[k] = dp[r][r][now];
     }
     int m = 2 * r - 3;
-    for (int k = 3 * r - 3;k <= r + c - 2;k++)
+    for(int k = 3 * r - 3;k <= r + c - 2;k++)
     {
         for (int i = 0;i <= m;i++) {
             if(i & 1) dp2[k] = (dp2[k] + 1ll * nCr[m][i] * dp2[k - i] % MOD + MOD) % MOD;
