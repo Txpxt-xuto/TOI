@@ -9897,9 +9897,9 @@ int main() {
             if (i & 1) {
                 dp2[k] = (dp2[k] + 1ll * nCr[m][i] * dp2[k - i] % MOD + MOD) % MOD;
             }
-            else
+            else dp2[k] = (dp2[k] - 1ll * nCr[m][i] * dp2[k - i] % MOD + MOD) % MOD;
             {
-                dp2[k] = (dp2[k] - 1ll * nCr[m][i] * dp2[k - i] % MOD + MOD) % MOD;
+                
             }
         }
     }
