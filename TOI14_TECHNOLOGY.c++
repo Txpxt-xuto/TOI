@@ -9883,7 +9883,8 @@ int main() {
             for (int j = 1;j <= r;j++) {
                 if (k < max(i, j) - 1) continue;
                 dp[i][j][now] = (play(i - 1, j, k - 1) + play(i, j - 1, k - 1)) % MOD;
-                if (i != j) {
+                if (i != j)
+                {
                     dp[i][j][now] = (dp[i][j][now] + play(i, j, k - 1)) % MOD;
                     dp[i][j][now] = (dp[i][j][now] + play(i - 1, j - 1, k - 1)) % MOD;
                 }
