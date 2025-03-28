@@ -9928,9 +9928,9 @@ int main()
     cin.tie(nullptr)->sync_with_stdio(false);
     int n, q;
     cin >> n >> q;
-    for (int i = 1;i <= n;i++) {
+    for (int i = 1;i <= n;i++) 
         cin >> a[i];
-    }
+    
     int idx = 0;
     for (int i = 1;i <= n;i++) {
         if (vis[i]) continue;
