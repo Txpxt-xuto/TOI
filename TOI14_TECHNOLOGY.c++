@@ -9941,7 +9941,8 @@ int main()
     {
         int x; cin >> x;
         int l = 1, r = n;
-        while (l < r) {
+        while (l < r)
+        {
             int mid = (l + r) / 2;
             if (dp[mid] <= x) r = mid;
             else l = mid + 1;
