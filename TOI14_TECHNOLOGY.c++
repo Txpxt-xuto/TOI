@@ -9884,7 +9884,7 @@ int main()
         int now = k & 1;
         for (int i=1;i<=r;i++)
         {
-            for (int j=1;j<=r;j++)
+            for(int j=1;j<=r;j++)
             {
                 if(k < max(i,j)-1) continue;
                 dp[i][j][now] = (play(i - 1, j, k - 1) + play(i, j - 1, k - 1)) % MOD;
