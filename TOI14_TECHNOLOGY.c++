@@ -9915,7 +9915,8 @@ using namespace std;
 using ll = long long;
 int a[100100], c[100100];
 bool vis[100100];
-int dfs(int v) {
+int dfs(int v)
+{
     int sz = 1;
     vis[v] = 1;
     if (!vis[a[v]]) {
