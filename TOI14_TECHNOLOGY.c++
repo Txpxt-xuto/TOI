@@ -9937,10 +9937,6 @@ int main()
         c[++idx] = dfs(i);
     }
     for (int i = 1;i <= idx;i++) for (int j = 1;j <= c[i];j++)dp[j] += (c[i] + j - 1) / j - 1;
-         
-            
-        }
-    }
     while (q--) {
         int x; cin >> x;
         int l = 1, r = n;
