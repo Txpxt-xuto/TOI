@@ -9937,7 +9937,7 @@ int main()
         if (vis[i]) continue;
         c[++idx] = dfs(i);
     }
-    for (int i = 1;i <= idx;i++) {
+    for (int i = 1;i <= idx;i++) 
         for (int j = 1;j <= c[i];j++) 
             dp[j] += (c[i] + j - 1) / j - 1;
         }
