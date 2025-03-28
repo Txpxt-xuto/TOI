@@ -9919,8 +9919,7 @@ int dfs(int v)
 {
     int sz = 1;
     vis[v] = 1;
-    if (!vis[a[v]]) 
-        sz += dfs(a[v]);
+    if (!vis[a[v]]) sz += dfs(a[v]);
     return sz;
 }
 int dp[100100];
