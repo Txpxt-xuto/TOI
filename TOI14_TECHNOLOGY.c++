@@ -9944,7 +9944,7 @@ int main()
         while (l < r)
         {
             int mid = (l + r) / 2;
-            if (dp[mid] <= x) r = mid;
+            if(dp[mid] <= x) r = mid;
             else l = mid + 1;
         }
         cout << l << '\n';
