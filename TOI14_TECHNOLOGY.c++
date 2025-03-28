@@ -9932,7 +9932,8 @@ int main()
      cin >> a[i];
 
     int idx = 0;
-    for (int i = 1;i <= n;i++){
+    for (int i = 1;i <= n;i++)
+    {
         if (vis[i]) continue;
         c[++idx] = dfs(i);
     }
