@@ -9929,7 +9929,7 @@ int main()
     int n, q;
     cin >> n >> q;
     for(int i = 1;i <= n;i++)
-     cin >> a[i];
+    cin >> a[i];
 
     int idx = 0;
     for (int i = 1;i <= n;i++)
