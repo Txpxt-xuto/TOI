@@ -9925,7 +9925,8 @@ int dfs(int v)
     return sz;
 }
 int dp[100100];
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     int n, q;
     cin >> n >> q;
