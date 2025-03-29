@@ -9953,3 +9953,150 @@ int main()
     return 0;
 }
 
+#pragma GCC optimize("O3,unroll-loops")
+
+#include <vector>
+#include <cstdio>
+#include<cstring>
+#include <cassert>
+#include <map>
+#include <algorithm>
+#include <set>
+#include "mountain.h"
+#define BLUE 1
+#define RED 2
+
+#define N 100001
+
+int dep[N], n, a[N], c[N], sta[N], top, l[N], r[N], sz[N], par[N], head[N], tail[N], dfn[N], aux[N], mm[N*4],rt[N],timer,at[N];
+long long weight[N],cache[N][3];
+
+struct mat{
+	long long b,r,f,ba,ra;
+	friend mat operator*(const mat&a, const mat&b){
+		mat c;
+		c.r=a.r+b.r;
+		c.b=a.b+b.b;
+		c.f=a.f+b.f+a.r*b.ba+a.b*b.ra;
+		c.ba=a.ba+b.ba;
+		c.ra=a.ra+b.ra;
+		return c;
+	}
+};
+
+mat tran[N*2];
+void dfs1(int u,int p){
+	if(!u)return;
+	sz[u]=1;
+	par[u]=p;
+	dep[u]=dep[p]+1;
+	dfs1(l[u],u),sz[u]+=sz[l[u]];
+	dfs1(r[u],u),sz[u]+=sz[r[u]];
+	if(!l[u]||sz[r[u]]>sz[l[u]])std::swap(l[u],r[u]);
+}
+
+void pul(int v,int l,int r){
+	tran[v]=tran[v+(mm[v]-l+1)*2]*tran[v+1];
+}
+void upd2(int v,int l,int r,int p){
+	if(l==r) return;
+	if(p<=mm[v])upd2(v+1,l,mm[v],p);
+	else upd2(v+(mm[v]-l+1)*2,mm[v]+1,r,p);
+	pul(v,l,r);
+}
+void re_lp(int u){
+	int p=par[u];long long cc,ca,cb;
+	auto&t=tran[at[dfn[p]]];
+	t.r+=tran[rt[u]].r-cache[u][0];
+	t.b+=tran[rt[u]].b-cache[u][1];
+	t.ra+=a[p]*((ca=tran[rt[u]].r)-cache[u][0]);
+	t.ba+=a[p]*((cb=tran[rt[u]].b)-cache[u][1]);
+	t.f+= (cc=tran[rt[u]].f
+		+tran[rt[u]].r*1ll*a[p]*(c[p]==BLUE)
+		+tran[rt[u]].b*1ll*a[p]*(c[p]==RED))
+		-cache[u][2];
+	upd2(rt[head[p]],dfn[head[p]],dfn[tail[head[p]]],dfn[p]);
+	cache[u][0]=ca;
+	cache[u][1]=cb;
+	cache[u][2]=cc;
+}
+
+void dfs2(int u,int hd){
+	if(!u)return;
+	aux[dfn[u]=++timer]=u;
+	head[u]=hd;
+	tail[hd]=u;
+	dfs2(l[u],hd);
+	dfs2(r[u],r[u]);
+	weight[dfn[u]]=sz[u]-sz[l[u]];
+}
+
+void dfs3(int u){
+	if(!u)return;
+	dfs3(l[u]),dfs3(r[u]);
+	if(r[u])re_lp(r[u]);
+}
+void build(int v,int l,int r){
+	if(l==r){
+		at[l]=v;
+		tran[v].b=(c[aux[l]]==BLUE);
+		tran[v].r=(c[aux[l]]==RED);
+		tran[v].ba=(c[aux[l]]==BLUE)*a[aux[l]];
+		tran[v].ra=(c[aux[l]]==RED)*a[aux[l]];
+		return;
+	}
+	int lower=l,upper=r;
+	while(upper-lower>1){
+		int mid=lower+(upper-lower)/2;
+		if(weight[mid]-weight[l-1]<weight[r]-weight[mid])lower=mid;
+		else upper=mid;
+	}
+	mm[v]=lower;
+	//mm[v] = (l+r)/2;
+	build(v+1,l,mm[v]);
+	build(v+(mm[v]-l+1)*2,mm[v]+1,r);
+	pul(v,l,r);
+}
+void upd(int v,int l,int r,int p,int mul){
+	if(l==r){
+		tran[v].b+=(c[aux[l]]==BLUE)*mul;
+		tran[v].r+=(c[aux[l]]==RED)*mul;
+		tran[v].ba+=(c[aux[l]]==BLUE)*a[aux[l]]*mul;
+		tran[v].ra+=(c[aux[l]]==RED)*a[aux[l]]*mul;
+		return;
+	}
+	if(p<=mm[v])upd(v+1,l,mm[v],p,mul);
+	else upd(v+(mm[v]-l+1)*2,mm[v]+1,r,p,mul);
+	pul(v,l,r);
+}
+void updup(int v){
+	for(;head[v]!=head[sta[1]];v=par[head[v]]) re_lp(head[v]);
+}
+
+long long race_cost(int S, int X) {
+	if(c[++X]-S){
+		upd(rt[head[X]],dfn[head[X]],dfn[tail[head[X]]],dfn[X],-1);
+		c[X]=S;
+		upd(rt[head[X]],dfn[head[X]],dfn[tail[head[X]]],dfn[X],1);
+		updup(r[X]?r[X]:X);
+	}
+	return tran[rt[sta[1]]].f;
+}
+
+void initialize(int N_, std::vector<int> A0, std::vector<int> C0) {
+	n=N_;
+	for(int i=0;i<n;++i)a[i+1]=A0[i],c[i+1]=C0[i];
+	for(int i=1;i<=n;++i){
+		int k=top;
+		while(k&&a[sta[k]]<a[i])--k;
+		if(k)r[sta[k]]=i;
+		if(k<top)l[i]=sta[k+1];
+		sta[top=++k]=i;
+	}
+	dfs1(sta[1],sta[1]);
+	dfs2(sta[1],sta[1]);
+	for(int i=1;i<=n;++i)weight[i]+=weight[i-1];
+	for(int jj=0,i=1;i<=n;++i)if(i==head[i])build(rt[i]=jj,dfn[i],dfn[tail[i]]),jj+=(dfn[tail[i]]-dfn[i]+1)*2;
+	dfs3(sta[1]);
+}
+
