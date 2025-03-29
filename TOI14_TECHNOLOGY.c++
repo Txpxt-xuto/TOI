@@ -9908,3 +9908,46 @@ int main() {
     return 0;
 }
 
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+int a[100100], c[100100];
+bool vis[100100];
+int dfs(int v) {
+    int sz = 1;
+    vis[v] = 1;
+    if (!vis[a[v]]) {
+        sz += dfs(a[v]);
+    }
+    return sz;
+}
+int dp[100100];
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+    int n, q;
+    cin >> n >> q;
+    for (int i = 1;i <= n;i++) {
+        cin >> a[i];
+    }
+    int idx = 0;
+    for (int i = 1;i <= n;i++) {
+        if (vis[i]) continue;
+        c[++idx] = dfs(i);
+    }
+    for (int i = 1;i <= idx;i++) {
+        for (int j = 1;j <= c[i];j++) {
+            dp[j] += (c[i] + j - 1) / j - 1;
+        }
+    }
+    while (q--) {
+        int x; cin >> x;
+        int l = 1, r = n;
+        while (l < r) {
+            int mid = (l + r) / 2;
+            if (dp[mid] <= x) r = mid;
+            else l = mid + 1;
+        }
+        cout << l << '\n';
+    }
+    return 0;
+}
