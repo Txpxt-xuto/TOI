@@ -9878,9 +9878,6 @@ int main()
     {
         nCr[i][0] = 1;
         for (int j = 1;j <= i;j++) nCr[i][j] = (nCr[i - 1][j] + nCr[i - 1][j - 1]) % MOD;
-        {
-            
-        }
     }
     for(int k=1;k<=3*r-4;k++)
     {
