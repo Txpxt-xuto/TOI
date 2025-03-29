@@ -9861,7 +9861,8 @@ using namespace std;
 int dp[202][202][2], dp2[130030];
 int nCr[444][444];
 const long long MOD = 1e9 + 7;
-int play(int i, int j, int n){
+int play(int i, int j, int n)
+{
     if (i < 1 || j < 1 || n < max(i, j) - 1) return 0;
     return dp[i][j][n & 1];
 }
