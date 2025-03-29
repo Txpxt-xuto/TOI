@@ -9867,7 +9867,8 @@ int play(int i, int j, int n)
     return dp[i][j][n & 1];
 }
 
-int main() {
+int main()
+{
     int r, c;
     scanf("%d %d", &r, &c);
     dp[1][1][0] = 1;
