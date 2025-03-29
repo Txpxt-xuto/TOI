@@ -10099,4 +10099,3 @@ void initialize(int N_, std::vector<int> A0, std::vector<int> C0) {
 	for(int jj=0,i=1;i<=n;++i)if(i==head[i])build(rt[i]=jj,dfn[i],dfn[tail[i]]),jj+=(dfn[tail[i]]-dfn[i]+1)*2;
 	dfs3(sta[1]);
 }
-
