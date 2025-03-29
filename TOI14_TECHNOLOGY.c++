@@ -9874,7 +9874,7 @@ int main()
     dp[1][1][0] = 1;
     dp2[0] = 1;
     nCr[0][0] = 1;
-    for(int i=1;i <=2* r - 3;i++)
+    for(int i=1;i <=2*r-3;i++)
     {
         nCr[i][0] = 1;
         for (int j = 1;j <= i;j++) {
