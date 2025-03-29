@@ -9866,6 +9866,7 @@ int play(int i, int j, int n)
     if (i < 1 || j < 1 || n < max(i, j) - 1) return 0;
     return dp[i][j][n & 1];
 }
+
 int main() {
     int r, c;
     scanf("%d %d", &r, &c);
