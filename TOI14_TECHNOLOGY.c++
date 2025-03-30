@@ -10052,7 +10052,6 @@ void build(int v,int l,int r){
 		else upper=mid;
 	}
 	mm[v]=lower;
-	//mm[v] =
 	build(v+1,l,mm[v]);
 	build(v+(mm[v]-l+1)*2,mm[v]+1,r);
 	pul(v,l,r);
