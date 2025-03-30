@@ -10049,7 +10049,7 @@ void build(int v,int l,int r){
 	while(upper-lower>1)
     {
 		int mid=lower+(upper-lower)/2;
-		if(weight[mid]-weight[l-1]<weight[r]-weight[mid])lower=mid;
+		if(weight[mid]-weight[l-1]<weight[r]-weight[mid]) lower=mid;
 		else upper=mid;
 	}
 	mm[v]=lower;
