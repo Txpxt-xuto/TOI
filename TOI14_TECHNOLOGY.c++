@@ -10056,7 +10056,8 @@ void build(int v,int l,int r){
 	build(v+(mm[v]-l+1)*2,mm[v]+1,r);
 	pul(v,l,r);
 }
-void upd(int v,int l,int r,int p,int mul){
+void upd(int v,int l,int r,int p,int mul)
+{
 	if(l==r)
     {
 		tran[v].b+=(c[aux[l]]==BLUE)*mul;
