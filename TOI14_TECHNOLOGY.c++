@@ -10086,7 +10086,7 @@ long long race_cost(int S, int X) {
 void initialize(int N_, std::vector<int> A0, std::vector<int> C0) {
 	n=N_;
 	for(int i=0;i<n;++i)a[i+1]=A0[i],c[i+1]=C0[i];
-	for(int i=1;i<=n;++i){
+	for(int i=1;i<=n;++i)ฃ{
 		int k=top;
 		while(k&&a[sta[k]]<a[i])--k;
 		if(k)r[sta[k]]=i;
