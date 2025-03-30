@@ -10006,7 +10006,8 @@ void upd2(int v,int l,int r,int p){
 }
 void re_lp(int u)
 {
-	int p=par[u];long long cc,ca,cb;
+	int p=par[u];
+    long long cc,ca,cb;
 	auto&t=tran[at[dfn[p]]];
 	t.r+=tran[rt[u]].r-cache[u][0];
 	t.b+=tran[rt[u]].b-cache[u][1];
