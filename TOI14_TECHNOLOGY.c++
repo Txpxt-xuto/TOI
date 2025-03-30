@@ -10075,7 +10075,8 @@ void updup(int v)
 }
 long long race_cost(int S, int X)
 {
-	if(c[++X]-S){
+	if(c[++X]-S)
+    {
 		upd(rt[head[X]],dfn[head[X]],dfn[tail[head[X]]],dfn[X],-1);
 		c[X]=S;
 		upd(rt[head[X]],dfn[head[X]],dfn[tail[head[X]]],dfn[X],1);
