@@ -10036,7 +10036,8 @@ void dfs3(int u){
 	dfs3(l[u]),dfs3(r[u]);
 	if(r[u])re_lp(r[u]);
 }
-void build(int v,int l,int r){
+void build(int v,int l,int r)
+{
 	if(l==r){
 		at[l]=v;
 		tran[v].b=(c[aux[l]]==BLUE);
