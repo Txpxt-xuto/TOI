@@ -10004,7 +10004,8 @@ void upd2(int v,int l,int r,int p){
 	else upd2(v+(mm[v]-l+1)*2,mm[v]+1,r,p);
 	pul(v,l,r);
 }
-void re_lp(int u){
+void re_lp(int u)
+{
 	int p=par[u];long long cc,ca,cb;
 	auto&t=tran[at[dfn[p]]];
 	t.r+=tran[rt[u]].r-cache[u][0];
