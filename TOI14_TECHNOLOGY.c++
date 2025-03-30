@@ -10021,7 +10021,8 @@ void re_lp(int u){
 	cache[u][2]=cc;
 }
 
-void dfs2(int u,int hd){
+void dfs2(int u,int hd)
+{
 	if(!u)return;
 	aux[dfn[u]=++timer]=u;
 	head[u]=hd;
