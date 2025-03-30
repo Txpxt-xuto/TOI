@@ -10038,7 +10038,8 @@ void dfs3(int u){
 }
 void build(int v,int l,int r)
 {
-	if(l==r){
+	if(l==r)
+    {
 		at[l]=v;
 		tran[v].b=(c[aux[l]]==BLUE);
 		tran[v].r=(c[aux[l]]==RED);
