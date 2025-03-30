@@ -10032,7 +10032,6 @@ void dfs2(int u,int hd)
 	dfs2(r[u],r[u]);
 	weight[dfn[u]]=sz[u]-sz[l[u]];
 }
-
 void dfs3(int u)
 {
 	if(!u) return;
