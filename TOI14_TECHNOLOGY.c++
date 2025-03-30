@@ -10089,7 +10089,7 @@ void initialize(int N_, std::vector<int> A0, std::vector<int> C0) {
 	for(int i=1;i<=n;++i)
     {
 		int k=top;
-		while(k&&a[sta[k]]<a[i])--k;
+		while(k&&a[sta[k]]<a[i]) --k;
 		if(k)r[sta[k]]=i;
 		if(k<top)l[i]=sta[k+1];
 		sta[top=++k]=i;
