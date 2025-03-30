@@ -10069,7 +10069,8 @@ void upd(int v,int l,int r,int p,int mul){
 	else upd(v+(mm[v]-l+1)*2,mm[v]+1,r,p,mul);
 	pul(v,l,r);
 }
-void updup(int v){
+void updup(int v)
+{
 	for(;head[v]!=head[sta[1]];v=par[head[v]]) re_lp(head[v]);
 }
 long long race_cost(int S, int X) {
