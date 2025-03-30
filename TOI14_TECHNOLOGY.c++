@@ -10065,7 +10065,7 @@ void upd(int v,int l,int r,int p,int mul){
 		tran[v].ra+=(c[aux[l]]==RED)*a[aux[l]]*mul;
 		return;
 	}
-	if(p<=mm[v])upd(v+1,l,mm[v],p,mul);
+	if(p<=mm[v]) upd(v+1,l,mm[v],p,mul);
 	else upd(v+(mm[v]-l+1)*2,mm[v]+1,r,p,mul);
 	pul(v,l,r);
 }
