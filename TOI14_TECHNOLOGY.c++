@@ -10058,7 +10058,8 @@ void build(int v,int l,int r){
 	pul(v,l,r);
 }
 void upd(int v,int l,int r,int p,int mul){
-	if(l==r){
+	if(l==r)
+    {
 		tran[v].b+=(c[aux[l]]==BLUE)*mul;
 		tran[v].r+=(c[aux[l]]==RED)*mul;
 		tran[v].ba+=(c[aux[l]]==BLUE)*a[aux[l]]*mul;
