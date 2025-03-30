@@ -10073,7 +10073,7 @@ void updup(int v)
 {
 	for(;head[v]!=head[sta[1]];v=par[head[v]]) re_lp(head[v]);
 }
-long long race_cost(int S, int X) {
+long long race_cost(int S, int X){
 	if(c[++X]-S){
 		upd(rt[head[X]],dfn[head[X]],dfn[tail[head[X]]],dfn[X],-1);
 		c[X]=S;
