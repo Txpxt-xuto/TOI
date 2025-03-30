@@ -10021,7 +10021,6 @@ void re_lp(int u)
 	cache[u][1]=cb;
 	cache[u][2]=cc;
 }
-
 void dfs2(int u,int hd)
 {
 	if(!u) return;
