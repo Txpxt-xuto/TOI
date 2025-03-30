@@ -10046,7 +10046,8 @@ void build(int v,int l,int r){
 		return;
 	}
 	int lower=l,upper=r;
-	while(upper-lower>1){
+	while(upper-lower>1)
+    {
 		int mid=lower+(upper-lower)/2;
 		if(weight[mid]-weight[l-1]<weight[r]-weight[mid])lower=mid;
 		else upper=mid;
