@@ -10013,8 +10013,7 @@ void re_lp(int u)
 	t.b+=tran[rt[u]].b-cache[u][1];
 	t.ra+=a[p]*((ca=tran[rt[u]].r)-cache[u][0]);
 	t.ba+=a[p]*((cb=tran[rt[u]].b)-cache[u][1]);
-	t.f+= (cc=tran[rt[u]].f+tran[rt[u]].r*1ll*a[p]*(c[p]==BLUE)+tran[rt[u]].b*1ll*a[p]*(c[p]==RED))
-		-cache[u][2];
+	t.f+= (cc=tran[rt[u]].f+tran[rt[u]].r*1ll*a[p]*(c[p]==BLUE)+tran[rt[u]].b*1ll*a[p]*(c[p]==RED))-cache[u][2];
 	upd2(rt[head[p]],dfn[head[p]],dfn[tail[head[p]]],dfn[p]);
 	cache[u][0]=ca;
 	cache[u][1]=cb;
