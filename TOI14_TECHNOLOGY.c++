@@ -10023,7 +10023,7 @@ void re_lp(int u){
 
 void dfs2(int u,int hd)
 {
-	if(!u)return;
+	if(!u) return;
 	aux[dfn[u]=++timer]=u;
 	head[u]=hd;
 	tail[hd]=u;
