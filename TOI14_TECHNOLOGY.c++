@@ -9998,7 +9998,8 @@ void dfs1(int u,int p){
 void pul(int v,int l,int r){
 	tran[v]=tran[v+(mm[v]-l+1)*2]*tran[v+1];
 }
-void upd2(int v,int l,int r,int p){
+void upd2(int v,int l,int r,int p)
+{
 	if(l==r) return;
 	if(p<=mm[v])upd2(v+1,l,mm[v],p);
 	else upd2(v+(mm[v]-l+1)*2,mm[v]+1,r,p);
@@ -10013,7 +10014,8 @@ void re_lp(int u)
 	t.b+=tran[rt[u]].b-cache[u][1];
 	t.ra+=a[p]*((ca=tran[rt[u]].r)-cache[u][0]);
 	t.ba+=a[p]*((cb=tran[rt[u]].b)-cache[u][1]);
-	t.f+= (cc=tran[rt[u]].f+tran[rt[u]].r*1ll*a[p]*(c[p]==BLUE)+tran[rt[u]].b*1ll*a[p]*(c[p]==RED))-cache[u][2];
+	t.f+= (cc=tran[rt[u]].f+tran[rt[u]].r*1ll*a[p]*(c[p]==BLUE)+tran[rt[u]].b*1ll*a[p]*(c[p]==RED))
+    -cache[u][2];
 	upd2(rt[head[p]],dfn[head[p]],dfn[tail[head[p]]],dfn[p]);
 	cache[u][0]=ca;
 	cache[u][1]=cb;
