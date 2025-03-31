@@ -9985,7 +9985,8 @@ struct mat{
 };
 
 mat tran[N*2];
-void dfs1(int u,int p){
+void dfs1(int u,int p)
+{
 	if(!u)return;
 	sz[u]=1;
 	par[u]=p;
