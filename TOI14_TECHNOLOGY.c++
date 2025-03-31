@@ -9971,7 +9971,8 @@ int dep[N], n, a[N], c[N], sta[N], top, l[N], r[N], sz[N], par[N], head[N], tail
 long long weight[N],cache[N][3];
 struct mat{
 	long long b,r,f,ba,ra;
-	friend mat operator*(const mat&a, const mat&b){
+	friend mat operator*(const mat&a, const mat&b)
+    {
 		mat c;
 		c.r=a.r+b.r;
 		c.b=a.b+b.b;
