@@ -9965,7 +9965,6 @@ int main()
 #include "mountain.h"
 #define BLUE 1
 #define RED 2
-
 #define N 100001
 int dep[N], n, a[N], c[N], sta[N], top, l[N], r[N], sz[N], par[N], head[N], tail[N], dfn[N], aux[N], mm[N*4],rt[N],timer,at[N];
 long long weight[N],cache[N][3];
