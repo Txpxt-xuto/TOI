@@ -9991,7 +9991,7 @@ void dfs1(int u,int p)
 	dep[u]=dep[p]+1;
 	dfs1(l[u],u),sz[u]+=sz[l[u]];
 	dfs1(r[u],u),sz[u]+=sz[r[u]];
-	if(!l[u]||sz[r[u]]>sz[l[u]])std::swap(l[u],r[u]);
+	if(!l[u]||sz[r[u]]>sz[l[u]]) std::swap(l[u],r[u]);
 }
 void pul(int v,int l,int r)
 {
