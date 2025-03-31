@@ -9983,7 +9983,6 @@ struct mat{
 		return c;
 	}
 };
-
 mat tran[N*2];
 void dfs1(int u,int p)
 {
