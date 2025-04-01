@@ -10105,3 +10105,121 @@ void initialize(int N_, std::vector<int> A0, std::vector<int> C0) {
 	dfs3(sta[1]);
 }
 
+#include <bits/stdc++.h>
+using namespace std;
+#define f(i,a,b,c) for(int i=a;i<=b;i+=c)
+
+struct Node {
+	int val;
+	int weight, size;
+	bool rev;
+	Node *left, *right;
+	Node(int c) : val(c), weight(rand()), size(1), left(NULL), right(NULL), rev(false) {}
+} *root;
+
+inline int size(Node *t) { return t ? t->size : 0; }
+
+inline void upd_size(Node *t){
+	if(t) t->size=size(t->left)+size(t->right)+1;
+}
+
+void push(Node *t){
+	if(t && t->rev){
+		t->rev=false;
+		swap(t->left,t->right);
+		if(t->left) t->left->rev^=1;
+		if(t->right) t->right->rev^=1;
+	}
+}
+
+void split(Node *treap, Node *&left, Node *&right, int val, int add=0) {
+	if (!treap) {
+		left = right = NULL;
+		return;
+	}
+	push(treap);
+	if (add+size(treap->left) < val) {
+		split(treap->right, treap->right, right, val,add+size(treap->left)+1);
+		left = treap;
+	} else {
+		split(treap->left, left, treap->left, val,add);
+		right = treap;
+	}
+	upd_size(treap);
+}
+
+void merge(Node *&treap, Node *left, Node *right) {
+	push(left);
+	push(right);
+	if (left == NULL) {
+		treap = right;
+		return;
+	}
+	if (right == NULL) {
+		treap = left;
+		return;
+	}
+	if (left->weight < right->weight) {
+		merge(left->right, left->right, right);
+		treap = left;
+	} else {
+		merge(right->left, left, right->left);
+		treap = right;
+	}
+	upd_size(treap);
+}
+
+void reverse(Node *t, int l, int r){
+	Node *t1, *t2, *t3;
+	split(t,t1,t2,l);
+	split(t2,t2,t3,r-l+1);
+	t2->rev^=1;
+	merge(t,t1,t2);
+	merge(t,t,t3);
+}
+
+ostream &operator<<(ostream &os, Node *n) {
+	if (!n) return os;
+	os << n->left;
+	os << n->val;
+	os << n->right;
+	return os;
+}
+
+void output (Node *t) {
+    if (!t)  return;
+    push(t);
+    output (t->left);
+    printf ("%d ", t->val);
+    output (t->right);
+}
+
+int get_left(Node *t){
+	push(t);
+	if(t->left) return get_left(t->left);
+	else return t->val; 
+}
+
+Node *t;
+int a[300005];
+
+int main() {
+	//ios::sync_with_stdio(0);cin.tie(0);
+	int n;
+    scanf(" %d",&n);
+	f(i,1,n,1) scanf(" %d",&a[i]);
+	f(i,1,n,1) { merge(root, root, new Node(a[i])); }
+	int cnt=0;
+	int x=a[1];
+	while(x!=1){
+		cnt++;
+		reverse(root,0,x-1);
+		x=get_left(root);
+		//output(root); printf("\n");
+	}
+	printf("%d",cnt);
+}
+/*
+4
+2 4 1 3
+*/
