@@ -10204,7 +10204,6 @@ Node *t;
 int a[300005];
 
 int main() {
-	//ios::sync_with_stdio(0);cin.tie(0);
 	int n;
     scanf(" %d",&n);
 	f(i,1,n,1) scanf(" %d",&a[i]);
