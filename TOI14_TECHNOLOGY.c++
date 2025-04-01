@@ -10203,7 +10203,8 @@ int get_left(Node *t){
 Node *t;
 int a[300005];
 
-int main() {
+int main()
+{
 	int n;
     scanf(" %d",&n);
 	f(i,1,n,1) scanf(" %d",&a[i]);
