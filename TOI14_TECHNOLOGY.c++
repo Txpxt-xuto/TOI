@@ -10202,7 +10202,6 @@ int get_left(Node *t){
 
 Node *t;
 int a[300005];
-
 int main()
 {
 	int n;
