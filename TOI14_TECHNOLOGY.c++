@@ -10215,7 +10215,6 @@ int main() {
 		cnt++;
 		reverse(root,0,x-1);
 		x=get_left(root);
-		//output(root); printf("\n");
 	}
 	printf("%d",cnt);
 }
