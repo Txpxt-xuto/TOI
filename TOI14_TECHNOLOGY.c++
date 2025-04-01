@@ -10209,7 +10209,6 @@ int main()
     scanf(" %d",&n);
 	f(i,1,n,1) scanf(" %d",&a[i]);
 	f(i,1,n,1)merge(root, root, new Node(a[i]));
-
 	int cnt=0;
 	int x=a[1];
 	while(x!=1)
