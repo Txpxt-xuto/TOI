@@ -10194,7 +10194,8 @@ void output (Node *t) {
     output (t->right);
 }
 
-int get_left(Node *t){
+int get_left(Node *t)
+{
 	push(t);
 	if(t->left) return get_left(t->left);
 	else return t->val; 
