@@ -10141,7 +10141,8 @@ void split(Node *treap, Node *&left, Node *&right, int val, int add=0) {
 	if (add+size(treap->left) < val) {
 		split(treap->right, treap->right, right, val,add+size(treap->left)+1);
 		left = treap;
-	} else {
+	} else
+    {
 		split(treap->left, left, treap->left, val,add);
 		right = treap;
 	}
