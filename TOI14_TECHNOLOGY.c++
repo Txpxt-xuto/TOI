@@ -10123,7 +10123,8 @@ inline void upd_size(Node *t){
 	if(t) t->size=size(t->left)+size(t->right)+1;
 }
 
-void push(Node *t){
+void push(Node *t)
+{
 	if(t && t->rev)
     {
 		t->rev=false;
