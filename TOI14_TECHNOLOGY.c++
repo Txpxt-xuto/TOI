@@ -10155,7 +10155,7 @@ void merge(Node *&treap, Node *left, Node *right) {
 		treap = right;
 		return;
 	}
-	if (right == NULL)
+	if(right == NULL)
     {
 		treap = left;
 		return;
