@@ -10108,7 +10108,6 @@ void initialize(int N_, std::vector<int> A0, std::vector<int> C0) {
 #include <bits/stdc++.h>
 using namespace std;
 #define f(i,a,b,c) for(int i=a;i<=b;i+=c)
-
 struct Node
 {
 	int val;
