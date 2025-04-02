@@ -10138,7 +10138,8 @@ void split(Node *treap, Node *&left, Node *&right, int val, int add=0) {
 		return;
 	}
 	push(treap);
-	if (add+size(treap->left) < val) {
+	if (add+size(treap->left) < val)
+    {
 		split(treap->right, treap->right, right, val,add+size(treap->left)+1);
 		left = treap;
 	}
