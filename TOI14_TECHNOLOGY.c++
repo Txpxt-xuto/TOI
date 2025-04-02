@@ -10124,7 +10124,8 @@ inline void upd_size(Node *t){
 }
 
 void push(Node *t){
-	if(t && t->rev){
+	if(t && t->rev)
+    {
 		t->rev=false;
 		swap(t->left,t->right);
 		if(t->left) t->left->rev^=1;
