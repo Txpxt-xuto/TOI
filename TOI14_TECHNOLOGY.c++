@@ -10148,7 +10148,8 @@ void split(Node *treap, Node *&left, Node *&right, int val, int add=0) {
 	upd_size(treap);
 }
 
-void merge(Node *&treap, Node *left, Node *right) {
+void merge(Node *&treap, Node *left, Node *right)
+{
 	push(left);
 	push(right);
 	if(left == NULL)
