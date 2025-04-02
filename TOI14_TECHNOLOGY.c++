@@ -10178,7 +10178,8 @@ void reverse(Node *t, int l, int r){
 	merge(t,t,t3);
 }
 
-ostream &operator<<(ostream &os, Node *n) {
+ostream &operator<<(ostream &os, Node *n)
+{
 	if (!n) return os;
 	os << n->left;
 	os << n->val;
