@@ -10187,7 +10187,8 @@ ostream &operator<<(ostream &os, Node *n)
 	return os;
 }
 
-void output (Node *t) {
+void output (Node *t)
+{
     if (!t)  return;
     push(t);
     output (t->left);
