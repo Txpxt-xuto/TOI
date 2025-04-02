@@ -10151,7 +10151,7 @@ void split(Node *treap, Node *&left, Node *&right, int val, int add=0) {
 void merge(Node *&treap, Node *left, Node *right) {
 	push(left);
 	push(right);
-	if (left == NULL)
+	if(left == NULL)
     {
 		treap = right;
 		return;
