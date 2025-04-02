@@ -10133,7 +10133,7 @@ void push(Node *t){
 }
 
 void split(Node *treap, Node *&left, Node *&right, int val, int add=0) {
-	if (!treap)
+	if(!treap)
     {
 		left = right = NULL;
 		return;
