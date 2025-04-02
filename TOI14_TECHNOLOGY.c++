@@ -10159,7 +10159,8 @@ void merge(Node *&treap, Node *left, Node *right) {
 		treap = left;
 		return;
 	}
-	if (left->weight < right->weight) {
+	if (left->weight < right->weight)
+    {
 		merge(left->right, left->right, right);
 		treap = left;
 	}
