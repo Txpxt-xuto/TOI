@@ -10119,7 +10119,8 @@ struct Node {
 
 inline int size(Node *t) { return t ? t->size : 0; }
 
-inline void upd_size(Node *t){
+inline void upd_size(Node *t
+    {
 	if(t) t->size=size(t->left)+size(t->right)+1;
 }
 
