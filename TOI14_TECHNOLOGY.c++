@@ -10169,7 +10169,8 @@ void merge(Node *&treap, Node *left, Node *right) {
 	upd_size(treap);
 }
 
-void reverse(Node *t, int l, int r){
+void reverse(Node *t, int l, int r)
+{
 	Node *t1, *t2, *t3;
 	split(t,t1,t2,l);
 	split(t2,t2,t3,r-l+1);
