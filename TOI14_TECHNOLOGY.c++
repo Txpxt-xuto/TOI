@@ -10327,6 +10327,5 @@ int main()
         if(i==pq.top().r)
         {
 
-                dp[1][i]=max(dp[1][i],dp[0][pq.top().lk-1]+pq.top().cnt-1);
     cout<<n-max(dp[0][n],dp[1][n]);
 }
