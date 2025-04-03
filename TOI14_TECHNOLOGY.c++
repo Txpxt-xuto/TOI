@@ -10320,6 +10320,5 @@ int main()
             pq.pop();
         }
 
-
     cout<<n-max(dp[0][n],dp[1][n]);
 }
