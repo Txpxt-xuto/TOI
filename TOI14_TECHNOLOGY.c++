@@ -10235,3 +10235,102 @@ int main()
 	}
 	printf("%d",cnt);
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+#define pii pair<pair<int,int>,int>
+#define f first
+#define s second
+struct A
+{
+    int l,r,cnt,k;
+    bool operator<(const A&o) const
+    {
+        if(r==o.r) return l>o.l;
+        //if(rk==o.rk) return r>o.r;
+        return r>o.r;
+    }
+};
+struct B
+{
+    int l,r,lk,rk,cnt;
+};
+int dp[2][1111111];
+B rng[1111111];//l,r,cnt
+priority_queue<A> pq;
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int n,k;
+    cin>>n>>k;
+    for(int i=1; i<=n; i++)
+    {
+        int x;
+        cin>>x;
+        if(rng[x].cnt==0)
+            rng[x]= {i,i,-1,-1,1};
+        else
+        {
+            if(rng[x].lk==-1)
+                rng[x].lk=i;
+
+            rng[x].rk=rng[x].r;
+            rng[x].r=i;
+            rng[x].cnt++;
+        }
+    }
+
+    //sort(rng+1,rng+n+1);
+    for(int i=1; i<=n; i++)
+    {
+        if(rng[i].cnt==0) continue;
+        pq.push({rng[i].l,rng[i].r,rng[i].cnt,0});
+        if(k==1){
+        pq.push({rng[i].lk,rng[i].r,rng[i].cnt-1,1});
+        pq.push({rng[i].l,rng[i].rk,rng[i].cnt-1,1});
+        }
+
+    }
+    for(int i=1; i<=n; i++)
+    {
+
+        if(i==pq.top().r)
+        {
+            dp[0][i]=max(dp[0][i],dp[0][pq.top().l-1]+pq.top().cnt);
+
+        }
+    }
+
+
+    for(int i=1; i<=n; i++)
+    {
+        dp[0][i]=dp[0][i-1];
+        dp[1][i]=dp[1][i-1];
+        while(!pq.empty()&&pq.top().r==i){
+        if(pq.top().k==0)
+        {
+            dp[0][i]=max(dp[0][i],dp[0][pq.top().l-1]+pq.top().cnt);
+            dp[1][i]=max(dp[1][i],dp[1][pq.top().l-1]+pq.top().cnt);
+        }
+        else
+        {
+            dp[1][i]=max(dp[1][i],dp[0][pq.top().l-1]+pq.top().cnt);
+        }
+            pq.pop();
+        }
+
+
+            /*if(pq.top().cnt>1)
+                dp[1][i]=max(dp[1][i],dp[0][pq.top().l-1]+pq.top().cnt-1);
+
+        if(i==pq.top().r)
+        {
+
+            if(pq.top().cnt>1)
+                dp[1][i]=max(dp[1][i],dp[0][pq.top().lk-1]+pq.top().cnt-1);
+        }*/
+       // cout<<dp[0][i]<<' '<<dp[1][i]<<'\n';
+    }
+    cout<<n-max(dp[0][n],dp[1][n]);
+}
