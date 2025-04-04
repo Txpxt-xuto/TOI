@@ -10288,8 +10288,8 @@ int main()
         pq.push({rng[i].l,rng[i].r,rng[i].cnt,0});
         if(k==1)
         {
-        pq.push({rng[i].lk,rng[i].r,rng[i].cnt-1,1});
-        pq.push({rng[i].l,rng[i].rk,rng[i].cnt-1,1});
+            pq.push({rng[i].lk,rng[i].r,rng[i].cnt-1,1});
+            pq.push({rng[i].l,rng[i].rk,rng[i].cnt-1,1});
         }
     }
     for(int i=1;i<=n;i++) if(i==pq.top().r) dp[0][i]=max(dp[0][i],dp[0][pq.top().l-1]+pq.top().cnt);
