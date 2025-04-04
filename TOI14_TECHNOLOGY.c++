@@ -10267,7 +10267,7 @@ int main()
     for(int i=1; i<=n; i++)
     {
         int x;
-        cin>>x;
+        cin >> x;
         if(rng[x].cnt==0) rng[x]= {i,i,-1,-1,1};
         else
         {
