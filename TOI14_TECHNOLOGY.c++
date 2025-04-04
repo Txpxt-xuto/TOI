@@ -10286,7 +10286,8 @@ int main()
     {
         if(rng[i].cnt==0) continue;
         pq.push({rng[i].l,rng[i].r,rng[i].cnt,0});
-        if(k==1){
+        if(k==1)
+        {
         pq.push({rng[i].lk,rng[i].r,rng[i].cnt-1,1});
         pq.push({rng[i].l,rng[i].rk,rng[i].cnt-1,1});
         }
