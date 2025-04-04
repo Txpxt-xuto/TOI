@@ -10281,7 +10281,7 @@ int main()
         }
     }
 
-    //sort(rng+1,rng+n+1);
+
     for(int i=1; i<=n; i++)
     {
         if(rng[i].cnt==0) continue;
