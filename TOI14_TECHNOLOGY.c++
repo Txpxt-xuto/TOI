@@ -10296,7 +10296,8 @@ int main()
     {
         dp[0][i]=dp[0][i-1];
         dp[1][i]=dp[1][i-1];
-        while(!pq.empty()&&pq.top().r==i){
+        while(!pq.empty()&&pq.top().r==i)
+        {
         if(pq.top().k==0)
         {
             dp[0][i]=max(dp[0][i],dp[0][pq.top().l-1]+pq.top().cnt);
