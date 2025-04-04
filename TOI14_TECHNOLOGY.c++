@@ -10272,9 +10272,7 @@ int main()
             rng[x]= {i,i,-1,-1,1};
         else
         {
-            if(rng[x].lk==-1)
-                rng[x].lk=i;
-
+            if(rng[x].lk==-1) rng[x].lk=i;
             rng[x].rk=rng[x].r;
             rng[x].r=i;
             rng[x].cnt++;
