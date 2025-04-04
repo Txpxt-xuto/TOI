@@ -10256,7 +10256,7 @@ struct B
     int l,r,lk,rk,cnt;
 };
 int dp[2][1111111];
-B rng[1111111];//l,r,cnt
+B rng[1111111];//l,r,c
 priority_queue<A> pq;
 int main()
 {
