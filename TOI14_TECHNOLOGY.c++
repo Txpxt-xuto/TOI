@@ -10203,7 +10203,7 @@ ostream &operator<<(ostream &os, Node *n)
 
 void output (Node *t)
 {
-    if(!t)  return;
+    if(!t) return;
     push(t);
     output (t->left);
     printf ("%d ", t->val);
