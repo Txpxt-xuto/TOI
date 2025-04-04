@@ -10268,8 +10268,8 @@ int main()
     {
         int x;
         cin>>x;
-        if(rng[x].cnt==0)
-            rng[x]= {i,i,-1,-1,1};
+        if(rng[x].cnt==0) rng[x]= {i,i,-1,-1,1};
+            
         else
         {
             if(rng[x].lk==-1) rng[x].lk=i;
