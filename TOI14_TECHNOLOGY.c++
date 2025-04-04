@@ -10298,11 +10298,11 @@ int main()
         dp[1][i]=dp[1][i-1];
         while(!pq.empty()&&pq.top().r==i)
         {
-        if(pq.top().k==0)
-        {
-            dp[0][i]=max(dp[0][i],dp[0][pq.top().l-1]+pq.top().cnt);
-            dp[1][i]=max(dp[1][i],dp[1][pq.top().l-1]+pq.top().cnt);
-        }
+            if(pq.top().k==0)
+            {
+                dp[0][i]=max(dp[0][i],dp[0][pq.top().l-1]+pq.top().cnt);
+                dp[1][i]=max(dp[1][i],dp[1][pq.top().l-1]+pq.top().cnt);
+            }
             else dp[1][i]=max(dp[1][i],dp[0][pq.top().l-1]+pq.top().cnt);
             pq.pop();
         }
