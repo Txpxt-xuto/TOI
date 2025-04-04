@@ -10280,7 +10280,7 @@ int main()
             rng[x].cnt++;
         }
     }
-    for(int i=1; i<=n; i++)
+    for(int i=1;i<=n;i++)
     {
         if(rng[i].cnt==0) continue;
         pq.push({rng[i].l,rng[i].r,rng[i].cnt,0});
