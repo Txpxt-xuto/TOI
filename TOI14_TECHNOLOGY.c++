@@ -10291,8 +10291,8 @@ int main()
         pq.push({rng[i].l,rng[i].rk,rng[i].cnt-1,1});
         }
     }
-    for(int i=1;i<=n; i++) if(i==pq.top().r) dp[0][i]=max(dp[0][i],dp[0][pq.top().l-1]+pq.top().cnt);
-    for(int i=1;i<=n; i++)
+    for(int i=1;i<=n;i++) if(i==pq.top().r) dp[0][i]=max(dp[0][i],dp[0][pq.top().l-1]+pq.top().cnt);
+    for(int i=1;i<=n;i++)
     {
         dp[0][i]=dp[0][i-1];
         dp[1][i]=dp[1][i-1];
