@@ -10302,7 +10302,6 @@ int main()
         }
     }
 
-
     for(int i=1; i<=n; i++)
     {
         dp[0][i]=dp[0][i-1];
