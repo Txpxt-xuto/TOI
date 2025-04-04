@@ -10247,7 +10247,6 @@ struct A
     bool operator<(const A&o) const
     {
         if(r==o.r) return l>o.l;
-        //if(rk==o.rk) return r>o.r;
         return r>o.r;
     }
 };
