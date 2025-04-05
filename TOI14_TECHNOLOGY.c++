@@ -10318,7 +10318,8 @@ int main(){
     vector<vector<int>> adj(n);
     vector<int> id;
     int c=0;
-    for(int i=0;i<m;i++){
+    for(int i=0;i<m;i++)
+    {
         int u,v,w;
         cin >> u >> v >> w;
         if(w<=a)
