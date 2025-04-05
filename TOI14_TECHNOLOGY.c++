@@ -10326,7 +10326,7 @@ int main(){
             exit(0);
         }
         if(w<=b) c++;
-        
+    
         }
         u--,v--;
         if(u>v)swap(u,v);
