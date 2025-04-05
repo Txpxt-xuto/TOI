@@ -10321,12 +10321,12 @@ int main(){
     for(int i=0;i<m;i++){
         int u,v,w;
         cin >> u >> v >> w;
-        if(w<=a){
+        if(w<=a)
+        {
             cout << -1;
             exit(0);
         }
         if(w<=b) c++;
-
         u--,v--;
         if(u>v)swap(u,v);
         id.emplace_back(u);
