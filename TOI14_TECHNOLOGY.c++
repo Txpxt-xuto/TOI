@@ -10325,8 +10325,8 @@ int main(){
             cout << -1;
             exit(0);
         }
-        if(w<=b){
-            c++;
+        if(w<=b){c++;
+            
         }
         u--,v--;
         if(u>v)swap(u,v);
@@ -10341,7 +10341,7 @@ int main(){
     int s=id.size();
     for(auto &v:adj) sort(v.begin(),v.end());
     
-    
+
     vector<vector<int>> dp(s,vector<int>(s));
     for(int r=0;r<s;r++)
     {
