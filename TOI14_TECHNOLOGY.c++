@@ -10354,7 +10354,8 @@ int main(){
     dp2[0][0]=0;
     for(int i=0;i<s;i++)
     {
-        for(int j=0;j<=c;j++){
+        for(int j=0;j<=c;j++)
+        {
             dp2[i+1][j]=min(dp2[i+1][j],dp2[i][j]);
             for(int k=i+1;k<=s;k++){
                 int x=min(j+dp[i][k-1],c);
