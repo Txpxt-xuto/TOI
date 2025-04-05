@@ -10343,7 +10343,8 @@ int main(){
         sort(v.begin(),v.end());
     }
     vector<vector<int>> dp(s,vector<int>(s));
-    for(int r=0;r<s;r++){
+    for(int r=0;r<s;r++)
+    {
         int cur=0;
         for(int l=r;l>=0;l--)
         {
