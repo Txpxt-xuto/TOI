@@ -10325,7 +10325,7 @@ int main(){
             cout << -1;
             exit(0);
         }
-        if(w<=b){c++;
+        if(w<=b) c++;
         
         }
         u--,v--;
