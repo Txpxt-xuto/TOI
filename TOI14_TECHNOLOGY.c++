@@ -10352,7 +10352,8 @@ int main(){
     }
     vector<vector<int>> dp2(s+1,vector<int>(c+1,n-1));
     dp2[0][0]=0;
-    for(int i=0;i<s;i++){
+    for(int i=0;i<s;i++)
+    {
         for(int j=0;j<=c;j++){
             dp2[i+1][j]=min(dp2[i+1][j],dp2[i][j]);
             for(int k=i+1;k<=s;k++){
