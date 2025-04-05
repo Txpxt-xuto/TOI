@@ -10315,7 +10315,7 @@ int main()
     cin.tie(nullptr)->sync_with_stdio(false);
     int n,m,a,b;
     cin >> n >> m >> a >> b;
-    if(a>b)swap(a,b);
+    if(a>b) swap(a,b);
     vector<vector<int>> adj(n);
     vector<int> id;
     int c=0;
