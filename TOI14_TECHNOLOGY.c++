@@ -10379,7 +10379,7 @@ int main() {
     for (int i = 0; i < k; ++i) {
         int pos, height;
         cin >> pos >> height;
-        int max_d = n; // ค่าเริ่มต้นของ d คือ n
+        int max_d = n;
         buildings[pos] = height;
         for(auto it = buildings.begin();it != buildings.end();++it)
         {
