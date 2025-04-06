@@ -10417,7 +10417,8 @@ void dfs (int nn,int np){
 }
 
 int main (){
-    ios::sync_with_stdio(0); cin.tie(0);
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     int n,k,ans=0;
     cin >> n >> k;
     for(int i=1;i<n;i++)
