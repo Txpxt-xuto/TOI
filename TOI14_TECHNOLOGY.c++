@@ -10407,7 +10407,7 @@ void dfs (int nn,int np){
         }
     }
     dp2[nn]=dp1[nn];
-    if (!used[nn]) for (auto [xn,xw]:g[nn])if (xn!=np && !used[xn]) dp2[nn]=max(dp2[nn],dp1[xn]+dp1[nn]-dp2[xn]+xw);
+    if(!used[nn]) for(auto [xn,xw]:g[nn])if (xn!=np && !used[xn]) dp2[nn]=max(dp2[nn],dp1[xn]+dp1[nn]-dp2[xn]+xw);
     return;
 }
 
