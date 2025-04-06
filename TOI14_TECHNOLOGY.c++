@@ -10371,7 +10371,6 @@ int main()
 using namespace std;
 
 map<int, int> buildings;
-
 int main()
 {
     int n,k; 
