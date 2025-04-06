@@ -10387,7 +10387,6 @@ int main() {
             if (abs(it->first - pos) > max_d) break; // ออกจากลูปถ้าเกินระยะ d
             if (it->second > height)  // พบตึก
                 max_d = min(max_d, abs(it->first - pos) - 1);
-        
         }
         cout << max_d << '\n';
     }
