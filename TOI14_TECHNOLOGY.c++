@@ -10420,7 +10420,7 @@ int main (){
     ios::sync_with_stdio(0); cin.tie(0);
     int n,k,ans=0;
     cin >> n >> k;
-    for (int i=1;i<n;i++)
+    for(int i=1;i<n;i++)
     {
         int u,v,w;
         cin >> u >> v >> w;
