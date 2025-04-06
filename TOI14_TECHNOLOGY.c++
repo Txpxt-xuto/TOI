@@ -10426,8 +10426,8 @@ int main (){
         g[u].emplace_back(v,w);
         g[v].emplace_back(u,w);
     }
-    for (int i=0;i<k;i++){
-        cin >> a[i] >> b[i] >> c[i];
+    for (int i=0;i<k;i++) cin >> a[i] >> b[i] >> c[i];
+       
     }
     for (int i=0;i<1<<k;i++)
     {
