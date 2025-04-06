@@ -10393,16 +10393,15 @@ int main()
 
 #include <bits/stdc++.h>
 using namespace std;
-
 const int N=10005,K=15;
 vector<pair<int,int>> g[N];
 int dp1[N],dp2[N],a[K],b[K],c[K];
 bool used[N];
-
-void dfs (int nn,int np){
-    for (auto [xn,xw]:g[nn])
+void dfs (int nn,int np)
+{
+    for(auto [xn,xw]:g[nn])
     {
-        if (xn!=np)
+        if(xn!=np)
         {
             dfs(xn,nn);
             dp1[nn]+=dp2[xn];
