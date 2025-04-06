@@ -10365,6 +10365,7 @@ int main()
     int v=dp2[s][c];
     cout << 1LL*a*v+1LL*(n-1-v)*b;
 }
+
 #include <iostream>
 #include <map>
 #include <cmath>
