@@ -10439,7 +10439,6 @@ int main (){
                 used[b[j]]=1;
             }
         }
-        // cout << bitset<10>(i) << '\n';
         dfs(1,0);
         ans=max(ans,dp2[1]+nv);
     }
