@@ -10431,7 +10431,7 @@ int main (){
     }
     for (int i=0;i<1<<k;i++)
     {
-        for (int j=1;j<=n;j++) used[j]=dp1[j]=dp2[j]=0;
+        for(int j=1;j<=n;j++) used[j]=dp1[j]=dp2[j]=0;
         int nv=0;
         for (int j=0;j<k;j++){
             if(i&1<<j && !used[a[j]] && !used[b[j]])
