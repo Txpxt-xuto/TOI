@@ -10365,3 +10365,34 @@ int main()
     int v=dp2[s][c];
     cout << 1LL*a*v+1LL*(n-1-v)*b;
 }
+#include <iostream>
+#include <map>
+#include <cmath>
+using namespace std;
+
+map<int, int> buildings;
+
+int main() {
+    int n, k; 
+    cin >> n >> k;
+
+    for (int i = 0; i < k; ++i) {
+        int pos, height;
+        cin >> pos >> height;
+
+        int max_d = n; // ค่าเริ่มต้นของ d คือ n
+        buildings[pos] = height;
+
+        // ตรวจสอบตึกที่อยู่ในช่วง
+        for (auto it = buildings.begin(); it != buildings.end(); ++it) {
+            if (abs(it->first - pos) > max_d) break; // ออกจากลูปถ้าเกินระยะ d
+            if (it->second > height) { // พบตึกที่สูงกว่า
+                max_d = min(max_d, abs(it->first - pos) - 1);
+            }
+        }
+
+        cout << max_d << '\n'; // แสดงผลลัพธ์
+    }
+
+    return 0;
+}
