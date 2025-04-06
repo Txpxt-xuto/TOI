@@ -10384,7 +10384,7 @@ int main() {
         buildings[pos] = height;
         // ตรวจสอบตึกที่อยู่ในช่วง
         for (auto it = buildings.begin(); it != buildings.end(); ++it) {
-            if(abs(it->first - pos) > max_d) break; // ออกจากลูป
+            if(abs(it->first - pos) > max_d) break
             if(it->second > height) max_d = min(max_d, abs(it->first - pos) - 1);
         }
         cout << max_d << '\n';
