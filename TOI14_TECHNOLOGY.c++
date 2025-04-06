@@ -10400,8 +10400,10 @@ int dp1[N],dp2[N],a[K],b[K],c[K];
 bool used[N];
 
 void dfs (int nn,int np){
-    for (auto [xn,xw]:g[nn]){
-        if (xn!=np) {
+    for (auto [xn,xw]:g[nn])
+    {
+        if (xn!=np)
+        {
             dfs(xn,nn);
             dp1[nn]+=dp2[xn];
         }
