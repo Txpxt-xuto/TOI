@@ -10665,16 +10665,12 @@ pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
 		}
 		if (!valid(lcand) && !valid(rcand))
 			break;
-		if (!valid(lcand) ||
-		        (valid(rcand) && in_circle(lcand->dest(), lcand->origin,
-		                                   rcand->origin, rcand->dest())))
-			basel = connect(rcand, basel->rev());
+		if (!valid(lcand) || (valid(rcand) && in_circle(lcand->dest(), lcand->origin,rcand->origin, rcand->dest()))) basel = connect(rcand, basel->rev());
 		else
 			basel = connect(basel->rev(), lcand->rev());
 	}
 	return make_pair(ldo, rdo);
 }
-
 vector<tuple<pt, pt, pt>> delaunay(vector<pt> p)
 {
 	sort(p.begin(), p.end(), [](const pt& a, const pt& b)
