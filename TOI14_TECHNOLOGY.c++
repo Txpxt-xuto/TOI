@@ -10609,7 +10609,8 @@ pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
 		QuadEdge* res = make_edge(p[l], p[r]);
 		return make_pair(res, res->rev());
 	}
-	if (r - l + 1 == 3) {
+	if (r - l + 1 == 3)
+    {
 		QuadEdge *a = make_edge(p[l], p[l + 1]), *b = make_edge(p[l + 1], p[r]);
 		splice(a->rev(), b);
 		int sg = sgn(p[l].cross(p[l + 1], p[r]));
