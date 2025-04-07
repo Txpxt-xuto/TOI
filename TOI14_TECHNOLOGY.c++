@@ -10555,7 +10555,8 @@ void delete_edge(QuadEdge* e) {
 	delete e;
 }
 
-QuadEdge* connect(QuadEdge* a, QuadEdge* b) {
+QuadEdge* connect(QuadEdge* a, QuadEdge* b)
+{
 	QuadEdge* e = make_edge(a->dest(), b->origin);
 	splice(e, a->lnext());
 	splice(e->rev(), b);
