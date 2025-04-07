@@ -10578,15 +10578,11 @@ T det3(T a1, T a2, T a3, T b1, T b2, T b3, T c1, T c2, T c3) {
 
 bool in_circle(pt a, pt b, pt c, pt d)
 {
-#if defined(__LP64__) || defined(_WIN64)
-	__int128 det = -det3<__int128>(b.x, b.y, b.sqrLength(), c.x, c.y,
-	                               c.sqrLength(), d.x, d.y, d.sqrLength());
-	det += det3<__int128>(a.x, a.y, a.sqrLength(), c.x, c.y, c.sqrLength(), d.x,
-	                      d.y, d.sqrLength());
-	det -= det3<__int128>(a.x, a.y, a.sqrLength(), b.x, b.y, b.sqrLength(), d.x,
-	                      d.y, d.sqrLength());
-	det += det3<__int128>(a.x, a.y, a.sqrLength(), b.x, b.y, b.sqrLength(), c.x,
-	                      c.y, c.sqrLength());
+    #if defined(__LP64__) || defined(_WIN64)
+	__int128 det = -det3<__int128>(b.x, b.y, b.sqrLength(), c.x, c.y,c.sqrLength(), d.x, d.y, d.sqrLength());
+	det += det3<__int128>(a.x, a.y, a.sqrLength(), c.x, c.y, c.sqrLength(), d.x,d.y, d.sqrLength());
+	det -= det3<__int128>(a.x, a.y, a.sqrLength(), b.x, b.y, b.sqrLength(), d.x,d.y, d.sqrLength());
+	det += det3<__int128>(a.x, a.y, a.sqrLength(), b.x, b.y, b.sqrLength(), c.x,c.y, c.sqrLength());
 	return det > 0;
 #else
 	auto ang = [](pt l, pt mid, pt r)
