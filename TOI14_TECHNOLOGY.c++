@@ -10721,7 +10721,8 @@ int main() {
 	cin >> n;
 	ll x,y,w;
 	vector<pt> p;
-	for(int i=0; i<n; i++) {
+	for(int i=0; i<n; i++)
+    {
 		cin >> x >> y;
 		p.push_back({x,y,i});
 	}
