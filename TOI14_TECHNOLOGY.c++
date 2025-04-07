@@ -10562,11 +10562,13 @@ QuadEdge* connect(QuadEdge* a, QuadEdge* b) {
 	return e;
 }
 
-bool left_of(pt p, QuadEdge* e) {
+bool left_of(pt p, QuadEdge* e)
+{
 	return gt(p.cross(e->origin, e->dest()), 0);
 }
 
-bool right_of(pt p, QuadEdge* e) {
+bool right_of(pt p, QuadEdge* e)
+{
 	return lt(p.cross(e->origin, e->dest()), 0);
 }
 
