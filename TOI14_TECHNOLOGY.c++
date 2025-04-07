@@ -10675,7 +10675,8 @@ pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
 	return make_pair(ldo, rdo);
 }
 
-vector<tuple<pt, pt, pt>> delaunay(vector<pt> p) {
+vector<tuple<pt, pt, pt>> delaunay(vector<pt> p)
+{
 	sort(p.begin(), p.end(), [](const pt& a, const pt& b) {
 		return lt(a.x, b.x) || (eq(a.x, b.x) && lt(a.y, b.y));
 	});
@@ -10683,7 +10684,6 @@ vector<tuple<pt, pt, pt>> delaunay(vector<pt> p) {
 	QuadEdge* e = res.first;
 	vector<QuadEdge*> edges = {e};
 	while(lt(e->onext->dest().cross(e->dest(), e->origin), 0)) e = e->onext;
-
 	auto add = [&p, &e, &edges]()
     {
 		QuadEdge* curr = e;
