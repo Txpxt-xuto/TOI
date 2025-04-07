@@ -10615,8 +10615,7 @@ pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
 		int sg = sgn(p[l].cross(p[l + 1], p[r]));
 		if (sg == 0) return make_pair(a, b->rev());
 		QuadEdge* c = connect(b, a);
-		if (sg == 1)
-			return make_pair(a, b->rev());
+		if (sg == 1) return make_pair(a, b->rev());
 		else return make_pair(c->rev(), c);
 	}
 	int mid = (l + r) / 2;
