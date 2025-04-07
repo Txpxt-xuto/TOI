@@ -10605,7 +10605,8 @@ bool in_circle(pt a, pt b, pt c, pt d) {
 }
 
 pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
-	if (r - l + 1 == 2) {
+	if(r - l + 1 == 2)
+    {
 		QuadEdge* res = make_edge(p[l], p[r]);
 		return make_pair(res, res->rev());
 	}
