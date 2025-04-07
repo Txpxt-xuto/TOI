@@ -10677,7 +10677,8 @@ pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
 
 vector<tuple<pt, pt, pt>> delaunay(vector<pt> p)
 {
-	sort(p.begin(), p.end(), [](const pt& a, const pt& b) {
+	sort(p.begin(), p.end(), [](const pt& a, const pt& b)
+    {
 		return lt(a.x, b.x) || (eq(a.x, b.x) && lt(a.y, b.y));
 	});
 	auto res = build_tr(0, (int)p.size() - 1, p);
