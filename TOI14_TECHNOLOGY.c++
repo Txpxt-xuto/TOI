@@ -10730,7 +10730,8 @@ int main() {
 	auto cal = [&](const pt &l, const pt &r) {
 		return (l.x-r.x)*(l.x-r.x)+(l.y-r.y)*(l.y-r.y);
 	};
-	for(auto &e:g) {
+	for(auto &e:g)
+    {
 		w = cal(get<0>(e), get<1>(e));
 		gg.emplace_back(w, get<0>(e).id, get<1>(e).id);
 		w = cal(get<1>(e), get<2>(e));
