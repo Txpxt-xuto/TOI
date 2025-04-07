@@ -10744,7 +10744,7 @@ int main() {
 	for(auto &e:gg)
     {
 		pu=fp(get<1>(e)), pv=fp(get<2>(e)), w = get<0>(e);
-		if(pu==pv)  continue;
+		if(pu==pv) continue;
 		if(idx[pu]<idx[pv]) swap(pu, pv);
 		pa[pv]=pu;
 		ans+=w;
