@@ -10697,7 +10697,7 @@ vector<tuple<pt, pt, pt>> delaunay(vector<pt> p) {
 	p.clear();
 	int kek = 0;
 	while(kek < (int)edges.size())
-    
+
 	
     if(!(e = edges[kek++])->used) add();
 
