@@ -10715,7 +10715,8 @@ int fp(int x) {
 vector<tuple<pt, pt, pt>> g;
 vector<tuple<ll,ll,ll>> gg;
 
-int main() {
+int main()
+{
 	cin.tie(nullptr)->sync_with_stdio(0);
 	int n;
 	cin >> n;
