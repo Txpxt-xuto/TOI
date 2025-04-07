@@ -10682,8 +10682,8 @@ vector<tuple<pt, pt, pt>> delaunay(vector<pt> p) {
 	auto res = build_tr(0, (int)p.size() - 1, p);
 	QuadEdge* e = res.first;
 	vector<QuadEdge*> edges = {e};
-	while (lt(e->onext->dest().cross(e->dest(), e->origin), 0)) e = e->onext;
-		
+	while(lt(e->onext->dest().cross(e->dest(), e->origin), 0)) e = e->onext;
+
 	auto add = [&p, &e, &edges]()
     {
 		QuadEdge* curr = e;
