@@ -10741,7 +10741,8 @@ int main() {
 	sort(gg.begin(), gg.end());
 	int pu, pv;
 	ll ans=0;
-	for(auto &e:gg) {
+	for(auto &e:gg)
+    {
 		pu=fp(get<1>(e)), pv=fp(get<2>(e)), w = get<0>(e);
 		if(pu==pv)  continue;
 		if(idx[pu]<idx[pv]) swap(pu, pv);
