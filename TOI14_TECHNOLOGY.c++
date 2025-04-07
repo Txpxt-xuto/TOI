@@ -10572,8 +10572,7 @@ bool right_of(pt p, QuadEdge* e) {
 
 template <class T>
 T det3(T a1, T a2, T a3, T b1, T b2, T b3, T c1, T c2, T c3) {
-	return a1 * (b2 * c3 - c2 * b3) - a2 * (b1 * c3 - c1 * b3) +
-	       a3 * (b1 * c2 - c1 * b2);
+	return a1 * (b2 * c3 - c2 * b3) - a2 * (b1 * c3 - c1 * b3) + a3 * (b1 * c2 - c1 * b2);
 }
 
 bool in_circle(pt a, pt b, pt c, pt d)
