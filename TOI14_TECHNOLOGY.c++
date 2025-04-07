@@ -10644,7 +10644,8 @@ pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
 		ldo = basel->rev();
 	if (rdi->origin == rdo->origin)
 		rdo = basel;
-	while (true) {
+	while(true)
+    {
 		QuadEdge* lcand = basel->rev()->onext;
 		if(valid(lcand))
         {
