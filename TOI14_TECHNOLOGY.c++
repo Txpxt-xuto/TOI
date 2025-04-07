@@ -10630,7 +10630,8 @@ pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
 			ldi = ldi->lnext();
 			continue;
 		}
-		if (right_of(ldi->origin, rdi)) {
+		if (right_of(ldi->origin, rdi))
+        {
 			rdi = rdi->rev()->onext;
 			continue;
 		}
