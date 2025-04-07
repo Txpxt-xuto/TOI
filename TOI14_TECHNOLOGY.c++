@@ -10707,7 +10707,8 @@ vector<tuple<pt, pt, pt>> delaunay(vector<pt> p) {
 	return ans;
 }
 
-int fp(int x) {
+int fp(int x)
+{
 	if(pa[x]==x) return x;
 	return pa[x]=fp(pa[x]);
 }
