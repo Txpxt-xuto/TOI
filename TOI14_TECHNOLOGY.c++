@@ -10684,14 +10684,15 @@ vector<tuple<pt, pt, pt>> delaunay(vector<pt> p) {
 	vector<QuadEdge*> edges = {e};
 	while (lt(e->onext->dest().cross(e->dest(), e->origin), 0))
 		e = e->onext;
-	auto add = [&p, &e, &edges]() {
+	auto add = [&p, &e, &edges]()
+    {
 		QuadEdge* curr = e;
-		do {
+		do{
 			curr->used = true;
 			p.push_back(curr->origin);
 			edges.push_back(curr->rev());
 			curr = curr->lnext();
-		} while (curr != e);
+		}while (curr != e);
 	};
 	add();
 	p.clear();
