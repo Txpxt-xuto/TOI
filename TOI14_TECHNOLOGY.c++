@@ -10626,7 +10626,8 @@ pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
 	tie(ldo, ldi) = build_tr(l, mid, p);
 	tie(rdi, rdo) = build_tr(mid + 1, r, p);
 	while (true) {
-		if (left_of(rdi->origin, ldi)) {
+		if (left_of(rdi->origin, ldi))
+        {
 			ldi = ldi->lnext();
 			continue;
 		}
