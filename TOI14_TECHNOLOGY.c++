@@ -10727,9 +10727,7 @@ int main() {
 	}
 	g = delaunay(p);
 	for(int i=0; i<N; i++) pa[i]=i, idx[i]=rand();
-	auto cal = [&](const pt &l, const pt &r) {
-		return (l.x-r.x)*(l.x-r.x)+(l.y-r.y)*(l.y-r.y);
-	};
+	auto cal = [&](const pt &l, const pt &r) return (l.x-r.x)*(l.x-r.x)+(l.y-r.y)*(l.y-r.y);
 	for(auto &e:g)
     {
 		w = cal(get<0>(e), get<1>(e));
