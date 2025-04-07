@@ -10699,7 +10699,7 @@ vector<tuple<pt, pt, pt>> delaunay(vector<pt> p) {
 	while(kek < (int)edges.size())
     {
 		if(!(e = edges[kek++])->used) add();
-			
+		
 	
 	vector<tuple<pt, pt, pt>> ans;
 	for (int i=0;i<(int)p.size();i+=3) ans.push_back(make_tuple(p[i], p[i + 1], p[i + 2]));
