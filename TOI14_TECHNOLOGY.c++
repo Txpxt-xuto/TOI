@@ -10640,8 +10640,7 @@ pair<QuadEdge*, QuadEdge*> build_tr(int l, int r, vector<pt>& p) {
 	auto valid = [&basel](QuadEdge* e) {
 		return right_of(e->dest(), basel);
 	};
-	if (ldi->origin == ldo->origin)
-		ldo = basel->rev();
+	if (ldi->origin == ldo->origin) ldo = basel->rev();
 	if (rdi->origin == rdo->origin) rdo = basel;
 	while(true)
     {
