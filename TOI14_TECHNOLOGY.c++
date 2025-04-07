@@ -10597,10 +10597,8 @@ bool in_circle(pt a, pt b, pt c, pt d) {
 		return res;
 	};
 	long double kek = ang(a, b, c) + ang(c, d, a) - ang(b, c, d) - ang(d, a, b);
-	if (kek > 1e-8)
-		return true;
-	else
-		return false;
+	if (kek > 1e-8) return true;
+	else return false;
 #endif
 }
 
