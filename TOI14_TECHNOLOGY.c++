@@ -10496,7 +10496,8 @@ struct pt {
 	ll sqrLength() const {
 		return this->dot(*this);
 	}
-	bool operator==(const pt& p) const {
+	bool operator==(const pt& p) const
+    {
 		return eq(x, p.x) && eq(y, p.y);
 	}
 };
