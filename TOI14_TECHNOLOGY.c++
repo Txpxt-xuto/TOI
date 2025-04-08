@@ -10850,7 +10850,7 @@ int main()
 	for(int i=1;i<m;++i)
     {
 		auto u = e[i][1], v = e[i][2];
-		if (number[u] > number[v]) swap(u, v);
+		if(number[u] > number[v]) swap(u, v);
 		printf("%d %d 0\n", u, v);
 	}
 }
