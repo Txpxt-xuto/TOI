@@ -10515,7 +10515,8 @@ struct QuadEdge {
     {
 		return rot->rev()->onext->rot;
 	}
-	QuadEdge* oprev() const {
+	QuadEdge* oprev() const
+    {
 		return rot->onext->rot;
 	}
 	pt dest() const {
