@@ -10842,7 +10842,6 @@ int main() {
 
 	s = e[0][1], t = e[0][2];
 	swap(s, t);
-
 	for (auto &[c, u, v] : e) g[u].push_back(v), g[v].push_back(u);
 	auto V = st_numbering(n,s,t);
 	for (int i = 1; i <= n; ++i) number[V[i - 1]] = i;
