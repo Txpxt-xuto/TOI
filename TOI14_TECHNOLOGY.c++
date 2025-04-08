@@ -10839,7 +10839,6 @@ int main() {
 	vector<array<int, 3>> e(m);
 	for (auto &[c, u, v] : e) scanf("%d%d%d", &u, &v, &c);
 	sort(e.begin(), e.end());
-
 	s = e[0][1], t = e[0][2];
 	swap(s, t);
 	for (auto &[c, u, v] : e) g[u].push_back(v), g[v].push_back(u);
