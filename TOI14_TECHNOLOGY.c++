@@ -10834,7 +10834,8 @@ vector<int> st_numbering(int n, int s, int t) {
   return ret;
 }
 
-int main() {
+int main()
+{
 	scanf("%d%d", &n, &m);
 	vector<array<int, 3>> e(m);
 	for (auto &[c, u, v] : e) scanf("%d%d%d", &u, &v, &c);
