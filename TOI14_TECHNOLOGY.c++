@@ -10758,3 +10758,100 @@ int main()
 	cout << ans;
 	return 0;
 }
+
+#include <set>
+#include <list>
+#include <stdio.h>
+#include <cassert>
+#include <array>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+#define N 2005
+
+int n, m, s, t, L[N], Id[N], tree[N][N], old[N], number[N], Di[N], climb[N];
+
+vector<int> g[N];
+int low[N], dis[N], T = 0, par[N], sign[N];
+vector<int> preorder;
+
+bool dfs1(int u, int pre = -1) { // check if there is any articulation point
+  low[u] = dis[u] = ++T;
+  int child = 0;
+  for(int v : g[u]) if(v != pre) {
+      if(dis[v] == -1) {
+        child++;
+        if(!dfs1(v, u)) return 0;
+        low[u] = min(low[u], low[v]);
+        if(pre != -1 && low[v] >= dis[u]) return 0;
+      } else low[u] = min(low[u], dis[v]);
+    }
+  if(pre == -1 && child > 1) return 0;
+  return 1;
+}
+
+void dfs2(int u, int pre = -1) { //construct the dfs tree and preorder treversal
+  low[u] = dis[u] = ++T;
+  for(int v : g[u]) if(v != pre) {
+      if(dis[v] == -1) {
+        preorder.push_back(v);
+        dfs2(v, u);
+        low[u] = min(low[u], low[v]);
+        par[v] = u;
+      } else low[u] = min(low[u], dis[v]);
+    }
+}
+
+list<int> lst;
+list<int>::iterator it[N];
+vector<int> st_numbering(int n, int s, int t) {
+  // additional edge
+  g[s].push_back(t);
+  g[t].push_back(s);
+  T = 0;
+  preorder.clear();
+  for(int i = 1; i <= n; i++) dis[i] = low[i] = -1, sign[i] = 0;
+  if(!dfs1(t)) return vector<int>(); // no bipolar orientation
+  for(int i = 1; i <= n; i++) if(dis[i] == -1) return vector<int>(); // no bipolar orientation
+  for(int i = 1; i <= n; i++) dis[i] = low[i] = -1, sign[i] = 0;
+  T = 0;
+  preorder.clear();
+  dis[s] = low[s] = ++T;
+  sign[dis[s]] = -1;
+  dfs2(t);
+  lst.clear();
+  lst.push_back(s);
+  lst.push_back(t);
+  it[dis[s]] = lst.begin();
+  it[dis[t]] = next(lst.begin());
+  for(int v : preorder) {
+    if(sign[low[v]] == -1) it[dis[v]] = lst.insert(it[dis[par[v]]], v);
+    else it[dis[v]] = lst.insert(next(it[dis[par[v]]]), v);
+    sign[dis[par[v]]] = -sign[low[v]];
+  }
+  vector<int> ret(lst.begin(), lst.end());
+  return ret;
+}
+
+int main() {
+	scanf("%d%d", &n, &m);
+	vector<array<int, 3>> e(m);
+	for (auto &[c, u, v] : e) scanf("%d%d%d", &u, &v, &c);
+	sort(e.begin(), e.end());
+
+	s = e[0][1], t = e[0][2];
+	swap(s, t);
+
+	for (auto &[c, u, v] : e) g[u].push_back(v), g[v].push_back(u);
+	auto V = st_numbering(n,s,t);
+	for (int i = 1; i <= n; ++i) number[V[i - 1]] = i;
+
+	printf("%d %d\n", e[0][0], 1);
+	printf("%d %d 1\n", t, s);
+	for (int i = 1; i < m; ++i) {
+		auto u = e[i][1], v = e[i][2];
+		if (number[u] > number[v]) swap(u, v);
+		printf("%d %d 0\n", u, v);
+	}
+}
