@@ -10846,7 +10846,6 @@ int main() {
 	for (auto &[c, u, v] : e) g[u].push_back(v), g[v].push_back(u);
 	auto V = st_numbering(n,s,t);
 	for (int i = 1; i <= n; ++i) number[V[i - 1]] = i;
-
 	printf("%d %d\n", e[0][0], 1);
 	printf("%d %d 1\n", t, s);
 	for (int i = 1; i < m; ++i) {
