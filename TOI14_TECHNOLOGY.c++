@@ -10467,7 +10467,8 @@ bool eq(const ll& a, const ll& b) {
 bool gt(const ll& a, const ll& b) {
 	return a > b;
 }
-bool lt(const ll& a, const ll& b) {
+bool lt(const ll& a, const ll& b)
+{
 	return a < b;
 }
 int sgn(const ll& a)
