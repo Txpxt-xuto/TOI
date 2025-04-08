@@ -10508,7 +10508,8 @@ struct QuadEdge {
 	QuadEdge* rot = nullptr;
 	QuadEdge* onext = nullptr;
 	bool used = false;
-	QuadEdge* rev() const {
+	QuadEdge* rev() const
+    {
 		return rot->rot;
 	}
 	QuadEdge* lnext() const
