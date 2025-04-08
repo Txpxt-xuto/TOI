@@ -10490,7 +10490,8 @@ struct pt {
 	ll dot(const pt& p) const {
 		return x * p.x + y * p.y;
 	}
-	ll dot(const pt& a, const pt& b) const {
+	ll dot(const pt& a, const pt& b) const
+    {
 		return (a - *this).dot(b - *this);
 	}
 	ll sqrLength() const
