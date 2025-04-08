@@ -10470,7 +10470,8 @@ bool gt(const ll& a, const ll& b) {
 bool lt(const ll& a, const ll& b) {
 	return a < b;
 }
-int sgn(const ll& a) {
+int sgn(const ll& a)
+{
     return a >= 0 ? a ? 1 : 0 : -1;
 }
 
