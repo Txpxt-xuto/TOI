@@ -10847,7 +10847,7 @@ int main()
 	for (int i = 1; i <= n; ++i) number[V[i - 1]] = i;
 	printf("%d %d\n", e[0][0], 1);
 	printf("%d %d 1\n", t, s);
-	for (int i = 1; i < m; ++i)
+	for(int i = 1; i < m; ++i)
     {
 		auto u = e[i][1], v = e[i][2];
 		if (number[u] > number[v]) swap(u, v);
