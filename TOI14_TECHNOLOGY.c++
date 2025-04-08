@@ -10449,7 +10449,6 @@ int main ()
 #define ll long long
 #define pii pair<int,int>
 #define deb(x) cerr << "[" << #x << ": " << x << "] "
-
 using namespace std;
 const int N = 1e5+1;
 int pa[N], idx[N];
