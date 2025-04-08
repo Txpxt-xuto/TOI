@@ -10481,7 +10481,8 @@ struct pt {
 	pt operator-(const pt& p) const {
 		return pt(x - p.x, y - p.y, id);
 	}
-	ll cross(const pt& p) const {
+	ll cross(const pt& p) const
+    {
 		return x * p.y - y * p.x;
 	}
 	ll cross(const pt& a, const pt& b) const
