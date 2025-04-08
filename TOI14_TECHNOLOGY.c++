@@ -10474,7 +10474,8 @@ int sgn(const ll& a) {
 return a >= 0 ? a ? 1 : 0 : -1;
 }
 
-struct pt {
+struct pt
+{
 	ll x, y,id;
 	pt() { }
 	pt(ll _x, ll _y, ll _id) : x(_x), y(_y), id(_id) { }
