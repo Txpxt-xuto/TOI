@@ -10519,7 +10519,8 @@ struct QuadEdge {
     {
 		return rot->onext->rot;
 	}
-	pt dest() const {
+	pt dest() const
+    {
 		return rev()->origin;
 	}
 };
