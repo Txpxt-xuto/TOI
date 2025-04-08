@@ -10451,7 +10451,6 @@ int main ()
 #define deb(x) cerr << "[" << #x << ": " << x << "] "
 
 using namespace std;
-
 const int N = 1e5+1;
 int pa[N], idx[N];
 bool ge(const ll& a, const ll& b)
