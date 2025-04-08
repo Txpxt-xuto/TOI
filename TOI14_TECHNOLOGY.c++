@@ -10511,7 +10511,8 @@ struct QuadEdge {
 	QuadEdge* rev() const {
 		return rot->rot;
 	}
-	QuadEdge* lnext() const {
+	QuadEdge* lnext() const
+    {
 		return rot->rev()->onext->rot;
 	}
 	QuadEdge* oprev() const {
