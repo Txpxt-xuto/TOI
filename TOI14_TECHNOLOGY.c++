@@ -10484,7 +10484,8 @@ struct pt {
 	ll cross(const pt& p) const {
 		return x * p.y - y * p.x;
 	}
-	ll cross(const pt& a, const pt& b) const {
+	ll cross(const pt& a, const pt& b) const
+    {
 		return (a - *this).cross(b - *this);
 	}
 	ll dot(const pt& p) const {
