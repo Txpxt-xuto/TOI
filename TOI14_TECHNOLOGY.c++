@@ -10502,7 +10502,6 @@ struct pt {
 };
 
 const pt inf_pt = pt(1e18, 1e18, 0);
-
 struct QuadEdge
 {
 	pt origin;
