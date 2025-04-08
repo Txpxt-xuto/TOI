@@ -10493,7 +10493,8 @@ struct pt {
 	ll dot(const pt& a, const pt& b) const {
 		return (a - *this).dot(b - *this);
 	}
-	ll sqrLength() const {
+	ll sqrLength() const
+    {
 		return this->dot(*this);
 	}
 	bool operator==(const pt& p) const
