@@ -10461,7 +10461,8 @@ bool ge(const ll& a, const ll& b) {
 bool le(const ll& a, const ll& b) {
 	return a <= b;
 }
-bool eq(const ll& a, const ll& b) {
+bool eq(const ll& a, const ll& b)
+{
 	return a == b;
 }
 bool gt(const ll& a, const ll& b)
