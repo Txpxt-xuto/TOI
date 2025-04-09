@@ -10831,7 +10831,7 @@ vector<int> st_numbering(int n, int s, int t) {
     sign[dis[par[v]]] = -sign[low[v]];
   }
   vector<int> ret(lst.begin(), lst.end());
-  return ret;
+    return ret;
 }
 
 int main()
