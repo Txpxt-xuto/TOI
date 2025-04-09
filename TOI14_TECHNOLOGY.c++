@@ -10797,12 +10797,13 @@ void dfs2(int u, int pre = -1) { //construct the dfs tree and preorder treversal
     {
         if(v != pre)
         {
-        if(dis[v] == -1) {
-        preorder.push_back(v);
-        dfs2(v, u);
-        low[u] = min(low[u], low[v]);
-        par[v] = u;
-        } else low[u] = min(low[u], dis[v]);
+            if(dis[v] == -1) {
+            preorder.push_back(v);
+            dfs2(v, u);
+            low[u] = min(low[u], low[v]);
+            par[v] = u;
+            }
+            else low[u] = min(low[u], dis[v]);
         }
     }
 }
