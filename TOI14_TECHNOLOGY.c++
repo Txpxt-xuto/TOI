@@ -10821,7 +10821,7 @@ vector<int> st_numbering(int n, int s, int t) {
   sign[dis[s]] = -1;
   dfs2(t);
   lst.clear();
-  lst.push_back(s);
+    lst.push_back(s);
     lst.push_back(t);
     it[dis[s]] = lst.begin();
     it[dis[t]] = next(lst.begin());
