@@ -10775,7 +10775,6 @@ int n, m, s, t, L[N], Id[N], tree[N][N], old[N], number[N], Di[N], climb[N];
 vector<int> g[N];
 int low[N], dis[N], T = 0, par[N], sign[N];
 vector<int> preorder;
-
 bool dfs1(int u, int pre = -1)
 {
     low[u] = dis[u] = ++T;
