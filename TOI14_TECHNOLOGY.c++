@@ -10780,15 +10780,16 @@ bool dfs1(int u, int pre = -1) { // check if there is any articulation point
   low[u] = dis[u] = ++T;
   int child = 0;
   for(int v : g[u]) if(v != pre) {
-      if(dis[v] == -1) {
+        if(dis[v] == -1)
+        {
         child++;
         if(!dfs1(v, u)) return 0;
         low[u] = min(low[u], low[v]);
         if(pre != -1 && low[v] >= dis[u]) return 0;
-      } else low[u] = min(low[u], dis[v]);
+        } else low[u] = min(low[u], dis[v]);
     }
-  if(pre == -1 && child > 1) return 0;
-  return 1;
+    if(pre == -1 && child > 1) return 0;
+    return 1;
 }
 
 void dfs2(int u, int pre = -1)
