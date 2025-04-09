@@ -10805,7 +10805,6 @@ void dfs2(int u, int pre = -1) { //construct the dfs tree and preorder treversal
         } else low[u] = min(low[u], dis[v]);
         }
     }
-        
 }
 
 list<int> lst;
