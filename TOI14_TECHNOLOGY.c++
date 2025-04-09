@@ -10811,7 +10811,7 @@ vector<int> st_numbering(int n, int s, int t) {
   g[t].push_back(s);
   T = 0;
   preorder.clear();
-  for(int i = 1; i <= n; i++) dis[i] = low[i] = -1, sign[i] = 0;
+  for(int i=1;i<=n; i++) dis[i] = low[i] = -1, sign[i] = 0;
     if(!dfs1(t)) return vector<int>();
     for(int i=1;i<=n;i++) if(dis[i] == -1) return vector<int>();
     for(int i=1;i<=n;i++) dis[i] = low[i] = -1, sign[i] = 0;
