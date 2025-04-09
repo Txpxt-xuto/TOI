@@ -10830,7 +10830,7 @@ vector<int> st_numbering(int n, int s, int t) {
     else it[dis[v]] = lst.insert(next(it[dis[par[v]]]), v);
     sign[dis[par[v]]] = -sign[low[v]];
   }
-  vector<int> ret(lst.begin(), lst.end());
+    vector<int> ret(lst.begin(), lst.end());
     return ret;
 }
 
