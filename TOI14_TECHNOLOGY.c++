@@ -10792,14 +10792,14 @@ bool dfs1(int u, int pre = -1) { // check if there is any articulation point
 }
 
 void dfs2(int u, int pre = -1) { //construct the dfs tree and preorder treversal
-  low[u] = dis[u] = ++T;
-  for(int v : g[u]) if(v != pre) {
+    low[u] = dis[u] = ++T;
+    for(int v : g[u]) if(v != pre) {
       if(dis[v] == -1) {
         preorder.push_back(v);
         dfs2(v, u);
         low[u] = min(low[u], low[v]);
         par[v] = u;
-      } else low[u] = min(low[u], dis[v]);
+        } else low[u] = min(low[u], dis[v]);
     }
 }
 
