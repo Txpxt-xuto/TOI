@@ -10806,9 +10806,9 @@ void dfs2(int u, int pre = -1) { //construct the dfs tree and preorder treversal
 list<int> lst;
 list<int>::iterator it[N];
 vector<int> st_numbering(int n, int s, int t) {
-  g[s].push_back(t);
-  g[t].push_back(s);
-  T = 0;
+    g[s].push_back(t);
+    g[t].push_back(s);
+    T = 0;
     preorder.clear();
     for(int i=1;i<=n;i++) dis[i] = low[i] = -1, sign[i] = 0;
     if(!dfs1(t)) return vector<int>();
