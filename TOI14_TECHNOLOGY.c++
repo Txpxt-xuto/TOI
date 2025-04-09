@@ -10777,8 +10777,8 @@ int low[N], dis[N], T = 0, par[N], sign[N];
 vector<int> preorder;
 
 bool dfs1(int u, int pre = -1) { // check if there is any articulation point
-  low[u] = dis[u] = ++T;
-  int child = 0;
+    low[u] = dis[u] = ++T;
+    int child = 0;
     for(int v : g[u]) if(v != pre) 
     {
         if(dis[v] == -1)
