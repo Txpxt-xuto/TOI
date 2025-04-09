@@ -10823,8 +10823,8 @@ vector<int> st_numbering(int n, int s, int t) {
   lst.clear();
   lst.push_back(s);
   lst.push_back(t);
-  it[dis[s]] = lst.begin();
-  it[dis[t]] = next(lst.begin());
+    it[dis[s]] = lst.begin();
+    it[dis[t]] = next(lst.begin());
     for(int v : preorder)
     {
         if(sign[low[v]] == -1) it[dis[v]] = lst.insert(it[dis[par[v]]], v);
