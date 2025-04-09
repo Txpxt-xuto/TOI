@@ -10767,7 +10767,6 @@ int main()
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 #define N 2005
 int n, m, s, t, L[N], Id[N], tree[N][N], old[N], number[N], Di[N], climb[N];
 vector<int> g[N];
