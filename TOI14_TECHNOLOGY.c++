@@ -10827,8 +10827,8 @@ vector<int> st_numbering(int n, int s, int t) {
   it[dis[t]] = next(lst.begin());
   for(int v : preorder) {
         if(sign[low[v]] == -1) it[dis[v]] = lst.insert(it[dis[par[v]]], v);
-    else it[dis[v]] = lst.insert(next(it[dis[par[v]]]), v);
-    sign[dis[par[v]]] = -sign[low[v]];
+        else it[dis[v]] = lst.insert(next(it[dis[par[v]]]), v);
+        sign[dis[par[v]]] = -sign[low[v]];
     }
     vector<int> ret(lst.begin(), lst.end());
     return ret;
