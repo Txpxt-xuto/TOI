@@ -10564,7 +10564,8 @@ void splice(QuadEdge* a, QuadEdge* b)
 	swap(a->onext, b->onext);
 }
 
-void delete_edge(QuadEdge* e) {
+void delete_edge(QuadEdge* e)
+{
 	splice(e, e->oprev());
 	splice(e->rev(), e->rev()->oprev());
 	delete e->rev()->rot;
