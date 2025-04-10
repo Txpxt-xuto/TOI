@@ -10862,3 +10862,41 @@ int main()
 		printf("%d %d 0\n", u, v);
 	}
 }
+
+#include <iostream>
+
+#define MAX_N 2001
+
+using namespace std;
+
+long long t[MAX_N], v[MAX_N];
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m;
+    cin >> n >> m;
+
+    for (int i = 1; i <= n; i++) {
+        cin >> t[i] >> v[i];
+    }
+
+    while (m--) {
+        long long p, b, e, count = 0;
+        cin >> p >> b >> e;
+
+        for (int i = 1; i <= n; i++) {
+            long long start_position = v[i] * (b - t[i]);
+            long long end_position = v[i] * (e - t[i]);
+
+            if (start_position <= p && p <= end_position) {
+                count++;
+            }
+        }
+
+        cout << count << '\n';
+    }
+
+    return 0;
+}
