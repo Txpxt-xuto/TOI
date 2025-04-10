@@ -10891,9 +10891,9 @@ int main() {
             long long start_position = v[i] * (b - t[i]);
             long long end_position = v[i] * (e - t[i]);
 
-            if (start_position <= p && p <= end_position) {
+            if (start_position <= p && p <= end_position)
                 count++;
-            }
+            
         }
         cout << count << '\n';
     }
