@@ -10558,7 +10558,8 @@ QuadEdge* make_edge(pt from, pt to)
 	return e1;
 }
 
-void splice(QuadEdge* a, QuadEdge* b) {
+void splice(QuadEdge* a, QuadEdge* b)
+{
 	swap(a->onext->rot->onext, b->onext->rot->onext);
 	swap(a->onext, b->onext);
 }
