@@ -10894,7 +10894,6 @@ int main() {
                 count++;
             }
         }
-
         cout << count << '\n';
     }
     return 0;
