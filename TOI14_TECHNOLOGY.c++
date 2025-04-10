@@ -10606,7 +10606,7 @@ bool in_circle(pt a, pt b, pt c, pt d)
 	det -= det3<__int128>(a.x, a.y, a.sqrLength(), b.x, b.y, b.sqrLength(), d.x,d.y, d.sqrLength());
 	det += det3<__int128>(a.x, a.y, a.sqrLength(), b.x, b.y, b.sqrLength(), c.x,c.y, c.sqrLength());
 	return det > 0;
-#else
+    #else
 	auto ang = [](pt l, pt mid, pt r)
     {
 		ll x = mid.dot(l, r);
