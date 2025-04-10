@@ -10538,7 +10538,8 @@ struct QuadEdge
 	}
 };
 
-QuadEdge* make_edge(pt from, pt to) {
+QuadEdge* make_edge(pt from, pt to)
+{
 	QuadEdge* e1 = new QuadEdge;
 	QuadEdge* e2 = new QuadEdge;
 	QuadEdge* e3 = new QuadEdge;
