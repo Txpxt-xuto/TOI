@@ -10882,8 +10882,7 @@ int main() {
     int n, m;
     cin >> n >> m;
 
-    for (int i = 1; i <= n; i++)
-        cin >> t[i] >> v[i];
+    for (int i = 1; i <= n; i++) cin >> t[i] >> v[i];
     }
 
     while (m--)
