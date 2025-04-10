@@ -10870,9 +10870,7 @@ int main()
 #include <iostream>
 
 #define MAX_N 2001
-
 using namespace std;
-
 long long t[MAX_N], v[MAX_N];
 int main()
 {
