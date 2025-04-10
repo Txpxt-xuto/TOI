@@ -10875,7 +10875,8 @@ using namespace std;
 
 long long t[MAX_N], v[MAX_N];
 
-int main() {
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int n, m;
