@@ -10886,7 +10886,8 @@ int main() {
     {
         long long p, b, e, count = 0;
         cin >> p >> b >> e;
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++)
+        {
             long long start_position = v[i] * (b - t[i]);
             long long end_position = v[i] * (e - t[i]);
 
