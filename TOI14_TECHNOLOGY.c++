@@ -10891,4 +10891,80 @@ int main()
         cout << count << '\n';
     }
     return 0;
+}#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+long long fw[2000001];
+int p[2000001], arr[200001];
+
+void upd (int i) {
+    for(; i < 2000001; i+=(i&-i)) fw[i]++;
+}
+int qry (int i) {
+    int s = 0;
+    for(; i > 0; i-=(i&-i)) s+=fw[i];
+    return s;
+}
+int lb (int t) {
+    int l = 1, r = 2000000;
+    while (l < r) {
+        int m = (l+r)>>1;
+        if(m-qry(m) < t) l = m+1;
+        else r = m;
+    }
+    return l;
+}
+int fp (int r) { return (p[r] == r ? r : p[r] = fp(p[r])); }
+
+int main () {
+    ios_base::sync_with_stdio(0);
+    cout.tie(0);
+    cin.tie(0);
+
+    int n, m; cin >> n >> m;
+    for (int i = 0; i <= n; ++i) p[i] = i;
+    vector<int>vec; vec.emplace_back(0);
+    queue<int> q, tmp;
+    for(int i = 1; i <= n; ++i) {
+        vec.emplace_back(i);
+        cin >> arr[i];
+    }
+    int sz = n, c = 0;
+    while (m--) {
+        int a, b, idx = 0, mx = 0, mem = 0, del = 0; cin >> a >> b;
+        while (!q.empty()) q.pop();
+        for(int i = 1; i <= sz; i+=a) {
+            ++del;
+            if (idx < b) {
+                int at = vec[lb(i)];
+                ++idx;
+                q.emplace(at);
+                if (mx < arr[at]) {
+                    mx = arr[at];
+                    mem = at;
+                }
+            }
+            if(idx == b || i+a > sz) {
+                vec.emplace_back(mem);
+                while (!q.empty()) {
+                    int u = q.front();
+                    q.pop();
+                    if(u == mem) continue;
+                    p[fp(u)] = fp(mem);
+                    ++c;
+                }
+                idx = mx = mem = 0; --del;
+            }
+        }
+        for (int i = 1; i <= sz; i+=a) tmp.push(lb(i));
+        while (!tmp.empty()) { upd(tmp.front()); tmp.pop(); }
+        sz -= del;
+        if(c == n-1) break;
+    }
+    for (int i = 1; i <= n; ++i) {
+        if(fp(i)==i)cout << arr[i] << "\n";
+        else cout << arr[fp(i)]+1 << "\n";
+    }
 }
