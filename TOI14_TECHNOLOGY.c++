@@ -10953,7 +10953,8 @@ int main ()
                 int at = vec[lb(i)];
                 ++idx;
                 q.emplace(at);
-                if (mx < arr[at]) {
+                if (mx < arr[at])
+                {
                     mx = arr[at];
                     mem = at;
                 }
