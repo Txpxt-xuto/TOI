@@ -10900,7 +10900,8 @@ using namespace std;
 long long fw[2000001];
 int p[2000001], arr[200001];
 
-void upd (int i) {
+void upd (int i)
+{
     for(; i < 2000001; i+=(i&-i)) fw[i]++;
 }
 int qry (int i) {
