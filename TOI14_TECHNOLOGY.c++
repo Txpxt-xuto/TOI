@@ -10948,7 +10948,7 @@ int main ()
         for(int i=1;i<=sz;i+=a)
         {
             ++del;
-            if (idx < b)
+            if(idx < b)
             {
                 int at = vec[lb(i)];
                 ++idx;
