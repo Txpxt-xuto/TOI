@@ -10910,8 +10910,7 @@ int qry (int i)
     int s = 0;
     for(; i > 0; i-=(i&-i)) s+=fw[i];
     return s;
-
-    
+}
 int lb (int t) {
     int l = 1, r = 2000000;
     while (l < r) {
