@@ -10915,7 +10915,8 @@ int qry (int i)
 int lb (int t)
 {
     int l = 1, r = 2000000;
-    while (l < r) {
+    while (l < r)
+    {
         int m = (l+r)>>1;
         if(m-qry(m) < t) l = m+1;
         else r = m;
