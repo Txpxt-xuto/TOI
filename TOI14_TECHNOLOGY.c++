@@ -10923,7 +10923,7 @@ int lb (int t)
     }
     return l;
 }
-int fp (int r) { return (p[r] == r ? r : p[r] = fp(p[r])); }
+int fp (int r){ return (p[r] == r ? r : p[r] = fp(p[r])); }
 
 int main () {
     ios_base::sync_with_stdio(0);
