@@ -10934,7 +10934,7 @@ int main ()
     for(int i = 0; i <= n; ++i) p[i] = i;
     vector<int>vec; vec.emplace_back(0);
     queue<int> q, tmp;
-    for(int i = 1; i <= n; ++i)
+    for(int i = 1;i <= n; ++i)
     {
         vec.emplace_back(i);
         cin >> arr[i];
