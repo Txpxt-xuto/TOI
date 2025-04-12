@@ -10925,7 +10925,8 @@ int lb (int t)
 }
 int fp (int r){ return (p[r] == r ? r : p[r] = fp(p[r])); }
 
-int main () {
+int main ()
+{
     ios_base::sync_with_stdio(0);
     cout.tie(0);
     cin.tie(0);
