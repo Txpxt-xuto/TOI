@@ -10945,7 +10945,7 @@ int main ()
     {
         int a, b, idx = 0, mx = 0, mem = 0, del = 0; cin >> a >> b;
         while (!q.empty()) q.pop();
-        for(int i = 1; i <= sz; i+=a)
+        for(int i=1;i<=sz; i+=a)
         {
             ++del;
             if (idx < b) {
