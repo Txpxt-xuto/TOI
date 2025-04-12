@@ -10904,7 +10904,8 @@ void upd (int i)
 {
     for(; i < 2000001; i+=(i&-i)) fw[i]++;
 }
-int qry (int i) {
+int qry (int i)
+{
     int s = 0;
     for(; i > 0; i-=(i&-i)) s+=fw[i];
     return s;
