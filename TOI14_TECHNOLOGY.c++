@@ -10941,7 +10941,7 @@ int main ()
         cin >> arr[i];
     }
     int sz = n, c = 0;
-    while (m--)
+    while(m--)
     {
         int a, b, idx = 0, mx = 0, mem = 0, del = 0; cin >> a >> b;
         while (!q.empty()) q.pop();
