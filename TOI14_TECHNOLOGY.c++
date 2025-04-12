@@ -10959,7 +10959,8 @@ int main ()
                     mem = at;
                 }
             }
-            if(idx == b || i+a > sz) {
+            if(idx == b || i+a > sz)
+            {
                 vec.emplace_back(mem);
                 while (!q.empty()) {
                     int u = q.front();
