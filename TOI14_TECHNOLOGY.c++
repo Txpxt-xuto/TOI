@@ -10912,7 +10912,8 @@ int qry (int i)
     return s;
 }
 
-int lb (int t) {
+int lb (int t)
+{
     int l = 1, r = 2000000;
     while (l < r) {
         int m = (l+r)>>1;
