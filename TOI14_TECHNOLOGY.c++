@@ -11099,6 +11099,5 @@ int main() {
 	add_edge(0, total-2, k, 0);
 	add_edge(n-m+1, total-1, k, 0);
 	int ans = min_cost_flow(total, edges, k, 0, total-1);
-
 	cout << -ans;
 }
