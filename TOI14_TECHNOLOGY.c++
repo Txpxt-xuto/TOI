@@ -10981,7 +10981,7 @@ int main ()
     }
     for (int i = 1; i <= n; ++i)
     {
-        if(fp(i)==i)cout << arr[i] << "\n";
+        if(fp(i)==i) cout << arr[i] << "\n";
         else cout << arr[fp(i)]+1 << "\n";
     }
 }
