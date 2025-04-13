@@ -10974,7 +10974,8 @@ int main ()
             }
         }
         for(int i=1;i<=sz;i+=a) tmp.push(lb(i));
-        while(!tmp.empty()) { upd(tmp.front()); tmp.pop(); }
+        while(!tmp.empty()) {
+            upd(tmp.front()); tmp.pop(); }
         sz -= del;
         if(c == n-1) break;
     }
