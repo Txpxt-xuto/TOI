@@ -10979,7 +10979,8 @@ int main ()
         sz -= del;
         if(c == n-1) break;
     }
-    for (int i = 1; i <= n; ++i) {
+    for (int i = 1; i <= n; ++i) 
+    {
         if(fp(i)==i)cout << arr[i] << "\n";
         else cout << arr[fp(i)]+1 << "\n";
     }
