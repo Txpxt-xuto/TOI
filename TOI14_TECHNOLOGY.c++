@@ -11079,9 +11079,7 @@ int min_cost_flow(int N, vector<Edge> edges, int K, int s, int t) {
     if (flow < K) return -1;
     else return cost;
 }
-
 vector<Edge> edges;
-
 void add_edge(int from, int to, int capacity, int cost)
 { 
     edges.emplace_back(from, to, capacity, cost);
