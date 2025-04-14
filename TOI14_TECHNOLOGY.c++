@@ -11082,7 +11082,9 @@ int min_cost_flow(int N, vector<Edge> edges, int K, int s, int t) {
 
 vector<Edge> edges;
 
-void add_edge(int from, int to, int capacity, int cost) { edges.emplace_back(from, to, capacity, cost); }
+void add_edge(int from, int to, int capacity, int cost)
+{ edges.emplace_back(from, to, capacity, cost);
+}
 
 int main()
 {
@@ -11092,7 +11094,7 @@ int main()
 	int n, m, k; cin >> n >> m >> k;
     for (int i = 1; i <= n; ++i) cin >> val[i];
 	int total = n-m+4;
-    for (int i = 1; i <= m; ++i) add_edge(total-2, min(n-m+1, i), 1, -val[i]);
+    for(int i = 1; i <= m; ++i) add_edge(total-2, min(n-m+1, i), 1, -val[i]);
     for(int i = m+1; i <= n; ++i) add_edge(i-m, min(i, n-m+1), 1, -val[i]);
 	add_edge(total-2, 1, (1<<20), 0);
     for (int i = 1; i <= n-m; ++i) add_edge(i, i+1, (1<<20), 0);
