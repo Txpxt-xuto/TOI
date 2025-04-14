@@ -11097,7 +11097,7 @@ int main()
     for(int i=1;i<=n;++i) cin >> val[i];
 	int total = n-m+4;
     for(int i=1; i <= m; ++i) add_edge(total-2, min(n-m+1, i), 1, -val[i]);
-    for(int i =m+1; i <= n; ++i) add_edge(i-m, min(i, n-m+1), 1, -val[i]);
+    for(int i =m+1;i<= n; ++i) add_edge(i-m, min(i, n-m+1), 1, -val[i]);
 	add_edge(total-2, 1, (1<<20), 0);
     for(int i= 1; i <= n-m; ++i) add_edge(i, i+1, (1<<20), 0);
 	add_edge(0, total-2, k, 0);
