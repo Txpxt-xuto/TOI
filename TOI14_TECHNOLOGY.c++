@@ -11099,7 +11099,7 @@ int main()
     for(int i=1; i <=m;++i) add_edge(total-2, min(n-m+1, i), 1, -val[i]);
     for(int i =m+1;i<= n;++i) add_edge(i-m, min(i, n-m+1), 1, -val[i]);
 	add_edge(total-2, 1, (1<<20), 0);
-    for(int i= 1; i <= n-m; ++i) add_edge(i, i+1, (1<<20), 0);
+    for(int i= 1; i <=n-m;++i) add_edge(i, i+1, (1<<20), 0);
 	add_edge(0, total-2, k, 0);
 	add_edge(n-m+1, total-1, k, 0);
 	int ans = min_cost_flow(total, edges, k, 0, total-1);
