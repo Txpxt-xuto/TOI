@@ -11094,7 +11094,7 @@ int main()
     cin.tie(0);
 	int n, m, k;
     cin >> n >> m >> k;
-    for (int i = 1; i <= n; ++i) cin >> val[i];
+    for(int i = 1; i <= n; ++i) cin >> val[i];
 	int total = n-m+4;
     for(int i = 1; i <= m; ++i) add_edge(total-2, min(n-m+1, i), 1, -val[i]);
     for(int i = m+1; i <= n; ++i) add_edge(i-m, min(i, n-m+1), 1, -val[i]);
