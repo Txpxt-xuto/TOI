@@ -11075,8 +11075,7 @@ int min_cost_flow(int N, vector<Edge> edges, int K, int s, int t) {
             cur = p[cur];
         }
     }
-
-    if (flow < K) return -1;
+    if(flow < K) return -1;
     else return cost;
 }
 vector<Edge> edges;
