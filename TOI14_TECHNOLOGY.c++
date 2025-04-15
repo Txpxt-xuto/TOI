@@ -11132,7 +11132,8 @@ void upd(int i,int sz,ll amt){
 int main()
 {
     ios_base::sync_with_stdio(0);cin.tie(0);
-    int n,m;cin>>n;
+    int n,m;
+    cin>>n;
     vector<pair<int,pii>>v(n+1);
     vector<int>x;
     for(int i=1;i<=n;i++) cin >> v[i].s.f >> v[i].f >> v[i].s.s,x.pb(v[i].f);
