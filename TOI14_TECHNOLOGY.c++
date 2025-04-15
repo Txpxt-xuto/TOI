@@ -11102,3 +11102,52 @@ int main()
 	int ans = min_cost_flow(total, edges, k, 0, total-1);
 	cout << -ans;
 }
+
+#include<bits/stdc++.h>
+#define ll long long
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define plx pair<ll,int>
+#define f first
+#define s second
+#define pb push_back
+#define all(x) x.begin(),x.end()
+#define vi vector<int>
+#define vvi vector<vi>
+#define pp pair<ll,int>
+#define ub(x,i) upper_bound(all(x),i)-x.begin()
+using namespace std;
+const int mxn=5e5+5;
+ll t[4*mxn]{0};
+ll qr(int l,int r,int sz,ll rs=0){
+    for(l+=sz,r+=sz;l<r;l>>=1,r>>=1){
+        if(l&1)rs=max(rs,t[l++]);
+        if(r&1)rs=max(rs,t[--r]);
+    }return rs;
+}
+void upd(int i,int sz,ll amt){
+    i+=sz;t[i]=max(t[i],amt);
+    for(i>>=1;i;i>>=1)t[i]=max(t[2*i],t[2*i+1]);
+}
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n,m;cin>>n;
+    vector<pair<int,pii>>v(n+1);vector<int>x;
+    for(int i=1;i<=n;i++)cin>>v[i].s.f>>v[i].f>>v[i].s.s,x.pb(v[i].f);
+    sort(all(v));sort(all(x));
+    for(int i=1;i<=n;i++)t[i+n-1] = v[i].s.s;
+    for(int i=n-1;i>0;i--)t[i]=max(t[2*i],t[2*i+1]);
+    ll dp[n+1][2]={0};
+    ll rs=0;
+    for(int i=1;i<=n;i++){
+        int l = lower_bound(x.begin(),x.begin()+i,v[i].s.f)-x.begin();
+        if(dp[i-1][0]<dp[l][0]+v[i].s.s){
+            dp[i][0]=dp[l][0]+v[i].s.s;
+            dp[i][1]=max(qr(l,i-1,n),dp[i-1][1]);
+        }
+        else {
+            dp[i][0]=dp[i-1][0];
+            dp[i][1]=max(dp[i-1][1],(ll)v[i].s.s);
+        }rs=max(rs,dp[i][0]+dp[i][1]);
+    }cout<<rs;
+}
