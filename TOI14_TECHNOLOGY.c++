@@ -11135,7 +11135,8 @@ int main()
     int n,m;cin>>n;
     vector<pair<int,pii>>v(n+1);vector<int>x;
     for(int i=1;i<=n;i++)cin>>v[i].s.f>>v[i].f>>v[i].s.s,x.pb(v[i].f);
-    sort(all(v));sort(all(x));
+    sort(all(v));
+    sort(all(x));
     for(int i=1;i<=n;i++) t[i+n-1] = v[i].s.s;
     for(int i=n-1;i>0;i--) t[i]=max(t[2*i],t[2*i+1]);
     ll dp[n+1][2]={0};
