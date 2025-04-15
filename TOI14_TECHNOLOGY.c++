@@ -11125,7 +11125,8 @@ ll qr(int l,int r,int sz,ll rs=0){
         if(r&1)rs=max(rs,t[--r]);
     }return rs;
 }
-void upd(int i,int sz,ll amt){
+void upd(int i,int sz,ll amt)
+{
     i+=sz;t[i]=max(t[i],amt);
     for(i>>=1;i;i>>=1)t[i]=max(t[2*i],t[2*i+1]);
 }
