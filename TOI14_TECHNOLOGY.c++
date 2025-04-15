@@ -11146,7 +11146,8 @@ int main()
             dp[i][0]=dp[l][0]+v[i].s.s;
             dp[i][1]=max(qr(l,i-1,n),dp[i-1][1]);
         }
-        else {
+        else
+        {
             dp[i][0]=dp[i-1][0];
             dp[i][1]=max(dp[i-1][1],(ll)v[i].s.s);
         }rs=max(rs,dp[i][0]+dp[i][1]);
