@@ -11142,7 +11142,8 @@ int main()
     ll rs=0;
     for(int i=1;i<=n;i++){
         int l = lower_bound(x.begin(),x.begin()+i,v[i].s.f)-x.begin();
-        if(dp[i-1][0]<dp[l][0]+v[i].s.s){
+        if(dp[i-1][0]<dp[l][0]+v[i].s.s)
+        {
             dp[i][0]=dp[l][0]+v[i].s.s;
             dp[i][1]=max(qr(l,i-1,n),dp[i-1][1]);
         }
