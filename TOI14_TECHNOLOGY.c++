@@ -11131,7 +11131,8 @@ void upd(int i,int sz,ll amt){
 }
 int main()
 {
-    ios_base::sync_with_stdio(0);cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int n,m;
     cin>>n;
     vector<pair<int,pii>>v(n+1);
