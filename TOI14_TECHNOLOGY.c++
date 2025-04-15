@@ -11140,7 +11140,8 @@ int main()
     for(int i=n-1;i>0;i--)t[i]=max(t[2*i],t[2*i+1]);
     ll dp[n+1][2]={0};
     ll rs=0;
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         int l = lower_bound(x.begin(),x.begin()+i,v[i].s.f)-x.begin();
         if(dp[i-1][0]<dp[l][0]+v[i].s.s)
         {
