@@ -11129,7 +11129,8 @@ void upd(int i,int sz,ll amt){
     i+=sz;t[i]=max(t[i],amt);
     for(i>>=1;i;i>>=1)t[i]=max(t[2*i],t[2*i+1]);
 }
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);cin.tie(0);
     int n,m;cin>>n;
     vector<pair<int,pii>>v(n+1);vector<int>x;
