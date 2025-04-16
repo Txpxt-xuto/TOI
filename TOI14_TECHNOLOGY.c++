@@ -11160,7 +11160,7 @@ int main()
         }
         rs=max(rs,dp[i][0]+dp[i][1]);
     }
-    cout<<rs;
+    cout << rs;
 }
 
 #include<bits/stdc++.h>
