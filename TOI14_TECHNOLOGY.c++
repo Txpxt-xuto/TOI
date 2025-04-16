@@ -11201,7 +11201,8 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
         cnt++;
         int st = now.st+1;
         // cout << now.num<<'\n';
-        for(int i:adj[now.num]){
+        for(int i:adj[now.num])
+        {
             HW[i][3]--;
             if(HW[i][3]==0)
             {
