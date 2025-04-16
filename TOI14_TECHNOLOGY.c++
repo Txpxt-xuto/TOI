@@ -11163,7 +11163,6 @@ int main()
     cout<<rs;
 }
 
-
 #include<bits/stdc++.h>
 using namespace std;
 #include "homework.h"
