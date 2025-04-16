@@ -11170,7 +11170,8 @@ using namespace std;
 struct A
 {
     int st,num;
-    bool operator<(const A&o)const{
+    bool operator<(const A&o)const
+    {
         return st>o.st;
     }
 };
