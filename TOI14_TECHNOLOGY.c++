@@ -11189,13 +11189,13 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
                 rst++;
             }
             rst*=HW[i][2];
-            // cout << rst<<'\n';
             if(rst>HW[i][1])continue;
             pq.push({rst,i});
         }   
     }
     int cnt = 0;
-    while(!pq.empty()){
+    while(!pq.empty())
+    {
         A now = pq.top();
         pq.pop();
         cnt++;
