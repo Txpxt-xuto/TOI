@@ -11217,4 +11217,4 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     return cnt;
 }
 // int main(){
-//     cout <<  homework(4, {{7,16,12,1}, {0
+//     cout <<  homework(4, {{
