@@ -11270,8 +11270,8 @@ int main()
         for(int j=0;j<v[i].size();j++)
         {
             if(v[i][j].s==1) update(v[i][j].f.f,v[i][j].f.s);
-            else
-                ans[v[i][j].f.s]=query(v[i][j].f.f);
+            else ans[v[i][j].f.s]=query(v[i][j].f.f);
+                
             
         }
         /*for(int i=1;i<=10;i++) cout<<fen[i]<<' ';
