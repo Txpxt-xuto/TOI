@@ -11205,7 +11205,8 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
             HW[i][3]--;
             // cout << i<<'\n';
             // cout << HW[i][3]<<'\n';
-            if(HW[i][3]==0){
+            if(HW[i][3]==0)
+            {
                 int a = max(st,HW[i][0]);
                 int rst =  a/HW[i][2];
                 if(a%HW[i][2]) rst++;
