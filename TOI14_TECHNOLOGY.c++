@@ -11256,7 +11256,6 @@ int main()
         v[x1].push_back({{y2+1,-1},1});
         v[x2+1].push_back({{y2+1,1},1});
     }
-
     for(int i=1;i<=m;i++)
     {
         int p,q;
