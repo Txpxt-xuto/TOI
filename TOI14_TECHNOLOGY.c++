@@ -11174,6 +11174,7 @@ struct A
         return st>o.st;
     }
 };
+
 std::vector<int> adj[100010];
 int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<int>> B)
 {
