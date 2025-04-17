@@ -11230,8 +11230,8 @@ void update(int idx,int k)
         fen[idx]+=k;
         idx+=idx & -idx;
     }
-
 }
+
 int query(int idx)
 {
     int sum=0;
