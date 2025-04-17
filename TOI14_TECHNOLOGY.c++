@@ -11280,7 +11280,6 @@ int main()
 using namespace std;
 
 int fw[15001][15001];
-
 int sum (const int& x, const int& y)
 {
     int res = 0;
