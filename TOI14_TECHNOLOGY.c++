@@ -11269,8 +11269,6 @@ int main()
         sort(v[i].begin(),v[i].end());
         for(int j=0;j<v[i].size();j++)
         {
-            //cout<<i<<' '<<v[i][j].f.f<<' '<<v[i][j].f.s<<' '<<v[i][j].s<<'\n';
-            //cout<<i<<' '<<j<<v[i].size()<<'\n';
             if(v[i][j].s==1)
             {
                 //cout<<v[i][j].f.f<<' '<<v[i][j].f.s<<'\n';
