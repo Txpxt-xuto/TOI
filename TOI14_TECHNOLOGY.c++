@@ -11293,7 +11293,8 @@ int add (const int& x, const int& y, const int& v = 1) {
     return res;
 }
 
-int main () {
+int main ()
+{
     ios_base::sync_with_stdio(0);
     cout.tie(0);
     cin.tie(0);
