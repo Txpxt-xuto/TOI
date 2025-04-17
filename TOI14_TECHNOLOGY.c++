@@ -11213,3 +11213,79 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
     }
     return cnt;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+#define pii pair<int,int>
+#define f first
+#define s second
+const int M=1e5+1;
+vector<pair<pair<int,int>,int>> v[111111];
+int fen[111111],ans[11111];
+void update(int idx,int k)
+{
+    while(idx<=M)
+    {
+        fen[idx]+=k;
+
+        idx+=idx & -idx;
+    }
+
+}
+int query(int idx)
+{
+    int sum=0;
+    while(idx>0)
+    {
+
+        sum+=fen[idx];
+        //cout<<"F "<<sum<<'\n';
+        idx-=idx & -idx;
+    }
+    return sum;
+}
+int main()
+{
+    int n,m,k;
+    cin>>n>>m>>k;
+    for(int i=1; i<=n; i++)
+    {
+        int x1,y1,x2,y2;cin>>x1>>y1>>x2>>y2;
+        x1++,x2++,y1++,y2++;
+        v[x1].push_back({{y1,1},1});
+        v[x2+1].push_back({{y1,-1},1});
+        v[x1].push_back({{y2+1,-1},1});
+        v[x2+1].push_back({{y2+1,1},1});
+        //cout<<"T "<<x1<<' '<<y1<<' '<<x2<<' '<<y2<<'\n';
+    }
+
+    for(int i=1;i<=m;i++)
+    {
+        int p,q;
+        cin>>p>>q;
+        p++,q++;
+        v[p].push_back({{q,i},2});
+
+    }
+    for(int i=1;i<=1e5;i++)
+    {
+        if(v[i].empty()) continue;;
+        sort(v[i].begin(),v[i].end());
+        for(int j=0;j<v[i].size();j++)
+        {
+            //cout<<i<<' '<<v[i][j].f.f<<' '<<v[i][j].f.s<<' '<<v[i][j].s<<'\n';
+            //cout<<i<<' '<<j<<v[i].size()<<'\n';
+            if(v[i][j].s==1)
+            {
+                //cout<<v[i][j].f.f<<' '<<v[i][j].f.s<<'\n';
+                update(v[i][j].f.f,v[i][j].f.s);
+            }
+            else{
+                ans[v[i][j].f.s]=query(v[i][j].f.f);//,cout<<ans[v[i][j].f.s]<<'\n';
+            }
+        }
+        /*for(int i=1;i<=10;i++) cout<<fen[i]<<' ';
+    cout<<'\n';*/
+    }
+    for(int i=1;i<=m;i++) cout<<ans[i]<<'\n';
+}
