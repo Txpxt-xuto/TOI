@@ -11273,5 +11273,5 @@ int main()
             else ans[v[i][j].f.s]=query(v[i][j].f.f);
         }
     }
-    for(int i=1;i<=m;i++) cout<< ans[i] << '\n';
+    for(int i=1;i<=m;i++) cout << ans[i] << '\n';
 }
