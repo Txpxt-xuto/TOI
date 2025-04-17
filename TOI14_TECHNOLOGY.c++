@@ -11287,7 +11287,8 @@ int sum (const int& x, const int& y) {
     return res;
 }
 
-int add (const int& x, const int& y, const int& v = 1) {
+int add (const int& x, const int& y, const int& v = 1)
+{
     int res = sum(x, y);
     for(int i=x;i<=15000;i+=(i&-i)) for(int j=y;j;j-=(j&-j)) fw[i][j] += v;
     return res;
