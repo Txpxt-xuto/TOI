@@ -11255,7 +11255,6 @@ int main()
         v[x2+1].push_back({{y1,-1},1});
         v[x1].push_back({{y2+1,-1},1});
         v[x2+1].push_back({{y2+1,1},1});
-        //cout<<"T "<<x1<<' '<<y1<<' '<<x2<<' '<<y2<<'\n';
     }
 
     for(int i=1;i<=m;i++)
