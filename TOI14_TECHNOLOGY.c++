@@ -11162,3 +11162,65 @@ int main()
     }
     cout<<rs;
 }
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#include "homework.h"
+struct A
+{
+    int st,num;
+    bool operator<(const A&o)const{
+        return st>o.st;
+    }
+};
+std::vector<int> adj[100010];
+int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<int>> B) {
+    for(int i = 0;i<N;i++){
+        for(int j:B[i]){
+            adj[j].push_back(i);
+        }
+    }
+    priority_queue<A> pq;
+    for(int i = 0;i<N;i++){
+        if(HW[i][3]==0){
+            int rst =  HW[i][0]/HW[i][2];
+            if(HW[i][0]%HW[i][2]){
+                rst++;
+            }
+            rst*=HW[i][2];
+            // cout << rst<<'\n';
+            if(rst>HW[i][1])continue;
+            pq.push({rst,i});
+        }   
+    }
+    int cnt = 0;
+    while(!pq.empty()){
+        A now = pq.top();
+        pq.pop();
+        cnt++;
+        int st = now.st+1;
+        // cout << now.num<<'\n';
+        for(int i:adj[now.num]){
+            HW[i][3]--;
+            // cout << i<<'\n';
+            // cout << HW[i][3]<<'\n';
+            if(HW[i][3]==0){
+                int a = max(st,HW[i][0]);
+                int rst =  a/HW[i][2];
+                if(a%HW[i][2]){
+                    rst++;
+                }
+                rst*=HW[i][2];
+                // cout << rst<<'\n';
+                if(rst>HW[i][1])continue;
+                pq.push({rst,i});
+            }
+        }
+    }
+    return cnt;
+}
+// int main(){
+//     cout <<  homework(4, {{7,16,12,1}, {0,21,1,2}, {5,13,6,1}, {2,6,3,0}},
+// {{2}, {0,2}, {1,3}, {1}});
+// }
