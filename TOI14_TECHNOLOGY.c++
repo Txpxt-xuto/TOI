@@ -11281,7 +11281,8 @@ using namespace std;
 
 int fw[15001][15001];
 
-int sum (const int& x, const int& y) {
+int sum (const int& x, const int& y)
+{
     int res = 0;
     for (int i = x; i; i -= (i&-i)) for (int j = y; j < 15000; j += (j&-j)) res += fw[i][j];
     return res;
