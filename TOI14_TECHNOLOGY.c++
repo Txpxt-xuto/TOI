@@ -11246,7 +11246,7 @@ int query(int idx)
 int main()
 {
     int n,m,k;
-    cin >> n>> m >> k;
+    cin >> n >> m >> k;
     for(int i=1; i<=n; i++)
     {
         int x1,y1,x2,y2;cin>>x1>>y1>>x2>>y2;
