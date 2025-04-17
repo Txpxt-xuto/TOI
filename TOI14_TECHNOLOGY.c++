@@ -11210,7 +11210,6 @@ int homework(int N, std::vector<std::vector<int>> HW, std::vector<std::vector<in
                 int rst =  a/HW[i][2];
                 if(a%HW[i][2]) rst++;
                 rst*=HW[i][2];
-                // cout << rst<<'\n';
                 if(rst>HW[i][1]) continue;
                 pq.push({rst,i});
             }
