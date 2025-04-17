@@ -11263,7 +11263,6 @@ int main()
         cin>>p>>q;
         p++,q++;
         v[p].push_back({{q,i},2});
-
     }
     for(int i=1;i<=1e5;i++)
     {
