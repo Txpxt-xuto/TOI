@@ -11242,6 +11242,7 @@ int query(int idx)
     }
     return sum;
 }
+
 int main()
 {
     int n,m,k;
