@@ -11238,7 +11238,6 @@ int query(int idx)
     while(idx>0)
     {
         sum+=fen[idx];
-        //cout<<"F "<<sum<<'\n';
         idx-=idx & -idx;
     }
     return sum;
