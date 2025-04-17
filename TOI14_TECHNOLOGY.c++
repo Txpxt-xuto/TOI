@@ -11228,7 +11228,6 @@ void update(int idx,int k)
     while(idx<=M)
     {
         fen[idx]+=k;
-
         idx+=idx & -idx;
     }
 
