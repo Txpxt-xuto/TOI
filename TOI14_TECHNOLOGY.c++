@@ -11275,3 +11275,29 @@ int main()
     }
     for(int i=1;i<=m;i++) cout << ans[i] << '\n';
 }
+
+#include <iostream>
+using namespace std;
+
+int fw[15001][15001];
+
+int sum (const int& x, const int& y) {
+    int res = 0;
+    for (int i = x; i; i -= (i&-i)) for (int j = y; j < 15000; j += (j&-j)) res += fw[i][j];
+    return res;
+}
+
+int add (const int& x, const int& y, const int& v = 1) {
+    int res = sum(x, y);
+    for (int i = x; i <= 15000; i += (i&-i)) for (int j = y; j; j -= (j&-j)) fw[i][j] += v;
+    return res;
+}
+
+int main () {
+    ios_base::sync_with_stdio(0);
+    cout.tie(0);
+    cin.tie(0);
+
+    int n; cin >> n;
+    for (int a, b, i = 0; i < n; ++i) cin >> a >> b, cout << add(a-b+5001, a+b+5001, 1) << '\n';
+}
