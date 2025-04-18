@@ -11320,7 +11320,7 @@ void dfs (const int& at, const int& p) {
         s[to].clear();
     }
     multiset<int>::iterator it = s[at].upper_bound(sal[at]);
-    if (it != s[at].end()) it = s[at].erase(it);
+    if(it != s[at].end()) it = s[at].erase(it);
     s[at].emplace_hint(it, sal[at]);
 } 
 
