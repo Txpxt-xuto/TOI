@@ -11302,3 +11302,36 @@ int main ()
     cin >> n;
     for (int a, b, i = 0; i < n; ++i) cin >> a >> b, cout << add(a-b+5001, a+b+5001, 1) << '\n';
 }
+
+#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int sal[100001];
+vector<int> e[100001];
+multiset<int> s[100001];
+
+void dfs (const int& at, const int& p) {
+    for (int to : e[at]) if (to != p) {
+        dfs(to, at);
+        if (s[to].size() > s[at].size()) swap(s[to], s[at]);
+        for (int i : s[to]) s[at].emplace(i);
+        s[to].clear();
+    }
+    multiset<int>::iterator it = s[at].upper_bound(sal[at]);
+    if (it != s[at].end()) it = s[at].erase(it);
+    s[at].emplace_hint(it, sal[at]);
+} 
+
+int main () {
+    ios_base::sync_with_stdio(0);
+    cout.tie(0);
+    cin.tie(0);
+
+    int n; cin >> n;
+    for (int i = 0; i < n; ++i) cin >> sal[i];
+    for (int u, v, i = 1; i < n; ++i) cin >> u >> v, e[u].emplace_back(v), e[v].emplace_back(u);
+    dfs(0, -1);
+    cout << n - s[0].size() << '\n';
+}
