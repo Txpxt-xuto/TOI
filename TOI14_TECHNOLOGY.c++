@@ -11317,10 +11317,10 @@ void dfs (const int& at, const int& p) {
     {
         if (to != p)
         {
-        dfs(to, at);
-        if (s[to].size() > s[at].size()) swap(s[to], s[at]);
-        for (int i : s[to]) s[at].emplace(i);
-        s[to].clear();
+            dfs(to, at);
+            if (s[to].size() > s[at].size()) swap(s[to], s[at]);
+            for (int i : s[to]) s[at].emplace(i);
+            s[to].clear();
         }
     }
     multiset<int>::iterator it = s[at].upper_bound(sal[at]);
