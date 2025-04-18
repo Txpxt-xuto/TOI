@@ -11321,8 +11321,8 @@ void dfs (const int& at, const int& p) {
         if (s[to].size() > s[at].size()) swap(s[to], s[at]);
         for (int i : s[to]) s[at].emplace(i);
         s[to].clear();
+        }
     }
-}
     multiset<int>::iterator it = s[at].upper_bound(sal[at]);
     if(it != s[at].end()) it = s[at].erase(it);
     s[at].emplace_hint(it, sal[at]);
