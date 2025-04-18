@@ -11313,12 +11313,16 @@ vector<int> e[100001];
 multiset<int> s[100001];
 
 void dfs (const int& at, const int& p) {
-    for (int to : e[at]) if (to != p) {
+    for (int to : e[at]) 
+    {
+        if (to != p)
+        {
         dfs(to, at);
         if (s[to].size() > s[at].size()) swap(s[to], s[at]);
         for (int i : s[to]) s[at].emplace(i);
         s[to].clear();
     }
+}
     multiset<int>::iterator it = s[at].upper_bound(sal[at]);
     if(it != s[at].end()) it = s[at].erase(it);
     s[at].emplace_hint(it, sal[at]);
