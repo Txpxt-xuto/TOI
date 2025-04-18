@@ -11312,7 +11312,8 @@ int sal[100001];
 vector<int> e[100001];
 multiset<int> s[100001];
 
-void dfs (const int& at, const int& p) {
+void dfs (const int& at, const int& p)
+{
     for(int to : e[at]) 
     {
         if (to != p)
