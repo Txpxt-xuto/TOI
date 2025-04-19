@@ -11385,9 +11385,9 @@ void solve(){
     return;
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(0);cout.tie(0);
-    // freopen("", "w", stdout);
     int t = 1;
     // cin >> t;
     while(t--) solve();
