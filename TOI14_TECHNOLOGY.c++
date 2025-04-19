@@ -11341,3 +11341,56 @@ int main ()
     dfs(0, -1);
     cout << n - s[0].size() << '\n';
 }
+
+// YoruoniVamp - VTUBE
+// Pragma Credit to Discord: pxsithexahydride
+#pragma GCC optimize("Ofast,no-stack-protector,unroll-loops,fast-math,no-stack-protector,inline-small-functions,inline,unsafe-math-optimizations,omit-frame-pointer,inline-functions-called-once")
+#include <bits/stdc++.h>
+#pragma GCC target("avx2,fma,popcnt,lzcnt,bmi,bmi2,sse4.2,tune=native")
+using namespace std;
+#define endl '\n'
+#define ll long long
+#define ld long double
+#define ull unsigned ll
+#define cint const int
+#define cf const float
+
+cint mxA = 1e6+5, MOD = 1e9+7, INF = 0x3f3f3f3f;
+cint d4x[4] = {0, 1, 0, -1}, d4y[4] = {1, 0, -1, 0};
+cint d8x[8] = {0, 1, 1, 1, 0, -1, -1, -1}, d8y[8] = {1, 1, 0, -1, -1, -1, 0, 1};
+
+void wait(int ms){
+    clock_t endwait;
+    endwait = clock() + ms;
+    while(clock()<endwait){}
+}
+
+void solve(){
+    int n, m, k; cin >> n >> m >> k;
+    int arr[m+1];
+    arr[0] = 0;
+    for(int i = 1; i <= m; i++) cin >> arr[i];
+    sort(arr+1,arr+m+1);
+    vector<int> diff;
+    for(int i = 2; i <= m; i++){
+        // cout << arr[i]-arr[i-1]-1 << endl;
+        diff.emplace_back(arr[i]-arr[i-1]-1);
+    }
+    sort(diff.begin(),diff.end());
+    int sum = 0;
+    // for(auto i: diff) cout << diff[i] << ' ';
+    // cout << endl;
+    for(int i = 0; i < m-k; i++) sum += diff[i];
+    cout << sum;
+    return;
+}
+
+int main(){
+    cin.tie(nullptr)->sync_with_stdio(0);cout.tie(0);
+    // freopen("", "r", stdin);
+    // freopen("", "w", stdout);
+    int t = 1;
+    // cin >> t;
+    while(t--) solve();
+    return 0;
+}
