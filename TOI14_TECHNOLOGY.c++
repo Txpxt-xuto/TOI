@@ -11387,7 +11387,8 @@ void solve(){
 
 int main()
 {
-    cin.tie(nullptr)->sync_with_stdio(0);cout.tie(0);
+    cin.tie(nullptr)->sync_with_stdio(0);
+    cout.tie(0);
     int t = 1;
     while(t--) solve();
     return 0;
