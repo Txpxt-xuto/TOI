@@ -11369,7 +11369,7 @@ void solve(){
     int n, m, k; cin >> n >> m >> k;
     int arr[m+1];
     arr[0] = 0;
-    for(int i = 1; i <= m; i++) cin >> arr[i];
+    for(int i=1;i<=m;i++) cin >> arr[i];
     sort(arr+1,arr+m+1);
     vector<int> diff;
     for(int i=2;i<=m;i++) diff.emplace_back(arr[i]-arr[i-1]-1);
