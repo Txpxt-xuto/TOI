@@ -11378,7 +11378,7 @@ void solve(){
     }
     sort(diff.begin(),diff.end());
     int sum = 0;
-    for(int i = 0; i < m-k; i++) sum += diff[i];
+    for(int i=0;i<m-k;i++) sum += diff[i];
     cout << sum;
     return;
 }
