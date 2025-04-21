@@ -11409,7 +11409,8 @@ signed main()
     vector<int> vec;
     for(int i=0;i<m;++i)
     {
-        int tmp; cin >> tmp;
+        int tmp;
+        cin >> tmp;
         vec.push_back(tmp);
     }
     vector<int> dif;
