@@ -11401,7 +11401,8 @@ using namespace std;
 
 signed main()
 {
-    ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr); cout.tie(nullptr);
     int n,m,k; cin >> n >> m >> k;
     vector<int> vec;
     for(int i=0;i<m;++i){
