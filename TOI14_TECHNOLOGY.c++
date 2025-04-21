@@ -11372,7 +11372,7 @@ void solve(){
     for(int i = 1; i <= m; i++) cin >> arr[i];
     sort(arr+1,arr+m+1);
     vector<int> diff;
-    for(int i = 2; i <= m; i++) diff.emplace_back(arr[i]-arr[i-1]-1);
+    for(int i=2;i<=m; i++) diff.emplace_back(arr[i]-arr[i-1]-1);
     sort(diff.begin(),diff.end());
     int sum = 0;
     for(int i=0;i<m-k;i++) sum += diff[i];
