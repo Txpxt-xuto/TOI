@@ -11393,3 +11393,25 @@ int main()
     while(t--) solve();
     return 0;
 }
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+signed main(){
+    ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+    int n,m,k; cin >> n >> m >> k;
+    vector<int> vec;
+    for(int i=0;i<m;++i){
+        int tmp; cin >> tmp;
+        vec.push_back(tmp);
+    }
+    vector<int> dif;
+    for(int i=1;i<m;++i){
+        dif.push_back(vec[i]-vec[i-1]-1);
+    }
+    sort(dif.begin(),dif.end());
+    int sm=0;
+    for(int i=0;i<m-k;++i) sm+=dif[i];
+    cout << sm;
+}
