@@ -11407,7 +11407,8 @@ signed main()
     int n,m,k;
     cin >> n >> m >> k;
     vector<int> vec;
-    for(int i=0;i<m;++i){
+    for(int i=0;i<m;++i)
+    {
         int tmp; cin >> tmp;
         vec.push_back(tmp);
     }
