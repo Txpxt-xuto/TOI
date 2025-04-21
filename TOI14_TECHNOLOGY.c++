@@ -11378,8 +11378,6 @@ void solve(){
     }
     sort(diff.begin(),diff.end());
     int sum = 0;
-    // for(auto i: diff) cout << diff[i] << ' ';
-    // cout << endl;
     for(int i = 0; i < m-k; i++) sum += diff[i];
     cout << sum;
     return;
