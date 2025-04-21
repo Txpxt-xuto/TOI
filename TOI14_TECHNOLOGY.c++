@@ -11415,8 +11415,6 @@ signed main()
     }
     vector<int> dif;
     for(int i=1;i<m;++i) dif.push_back(vec[i]-vec[i-1]-1);
-        
-    }
     sort(dif.begin(),dif.end());
     int sm=0;
     for(int i=0;i<m-k;++i) sm+=dif[i];
