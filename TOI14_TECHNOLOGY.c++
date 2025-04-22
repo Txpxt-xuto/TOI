@@ -11414,3 +11414,49 @@ signed main()
     for(int i=0;i<m-k;++i) sm+=dif[i];
     cout << sm;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll=long long int ;
+const int mxN = 100000+9;
+#define twod array<ll,2>
+vector<twod> node[mxN]; 
+const int start = 100000+5;
+const ll inf = 1e18;
+priority_queue<twod,vector<twod>,greater<twod>> q;
+bool vis[mxN];
+vector<ll> dp(mxN,inf);
+int main(){
+	ios::sync_with_stdio(0);cin.tie(0);
+	int n,nn,nnn;cin >> n >> nn;
+	for(int i=0;i<nn;i++){
+		int u,v,w;
+		cin >> u >> v >> w;
+		node[u].push_back({v,w});
+		node[v].push_back({u,w});
+	}
+	cin >> nnn;
+	for(int i=0;i<nnn;i++){
+		int u,w;cin >> u >> w;
+		node[start].push_back({u,w});
+	}
+	q.push({0,start});
+	dp[start]=0;
+	while(!q.empty()){
+		auto x=q.top();q.pop();
+		auto u=x[1],w=x[0];
+		if(u==0){
+			cout << w;
+			return 0;
+		}
+		if(vis[u]!=0) continue;
+		vis[u]=1;
+		for(auto e:node[u]){
+			auto v=e[0],l=e[1];
+			if(vis[v]==0){
+				q.push({w+l,v});
+			}
+		}
+	}
+	return 0;
+}
