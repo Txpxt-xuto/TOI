@@ -11523,9 +11523,10 @@ int main() {
 	} else if (ax - ay == bx - by) {
 		if (ax < bx) s = n - bx, t = bx - by;
 		else s = by - 1, t = bx - by;
-	} else
+	} 
+    else
     {
-		if (ay < by) s = bx - by, t = n - bx;
+		if(ay < by) s = bx - by, t = n - bx;
 		else s = by - 1, t = n - bx;
 	}
 	if(s <= (n - 1) / 2 && s + t <= (n - 1) / 2) ans = s * 2 + t;
