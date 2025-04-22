@@ -11448,7 +11448,8 @@ int main()
 	}
 	q.push({0,start});
 	dp[start]=0;
-	while(!q.empty()){
+	while(!q.empty())
+    {
 		auto x=q.top();q.pop();
 		auto u=x[1],w=x[0];
 		if(u==0){
