@@ -11462,8 +11462,8 @@ int main()
 		for(auto e:node[u])
         {
 			auto v=e[0],l=e[1];
-			if(vis[v]==0){
-				q.push({w+l,v});
+			if(vis[v]==0) q.push({w+l,v});
+				
 			}
 		}
 	}
