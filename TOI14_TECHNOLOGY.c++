@@ -11510,9 +11510,9 @@ int main()
         //s[u].insert(v);
         //s[v].insert(u);
     }
-    for(int i=1;i<=n;i++)
+    for(int i=1;i<=n;i++) if(!disc[i]) dfs(i,i);
     {
-        if(!disc[i]) dfs(i,i);   
+           
     }
     cout << cnt << '\n';
 }
