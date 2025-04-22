@@ -11482,8 +11482,8 @@ void dfs(int u,int p)
     {
         if(x==p)
         continue;
-        if(disc[x])
-        low[u]=min(low[u],disc[x]);
+        if(disc[x]) low[u]=min(low[u],disc[x]);
+        
         else
         {
             dfs(x,u);
