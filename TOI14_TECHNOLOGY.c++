@@ -11507,3 +11507,28 @@ int main()
     for(int i=1;i<=n;i++) if(!disc[i]) dfs(i,i);
     cout << cnt << '\n';
 }
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int n, ax, ay, bx, by, s, t, ans;
+
+int main() {
+	scanf("%d %d %d %d %d", &n, &ax, &ay, &bx, &by);
+	if (ax == bx && ay == by) printf("0"), exit(0);
+	if (ay == by) {
+		if (ax < bx) s = n - bx, t = by - 1;
+		else s = bx - by, t = by - 1;
+	} else if (ax - ay == bx - by) {
+		if (ax < bx) s = n - bx, t = bx - by;
+		else s = by - 1, t = bx - by;
+	} else {
+		if (ay < by) s = bx - by, t = n - bx;
+		else s = by - 1, t = n - bx;
+	}
+	if (s <= (n - 1) / 2 && s + t <= (n - 1) / 2) ans = s * 2 + t;
+	else if (s <= (n - 1) / 2 && n - t - 1 <= (n - 1) / 2) ans = s + t;
+	else ans = (s + t) + (n - t - 1 - (n - 1) / 2);
+	printf("%d", ans + 1);
+}
