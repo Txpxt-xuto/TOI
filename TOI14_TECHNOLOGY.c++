@@ -11492,8 +11492,6 @@ void dfs(int u,int p)
     }
     if(low[u]==disc[u])
     cnt++;
-    //g[low[u]].push_back(u);
-    //cout<<u<<" "<<low[u]<<endl;
 }
 
 int main()
