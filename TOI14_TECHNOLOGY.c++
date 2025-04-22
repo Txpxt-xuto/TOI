@@ -11507,8 +11507,6 @@ int main()
         cin>>u>>v;
         ad[u].push_back(v);
         ad[v].push_back(u);
-        //s[u].insert(v);
-        //s[v].insert(u);
     }
     for(int i=1;i<=n;i++) if(!disc[i]) dfs(i,i);
     cout << cnt << '\n';
