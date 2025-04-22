@@ -11512,8 +11512,7 @@ int main()
     }
     for(int i=1;i<=n;i++)
     {
-        if(!disc[i])
-        dfs(i,i);    
+        if(!disc[i]) dfs(i,i);   
     }
     cout << cnt << '\n';
 }
