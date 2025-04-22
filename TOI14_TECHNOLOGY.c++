@@ -11490,8 +11490,7 @@ void dfs(int u,int p)
             low[u]=min(low[u],low[x]);
         }
     }
-    if(low[u]==disc[u])
-    cnt++;
+    if(low[u]==disc[u]) cnt++;
 }
 
 int main()
