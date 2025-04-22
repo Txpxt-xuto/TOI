@@ -11516,14 +11516,4 @@ int main()
         dfs(i,i);    
     }
     cout<<cnt<<'\n';
-    /*for(int i=0;i<=200000;i++)
-    {
-        if(g[i].size()>0)
-        {
-            cout<<g[i].size()<<' ';
-            for(int x:g[i])
-            cout<<x<<' ';
-            cout<<'\n';
-        }
-    }*/
 }
