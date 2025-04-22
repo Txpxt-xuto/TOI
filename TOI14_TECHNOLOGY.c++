@@ -11515,5 +11515,5 @@ int main()
         if(!disc[i])
         dfs(i,i);    
     }
-    cout<<cnt<<'\n';
+    cout<< cnt << '\n';
 }
