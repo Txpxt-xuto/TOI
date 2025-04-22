@@ -11480,8 +11480,8 @@ void dfs(int u,int p)
     disc[u]=low[u]=++t;
     for(auto x:ad[u])
     {
-        if(x==p)
-        continue;
+        if(x==p) continue;
+        
         if(disc[x]) low[u]=min(low[u],disc[x]);
         else
         {
