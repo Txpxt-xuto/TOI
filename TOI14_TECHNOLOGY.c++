@@ -11426,7 +11426,8 @@ const ll inf = 1e18;
 priority_queue<twod,vector<twod>,greater<twod>> q;
 bool vis[mxN];
 vector<ll> dp(mxN,inf);
-int main(){
+int main()
+{
 	ios::sync_with_stdio(0);cin.tie(0);
 	int n,nn,nnn;cin >> n >> nn;
 	for(int i=0;i<nn;i++){
