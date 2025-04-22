@@ -11437,7 +11437,8 @@ int main()
 		node[v].push_back({u,w});
 	}
 	cin >> nnn;
-	for(int i=0;i<nnn;i++){
+	for(int i=0;i<nnn;i++)
+    {
 		int u,w;cin >> u >> w;
 		node[start].push_back({u,w});
 	}
