@@ -11452,7 +11452,8 @@ int main()
     {
 		auto x=q.top();q.pop();
 		auto u=x[1],w=x[0];
-		if(u==0){
+		if(u==0)
+        {
 			cout << w;
 			return 0;
 		}
