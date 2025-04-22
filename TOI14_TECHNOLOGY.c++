@@ -11511,8 +11511,5 @@ int main()
         //s[v].insert(u);
     }
     for(int i=1;i<=n;i++) if(!disc[i]) dfs(i,i);
-    {
-           
-    }
     cout << cnt << '\n';
 }
