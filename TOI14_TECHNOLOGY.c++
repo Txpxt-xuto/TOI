@@ -11467,3 +11467,63 @@ int main()
 	}
 	return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+vector<int> ad[500010];
+int disc[500010],low[500010];
+vector<int> g[200010];
+int cnt;
+int t;
+void dfs(int u,int p)
+{
+    disc[u]=low[u]=++t;
+    for(auto x:ad[u])
+    {
+        if(x==p)
+        continue;
+        if(disc[x])
+        low[u]=min(low[u],disc[x]);
+        else
+        {
+            dfs(x,u);
+            low[u]=min(low[u],low[x]);
+        }
+    }
+    if(low[u]==disc[u])
+    cnt++;
+    //g[low[u]].push_back(u);
+    //cout<<u<<" "<<low[u]<<endl;
+}
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int n,m;
+    cin>>n>>m;
+    for(int i=0;i<m;i++)
+    {
+        int u,v;
+        cin>>u>>v;
+        ad[u].push_back(v);
+        ad[v].push_back(u);
+        //s[u].insert(v);
+        //s[v].insert(u);
+    }
+    for(int i=1;i<=n;i++)
+    {
+        if(!disc[i])
+        dfs(i,i);    
+    }
+    cout<<cnt<<'\n';
+    /*for(int i=0;i<=200000;i++)
+    {
+        if(g[i].size()>0)
+        {
+            cout<<g[i].size()<<' ';
+            for(int x:g[i])
+            cout<<x<<' ';
+            cout<<'\n';
+        }
+    }*/
+}
