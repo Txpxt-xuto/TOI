@@ -11429,7 +11429,8 @@ vector<ll> dp(mxN,inf);
 int main()
 {
 	ios::sync_with_stdio(0);cin.tie(0);
-	int n,nn,nnn;cin >> n >> nn;
+	int n,nn,nnn;
+    cin >> n >> nn;
 	for(int i=0;i<nn;i++)
     {
 		int u,v,w;
