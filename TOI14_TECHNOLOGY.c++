@@ -11504,7 +11504,7 @@ int main()
     for(int i=0;i<m;i++)
     {
         int u,v;
-        cin>> u >>v;
+        cin >> u >> v;
         ad[u].push_back(v);
         ad[v].push_back(u);
     }
