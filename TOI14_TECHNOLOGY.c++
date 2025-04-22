@@ -11530,7 +11530,7 @@ int main() {
 		else s = by - 1, t = n - bx;
 	}
 	if(s <= (n - 1) / 2 && s + t <= (n - 1) / 2) ans = s * 2 + t;
-	else if (s <= (n - 1) / 2 && n - t - 1 <= (n - 1) / 2) ans = s + t;
+	else if(s <= (n - 1) / 2 && n - t - 1 <= (n - 1) / 2) ans = s + t;
 	else ans = (s + t) + (n - t - 1 - (n - 1) / 2);
 	printf("%d", ans + 1);
 }
