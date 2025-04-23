@@ -11342,8 +11342,6 @@ int main ()
     cout << n - s[0].size() << '\n';
 }
 
-// YoruoniVamp - VTUBE
-// Pragma Credit to Discord: pxsithexahydride
 #pragma GCC optimize("Ofast,no-stack-protector,unroll-loops,fast-math,no-stack-protector,inline-small-functions,inline,unsafe-math-optimizations,omit-frame-pointer,inline-functions-called-once")
 #include <bits/stdc++.h>
 #pragma GCC target("avx2,fma,popcnt,lzcnt,bmi,bmi2,sse4.2,tune=native")
