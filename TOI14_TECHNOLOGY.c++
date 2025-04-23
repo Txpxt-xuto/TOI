@@ -11367,7 +11367,8 @@ void wait(int ms){
 
 void solve()
 {
-    int n, m, k; cin >> n >> m >> k;
+    int n, m, k;
+    cin >> n >> m >> k;
     int arr[m+1];
     arr[0] = 0;
     for(int i=1;i<=m;i++) cin >> arr[i];
