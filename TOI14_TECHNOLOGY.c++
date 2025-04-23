@@ -11352,7 +11352,6 @@ using namespace std;
 #define ull unsigned ll
 #define cint const int
 #define cf const float
-
 cint mxA = 1e6+5, MOD = 1e9+7, INF = 0x3f3f3f3f;
 cint d4x[4] = {0, 1, 0, -1}, d4y[4] = {1, 0, -1, 0};
 cint d8x[8] = {0, 1, 1, 1, 0, -1, -1, -1}, d8y[8] = {1, 1, 0, -1, -1, -1, 0, 1};
