@@ -11365,7 +11365,8 @@ void wait(int ms){
     while(clock()<endwait){}
 }
 
-void solve(){
+void solve()
+{
     int n, m, k; cin >> n >> m >> k;
     int arr[m+1];
     arr[0] = 0;
