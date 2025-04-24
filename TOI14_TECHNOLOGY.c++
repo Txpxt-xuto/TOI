@@ -11511,7 +11511,6 @@ int main()
 #include<bits/stdc++.h>
 
 using namespace std;
-
 int n, ax, ay, bx, by, s, t, ans;
 
 int main() {
