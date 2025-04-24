@@ -11608,7 +11608,8 @@ int main(){
             int j1 = way[j0];
             p[j0] = p[j1];
             j0 = j1;
-        } while (j0);
+        }
+        while (j0);
     }
     int minCost = -vLabel[0];
     int P = -minCost;
