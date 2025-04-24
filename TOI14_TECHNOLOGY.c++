@@ -11609,10 +11609,6 @@ int main(){
             j0 = j1;
         } while (j0);
     }
-    
-    // After assignment, p[j] (for j=1..N) gives the worker assigned to job j.
-    // The minimal total cost is -vLabel[0] (see Hungarian algorithm standard result).
-    // Let minCost be that value.
     int minCost = -vLabel[0];
     // Maximum profit P = -minCost
     int P = -minCost;
