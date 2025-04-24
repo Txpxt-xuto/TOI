@@ -11558,12 +11558,13 @@ int main(){
     // We also need to count total M (given).
     // Note: Even if there are duplicate edges, they count only once for profit.
     vector<vector<bool>> exists(N+1, vector<bool>(N+1, false));
-    for (int i = 0; i < M; i++){
+    for (int i = 0; i < M; i++)
+    {
         int u, v;
         cin >> u >> v;
         if (!exists[u][v]){
             exists[u][v] = true;
-            cost[u][v] = -1;  // using this edge gives profit 1 (i.e. negative cost -1)
+            cost[u][v] = -1;
         }
     }
     vector<int> uLabel(N+1, 0), vLabel(N+1, 0), p(N+1, 0), way(N+1, 0);
