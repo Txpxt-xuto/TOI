@@ -11515,7 +11515,8 @@ int main()
 {
 	scanf("%d %d %d %d %d", &n, &ax, &ay, &bx, &by);
 	if(ax == bx && ay == by) printf("0"), exit(0);
-	if(ay == by) {
+	if(ay == by)
+    {
 		if(ax < bx) s = n - bx, t = by - 1;
 		else s = bx - by, t = by - 1;
 	}
