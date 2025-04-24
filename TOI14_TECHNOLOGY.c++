@@ -11603,7 +11603,8 @@ int main(){
             }
             j0 = j1;
         } while (p[j0] != 0);
-        do {
+        do
+        {
             int j1 = way[j0];
             p[j0] = p[j1];
             j0 = j1;
