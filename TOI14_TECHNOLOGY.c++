@@ -11583,7 +11583,8 @@ int main(){
             for (int j = 1; j <= N; j++){
                 if (!used[j]){
                     int cur = cost[i0][j] - uLabel[i0] - vLabel[j];
-                    if (cur < minv[j]){
+                    if (cur < minv[j])
+                    {
                         minv[j] = cur;
                         way[j] = j0;
                     }
