@@ -11578,7 +11578,8 @@ int main(){
         int j0 = 0;
         vector<int> minv(N+1, INF);
         vector<bool> used(N+1, false);
-        do {
+        do
+        {
             used[j0] = true;
             int i0 = p[j0], delta = INF, j1 = 0;
             for(int j=1;j<=N;j++)
