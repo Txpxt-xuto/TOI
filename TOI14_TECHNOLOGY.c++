@@ -11581,7 +11581,8 @@ int main(){
             used[j0] = true;
             int i0 = p[j0], delta = INF, j1 = 0;
             for (int j = 1; j <= N; j++){
-                if (!used[j]){
+                if (!used[j])
+                {
                     int cur = cost[i0][j] - uLabel[i0] - vLabel[j];
                     if(cur < minv[j])
                     {
