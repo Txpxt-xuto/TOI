@@ -11587,7 +11587,8 @@ int main(){
                         minv[j] = cur;
                         way[j] = j0;
                     }
-                    if (minv[j] < delta){
+                    if (minv[j] < delta)
+                    {
                         delta = minv[j];
                         j1 = j;
                     }
