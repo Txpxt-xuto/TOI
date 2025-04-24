@@ -11535,3 +11535,91 @@ int main()
 	else ans = (s + t) + (n - t - 1 - (n - 1) / 2);
 	printf("%d", ans + 1);
 }
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <limits>
+using namespace std;
+
+const int INF = 1e9;
+
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    int N, M;
+    cin >> N >> M;
+    
+    // Create a cost matrix of size N x N (1-indexed).
+    // For each pair (u, v), if an edge from u to v exists, then weight = 1, so cost = -1.
+    // Otherwise, cost = 0.
+    vector<vector<int>> cost(N+1, vector<int>(N+1, 0));
+    // We also need to count total M (given).
+    // Note: Even if there are duplicate edges, they count only once for profit.
+    vector<vector<bool>> exists(N+1, vector<bool>(N+1, false));
+    for (int i = 0; i < M; i++){
+        int u, v;
+        cin >> u >> v;
+        if (!exists[u][v]){
+            exists[u][v] = true;
+            cost[u][v] = -1;  // using this edge gives profit 1 (i.e. negative cost -1)
+        }
+    }
+    
+    // Hungarian Algorithm for assignment on a cost matrix of size N x N.
+    // Let u = 1..N represent "workers" (source buildings) and v = 1..N represent "jobs" (target building for the edge)
+    // We want to assign each u a v such that total cost is minimized.
+    
+    vector<int> uLabel(N+1, 0), vLabel(N+1, 0), p(N+1, 0), way(N+1, 0);
+    for (int i = 1; i <= N; i++){
+        p[0] = i;
+        int j0 = 0;
+        vector<int> minv(N+1, INF);
+        vector<bool> used(N+1, false);
+        do {
+            used[j0] = true;
+            int i0 = p[j0], delta = INF, j1 = 0;
+            for (int j = 1; j <= N; j++){
+                if (!used[j]){
+                    int cur = cost[i0][j] - uLabel[i0] - vLabel[j];
+                    if (cur < minv[j]){
+                        minv[j] = cur;
+                        way[j] = j0;
+                    }
+                    if (minv[j] < delta){
+                        delta = minv[j];
+                        j1 = j;
+                    }
+                }
+            }
+            for (int j = 0; j <= N; j++){
+                if (used[j]){
+                    uLabel[p[j]] += delta;
+                    vLabel[j] -= delta;
+                } else {
+                    minv[j] -= delta;
+                }
+            }
+            j0 = j1;
+        } while (p[j0] != 0);
+        do {
+            int j1 = way[j0];
+            p[j0] = p[j1];
+            j0 = j1;
+        } while (j0);
+    }
+    
+    // After assignment, p[j] (for j=1..N) gives the worker assigned to job j.
+    // The minimal total cost is -vLabel[0] (see Hungarian algorithm standard result).
+    // Let minCost be that value.
+    int minCost = -vLabel[0];
+    // Maximum profit P = -minCost
+    int P = -minCost;
+    
+    // The answer is: N + M - 2 * P.
+    int answer = N + M - 2 * P;
+    cout << answer << "\n";
+    
+    return 0;
+}
