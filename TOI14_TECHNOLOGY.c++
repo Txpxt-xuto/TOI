@@ -11593,7 +11593,8 @@ int main(){
                     }
                 }
             }
-            for(int j = 0; j <= N; j++){
+            for(int j = 0; j <= N; j++)
+            {
                 if (used[j]){
                     uLabel[p[j]] += delta;
                     vLabel[j] -= delta;
