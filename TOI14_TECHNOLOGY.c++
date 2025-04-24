@@ -11562,7 +11562,7 @@ int main(){
     {
         int u, v;
         cin >> u >> v;
-        if (!exists[u][v])
+        if(!exists[u][v])
         {
             exists[u][v] = true;
             cost[u][v] = -1;
