@@ -11600,8 +11600,8 @@ int main(){
                     uLabel[p[j]] += delta;
                     vLabel[j] -= delta;
                 }
-                else 
-                    minv[j] -= delta;
+                else minv[j] -= delta;
+                    
                 
             }
             j0 = j1;
