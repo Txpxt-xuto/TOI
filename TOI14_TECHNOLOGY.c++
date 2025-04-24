@@ -11580,7 +11580,7 @@ int main(){
         do {
             used[j0] = true;
             int i0 = p[j0], delta = INF, j1 = 0;
-            for (int j = 1; j <= N; j++)
+            for(int j=1;j<=N;j++)
             {
                 if(!used[j])
                 {
