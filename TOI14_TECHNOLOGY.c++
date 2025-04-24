@@ -11613,6 +11613,5 @@ int main(){
     int P = -minCost;
     int answer = N + M - 2 * P;
     cout << answer << "\n";
-    
     return 0;
 }
