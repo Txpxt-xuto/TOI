@@ -11550,13 +11550,7 @@ int main(){
     
     int N, M;
     cin >> N >> M;
-    
-    // Create a cost matrix of size N x N (1-indexed).
-    // For each pair (u, v), if an edge from u to v exists, then weight = 1, so cost = -1.
-    // Otherwise, cost = 0.
     vector<vector<int>> cost(N+1, vector<int>(N+1, 0));
-    // We also need to count total M (given).
-    // Note: Even if there are duplicate edges, they count only once for profit.
     vector<vector<bool>> exists(N+1, vector<bool>(N+1, false));
     for(int i=0;i<M;i++)
     {
