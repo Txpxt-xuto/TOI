@@ -11616,8 +11616,6 @@ int main(){
     int minCost = -vLabel[0];
     // Maximum profit P = -minCost
     int P = -minCost;
-    
-    // The answer is: N + M - 2 * P.
     int answer = N + M - 2 * P;
     cout << answer << "\n";
     
