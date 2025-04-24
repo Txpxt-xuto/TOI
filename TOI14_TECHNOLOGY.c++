@@ -11544,10 +11544,10 @@ using namespace std;
 
 const int INF = 1e9;
 
-int main(){
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    
     int N, M;
     cin >> N >> M;
     vector<vector<int>> cost(N+1, vector<int>(N+1, 0));
