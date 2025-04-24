@@ -11572,7 +11572,7 @@ int main(){
     // We want to assign each u a v such that total cost is minimized.
     
     vector<int> uLabel(N+1, 0), vLabel(N+1, 0), p(N+1, 0), way(N+1, 0);
-    for(int i = 1; i <= N; i++)
+    for(int i = 1;i<=N;i++)
     {
         p[0] = i;
         int j0 = 0;
