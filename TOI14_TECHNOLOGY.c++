@@ -11610,7 +11610,6 @@ int main(){
         } while (j0);
     }
     int minCost = -vLabel[0];
-    // Maximum profit P = -minCost
     int P = -minCost;
     int answer = N + M - 2 * P;
     cout << answer << "\n";
