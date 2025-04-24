@@ -11599,7 +11599,8 @@ int main(){
                 {
                     uLabel[p[j]] += delta;
                     vLabel[j] -= delta;
-                } else {
+                }
+                else {
                     minv[j] -= delta;
                 }
             }
