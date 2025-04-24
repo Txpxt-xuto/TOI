@@ -11566,11 +11566,6 @@ int main(){
             cost[u][v] = -1;  // using this edge gives profit 1 (i.e. negative cost -1)
         }
     }
-    
-    // Hungarian Algorithm for assignment on a cost matrix of size N x N.
-    // Let u = 1..N represent "workers" (source buildings) and v = 1..N represent "jobs" (target building for the edge)
-    // We want to assign each u a v such that total cost is minimized.
-    
     vector<int> uLabel(N+1, 0), vLabel(N+1, 0), p(N+1, 0), way(N+1, 0);
     for(int i=1;i<=N;i++)
     {
