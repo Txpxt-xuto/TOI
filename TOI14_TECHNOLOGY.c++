@@ -11558,11 +11558,12 @@ int main(){
     // We also need to count total M (given).
     // Note: Even if there are duplicate edges, they count only once for profit.
     vector<vector<bool>> exists(N+1, vector<bool>(N+1, false));
-    for (int i = 0; i < M; i++)
+    for(int i=0;i<M;i++)
     {
         int u, v;
         cin >> u >> v;
-        if (!exists[u][v]){
+        if (!exists[u][v])
+        {
             exists[u][v] = true;
             cost[u][v] = -1;
         }
