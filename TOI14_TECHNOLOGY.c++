@@ -11601,8 +11601,6 @@ int main(){
                     vLabel[j] -= delta;
                 }
                 else minv[j] -= delta;
-                    
-                
             }
             j0 = j1;
         }
