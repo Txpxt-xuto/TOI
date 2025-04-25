@@ -11635,8 +11635,9 @@ int main(){
     for(int i=1;i<=n;i++){
         if(a[j] == i){
             j++;
-        }else{
-            b.push_back(i);
+        }
+        else b.push_back(i);
+            
         }
     }
     for(int i=0;i<b.size();i++) for(int k=1;k<=n;k++) if(b[i]!=k) p[i].push_back(k);
