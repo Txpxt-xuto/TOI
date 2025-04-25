@@ -11620,7 +11620,8 @@ int main()
 #include <algorithm>
 using namespace std;
 
-int main(){
+int main()
+{
     cin.tie(0)->sync_with_stdio(0);
     int n,m,j=0;
     cin >> n >> m;
