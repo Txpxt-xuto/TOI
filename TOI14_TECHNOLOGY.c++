@@ -11653,6 +11653,7 @@ int main(){
                 cout << d << " ";
             }
             cout << "\n";
-        }while(next_permutation(p[i].begin(),p[i].end()));
+        }
+        while(next_permutation(p[i].begin(),p[i].end()));
     }
 }
