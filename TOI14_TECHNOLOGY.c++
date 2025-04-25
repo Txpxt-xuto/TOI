@@ -11632,7 +11632,8 @@ int main(){
         a.push_back(c);
     }
     sort(a.begin(),a.end());
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         if(a[j] == i) j++;
         else b.push_back(i);
     }
