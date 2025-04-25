@@ -11640,10 +11640,6 @@ int main(){
         }
     }
     for(int i=0;i<b.size();i++) for(int k=1;k<=n;k++) if(b[i]!=k) p[i].push_back(k);
-       
-        {
-            
-        }
     }
     for(int i=0;i<b.size();i++)
     {
