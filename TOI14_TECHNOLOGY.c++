@@ -11649,9 +11649,7 @@ int main(){
     for(int i=0;i<b.size();i++){
         do{
             cout << b[i] << " ";
-            for(int d : p[i]){
-                cout << d << " ";
-            }
+            for(int d : p[i]) cout << d << " ";
             cout << "\n";
         }
         while(next_permutation(p[i].begin(),p[i].end()));
