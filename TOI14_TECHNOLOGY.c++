@@ -11626,7 +11626,8 @@ int main(){
     cin >> n >> m;
     vector<int> a,b;
     vector<vector<int>> p(n-m);
-    for(int i=0;i<m;i++){
+    for(int i=0;i<m;i++)
+    {
         int c;
         cin >> c;
         a.push_back(c);
