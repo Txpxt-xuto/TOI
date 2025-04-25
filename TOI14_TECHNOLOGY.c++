@@ -11646,7 +11646,8 @@ int main(){
             }
         }
     }
-    for(int i=0;i<b.size();i++){
+    for(int i=0;i<b.size();i++)
+    {
         do{
             cout << b[i] << " ";
             for(int d : p[i]) cout << d << " ";
