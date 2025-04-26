@@ -11667,7 +11667,8 @@ signed main(){
     }
     int day=0,turn=0;
     int i=1,j=1,hunn=0;
-    while(turn<k){
+    while(turn<k)
+    {
         if(i+ii[hunn]>n||i+ii[hunn]<1||j+jj[hunn]>n||j+jj[hunn]<1)
         {
             hunn=(hunn+2)%4;
