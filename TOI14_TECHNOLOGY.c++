@@ -11650,3 +11650,60 @@ int main()
         while(next_permutation(p[i].begin(),p[i].end()));
     }
 }
+
+#include <bits/stdc++.h>
+#define int long long
+using namespace std;
+int g[210][210],jj[4]={1,0,-1,0},ii[4]={0,1,0,-1};//R D L U
+int cnt[210][210][4][7],d[210][210][4][7];
+bool LOOP=true;
+string s[210][210];
+signed main(){
+    int n,k,m;cin>>n>>k>>m;
+    while(m--){
+        int i,j;cin>>i>>j;
+        g[i][j]=1;
+        cin>>s[i][j];
+    }
+    int day=0,turn=0;
+    int i=1,j=1,hunn=0;
+    while(turn<k){
+        if(i+ii[hunn]>n||i+ii[hunn]<1||j+jj[hunn]>n||j+jj[hunn]<1){
+            hunn=(hunn+2)%4;
+            turn++;
+        }
+        else{
+            day++;
+            i+=ii[hunn];
+            j+=jj[hunn];
+//            cout<<i<<' '<<j<<' '<<hunn<<'\n';
+            if(g[i][j]){
+                if(cnt[i][j][hunn][day%7]&&LOOP){
+                    int a=turn-cnt[i][j][hunn][day%7];
+                    if(a){
+                        int b=day-d[i][j][hunn][day%7];
+                        int skip=(k-turn)/a;
+                        day+=skip*b;
+                        turn+=skip*a;
+                        LOOP=false;
+                    }
+                }
+                cnt[i][j][hunn][day%7]=turn;
+                d[i][j][hunn][day%7]=day;
+//                cout<<s[i][j][(day-1)%7+1]<<' '<<day<<'\n';
+                if(s[i][j][day%7]=='L'){
+                    hunn=(hunn+3)%4;
+                    turn++;
+//                    cout<<"1\n";
+                }
+                else if(s[i][j][day%7]=='R'){
+                    hunn=(hunn+1)%4;
+                    turn++;
+//                    cout<<"2\n";
+                }
+            }
+        }
+    }
+    cout<<day;
+    return 0;
+}
