@@ -11664,7 +11664,8 @@ signed main()
     cin>>n>>k>>m;
     while(m--)
     {
-        int i,j;cin>>i>>j;
+        int i,j;
+        cin>>i>>j;
         g[i][j]=1;
         cin>>s[i][j];
     }
