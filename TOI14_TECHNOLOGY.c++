@@ -11690,7 +11690,6 @@ signed main(){
                 }
                 cnt[i][j][hunn][day%7]=turn;
                 d[i][j][hunn][day%7]=day;
-//                cout<<s[i][j][(day-1)%7+1]<<' '<<day<<'\n';
                 if(s[i][j][day%7]=='L'){
                     hunn=(hunn+3)%4;
                     turn++;
