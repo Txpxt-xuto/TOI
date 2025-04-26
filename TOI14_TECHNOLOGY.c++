@@ -11658,7 +11658,8 @@ int g[210][210],jj[4]={1,0,-1,0},ii[4]={0,1,0,-1};//R D L U
 int cnt[210][210][4][7],d[210][210][4][7];
 bool LOOP=true;
 string s[210][210];
-signed main(){
+signed main()
+{
     int n,k,m;cin>>n>>k>>m;
     while(m--)
     {
