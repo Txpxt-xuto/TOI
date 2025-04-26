@@ -11672,7 +11672,8 @@ signed main(){
             hunn=(hunn+2)%4;
             turn++;
         }
-        else{
+        else
+        {
             day++;
             i+=ii[hunn];
             j+=jj[hunn];
