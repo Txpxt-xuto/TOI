@@ -11676,7 +11676,6 @@ signed main(){
             day++;
             i+=ii[hunn];
             j+=jj[hunn];
-//            cout<<i<<' '<<j<<' '<<hunn<<'\n';
             if(g[i][j]){
                 if(cnt[i][j][hunn][day%7]&&LOOP)
                 {
