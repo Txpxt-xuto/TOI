@@ -11699,7 +11699,6 @@ signed main(){
                 else if(s[i][j][day%7]=='R'){
                     hunn=(hunn+1)%4;
                     turn++;
-//                    cout<<"2\n";
                 }
             }
         }
