@@ -11660,7 +11660,8 @@ bool LOOP=true;
 string s[210][210];
 signed main(){
     int n,k,m;cin>>n>>k>>m;
-    while(m--){
+    while(m--)
+    {
         int i,j;cin>>i>>j;
         g[i][j]=1;
         cin>>s[i][j];
