@@ -11680,7 +11680,8 @@ signed main(){
             if(g[i][j]){
                 if(cnt[i][j][hunn][day%7]&&LOOP){
                     int a=turn-cnt[i][j][hunn][day%7];
-                    if(a){
+                    if(a)
+                    {
                         int b=day-d[i][j][hunn][day%7];
                         int skip=(k-turn)/a;
                         day+=skip*b;
