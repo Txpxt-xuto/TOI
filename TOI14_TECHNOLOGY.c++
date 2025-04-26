@@ -11676,7 +11676,8 @@ signed main(){
             day++;
             i+=ii[hunn];
             j+=jj[hunn];
-            if(g[i][j]){
+            if(g[i][j])
+            {
                 if(cnt[i][j][hunn][day%7]&&LOOP)
                 {
                     int a=turn-cnt[i][j][hunn][day%7];
