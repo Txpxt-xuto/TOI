@@ -11654,7 +11654,7 @@ int main()
 #include <bits/stdc++.h>
 #define int long long
 using namespace std;
-int g[210][210],jj[4]={1,0,-1,0},ii[4]={0,1,0,-1};//R D L U
+int g[210][210],jj[4]={1,0,-1,0},ii[4]={0,1,0,-1};
 int cnt[210][210][4][7],d[210][210][4][7];
 bool LOOP=true;
 string s[210][210];
