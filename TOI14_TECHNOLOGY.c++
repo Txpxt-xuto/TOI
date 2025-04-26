@@ -11690,7 +11690,8 @@ signed main(){
                 }
                 cnt[i][j][hunn][day%7]=turn;
                 d[i][j][hunn][day%7]=day;
-                if(s[i][j][day%7]=='L'){
+                if(s[i][j][day%7]=='L')
+                {
                     hunn=(hunn+3)%4;
                     turn++;
                 }
