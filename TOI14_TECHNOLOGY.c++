@@ -11667,7 +11667,7 @@ signed main()
         int i,j;
         cin>>i>>j;
         g[i][j]=1;
-        cin>>s[i][j];
+        cin >> s[i][j];
     }
     int day=0,turn=0;
     int i=1,j=1,hunn=0;
