@@ -11678,7 +11678,8 @@ signed main(){
             j+=jj[hunn];
 //            cout<<i<<' '<<j<<' '<<hunn<<'\n';
             if(g[i][j]){
-                if(cnt[i][j][hunn][day%7]&&LOOP){
+                if(cnt[i][j][hunn][day%7]&&LOOP)
+                {
                     int a=turn-cnt[i][j][hunn][day%7];
                     if(a)
                     {
