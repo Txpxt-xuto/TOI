@@ -11712,6 +11712,6 @@ signed main()
             }
         }
     }
-    cout<<day;
+    cout << day;
     return 0;
 }
