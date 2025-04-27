@@ -11764,7 +11764,8 @@ int main()
                 }
             }
         }
-        else {
+        else
+        {
             int s,e;
             cin >> s >> e;
             ev.push_back({2, s, e});
