@@ -11715,3 +11715,98 @@ signed main()
     cout << day;
     return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+#define f first
+#define s second
+struct A{int u,v;} adj [100010];
+vector<vector<int>> ev;
+map<int,int> fcol;
+vector<pair<int,int>> col;
+int cut[100010][310];
+int graph[100010][310];
+int ans[100010], gr[100010];
+int fr(int p, int i){
+    if (graph[p][i] == p) return p;
+    else return graph[p][i] = fr(graph[p][i], i);
+}
+void uni(int u, int v, int i){
+    int fu = fr(u, i), fv = fr(v, i);
+    graph[fu][i] = fv;
+}
+int main()
+{
+    cin.tie(0)->sync_with_stdio(0);
+    int n,m,k,q;
+    cin >> n >> m >> k >> q;
+    for (int i = 0; i < k; i++){
+        int x;
+        cin >> x;
+        gr[x]++;
+    }
+    for (int i = 1; i <= 100000; i++){
+        if (gr[i]) fcol[gr[i]]++;
+    }
+    for (auto x : fcol) col.push_back({x.f, x.s});
+    int G = col.size();
+    for (int i = 1; i <= m; i++) cin >> adj[i].u >> adj[i].v;
+    int cnt_ans = 0;
+    while (q--){
+        int op; cin >> op;
+        if (op == 1){
+            int idx, l, r;
+            cin >> idx >> l >> r;
+            ev.push_back({1, idx ,l ,r});
+            for (int i = 0; i < G; i++){
+                if (col[i].f >= l && col[i].f <= r){
+                    cut[idx][i]++;
+                }
+            }
+        }
+        else {
+            int s,e;
+            cin >> s >> e;
+            ev.push_back({2, s, e});
+            cnt_ans++;
+        }
+    }
+    for (int i = 1; i <= n; i++){
+        for (int j = 0; j < G; j++){
+            graph[i][j] = i;
+        }
+    }
+    for (int i = 1; i <= m; i++){
+        for (int j = 0; j < G; j++){
+            if (cut[i][j] == 0) uni(adj[i].u, adj[i].v, j);
+        }
+    }
+    reverse(ev.begin(), ev.end());
+    int indxx = 0, sum = 0;
+    for (auto x : ev){
+        if (x[0] == 1){
+
+            for (int i = 0; i < G; i++){
+                if (col[i].f >= x[2] && col[i].f <= x[3]){
+                    cut[x[1]][i]--;
+                    if (cut[x[1]][i] == 0) uni(adj[x[1]].u, adj[x[1]].v, i);
+                }
+            }
+        }
+        else {
+            sum = 0;
+            for (int i = 0; i < G; i++){
+                int fu = fr(x[1],i);
+                int fv = fr(x[2],i);
+                if (fu == fv) sum += col[i].second;
+            }
+            ans[indxx++] = sum;
+        }
+    }
+    for (int i = cnt_ans-1; i >= 0; i--){
+        cout << ans[i] << "\n";
+    }
+
+
+    return 0;
+}
