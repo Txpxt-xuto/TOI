@@ -11783,7 +11783,8 @@ int main()
     }
     reverse(ev.begin(), ev.end());
     int indxx = 0, sum = 0;
-    for (auto x : ev){
+    for (auto x : ev)
+    {
         if(x[0] == 1)
         {
             for(int i=0;i<G;i++)
