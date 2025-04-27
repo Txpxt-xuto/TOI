@@ -11772,8 +11772,8 @@ int main()
         }
     }
     for (int i = 1; i <= n; i++){
-        for (int j = 0; j < G; j++){
-            graph[i][j] = i;
+        for (int j = 0; j < G; j++) graph[i][j] = i;
+            
         }
     }
     for(int i=1;i<=m;i++) for(int j=0;j<G;j++) if(cut[i][j] == 0) uni(adj[i].u, adj[i].v, j);
