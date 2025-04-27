@@ -11758,7 +11758,8 @@ int main()
             int idx, l, r;
             cin >> idx >> l >> r;
             ev.push_back({1, idx ,l ,r});
-            for (int i = 0; i < G; i++){
+            for (int i = 0; i < G; i++)
+            {
                 if (col[i].f >= l && col[i].f <= r){
                     cut[idx][i]++;
                 }
