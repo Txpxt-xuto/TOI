@@ -11795,7 +11795,7 @@ int main()
         }
         else {
             sum = 0;
-            for (int i=0;i < G; i++)
+            for (int i=0;i<G;i++)
             {
                 int fu = fr(x[1],i);
                 int fv = fr(x[2],i);
