@@ -11793,7 +11793,8 @@ int main()
                 }
             }
         }
-        else {
+        else
+        {
             sum = 0;
             for(int i=0;i<G;i++)
             {
