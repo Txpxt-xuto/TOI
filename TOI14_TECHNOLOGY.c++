@@ -11777,9 +11777,6 @@ int main()
         }
     }
     for (int i = 1; i <= m; i++) for (int j = 0; j < G; j++) if (cut[i][j] == 0) uni(adj[i].u, adj[i].v, j);
-    {
-        
-    }
     reverse(ev.begin(), ev.end());
     int indxx = 0, sum = 0;
     for(auto x : ev)
