@@ -11799,7 +11799,7 @@ int main()
             {
                 int fu = fr(x[1],i);
                 int fv = fr(x[2],i);
-                if (fu == fv) sum += col[i].second;
+                if(fu == fv) sum += col[i].second;
             }
             ans[indxx++] = sum;
         }
