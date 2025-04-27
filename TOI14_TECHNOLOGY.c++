@@ -11786,7 +11786,6 @@ int main()
     for (auto x : ev){
         if (x[0] == 1)
         {
-
             for(int i=0;i<G;i++)
             {
                 if (col[i].f >= x[2] && col[i].f <= x[3])
