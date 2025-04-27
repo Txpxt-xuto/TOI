@@ -11804,8 +11804,5 @@ int main()
         }
     }
     for (int i = cnt_ans-1; i >= 0; i--) cout << ans[i] << "\n";
-    {
-
-    
     return 0;
 }
