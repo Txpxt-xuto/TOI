@@ -11960,7 +11960,8 @@ int main(){
     for(int i=1;i<=n;i++){
         qs[i]=qs[i-1]+a[i];
     }
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++)
+    {
         int l=i,r=n;
         while(l<r)
         {
