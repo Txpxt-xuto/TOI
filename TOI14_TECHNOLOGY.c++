@@ -11965,7 +11965,7 @@ int main(){
         while(l<r)
         {
             int m=(l+r+1)/2;
-            if(calc_dist(i,m)<=k)l=m;
+            if(calc_dist(i,m)<=k) l=m;
             else r=m-1;
         }
         ll cand=calc_dist(i,l);
