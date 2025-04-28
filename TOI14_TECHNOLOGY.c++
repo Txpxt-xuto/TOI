@@ -11971,9 +11971,7 @@ int main(){
         if(cand>best){
             best=cand;
             ans={make_pair(i,l)};
-        }else if(cand==best)
-            ans.emplace_back(i,l);
-        
+        }else if(cand==best) ans.emplace_back(i,l);
     }
     for(auto [l,r]:ans) cout << l << " " << r << "\n";
 }
