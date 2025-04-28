@@ -11962,7 +11962,8 @@ int main(){
     }
     for(int i=1;i<=n;i++){
         int l=i,r=n;
-        while(l<r){
+        while(l<r)
+        {
             int m=(l+r+1)/2;
             if(calc_dist(i,m)<=k)l=m;
             else r=m-1;
