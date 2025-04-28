@@ -11975,7 +11975,7 @@ int main(){
             ans.emplace_back(i,l);
         }
     }
-    for(auto [l,r]:ans){
-        cout << l << " " << r << "\n";
+    for(auto [l,r]:ans) cout << l << " " << r << "\n";
+       
     }
 }
