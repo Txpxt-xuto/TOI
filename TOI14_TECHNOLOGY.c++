@@ -11968,7 +11968,8 @@ int main(){
             else r=m-1;
         }
         ll cand=calc_dist(i,l);
-        if(cand>best){
+        if(cand>best)
+        {
             best=cand;
             ans={make_pair(i,l)};
         }
