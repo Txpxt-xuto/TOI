@@ -11951,7 +11951,8 @@ ll calc_dist(int l,int r){
     }
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> k;
     for(int i=1;i<=n;i++) cin >> a[i];
