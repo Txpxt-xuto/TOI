@@ -11836,7 +11836,8 @@ int32_t main()
     ios::sync_with_stdio(false); cin.tie(0);
     cin>>n>>L;
     vector<pii> vec;
-    for(int i=1;i<=n;++i){
+    for(int i=1;i<=n;++i)
+    {
         int a,b,c,d,w; cin>>a>>b>>c>>d>>w;
         mp2[{{a,b},{c,d}}]=w;
         mp2[{{c,d},{a,b}}]=w;
