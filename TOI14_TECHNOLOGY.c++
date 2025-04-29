@@ -11872,7 +11872,8 @@ int32_t main(){
         }
     }
     int U,V;
-    for(int i=mn0;i<=mx0;++i){
+    for(int i=mn0;i<=mx0;++i)
+    {
         int u=f0({0,i}),v=f0({0,i-1}),w=mp2[{{0,i},{1,i}}];
         adj[u].pb({v,w});
         adj[v].pb({u,w});
