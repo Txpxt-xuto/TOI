@@ -11888,13 +11888,14 @@ int32_t main(){
     pq.push({0,U});
     memset(dist,0x3f,sizeof dist);
     dist[U]=0;
-    while(pq.size()){
+    while(pq.size())
+    {
         int w=pq.top().f;
         int u=pq.top().s;
         pq.pop();
         if(u==V)
         {
-            cout<< w;
+            cout << w;
             return 0;
         }
         for(auto &vw:adj[u])
