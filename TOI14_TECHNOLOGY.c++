@@ -11879,7 +11879,8 @@ int32_t main(){
         if(i==mn0) V=v;
         else if(i==mx0) U=u;
     }
-    for(int i=mn1;i<=mx1;++i){
+    for(int i=mn1;i<=mx1;++i)
+    {
         int u=f0({L-1,i}),v=f0({L-1,i-1}),w=mp2[{{L-1,i},{L,i}}];
         adj[u].pb({v,w});
         adj[v].pb({u,w});
