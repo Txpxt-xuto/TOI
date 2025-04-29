@@ -11894,7 +11894,7 @@ int32_t main(){
         pq.pop();
         if(u==V)
         {
-            cout<<w;
+            cout<< w;
             return 0;
         }
         for(auto &vw:adj[u])
