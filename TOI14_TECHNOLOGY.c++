@@ -11833,7 +11833,6 @@ int dist[400005];
 
 int32_t main(){
     ios::sync_with_stdio(false); cin.tie(0);
-
     cin>>n>>L;
     vector<pii> vec;
     for(int i=1;i<=n;++i){
@@ -11846,7 +11845,8 @@ int32_t main(){
     sort(vec.begin(),vec.end());
     vec.resize(unique(vec.begin(),vec.end())-vec.begin());
     int mn0=inf,mx0=-inf,mn1=inf,mx1=-inf;
-    for(auto &e:vec){
+    for(auto &e:vec)
+    {
         if(e.f>0&&e.f<L)
         {
             int u,v,w;
