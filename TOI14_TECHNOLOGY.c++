@@ -11866,7 +11866,8 @@ int32_t main(){
             mn0=min(mn0,e.s);
             mx0=max(mx0,e.s);
         }
-        else if(e.f==L){
+        else if(e.f==L)
+        {
             mn1=min(mn1,e.s);
             mx1=max(mx1,e.s);
         }
