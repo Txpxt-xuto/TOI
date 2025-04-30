@@ -12431,7 +12431,6 @@ void solve(int u,int p)
     }
     ms[u].insert(a[u]);
 }
-
 int main()
 {
     ios_base::sync_with_stdio(0);
