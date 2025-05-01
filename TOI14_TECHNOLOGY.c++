@@ -11976,3 +11976,56 @@ int main()
     }
     for(auto [l,r]:ans) cout << l << " " << r << "\n";
 }
+
+#include<bits/stdc++.h>
+ 
+using namespace std;
+ 
+#define ll long long
+#define pi pair<int, int>
+#define ti tuple<int, bool, int>
+#define all(x) x.begin(), x.end()
+
+const int mod=1e9+7;
+
+int main() {
+    vector<int> lim(3);
+    
+    int mxday;
+    cin >> mxday;
+    for(int i=0; i<3; i++) cin >> lim[i];
+    
+    vector<vector<int>> g={{0, 1, 1}, {0, 0, 1}, {1, 0, 0}};
+    
+    
+    vector<vector<vector<vector<int>>>> dp(mxday+1, vector<vector<vector<int>>>(3, vector<vector<int>>(mxday+1, vector<int>(1<<3))));
+    
+    dp[1][0][1][1]=1;
+    
+    for(int day=1; day<mxday; day++) {
+        for(int curr=0; curr<3; curr++) {
+            for(int stay=1; stay<=min(mxday, lim[curr]); stay++) {
+                for(int bit=1; bit<(1<<3); bit++) {
+                    if(stay<lim[curr]) dp[day+1][curr][stay+1][bit]=(dp[day+1][curr][stay+1][bit]+dp[day][curr][stay][bit])%mod;
+                    
+                    for(int next=0; next<3; next++) {
+                        if(!g[curr][next]) continue;
+                        int nextbit=bit|(1<<next);
+                        
+                        dp[day+1][next][1][nextbit]=(dp[day+1][next][1][nextbit]+dp[day][curr][stay][bit])%mod;
+                    }
+                }
+            }
+        }
+    }
+    
+    int ans=0;
+    
+    for(int end=0; end<3; end++) {
+        for(int stay=1; stay<=min(mxday, lim[end]); stay++) {
+            ans=(ans+dp[mxday][end][stay][7])%mod;
+        }
+    }
+    
+    cout << ans;
+}
