@@ -12026,6 +12026,6 @@ int main() {
             ans=(ans+dp[mxday][end][stay][7])%mod;
         }
     }
-    
+
     cout << ans;
 }
