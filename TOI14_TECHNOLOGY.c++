@@ -12022,6 +12022,5 @@ int main() {
     for(int end=0; end<3; end++) for(int stay=1; stay<=min(mxday, lim[end]); stay++) ans=(ans+dp[mxday][end][stay][7])%mod;
 
     
-
     cout << ans;
 }
