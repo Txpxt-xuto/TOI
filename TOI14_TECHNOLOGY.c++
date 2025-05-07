@@ -12002,7 +12002,8 @@ int main() {
     
     dp[1][0][1][1]=1;
     
-    for(int day=1; day<mxday; day++) {
+    for(int day=1; day<mxday; day++)
+    {
         for(int curr=0; curr<3; curr++) {
             for(int stay=1; stay<=min(mxday, lim[curr]); stay++) {
                 for(int bit=1; bit<(1<<3); bit++) {
