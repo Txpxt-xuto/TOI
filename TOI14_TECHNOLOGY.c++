@@ -11987,7 +11987,6 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 
 const int mod=1e9+7;
-
 int main()
 {
     vector<int> lim(3);
