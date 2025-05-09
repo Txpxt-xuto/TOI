@@ -11985,7 +11985,6 @@ using namespace std;
 #define pi pair<int, int>
 #define ti tuple<int, bool, int>
 #define all(x) x.begin(), x.end()
-
 const int mod=1e9+7;
 int main()
 {
