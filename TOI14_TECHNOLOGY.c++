@@ -11976,7 +11976,6 @@ int main()
     }
     for(auto [l,r]:ans) cout << l << " " << r << "\n";
 }
-
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
