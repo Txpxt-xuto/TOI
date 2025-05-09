@@ -11980,7 +11980,6 @@ int main()
 #include<bits/stdc++.h>
  
 using namespace std;
- 
 #define ll long long
 #define pi pair<int, int>
 #define ti tuple<int, bool, int>
