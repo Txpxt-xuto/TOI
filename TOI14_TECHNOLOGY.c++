@@ -11988,9 +11988,9 @@ using namespace std;
 
 const int mod=1e9+7;
 
-int main() {
+int main()
+{
     vector<int> lim(3);
-    
     int mxday;
     cin >> mxday;
     for(int i=0; i<3; i++) cin >> lim[i];
