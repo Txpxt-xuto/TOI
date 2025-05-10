@@ -11989,7 +11989,7 @@ int main()
     vector<int> lim(3);
     int mxday;
     cin >> mxday;
-    for(int i=0; i<3; i++) cin >> lim[i];
+    for(int i=0;i<3; i++) cin >> lim[i];
     vector<vector<int>> g={{0, 1, 1}, {0, 0, 1}, {1, 0, 0}};
     vector<vector<vector<vector<int>>>> dp(mxday+1, vector<vector<vector<int>>>(3, vector<vector<int>>(mxday+1, vector<int>(1<<3))));
     dp[1][0][1][1]=1;
