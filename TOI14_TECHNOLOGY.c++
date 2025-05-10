@@ -11999,10 +11999,10 @@ int main()
         {
             for(int stay=1;stay<=min(mxday,lim[curr]);stay++)
             {
-                for(int bit=1;bit<(1<<3); bit++)
+                for(int bit=1;bit<(1<<3);bit++)
                 {
                     if(stay<lim[curr]) dp[day+1][curr][stay+1][bit]=(dp[day+1][curr][stay+1][bit]+dp[day][curr][stay][bit])%mod;
-                    for(int next=0; next<3; next++)
+                    for(int next=0;next<3;next++)
                     {
                         if(!g[curr][next]) continue;
                         int nextbit=bit|(1<<next);
