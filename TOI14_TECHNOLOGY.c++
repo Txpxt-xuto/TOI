@@ -12016,3 +12016,304 @@ int main()
     for(int end=0;end<3;end++) for(int stay=1;stay<=min(mxday,lim[end]);stay++) ans=(ans+dp[mxday][end][stay][7])%mod;
     cout << ans;
 }
+
+#include <algorithm>
+#include <iostream>
+#include <vector>
+#include <bitset>
+#include <cstdint> // Include for int64_t
+
+#define __DEBUG__ 0
+#define __LOG__ 0
+using namespace std;
+
+// Define constants for infinity using int64_t
+const int64_t INF = 1'000'000'000'000'000'000LL; // 1e18
+const int64_t NEG_INF = -1'000'000'000'000'000'000LL; // -1e18
+
+struct edge2;
+vector<edge2> e[100001];
+vector<int> used; // Stores original 0-based indices of cycle edges
+vector<int64_t> adj; // Stores initial costs using int64_t
+bitset<100001> vs;
+
+// --- sum_segment_tree class (remains the same as before, operates on [0, N-1]) ---
+class sum_segment_tree {
+    protected:
+        int sz;
+        int64_t *tree, *lazy, *lazy2; // Use int64_t
+
+        void push (const int &idx, const int &l, const int &r);
+        void upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
+        void upd2 (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
+        int64_t qry (const int &idx, const int &l, const int &r, const int &x, const int &y);
+    public:
+        sum_segment_tree (const int &n);
+        ~sum_segment_tree();
+        size_t size() const;
+        void upd (const int &l, const int &r, const int64_t &val);
+        void upd2 (const int &l, const int &r, const int64_t &val);
+        int64_t qry (const int &l, const int &r);
+        int64_t qry ();
+
+        #if __DEBUG__
+            void print() {
+                cout << "sum_segment_tree (Indices 0.." << sz-1 << "):\n" << flush;
+                for (int i = 1; i < sz*2; ++i) cout << (i > 1 && i==(i&-i) ? "\n" : (i == 1 ? "" : " | ")) << (tree[i] >= INF ? "INF" : (tree[i] <= NEG_INF ? "-INF" : to_string(tree[i]))) << ", " << (lazy[i] ? to_string(lazy[i]) : "-") << ", " << (lazy2[i] >= INF || lazy2[i] <= NEG_INF ? "-" : to_string(lazy2[i])) << flush;
+                cout << "\n" << flush;
+            }
+        #endif
+};
+
+// --- max_segment_tree class (modified to operate on cycle edge indices [0, k-1]) ---
+class max_segment_tree {
+    protected:
+        int sz; // Size based on number of cycle edges (or N for simplicity)
+        int64_t *tree, *lazy, *lazy2; // Use int64_t for values/lazy
+        int *cnt; // Keep int for count
+
+        void push (const int &idx, const int &l, const int &r);
+        // Updates operate on the re-indexed space [0, k-1]
+        void upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
+        void upd2 (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
+        pair<int64_t, int> qry (const int &idx, const int &l, const int &r, const int &x, const int &y);
+
+    public:
+        // Constructor takes max possible size (N)
+        max_segment_tree (const int &n);
+        ~max_segment_tree();
+        size_t size() const;
+        // Public updates take the re-indexed range [ui, uf]
+        void upd (const int &l, const int &r, const int64_t &val);
+        void upd2 (const int &l, const int &r, const int64_t &val);
+        // Public query queries the whole re-indexed range
+        pair<int64_t, int> qry (const int &l, const int &r);
+        pair<int64_t, int> qry ();
+
+        #if __DEBUG__
+            void print(int k) { // k = number of cycle edges
+                cout << "max_segment_tree (Indices 0.." << k-1 << ", Size " << sz << "):\n" << flush;
+                 // Only print relevant part of the tree if k < sz
+                 int print_limit = (1 << (32 - __builtin_clz(max(1, k - 1)))) * 2;
+                for (int i = 1; i < print_limit && i < sz*2; ++i) cout << (i > 1 && i==(i&-i) ? "\n" : (i == 1 ? "" : " | ")) << (tree[i] >= INF ? "INF" : (tree[i] <= NEG_INF ? "-INF" : to_string(tree[i]))) << ", " << (lazy[i] ? to_string(lazy[i]) : "-") << ", " << (lazy2[i] >= INF || lazy2[i] <= NEG_INF ? "-" : to_string(lazy2[i])) << ", " << cnt[i] << flush;
+                cout << "\n" << flush;
+            }
+        #endif
+};
+
+// --- Global Segment Trees ---
+sum_segment_tree sm(100001); // Operates on original indices 0..N-1
+max_segment_tree mn(100001); // Operates on re-indexed cycle indices 0..k-1
+
+// --- Forward Declaration ---
+int dfs (const int &u, const int &p);
+
+// --- Main Function ---
+int main () {
+    ios_base::sync_with_stdio(0);
+    cout.tie(0);
+    cin.tie(0);
+
+    int n, q; cin >> n >> q;
+
+    adj.resize(n);
+
+    for (int i = 0; i < n; ++i) {
+        int u, v;
+        int64_t w; cin >> u >> v >> w;
+        e[u].emplace_back(v, w, i);
+        e[v].emplace_back(u, w, i);
+        sm.upd2(i, i, w); // Initialize sum tree (original indices)
+        adj[i] = w;
+    }
+
+    dfs(1, -1); // Find cycle edges, store original indices in 'used'
+
+    sort(used.begin(), used.end()); // **** SORT the cycle edge indices ****
+    int k = used.size(); // Number of cycle edges
+
+    // Initialize max tree using the RE-INDEXED space [0, k-1]
+    for (int i = 0; i < k; ++i) {
+        mn.upd2(i, i, adj[used[i]]); // Update index i in mn tree with cost of original edge used[i]
+    }
+
+
+    #if __DEBUG__
+        cout << "Sorted Cycle edge indices ('used'): "; for(int idx : used) cout << idx << " "; cout << endl;
+        cout << "Sum tree after init:\n"; sm.print();
+        cout << "Max tree after cycle init:\n"; mn.print(k); // Pass k for correct debug print range
+    #endif
+
+    // --- Process Queries ---
+    for (int i = 0; i < q; ++i) {
+        int type, s, t; // type was k before
+        int64_t c; cin >> type >> s >> t >> c;
+        --s; --t; // 0-based
+
+        // 1. Update sum tree on original range [s, t]
+        type == 1 ? sm.upd(s, t, c) : sm.upd2(s, t, c);
+
+        // 2. Find corresponding range [ui, uf] in the re-indexed space (0..k-1) for mn tree
+        // Find first cycle edge index >= s
+        auto it_l = lower_bound(used.begin(), used.end(), s);
+        // Find last cycle edge index <= t
+        auto it_r = upper_bound(used.begin(), used.end(), t); // Iterator points *after* the last element <= t
+
+        int ui = it_l - used.begin();
+        int uf = (it_r - used.begin()) - 1; // Index of the element *before* it_r
+
+        #if __DEBUG__
+             cout << "Tasks request " << (type == 1 ? "add" : "replace") << " on original [" << s << "," << t << "] val " << c << ". Mapped to cycle indices [" << ui << "," << uf << "]\n" << flush;
+        #endif
+
+        // 3. Update max tree on the RE-INDEXED range [ui, uf]
+        // Check if the range [ui, uf] is valid before updating
+        if (ui <= uf) { // Only update if there are cycle edges in the original [s, t] range
+             type == 1 ? mn.upd(ui, uf, c) : mn.upd2(ui, uf, c);
+        }
+
+
+        #if __DEBUG__
+            sm.print(); mn.print(k);
+        #endif
+
+        // Query results
+        int64_t total_sum = sm.qry();
+        pair<int64_t, int> max_res = mn.qry(); // Queries mn tree over its range [0, k-1]
+        int64_t max_cycle_cost = max_res.first;
+        int count = max_res.second;
+
+        // Handle potential edge case where k=0 (no cycle?), though problem implies one exists
+        if (k == 0) {
+             // Should not happen based on N nodes, N edges, connected.
+             // Output total sum? Or error? Assuming k > 0.
+             cout << total_sum << " 0\n"; // Or handle as per problem constraints clarification
+        }
+         // Handle case where all cycle edges might become NEG_INF? Unlikely with problem cost ranges.
+        else if (max_cycle_cost <= NEG_INF) {
+             cout << total_sum << " " << 0 << "\n"; // Or total_sum - NEG_INF ? Check constraints. Assume max exists.
+        }
+        else {
+            cout << total_sum - max_cycle_cost << " " << count << "\n";
+        }
+    }
+    return 0;
+}
+
+// --- Struct Definition ---
+// (Same as before)
+struct edge2 {
+    int v; int64_t w; int idx;
+    edge2 (const int &v, const int64_t &w, const int &idx) : v(v), w(w), idx(idx) {}
+    bool operator < (const edge2& other) const { return w < other.w; }
+};
+
+// --- DFS for Cycle Finding ---
+// (Same as before)
+int dfs (const int &u, const int &p) {
+    vs[u] = 1;
+    for (const auto &[v, w, idx] : e[u]) {
+         if (v == p) continue;
+         if (vs[v]) { used.emplace_back(idx); return v; }
+         int res = dfs(v, u);
+         if (!res) continue;
+         used.emplace_back(idx);
+         return (res == u) ? 0 : res;
+    }
+    return 0;
+}
+
+
+// --- sum_segment_tree Implementation ---
+// (Same as before - operates on original indices 0..N-1)
+void sum_segment_tree::push (const int &idx, const int &l, const int &r) {
+    if (lazy[idx] == 0LL && lazy2[idx] >= INF) return;
+    int64_t range_size = (int64_t)(r - l + 1);
+    if (lazy2[idx] < INF) { tree[idx] = lazy2[idx] * range_size; if (l != r) lazy2[idx<<1] = lazy2[idx<<1|1] = lazy2[idx], lazy[idx<<1] = lazy[idx<<1|1] = 0LL; }
+    if (lazy[idx] != 0LL) { tree[idx] += lazy[idx] * range_size; if (l != r) lazy[idx<<1] += lazy[idx], lazy[idx<<1|1] += lazy[idx]; }
+    lazy[idx] = 0LL; lazy2[idx] = INF;
+}
+void sum_segment_tree::upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val) {
+    push(idx, l, r); if (l > y || r < x || x > y) return; if (l >= x && r <= y) { lazy[idx] += val; push(idx, l, r); return; }
+    int m = l + (r - l) / 2; upd(idx<<1, l, m, x, y, val); upd(idx<<1|1, m+1, r, x, y, val); tree[idx] = tree[idx<<1] + tree[idx<<1|1];
+}
+void sum_segment_tree::upd2 (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val) {
+    push(idx, l, r); if (l > y || r < x || x > y) return; if (l >= x && r <= y) { lazy2[idx] = val; lazy[idx] = 0LL; push(idx, l, r); return; }
+    int m = l + (r - l) / 2; upd2(idx<<1, l, m, x, y, val); upd2(idx<<1|1, m+1, r, x, y, val); tree[idx] = tree[idx<<1] + tree[idx<<1|1];
+}
+int64_t sum_segment_tree::qry (const int &idx, const int &l, const int &r, const int &x, const int &y) {
+    push(idx, l, r); if (l > y || r < x || x > y) return 0LL; if (l >= x && r <= y) return tree[idx];
+    int m = l + (r - l) / 2; return qry(idx<<1, l, m, x, y) + qry(idx<<1|1, m+1, r, x, y);
+}
+sum_segment_tree::sum_segment_tree (const int &n) : sz(1 << (32 - __builtin_clz(max(1, n - 1)))), tree(new int64_t[sz<<1]), lazy(new int64_t[sz<<1]), lazy2(new int64_t[sz<<1]) { for (int i = 0; i < (sz << 1); ++i) tree[i] = 0LL, lazy[i] = 0LL, lazy2[i] = INF; }
+sum_segment_tree::~sum_segment_tree() { delete[] tree; delete[] lazy; delete[] lazy2; }
+size_t sum_segment_tree::size() const { return sz; }
+void sum_segment_tree::upd (const int &l, const int &r, const int64_t &val) { if (l<=r) upd(1, 0, sz - 1, l, r, val); }
+void sum_segment_tree::upd2 (const int &l, const int &r, const int64_t &val) { if (l<=r) upd2(1, 0, sz - 1, l, r, val); }
+int64_t sum_segment_tree::qry (const int &l, const int &r) { return (l<=r) ? qry(1, 0, sz - 1, l, r) : 0LL; }
+int64_t sum_segment_tree::qry () { push(1, 0, sz - 1); return tree[1]; }
+
+
+// --- max_segment_tree Implementation ---
+// (Operates on RE-INDEXED cycle indices 0..k-1, where k = used.size())
+void max_segment_tree::push (const int &idx, const int &l, const int &r) {
+    if (lazy[idx] == 0LL && lazy2[idx] >= INF) return;
+    if (lazy2[idx] < INF) { tree[idx] = lazy2[idx]; cnt[idx] = (tree[idx] > NEG_INF) ? (r - l + 1) : 0; if (l != r) lazy2[idx<<1] = lazy2[idx<<1|1] = lazy2[idx], lazy[idx<<1] = lazy[idx<<1|1] = 0LL; }
+    if (lazy[idx] != 0LL) { if (tree[idx] > NEG_INF) tree[idx] += lazy[idx]; if (l != r) lazy[idx<<1] += lazy[idx], lazy[idx<<1|1] += lazy[idx]; }
+    lazy[idx] = 0LL; lazy2[idx] = INF;
+}
+void max_segment_tree::upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val) {
+    push(idx, l, r); if (l > y || r < x || x > y) return; if (l >= x && r <= y) { lazy[idx] += val; push(idx, l, r); return; }
+    int m = l + (r - l) / 2; upd(idx<<1, l, m, x, y, val); upd(idx<<1|1, m+1, r, x, y, val);
+    if (tree[idx<<1] == tree[idx<<1|1]) { tree[idx] = tree[idx<<1]; cnt[idx] = (tree[idx] > NEG_INF) ? (cnt[idx<<1] + cnt[idx<<1|1]) : 0; }
+    else if (tree[idx<<1] > tree[idx<<1|1]) { tree[idx] = tree[idx<<1]; cnt[idx] = cnt[idx<<1]; }
+    else { tree[idx] = tree[idx<<1|1]; cnt[idx] = cnt[idx<<1|1]; }
+    if (tree[idx] <= NEG_INF) cnt[idx] = 0;
+}
+void max_segment_tree::upd2 (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val) {
+    push(idx, l, r); if (l > y || r < x || x > y) return; if (l >= x && r <= y) { lazy2[idx] = val; lazy[idx] = 0LL; push(idx, l, r); return; }
+    int m = l + (r - l) / 2; upd2(idx<<1, l, m, x, y, val); upd2(idx<<1|1, m+1, r, x, y, val);
+    if (tree[idx<<1] == tree[idx<<1|1]) { tree[idx] = tree[idx<<1]; cnt[idx] = (tree[idx] > NEG_INF) ? (cnt[idx<<1] + cnt[idx<<1|1]) : 0; }
+    else if (tree[idx<<1] > tree[idx<<1|1]) { tree[idx] = tree[idx<<1]; cnt[idx] = cnt[idx<<1]; }
+    else { tree[idx] = tree[idx<<1|1]; cnt[idx] = cnt[idx<<1|1]; }
+    if (tree[idx] <= NEG_INF) cnt[idx] = 0;
+}
+pair<int64_t, int> max_segment_tree::qry (const int &idx, const int &l, const int &r, const int &x, const int &y) {
+    push(idx, l, r); if (l > y || r < x || x > y) return {NEG_INF, 0}; if (l >= x && r <= y) return {tree[idx], (tree[idx] > NEG_INF ? cnt[idx] : 0)};
+    int m = l + (r - l) / 2; pair<int64_t, int> left_res = qry(idx<<1, l, m, x, y), right_res = qry(idx<<1|1, m+1, r, x, y);
+    if (left_res.first == right_res.first) return {left_res.first, (left_res.first > NEG_INF ? left_res.second + right_res.second : 0)};
+    else if (left_res.first > right_res.first) return left_res; else return right_res;
+}
+max_segment_tree::max_segment_tree (const int &n) : sz(1 << (32 - __builtin_clz(max(1, n - 1)))), tree(new int64_t[sz<<1]), lazy(new int64_t[sz<<1]), lazy2(new int64_t[sz<<1]), cnt(new int[sz<<1]) {
+    for (int i = 0; i < sz; ++i) { tree[sz + i] = NEG_INF; cnt[sz + i] = 1; lazy[sz + i] = 0LL; lazy2[sz + i] = INF; } // Init leaves
+    for (int i = sz - 1; i > 0; --i) { // Init internal nodes
+        if (tree[i<<1] == tree[i<<1|1]) { tree[i] = tree[i<<1]; cnt[i] = (tree[i] > NEG_INF) ? (cnt[i<<1] + cnt[i<<1|1]) : 0; }
+        else if (tree[i<<1] > tree[i<<1|1]) { tree[i] = tree[i<<1]; cnt[i] = cnt[i<<1]; }
+        else { tree[i] = tree[i<<1|1]; cnt[i] = cnt[i<<1|1]; }
+        if (tree[i] <= NEG_INF) cnt[i] = 0; lazy[i] = 0LL; lazy2[i] = INF;
+    }
+}
+max_segment_tree::~max_segment_tree() { delete[] tree; delete[] lazy; delete[] lazy2; delete[] cnt; }
+size_t max_segment_tree::size() const { return sz; }
+// Public updates/queries now operate on the RE-INDEXED range [0..k-1]
+void max_segment_tree::upd (const int &l, const int &r, const int64_t &val) { if(l<=r) upd(1, 0, sz - 1, l, r, val); }
+void max_segment_tree::upd2 (const int &l, const int &r, const int64_t &val) { if(l<=r) upd2(1, 0, sz - 1, l, r, val); }
+// Query specific range [l, r] within the re-indexed space
+pair<int64_t, int> max_segment_tree::qry (const int &l, const int &r) { return (l<=r) ? qry(1, 0, sz - 1, l, r) : make_pair(NEG_INF, 0); }
+// Query the entire re-indexed range [0, k-1] implicitly (k determined in main)
+pair<int64_t, int> max_segment_tree::qry () {
+    // We query up to sz-1, but the relevant data is only in indices 0..k-1
+    // The query function handles out-of-bounds correctly by returning NEG_INF
+    // However, it's slightly cleaner to query explicitly up to k-1 if k > 0
+    // For simplicity and consistency with previous qry(), let's query the whole tree.
+    // The result will be correct because non-initialized parts are NEG_INF.
+    push(1, 0, sz - 1);
+    // If the root's range covers indices outside [0, k-1], the query needs care.
+    // Let's query the specific range [0, k-1] where k = used.size()
+    // This requires k to be known here, or passed.
+    // Simplest: query the root, its range is [0, sz-1]. The internal qry handles bounds.
+     pair<int64_t, int> res = qry(1, 0, sz - 1, 0, sz - 1); // Query valid range
+     return {res.first, (res.first > NEG_INF ? res.second : 0)};
+     // Alternative: Get k (used.size()) and query qry(0, k-1)
+     // push(1, 0, sz - 1); return {tree[1], (tree[1] > NEG_INF ? cnt[1] : 0)}; // Original style - might be wrong if sz > k significantly
+}
