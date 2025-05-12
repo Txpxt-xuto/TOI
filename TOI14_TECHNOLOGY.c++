@@ -12308,6 +12308,6 @@ pair<int64_t, int> max_segment_tree::qry () {
     // For simplicity and consistency with previous qry(), let's query the whole tree.
     // The result will be correct because non-initialized parts are NEG_INF.
     push(1, 0, sz - 1);
-     pair<int64_t, int> res = qry(1, 0, sz - 1, 0, sz - 1);
-     return {res.first, (res.first > NEG_INF ? res.second : 0)};
+    pair<int64_t, int> res = qry(1, 0, sz - 1, 0, sz - 1);
+    return {res.first, (res.first > NEG_INF ? res.second : 0)};
 }
