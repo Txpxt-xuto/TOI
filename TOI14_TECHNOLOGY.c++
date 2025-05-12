@@ -12308,7 +12308,6 @@ pair<int64_t, int> max_segment_tree::qry () {
     // For simplicity and consistency with previous qry(), let's query the whole tree.
     // The result will be correct because non-initialized parts are NEG_INF.
     push(1, 0, sz - 1);
-    // If the root's range covers indices outside [0, k-1], the query needs care.
     // Let's query the specific range [0, k-1] where k = used.size()
 
     // Simplest: query the root, its range is [0, sz-1]. The internal qry handles bounds.
