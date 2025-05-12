@@ -12310,7 +12310,6 @@ pair<int64_t, int> max_segment_tree::qry () {
     push(1, 0, sz - 1);
     // Let's query the specific range [0, k-1] where k = used.size()
 
-    // Simplest: query the root, its range is [0, sz-1]. The internal qry handles bounds.
      pair<int64_t, int> res = qry(1, 0, sz - 1, 0, sz - 1);
      return {res.first, (res.first > NEG_INF ? res.second : 0)};
 }
