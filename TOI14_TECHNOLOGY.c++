@@ -12315,5 +12315,4 @@ pair<int64_t, int> max_segment_tree::qry () {
      pair<int64_t, int> res = qry(1, 0, sz - 1, 0, sz - 1); // Query valid range
      return {res.first, (res.first > NEG_INF ? res.second : 0)};
      // Alternative: Get k (used.size()) and query qry(0, k-1)
-     
 }
