@@ -12371,7 +12371,8 @@ int32_t main(){
             cout<<w;
             return 0;
         }
-        for(auto &vw:adj[u]){
+        for(auto &vw:adj[u])
+        {
             if(dist[vw.f]>w+vw.s)
             {
                 dist[vw.f]=w+vw.s;
