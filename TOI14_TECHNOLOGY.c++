@@ -12322,7 +12322,8 @@ int32_t main(){
     vec.resize(unique(vec.begin(),vec.end())-vec.begin());
     int mn0=inf,mx0=-inf,mn1=inf,mx1=-inf;
     for(auto &e:vec){
-        if(e.f>0&&e.f<L){
+        if(e.f>0&&e.f<L)
+        {
             int u,v,w;
             u=f0({e.f,e.s}),v=f0({e.f,e.s-1}),w=mp2[{{e.f,e.s},{e.f+1,e.s}}];
             adj[u].pb({v,w});
