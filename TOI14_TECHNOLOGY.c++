@@ -12321,7 +12321,8 @@ int32_t main(){
     sort(vec.begin(),vec.end());
     vec.resize(unique(vec.begin(),vec.end())-vec.begin());
     int mn0=inf,mx0=-inf,mn1=inf,mx1=-inf;
-    for(auto &e:vec){
+    for(auto &e:vec)
+    {
         if(e.f>0&&e.f<L)
         {
             int u,v,w;
