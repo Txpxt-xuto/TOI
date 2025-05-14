@@ -12313,7 +12313,8 @@ int32_t main(){
     vector<pii> vec;
     for(int i=1;i<=n;++i)
     {
-        int a,b,c,d,w; cin>>a>>b>>c>>d>>w;
+        int a,b,c,d,w;
+        cin>>a>>b>>c>>d>>w;
         mp2[{{a,b},{c,d}}]=w;
         mp2[{{c,d},{a,b}}]=w;
         vec.pb({a,b});
