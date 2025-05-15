@@ -12294,7 +12294,8 @@ int n,L;
 map<pii,int> mp;
 map<pair<pii,pii>,int> mp2;
 int cnt;
-int f0(pii x){
+int f0(pii x)
+{
     if(mp[x]) return mp[x];
     if(x.f>=0&&x.f<L) return mp[x]=++cnt;
     return -1;
