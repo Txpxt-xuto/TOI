@@ -12196,10 +12196,6 @@ int dfs (const int &u, const int &p) {
     }
     return 0;
 }
-
-
-// --- sum_segment_tree Implementation ---
-// (Same as before - operates on original indices 0..N-1)
 void sum_segment_tree::push (const int &idx, const int &l, const int &r)
 {
     if (lazy[idx] == 0LL && lazy2[idx] >= INF) return;
