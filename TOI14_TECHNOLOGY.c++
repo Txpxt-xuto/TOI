@@ -12207,7 +12207,8 @@ void sum_segment_tree::push (const int &idx, const int &l, const int &r) {
     if (lazy[idx] != 0LL) { tree[idx] += lazy[idx] * range_size; if (l != r) lazy[idx<<1] += lazy[idx], lazy[idx<<1|1] += lazy[idx]; }
     lazy[idx] = 0LL; lazy2[idx] = INF;
 }
-void sum_segment_tree::upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val) {
+void sum_segment_tree::upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val)
+{
     push(idx, l, r); if (l > y || r < x || x > y) return; if (l >= x && r <= y) { lazy[idx] += val; push(idx, l, r); return; }
     int m = l + (r - l) / 2; upd(idx<<1, l, m, x, y, val); upd(idx<<1|1, m+1, r, x, y, val); tree[idx] = tree[idx<<1] + tree[idx<<1|1];
 }
