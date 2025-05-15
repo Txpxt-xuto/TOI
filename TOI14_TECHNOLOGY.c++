@@ -12186,7 +12186,8 @@ struct edge2 {
 };
 int dfs (const int &u, const int &p) {
     vs[u] = 1;
-    for (const auto &[v, w, idx] : e[u]) {
+    for (const auto &[v, w, idx] : e[u])
+    {
         if (v == p) continue;
         if (vs[v]) { used.emplace_back(idx); return v; }
         int res = dfs(v, u);
