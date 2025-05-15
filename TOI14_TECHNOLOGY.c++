@@ -12233,7 +12233,8 @@ void max_segment_tree::push (const int &idx, const int &l, const int &r)
     if (lazy[idx] != 0LL) { if (tree[idx] > NEG_INF) tree[idx] += lazy[idx]; if (l != r) lazy[idx<<1] += lazy[idx], lazy[idx<<1|1] += lazy[idx]; }
     lazy[idx] = 0LL; lazy2[idx] = INF;
 }
-void max_segment_tree::upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val) {
+void max_segment_tree::upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val)
+{
     push(idx, l, r); if (l > y || r < x || x > y) return; if (l >= x && r <= y) { lazy[idx] += val; push(idx, l, r); return; }
     int m = l + (r - l) / 2; upd(idx<<1, l, m, x, y, val); upd(idx<<1|1, m+1, r, x, y, val);
     if (tree[idx<<1] == tree[idx<<1|1]) { tree[idx] = tree[idx<<1]; cnt[idx] = (tree[idx] > NEG_INF) ? (cnt[idx<<1] + cnt[idx<<1|1]) : 0; }
