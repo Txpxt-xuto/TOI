@@ -12226,10 +12226,6 @@ void sum_segment_tree::upd (const int &l, const int &r, const int64_t &val) { if
 void sum_segment_tree::upd2 (const int &l, const int &r, const int64_t &val) { if (l<=r) upd2(1, 0, sz - 1, l, r, val); }
 int64_t sum_segment_tree::qry (const int &l, const int &r) { return (l<=r) ? qry(1, 0, sz - 1, l, r) : 0LL; }
 int64_t sum_segment_tree::qry () { push(1, 0, sz - 1); return tree[1]; }
-
-
-// --- max_segment_tree Implementation ---
-// (Operates on RE-INDEXED cycle indices 0..k-1, where k = used.size())
 void max_segment_tree::push (const int &idx, const int &l, const int &r) {
     if (lazy[idx] == 0LL && lazy2[idx] >= INF) return;
     if (lazy2[idx] < INF) { tree[idx] = lazy2[idx]; cnt[idx] = (tree[idx] > NEG_INF) ? (r - l + 1) : 0; if (l != r) lazy2[idx<<1] = lazy2[idx<<1|1] = lazy2[idx], lazy[idx<<1] = lazy[idx<<1|1] = 0LL; }
