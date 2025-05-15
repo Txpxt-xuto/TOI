@@ -12200,7 +12200,8 @@ int dfs (const int &u, const int &p) {
 
 // --- sum_segment_tree Implementation ---
 // (Same as before - operates on original indices 0..N-1)
-void sum_segment_tree::push (const int &idx, const int &l, const int &r) {
+void sum_segment_tree::push (const int &idx, const int &l, const int &r)
+{
     if (lazy[idx] == 0LL && lazy2[idx] >= INF) return;
     int64_t range_size = (int64_t)(r - l + 1);
     if (lazy2[idx] < INF) { tree[idx] = lazy2[idx] * range_size; if (l != r) lazy2[idx<<1] = lazy2[idx<<1|1] = lazy2[idx], lazy[idx<<1] = lazy[idx<<1|1] = 0LL; }
