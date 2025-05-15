@@ -12192,7 +12192,7 @@ int dfs (const int &u, const int &p)
         if(v == p) continue;
         if(vs[v]) { used.emplace_back(idx); return v; }
         int res = dfs(v, u);
-        if (!res) continue;
+        if(!res) continue;
         used.emplace_back(idx);
         return (res == u) ? 0 : res;
     }
