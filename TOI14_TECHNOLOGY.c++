@@ -12118,7 +12118,8 @@ int main () {
 
     adj.resize(n);
 
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
+    {
         int u, v;
         int64_t w; cin >> u >> v >> w;
         e[u].emplace_back(v, w, i);
