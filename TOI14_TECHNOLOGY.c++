@@ -12152,8 +12152,6 @@ int main () {
         --s; --t; // 0-based
         // 1. Update sum tree on original range [s, t]
         type == 1 ? sm.upd(s, t, c) : sm.upd2(s, t, c);
-        // 2. Find corresponding range [ui, uf] in the re-indexed space (0..k-1) for mn tree
-        // Find first cycle edge index >= s
         auto it_l = lower_bound(used.begin(), used.end(), s);
         auto it_r = upper_bound(used.begin(), used.end(), t);
         int ui = it_l - used.begin();
