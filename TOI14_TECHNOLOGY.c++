@@ -12121,7 +12121,8 @@ int main () {
     for (int i = 0; i < n; ++i)
     {
         int u, v;
-        int64_t w; cin >> u >> v >> w;
+        int64_t w;
+        cin >> u >> v >> w;
         e[u].emplace_back(v, w, i);
         e[v].emplace_back(u, w, i);
         sm.upd2(i, i, w);
