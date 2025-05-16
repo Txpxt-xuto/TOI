@@ -12155,7 +12155,6 @@ int main () {
         // 2. Find corresponding range [ui, uf] in the re-indexed space (0..k-1) for mn tree
         // Find first cycle edge index >= s
         auto it_l = lower_bound(used.begin(), used.end(), s);
-        // Find last cycle edge index <= t
         auto it_r = upper_bound(used.begin(), used.end(), t);
         int ui = it_l - used.begin();
         int uf = (it_r - used.begin()) - 1;
