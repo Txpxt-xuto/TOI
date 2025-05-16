@@ -12141,7 +12141,6 @@ int main () {
         cout << "Sum tree after init:\n"; sm.print();
         cout << "Max tree after cycle init:\n"; mn.print(k);
     #endif
-
     // --- Process Queries ---
     for(int i = 0; i < q; ++i)
     {
