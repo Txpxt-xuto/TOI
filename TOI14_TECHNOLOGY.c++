@@ -12145,7 +12145,7 @@ int main () {
     #endif
 
     // --- Process Queries ---
-    for (int i = 0; i < q; ++i) {
+    for(int i = 0; i < q; ++i) {
         int type, s, t; // type was k before
         int64_t c; cin >> type >> s >> t >> c;
         --s; --t; // 0-based
