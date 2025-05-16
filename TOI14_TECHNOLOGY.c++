@@ -12161,7 +12161,6 @@ int main () {
 
         int ui = it_l - used.begin();
         int uf = (it_r - used.begin()) - 1; // Index of the element *before* it_r
-
         #if __DEBUG__ cout << "Tasks request " << (type == 1 ? "add" : "replace") << " on original [" << s << "," << t << "] val " << c << ". Mapped to cycle indices [" << ui << "," << uf << "]\n" << flush;
         #endif
         if (ui <= uf) type == 1 ? mn.upd(ui, uf, c) : mn.upd2(ui, uf, c);
