@@ -12123,7 +12123,7 @@ int main () {
         int64_t w; cin >> u >> v >> w;
         e[u].emplace_back(v, w, i);
         e[v].emplace_back(u, w, i);
-        sm.upd2(i, i, w); // Initialize sum tree (original indices)
+        sm.upd2(i, i, w);
         adj[i] = w;
     }
     dfs(1, -1);
