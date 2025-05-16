@@ -12156,7 +12156,7 @@ int main () {
         // Find first cycle edge index >= s
         auto it_l = lower_bound(used.begin(), used.end(), s);
         // Find last cycle edge index <= t
-        auto it_r = upper_bound(used.begin(), used.end(), t); // Iterator points *after* the last element <= t
+        auto it_r = upper_bound(used.begin(), used.end(), t);
         int ui = it_l - used.begin();
         int uf = (it_r - used.begin()) - 1;
         #if __DEBUG__ cout << "Tasks request " << (type == 1 ? "add" : "replace") << " on original [" << s << "," << t << "] val " << c << ". Mapped to cycle indices [" << ui << "," << uf << "]\n" << flush;
