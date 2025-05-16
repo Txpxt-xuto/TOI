@@ -12141,7 +12141,7 @@ int main () {
     #if __DEBUG__
         cout << "Sorted Cycle edge indices ('used'): "; for(int idx : used) cout << idx << " "; cout << endl;
         cout << "Sum tree after init:\n"; sm.print();
-        cout << "Max tree after cycle init:\n"; mn.print(k); // Pass k for correct debug print range
+        cout << "Max tree after cycle init:\n"; mn.print(k);
     #endif
 
     // --- Process Queries ---
