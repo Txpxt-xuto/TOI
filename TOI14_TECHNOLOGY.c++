@@ -12131,8 +12131,6 @@ int main () {
 
     sort(used.begin(), used.end()); // **** SORT the cycle edge indices ****
     int k = used.size(); // Number of cycle edges
-
-    // Initialize max tree using the RE-INDEXED space [0, k-1]
     for (int i = 0; i < k; ++i) {
         mn.upd2(i, i, adj[used[i]]);
     }
