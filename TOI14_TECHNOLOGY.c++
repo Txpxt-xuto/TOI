@@ -12126,7 +12126,6 @@ int main () {
         sm.upd2(i, i, w); // Initialize sum tree (original indices)
         adj[i] = w;
     }
-
     dfs(1, -1);
     sort(used.begin(), used.end());
     int k = used.size();
