@@ -12149,7 +12149,6 @@ int main () {
         int type, s, t; // type was k before
         int64_t c; cin >> type >> s >> t >> c;
         --s; --t; // 0-based
-
         // 1. Update sum tree on original range [s, t]
         type == 1 ? sm.upd(s, t, c) : sm.upd2(s, t, c);
 
