@@ -12117,7 +12117,7 @@ int main () {
     int n, q; cin >> n >> q;
 
     adj.resize(n);
-    for (int i = 0; i < n; ++i)
+    for (int i=0;i<n;++i)
     {
         int u, v;
         int64_t w;
