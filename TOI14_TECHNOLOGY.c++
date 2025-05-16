@@ -12134,7 +12134,7 @@ int main () {
 
     // Initialize max tree using the RE-INDEXED space [0, k-1]
     for (int i = 0; i < k; ++i) {
-        mn.upd2(i, i, adj[used[i]]); // Update index i in mn tree with cost of original edge used[i]
+        mn.upd2(i, i, adj[used[i]]);
     }
 
 
