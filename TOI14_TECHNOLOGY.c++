@@ -12127,8 +12127,7 @@ int main () {
         adj[i] = w;
     }
 
-    dfs(1, -1); // Find cycle edges, store original indices in 'used'
-
+    dfs(1, -1);
     sort(used.begin(), used.end());
     int k = used.size();
     for (int i = 0; i < k; ++i) {
