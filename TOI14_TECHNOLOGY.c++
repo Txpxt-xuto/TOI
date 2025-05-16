@@ -12148,7 +12148,8 @@ int main () {
     for(int i = 0; i < q; ++i)
     {
         int type, s, t;
-        int64_t c; cin >> type >> s >> t >> c;
+        int64_t c;
+        cin >> type >> s >> t >> c;
         --s; --t;
         type == 1 ? sm.upd(s, t, c) : sm.upd2(s, t, c);
         auto it_l = lower_bound(used.begin(), used.end(), s);
