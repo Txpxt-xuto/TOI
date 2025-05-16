@@ -12130,7 +12130,7 @@ int main () {
     dfs(1, -1); // Find cycle edges, store original indices in 'used'
 
     sort(used.begin(), used.end()); // **** SORT the cycle edge indices ****
-    int k = used.size(); // Number of cycle edges
+    int k = used.size();
     for (int i = 0; i < k; ++i) {
         mn.upd2(i, i, adj[used[i]]);
     }
