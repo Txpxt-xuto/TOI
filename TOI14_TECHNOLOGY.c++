@@ -12103,9 +12103,7 @@ class max_segment_tree {
 
 // --- Global Segment Trees ---
 sum_segment_tree sm(100001); // Operates on original indices 0..N-1
-max_segment_tree mn(100001); // Operates on re-indexed cycle indices 0..k-1
-
-// --- Forward Declaration ---
+max_segment_tree mn(100001);
 int dfs (const int &u, const int &p);
 int main ()
 {
