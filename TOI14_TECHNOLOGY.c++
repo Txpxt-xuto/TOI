@@ -12107,8 +12107,6 @@ max_segment_tree mn(100001); // Operates on re-indexed cycle indices 0..k-1
 
 // --- Forward Declaration ---
 int dfs (const int &u, const int &p);
-
-// --- Main Function ---
 int main ()
 {
     ios_base::sync_with_stdio(0);
