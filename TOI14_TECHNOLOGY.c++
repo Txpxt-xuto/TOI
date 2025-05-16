@@ -12136,8 +12136,6 @@ int main () {
     for (int i = 0; i < k; ++i) {
         mn.upd2(i, i, adj[used[i]]);
     }
-
-
     #if __DEBUG__
         cout << "Sorted Cycle edge indices ('used'): "; for(int idx : used) cout << idx << " "; cout << endl;
         cout << "Sum tree after init:\n"; sm.print();
