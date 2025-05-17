@@ -12383,7 +12383,8 @@ void solve(int u,int p){
         for(auto it : ms[v]){
             if(ms[u].empty())break;
             auto ij=ms[u].lower_bound((sum-it)/2);
-            if(ij==ms[u].end()){
+            if(ij==ms[u].end())
+            {
                 --ij;ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));
                 continue;
             }
