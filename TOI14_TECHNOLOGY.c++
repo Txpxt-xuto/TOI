@@ -12422,5 +12422,6 @@ int main()
     {
         int u,v;cin>>u>>v;g[u].pb(v);g[v].pb(u);
     }
-    solve(1,1);cout<<ans;
+    solve(1,1);
+    cout<<ans;
 }
