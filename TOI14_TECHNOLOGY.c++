@@ -12396,7 +12396,8 @@ void solve(int u,int p){
         }
         for(auto it : ms[v])ms[u].insert(it);
     }
-    if(!ms[u].empty()){
+    if(!ms[u].empty())
+    {
         auto it = ms[u].lower_bound(a[u]/2);
         if(it==ms[u].end())
         {
