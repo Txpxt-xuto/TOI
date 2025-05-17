@@ -12398,7 +12398,8 @@ void solve(int u,int p){
     }
     if(!ms[u].empty()){
         auto it = ms[u].lower_bound(a[u]/2);
-        if(it==ms[u].end()){
+        if(it==ms[u].end())
+        {
             --it;ans=min(ans,max({sum-a[u],a[u]-*it,*it})-min({sum-a[u],a[u]-*it,*it}));
             ms[u].insert(a[u]);
             return;
