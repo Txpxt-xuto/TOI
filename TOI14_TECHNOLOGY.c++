@@ -12387,7 +12387,8 @@ void solve(int u,int p){
                 --ij;ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));
                 continue;
             }ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));
-            if(ij!=ms[u].begin()){
+            if(ij!=ms[u].begin())
+            {
                 ij--;ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));ij++;
             }
             if(ij!=(--ms[u].end()))
