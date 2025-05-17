@@ -12411,7 +12411,8 @@ void solve(int u,int p){
         }
     }ms[u].insert(a[u]);
 }
-int main(){
+int main()
+{
     ios_base::sync_with_stdio(0);cin.tie(0);
     int n;cin>>n;for(int i=1;i<=n;i++)cin>>a[i],sum+=a[i];
     for(int i=1;i<=n-1;i++){
