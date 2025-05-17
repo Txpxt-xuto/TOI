@@ -12375,7 +12375,8 @@ vector<int>g[mxn];
 ll a[mxn];
 ll ans=1e18,sum=0;
 multiset<ll>ms[mxn];
-void solve(int u,int p){
+void solve(int u,int p)
+{
     for(auto v:g[u]){
         if(v==p)continue;
         solve(v,u);
