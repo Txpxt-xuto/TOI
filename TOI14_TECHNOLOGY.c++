@@ -12379,7 +12379,7 @@ void solve(int u,int p)
 {
     for(auto v:g[u])
     {
-        if(v==p)continue;
+        if(v==p) continue;
         solve(v,u);
         a[u]+=a[v];
         if(ms[u].size()<ms[v].size())swap(ms[u],ms[v]);
