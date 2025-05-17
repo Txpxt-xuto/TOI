@@ -12385,7 +12385,8 @@ void solve(int u,int p){
             auto ij=ms[u].lower_bound((sum-it)/2);
             if(ij==ms[u].end())
             {
-                --ij;ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));
+                --ij;
+                ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));
                 continue;
             }
             ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));
