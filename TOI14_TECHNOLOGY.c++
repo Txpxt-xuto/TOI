@@ -12409,7 +12409,8 @@ void solve(int u,int p){
         if(it!=(--ms[u].end())){
             it++;ans=min(ans,max({sum-a[u],a[u]-*it,*it})-min({sum-a[u],a[u]-*it,*it}));it--;
         }
-    }ms[u].insert(a[u]);
+    }
+    ms[u].insert(a[u]);
 }
 int main()
 {
