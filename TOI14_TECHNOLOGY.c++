@@ -12417,7 +12417,7 @@ int main()
     cin.tie(0);
     int n;
     cin >> n;
-    for(int i=1;i<=n;i++) cin>>a[i],sum+=a[i];
+    for(int i=1;i<=n;i++) cin>> a[i],sum+=a[i];
     for(int i=1;i<=n-1;i++){
         int u,v;cin>>u>>v;g[u].pb(v);g[v].pb(u);
     }solve(1,1);cout<<ans;
