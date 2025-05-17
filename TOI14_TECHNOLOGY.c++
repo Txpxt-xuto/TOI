@@ -12381,7 +12381,7 @@ void solve(int u,int p){
         solve(v,u);a[u]+=a[v];
         if(ms[u].size()<ms[v].size())swap(ms[u],ms[v]);
         for(auto it : ms[v]){
-            if(ms[u].empty())break;
+            if(ms[u].empty()) break;
             auto ij=ms[u].lower_bound((sum-it)/2);
             if(ij==ms[u].end())
             {
