@@ -12390,8 +12390,10 @@ void solve(int u,int p){
             if(ij!=ms[u].begin()){
                 ij--;ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));ij++;
             }
-            if(ij!=(--ms[u].end())){
-                ij++;ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));ij--;
+            if(ij!=(--ms[u].end()))
+            {
+                ij++;
+                ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));ij--;
             }
         }
         for(auto it : ms[v])ms[u].insert(it);
