@@ -12403,7 +12403,8 @@ void solve(int u,int p){
             ms[u].insert(a[u]);
             return;
         }ans=min(ans,max({sum-a[u],a[u]-*it,*it})-min({sum-a[u],a[u]-*it,*it}));
-        if(it!=ms[u].begin()){
+        if(it!=ms[u].begin())
+        {
             it--;ans=min(ans,max({sum-a[u],a[u]-*it,*it})-min({sum-a[u],a[u]-*it,*it}));it++;
         }
         if(it!=(--ms[u].end()))
