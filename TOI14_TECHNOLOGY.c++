@@ -12378,7 +12378,8 @@ multiset<ll>ms[mxn];
 void solve(int u,int p){
     for(auto v:g[u]){
         if(v==p)continue;
-        solve(v,u);a[u]+=a[v];
+        solve(v,u);
+        a[u]+=a[v];
         if(ms[u].size()<ms[v].size())swap(ms[u],ms[v]);
         for(auto it : ms[v])
         {
