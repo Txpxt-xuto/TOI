@@ -12022,7 +12022,6 @@ int main()
 #include <vector>
 #include <bitset>
 #include <cstdint>
-
 #define __DEBUG__ 0
 #define __LOG__ 0
 using namespace std;
