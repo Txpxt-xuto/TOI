@@ -12356,3 +12356,65 @@ int32_t main()
     }
     return 0;
 }
+
+#include<bits/stdc++.h>
+#define ll long long
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define plx pair<ll,int>
+#define f first
+#define s second
+#define pb push_back
+#define all(x) x.begin(),x.end()
+#define vi vector<int>
+#define vl vector<ll>
+#define vvi vector<vi>
+using namespace std;
+const int mxn=3e5+5;
+vector<int>g[mxn];
+ll a[mxn];
+ll ans=1e18,sum=0;
+multiset<ll>ms[mxn];
+void solve(int u,int p){
+    for(auto v:g[u]){
+        if(v==p)continue;
+        solve(v,u);a[u]+=a[v];
+        if(ms[u].size()<ms[v].size())swap(ms[u],ms[v]);
+        for(auto it : ms[v]){
+            if(ms[u].empty())break;
+            auto ij=ms[u].lower_bound((sum-it)/2);
+            if(ij==ms[u].end()){
+                --ij;ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));
+                continue;
+            }ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));
+            if(ij!=ms[u].begin()){
+                ij--;ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));ij++;
+            }
+            if(ij!=(--ms[u].end())){
+                ij++;ans=min(ans,max({sum-it-*ij,it,*ij})-min({sum-it-*ij,it,*ij}));ij--;
+            }
+        }
+        for(auto it : ms[v])ms[u].insert(it);
+    }
+    if(!ms[u].empty()){
+        auto it = ms[u].lower_bound(a[u]/2);
+        if(it==ms[u].end()){
+            --it;ans=min(ans,max({sum-a[u],a[u]-*it,*it})-min({sum-a[u],a[u]-*it,*it}));
+            ms[u].insert(a[u]);
+            return;
+        }ans=min(ans,max({sum-a[u],a[u]-*it,*it})-min({sum-a[u],a[u]-*it,*it}));
+        if(it!=ms[u].begin()){
+            it--;ans=min(ans,max({sum-a[u],a[u]-*it,*it})-min({sum-a[u],a[u]-*it,*it}));it++;
+        }
+        if(it!=(--ms[u].end())){
+            it++;ans=min(ans,max({sum-a[u],a[u]-*it,*it})-min({sum-a[u],a[u]-*it,*it}));it--;
+        }
+    }ms[u].insert(a[u]);
+}
+int main(){
+    ios_base::sync_with_stdio(0);cin.tie(0);
+    int n;cin>>n;for(int i=1;i<=n;i++)cin>>a[i],sum+=a[i];
+    for(int i=1;i<=n-1;i++){
+        int u,v;cin>>u>>v;g[u].pb(v);g[v].pb(u);
+    }solve(1,1);cout<<ans;
+}
