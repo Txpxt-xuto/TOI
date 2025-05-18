@@ -12030,7 +12030,6 @@ using namespace std;
 // Define constants for infinity using int64_t
 const int64_t INF = 1'000'000'000'000'000'000LL;
 const int64_t NEG_INF = -1'000'000'000'000'000'000LL;
-
 struct edge2;
 vector<edge2> e[100001];
 vector<int> used;
