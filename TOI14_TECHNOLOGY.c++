@@ -12033,7 +12033,7 @@ const int64_t NEG_INF = -1'000'000'000'000'000'000LL; // -1e18
 
 struct edge2;
 vector<edge2> e[100001];
-vector<int> used; // Stores original 0-based indices of cycle edges
+vector<int> used;
 vector<int64_t> adj; // Stores initial costs using int64_t
 bitset<100001> vs;
 class sum_segment_tree
