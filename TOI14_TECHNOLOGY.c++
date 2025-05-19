@@ -12467,7 +12467,7 @@ signed main(){
         for(int j=1;j<=n;j++)
         {
             dp[i][j]=(dp[i][j]+dp[i-1][j]+dp[i][j-1]-dp[i-1][j-1])%MOD;
-            for(int l=max(1ll,i-k);l<=i-1;l++)dp[i][j]=(dp[i][j]+dp[l-1][j-1])%MOD;
+            for(int l=max(1ll,i-k);l<=i-1;l++) dp[i][j]=(dp[i][j]+dp[l-1][j-1])%MOD;
             for(int l=max(1ll,j-k);l<=j-1;l++)dp[i][j]=(dp[i][j]+dp[i-1][l-1])%MOD;
         }
     }
