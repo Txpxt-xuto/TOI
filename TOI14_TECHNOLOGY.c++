@@ -12459,7 +12459,8 @@ int dp[110][110];
 const int MOD=1e9+7;
 signed main()
 {
-    ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0),cout.tie(0);
     int n,k;
     cin >> n >> k;
     for(int i=0;i<=n;i++) dp[i][0]=dp[0][i]=1;
