@@ -12478,4 +12478,64 @@ signed main()
 }
 
 
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 
+using namespace std;
+using namespace __gnu_pbds;
+
+#define ordered_set <int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
+#define ordered_multiset <int, null_type, less_equal <int>, rb_tree_tag, tree_order_statistics_node_update>
+
+#define int long long
+#define double long double
+#define pii pair <int, int>
+#define tiii tuple <int, int, int>
+#define tiiii tuple <int, int, int, int>
+#define emb emplace_back
+#define all(a) a.begin(), a.end()
+#define rall(a) a.rbegin(), a.rend()
+#define iShowSpeed cin.tie(NULL)->sync_with_stdio(false)
+#define matrix vector <vector <int>>
+#define mat(n, m) vector <vector <int>> (n, vector <int> (m));
+
+const int mod = 1e9 + 7;
+const int inf = 1e18;
+const matrix II = {{1, 0}, {0, 1}};
+
+matrix multiply(matrix &a, matrix &b){
+    matrix ans = mat(a.size(), b[0].size());
+    for (int i = 0; i < a.size(); i++) {
+        for (int j = 0; j < b[0].size(); j++) {
+            for (int k = 0; k < a[0].size(); k++) {
+                ans[i][j] += a[i][k] * b[k][j];
+                ans[i][j] %= mod;
+            }
+        }
+    }
+    return ans;
+}
+
+matrix power(matrix &a, int n){
+    matrix ans = mat(a.size(), a.size());
+    for (int i = 0; i < a.size(); i++) {
+        ans[i][i] = 1;
+    }
+    while (n > 0) {
+        if (n % 2) ans = multiply(ans, a);
+        n /= 2;
+        a = multiply(a, a);
+    }
+    return ans;
+}
+
+int32_t main(){
+    iShowSpeed;
+    int n; cin >> n;
+    matrix a = {{1, 1, 0, 0, 0}, {0, 1, 1, 0, 1}, {0, 1, 1, 1, 0}, {1, 0, 1, 1, 0}, {0, 0, 0, 1, 1}};
+    matrix curr = {{0, 1, 1, 1, 0}};
+    a = power(a, n);
+    matrix ans = multiply(curr, a);
+    cout << (ans[0][1] + ans[0][2] + ans[0][3]) % mod;
+}
