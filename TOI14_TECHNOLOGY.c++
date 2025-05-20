@@ -12533,7 +12533,8 @@ matrix power(matrix &a, int n){
 int32_t main()
 {
     iShowSpeed;
-    int n; cin >> n;
+    int n;
+    cin >> n;
     matrix a = {{1, 1, 0, 0, 0}, {0, 1, 1, 0, 1}, {0, 1, 1, 1, 0}, {1, 0, 1, 1, 0}, {0, 0, 0, 1, 1}};
     matrix curr = {{0, 1, 1, 1, 0}};
     a = power(a, n);
