@@ -12522,7 +12522,8 @@ matrix power(matrix &a, int n){
     for (int i = 0; i < a.size(); i++) {
         ans[i][i] = 1;
     }
-    while (n > 0) {
+    while (n > 0)
+    {
         if (n % 2) ans = multiply(ans, a);
         n /= 2;
         a = multiply(a, a);
