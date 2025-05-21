@@ -12517,7 +12517,8 @@ matrix multiply(matrix &a, matrix &b){
     return ans;
 }
 
-matrix power(matrix &a, int n){
+matrix power(matrix &a, int n)
+{
     matrix ans = mat(a.size(), a.size());
     for (int i = 0; i < a.size(); i++)
     {
