@@ -12519,7 +12519,8 @@ matrix multiply(matrix &a, matrix &b){
 
 matrix power(matrix &a, int n){
     matrix ans = mat(a.size(), a.size());
-    for (int i = 0; i < a.size(); i++) {
+    for (int i = 0; i < a.size(); i++)
+    {
         ans[i][i] = 1;
     }
     while(n > 0)
