@@ -12476,3 +12476,6 @@ signed main()
     }
     cout << ((dp[n][n]-1)%MOD+MOD)%MOD;
 }
+
+
+
