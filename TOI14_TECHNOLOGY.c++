@@ -12610,3 +12610,44 @@ signed main()
     cout << ans;
     return 0;
 }
+
+#include <iostream>
+#include <vector>
+#include <iomanip>
+using namespace std;
+
+int val[100001], p[100001], fw[2000001], idx[2000001];
+
+int fp(const int& x) { return p[x] == x ? x : p[x] = fp(p[x]); }
+
+void upd(const int& idx, const int &v) { for (int i = idx; i <= 2000000; i+=(i&-i)) fw[i]+=v; }
+int  qry(const int& idx) { int res = 0; for (int i = idx; i; i-=(i&-i)) res+=fw[i]; return res; }
+int ridx(const int& idx) { int l = idx, r = 2000000; while (l < r) { int m = (l+r)>>1; if (m-qry(m) >= idx) r = m; else l = m+1; } return l; }
+
+int main () {
+	ios_base::sync_with_stdio(0);
+	cout.tie(0);
+	cin.tie(0);
+
+    int n, q, sz, left; cin >> n >> q; sz = n, left = n;
+    for (int i = 1; i <= n; ++i) cin >> val[i], p[i] = i, idx[i] = i;
+	for (int i = 0; i < q; ++i) {
+		int sp, gr, mx = 0, mxidx = 0, plus = 0; cin >> sp >> gr;
+		vector<int> idxs; idxs.clear();
+		for (int j = 1; j <= left; j+=sp-1) {
+			int cur = ridx(j); mxidx = (val[idx[cur]] >= mx ? idx[cur] : mxidx), idxs.emplace_back(idx[cur]), mx = max(mx, val[idx[cur]]);
+			upd(cur, 1), --left;
+			if (idxs.size() == gr) {
+				idx[++sz] = idx[mxidx], mx = 0, ++plus;
+				while (idxs.size()) { p[idxs.back()] = mxidx; idxs.pop_back(); }
+			}
+		}
+		left += plus;
+		if (idxs.size()) {
+			++left, idx[++sz] = idx[mxidx];
+			while (idxs.size()) { p[idxs.back()] = mxidx; idxs.pop_back(); }
+		}
+	}
+	for (int i = 1; i <= n; ++i) cout << (val[i] == val[fp(i)] ? val[i] : val[p[i]]+1) << "\n";
+	cout.flush();
+}
