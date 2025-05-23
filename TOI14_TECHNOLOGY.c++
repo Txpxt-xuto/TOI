@@ -12643,7 +12643,7 @@ int main () {
 				idx[++sz] = idx[mxidx], mx = 0, ++plus;
 				while(idxs.size())
                 {
-                    p[idxs.back()] = mxidx; idxs.pop_back(); }
+                    p[idxs.back()] = mxidx;idxs.pop_back(); }
 			}
 		}
 		left += plus;
