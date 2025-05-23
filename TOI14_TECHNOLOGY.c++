@@ -12634,7 +12634,8 @@ int main () {
 	for (int i = 0; i < q; ++i) {
 		int sp, gr, mx = 0, mxidx = 0, plus = 0; cin >> sp >> gr;
 		vector<int> idxs; idxs.clear();
-		for (int j = 1; j <= left; j+=sp-1){
+		for (int j = 1; j <= left; j+=sp-1)
+        {
 			int cur = ridx(j); mxidx = (val[idx[cur]] >= mx ? idx[cur] : mxidx), idxs.emplace_back(idx[cur]), mx = max(mx, val[idx[cur]]);
 			upd(cur, 1), --left;
 			if (idxs.size() == gr){
