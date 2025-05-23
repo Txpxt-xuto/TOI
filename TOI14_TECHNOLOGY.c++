@@ -12650,7 +12650,7 @@ int main () {
 		}
 		left += plus;
 		if (idxs.size())
-        {}
+        {
 			++left, idx[++sz] = idx[mxidx];
 			while (idxs.size()) { p[idxs.back()] = mxidx; idxs.pop_back(); }
 		}
