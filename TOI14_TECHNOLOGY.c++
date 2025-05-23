@@ -12641,7 +12641,7 @@ int main () {
 			if (idxs.size() == gr)
             {
 				idx[++sz] = idx[mxidx], mx = 0, ++plus;
-				while (idxs.size()){ p[idxs.back()] = mxidx; idxs.pop_back(); }
+				while(idxs.size()){ p[idxs.back()] = mxidx; idxs.pop_back(); }
 			}
 		}
 		left += plus;
