@@ -12654,7 +12654,8 @@ int main () {
 			++left, idx[++sz] = idx[mxidx];
 			while(idxs.size())
             {
-                p[idxs.back()] = mxidx;idxs.pop_back();
+                p[idxs.back()] = mxidx;
+                idxs.pop_back();
             }
 		}
 	}
