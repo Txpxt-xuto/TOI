@@ -12652,7 +12652,7 @@ int main () {
 		if (idxs.size())
         {
 			++left, idx[++sz] = idx[mxidx];
-			while (idxs.size()) { p[idxs.back()] = mxidx; idxs.pop_back(); }
+			while(idxs.size()) { p[idxs.back()] = mxidx; idxs.pop_back(); }
 		}
 	}
 	for (int i = 1; i <= n; ++i) cout << (val[i] == val[fp(i)] ? val[i] : val[p[i]]+1) << "\n";
