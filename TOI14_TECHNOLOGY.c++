@@ -12609,8 +12609,7 @@ signed main()
     }
     for(int i=0;i<=n;i++) for(auto it:keep[i]) ans+=(it.se)*(it.se-1)/2;
     {
-        
-    }
+
     cout<<ans;
     return 0;
 }
