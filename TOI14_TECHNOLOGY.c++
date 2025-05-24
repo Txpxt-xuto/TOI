@@ -12563,7 +12563,7 @@ signed main()
 {
     cin.tie(nullptr)->ios::sync_with_stdio(false);
     int n,m;
-    cin>>n>> m;
+    cin>>n >> m;
     p[0]=1;
     for(int i=1;i<=n;i++)
     {
