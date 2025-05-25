@@ -12634,7 +12634,8 @@ int main () {
 	for(int i=0;i<q;++i)
     {
 		int sp, gr, mx = 0, mxidx = 0, plus = 0; cin >> sp >> gr;
-		vector<int> idxs;idxs.clear();
+		vector<int> idxs;
+        idxs.clear();
 		for(int j = 1; j <= left; j+=sp-1)
         {
 			int cur = ridx(j); 
