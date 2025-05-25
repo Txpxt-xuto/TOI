@@ -12638,7 +12638,8 @@ int main () {
 		for(int j = 1; j <= left; j+=sp-1)
         {
 			int cur = ridx(j); 
-            mxidx = (val[idx[cur]] >= mx ? idx[cur] : mxidx), idxs.emplace_back(idx[cur]), mx = max(mx, val[idx[cur]]);
+            mxidx = (val[idx[cur]] >= mx ? idx[cur] : mxidx);
+            idxs.emplace_back(idx[cur]), mx = max(mx, val[idx[cur]]);
 			upd(cur, 1), --left;
 			if (idxs.size() == gr)
             {
