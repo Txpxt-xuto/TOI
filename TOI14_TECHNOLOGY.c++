@@ -12659,6 +12659,6 @@ int main () {
             }
 		}
 	}
-	for (int i = 1; i<=n;++i) cout << (val[i] == val[fp(i)] ? val[i] : val[p[i]]+1) << "\n";
+	for (int i = 1;i<=n;++i) cout << (val[i] == val[fp(i)] ? val[i] : val[p[i]]+1) << "\n";
 	cout.flush();
 }
