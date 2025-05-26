@@ -12630,7 +12630,7 @@ int main () {
 	cin.tie(0);
 
     int n, q, sz, left; cin >> n >> q; sz = n, left = n;
-    for(int i = 1; i <= n; ++i) cin >> val[i], p[i] = i, idx[i] = i;
+    for(int i = 1; i<= n; ++i) cin >> val[i], p[i] = i, idx[i] = i;
 	for(int i=0;i<q;++i)
     {
 		int sp, gr, mx = 0, mxidx = 0, plus = 0;
