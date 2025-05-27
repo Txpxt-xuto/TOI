@@ -12665,3 +12665,117 @@ int main()
 	for (int i=1;i<=n;++i) cout << (val[i] == val[fp(i)] ? val[i] : val[p[i]]+1) << "\n";
 	cout.flush();
 }
+
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+int val[1001];
+
+struct Edge {
+    int from, to, capacity, cost;
+    Edge(int from, int to, int capacity, int cost): from(from),to(to),capacity(capacity),cost(cost) {}
+};
+
+vector<vector<int>> adj, cost, capacity, counterpart;
+
+void shortest_paths(int n, int v0, vector<int>& d, vector<int>& p, vector<int> &idx) {
+    d.assign(n, 1e9);
+    d[v0] = 0;
+    vector<bool> inq(n, false);
+    queue<int> q;
+    q.push(v0);
+    p.assign(n, -1);
+    idx.assign(n, -1);
+
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
+        inq[u] = false;
+        for (int i = 0; i < adj[u].size(); ++i) {
+            int v = adj[u][i];
+            int cap = capacity[u][i];
+            int c = cost[u][i];
+            if (cap > 0 && d[v] > d[u] + c) {
+                d[v] = d[u] + c;
+                p[v] = u;
+                idx[v] = i;
+                if (!inq[v]) {
+                    inq[v] = true;
+                    q.emplace(v);
+                }
+            }
+        }
+    }
+}
+
+int min_cost_flow(int N, vector<Edge> edges, int K, int s, int t) {
+    adj.assign(N, vector<int>());
+    cost.assign(N, vector<int>());
+    capacity.assign(N, vector<int>());
+    counterpart.assign(N, vector<int>());
+    for (Edge e : edges) {
+    	int sz_a = adj[e.from].size();
+    	int sz_b = adj[e.to].size();
+        adj[e.from].emplace_back(e.to);
+        adj[e.to].emplace_back(e.from);
+        cost[e.from].emplace_back(e.cost);
+        cost[e.to].emplace_back(-e.cost);
+        capacity[e.from].emplace_back(e.capacity);
+        capacity[e.to].emplace_back(0);
+        counterpart[e.from].emplace_back(sz_b);
+        counterpart[e.to].emplace_back(sz_a);
+    }
+
+    int flow = 0;
+    int cost = 0;
+    vector<int> d, p, idx;
+    while (flow < K) {
+        shortest_paths(N, s, d, p, idx);
+        if (d[t] == 1e9) break;
+        int f = K - flow;
+        int cur = t;
+        while (cur != s) {
+        	int cap = capacity[p[cur]][idx[cur]];
+            f = min(f, cap);
+            cur = p[cur];
+        }
+
+        flow += f;
+        cost += f * d[t];
+        cur = t;
+        while (cur != s) {
+        	capacity[p[cur]][idx[cur]] -= f;
+        	int counter = counterpart[p[cur]][idx[cur]];
+        	capacity[cur][counter] += f;
+            cur = p[cur];
+        }
+    }
+
+    if (flow < K) return -1;
+    else return cost;
+}
+
+vector<Edge> edges;
+
+void add_edge(int from, int to, int capacity, int cost) { edges.emplace_back(from, to, capacity, cost); }
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cout.tie(0);
+    cin.tie(0);
+
+	int n, m, k; cin >> n >> m >> k;
+    for (int i = 1; i <= n; ++i) cin >> val[i];
+	int total = n-m+4;
+    for (int i = 1; i <= m; ++i) add_edge(total-2, min(n-m+1, i), 1, -val[i]);
+    for (int i = m+1; i <= n; ++i) add_edge(i-m, min(i, n-m+1), 1, -val[i]);
+	add_edge(total-2, 1, (1<<20), 0);
+    for (int i = 1; i <= n-m; ++i) add_edge(i, i+1, (1<<20), 0);
+	add_edge(0, total-2, k, 0);
+	add_edge(n-m+1, total-1, k, 0);
+	int ans = min_cost_flow(total, edges, k, 0, total-1);
+
+	cout << -ans;
+}
