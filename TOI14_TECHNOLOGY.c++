@@ -12745,9 +12745,10 @@ int min_cost_flow(int N, vector<Edge> edges, int K, int s, int t) {
         flow += f;
         cost += f * d[t];
         cur = t;
-        while (cur != s) {
+        while (cur != s)
+        {
         	capacity[p[cur]][idx[cur]] -= f;
-        	int counter = counterpart[p[cur]][idx[cur]];
+            int counter = counterpart[p[cur]][idx[cur]];
         	capacity[cur][counter] += f;
             cur = p[cur];
         }
