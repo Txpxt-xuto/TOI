@@ -12622,7 +12622,6 @@ int fp(const int& x) { return p[x] == x ? x : p[x] = fp(p[x]); }
 void upd(const int& idx, const int &v) { for (int i = idx; i <= 2000000; i+=(i&-i)) fw[i]+=v; }
 int  qry(const int& idx) { int res = 0; for (int i = idx; i; i-=(i&-i)) res+=fw[i]; return res; }
 int ridx(const int& idx) { int l = idx, r = 2000000; while (l < r) { int m = (l+r)>>1; if (m-qry(m) >= idx) r = m; else l = m+1; } return l; }
-
 int main()
 {
 	ios_base::sync_with_stdio(0);
