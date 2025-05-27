@@ -12624,7 +12624,7 @@ void upd(const int& idx, const int &v) { for (int i = idx; i <= 2000000; i+=(i&-
 int  qry(const int& idx) { int res = 0; for (int i = idx; i; i-=(i&-i)) res+=fw[i]; return res; }
 int ridx(const int& idx) { int l = idx, r = 2000000; while (l < r) { int m = (l+r)>>1; if (m-qry(m) >= idx) r = m; else l = m+1; } return l; }
 
-int main ()
+int main()
 {
 	ios_base::sync_with_stdio(0);
 	cout.tie(0);
