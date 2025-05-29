@@ -12818,7 +12818,7 @@ struct {
     void update(int l, int r, int i, int row, int ll, int rr, int val)
     {
         push(row, l, r, i);
-        if (l >= ll && r <= rr) return seg[row][i] = lazy[row][i] = val, void();
+        if(l >= ll && r <= rr) return seg[row][i] = lazy[row][i] = val, void();
         if(r < ll || l > rr) return;
         int mid = (l + r) / 2;
         update(l, mid, 2 * i, row, ll, rr, val);
