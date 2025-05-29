@@ -12849,7 +12849,8 @@ int32_t main(){
         }
         if(k == 3)
         {
-            int x, y; cin >> x >> y;
+            int x, y;
+            cin >> x >> y;
             cout << segtree.query(1, m, 1, x, y) << "\n";
         }
         if(k == 4)
