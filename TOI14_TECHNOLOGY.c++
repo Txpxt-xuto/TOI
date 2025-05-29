@@ -12784,7 +12784,6 @@ int main()
 
 using namespace std;
 using namespace __gnu_pbds;
-
 #define ordered_set <int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
 #define ordered_multiset <int, null_type, less_equal <int>, rb_tree_tag, tree_order_statistics_node_update>
 #define int long long
