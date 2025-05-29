@@ -12847,7 +12847,7 @@ int32_t main(){
             segtree.update(1, m, 1, x, 1, m, val);
         }
         if(k == 3)
-        { // getValue(r, c)
+        {
             int x, y; cin >> x >> y;
             cout << segtree.query(1, m, 1, x, y) << "\n";
         }
