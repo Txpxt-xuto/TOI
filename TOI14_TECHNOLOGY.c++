@@ -12833,7 +12833,8 @@ struct {
     }
 } segtree;
 
-int32_t main(){
+int32_t main()
+{
     iShowSpeed;
     int n, m, q;
     cin >> n >> m >> q;
