@@ -12836,7 +12836,8 @@ struct {
 int32_t main(){
     iShowSpeed;
     int n, m, q; cin >> n >> m >> q;
-    while (q--){
+    while (q--)
+    {
         int k; cin >> k;
         if (k == 1)
         {
