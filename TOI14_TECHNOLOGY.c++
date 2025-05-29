@@ -12815,7 +12815,8 @@ struct {
             lazy[row][i] = 0;
         }
     }
-    void update(int l, int r, int i, int row, int ll, int rr, int val){
+    void update(int l, int r, int i, int row, int ll, int rr, int val)
+    {
         push(row, l, r, i);
         if (l >= ll && r <= rr) return seg[row][i] = lazy[row][i] = val, void();
         if (r < ll || l > rr) return;
@@ -12824,7 +12825,8 @@ struct {
         update(mid + 1, r, 2 * i + 1, row, ll, rr, val);
         seg[row][i] = min(seg[row][2 * i], seg[row][2 * i + 1]);
     }
-    int query(int l, int r, int i, int row, int col){
+    int query(int l, int r, int i, int row, int col)
+    {
         push(row, l, r, i);
         if (l == r) return seg[row][i];
         int mid = (l + r) / 2;
