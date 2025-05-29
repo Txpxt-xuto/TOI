@@ -12830,7 +12830,7 @@ struct {
         push(row, l, r, i);
         if(l == r) return seg[row][i];
         int mid = (l + r) / 2;
-        if (col <= mid) return query(l, mid, 2 * i, row, col);
+        if(col <= mid) return query(l, mid, 2 * i, row, col);
         else return query(mid + 1, r, 2 * i + 1, row, col);
     }
 }segtree;
