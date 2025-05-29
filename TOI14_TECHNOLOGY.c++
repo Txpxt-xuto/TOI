@@ -12831,7 +12831,7 @@ struct {
         if (col <= mid) return query(l, mid, 2 * i, row, col);
         else return query(mid + 1, r, 2 * i + 1, row, col);
     }
-} segtree;
+}segtree;
 
 int32_t main()
 {
