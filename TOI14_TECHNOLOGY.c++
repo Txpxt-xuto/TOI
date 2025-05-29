@@ -12806,7 +12806,8 @@ const matrix II = {{1, 0}, {0, 1}};
 const int N = 3e2 + 5;
 const int M = 5e3 + 5;
 
-struct {
+struct
+{
     int seg[N][4 * M], lazy[N][4 * M];
     void push(int row, int l, int r, int i)
     {
