@@ -12777,3 +12777,83 @@ int main()
 	int ans = min_cost_flow(total, edges, k, 0, total-1);
 	cout << -ans;
 }
+
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+
+using namespace std;
+using namespace __gnu_pbds;
+
+#define ordered_set <int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>
+#define ordered_multiset <int, null_type, less_equal <int>, rb_tree_tag, tree_order_statistics_node_update>
+
+#define int long long
+#define double long double
+#define pii pair <int, int>
+#define tiii tuple <int, int, int>
+#define tiiii tuple <int, int, int, int>
+#define emb emplace_back
+#define all(a) a.begin(), a.end()
+#define rall(a) a.rbegin(), a.rend()
+#define iShowSpeed cin.tie(NULL)->sync_with_stdio(false)
+#define matrix vector <vector <int>>
+#define mat(n, m) vector <vector <int>> (n, vector <int> (m));
+
+const int mod = 1e9 + 7;
+const int inf = 1e18;
+const matrix II = {{1, 0}, {0, 1}};
+const int N = 3e2 + 5;
+const int M = 5e3 + 5;
+
+struct {
+    int seg[N][4 * M], lazy[N][4 * M];
+    void push(int row, int l, int r, int i){
+        if (lazy[row][i]) {
+            seg[row][i] = lazy[row][i];
+            if (l != r) lazy[row][2 * i] = lazy[row][2 * i + 1] = lazy[row][i];
+            lazy[row][i] = 0;
+        }
+    }
+    void update(int l, int r, int i, int row, int ll, int rr, int val){
+        push(row, l, r, i);
+        if (l >= ll && r <= rr) return seg[row][i] = lazy[row][i] = val, void();
+        if (r < ll || l > rr) return;
+        int mid = (l + r) / 2;
+        update(l, mid, 2 * i, row, ll, rr, val);
+        update(mid + 1, r, 2 * i + 1, row, ll, rr, val);
+        seg[row][i] = min(seg[row][2 * i], seg[row][2 * i + 1]);
+    }
+    int query(int l, int r, int i, int row, int col){
+        push(row, l, r, i);
+        if (l == r) return seg[row][i];
+        int mid = (l + r) / 2;
+        if (col <= mid) return query(l, mid, 2 * i, row, col);
+        else return query(mid + 1, r, 2 * i + 1, row, col);
+    }
+} segtree;
+
+int32_t main(){
+    iShowSpeed;
+    int n, m, q; cin >> n >> m >> q;
+    while (q--) {
+        int k; cin >> k;
+        if (k == 1) { // setValue(r, c, val)
+            int x, y, val; cin >> x >> y >> val;
+            segtree.update(1, m, 1, x, y, y, val);
+        }
+        if (k == 2) { // setRowValue(r, x)
+            int x, val; cin >> x >> val;
+            segtree.update(1, m, 1, x, 1, m, val);
+        }
+        if (k == 3) { // getValue(r, c)
+            int x, y; cin >> x >> y;
+            cout << segtree.query(1, m, 1, x, y) << "\n";
+        }
+        if (k == 4) { // getMin()
+            int ans = inf;
+            for (int i = 1; i <= n; i++) ans = min(ans, segtree.seg[i][1]);
+            cout << ans << "\n";
+        }
+    }
+}
