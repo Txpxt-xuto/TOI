@@ -12842,7 +12842,7 @@ int32_t main(){
             int x, y, val; cin >> x >> y >> val;
             segtree.update(1, m, 1, x, y, y, val);
         }
-        if (k == 2) { // setRowValue(r, x)
+        if (k == 2) {
             int x, val; cin >> x >> val;
             segtree.update(1, m, 1, x, 1, m, val);
         }
