@@ -12799,7 +12799,6 @@ using namespace __gnu_pbds;
 #define iShowSpeed cin.tie(NULL)->sync_with_stdio(false)
 #define matrix vector <vector <int>>
 #define mat(n, m) vector <vector <int>> (n, vector <int> (m));
-
 const int mod = 1e9 + 7;
 const int inf = 1e18;
 const matrix II = {{1, 0}, {0, 1}};
