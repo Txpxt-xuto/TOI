@@ -12844,7 +12844,8 @@ int32_t main(){
         }
         if (k == 2)
         {
-            int x, val; cin >> x >> val;
+            int x, val;
+            cin >> x >> val;
             segtree.update(1, m, 1, x, 1, m, val);
         }
         if(k == 3)
