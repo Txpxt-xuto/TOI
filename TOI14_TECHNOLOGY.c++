@@ -12819,7 +12819,7 @@ struct {
     {
         push(row, l, r, i);
         if (l >= ll && r <= rr) return seg[row][i] = lazy[row][i] = val, void();
-        if (r < ll || l > rr) return;
+        if(r < ll || l > rr) return;
         int mid = (l + r) / 2;
         update(l, mid, 2 * i, row, ll, rr, val);
         update(mid + 1, r, 2 * i + 1, row, ll, rr, val);
