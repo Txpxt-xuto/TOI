@@ -12839,7 +12839,7 @@ int32_t main(){
     while (q--){
         int k; cin >> k;
         if (k == 1)
-        {/ setValue(r, c, val)
+        {
             int x, y, val; cin >> x >> y >> val;
             segtree.update(1, m, 1, x, y, y, val);
         }
