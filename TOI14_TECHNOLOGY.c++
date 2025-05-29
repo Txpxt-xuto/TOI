@@ -12856,7 +12856,7 @@ int32_t main(){
         if(k == 4)
         {
             int ans = inf;
-            for(int i = 1; i<=n;i++) ans = min(ans, segtree.seg[i][1]);
+            for(int i =1; i<=n;i++) ans = min(ans, segtree.seg[i][1]);
             cout << ans << "\n";
         }
     }
