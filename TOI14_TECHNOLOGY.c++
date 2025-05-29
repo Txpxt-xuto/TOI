@@ -12850,7 +12850,7 @@ int32_t main(){
             int x, y; cin >> x >> y;
             cout << segtree.query(1, m, 1, x, y) << "\n";
         }
-        if(k == 4) { // getMin()
+        if(k == 4){ // getMin()
             int ans = inf;
             for (int i = 1; i <= n; i++) ans = min(ans, segtree.seg[i][1]);
             cout << ans << "\n";
