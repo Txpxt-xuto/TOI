@@ -12812,7 +12812,7 @@ struct {
     {
         if (lazy[row][i]) {
             seg[row][i] = lazy[row][i];
-            if (l != r) lazy[row][2 * i] = lazy[row][2 * i + 1] = lazy[row][i];
+            if(l != r) lazy[row][2 * i] = lazy[row][2 * i + 1] = lazy[row][i];
             lazy[row][i] = 0;
         }
     }
