@@ -12838,7 +12838,7 @@ int32_t main(){
     int n, m, q; cin >> n >> m >> q;
     while (q--)
     {
-        int k; cin >> k;
+        int k;cin >> k;
         if (k == 1)
         {
             int x, y, val; cin >> x >> y >> val;
