@@ -12086,7 +12086,6 @@ class max_segment_tree {
         // Public updates take the re-indexed range [ui, uf]
         void upd (const int &l, const int &r, const int64_t &val);
         void upd2 (const int &l, const int &r, const int64_t &val);
-        // Public query queries the whole re-indexed range
         pair<int64_t, int> qry (const int &l, const int &r);
         pair<int64_t, int> qry ();
         #if __DEBUG__
