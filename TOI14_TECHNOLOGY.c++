@@ -12038,7 +12038,8 @@ vector<int64_t> adj; // Stores initial costs using int64_t
 bitset<100001> vs;
 
 // --- sum_segment_tree class (remains the same as before, operates on [0, N-1]) ---
-class sum_segment_tree {
+class sum_segment_tree
+{
     protected:
         int sz;
         int64_t *tree, *lazy, *lazy2; // Use int64_t
