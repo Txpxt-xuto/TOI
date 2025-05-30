@@ -12069,7 +12069,7 @@ class sum_segment_tree {
 class max_segment_tree {
     protected:
         int sz; // Size based on number of cycle edges (or N for simplicity)
-        int64_t *tree, *lazy, *lazy2; // Use int64_t for values/lazy
+        int64_t *tree, *lazy, *lazy2;
         int *cnt;
         void push (const int &idx, const int &l, const int &r);
         void upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
