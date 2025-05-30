@@ -12036,8 +12036,6 @@ vector<edge2> e[100001];
 vector<int> used; // Stores original 0-based indices of cycle edges
 vector<int64_t> adj; // Stores initial costs using int64_t
 bitset<100001> vs;
-
-// --- sum_segment_tree class (remains the same as before, operates on [0, N-1]) ---
 class sum_segment_tree
 {
     protected:
