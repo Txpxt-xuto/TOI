@@ -12073,7 +12073,6 @@ class max_segment_tree {
         int *cnt; // Keep int for count
 
         void push (const int &idx, const int &l, const int &r);
-        // Updates operate on the re-indexed space [0, k-1]
         void upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
         void upd2 (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
         pair<int64_t, int> qry (const int &idx, const int &l, const int &r, const int &x, const int &y);
