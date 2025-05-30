@@ -12047,7 +12047,7 @@ class sum_segment_tree {
         void upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
         void upd2 (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
         int64_t qry (const int &idx, const int &l, const int &r, const int &x, const int &y);
-    public:
+        public:
         sum_segment_tree (const int &n);
         ~sum_segment_tree();
         size_t size() const;
