@@ -12040,7 +12040,7 @@ class sum_segment_tree
 {
     protected:
         int sz;
-        int64_t *tree, *lazy, *lazy2; // Use int64_t
+        int64_t *tree, *lazy, *lazy2;
         void push (const int &idx, const int &l, const int &r);
         void upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
         void upd2 (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
