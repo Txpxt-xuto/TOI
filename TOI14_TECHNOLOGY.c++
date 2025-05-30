@@ -12064,9 +12064,8 @@ class sum_segment_tree {
             }
         #endif
 };
-
-// --- max_segment_tree class (modified to operate on cycle edge indices [0, k-1]) ---
-class max_segment_tree {
+class max_segment_tree
+{
     protected:
         int sz;
         int64_t *tree, *lazy, *lazy2;
