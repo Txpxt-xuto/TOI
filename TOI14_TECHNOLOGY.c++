@@ -12055,9 +12055,9 @@ class sum_segment_tree {
         void upd2 (const int &l, const int &r, const int64_t &val);
         int64_t qry (const int &l, const int &r);
         int64_t qry ();
-
         #if __DEBUG__
-            void print() {
+            void print()
+            {
                 cout << "sum_segment_tree (Indices 0.." << sz-1 << "):\n" << flush;
                 for (int i = 1; i < sz*2; ++i) cout << (i > 1 && i==(i&-i) ? "\n" : (i == 1 ? "" : " | ")) << (tree[i] >= INF ? "INF" : (tree[i] <= NEG_INF ? "-INF" : to_string(tree[i]))) << ", " << (lazy[i] ? to_string(lazy[i]) : "-") << ", " << (lazy2[i] >= INF || lazy2[i] <= NEG_INF ? "-" : to_string(lazy2[i])) << flush;
                 cout << "\n" << flush;
