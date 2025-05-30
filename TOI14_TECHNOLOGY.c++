@@ -12077,7 +12077,6 @@ class max_segment_tree {
         void upd (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
         void upd2 (const int &idx, const int &l, const int &r, const int &x, const int &y, const int64_t &val);
         pair<int64_t, int> qry (const int &idx, const int &l, const int &r, const int &x, const int &y);
-
     public:
         max_segment_tree (const int &n);
         ~max_segment_tree();
