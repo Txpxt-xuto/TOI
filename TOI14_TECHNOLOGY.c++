@@ -12089,9 +12089,9 @@ class max_segment_tree {
         // Public query queries the whole re-indexed range
         pair<int64_t, int> qry (const int &l, const int &r);
         pair<int64_t, int> qry ();
-
         #if __DEBUG__
-            void print(int k) {
+            void print(int k)
+            {
                 cout << "max_segment_tree (Indices 0.." << k-1 << ", Size " << sz << "):\n" << flush;
                  int print_limit = (1 << (32 - __builtin_clz(max(1, k - 1)))) * 2;
                 for (int i = 1; i < print_limit && i < sz*2; ++i) cout << (i > 1 && i==(i&-i) ? "\n" : (i == 1 ? "" : " | ")) << (tree[i] >= INF ? "INF" : (tree[i] <= NEG_INF ? "-INF" : to_string(tree[i]))) << ", " << (lazy[i] ? to_string(lazy[i]) : "-") << ", " << (lazy2[i] >= INF || lazy2[i] <= NEG_INF ? "-" : to_string(lazy2[i])) << ", " << cnt[i] << flush;
