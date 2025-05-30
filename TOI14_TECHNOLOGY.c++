@@ -12083,7 +12083,6 @@ class max_segment_tree {
         max_segment_tree (const int &n);
         ~max_segment_tree();
         size_t size() const;
-        // Public updates take the re-indexed range [ui, uf]
         void upd (const int &l, const int &r, const int64_t &val);
         void upd2 (const int &l, const int &r, const int64_t &val);
         pair<int64_t, int> qry (const int &l, const int &r);
