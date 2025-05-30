@@ -12079,7 +12079,6 @@ class max_segment_tree {
         pair<int64_t, int> qry (const int &idx, const int &l, const int &r, const int &x, const int &y);
 
     public:
-        // Constructor takes max possible size (N)
         max_segment_tree (const int &n);
         ~max_segment_tree();
         size_t size() const;
