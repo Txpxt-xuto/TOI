@@ -12165,7 +12165,7 @@ int main () {
         #if __DEBUG__
              cout << "Tasks request " << (type == 1 ? "add" : "replace") << " on original [" << s << "," << t << "] val " << c << ". Mapped to cycle indices [" << ui << "," << uf << "]\n" << flush;
         #endif
-        if (ui <= uf) { // Only update if there are cycle edges in the original [s, t] range
+        if (ui <= uf) {
              type == 1 ? mn.upd(ui, uf, c) : mn.upd2(ui, uf, c);
         }
 
