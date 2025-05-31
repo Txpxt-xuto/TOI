@@ -12295,7 +12295,6 @@ max_segment_tree::max_segment_tree (const int &n) : sz(1 << (32 - __builtin_clz(
 }
 max_segment_tree::~max_segment_tree() { delete[] tree; delete[] lazy; delete[] lazy2; delete[] cnt; }
 size_t max_segment_tree::size() const { return sz; }
-// Public updates/queries now operate on the RE-INDEXED range [0..k-1]
 void max_segment_tree::upd (const int &l, const int &r, const int64_t &val) { if(l<=r) upd(1, 0, sz - 1, l, r, val); }
 void max_segment_tree::upd2 (const int &l, const int &r, const int64_t &val) { if(l<=r) upd2(1, 0, sz - 1, l, r, val); }
 pair<int64_t, int> max_segment_tree::qry (const int &l, const int &r) { return (l<=r) ? qry(1, 0, sz - 1, l, r) : make_pair(NEG_INF, 0); }
