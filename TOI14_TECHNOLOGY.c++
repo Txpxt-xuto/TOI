@@ -12298,7 +12298,6 @@ size_t max_segment_tree::size() const { return sz; }
 void max_segment_tree::upd (const int &l, const int &r, const int64_t &val) { if(l<=r) upd(1, 0, sz - 1, l, r, val); }
 void max_segment_tree::upd2 (const int &l, const int &r, const int64_t &val) { if(l<=r) upd2(1, 0, sz - 1, l, r, val); }
 pair<int64_t, int> max_segment_tree::qry (const int &l, const int &r) { return (l<=r) ? qry(1, 0, sz - 1, l, r) : make_pair(NEG_INF, 0); }
-// Query the entire re-indexed range [0, k-1] implicitly (k determined in main)
 pair<int64_t, int> max_segment_tree::qry () {
     // We query up to sz-1, but the relevant data is only in indices 0..k-1
     // The query function handles out-of-bounds correctly by returning NEG_INF
