@@ -12169,9 +12169,8 @@ int main () {
         #if __DEBUG__
             sm.print(); mn.print(k);
         #endif
-        // Query results
         int64_t total_sum = sm.qry();
-        pair<int64_t, int> max_res = mn.qry(); // Queries mn tree over its range [0, k-1]
+        pair<int64_t, int> max_res = mn.qry();
         int64_t max_cycle_cost = max_res.first;
         int count = max_res.second;
 
