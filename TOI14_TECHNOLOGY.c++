@@ -12175,7 +12175,7 @@ int main () {
         int count = max_res.second;
         if (k == 0) cout << total_sum << " 0\n";
         else if (max_cycle_cost <= NEG_INF) {
-             cout << total_sum << " " << 0 << "\n"; // Or total_sum - NEG_INF ? Check constraints. Assume max exists.
+             cout << total_sum << " " << 0 << "\n";
         }
         else {
             cout << total_sum - max_cycle_cost << " " << count << "\n";
