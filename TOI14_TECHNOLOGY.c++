@@ -12286,7 +12286,7 @@ pair<int64_t, int> max_segment_tree::qry (const int &idx, const int &l, const in
 }
 max_segment_tree::max_segment_tree (const int &n) : sz(1 << (32 - __builtin_clz(max(1, n - 1)))), tree(new int64_t[sz<<1]), lazy(new int64_t[sz<<1]), lazy2(new int64_t[sz<<1]), cnt(new int[sz<<1]) {
     for (int i = 0; i < sz; ++i) { tree[sz + i] = NEG_INF; cnt[sz + i] = 1; lazy[sz + i] = 0LL; lazy2[sz + i] = INF; } // Init leaves
-    for (int i = sz - 1; i > 0; --i) { // Init internal nodes
+    for (int i = sz - 1; i > 0; --i) { // Init inte
         if (tree[i<<1] == tree[i<<1|1]) { tree[i] = tree[i<<1]; cnt[i] = (tree[i] > NEG_INF) ? (cnt[i<<1] + cnt[i<<1|1]) : 0; }
         else if (tree[i<<1] > tree[i<<1|1]) { tree[i] = tree[i<<1]; cnt[i] = cnt[i<<1]; }
         else { tree[i] = tree[i<<1|1]; cnt[i] = cnt[i<<1|1]; }
