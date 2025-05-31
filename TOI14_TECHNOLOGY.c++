@@ -12184,9 +12184,6 @@ struct edge2 {
     edge2 (const int &v, const int64_t &w, const int &idx) : v(v), w(w), idx(idx) {}
     bool operator < (const edge2& other) const { return w < other.w; }
 };
-
-// --- DFS for Cycle Finding ---
-// (Same as before)
 int dfs (const int &u, const int &p) {
     vs[u] = 1;
     for (const auto &[v, w, idx] : e[u]) {
