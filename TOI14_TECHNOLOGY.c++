@@ -12174,7 +12174,6 @@ int main () {
         int64_t max_cycle_cost = max_res.first;
         int count = max_res.second;
         if (k == 0) cout << total_sum << " 0\n";
-         // Handle case where all cycle edges might become NEG_INF? Unlikely with problem cost ranges.
         else if (max_cycle_cost <= NEG_INF) {
              cout << total_sum << " " << 0 << "\n"; // Or total_sum - NEG_INF ? Check constraints. Assume max exists.
         }
