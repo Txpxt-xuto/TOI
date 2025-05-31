@@ -12165,9 +12165,6 @@ int main () {
         #if __DEBUG__
              cout << "Tasks request " << (type == 1 ? "add" : "replace") << " on original [" << s << "," << t << "] val " << c << ". Mapped to cycle indices [" << ui << "," << uf << "]\n" << flush;
         #endif
-
-        // 3. Update max tree on the RE-INDEXED range [ui, uf]
-        // Check if the range [ui, uf] is valid before updating
         if (ui <= uf) { // Only update if there are cycle edges in the original [s, t] range
              type == 1 ? mn.upd(ui, uf, c) : mn.upd2(ui, uf, c);
         }
