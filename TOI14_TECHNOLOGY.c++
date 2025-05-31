@@ -12165,15 +12165,10 @@ int main () {
         #if __DEBUG__
              cout << "Tasks request " << (type == 1 ? "add" : "replace") << " on original [" << s << "," << t << "] val " << c << ". Mapped to cycle indices [" << ui << "," << uf << "]\n" << flush;
         #endif
-        if (ui <= uf) {
-             type == 1 ? mn.upd(ui, uf, c) : mn.upd2(ui, uf, c);
-        }
-
-
+        if (ui <= uf) type == 1 ? mn.upd(ui, uf, c) : mn.upd2(ui, uf, c);
         #if __DEBUG__
             sm.print(); mn.print(k);
         #endif
-
         // Query results
         int64_t total_sum = sm.qry();
         pair<int64_t, int> max_res = mn.qry(); // Queries mn tree over its range [0, k-1]
