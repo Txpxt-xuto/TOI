@@ -12278,7 +12278,8 @@ void max_segment_tree::upd2 (const int &idx, const int &l, const int &r, const i
     else { tree[idx] = tree[idx<<1|1]; cnt[idx] = cnt[idx<<1|1]; }
     if (tree[idx] <= NEG_INF) cnt[idx] = 0;
 }
-pair<int64_t, int> max_segment_tree::qry (const int &idx, const int &l, const int &r, const int &x, const int &y) {
+pair<int64_t, int> max_segment_tree::qry (const int &idx, const int &l, const int &r, const int &x, const int &y)
+{
     push(idx, l, r); if (l > y || r < x || x > y) return {NEG_INF, 0}; if (l >= x && r <= y) return {tree[idx], (tree[idx] > NEG_INF ? cnt[idx] : 0)};
     int m = l + (r - l) / 2; pair<int64_t, int> left_res = qry(idx<<1, l, m, x, y), right_res = qry(idx<<1|1, m+1, r, x, y);
     if (left_res.first == right_res.first) return {left_res.first, (left_res.first > NEG_INF ? left_res.second + right_res.second : 0)};
