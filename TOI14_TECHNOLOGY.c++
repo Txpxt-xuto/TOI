@@ -12300,11 +12300,6 @@ void max_segment_tree::upd2 (const int &l, const int &r, const int64_t &val){ if
 pair<int64_t, int> max_segment_tree::qry (const int &l, const int &r){ return (l<=r) ? qry(1, 0, sz - 1, l, r) : make_pair(NEG_INF, 0); }
 pair<int64_t, int> max_segment_tree::qry ()
 {
-    // We query up to sz-1, but the relevant data is only in indices 0..k-1
-    // The query function handles out-of-bounds correctly by returning NEG_INF
-    // However, it's slightly cleaner to query explicitly up to k-1 if k > 0
-    // For simplicity and consistency with previous qry(), let's query the whole tree.
-    // The result will be correct because non-initialized parts are NEG_INF.
     push(1, 0, sz - 1);
     pair<int64_t, int> res = qry(1, 0, sz - 1, 0, sz - 1);
     return {res.first, (res.first > NEG_INF ? res.second : 0)};
