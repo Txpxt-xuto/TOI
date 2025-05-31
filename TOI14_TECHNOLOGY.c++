@@ -12173,12 +12173,8 @@ int main () {
         pair<int64_t, int> max_res = mn.qry();
         int64_t max_cycle_cost = max_res.first;
         int count = max_res.second;
-
-        // Handle potential edge case where k=0 (no cycle?), though problem implies one exists
         if (k == 0) {
-             // Should not happen based on N nodes, N edges, connected.
-             // Output total sum? Or error? Assuming k > 0.
-             cout << total_sum << " 0\n"; // Or handle as per problem constraints clarification
+             cout << total_sum << " 0\n";
         }
          // Handle case where all cycle edges might become NEG_INF? Unlikely with problem cost ranges.
         else if (max_cycle_cost <= NEG_INF) {
