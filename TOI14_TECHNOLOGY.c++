@@ -12179,9 +12179,6 @@ int main () {
     }
     return 0;
 }
-
-// --- Struct Definition ---
-// (Same as before)
 struct edge2 {
     int v; int64_t w; int idx;
     edge2 (const int &v, const int64_t &w, const int &idx) : v(v), w(w), idx(idx) {}
