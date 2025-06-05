@@ -12922,3 +12922,60 @@ int main (){
 }
 #include <bits/stdc++.h>
 #define int long long
+signed main(){
+    std::ios::sync_with_stdio(false);std::cin.tie(nullptr);
+    int R,C,q;
+    std::cin >> R >> C >> q;
+    std::vector<int> rv(R+1,0);
+    std::vector<std::map<int,int>> sv(R+1);
+    std::vector<std::multiset<int>> ms(R+1);
+    std::vector<std::vector<int>> grid(R+1,std::vector<int>(C+1,0));
+    while(q--){
+        int k;
+        std::cin>>k;
+        int r,c,x;
+        if(k==1){
+            std::cin>>r>>c>>x;
+            if(sv[r].find(c)!=sv[r].end())
+            {
+                auto itr = ms[r].find(sv[r][c]);
+                if(itr!=ms[r].end())
+                ms[r].erase(itr);
+            }
+            sv[r][c]=x;
+            ms[r].insert(x);
+        }
+        else if(k==2){
+            std::cin>>r>>x;
+            sv[r].clear();
+            ms[r].clear();
+            rv[r]=x;
+        }
+        else if(k==3){
+            std::cin>>r>>c;
+            if(sv[r].find(c)!=sv[r].end()){
+                std::cout << sv[r][c] << '\n';
+            }
+            else{
+                std::cout << rv[r] << '\n';
+            }
+        }
+        else{
+            int tmin = 1e18;
+            for(int i=1;i<=R;i++){
+                int min = 1e18;
+                if(sv[i].size()<C){
+                    min = rv[i];
+                }
+                if(sv[i].size()>=1)
+                min = std::min(min,*ms[i].begin());
+                tmin = std::min(tmin,min);
+                // for(auto v:ms[i])std::cout << v << ' ';
+                // std::cout << '\n';
+                //std::cout << min << ' ';
+            }
+            //if(tmin==1e18)tmin=0;
+            std::cout << tmin << '\n';
+        }
+    }
+}
