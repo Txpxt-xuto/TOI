@@ -12930,7 +12930,8 @@ signed main(){
     std::vector<std::map<int,int>> sv(R+1);
     std::vector<std::multiset<int>> ms(R+1);
     std::vector<std::vector<int>> grid(R+1,std::vector<int>(C+1,0));
-    while(q--){
+    while(q--)
+    {
         int k;
         std::cin>>k;
         int r,c,x;
