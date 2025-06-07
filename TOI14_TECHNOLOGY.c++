@@ -12922,7 +12922,8 @@ int main (){
 }
 #include <bits/stdc++.h>
 #define int long long
-signed main(){
+signed main()
+{
     std::ios::sync_with_stdio(false);std::cin.tie(nullptr);
     int R,C,q;
     std::cin >> R >> C >> q;
