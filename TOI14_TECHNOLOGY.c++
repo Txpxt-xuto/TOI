@@ -12934,7 +12934,7 @@ signed main()
     while(q--)
     {
         int k;
-        std::cin>>k;
+        std::cin>> k;
         int r,c,x;
         if(k==1){
             std::cin>>r>>c>>x;
