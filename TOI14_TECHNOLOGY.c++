@@ -12936,7 +12936,8 @@ signed main()
         int k;
         std::cin >> k;
         int r,c,x;
-        if(k==1){
+        if(k==1)
+        {
             std::cin >> r >> c >> x;
             if(sv[r].find(c)!=sv[r].end())
             {
