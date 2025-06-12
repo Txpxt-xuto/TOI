@@ -12948,7 +12948,8 @@ signed main()
             sv[r][c]=x;
             ms[r].insert(x);
         }
-        else if(k==2){
+        else if(k==2)
+        {
             std::cin>>r>>x;
             sv[r].clear();
             ms[r].clear();
