@@ -12957,7 +12957,7 @@ signed main()
         }
         else if(k==3)
         {
-            std::cin>>r>>c;
+            std::cin>>r >> c;
             if(sv[r].find(c)!=sv[r].end()) std::cout << sv[r][c] << '\n';
             {
                 
