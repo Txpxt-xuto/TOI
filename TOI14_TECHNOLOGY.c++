@@ -12959,7 +12959,6 @@ signed main()
         {
             std::cin >> r >> c;
             if(sv[r].find(c)!=sv[r].end()) std::cout << sv[r][c] << '\n';
-            {
             else{
                 std::cout << rv[r] << '\n';
             }
