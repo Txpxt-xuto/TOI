@@ -12963,7 +12963,8 @@ signed main()
         }
         else{
             int tmin = 1e18;
-            for(int i=1;i<=R;i++){
+            for(int i=1;i<=R;i++)
+            {
                 int min = 1e18;
                 if(sv[i].size()<C){
                     min = rv[i];
