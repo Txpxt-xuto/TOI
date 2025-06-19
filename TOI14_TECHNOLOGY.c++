@@ -12961,7 +12961,8 @@ signed main()
             if(sv[r].find(c)!=sv[r].end()) std::cout << sv[r][c] << '\n';
             else std::cout << rv[r] << '\n';
         }
-        else{
+        else
+        {
             int tmin = 1e18;
             for(int i=1;i<=R;i++)
             {
