@@ -12967,7 +12967,8 @@ signed main()
             for(int i=1;i<=R;i++)
             {
                 int min = 1e18;
-                if(sv[i].size()<C){
+                if(sv[i].size()<C)
+                {
                     min = rv[i];
                 }
                 if(sv[i].size()>=1)
