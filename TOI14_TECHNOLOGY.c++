@@ -12971,9 +12971,6 @@ signed main()
                 if(sv[i].size()>=1)
                 min = std::min(min,*ms[i].begin());
                 tmin = std::min(tmin,min);
-                // for(auto v:ms[i])std::cout << v << ' ';
-                // std::cout << '\n';
-                //std::cout << min << ' ';
             }
             //if(tmin==1e18)tmin=0;
             std::cout << tmin << '\n';
