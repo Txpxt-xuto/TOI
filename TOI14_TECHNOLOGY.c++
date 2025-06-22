@@ -12968,8 +12968,6 @@ signed main()
             {
                 int min = 1e18;
                 if(sv[i].size()<C) min = rv[i];
-                
-                }
                 if(sv[i].size()>=1)
                 min = std::min(min,*ms[i].begin());
                 tmin = std::min(tmin,min);
