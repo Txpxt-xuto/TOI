@@ -12972,7 +12972,6 @@ signed main()
                 min = std::min(min,*ms[i].begin());
                 tmin = std::min(tmin,min);
             }
-            //if(tmin==1e18)tmin=0;
             std::cout << tmin << '\n';
         }
     }
