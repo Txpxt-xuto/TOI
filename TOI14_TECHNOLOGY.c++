@@ -12873,7 +12873,6 @@ int32_t main()
 using namespace std;
 using ll=long long;
 const ll N=105,M=1e9+7;
-
 ll dp[N][N],a[N],p[N],mn[N][N],mx[N][N];
 
 int main (){
