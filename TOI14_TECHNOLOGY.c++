@@ -12871,7 +12871,6 @@ int32_t main()
 
 #include <bits/stdc++.h>
 using namespace std;
-
 using ll=long long;
 const ll N=105,M=1e9+7;
 
