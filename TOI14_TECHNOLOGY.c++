@@ -12888,7 +12888,7 @@ int main ()
     }
     for(int i=1;i<=n;i++) dp[i][i]=1,mn[i][i]=p[a[i]],mx[i][i]=p[a[i]];
     for(int sz=2;sz<=n;sz++){
-        for (int l=1;l+sz-1<=n;l++)
+        for(int l=1;l+sz-1<=n;l++)
         {
             int r=l+sz-1;
             mn[l][r]=min(mn[l][r-1],p[a[r]]);
