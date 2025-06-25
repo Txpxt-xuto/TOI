@@ -12874,13 +12874,14 @@ using namespace std;
 using ll=long long;
 const ll N=105,M=1e9+7;
 ll dp[N][N],a[N],p[N],mn[N][N],mx[N][N];
-
-int main (){
+int main ()
+{
     ios::sync_with_stdio(0); cin.tie(0);
     int n;
     cin >> n;
-    for (int i=1;i<=n;i++) cin >> a[i];
-    for (int i=1;i<=n;i++) {
+    for(int i=1;i<=n;i++) cin >> a[i];
+    for(int i=1;i<=n;i++)
+    {
         int nn;
         cin >> nn;
         p[nn]=i;
