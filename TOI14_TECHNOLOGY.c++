@@ -12896,7 +12896,7 @@ int main ()
             mx[l][r]=max(mx[l][r-1],p[a[r]]);
             if(p[a[l]]>p[a[l+1]])
             {
-                if (p[a[l]]>mx[l+1][r]) dp[l][r]=dp[l+1][r];
+                if(p[a[l]]>mx[l+1][r]) dp[l][r]=dp[l+1][r];
                 for (int k1=l+1;k1<r;k1++){
                     if (mx[l+1][k1]>p[a[l]] || mn[k1+1][r]<p[a[l]] || mx[l+1][k1]>mn[k1+1][r]) continue;
                     dp[l][r]+=(dp[l+1][k1]*((dp[k1+1][r]*2)%M))%M;
