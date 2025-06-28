@@ -12902,7 +12902,8 @@ int main ()
                     if(mx[l+1][k1]>p[a[l]] || mn[k1+1][r]<p[a[l]] || mx[l+1][k1]>mn[k1+1][r]) continue;
                     dp[l][r]+=(dp[l+1][k1]*((dp[k1+1][r]*2)%M))%M;
                     dp[l][r]%=M;
-                    for (int k2=k1+1;k2<r;k2++){
+                    for (int k2=k1+1;k2<r;k2++)
+                    {
                         if (mx[k1+1][k2]>mn[k2+1][r]) continue;
                         dp[l][r]+=(dp[l+1][k1]*((dp[k1+1][k2]*dp[k2+1][r])%M))%M;
                         dp[l][r]%=M;
