@@ -12928,7 +12928,8 @@ int main ()
 #define int long long
 signed main()
 {
-     std::ios::sync_with_stdio(false);std::cin.tie(nullptr);
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
     int R,C,q;
     std::cin >> R >> C >> q;
     std::vector<int> rv(R+1,0);
