@@ -12912,7 +12912,7 @@ int main ()
             }
             else
             {
-                if(p[a[l]]<mn[l+1][r])dp[l][r]=(dp[l+1][r]*2)%M;
+                if(p[a[l]]<mn[l+1][r]) dp[l][r]=(dp[l+1][r]*2)%M;
                 for(int k1=l+1;k1<r;k1++)
                 {
                     if(p[a[l]]>mn[l+1][k1] || p[a[l]]>mn[k1+1][r] || mx[l+1][k1]>mn[k1+1][r]) continue;
