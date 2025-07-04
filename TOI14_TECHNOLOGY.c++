@@ -13060,5 +13060,5 @@ int main()
     for(int i=0;i<64;i++) de[en[i]] = i; pw[0] = 1;
     for(int i=1;i<5;i++) pw[i] = pw[i - 1] * 64;
     scanf("%lld", &q);
-    while (q--) solve();
+    while(q--) solve();
 }
