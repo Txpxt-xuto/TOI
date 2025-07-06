@@ -13041,7 +13041,7 @@ void comp (ll b) {
 void solve() {
     scanf("%lld %lld", &l, &r); l--, r--;
     ll blockl = l / B, blockr = r / B, mn = 1e18, idx = -1; l %= B, r %= B;
-    if (blockl == blockr)
+    if(blockl == blockr)
     {
         comp(blockl);
         for (int i = l; i <= r; i++) if (mn > a[i]) mn = a[i], idx = i + blockl * B + 1;
