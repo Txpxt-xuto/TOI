@@ -13038,7 +13038,8 @@ void comp (ll b) {
     }
 }
 
-void solve() {
+void solve()
+{
     scanf("%lld %lld", &l, &r); l--, r--;
     ll blockl = l / B, blockr = r / B, mn = 1e18, idx = -1; l %= B, r %= B;
     if(blockl == blockr)
