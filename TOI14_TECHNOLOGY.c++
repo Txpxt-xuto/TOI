@@ -13046,7 +13046,7 @@ void solve()
     if(blockl == blockr)
     {
         comp(blockl);
-        for (int i = l; i <= r; i++) if (mn > a[i]) mn = a[i], idx = i + blockl * B + 1;
+        for(int i = l; i <= r; i++) if (mn > a[i]) mn = a[i], idx = i + blockl * B + 1;
         return void(printf("%lld\n", idx));
     }
     comp(blockl);
