@@ -13028,7 +13028,8 @@ ll binpow (ll x, ll y) {
 
 // compute f(x)
 
-void comp (ll b) {
+void comp (ll b)
+{
     a[0] = decrypt(b);
     for(int idx=0;idx<B;idx++)
     {
