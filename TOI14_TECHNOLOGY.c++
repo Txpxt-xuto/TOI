@@ -13030,7 +13030,8 @@ ll binpow (ll x, ll y) {
 
 void comp (ll b) {
     a[0] = decrypt(b);
-    for (int idx = 0; idx < B; idx++) {
+    for (int idx = 0; idx < B; idx++)
+    {
         ll res = 0, i = idx + b * B + 1;
         for (int j = 1; j <= 987; j++) res += binpow(i + j * 654 + 321, abs(i - j)), res %= M;
         res *= i, res %= M;
