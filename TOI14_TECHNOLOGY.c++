@@ -13053,7 +13053,7 @@ void solve()
     for(int i=l;i<B;i++) if (mn>a[i]) mn = a[i], idx = i + blockl * B + 1;
     for(int i=blockl+1;i<blockr;i++) if(mn>deoverlepval(i)) mn = deoverlepval(i), idx = deoverlepidx(i);
     comp(blockr);
-    for(int i = 0; i<=r;i++) if(mn>a[i]) mn = a[i], idx = i + blockr * B + 1;
+    for(int i=0;i<=r;i++) if(mn>a[i]) mn = a[i], idx = i + blockr * B + 1;
     printf("%lld\n", idx);
 }
 
