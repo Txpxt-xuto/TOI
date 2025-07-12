@@ -13026,6 +13026,7 @@ ll binpow (ll x, ll y)
     for (; y; x *= x, x %= M, y >>= 1LL) if (y & 1LL) res *= x, res %= M;
     return res;
 }
+
 void comp (ll b)
 {
     a[0] = decrypt(b);
