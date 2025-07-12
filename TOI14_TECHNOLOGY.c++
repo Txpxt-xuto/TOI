@@ -13017,7 +13017,7 @@ ll deoverlepval (ll x) {
 ll deoverlepidx (ll x)
 {
     ll idx = x * 9 + 5, res = 0;
-    for (int i = 0; i < 4; i++) res += de[overlap[idx + i]] * pw[i];
+    for(int i=0;i< 4; i++) res += de[overlap[idx + i]] * pw[i];
     return res;
 }
 
