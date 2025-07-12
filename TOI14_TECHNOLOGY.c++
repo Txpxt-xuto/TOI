@@ -13012,8 +13012,6 @@ ll deoverlepval (ll x) {
     return res;
 }
 
-// decrypt overlapping index
-
 ll deoverlepidx (ll x)
 {
     ll idx = x * 9 + 5, res = 0;
