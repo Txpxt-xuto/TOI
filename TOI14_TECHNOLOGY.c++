@@ -13023,7 +13023,7 @@ ll deoverlepidx (ll x) {
 ll binpow (ll x, ll y)
 {
     ll res = 1;
-    for (; y; x *= x, x %= M, y >>= 1LL) if (y & 1LL) res *= x, res %= M;
+    for(;y;x*=x,x%=M,y>>=1LL) if(y & 1LL) res *= x, res %= M;
     return res;
 }
 
