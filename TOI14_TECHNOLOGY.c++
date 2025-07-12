@@ -13009,7 +13009,7 @@ ll decrypt (ll x) {
 ll deoverlepval (ll x)
 {
     ll idx = x * 9, res = 0;
-    for (int i=0;i<5;i++) res += de[overlap[idx + i]] * pw[i];
+    for(int i=0;i<5;i++) res += de[overlap[idx + i]] * pw[i];
     return res;
 }
 
