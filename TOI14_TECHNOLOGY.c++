@@ -13004,8 +13004,6 @@ ll decrypt (ll x) {
     return res;
 }
 
-// decrypt overlapping value
-
 ll deoverlepval (ll x)
 {
     ll idx = x * 9, res = 0;
