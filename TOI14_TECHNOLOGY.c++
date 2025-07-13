@@ -12998,7 +12998,7 @@ char en[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-";
 ll decrypt (ll x)
 {
     ll idx = x * 5, res = 0;
-    for (int i = 0; i < 5; i++) res += de[pre[idx + i]] * pw[i];
+    for(int i = 0; i < 5; i++) res += de[pre[idx + i]] * pw[i];
     return res;
 }
 
