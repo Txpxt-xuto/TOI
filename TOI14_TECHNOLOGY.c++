@@ -13077,7 +13077,6 @@ int main(){
     
     sort(gaps.begin(),gaps.end(),greater<int>());
     //for(auto num:gaps) cout<<num<<" ";
-
     for(int i=0;i<(k-1);i++) if(!gaps.empty()) gaps.erase(gaps.begin());
     int ans=0;
     for(auto num:gaps) ans+=num;
