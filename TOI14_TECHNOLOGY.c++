@@ -13057,3 +13057,32 @@ int main()
     while(q--) solve();
 }
 
+#include <bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+
+using A=pair<int,pair<int,int>>;
+
+int main(){
+    ios::sync_with_stdio(false); cin.tie(0);
+    
+    int n,m,k; cin>>n>>m>>k;
+    vector<int> flawed(m+1);
+    for(int i=1;i<=m;i++) cin>>flawed[i];
+
+    vector<int> gaps;
+    for(int i=2;i<=m;i++){
+        gaps.push_back(flawed[i]-flawed[i-1]-1);
+    }
+    
+    sort(gaps.begin(),gaps.end(),greater<int>());
+    //for(auto num:gaps) cout<<num<<" ";
+
+    for(int i=0;i<(k-1);i++){
+        if(!gaps.empty()) gaps.erase(gaps.begin());
+    }
+
+    int ans=0;
+    for(auto num:gaps) ans+=num;
+    cout<<ans<<endl;
+}
