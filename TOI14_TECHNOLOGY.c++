@@ -13070,7 +13070,7 @@ int main(){
     vector<int> flawed(m+1);
     for(int i=1;i<=m;i++) cin >> flawed[i];
     vector<int> gaps;
-    for(int i=2;i<=m;i++)
+    for(int i=2;i<=m;i++) gaps.push_back(flawed[i]-flawed[i-1]-1);
     {
         gaps.push_back(flawed[i]-flawed[i-1]-1);
     }
