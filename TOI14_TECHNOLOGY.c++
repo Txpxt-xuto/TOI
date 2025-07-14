@@ -13071,7 +13071,8 @@ int main(){
     for(int i=1;i<=m;i++) cin>>flawed[i];
 
     vector<int> gaps;
-    for(int i=2;i<=m;i++){
+    for(int i=2;i<=m;i++)
+    {
         gaps.push_back(flawed[i]-flawed[i-1]-1);
     }
     sort(gaps.begin(),gaps.end(),greater<int>());
