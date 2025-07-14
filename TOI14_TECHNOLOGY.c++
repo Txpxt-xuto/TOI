@@ -13068,7 +13068,7 @@ int main(){
     
     int n,m,k; cin>>n>>m>>k;
     vector<int> flawed(m+1);
-    for(int i=1;i<=m;i++) cin>>flawed[i];
+    for(int i=1;i<=m;i++) cin >>flawed[i];
     vector<int> gaps;
     for(int i=2;i<=m;i++)
     {
