@@ -13072,7 +13072,7 @@ int main(){
     vector<int> gaps;
     for(int i=2;i<=m;i++) gaps.push_back(flawed[i]-flawed[i-1]-1);
     {
-        gaps.push_back(flawed[i]-flawed[i
+        gaps.push_back(flawed[i]-flaw
     }
     sort(gaps.begin(),gaps.end(),greater<int>());
     for(int i=0;i<(k-1);i++) if(!gaps.empty()) gaps.erase(gaps.begin());
