@@ -13062,7 +13062,6 @@ using namespace std;
 #define endl '\n'
 
 using A=pair<int,pair<int,int>>;
-
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
