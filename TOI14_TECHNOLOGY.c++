@@ -13065,7 +13065,6 @@ using A=pair<int,pair<int,int>>;
 
 int main(){
     ios::sync_with_stdio(false); cin.tie(0);
-    
     int n,m,k;
     cin >> n >> m >> k;
     vector<int> flawed(m+1);
