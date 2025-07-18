@@ -13060,7 +13060,6 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 #define endl '\n'
-
 using A=pair<int,pair<int,int>>;
 int main()
 {
