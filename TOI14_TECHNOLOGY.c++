@@ -13094,7 +13094,7 @@ int main()
     cin >> n >> m >> k;
     ll a[m], s = 0;
     vector <ll> v;
-    for (auto &e : a) cin >> e;
+    for(auto &e : a) cin >> e;
     for(int i = 1; i < m; i++) v.emplace_back(a[i] - a[i-1] - 1);
     sort(v.begin(), v.end());
     for(int i = 0; i < (int) v.size() - k + 1; i++) cerr << i << '\n', s += v[i];
