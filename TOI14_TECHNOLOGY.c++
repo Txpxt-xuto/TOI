@@ -13077,6 +13077,7 @@ int main()
     for(auto num:gaps) ans+=num;
     cout << ans << endl;
 }
+
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
