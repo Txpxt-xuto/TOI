@@ -13077,12 +13077,6 @@ int main()
     for(auto num:gaps) ans+=num;
     cout << ans << endl;
 }
-
-/*
-    author  : PakinDioxide
-    created : 05/05/2025 20:58
-    task    : o61_mar_c2_fixing
-*/
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
