@@ -13140,7 +13140,6 @@ signed main()
             nonself[a]%=mod;
         }
     }
-
     for(int i=1;i<=n;i++) node[i].push_back(i),sort(node[i].begin(),node[i].end());
     for(int i=1;i<=n;i++)
     {
