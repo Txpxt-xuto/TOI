@@ -13095,3 +13095,74 @@ int main()
     for(int i=0;i<(int)v.size()-k+1;i++) cerr << i << '\n', s += v[i];
     cout << s << '\n';
 }
+
+#include<bits/stdc++.h>
+#define int long long
+#define pii pair<int,int>
+#define fi first
+#define se second
+using namespace std;
+int const n_max=1e5+10;
+int const prime=1e5+3;
+int const mod=1e9+7;
+vector<int> p(n_max,0);
+vector<int> self(n_max,0),nonself(n_max,0),recheck(n_max,0),nonrecheck(n_max,0);
+map<pii,int> keep[n_max];
+vector<int> node[n_max];
+vector<pii> edge;
+signed main()
+{
+    cin.tie(nullptr)->ios::sync_with_stdio(false);
+    int n,m;
+    cin>>n>>m;
+    p[0]=1;
+    for(int i=1;i<=n;i++)
+    {
+        p[i]=(p[i-1]*prime)%mod;
+        self[i]=p[i]%mod;
+    }
+    for(int i=0;i<m;i++)
+    {
+        int a,b;
+        cin>>a>>b;
+        node[a].push_back(b);
+        node[b].push_back(a);
+        edge.push_back({a,b});
+    }
+    for(int i=1;i<=n;i++)
+    {
+        for(auto it:node[i])
+        {
+            int a=i,b=it;
+            self[a]+=p[b];
+            self[a]%=mod;
+            nonself[a]+=p[b];
+            nonself[a]%=mod;
+        }
+    }
+
+    for(int i=1;i<=n;i++) node[i].push_back(i),sort(node[i].begin(),node[i].end());
+    for(int i=1;i<=n;i++)
+    {
+        for(auto it:node[i])
+        {
+            int a=i,b=it;
+            recheck[a]+=b,recheck[a]*=prime,recheck[a]%=mod;
+            if(b!=a)nonrecheck[a]+=b,nonrecheck[a]*=prime,nonrecheck[a]%=mod;
+        }
+    }
+    for(int i=1;i<=n;i++) keep[node[i].size()][(pii){nonself[i],nonrecheck[i]}]++;
+    int ans=0;
+    for(auto it:edge)
+    {
+        int a=it.fi,b=it.se;
+        //if(((nonself[a]-p[b])%mod+mod)%mod==((nonself[b]-p[a])%mod+mod)%mod) ans++;
+        if(self[a]==self[b]&&node[a].size()==node[b].size()&&recheck[a]==recheck[b]) ans++;
+    }
+    for(int i=0;i<=n;i++) for(auto it:keep[i])
+    {
+        ans+=(it.se)*(it.se-1)/2;
+    }
+    cout<<ans;
+    return 0;
+}
