@@ -13124,7 +13124,7 @@ signed main()
     for(int i=0;i<m;i++)
     {
         int a,b;
-        cin>>a>>b;
+        cin >> a >> b;
         node[a].push_back(b);
         node[b].push_back(a);
         edge.push_back({a,b});
