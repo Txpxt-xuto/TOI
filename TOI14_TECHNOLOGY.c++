@@ -13159,9 +13159,9 @@ signed main()
         //if(((nonself[a]-p[b])%mod+mod)%mod==((nonself[b]-p[a])%mod+mod)%mod) ans++;
         if(self[a]==self[b]&&node[a].size()==node[b].size()&&recheck[a]==recheck[b]) ans++;
     }
-    for(int i=0;i<=n;i++) for(auto it:keep[i])
+    for(int i=0;i<=n;i++) for(auto it:keep[i]) ans+=(it.se)*(it.se-1)/2;
     {
-        ans+=(it.se)*(it.se-1)/2;
+       
     }
     cout<<ans;
     return 0;
