@@ -13163,7 +13163,6 @@ signed main()
 }
 
 #include <stdio.h>
-
 int main()
 {
     int Num1, Num2;
