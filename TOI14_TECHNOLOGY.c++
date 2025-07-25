@@ -13169,7 +13169,6 @@ int main()
     int Num1, Num2;
     scanf("%d%d", &Num1, &Num2);
     int FirstNum1 = Num1, FirstNum2 = Num2;
-
     while (Num2 != 0)
     {
         int tmp = Num2;
