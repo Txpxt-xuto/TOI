@@ -13176,5 +13176,5 @@ int main()
         Num1 = tmp;
     }
     long long crn = (long long)FirstNum1 * FirstNum2 / Num1;
-    printf("%lld", crn);
+    printf("%lld",crn);
 }
