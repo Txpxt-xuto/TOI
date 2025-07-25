@@ -13254,9 +13254,9 @@ render_frame(float A, float B) {
   // terminal emulation mode
     printf("\x1b[H");
     for (int j = 0; j < screen_height; j++) {
-    for (int i = 0; i < screen_width; i++) {
+    for (int i = 0; i < screen_width; i++)
       putchar(output[i,j]);
-    }
+    
     putchar('\n');
   }
 
