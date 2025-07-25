@@ -13253,7 +13253,7 @@ render_frame(float A, float B) {
   // bring cursor to "home" location, in just about any currently-used
   // terminal emulation mode
     printf("\x1b[H");
-    for(int j = 0; j < screen_height; j++)
+    for(int j=0;j<screen_height;j++)
     {
         for(int i=0;i<screen_width;i++) putchar(output[i,j]);
         putchar('\n');
