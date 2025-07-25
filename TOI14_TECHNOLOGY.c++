@@ -13245,9 +13245,9 @@ render_frame(float A, float B) {
           // luminance and plot it in our output:
           output[xp, yp] = ".,-~:;=!*#$@"[luminance_index];
         }
-      }
+            }
+        }
     }
-  }
     printf("\x1b[H");
     for(int j=0;j<screen_height;j++)
     {
