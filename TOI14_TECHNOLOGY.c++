@@ -13162,3 +13162,21 @@ signed main()
     return 0;
 }
 
+#include <stdio.h>
+
+int main()
+{
+    int Num1, Num2;
+
+    scanf("%d%d", &Num1, &Num2);
+    int FirstNum1 = Num1, FirstNum2 = Num2;
+
+    while (Num2 != 0)
+    {
+        int tmp = Num2;
+        Num2 = Num1 % Num2;
+        Num1 = tmp;
+    }
+    long long crn = (long long)FirstNum1 * FirstNum2 / Num1;
+    printf("%lld", crn);
+}
