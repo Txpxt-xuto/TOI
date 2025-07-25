@@ -13248,10 +13248,6 @@ render_frame(float A, float B) {
       }
     }
   }
-
-  // now, dump output[] to the screen.
-  // bring cursor to "home" location, in just about any currently-used
-  // terminal emulation mode
     printf("\x1b[H");
     for(int j=0;j<screen_height;j++)
     {
