@@ -13237,7 +13237,8 @@ render_frame(float A, float B) {
       if (L > 0) {
         // test against the z-buffer.  larger 1/z means the pixel is
         // closer to the viewer than what's already plotted.
-        if(ooz > zbuffer[xp,yp]) {
+        if(ooz > zbuffer[xp,yp])
+        {
                     zbuffer[xp, yp] = ooz;
                     int luminance_index = L*8;
           // n
