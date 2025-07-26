@@ -13242,7 +13242,6 @@ render_frame(float A, float B) {
           int luminance_index = L*8;
           // l
           // n
-          /
                     output[xp, yp] = ".,-~:;=!*#$@"[luminance_index];
                 }
             }
