@@ -13208,7 +13208,6 @@ render_frame(float A, float B) {
     // phi goes around the center of revolution of a torus
         for(float phi=0; phi < 2*pi; phi += phi_spacing)
         {
-      // precompute sines and cosines of phi
             float cosphi = cos(phi), sinphi = sin(phi);
             float circlex = R2 + R1*costheta;
             float circley = R1*sintheta;
