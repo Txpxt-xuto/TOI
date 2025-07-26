@@ -13199,8 +13199,6 @@ render_frame(float A, float B) {
 
   char output[0..screen_width, 0..screen_height] = ' ';
   float zbuffer[0..screen_width, 0..screen_height] = 0;
-
-  // theta goes around the cross-sectional circle of a torus
     for (float theta=0; theta < 2*pi; theta += theta_spacing)
     {
         float costheta = cos(theta), sintheta = sin(theta);
