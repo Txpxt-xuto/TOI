@@ -13217,8 +13217,8 @@ render_frame(float A, float B) {
 
       // final 3D (x,y,z) coordinate after rotations, directly from
       // our math above
-            float x = circlex*(cosB*cosphi + sinA*sinB*sinphi)- circley*cosA*sinB; 
-            float y = circlex*(sinB*cosphi - sinA*cosB*sinphi)+ circley*cosA*cosB;
+            float x = circlex*(cosB*cosphi + sinA*sinB*sinphi) - circley*cosA*sinB; 
+            float y = circlex*(sinB*cosphi - sinA*cosB*sinphi) + circley*cosA*cosB;
             float z = K2 + cosA*circlex*sinphi + circley*sinA;
             float ooz = 1/z;
             int xp = (int) (screen_width/2 + K1*ooz*x);
