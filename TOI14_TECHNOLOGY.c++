@@ -13192,7 +13192,8 @@ const float K2 = 5;
 // screen_width*K2*3/(8*(R1+R2)) = K1
 const float K1 = screen_width*K2*3/(8*(R1+R2));
 
-render_frame(float A, float B){
+render_frame(float A, float B)
+{
     float cosA = cos(A), sinA = sin(A);
     float cosB = cos(B), sinB = sin(B);
     char output[0..screen_width, 0..screen_height] = ' ';
