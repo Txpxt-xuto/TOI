@@ -13205,7 +13205,6 @@ render_frame(float A, float B) {
     {
     // precompute sines and cosines of theta
         float costheta = cos(theta), sintheta = sin(theta);
-    // phi goes around the center of revolution of a torus
         for(float phi=0; phi < 2*pi; phi += phi_spacing)
         {
             float cosphi = cos(phi), sinphi = sin(phi);
