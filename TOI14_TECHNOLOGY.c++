@@ -13234,8 +13234,8 @@ render_frame(float A, float B) {
         sinA*sintheta + cosB*(cosA*sintheta - costheta*sinA*sinphi);
       // L ranges from -sqrt(2) to +sqrt(2).  If it's < 0, the surface
       // is pointing away from us, so we won't bother trying to plot it.
-             if (L > 0)
-             {
+            if (L > 0)
+            {
                 if(ooz > zbuffer[xp,yp])
                 {
                     zbuffer[xp, yp] = ooz;
