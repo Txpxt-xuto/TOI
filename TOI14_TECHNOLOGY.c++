@@ -13191,7 +13191,6 @@ const float K2 = 5;
 // screen_width*3/8 = K1*(R1+R2)/(K2+0)
 // screen_width*K2*3/(8*(R1+R2)) = K1
 const float K1 = screen_width*K2*3/(8*(R1+R2));
-
 render_frame(float A, float B)
 {
     float cosA = cos(A), sinA = sin(A);
