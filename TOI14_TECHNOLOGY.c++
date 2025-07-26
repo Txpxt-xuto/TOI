@@ -13244,7 +13244,7 @@ render_frame(float A, float B) {
           // now we lookup the character corresponding to the
           // luminance and plot it in our output:
           output[xp, yp] = ".,-~:;=!*#$@"[luminance_index];
-            }
+                }
             }
         }
     }
