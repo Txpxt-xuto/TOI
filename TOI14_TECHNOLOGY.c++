@@ -13243,7 +13243,7 @@ render_frame(float A, float B) {
           // luminance_index is now in the range 0..11 (8*sqrt(2) = 11.3)
           // now we lookup the character corresponding to the
           // luminance and plot it in our output:
-          output[xp, yp] = ".,-~:;=!*#$@"[luminance_index];
+                    output[xp, yp] = ".,-~:;=!*#$@"[luminance_index];
                 }
             }
         }
