@@ -13180,7 +13180,6 @@ int main()
 
 const float theta_spacing = 0.07;
 const float phi_spacing   = 0.02;
-
 const float R1 = 1;
 const float R2 = 2;
 const float K2 = 5;
