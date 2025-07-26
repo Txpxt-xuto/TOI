@@ -13196,7 +13196,6 @@ render_frame(float A, float B) {
   // precompute sines and cosines of A and B
   float cosA = cos(A), sinA = sin(A);
   float cosB = cos(B), sinB = sin(B);
-
     char output[0..screen_width, 0..screen_height] = ' ';
     float zbuffer[0..screen_width, 0..screen_height] = 0;
     for (float theta=0; theta < 2*pi; theta += theta_spacing)
