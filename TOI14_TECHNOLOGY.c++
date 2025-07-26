@@ -13227,7 +13227,7 @@ render_frame(float A, float B) {
       // goes up in 3D space but down on 2D displays.
             int xp = (int) (screen_width/2 + K1*ooz*x);
             int yp = (int) (screen_height/2 - K1*ooz*y);
-      // calculate luminance.  ugly, but correct.
+      
             float L = cosphi*costheta*sinB - cosA*costheta*sinphi -
             sinA*sintheta + cosB*(cosA*sintheta - costheta*sinA*sinphi);
             if (L > 0)
