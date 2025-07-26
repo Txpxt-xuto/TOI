@@ -13235,8 +13235,6 @@ render_frame(float A, float B) {
       // L ranges from -sqrt(2) to +sqrt(2).  If it's < 0, the surface
       // is pointing away from us, so we won't bother trying to plot it.
       if (L > 0) {
-        // test against the z-buffer.  larger 1/z means the pixel is
-        // closer to the viewer than what's already plotted.
         if(ooz > zbuffer[xp,yp])
         {
                     zbuffer[xp, yp] = ooz;
