@@ -13239,7 +13239,7 @@ render_frame(float A, float B) {
         // closer to the viewer than what's already plotted.
         if(ooz > zbuffer[xp,yp]) {
                 zbuffer[xp, yp] = ooz;
-          int luminance_index = L*8;
+                    int luminance_index = L*8;
           // l
           // n
                     output[xp, yp] = ".,-~:;=!*#$@"[luminance_index];
