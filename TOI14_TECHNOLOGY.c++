@@ -13221,8 +13221,8 @@ render_frame(float A, float B) {
         - circley*cosA*sinB; 
       float y = circlex*(sinB*cosphi - sinA*cosB*sinphi)
         + circley*cosA*cosB;
-      float z = K2 + cosA*circlex*sinphi + circley*sinA;
-      float ooz = 1/z;
+            float z = K2 + cosA*circlex*sinphi + circley*sinA;
+            float ooz = 1/z;
       // x and y projection.  note that y is negated here, because y
       // goes up in 3D space but down on 2D displays.
             int xp = (int) (screen_width/2 + K1*ooz*x);
