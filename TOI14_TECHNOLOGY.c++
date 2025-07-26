@@ -13241,7 +13241,7 @@ render_frame(float A, float B) {
           zbuffer[xp, yp] = ooz;
           int luminance_index = L*8;
           // luminance_index is now in)
-          // now we lookup the character corresponding to the
+          // now we loonding to the
           // luminance 
                     output[xp, yp] = ".,-~:;=!*#$@"[luminance_index];
                 }
