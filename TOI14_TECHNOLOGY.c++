@@ -13212,8 +13212,8 @@ render_frame(float A, float B) {
     
       // the x,y coordinate of the circle, before revolving (factored
       // out of the above equations)
-      float circlex = R2 + R1*costheta;
-      float circley = R1*sintheta;
+            float circlex = R2 + R1*costheta;
+            float circley = R1*sintheta;
             float x = circlex*(cosB*cosphi + sinA*sinB*sinphi) - circley*cosA*sinB; 
             float y = circlex*(sinB*cosphi - sinA*cosB*sinphi) + circley*cosA*cosB;
             float z = K2 + cosA*circlex*sinphi + circley*sinA;
