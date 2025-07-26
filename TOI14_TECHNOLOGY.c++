@@ -13232,7 +13232,6 @@ render_frame(float A, float B) {
       // calculate luminance.  ugly, but correct.
       float L = cosphi*costheta*sinB - cosA*costheta*sinphi -
         sinA*sintheta + cosB*(cosA*sintheta - costheta*sinA*sinphi);
-
             if (L > 0)
             {
                 if(ooz > zbuffer[xp,yp])
