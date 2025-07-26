@@ -13254,5 +13254,4 @@ render_frame(float A, float B) {
         for(int i=0;i<screen_width;i++) putchar(output[i,j]);
         putchar('\n');
     }
-
 }
