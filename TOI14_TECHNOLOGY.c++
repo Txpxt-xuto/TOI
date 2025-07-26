@@ -13184,12 +13184,6 @@ const float phi_spacing   = 0.02;
 const float R1 = 1;
 const float R2 = 2;
 const float K2 = 5;
-// Calculate K1 based on screen size: the maximum x-distance occurs
-// roughly at the edge of the torus, which is at x=R1+R2, z=0.  we
-// want that to be displaced 3/8ths of the width of the screen, which
-// is 3/4th of the way from the center to the side of the screen.
-// screen_width*3/8 = K1*(R1+R2)/(K2+0)
-// screen_width*K2*3/(8*(R1+R2)) = K1
 const float K1 = screen_width*K2*3/(8*(R1+R2));
 render_frame(float A, float B)
 {
