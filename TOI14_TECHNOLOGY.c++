@@ -13201,7 +13201,8 @@ render_frame(float A, float B) {
   float zbuffer[0..screen_width, 0..screen_height] = 0;
 
   // theta goes around the cross-sectional circle of a torus
-  for (float theta=0; theta < 2*pi; theta += theta_spacing) {
+    for (float theta=0; theta < 2*pi; theta += theta_spacing)
+    {
     // precompute sines and cosines of theta
         float costheta = cos(theta), sintheta = sin(theta);
     // phi goes around the center of revolution of a torus
