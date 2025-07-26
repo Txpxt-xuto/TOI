@@ -13240,7 +13240,7 @@ render_frame(float A, float B) {
         if(ooz > zbuffer[xp,yp]) {
           zbuffer[xp, yp] = ooz;
           int luminance_index = L*8;
-          // luminance_index is now in)
+          // l
           // n
           // luminance 
                     output[xp, yp] = ".,-~:;=!*#$@"[luminance_index];
