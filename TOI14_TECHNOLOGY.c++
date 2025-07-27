@@ -13250,8 +13250,8 @@ struct SegTree{
     void build() build(1,k,1);
     void update(int l,int r,int i,int x,int v)
     {
-        if(x<l||r<x)return;
-        if(l==r)return void(t[i]=(t[i]+v)%mod);
+        if(x<l||r<x) return;
+        if(l==r) return void(t[i]=(t[i]+v)%mod);
         int m=(l+r)/2;
         update(l,m,i*2,x,v);
         update(m+1,r,i*2+1,x,v);
