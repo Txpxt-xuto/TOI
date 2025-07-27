@@ -13276,7 +13276,7 @@ int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> k >> mod;
-    for(int i=1;i<=n;i++)cin >> a[i].first >> a[i].second;
+    for(int i=1;i<=n;i++) cin >> a[i].first >> a[i].second;
     sort(a+1,a+n+1);
     cnt=k;
     for(int i=n;i>=1;i--)
