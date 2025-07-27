@@ -13259,9 +13259,6 @@ struct SegTree{
         t[i]=t[i*2]*t[i*2+1]%mod;
     }
     void update(int x,int v) update(1,k,1,x,v);
-    {
-        
-    }
     int query(int l,int r,int i,int x,int y)
     {
         if(y<l||r<x) return 1;
