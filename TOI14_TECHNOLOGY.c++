@@ -13280,7 +13280,8 @@ int main(){
     cnt=k;
     for(int i=n;i>=1;i--){
         auto [l,t]=a[i];
-        if(!ord[t]){
+        if(!ord[t])
+        {
             b[cnt]=l;
             ord[t]=cnt;
             last[t]=l;
