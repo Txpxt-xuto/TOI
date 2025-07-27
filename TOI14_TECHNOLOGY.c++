@@ -13224,3 +13224,4 @@ render_frame(float A, float B)
         putchar('\n');
     }
 }
+
