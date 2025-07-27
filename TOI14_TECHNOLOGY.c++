@@ -13269,7 +13269,6 @@ struct SegTree{
     }
     int query(int x,int y) return query(1,k,1,x,y);
         return query(1,k,1,x,y);
-
 }seg;
 
 int main()
