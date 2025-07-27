@@ -13262,7 +13262,7 @@ struct SegTree{
         update(1,k,1,x,v);
     }
     int query(int l,int r,int i,int x,int y){
-        if(y<l||r<x)return 1;
+        if(y<l||r<x) return 1;
         if(x<=l&&r<=y)return t[i];
         int m=(l+r)/2;
         return query(l,m,i*2,x,y)*query(m+1,r,i*2+1,x,y)%mod;
