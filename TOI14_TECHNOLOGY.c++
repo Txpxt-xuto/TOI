@@ -13240,7 +13240,8 @@ int cnt,ans;
 
 struct SegTree{
     int t[K];
-    void build(int l,int r,int i){
+    void build(int l,int r,int i)
+    {
         t[i]=1;
         if(l==r) return;
         int m=(l+r)/2;
