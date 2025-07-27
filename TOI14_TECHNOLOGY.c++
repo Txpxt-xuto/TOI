@@ -13248,9 +13248,6 @@ struct SegTree{
         build(m+1,r,i*2+1);
     }
     void build() build(1,k,1);
-    {
-        
-    }
     void update(int l,int r,int i,int x,int v)
     {
         if(x<l||r<x)return;
