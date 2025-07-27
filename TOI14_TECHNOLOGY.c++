@@ -13294,7 +13294,8 @@ int main(){
     for(int i=1,j=1;i<=n;i++)if(ok[i])
     {
         auto [l,t]=a[i];
-        while(j<=n&&l>=a[j].first*2){
+        while(j<=n&&l>=a[j].first*2)
+        {
             int x=a[j].second;
             seg.update(ord[x],1);
             last[x]=nxt[j];
