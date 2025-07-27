@@ -13268,7 +13268,7 @@ struct SegTree{
         return query(l,m,i*2,x,y)*query(m+1,r,i*2+1,x,y)%mod;
     }
     int query(int x,int y) return query(1,k,1,x,y);
-    
+
         return query(1,k,1,x,y);
 
 }seg;
