@@ -13272,7 +13272,8 @@ struct SegTree{
     }
 }seg;
 
-int main(){
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> k >> mod;
     for(int i=1;i<=n;i++)cin >> a[i].first >> a[i].second;
