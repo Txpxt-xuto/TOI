@@ -13294,7 +13294,7 @@ int main()
         last[t]=l;
     }
     seg.build();
-    for(int i=1,j=1;i<=n;i++)if(ok[i])
+    for(int i=1,j=1;i<=n;i++) if(ok[i])
     {
         auto [l,t]=a[i];
         while(j<=n&&l>=a[j].first*2)
