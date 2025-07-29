@@ -13323,7 +13323,8 @@ int m, n, t, dj[3] = {-1, 1, 0};
 vector<vector<bool>> mp(101, vector<bool> (42, false));
 vector<int> ans;
 
-bool car(int i, int j) {
+bool car(int i, int j)
+{
     if(!mp[i][j]) return false;
     if(i == t) return true;
     for(int k=1;k<=3;k++)
