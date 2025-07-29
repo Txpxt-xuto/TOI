@@ -13349,7 +13349,7 @@ int main() {
     cin >> m >> n >> t;
 
     bool temp;
-    for(int i = 1; i <= t; i++) 
+    for(int i = 1;i<=t; i++) 
     {
         for(int j=1;j<=m; j++)
         {
