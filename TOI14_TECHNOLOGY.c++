@@ -13359,7 +13359,8 @@ int main() {
     mp[0][n] = true;
     if(car(0, n))
     {
-        for(int i = ans.size() - 1; i >= 0; i--) {
+        for(int i = ans.size() - 1; i >= 0; i--)
+        {
             cout << ans[i] << "\n";
         }
     }
