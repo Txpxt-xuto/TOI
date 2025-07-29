@@ -13328,8 +13328,7 @@ bool car(int i, int j) {
         return false;
     }
 
-    if (i == t){
-        return true;
+    if (i == t) return true;
     for(int k=1;k<=3;k++)
     {
         if(car(i+1,j+dj[k - 1]))
