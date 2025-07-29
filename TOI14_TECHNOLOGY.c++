@@ -13345,7 +13345,6 @@ bool car(int i, int j) {
 
 int main() {
     save_time;
-
     cin >> m >> n >> t;
     bool temp;
     for(int i=1;i<=t;i++) 
