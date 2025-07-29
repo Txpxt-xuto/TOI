@@ -13309,3 +13309,56 @@ int main()
     cout << ans;
 }
 
+#include <bits/stdc++.h>
+#define f first
+#define s second
+#define ii pair<int, int>
+#define iii pair<ii, int>
+#define pb push_back
+#define save_time ios_base::sync_with_stdio(false); cin.tie(NULL);
+const int inf = 1e9 + 7;
+using namespace std;
+
+int m, n, t, dj[3] = {-1, 1, 0};
+vector<vector<bool>> mp(101, vector<bool> (42, false));
+vector<int> ans;
+
+bool car(int i, int j) {
+    if (!mp[i][j]) {
+        return false;
+    }
+
+    if (i == t) {
+        return true;
+    }
+
+    for (int k = 1; k <= 3; k++) {
+        if (car(i + 1, j + dj[k - 1])) {
+            ans.pb(k);
+            return true;
+        }
+    }
+
+    mp[i][j] = false;
+    return false;
+}
+
+int main() {
+    save_time;
+
+    cin >> m >> n >> t;
+
+    bool temp;
+    for (int i = 1; i <= t; i++) {
+        for (int j = 1; j <= m; j++) {
+            cin >> temp;
+            mp[i][j] = !temp;
+        }
+    }
+    mp[0][n] = true;
+    if (car(0, n)) {
+        for (int i = ans.size() - 1; i >= 0; i--) {
+            cout << ans[i] << "\n";
+        }
+    }
+}
