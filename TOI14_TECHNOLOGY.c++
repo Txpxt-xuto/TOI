@@ -13325,7 +13325,7 @@ vector<int> ans;
 
 bool car(int i, int j) {
     if (!mp[i][j]) {
-return flse;
+return false;
 
     if (i == t) return true;
     for(int k=1;k<=3;k++)
