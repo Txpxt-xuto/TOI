@@ -13343,7 +13343,8 @@ bool car(int i, int j) {
     return false;
 }
 
-int main() {
+int main()
+{
     save_time;
     cin >> m >> n >> t;
     bool temp;
