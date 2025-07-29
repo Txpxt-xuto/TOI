@@ -13351,7 +13351,7 @@ int main() {
     bool temp;
     for(int i = 1; i <= t; i++) 
     {
-        for (int j = 1; j <= m; j++) {
+        for(int j = 1; j <= m; j++) {
             cin >> temp;
             mp[i][j] = !temp;
         }
