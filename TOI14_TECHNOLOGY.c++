@@ -13338,7 +13338,6 @@ bool car(int i, int j) {
             return true;
         }
     }
-
     mp[i][j] = false;
     return false;
 }
