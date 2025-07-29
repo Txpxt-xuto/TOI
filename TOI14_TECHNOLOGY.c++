@@ -13318,7 +13318,6 @@ int main()
 #define save_time ios_base::sync_with_stdio(false); cin.tie(NULL);
 const int inf = 1e9 + 7;
 using namespace std;
-
 int m, n, t, dj[3] = {-1, 1, 0};
 vector<vector<bool>> mp(101, vector<bool> (42, false));
 vector<int> ans;
