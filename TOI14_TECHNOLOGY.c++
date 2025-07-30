@@ -13398,7 +13398,6 @@ int main() {
         } else { // Even number
             consecutiveEvens++;
             consecutiveOdds = 0; // Reset consecutive odds
-
             if (consecutiveEvens >= 3) {
                 player2Life -= 3;
             } else {
