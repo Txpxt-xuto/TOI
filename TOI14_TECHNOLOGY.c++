@@ -13395,7 +13395,7 @@ int main() {
             } else {
                 player1Life--;
             }
-        } else { // Even number
+        } else { 
             consecutiveEvens++;
             consecutiveOdds = 0;
             if (consecutiveEvens >= 3) {
