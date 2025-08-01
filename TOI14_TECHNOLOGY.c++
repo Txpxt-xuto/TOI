@@ -13398,9 +13398,11 @@ int main() {
         } else { 
             consecutiveEvens++;
             consecutiveOdds = 0;
-            if (consecutiveEvens >= 3) {
+            if (consecutiveEvens >= 3)
+            {
                 player2Life -= 3;
-            } else {
+            } else
+            {
                 player2Life--;
             }
         }
