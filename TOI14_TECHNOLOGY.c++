@@ -13401,9 +13401,9 @@ int main() {
             if (consecutiveEvens >= 3)
             {
                 player2Life -= 3;
-            } else
+            } else player2Life--;
             {
-                player2Life--;
+                
             }
         }
         if (player1Life <= 0) {
