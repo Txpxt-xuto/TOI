@@ -13402,9 +13402,6 @@ int main() {
             {
                 player2Life -= 3;
             } else player2Life--;
-            {
-                
-            }
         }
         if (player1Life <= 0) {
             std::cout << 1 << "\n" << currentNumber << std::endl;
