@@ -13402,8 +13402,7 @@ int main() {
             if (consecutiveEvens >= 3) player2Life -= 3;
             else player2Life--;
         }
-        if
-        (player1Life <= 0) {
+        if(player1Life <= 0) {
             std::cout << 1 << "\n" << currentNumber << std::endl;
             return 0;
         } else if (player2Life <= 0) {
