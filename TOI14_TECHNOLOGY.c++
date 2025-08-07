@@ -13399,7 +13399,7 @@ int main() {
         { 
             consecutiveEvens++;
             consecutiveOdds = 0;
-            if (consecutiveEvens >= 3) player2Life -= 3;
+            if(consecutiveEvens >= 3) player2Life -= 3;
             else player2Life--;
         }
         if(player1Life <= 0)
