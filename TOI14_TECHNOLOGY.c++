@@ -13395,8 +13395,6 @@ int main() {
             
             else
                 player1Life--;
-
-        }
         else{ 
             consecutiveEvens++;
             consecutiveOdds = 0;
