@@ -13392,7 +13392,8 @@ int main() {
 
             if (consecutiveOdds >= 3) {
                 player1Life -= 3;
-            } else {
+            
+            else
                 player1Life--;
             }
         }
