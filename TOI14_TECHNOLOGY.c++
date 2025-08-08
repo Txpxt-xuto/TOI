@@ -13388,7 +13388,7 @@ int main() {
 
         if (currentNumber % 2 == 1) { // Odd number
             consecutiveOdds++;
-            consecutiveEvens = 0; // Reset consecutive evens
+            consecutiveEvens = 0;
             if(consecutiveOdds >= 3) player1Life -= 3;
             else player1Life--;
         else{ 
