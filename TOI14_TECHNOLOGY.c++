@@ -13390,7 +13390,7 @@ int main() {
             consecutiveOdds++;
             consecutiveEvens = 0; // Reset consecutive evens
 
-            if (consecutiveOdds >= 3) player1Life -= 3;
+            if(consecutiveOdds >= 3) player1Life -= 3;
             else player1Life--;
         else{ 
             consecutiveEvens++;
