@@ -13383,9 +13383,9 @@ int main() {
         std::cin >> numbers[i];
     }
 
-    for (int i = 0; i < totalNumbers; ++i) {
+    for(int i = 0; i < totalNumbers; ++i)
+    {
         int currentNumber = numbers[i];
-
         if (currentNumber % 2 == 1)
         {
             consecutiveOdds++;
