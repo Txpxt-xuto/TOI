@@ -13364,9 +13364,9 @@ int main()
 #include <iostream>
 #include <vector>
 
-int main() {
+int main()
+{
     std::cin.tie(nullptr)->sync_with_stdio(false);
-
     int initialLife;
     std::cin >> initialLife;
     int player1Life = initialLife;
@@ -13379,25 +13379,25 @@ int main() {
     for(int i = 0; i < totalNumbers; ++i)
     {
         int currentNumber = numbers[i];
-        if (currentNumber % 2 == 1)
-        {
+        if (currentNumber % 2 == 1){
             consecutiveOdds++;
             consecutiveEvens = 0;
             if(consecutiveOdds >= 3) player1Life -= 3;
             else player1Life--;
-        else{ 
-            consecutiveEvens++;
-            consecutiveOdds = 0;
-            if(consecutiveEvens >= 3) player2Life -= 3;
-            else player2Life--;
-        }
-        if(player1Life <= 0){
-            std::cout << 1 << "\n" << currentNumber << std::endl;
-            return 0;
-        }
-        else if(player2Life <= 0){
-            std::cout << 0 << "\n" << currentNumber << std::endl;
-            return 0;
+            else{ 
+                consecutiveEvens++;
+                consecutiveOdds = 0;
+                if(consecutiveEvens >= 3) player2Life -= 3;
+                else player2Life--;
+            }
+            if(player1Life <= 0){
+                std::cout << 1 << "\n" << currentNumber << std::endl;
+                return 0;
+            }
+            else if(player2Life <= 0){
+                std::cout << 0 << "\n" << currentNumber << std::endl;
+                return 0;
+            }
         }
     }
     return 0;
