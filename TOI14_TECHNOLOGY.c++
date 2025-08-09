@@ -13369,17 +13369,13 @@ int main() {
 
     int initialLife;
     std::cin >> initialLife;
-
     int player1Life = initialLife; // Player 1 (loses life for odd numbers)
     int player2Life = initialLife; // Player 2 (loses life for even numbers)
-
     int consecutiveOdds = 0;
     int consecutiveEvens = 0;
-
     int totalNumbers = 2 * initialLife;
     std::vector<int> numbers(totalNumbers);
-
-    for (int i = 0; i < totalNumbers; ++i) std::cin >> numbers[i];
+    for(int i = 0; i < totalNumbers; ++i) std::cin >> numbers[i];
     for(int i = 0; i < totalNumbers; ++i)
     {
         int currentNumber = numbers[i];
