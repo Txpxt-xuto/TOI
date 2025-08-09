@@ -13379,10 +13379,7 @@ int main() {
     int totalNumbers = 2 * initialLife;
     std::vector<int> numbers(totalNumbers);
 
-    for (int i = 0; i < totalNumbers; ++i) {
-        std::cin >> numbers[i];
-    }
-
+    for (int i = 0; i < totalNumbers; ++i) std::cin >> numbers[i];
     for(int i = 0; i < totalNumbers; ++i)
     {
         int currentNumber = numbers[i];
