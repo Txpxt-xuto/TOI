@@ -13432,7 +13432,6 @@ int main()
 
             r = mid-1;
     }
-
     cout << l;
 
 }
