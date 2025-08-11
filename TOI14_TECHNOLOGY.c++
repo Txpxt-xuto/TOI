@@ -13412,7 +13412,8 @@ int main(){
     int l = 0;
     int r = n;
     unordered_map<string,int> mp;
-    while(l<r){
+    while(l<r)
+    {
         mp.clear();
         int mid = (l+r+1)/2;
         bool check = false;
