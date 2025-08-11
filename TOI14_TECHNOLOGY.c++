@@ -13427,7 +13427,7 @@ int main()
             }
         }
         if(check)
-            l = mid;
+        l = mid;
         else    
 r = mid-1;
     }
