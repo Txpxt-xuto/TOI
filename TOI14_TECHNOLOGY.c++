@@ -13423,8 +13423,9 @@ int main(){
             }
         }
         if(check)
-        
+
             l = mid;
+            
         else    
 
             r = mid-1;
