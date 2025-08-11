@@ -13417,7 +13417,8 @@ int main(){
         int mid = (l+r+1)/2;
         bool check = false;
         for(int i=0;i<n-mid+1;i++){
-            if(++mp[s.substr(i,mid)]>=m){
+            if(++mp[s.substr(i,mid)]>=m)
+            {
                 check = true;
                 break;
             }
@@ -13425,7 +13426,7 @@ int main(){
         if(check)
 
             l = mid;
-            
+
         else    
 
             r = mid-1;
