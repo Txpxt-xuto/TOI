@@ -13423,11 +13423,12 @@ int main(){
             }
         }
         if(check)
+        
             l = mid;
         else    
 
             r = mid-1;
-            
+
     }
 
     cout << l;
