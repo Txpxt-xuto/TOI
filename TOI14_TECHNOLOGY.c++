@@ -13404,7 +13404,8 @@ int main()
 }
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     int n,m;
     cin >> n >> m;
     string s;
