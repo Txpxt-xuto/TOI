@@ -13427,6 +13427,7 @@ int main(){
         else    
             r = mid-1;
     }
-    
+
     cout << l;
+    
 }
