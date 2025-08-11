@@ -13402,3 +13402,30 @@ int main()
     }
     return 0;
 }
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,m;
+    cin >> n >> m;
+    string s;
+    cin >> s;
+    int l = 0;
+    int r = n;
+    unordered_map<string,int> mp;
+    while(l<r){
+        mp.clear();
+        int mid = (l+r+1)/2;
+        bool check = false;
+        for(int i=0;i<n-mid+1;i++){
+            if(++mp[s.substr(i,mid)]>=m){
+                check = true;
+                break;
+            }
+        }
+        if(check)
+            l = mid;
+        else    
+            r = mid-1;
+    }
+    cout << l;
+}
