@@ -13404,7 +13404,7 @@ int main()
 }
 
 
-using namespace st
+using namespace s
 int main()
 {
     int n,m;
