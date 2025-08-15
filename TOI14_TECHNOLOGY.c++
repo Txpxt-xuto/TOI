@@ -13403,7 +13403,7 @@ int main()
     return 0;
 }
 
-using namespace s
+using namspace s
 int main()
 {
     int n,m;
