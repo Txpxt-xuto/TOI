@@ -13403,7 +13403,7 @@ int main()
     return 0;
 }
 
-using namspace s
+using namspace 
 int main()
 {
     int n,m;
