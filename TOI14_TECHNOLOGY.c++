@@ -13396,7 +13396,8 @@ int main()
                 std::cout << 1 << "\n" << currentNumber << std::endl;
                 return 0;
             }
-            else if(player2Life <= 0){
+            else if(player2Life <= 0)
+            {
                 std::cout << 0 << "\n" << currentNumber << std::endl;
                 return 0;
             }
