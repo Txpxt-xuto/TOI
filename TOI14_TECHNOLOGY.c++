@@ -13379,7 +13379,8 @@ int main()
     for(int i = 0; i < totalNumbers; ++i)
     {
         int currentNumber = numbers[i];
-        if (currentNumber % 2 == 1){
+        if (currentNumber % 2 == 1)
+        {
             consecutiveOdds++;
             consecutiveEvens = 0;
             if(consecutiveOdds >= 3) player1Life -= 3;
