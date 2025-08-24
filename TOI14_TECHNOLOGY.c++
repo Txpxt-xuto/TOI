@@ -13363,7 +13363,6 @@ int main()
 
 #include <iostream>
 #include <vector>
-
 int main()
 {
     std::cin.tie(nullptr)->sync_with_stdio(false);
