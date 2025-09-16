@@ -13432,4 +13432,4 @@ int main()
     l = mid;
         else    r = mid-1;
     }
-    cout <
+    cout
