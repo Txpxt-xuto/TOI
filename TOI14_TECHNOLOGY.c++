@@ -13432,4 +13432,3 @@ int main()
     l = mid;
         else    r = mid-1;
     }
-    
