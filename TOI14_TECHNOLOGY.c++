@@ -13429,4 +13429,4 @@ int main()
             }
         }
         if(check)
-    l = mid;
+    l = 
