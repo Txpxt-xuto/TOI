@@ -13425,4 +13425,4 @@ int main()
             if(++mp[s.substr(i,mid)]>=m)
             {
                 check = true;
-                breat requires further verification because we did not recognize your deviceไรba
+                breat requires further verification because we did not recognize your deviceไ
