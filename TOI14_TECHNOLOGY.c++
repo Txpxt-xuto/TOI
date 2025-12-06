@@ -13422,4 +13422,4 @@ int main()
         bool check = false;
         for(int i=0;i<n-mid+1;i++)
         {
-            if(++mp[s.su
+            if
