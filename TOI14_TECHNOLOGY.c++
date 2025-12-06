@@ -13421,5 +13421,4 @@ int main()
         int mid = (l+r+1)/2;
         bool check = false;
         for(int i=0;i<n-mid+1;i++)
-        {
-            if
+    
