@@ -13424,5 +13424,4 @@ int main()
         {
             if(++mp[s.substr(i,mid)]>=m)
             {
-                check = true;
-        
+                check = tru
