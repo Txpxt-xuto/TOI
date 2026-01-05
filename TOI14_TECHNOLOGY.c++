@@ -13552,8 +13552,7 @@ int main() {
         static int rr[N][N], dd[N][N][4], qq[N * N * 4][4];
         static char ss[N][N + 1];
         int i, j, n, m, x, y, r, d, x_, y_, r_, d_, t, sx, sy, tx, ty, qh, qo, go, ans;
-
-        scanf("%d%d", &n, &m);
+        scanf("%d%d",&n,&m);
         sx = sy = tx = ty = -1;
         for(i=0;i<n;i++)
         {
