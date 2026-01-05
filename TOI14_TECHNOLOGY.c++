@@ -13545,9 +13545,7 @@ signed main()
 #define INF     0x3f3f3f3f
 
 int dx[] = {0, 0, 1, -1}, dy[] = {1, -1, 0, 0};
-
 int rx[] = {1, -1, 1, -1, 0, 0, 1, -1}, ry[] = {0, 0, -1, 1, 1, -1, 1, -1}; char rd[] = {'|', '/', '-', '\\'};
-
 int main()
 {
         static int rr[N][N], dd[N][N][4], qq[N * N * 4][4];
