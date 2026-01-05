@@ -13557,7 +13557,8 @@ int main() {
         sx = sy = tx = ty = -1;
         for (i = 0; i < n; i++) {
                 scanf("%s", ss[i]);
-                for (j = 0; j < m; j++) {
+                for (j = 0; j < m; j++)
+                {
                         if(ss[i][j] == 'S') sx = i, sy = j;
                         else if(ss[i][j] == 'E') tx = i, ty = j;
                         else if(ss[i][j] == '#') rr[i][j] = (1 << 4) - 1;
