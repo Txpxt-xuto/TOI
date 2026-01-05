@@ -13540,10 +13540,8 @@ signed main()
 }
 
 #include <stdio.h>
-
 #define N       300
 #define INF     0x3f3f3f3f
-
 int dx[] = {0, 0, 1, -1}, dy[] = {1, -1, 0, 0};
 int rx[] = {1, -1, 1, -1, 0, 0, 1, -1}, ry[] = {0, 0, -1, 1, 1, -1, 1, -1}; char rd[] = {'|', '/', '-', '\\'};
 int main()
