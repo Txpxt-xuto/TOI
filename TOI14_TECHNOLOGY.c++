@@ -13548,7 +13548,8 @@ int dx[] = {0, 0, 1, -1}, dy[] = {1, -1, 0, 0};
 
 int rx[] = {1, -1, 1, -1, 0, 0, 1, -1}, ry[] = {0, 0, -1, 1, 1, -1, 1, -1}; char rd[] = {'|', '/', '-', '\\'};
 
-int main() {
+int main()
+{
         static int rr[N][N], dd[N][N][4], qq[N * N * 4][4];
         static char ss[N][N + 1];
         int i, j, n, m, x, y, r, d, x_, y_, r_, d_, t, sx, sy, tx, ty, qh, qo, go, ans;
