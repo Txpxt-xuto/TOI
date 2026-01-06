@@ -13436,3 +13436,4 @@ signed main(void)
 	for(int j=0;j<sz;j++) if(int len = (j+1 < sz ? s[j+1] : n) - s[j]; len > 0) mp[(d2[j]+1)*(d3[j]+1)*(d5[j]+1)*(d7[j]+1)] += len;
 	cout << mp.rbegin()->first << " " << mp.rbegin()->second;
 }
+
