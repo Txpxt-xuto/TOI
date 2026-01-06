@@ -13428,7 +13428,7 @@ signed main(void)
 		int r = lower_bound(s.begin(),s.end(),w+1)-s.begin();
 		while(!(u%2)) d2[l]++, d2[r]--, u /= 2;
 		while(!(u%3)) d3[l]++, d3[r]--, u /= 3;
-		while (!(u%5)) d5[l]++, d5[r]--, u /= 5;
+		while(!(u%5)) d5[l]++, d5[r]--, u /= 5;
 		while (!(u%7)) d7[l]++, d7[r]--, u /= 7;
 	}
 	for (int i = 1; i < sz; i++) d2[i] += d2[i-1], d3[i] += d3[i-1], d5[i] += d5[i-1], d7[i] += d7[i-1];
