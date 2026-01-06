@@ -13431,8 +13431,8 @@ signed main(void)
 		while(!(u%5)) d5[l]++, d5[r]--, u /= 5;
 		while(!(u%7)) d7[l]++, d7[r]--, u /= 7;
 	}
-	for(int i=1;i<sz; i++) d2[i] += d2[i-1], d3[i] += d3[i-1], d5[i] += d5[i-1], d7[i] += d7[i-1];
+	for(int i=1;i<sz;i++) d2[i] += d2[i-1], d3[i] += d3[i-1], d5[i] += d5[i-1], d7[i] += d7[i-1];
 	map<int,int> mp;
-	for (int j = 0; j < sz; j++) if (int len = (j+1 < sz ? s[j+1] : n) - s[j]; len > 0) mp[(d2[j]+1)*(d3[j]+1)*(d5[j]+1)*(d7[j]+1)] += len;
+	for(int j = 0; j < sz; j++) if (int len = (j+1 < sz ? s[j+1] : n) - s[j]; len > 0) mp[(d2[j]+1)*(d3[j]+1)*(d5[j]+1)*(d7[j]+1)] += len;
 	cout << mp.rbegin()->first << " " << mp.rbegin()->second;
 }
