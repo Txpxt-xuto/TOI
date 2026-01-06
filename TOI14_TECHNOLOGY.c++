@@ -13419,7 +13419,7 @@ signed main(void)
 	tuple<int,int,int> a[m];
 	vector<int> s;
 	s.push_back(0);
-	for (auto& [u,v,w] : a) cin >> u >> v >> w, s.push_back(v), s.push_back(w), s.push_back(w+1);
+	for(auto& [u,v,w] : a) cin >> u >> v >> w, s.push_back(v), s.push_back(w), s.push_back(w+1);
 	sort(s.begin(), s.end()), s.erase(unique(s.begin(), s.end()), s.end());
 	int sz = s.size(), d2[sz+1]={}, d3[sz+1]={}, d5[sz+1]={}, d7[sz+1]={};
     (auto [u,v,w] : a)
