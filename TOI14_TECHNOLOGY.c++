@@ -13405,3 +13405,32 @@ int main()
     }
     return 0;
 }
+#pragma GCC optimize("O5,unroll-loops,inline,fast-math")
+#pragma GCC target("avx2,bmi,bmi2,popcnt,lzcnt")
+#include <bits/stdc++.h>
+#define int long long
+#define exoworldgd cin.tie(0)->sync_with_stdio(0),cout.tie(0)
+using namespace std;
+signed main(void) {
+	exoworldgd;
+	int m,n;
+	cin >> m >> n;
+	tuple<int,int,int> a[m];
+	vector<int> s;
+	s.push_back(0);
+	for (auto& [u,v,w] : a) cin >> u >> v >> w, s.push_back(v), s.push_back(w), s.push_back(w+1);
+	sort(s.begin(), s.end()), s.erase(unique(s.begin(), s.end()), s.end());
+	int sz = s.size(), d2[sz+1]={}, d3[sz+1]={}, d5[sz+1]={}, d7[sz+1]={};
+	for (auto [u,v,w] : a) {
+		int l = lower_bound(s.begin(),s.end(),v)-s.begin();
+		int r = lower_bound(s.begin(),s.end(),w+1)-s.begin();
+		while (!(u%2)) d2[l]++, d2[r]--, u /= 2;
+		while (!(u%3)) d3[l]++, d3[r]--, u /= 3;
+		while (!(u%5)) d5[l]++, d5[r]--, u /= 5;
+		while (!(u%7)) d7[l]++, d7[r]--, u /= 7;
+	}
+	for (int i = 1; i < sz; i++) d2[i] += d2[i-1], d3[i] += d3[i-1], d5[i] += d5[i-1], d7[i] += d7[i-1];
+	map<int,int> mp;
+	for (int j = 0; j < sz; j++) if (int len = (j+1 < sz ? s[j+1] : n) - s[j]; len > 0) mp[(d2[j]+1)*(d3[j]+1)*(d5[j]+1)*(d7[j]+1)] += len;
+	cout << mp.rbegin()->first << " " << mp.rbegin()->second;
+}
