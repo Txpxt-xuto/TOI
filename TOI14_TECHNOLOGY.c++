@@ -13422,7 +13422,8 @@ signed main(void)
 	for (auto& [u,v,w] : a) cin >> u >> v >> w, s.push_back(v), s.push_back(w), s.push_back(w+1);
 	sort(s.begin(), s.end()), s.erase(unique(s.begin(), s.end()), s.end());
 	int sz = s.size(), d2[sz+1]={}, d3[sz+1]={}, d5[sz+1]={}, d7[sz+1]={};
-	for(auto [u,v,w] : a){
+	
+    (auto [u,v,w] : a){
 		int l = lower_bound(s.begin(),s.end(),v)-s.begin();
 		int r = lower_bound(s.begin(),s.end(),w+1)-s.begin();
 		while (!(u%2)) d2[l]++, d2[r]--, u /= 2;
