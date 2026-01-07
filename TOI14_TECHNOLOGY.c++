@@ -13440,7 +13440,8 @@ signed main(void)
 #include <bits/stdc++.h>
 using namespace std;
 int c[22],now;
-void print(__int128 n){
+void print(__int128 n)
+{
 	string s;
 	if(n==0){cout<<'0';return;}
 	if(n==-1){cout<<"-1";return;}
