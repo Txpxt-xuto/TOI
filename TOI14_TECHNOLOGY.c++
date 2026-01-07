@@ -13465,7 +13465,7 @@ void print(__int128 n)
 __int128 solve(__int128 n,__int128 w){
 	if(n==1)
     {
-		if(w>0)return w;
+		if(w>0) return w;
 		return -1;
 	}
 	__int128 a=2*w+1-c[n-1];
