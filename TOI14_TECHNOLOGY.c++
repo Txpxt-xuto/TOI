@@ -13437,3 +13437,38 @@ signed main(void)
 	cout << mp.rbegin()->first << " " << mp.rbegin()->second;
 }
 
+#include <bits/stdc++.h>
+using namespace std;
+int c[22],now;
+
+void print(__int128 n){
+	string s;
+	if(n==0){cout<<'0';return;}
+	if(n==-1){cout<<"-1";return;}
+	while(n){
+		s.push_back('0'+n%10);
+		n/=10;
+	}
+	reverse(s.begin(),s.end());
+	cout<<s;
+}
+
+__int128 solve(__int128 n,__int128 w){
+	if(n==1){
+		if(w>0)return w;
+		return -1;
+	}
+	__int128 a=2*w+1-c[n-1];
+	__int128 k=solve(n-1,a/2);
+	__int128 l=solve(n-1,a/2+(a&1));
+	if(k==-1||l==-1)return -1;
+	return k+l;
+}
+
+int main(){
+	cin.tie(0)->sync_with_stdio(0);
+	int n,w;cin>>n>>w;
+	for(int i=1;i<n;i++)cin>>c[i];
+	print(solve(n,w));
+	return 0;
+}
