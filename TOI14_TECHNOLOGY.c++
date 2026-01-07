@@ -13463,7 +13463,8 @@ void print(__int128 n)
 }
 
 __int128 solve(__int128 n,__int128 w){
-	if(n==1){
+	if(n==1)
+    {
 		if(w>0)return w;
 		return -1;
 	}
