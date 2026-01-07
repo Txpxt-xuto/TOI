@@ -13448,7 +13448,9 @@ void print(__int128 n)
         cout<<'0';
         return;
     }
-	if(n==-1){cout<<"-1";return;}
+	if(n==-1)
+    {
+        cout<<"-1";return;}
 	while(n)
     {
 		s.push_back('0'+n%10);
