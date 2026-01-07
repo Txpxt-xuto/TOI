@@ -13459,7 +13459,7 @@ void print(__int128 n)
 		n/=10;
 	}
 	reverse(s.begin(),s.end());
-	cout<<s;
+	cout << s;
 }
 
 __int128 solve(__int128 n,__int128 w){
