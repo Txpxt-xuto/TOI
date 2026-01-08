@@ -13479,7 +13479,7 @@ int main()
 {
 	cin.tie(0)->sync_with_stdio(0);
 	int n,w;
-    cin>>n>>w;
+    cin>>n >> w;
 	for(int i=1;i<n;i++)cin>>c[i];
 	print(solve(n,w));
 	return 0;
