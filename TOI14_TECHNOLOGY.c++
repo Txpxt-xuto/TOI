@@ -13484,3 +13484,62 @@ int main()
 	print(solve(n,w));
 	return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+int f[20];
+int dis[210][210];
+int cum[(1<<15)+10][20];
+
+signed main()
+{
+    cin.tie(0)->sync_with_stdio(0);
+    int n,m,k;
+    cin >> n >> m >> k;
+    for (int i = 0; i < k; i++){
+        cin >> f[i];
+    }
+
+    memset(dis, 0x3f, sizeof dis);
+    for (int i = 1; i <= m; i++){
+        int u,v,w;
+        cin >> u >> v >> w;
+        dis[u][v] = dis[v][u] = min(dis[u][v], w);
+    }
+
+    for (int k = 1; k <= n; k++){
+        for (int i = 1; i <= n; i++){
+            for (int j = 1; j <= n; j++){
+                dis[i][j] = min(dis[i][j], dis[i][k]+dis[k][j]);
+            }
+        }
+    }
+
+    memset(cum, 0x3f, sizeof cum);
+    for (int i = 0; i < k; i++){
+        cum[(1<<i)][i] = dis[f[i]][1];
+    }
+    for (int m = 0; m < (1<<k); m++){
+        for (int u = 0; u < k; u++){
+            if (!(m&(1<<u))) continue;
+            if (cum[m][u] < 1e18){
+                for (int v = 0; v < k; v++){
+                    if ((m&(1<<v))) continue;
+                    if (u == v) continue;
+                    cum[m|(1<<v)][v] = min(cum[m|(1<<v)][v], cum[m][u] + dis[f[u]][f[v]]);
+                }
+            }
+        }
+    }
+
+    int ans = 1e18;
+    for (int i = 0; i < k; i++){
+        if (cum[(1<<k)-1][i] < 1e18){
+            ans = min(ans, cum[(1<<k)-1][i] + dis[f[i]][n]);
+        }
+    }
+    cout << ans;
+
+    return 0;
+}
