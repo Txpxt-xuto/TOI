@@ -13475,7 +13475,8 @@ __int128 solve(__int128 n,__int128 w){
 	return k+l;
 }
 
-int main(){
+int main()
+{
 	cin.tie(0)->sync_with_stdio(0);
 	int n,w;cin>>n>>w;
 	for(int i=1;i<n;i++)cin>>c[i];
