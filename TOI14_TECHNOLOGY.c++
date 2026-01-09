@@ -13502,12 +13502,12 @@ signed main()
     }
 
     memset(dis, 0x3f, sizeof dis);
-    for (int i = 1; i <= m; i++){
+    for(int i = 1; i <= m; i++)
+    {
         int u,v,w;
         cin >> u >> v >> w;
         dis[u][v] = dis[v][u] = min(dis[u][v], w);
     }
-
     for (int k = 1; k <= n; k++){
         for (int i = 1; i <= n; i++){
             for (int j = 1; j <= n; j++){
