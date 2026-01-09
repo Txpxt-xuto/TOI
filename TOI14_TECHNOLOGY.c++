@@ -13534,7 +13534,6 @@ signed main()
     }
     int ans = 1e18;
     for (int i = 0; i < k; i++) if (cum[(1<<k)-1][i] < 1e18) ans = min(ans, cum[(1<<k)-1][i] + dis[f[i]][n]);
-    }
     cout << ans;
     return 0;
 }
