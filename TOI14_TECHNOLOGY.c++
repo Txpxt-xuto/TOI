@@ -13522,7 +13522,7 @@ signed main()
     }
     for(int m=0; m < (1<<k); m++)
     {
-        for(int u = 0; u < k; u++)
+        for(int u=0;u<k; u++)
         {
             if(!(m&(1<<u))) continue;
             if(cum[m][u] < 1e18)
