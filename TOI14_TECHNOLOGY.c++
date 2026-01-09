@@ -13525,8 +13525,8 @@ signed main()
             if (!(m&(1<<u))) continue;
             if (cum[m][u] < 1e18){
                 for (int v = 0; v < k; v++){
-                    if ((m&(1<<v))) continue;
-                    if (u == v) continue;
+                    if((m&(1<<v))) continue;
+                    if(u == v) continue;
                     cum[m|(1<<v)][v] = min(cum[m|(1<<v)][v], cum[m][u] + dis[f[u]][f[v]]);
                 }
             }
