@@ -13520,9 +13520,9 @@ signed main()
     for (int i = 0; i < k; i++){
         cum[(1<<i)][i] = dis[f[i]][1];
     }
-    for (int m = 0; m < (1<<k); m++)
+    for(int m = 0; m < (1<<k); m++)
     {
-        for (int u = 0; u < k; u++)
+        for(int u = 0; u < k; u++)
         {
             if(!(m&(1<<u))) continue;
             if(cum[m][u] < 1e18)
