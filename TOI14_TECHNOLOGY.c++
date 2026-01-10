@@ -13569,7 +13569,8 @@ int main() {
                 }
         }
         for (i = 0; i < n; i++) {
-                for (j = 0; j < m; j++) {
+                for (j = 0; j < m; j++)
+                {
                         if (ss[i][j] != 'S' && ss[i][j] != 'E' && ss[i][j] != '.' && ss[i][j] != '#') {
                                 rr[i][j] = (1 << 4) - 1;
                                 for(r=0;r<4;r++) if(ss[i][j] == rd[r]) break;
