@@ -13568,7 +13568,7 @@ int main() {
                                 dd[i][j][r] = INF;
                 }
         }
-        for(i = 0; i < n; i++)
+        for(i=0;i<n;i++)
         {
                 for(j=0;j<m;j++)
                 {
