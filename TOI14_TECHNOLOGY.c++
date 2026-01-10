@@ -13562,8 +13562,7 @@ int main() {
                                 sx = i, sy = j;
                         else if(ss[i][j] == 'E')
                                 tx = i, ty = j;
-                        else if(ss[i][j] == '#')
-                                rr[i][j] = (1 << 4) - 1;
+                        else if(ss[i][j] == '#') rr[i][j] = (1 << 4) - 1;
                         for(r = 0; r < 4; r++) dd[i][j][r] = INF;
                 }
         }
