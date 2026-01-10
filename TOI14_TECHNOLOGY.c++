@@ -13558,13 +13558,13 @@ int main() {
         for (i = 0; i < n; i++) {
                 scanf("%s", ss[i]);
                 for (j = 0; j < m; j++) {
-                        if (ss[i][j] == 'S')
+                        if(ss[i][j] == 'S')
                                 sx = i, sy = j;
-                        else if (ss[i][j] == 'E')
+                        else if(ss[i][j] == 'E')
                                 tx = i, ty = j;
-                        else if (ss[i][j] == '#')
+                        else if(ss[i][j] == '#')
                                 rr[i][j] = (1 << 4) - 1;
-                        for (r = 0; r < 4; r++)
+                        for(r = 0; r < 4; r++)
                                 dd[i][j][r] = INF;
                 }
         }
