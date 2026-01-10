@@ -13575,7 +13575,7 @@ int main() {
                                 for (r = 0; r < 4; r++)
                                         if (ss[i][j] == rd[r])
                                                 break;
-                                for (t = 0; t < 4; t++) {
+                                for (t = 0; t < 4; t++){
                                         x = i + rx[r << 1], y = j + ry[r << 1];
                                         while(x >= 0 && y >= 0 && x < n && y < m && ss[x][y] == '.') {
                                                 rr[x][y] |= 1 << t;
