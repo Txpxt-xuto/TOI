@@ -13568,7 +13568,8 @@ int main() {
                                 dd[i][j][r] = INF;
                 }
         }
-        for (i = 0; i < n; i++) {
+        for (i = 0; i < n; i++)
+        {
                 for(j = 0; j < m; j++)
                 {
                         if (ss[i][j] != 'S' && ss[i][j] != 'E' && ss[i][j] != '.' && ss[i][j] != '#') {
