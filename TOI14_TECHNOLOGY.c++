@@ -13604,7 +13604,7 @@ int main() {
                 for(go = 0; go < 4; go++)
                 {
                         x_ = x + dx[go], y_ = y + dy[go], r_ = (r + 1) % 4, d_ = d + 1;
-                        if (x_ >= 0 && y_ >= 0 && x_ < n && y_ < m && (rr[x_][y_] & (1 << r_)) == 0 && d_ < dd[x_][y_][r_])
+                        if(x_ >= 0 && y_ >= 0 && x_ < n && y_ < m && (rr[x_][y_] & (1 << r_)) == 0 && d_ < dd[x_][y_][r_])
                         {
                             qq[qo][0] = x_, qq[qo][1] = y_, qq[qo][2] = r_, qq[qo][3] = d_, qo++;
                             dd[x_][y_][r_] = d_;
