@@ -13609,8 +13609,7 @@ int main() {
                 }
         }
         ans = INF;
-        for(r = 0; r < 4; r++)
-if(ans > dd[tx][ty][r])
+        for(r = 0; r < 4; r++) if(ans > dd[tx][ty][r])
 ans = dd[tx][ty][r];
         printf("%d\n", ans == INF ? -1 : ans);
         return 0;
