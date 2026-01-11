@@ -13596,7 +13596,7 @@ int main() {
         dd[sx][sy][0] = 0;
         for (qh = 0; qh < qo; qh++) {
                 x = qq[qh][0], y = qq[qh][1], r = qq[qh][2], d = qq[qh][3];
-                if (dd[x][y][r] != d)
+                if(dd[x][y][r] != d)
                     continue;
                 if(x == tx && y == ty)
                     break;
