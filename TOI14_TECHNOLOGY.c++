@@ -13598,7 +13598,7 @@ int main() {
                 x = qq[qh][0], y = qq[qh][1], r = qq[qh][2], d = qq[qh][3];
                 if (dd[x][y][r] != d)
                         continue;
-                if (x == tx && y == ty)
+                if(x == tx && y == ty)
                         break;
                 for(go = 0; go < 4; go++)
                 {
