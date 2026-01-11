@@ -13599,7 +13599,7 @@ int main() {
                 if (dd[x][y][r] != d)
                         continue;
                 if(x == tx && y == ty)
-                        break;
+                    break;
                 for(go = 0; go < 4; go++)
                 {
                         x_ = x + dx[go], y_ = y + dy[go], r_ = (r + 1) % 4, d_ = d + 1;
