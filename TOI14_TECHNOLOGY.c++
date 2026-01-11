@@ -13538,3 +13538,80 @@ signed main()
     cout << ans;
     return 0;
 }
+
+#include <stdio.h>
+
+#define N       300
+#define INF     0x3f3f3f3f
+
+int dx[] = {0, 0, 1, -1}, dy[] = {1, -1, 0, 0};
+
+int rx[] = {1, -1, 1, -1, 0, 0, 1, -1}, ry[] = {0, 0, -1, 1, 1, -1, 1, -1}; char rd[] = {'|', '/', '-', '\\'};
+
+int main() {
+        static int rr[N][N], dd[N][N][4], qq[N * N * 4][4];
+        static char ss[N][N + 1];
+        int i, j, n, m, x, y, r, d, x_, y_, r_, d_, t, sx, sy, tx, ty, qh, qo, go, ans;
+
+        scanf("%d%d", &n, &m);
+        sx = sy = tx = ty = -1;
+        for (i = 0; i < n; i++) {
+                scanf("%s", ss[i]);
+                for (j = 0; j < m; j++) {
+                        if (ss[i][j] == 'S')
+                                sx = i, sy = j;
+                        else if (ss[i][j] == 'E')
+                                tx = i, ty = j;
+                        else if (ss[i][j] == '#')
+                                rr[i][j] = (1 << 4) - 1;
+                        for (r = 0; r < 4; r++)
+                                dd[i][j][r] = INF;
+                }
+        }
+        for (i = 0; i < n; i++) {
+                for (j = 0; j < m; j++) {
+                        if (ss[i][j] != 'S' && ss[i][j] != 'E' && ss[i][j] != '.' && ss[i][j] != '#') {
+                                rr[i][j] = (1 << 4) - 1;
+                                for (r = 0; r < 4; r++)
+                                        if (ss[i][j] == rd[r])
+                                                break;
+                                for (t = 0; t < 4; t++) {
+                                        x = i + rx[r << 1], y = j + ry[r << 1];
+                                        while (x >= 0 && y >= 0 && x < n && y < m && ss[x][y] == '.') {
+                                                rr[x][y] |= 1 << t;
+                                                x += rx[r << 1], y += ry[r << 1];
+                                        }
+                                        x = i + rx[r << 1 | 1], y = j + ry[r << 1 | 1];
+                                        while (x >= 0 && y >= 0 && x < n && y < m && ss[x][y] == '.') {
+                                                rr[x][y] |= 1 << t;
+                                                x += rx[r << 1 | 1], y += ry[r << 1 | 1];
+                                        }
+                                        r = (r + 1) % 4;
+                                }
+                        }
+                }
+        }
+        qo = 0;
+        qq[qo][0] = sx, qq[qo][1] = sy, qq[qo][2] = 0, qq[qo][3] = 0, qo++;
+        dd[sx][sy][0] = 0;
+        for (qh = 0; qh < qo; qh++) {
+                x = qq[qh][0], y = qq[qh][1], r = qq[qh][2], d = qq[qh][3];
+                if (dd[x][y][r] != d)
+                        continue;
+                if (x == tx && y == ty)
+                        break;
+                for (go = 0; go < 4; go++) {
+                        x_ = x + dx[go], y_ = y + dy[go], r_ = (r + 1) % 4, d_ = d + 1;
+                        if (x_ >= 0 && y_ >= 0 && x_ < n && y_ < m && (rr[x_][y_] & (1 << r_)) == 0 && d_ < dd[x_][y_][r_]) {
+                                qq[qo][0] = x_, qq[qo][1] = y_, qq[qo][2] = r_, qq[qo][3] = d_, qo++;
+                                dd[x_][y_][r_] = d_;
+                        }
+                }
+        }
+        ans = INF;
+        for (r = 0; r < 4; r++)
+                if (ans > dd[tx][ty][r])
+                        ans = dd[tx][ty][r];
+        printf("%d\n", ans == INF ? -1 : ans);
+        return 0;
+}
