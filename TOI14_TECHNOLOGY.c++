@@ -13594,7 +13594,7 @@ int main() {
         qo = 0;
         qq[qo][0] = sx, qq[qo][1] = sy, qq[qo][2] = 0, qq[qo][3] = 0, qo++;
         dd[sx][sy][0] = 0;
-        for(qh=0; qh < qo; qh++)
+        for(qh=0;qh<qo;qh++)
         {
                 x = qq[qh][0], y = qq[qh][1], r = qq[qh][2], d = qq[qh][3];
                 if(dd[x][y][r] != d)
