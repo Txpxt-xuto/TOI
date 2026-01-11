@@ -13582,7 +13582,7 @@ int main() {
                                                 x += rx[r << 1], y += ry[r << 1];
                                         }
                                         x = i + rx[r << 1 | 1], y = j + ry[r << 1 | 1];
-                                        while (x >= 0 && y >= 0 && x < n && y < m && ss[x][y] == '.') {
+                                        while(x >= 0 && y >= 0 && x < n && y < m && ss[x][y] == '.') {
                                                 rr[x][y] |= 1 << t;
                                                 x += rx[r << 1 | 1], y += ry[r << 1 | 1];
                                         }
