@@ -13681,7 +13681,7 @@ bool dfs(int u){
 
 void solve(){
 	int n,m;
-	cin>>n >> m;
+	cin >> n >> m;
 	for(int i=0;i<m;i++)
     {
 		int u,v;
