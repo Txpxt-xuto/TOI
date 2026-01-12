@@ -13682,7 +13682,8 @@ bool dfs(int u){
 void solve(){
 	int n,m;
 	cin>>n>>m;
-	for(int i=0;i<m;i++){
+	for(int i=0;i<m;i++)
+    {
 		int u,v;
 		cin>>u>>v;
 		graph[u].pb(v);
