@@ -13689,7 +13689,8 @@ void solve(){
 	}
 	int max_matching=0;
 	fill(match,match+MAXN,-1);
-	for(int i=1;i<=n;i++){
+	for(int i=1;i<=n;i++)
+    {
 		fill(vis,vis+MAXN,false);
 		if(dfs(i)) max_matching++;
 	}
