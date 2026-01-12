@@ -13679,7 +13679,8 @@ bool dfs(int u){
 	return false;
 }
 
-void solve(){
+void solve()
+{
 	int n,m;
 	cin >> n >> m;
 	for(int i=0;i<m;i++)
