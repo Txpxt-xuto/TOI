@@ -13685,7 +13685,7 @@ void solve(){
 	for(int i=0;i<m;i++)
     {
 		int u,v;
-		cin>>u>>v;
+		cin >> u >> v;
 		graph[u].pb(v);
 	}
 	int max_matching=0;
