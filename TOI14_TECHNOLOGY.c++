@@ -13627,7 +13627,8 @@ int n,k,a;
 
 int main(){
     cin >> n>>k;
-    for(int i = 0;i<n;i++){
+    for(int i = 0;i<n;i++)
+    {
         cin >> w[i];
         for(int j =0;j<k;j++)
         {
