@@ -13639,7 +13639,7 @@ int main(){
     for(int i = 0;i<n;i++){
         for(int j = 0;j<(1<<k);j++)
         {
-            if(dp[j]==INT_MAX)continue;
+            if(dp[j]==INT_MAX) continue;
             int b = j | c[i];
             dp[b] = min(dp[b],dp[j]+w[i]);
         }
