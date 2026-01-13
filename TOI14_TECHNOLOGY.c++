@@ -13700,6 +13700,5 @@ void solve(){
 int main(){
 	fast();
 	solve();
-	ci
 	return 0;
 }
