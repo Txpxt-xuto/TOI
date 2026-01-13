@@ -13647,3 +13647,63 @@ int main()
     }
     cout << dp[(1<<k)-1];
 }
+
+#include<bits/stdc++.h>
+#define TC while(t--)
+#define DEBUG(x) cout<<"Debug "<<#x<<':'<<x<<endl;
+#define EL "\n"
+#define ll long long
+#define pii pair<int,int>
+#define sz(x) (int)x.size()
+#define st first
+#define nd second
+#define pb push_back
+using namespace std;
+void fast(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+}
+const int MAXN=305;
+vector<int> graph[MAXN];
+int match[MAXN];
+bool vis[MAXN];
+bool dfs(int u){
+	for(auto v:graph[u]){
+		if(vis[v]) continue;
+		vis[v]=true;
+		if(match[v]==-1||dfs(match[v])){
+			match[v]=u;
+			return true;
+		}
+	}
+	return false;
+}
+
+void solve(){
+	int n,m;
+	cin>>n>>m;
+	for(int i=0;i<m;i++){
+		int u,v;
+		cin>>u>>v;
+		graph[u].pb(v);
+	}
+	int max_matching=0;
+	fill(match,match+MAXN,-1);
+	for(int i=1;i<=n;i++){
+		fill(vis,vis+MAXN,false);
+		if(dfs(i)){
+			max_matching++;
+		}
+	}
+	cout<<(ll)m+n-2LL*max_matching;
+}
+int main(){
+	fast();
+	solve();
+	/*int t;
+	cin>>t;
+	TC{
+		solve();
+	}*/
+	return 0;
+}
