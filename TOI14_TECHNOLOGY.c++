@@ -13702,7 +13702,5 @@ int main(){
 	solve();
 	int t;
 	cin>>t;
-	TC{
-		
 	return 0;
 }
