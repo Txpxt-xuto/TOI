@@ -13635,7 +13635,7 @@ int main(){
         }
     }
     for(int i = 0;i<(1<<k);i++)
-    {
+    
         dp[i]=INT_MAX;
     
     dp[0]=0;
