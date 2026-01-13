@@ -13634,7 +13634,8 @@ int main(){
             c[i]+= (a << (k-j-1));
         }
     }
-    for(int i = 0;i<(1<<k);i++){
+    for(int i = 0;i<(1<<k);i++)
+    {
         dp[i]=INT_MAX;
     }
     dp[0]=0;
