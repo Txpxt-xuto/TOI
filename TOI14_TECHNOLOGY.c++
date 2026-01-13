@@ -13619,7 +13619,6 @@ int main()
 #include <limits.h>
 #include <algorithm>
 using namespace std;
-
 int dp[256];
 int w[10000];
 int c[10000];
