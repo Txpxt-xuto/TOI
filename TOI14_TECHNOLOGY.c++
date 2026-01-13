@@ -13624,7 +13624,6 @@ int dp[256];
 int w[10000];
 int c[10000];
 int n,k,a;
-
 int main()
 {
     cin >> n>>k;
