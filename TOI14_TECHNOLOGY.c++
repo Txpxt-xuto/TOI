@@ -13697,7 +13697,8 @@ void solve(){
 	}
 	cout<<(ll)m+n-2LL*max_matching;
 }
-int main(){
+int main()
+{
 	fast();
 	solve();
 	return 0;
