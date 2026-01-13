@@ -13637,7 +13637,8 @@ int main(){
     for(int i=0;i<(1<<k);i++) dp[i]=INT_MAX;
     dp[0]=0;
     for(int i = 0;i<n;i++){
-        for(int j = 0;j<(1<<k);j++){
+        for(int j = 0;j<(1<<k);j++)
+        {
             if(dp[j]==INT_MAX)continue;
             int b = j | c[i];
             dp[b] = min(dp[b],dp[j]+w[i]);
