@@ -13629,7 +13629,8 @@ int main(){
     cin >> n>>k;
     for(int i = 0;i<n;i++){
         cin >> w[i];
-        for(int j =0;j<k;j++){
+        for(int j =0;j<k;j++)
+        {
             cin >> a;
             c[i]+= (a << (k-j-1));
         }
