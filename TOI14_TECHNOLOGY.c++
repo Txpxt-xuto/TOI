@@ -13625,7 +13625,8 @@ int w[10000];
 int c[10000];
 int n,k,a;
 
-int main(){
+int main()
+{
     cin >> n>>k;
     for(int i = 0;i<n;i++)
     {
