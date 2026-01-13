@@ -13614,3 +13614,36 @@ int main()
         printf("%d\n", ans == INF ? -1 : ans);
         return 0;
 }
+
+#include <iostream>
+#include <limits.h>
+#include <algorithm>
+using namespace std;
+
+int dp[256];
+int w[10000];
+int c[10000];
+int n,k,a;
+
+int main(){
+    cin >> n>>k;
+    for(int i = 0;i<n;i++){
+        cin >> w[i];
+        for(int j =0;j<k;j++){
+            cin >> a;
+            c[i]+= (a << (k-j-1));
+        }
+    }
+    for(int i = 0;i<(1<<k);i++){
+        dp[i]=INT_MAX;
+    }
+    dp[0]=0;
+    for(int i = 0;i<n;i++){
+        for(int j = 0;j<(1<<k);j++){
+            if(dp[j]==INT_MAX)continue;
+            int b = j | c[i];
+            dp[b] = min(dp[b],dp[j]+w[i]);
+        }
+    }
+    cout << dp[(1<<k)-1];
+}
