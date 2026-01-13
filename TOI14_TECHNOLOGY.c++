@@ -13700,10 +13700,9 @@ void solve(){
 int main(){
 	fast();
 	solve();
-	/*int t;
+	int t;
 	cin>>t;
 	TC{
-		solve();
-
+		solve()
 	return 0;
 }
