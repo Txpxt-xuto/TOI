@@ -13737,7 +13737,8 @@ int main(){
          mright[j] = max(mright[j+1],dp[prev][j]);
        }
 
-        for(int j=1; j+i-1<=n; j++){
+        for(int j=1; j+i-1<=n; j++)
+        {
             dp[now][j]= mleft[n] + (qs[j+i-1]-qs[j-1])/2;
             if(j-i+1>=1) dp[now][j]=max(dp[now][j], mleft[j-i+1]+qs[j+i-1]-qs[j-1]);
             if(j+i<=n) dp[now][j]=max(dp[now][j], mright[j+i]+qs[j+i-1]-qs[j-1]);
