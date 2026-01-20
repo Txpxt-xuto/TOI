@@ -13730,7 +13730,6 @@ int main(){
         }
         mleft[1] = dp[prev][1]; mright[n] = dp[prev][n];
         for(int j=2; j<=n; j++) mleft[j] = max(dp[prev][j],mleft[j-1]);
-
         for(int j=n-1;j>=1;j--) mright[j] = max(mright[j+1],dp[prev][j]);
         for(int j=1;j+i-1<=n;j++)
         {
