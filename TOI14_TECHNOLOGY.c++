@@ -13722,7 +13722,7 @@ int main(){
         dp[1][i] = arr[i];
     }
 
-    for(int i=2; i<=n; i++)
+    for(int i=2;i<=n;i++)
     {
         now = i%2;
         prev = (i+1)%2;
