@@ -13712,9 +13712,10 @@ long long arr[6000], dp[2][6000], mright[6000], mleft[6000], qs[6000];
 int main(){
     int n;
     cin >> n;
-    for(int i=1; i<=n; i++){
+    for(int i=1; i<=n; i++)
+    {
         cin >> arr[i];
-        qs[i]=qs[i-1]+arr[i];
+qs[i]=qs[i-1]+arr[i];
     }
     int now,prev;
     for(int i=1; i<=n; i++) dp[1][i] = arr[i];
