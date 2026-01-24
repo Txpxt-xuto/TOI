@@ -13715,7 +13715,7 @@ int main(){
     for(int i=1; i<=n; i++)
     {
         cin >> arr[i];
-qs[i]=qs[i-1]+arr[i];
+        qs[i]=qs[i-1]+arr[i];
     }
     int now,prev;
     for(int i=1; i<=n; i++) dp[1][i] = arr[i];
