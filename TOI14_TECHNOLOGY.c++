@@ -13709,7 +13709,8 @@ int main()
 #include<bits/stdc++.h>
 using namespace std;
 long long arr[6000], dp[2][6000], mright[6000], mleft[6000], qs[6000];
-int main(){
+int main()
+{
     int n;
     cin >> n;
     for(int i=1; i<=n; i++)
