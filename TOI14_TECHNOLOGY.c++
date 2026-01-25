@@ -13705,3 +13705,43 @@ int main()
 	solve();
 	return 0;
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+long long arr[6000], dp[2][6000], mright[6000], mleft[6000], qs[6000];
+int main(){
+    int n;
+    cin >> n;
+    for(int i=1; i<=n; i++){
+        cin >> arr[i];
+        qs[i]=qs[i-1]+arr[i];
+    }
+    int now,prev;
+
+    for(int i=1; i<=n; i++){
+        dp[1][i] = arr[i];
+    }
+
+    for(int i=2; i<=n; i++){
+        now = i%2;
+        prev = (i+1)%2;
+        for(int j=1; j<=n; j++){
+            dp[now][j]=0;
+        }
+
+        mleft[1] = dp[prev][1]; mright[n] = dp[prev][n];
+        for(int j=2; j<=n; j++){
+            mleft[j] = max(dp[prev][j],mleft[j-1]);
+       }
+       for(int j=n-1; j>=1; j--){
+         mright[j] = max(mright[j+1],dp[prev][j]);
+       }
+
+        for(int j=1; j+i-1<=n; j++){
+            dp[now][j]= mleft[n] + (qs[j+i-1]-qs[j-1])/2;
+            if(j-i+1>=1) dp[now][j]=max(dp[now][j], mleft[j-i+1]+qs[j+i-1]-qs[j-1]);
+            if(j+i<=n) dp[now][j]=max(dp[now][j], mright[j+i]+qs[j+i-1]-qs[j-1]);
+        }
+    }
+    cout << dp[n%2][1];
+}
