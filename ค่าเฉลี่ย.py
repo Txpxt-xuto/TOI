@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 men_means, men_std = (7.0, 6.2, 8.1), (0.5, 0.5, 0.5)
-
 ind = np.arange(len(men_means))  # ตำแหน่งของกลุ่ม
 width = 0.35  # ความกว้างของแท่งกราฟ
 
