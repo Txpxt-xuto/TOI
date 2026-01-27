@@ -7,7 +7,6 @@ width = 0.35  # ความกว้างของแท่งกราฟ
 
 fig, ax = plt.subplots()
 rects1 = ax.bar(ind - width/2 , men_means, width, yerr=men_std, color='SkyBlue', label='pH')
-
 # กำหนดข้อความที่แสดงบริเวณด้านข้างกับด้านบนรวมถึงการกำหนดชื่อข้อมูลในแต่ละตัว
 ax.set_ylabel('pH')
 ax.set_title('Bar chart comparing the average pH values\n​​of each type of fertilizer.')
