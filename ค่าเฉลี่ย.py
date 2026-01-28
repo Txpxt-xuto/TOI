@@ -18,7 +18,6 @@ def autolabel(rects, xpos='center'):
     xpos = xpos.lower()  #ปรับขนาดของตัวอักษีที่จะพิมพ์เป็นขนาดมาตรฐาน
     ha = {'center': 'center', 'right': 'left', 'left': 'right'}
     offset = {'center': 0.5, 'right': 0.57, 'left': 0.43}  # x_txt = x + w*off
-
     for rect in rects:
         height = rect.get_height()
         ax.text(rect.get_x() + rect.get_width()*offset[xpos], 1.01*height,
