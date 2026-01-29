@@ -13,7 +13,6 @@ ax.set_title('Bar chart comparing the average pH values\n​​of each type of f
 ax.set_xticks(ind)
 ax.set_xticklabels(('Animal manure', 'Composted leaf fertilizer', 'Microbial fertilizer'))
 ax.legend()
-
 def autolabel(rects, xpos='center'):
     xpos = xpos.lower()  #ปรับขนาดของตัวอักษีที่จะพิมพ์เป็นขนาดมาตรฐาน
     ha = {'center': 'center', 'right': 'left', 'left': 'right'}
