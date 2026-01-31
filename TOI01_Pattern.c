@@ -26,4 +26,4 @@ int main()
 		for(j=1;j<=70;j++) printf("%c",PATTERN[i][j]);
 		printf("\n");
 	}
-}*/
+}
