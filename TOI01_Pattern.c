@@ -3,7 +3,7 @@ TASK: PATTERN
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-#include <stdio.h>
+/*#include <stdio.h>
 char PATTERN[50010][100] = {};
 int i,j,k,x,y,z;
 int max = 0;
@@ -26,4 +26,4 @@ int main()
 		for(j=1;j<=70;j++) printf("%c",PATTERN[i][j]);
 		printf("\n");
 	}
-}
+}*/
