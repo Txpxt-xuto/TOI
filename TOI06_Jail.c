@@ -31,7 +31,7 @@ int main()
 #include <stdio.h>
 int main()
 {
-    int i,j,k,n;
+    int i,j,k,n,S,B;
     scanf("%d",n);
     int s[n],b[n];
     for(i=0;i<n;i++)
@@ -44,7 +44,7 @@ int main()
         {
             for(k=i;k<n;k++)
             {
-            
+                S=+(s[i]*s[k+1];
             }
         }
     }
