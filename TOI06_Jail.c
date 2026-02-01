@@ -33,8 +33,14 @@ int main()
     int i=0,j,k;
     char Kemija[100];
     scanf("%s",kemija);
-    while(i==0)
+    while(i>=0)
     {
-
+        if(Kemaji[i]=='e' && Kemaji[i+2]==Kemaji[i] && Kemaji[i+1]=='p') 
+        {
+            Kemaji[i+1]='';
+            Kemaji[i+2]='';
+        }
+        i++
     }
+    printf("%s",Kemaji);
 }
