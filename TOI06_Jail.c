@@ -38,5 +38,14 @@ int main()
     {
         scanf("%d %d",a[i],b[i]);
     }
-    
+    for(i=0;i<n;i++)
+    {
+        for(j=i;j<n;j++)
+        {
+            for(k=i;k<n;k++)
+            {
+            
+            }
+        }
+    }
 }
