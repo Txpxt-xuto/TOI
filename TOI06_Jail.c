@@ -4,6 +4,7 @@ LANG: C
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
+/*
 #include <stdio.h>
 int main()
 {
@@ -25,4 +26,10 @@ int main()
         else if(Jail[i]!=1) k++;
         i++;
     }
+}*/
+
+#include <stdio.h>
+int main()
+{
+    
 }
