@@ -48,5 +48,5 @@ int main()
             k=i;
         }
     }
-    printf("%d %d",k,max);
+    printf("%d %d",k+1,max);
 }
