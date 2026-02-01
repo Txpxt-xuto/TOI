@@ -29,23 +29,22 @@ int main()
 }*/
 
 #include <stdio.h>
+#include <math.h>
 int main()
 {
-    int i,j,k,n,S,B;
+    int i,j,k,n,S,B,min=1000000;
     scanf("%d",n);
     int s[n],b[n];
     for(i=0;i<n;i++)
     {
         scanf("%d %d",a[i],b[i]);
     }
-    for(i=0;i<n;i++)
+    for(i=0;i<n-1;i++)
     {
-        for(j=i;j<n;j++)
+        for(j=0;j<n-1;j++)
         {
-            for(k=i;k<n;k++)
-            {
-                S=+(s[i]*s[k+1];
-            }
+            
         }
     }
+    printf("%d",min);
 }
