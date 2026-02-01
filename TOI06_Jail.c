@@ -4,7 +4,6 @@ LANG: C
 AUTHOR: Tapat Toungsakul
 CENTER: Home
 */
-/*
 #include <stdio.h>
 int main()
 {
@@ -26,27 +25,4 @@ int main()
         else if(Jail[i]!=1) k++;
         i++;
     }
-}*/
-
-#include <stdio.h>
-#include <math.h>
-int main()
-{
-    int i,j,k,human,sum,max=0;
-    int score[5][4];
-    for(i=0;i<5;i++)
-    {
-        sum=0;
-        for(j=0;j<4;j++)
-        {
-            scanf("%d", &score[i][j]);
-            sum=sum+score[i][j];
-        }
-        if(sum>max)
-        {
-            max=sum;
-            k=i;
-        }
-    }
-    printf("%d %d",k+1,max);
 }
