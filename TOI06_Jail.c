@@ -30,6 +30,11 @@ int main()
 #include <stdio.h>
 int main()
 {
-    int i,j,k;
-    char Kemija
+    int i=0,j,k;
+    char Kemija[100];
+    scanf("%s",kemija);
+    while(i==0)
+    {
+
+    }
 }
