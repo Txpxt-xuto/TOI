@@ -13795,7 +13795,7 @@ int main()
                     save=prime[j];
                     prime[j]=0;
                     k++;
-                    //printf("%d %d\n",save,k);
+                    //printf("%d %d\n",sav
                 }
                 if(k==K)
                 {
