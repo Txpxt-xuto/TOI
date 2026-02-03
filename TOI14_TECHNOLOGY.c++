@@ -13880,6 +13880,5 @@ int main()
         Table[newpositionx][newpositiony]=Table[oldpositionx][oldpositiony];
         Table[oldpositionx][oldpositiony]=0;
         x++;
-
     }
 }
