@@ -13857,8 +13857,7 @@ int main()
                     Table[positionx[i]][positiony[i]]=random[i];
                     k++;
                 }
-                if(k==3) 
-                y=-1;
+                if(k==3) y=-1;
                     
                 }
             }
