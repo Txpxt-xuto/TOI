@@ -13812,3 +13812,75 @@ int main()
         }
     }
 }
+
+*int main()
+{
+    int Table[9][9];
+    int Rose=0, Tulip=1, Sunflower=2, Dandelion=3, Tree=4, Hydrangea=5;
+    int a,b,c,i,j,k,x,y,z,random[3],positionx[3],positiony[3],newpositionx,newpositiony,oldpositionx,oldpositiony;
+    for(i=0;i<9;i++)
+    {
+        for(j=0;j<9;j++)
+        {
+                Table[i][j]=0;
+        }
+    }
+    for(i=0;i<9;i++)
+    {
+        for(j=0;j<9;j++)
+        {
+                printf("%d ",Table[i][j]);
+        }
+        printf("\n");
+    }
+    printf("------------------------\n");
+    x=1;
+    y=1;
+    while(x>0)
+    {
+        for(i=0;i<3;i++)
+        {
+            random[i]=rand()%6;
+        }
+        while(y>0)
+        {
+            for(i=0;i<3;i++)
+            {
+                positionx[i]=rand()%9;
+                positiony[i]=rand()%9;
+            }
+            k=0;
+            for(i=0;i<3;i++)
+            {
+                if(Table[positionx[i]][positiony[i]]==0)
+                {
+
+                    Table[positionx[i]][positiony[i]]=random[i];
+                    k++;
+                }
+                if(k==3)
+                {
+                    y=-1;
+                }
+            }
+        }
+        for(i=0;i<9;i++)
+        {
+            for(j=0;j<9;j++)
+            {
+                printf("%d ",Table[i][j]);
+            }
+            printf("\n");
+        }
+        printf("------------------------\n");
+        printf("from:");
+        scanf("%d %d",&oldpositionx,&oldpositiony);
+        printf("to: ");
+        scanf("%d %d\n",&newpositionx,&newpositiony);
+        Table[newpositionx][newpositiony]=Table[oldpositionx][oldpositiony];
+        Table[oldpositionx][oldpositiony]=0;
+        x++;
+
+    }
+
+}
