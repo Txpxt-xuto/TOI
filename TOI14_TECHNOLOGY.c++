@@ -13854,7 +13854,6 @@ int main()
             {
                 if(Table[positionx[i]][positiony[i]]==0)
                 {
-
                     Table[positionx[i]][positiony[i]]=random[i];
                     k++;
                 }
