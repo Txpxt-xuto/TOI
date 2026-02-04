@@ -13867,7 +13867,7 @@ int main()
             for(j=0;j<9;j++) printf("%d ",Table[i][j]);
             {
                 
-            }
+            
             printf("\n");
         }
         printf("------------------------\n");
