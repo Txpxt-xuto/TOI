@@ -44,3 +44,47 @@ int main()
     }
     printf("%s",Kemaji);
 }
+
+#include <stdio.h>
+int main()
+{
+    int i=0,j=0;
+    char Kemija[100];
+    fgets(Kemija, sizeof(Kemija), stdin);
+    while(i>=0)
+    {
+        if((Kemija[i]=='e') && (Kemija[i+2]=='e') && (Kemija[i+1]=='p'))
+        {
+            Kemija[i+1]='-';
+            Kemija[i+2]='-';
+        }
+        else if((Kemija[i]=='a') && (Kemija[i+2]=='a') && (Kemija[i+1]=='p'))
+        {
+            Kemija[i+1]='-';
+            Kemija[i+2]='-';
+        }
+        else if((Kemija[i]=='i') && (Kemija[i+2]=='i') && (Kemija[i+1]=='p'))
+        {
+            Kemija[i+1]='-';
+            Kemija[i+2]='-';
+        }
+        else if((Kemija[i]=='o') && (Kemija[i+2]=='o') && (Kemija[i+1]=='p'))
+        {
+            Kemija[i+1]='-';
+            Kemija[i+2]='-';
+        }
+        else if((Kemija[i]=='u') && (Kemija[i+2]=='u') && (Kemija[i+1]=='p'))
+        {
+            Kemija[i+1]='-';
+            Kemija[i+2]='-';
+        }
+        i++;
+        if(Kemija[i]==0 && Kemija[i+1]==0) i=-5;
+    }
+    while(j>=0)
+    {
+        if(Kemija[j]!='-') printf("%c",Kemija[j]);
+        j++;
+        if(Kemija[j]==0 && Kemija[j+1]==0) j=-5;
+    }
+}
