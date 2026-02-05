@@ -25,7 +25,7 @@ int main()
         else if(Jail[i]!=1) k++;
         i++;
     }
-}*/
+}
 
 #include <stdio.h>
 int main()
@@ -88,3 +88,5 @@ int main()
         if(Kemija[j]==0 && Kemija[j+1]==0) j=-5;
     }
 }
+
+*/
