@@ -99,10 +99,7 @@ int main()
     {
         for(j=1;j<=N-1;j++)
         {
-            if()
-            {
-                printf(*);
-            }
+            if() printf(*);
             else printf("-");
         }
     }
