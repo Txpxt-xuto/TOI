@@ -95,13 +95,15 @@ int main()
 {
     int i,j,k,N;
     scanf("%d",N);
-    printf("%d",5/2);
-    /*for(i=1;i<=N;i++)
+    for(i=1;i<=N;i++)
     {
-        for(j=1;j<=N-1;j++)
+        for(j=1;j<=N-3;j++)
         {
-            if() printf(*);
-            else printf("-");
+            printf("-");
         }
-    }*/
+        for(j=0;j<=i;j++)
+        {
+            printf("*");
+        }
+    }
 }
