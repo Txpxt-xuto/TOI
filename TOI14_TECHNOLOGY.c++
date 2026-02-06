@@ -13839,9 +13839,6 @@ int main()
     while(x>0)
     {
         for(i=0;i<3;i++) random[i]=rand()%6;
-        {
-            
-        }
         while(y>0)
         {
             for(i=0;i<3;i++)
