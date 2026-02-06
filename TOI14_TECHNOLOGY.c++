@@ -13838,9 +13838,9 @@ int main()
     y=1;
     while(x>0)
     {
-        for(i=0;i<3;i++)
+        for(i=0;i<3;i++)random[i]=rand()%6;
         {
-            random[i]=rand()%6;
+            
         }
         while(y>0)
         {
@@ -13865,9 +13865,6 @@ int main()
         for(i=0;i<9;i++)
         {
             for(j=0;j<9;j++) printf("%d ",Table[i][j]);
-            
-                
-            
             printf("\n");
         }
         printf("------------------------\n");
