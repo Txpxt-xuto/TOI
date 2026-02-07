@@ -13813,7 +13813,7 @@ int main()
     }
 }
 
-*int main()
+int main()
 {
     int Table[9][9];
     int Rose=0, Tulip=1, Sunflower=2, Dandelion=3, Tree=4, Hydrangea=5;
