@@ -13818,9 +13818,9 @@ int main()
     int Table[9][9];
     int Rose=0, Tulip=1, Sunflower=2, Dandelion=3, Tree=4, Hydrangea=5;
     int a,b,c,i,j,k,x,y,z,random[3],positionx[3],positiony[3],newpositionx,newpositiony,oldpositionx,oldpositiony;
-    for(i=0;i<9;i++)
+    for(i=0;i<9;i++) for(j=0;j<9;j++)
     {
-        for(j=0;j<9;j++)
+       
         {
                 Table[i][j]=0;
         }
