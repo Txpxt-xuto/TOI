@@ -13856,13 +13856,12 @@ int main()
         for(j=0;j<9;j++) printf("%d ",Table[i][j]);
         printf("\n");
     }
-        printf("------------------------\n");
-        printf("from:");
-        scanf("%d %d",&oldpositionx,&oldpositiony);
-        printf("to: ");
-        scanf("%d %d\n",&newpositionx,&newpositiony);
-        Table[newpositionx][newpositiony]=Table[oldpositionx][oldpositiony];
-        Table[oldpositionx][oldpositiony]=0;
-        x++;
-    }
+    printf("------------------------\n");
+    printf("from:");
+    scanf("%d %d",&oldpositionx,&oldpositiony);
+    printf("to: ");
+    scanf("%d %d\n",&newpositionx,&newpositiony);
+    Table[newpositionx][newpositiony]=Table[oldpositionx][oldpositiony];
+    Table[oldpositionx][oldpositiony]=0;
+    x++;
 }
