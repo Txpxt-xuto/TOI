@@ -13803,12 +13803,11 @@ int main()
                     i=N;
                     j=N;
                 }
-
             }
         }
-        else
+        else i=i;
         {
-            i=i;
+            
         }
     }
 }
