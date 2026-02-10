@@ -13768,9 +13768,9 @@ int main()
     int i,j,k,N,K,save;
     scanf("%d %d",&N,&K);
     int prime[N];
-    for(i=0;i<N-1;i++)
+    for(i=0;i<N-1;i++) prime[i]=i+2;
     {
-        prime[i]=i+2;
+        
     }
     k=0;
     for(i=0;i<N-1;i++)
