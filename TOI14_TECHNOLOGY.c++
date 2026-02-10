@@ -13787,7 +13787,6 @@ int main()
                 i=N;
                 j=N;
             }
-            //printf("%d %d\n",save,k);
             for(j=i+1;j<N-1;j++)
             {
                 if(prime[j]%prime[i]==0 && prime[j]!=0)
