@@ -13775,8 +13775,6 @@ int main()
     k=0;
     for(i=0;i<N-1;i++)
     {
-        //printf("-------------%d\n",prime[i]);
-
         if(prime[i]!=0)
         {
             save=prime[i];
