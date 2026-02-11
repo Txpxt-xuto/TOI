@@ -13852,3 +13852,29 @@ int main()
     Table[oldpositionx][oldpositiony]=0;
     x++;
 }
+
+int main()
+{
+    int D,M,Y;
+    int w,c;
+    char Weekly[7][10]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+    printf("Date : ");
+    scanf("%d",&D);
+    printf("Month : ");
+    scanf("%d",&M);
+    printf("Years : ");
+    scanf("%d",&Y);
+    if(M==1 || M==2)
+    {
+        M=10+M;
+        Y=(Y-1)%100;
+    }
+    else
+    {
+        M=M-2;
+        Y=Y%100;
+    }
+    c=2*floor(Y/100.0);
+    w=D+floor(2.6*(M)-0.2)-c+Y+floor(c/4.0)+floor(Y/4.0);
+    printf("%s",Weekly[w%7]);
+}
