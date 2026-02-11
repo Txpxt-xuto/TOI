@@ -13739,8 +13739,6 @@ int main()
     cout << dp[n%2][1];
 }
 
-#include <stdio.h>
-#include <math.h>
 int main()
 {
     int D,M,Y;
