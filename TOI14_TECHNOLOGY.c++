@@ -13856,7 +13856,7 @@ int main()
 int main()
 {
     //โปรแกรมคำนวณวันในสัปดาห์
-    
+
     int D,M,Y;
     int w,c;
     char Weekly[7][10]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
@@ -13879,4 +13879,24 @@ int main()
     c=2*floor(Y/100.0);
     w=D+floor(2.6*(M)-0.2)-c+Y+floor(c/4.0)+floor(Y/4.0);
     printf("%s",Weekly[w%7]);
+}
+
+int main()
+{
+    int x=1
+    ,y=1,z=1;
+    z+=x+y;
+    printf("%d %d %d\n",x,y,z);
+    x=x++ + ++y;
+    printf("%d %d %d\n",x,y,z);
+    y=x+(x=x+1);
+    printf("%d %d %d\n",x,y,z);
+    z=x+x+(x=x+1);
+    printf("%d %d %d\n",x,y,z);
+    x=x+x*(x=x+1);
+    printf("%d %d %d\n",x,y,z);
+    y=x+x+(x=x+1)+(x=x+2);
+    printf("%d %d %d\n",x,y,z);
+    z=(x+x)+(x=x+1)+(x=x+2);
+    printf("%d %d %d\n",x,y,z);
 }
