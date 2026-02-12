@@ -13855,6 +13855,8 @@ int main()
 
 int main()
 {
+    //โปรแกรมคำนวณวันในสัปดาห์
+    
     int D,M,Y;
     int w,c;
     char Weekly[7][10]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
