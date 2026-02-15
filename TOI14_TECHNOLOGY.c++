@@ -13901,8 +13901,6 @@ int main()
     printf("%d %d %d\n",x,y,z);
 }
 
-#include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
