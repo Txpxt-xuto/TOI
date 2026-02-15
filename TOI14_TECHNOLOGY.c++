@@ -13900,3 +13900,24 @@ int main()
     z=(x+x)+(x=x+1)+(x=x+2);
     printf("%d %d %d\n",x,y,z);
 }
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x,y,z;
+    scanf("%d",&x);
+    scanf("%d",&y);
+    scanf("%d",&z);
+    z=x+y+z;
+    if(z>=80){printf("A");}
+    else if(z<=79 && z>=75){printf("B+");}
+    else if(z<=74 && z>=70){printf("B");}
+    else if(z<=69 && z>=65){printf("C+");}
+    else if(z<=64 && z>=60){printf("C");}
+    else if(z<=59 && z>=55){printf("D+");}
+    else if(z<=54 && z>=50){printf("D");}
+    else {printf("F");}
+    return 0;
+}
