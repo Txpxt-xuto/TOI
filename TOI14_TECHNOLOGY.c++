@@ -33,6 +33,7 @@ void bfs(int ssi,int ssj)
         }
     }
 }
+
 int main()
 {
     cin >> m >> n;
