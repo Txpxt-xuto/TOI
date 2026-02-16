@@ -94,6 +94,7 @@ const int MxN = 5e6 + 1;
 int n,k;
 int mountain[MxN];
 vector<int> height;
+
 int main()
 {
     ios_base::sync_with_stdio(0);
