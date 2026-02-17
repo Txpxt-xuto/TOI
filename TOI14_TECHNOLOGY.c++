@@ -351,11 +351,11 @@ int main()
     for(int i=0;i<=500;i++) for(int j=0;j<=500;j++) dp[i][j]=1e18+7;
     for(int i=1;i<=n;i++) cin >> point[i].first >> point[i].second >> cost[i];
     dp[0][0]=0;
-    for(int i=1;i<=n;i++)
+    for(int i=1;i<=n;i++) for(int x=500;x>=point[i].first;x--) for(int y=500;y>=point[i].second;y--) dp[x][y]=min(dp[x][y],dp[x-point[i].first][y-point[i].second]+cost[i]);
     {
-        for(int x=500;x>=point[i].first;x--)
+        
         {
-            for(int y=500;y>=point[i].second;y--) dp[x][y]=min(dp[x][y],dp[x-point[i].first][y-point[i].second]+cost[i]);
+            
         }
     }
     ll ans=1e18+7;
