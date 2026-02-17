@@ -368,6 +368,7 @@ int idx[MX];
 long long ncr[MX][MX], fac[MX];
 bool isPrime[MX];
 vector<int> prime, p1[MXP], p2[MXP][MXP], p3[MXP][MXP][MXP];
+
 int main()
 {
 	int cnt = 0;
