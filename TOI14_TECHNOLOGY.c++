@@ -13913,3 +13913,26 @@ int main()
     else {printf("F");}
     return 0;
 }
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int i,j,k,human,sum,max=0;
+    int score[5][4];
+    for(i=0;i<5;i++)
+    {
+        sum=0;
+        for(j=0;j<4;j++)
+        {
+            scanf("%d", &score[i][j]);
+            sum=sum+score[i][j];
+        }
+        if(sum>max)
+        {
+            max=sum;
+            k=i;
+        }
+    }
+    printf("%d %d",k+1,max);
+}
