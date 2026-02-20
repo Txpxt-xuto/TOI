@@ -13923,7 +13923,7 @@ int main()
     scanf("%ld",&A);
     scanf("%s",&operation);
     scanf("%ld",&B);
-    if(operation == '+') printf("%ld",A+B);
+    if(operation[0] == '+') printf("%ld",A+B);
     else printf("%ld",A*B);
 }
 
