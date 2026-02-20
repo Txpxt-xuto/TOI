@@ -13920,11 +13920,11 @@ int main()
 {
     long int A,B;
     char operation;
-    scanf("%d",&A);
-    scanf("%c",&operation);
-    scanf("%d",&B);
-    if(operation == '+') printf("%d",A+B);
-    else printf("%d",A*B);
+    scanf("%ld",&A);
+    scanf("%s",&operation);
+    scanf("%ld",&B);
+    if(operation == '+') printf("%ld",A+B);
+    else printf("%ld",A*B);
 }
 
 
