@@ -13919,7 +13919,7 @@ int main()
 int main()
 {
     long int A,B;
-    char operation;
+    char operation[1];
     scanf("%ld",&A);
     scanf("%s",&operation);
     scanf("%ld",&B);
