@@ -13762,3 +13762,53 @@ int main()
     w=D+floor(2.6*(M)-0.2)-c+Y+floor(c/4.0)+floor(Y/4.0);
     printf("%s",Weekly[w%7]);
 }
+
+int main()
+{
+    int i,j,k,N,K,save;
+    scanf("%d %d",&N,&K);
+    int prime[N];
+    for(i=0;i<N-1;i++)
+    {
+        prime[i]=i+2;
+    }
+    k=0;
+    for(i=0;i<N-1;i++)
+    {
+        //printf("-------------%d\n",prime[i]);
+
+        if(prime[i]!=0)
+        {
+            save=prime[i];
+            k++;
+            if(k==K)
+            {
+                printf("%d",save);
+                i=N;
+                j=N;
+            }
+            //printf("%d %d\n",save,k);
+            for(j=i+1;j<N-1;j++)
+            {
+                if(prime[j]%prime[i]==0 && prime[j]!=0)
+                {
+                    save=prime[j];
+                    prime[j]=0;
+                    k++;
+                    //printf("%d %d\n",save,k);
+                }
+                if(k==K)
+                {
+                    printf("%d",save);
+                    i=N;
+                    j=N;
+                }
+
+            }
+        }
+        else
+        {
+            i=i;
+        }
+    }
+}
