@@ -13938,13 +13938,7 @@ int main()
     while(word[i]!=0)
     {
         if((i+1)%3==0) printf("..*.");
-        {
-            
-        }
         else printf("..#.");
-        
-            
-        
         i++;
     }
     printf(".\n");
