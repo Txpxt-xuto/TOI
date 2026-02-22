@@ -13967,10 +13967,10 @@ int main()
         {
             printf("*.");
         }
-        else if((j)%2==1)
-        {
-            printf("%c.",word[(j-1)/2]);
-        }
+        else if((j)%2==1) printf("%c.",word[(j-1)/2]);
+        
+            
+        
         else printf("#.");
     }
     if(i%3==0) printf("*");
