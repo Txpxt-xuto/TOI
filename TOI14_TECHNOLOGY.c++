@@ -13973,8 +13973,7 @@ int main()
         }
         else
         
-            printf("#.");
-
+printf("#.");
     }
     if(i%3==0) printf("*");
     else printf("#");
