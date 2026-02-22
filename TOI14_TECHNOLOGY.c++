@@ -13971,9 +13971,7 @@ int main()
         {
             printf("%c.",word[(j-1)/2]);
         }
-        else
-        
-printf("#.");
+        else printf("#.");
     }
     if(i%3==0) printf("*");
     else printf("#");
