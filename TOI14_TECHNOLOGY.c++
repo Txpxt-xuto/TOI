@@ -13964,9 +13964,6 @@ int main()
     for(j=1;j<2*i;j++)
     {
         if(j%6==4 || j%6==0 ) printf("*.");
-        {
-            
-        }
         else if((j)%2==1) printf("%c.",word[(j-1)/2]);
         else printf("#.");
     }
