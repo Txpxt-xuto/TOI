@@ -14024,7 +14024,7 @@ int main() {
 		for (int j=1; j<=n; j++) if (i!=j) f.push_back(j);
 		do{
 			cout << i << ' ';
-			for (auto c:f) cout<<c<<' ';
+			for (auto c:f) cout<<c << ' ';
 			cout << '\n';
 		}while(next_permutation(f.begin(), f.end()));
 	}
