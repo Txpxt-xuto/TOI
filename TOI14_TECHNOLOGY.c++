@@ -13980,9 +13980,9 @@ int main()
     {
         printf("*");
     }
-    else
+    else printf("#");
     {
-        printf("#");
+        
     }
     printf("\n");
     for(j=0;j<2*i;j++)
