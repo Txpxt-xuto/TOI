@@ -14026,6 +14026,6 @@ int main() {
 			cout<<i<<' ';
 			for (auto c:f) cout<<c<<' ';
 			cout<<'\n';
-		} while(next_permutation(f.begin(), f.end()));
+		}while(next_permutation(f.begin(), f.end()));
 	}
 }
