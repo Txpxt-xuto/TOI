@@ -14006,7 +14006,7 @@ int main()
         }
         else printf("..#.");
         {
-            
+        
         }
         i++;
     }
