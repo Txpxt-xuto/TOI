@@ -14022,7 +14022,7 @@ int main() {
 		if (v[i]) continue;
 		vector<int> f;
 		for (int j=1; j<=n; j++) if (i!=j) f.push_back(j);
-		do {
+		do{
 			cout<<i<<' ';
 			for (auto c:f) cout<<c<<' ';
 			cout<<'\n';
