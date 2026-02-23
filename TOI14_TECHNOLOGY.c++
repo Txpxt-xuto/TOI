@@ -13991,9 +13991,9 @@ int main()
         {
             printf(".*");
         }
-        else
+        else printf(".#");
         {
-            printf(".#");
+            
         }
     }
     printf(".\n");
