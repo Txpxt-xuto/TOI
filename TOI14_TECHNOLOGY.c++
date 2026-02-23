@@ -13976,9 +13976,9 @@ int main()
             printf("#.");
         }
     }
-    if(i%3==0)
+    if(i%3==0) printf("*");
     
-        printf("*");
+        
     
     else printf("#");
     {
