@@ -13987,10 +13987,7 @@ int main()
     printf("\n");
     for(j=0;j<2*i;j++)
     {
-        if((j+1)%6==5  || (j+1)%6==0)
-        {
-            printf(".*");
-        }
+        if((j+1)%6==5  || (j+1)%6==0)printf(".*");
         else printf(".#");
     }
     printf(".\n");
