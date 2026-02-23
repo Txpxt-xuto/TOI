@@ -13981,7 +13981,6 @@ int main()
         
     
     else printf("#");
-
     printf("\n");
     for(j=0;j<2*i;j++)
     {
