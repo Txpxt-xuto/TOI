@@ -14000,8 +14000,7 @@ int main()
     i=0;
     while(word[i]!=0)
     {
-        if((i+1)%3==0)
-            printf("..*.");
+        if((i+1)%3==0) printf("..*.");
         else printf("..#.");
         i++;
     }
