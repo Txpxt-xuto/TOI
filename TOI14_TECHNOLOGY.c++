@@ -14003,3 +14003,29 @@ int main()
     canFinish(0, n);
     for(int i=0;i<t;i++) cout << best[i] << "\n";
 }
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int n, m, t;
+vector<int> v(10);
+int main() {
+	cin.tie(0)->sync_with_stdio(0);
+	cout.tie(0);
+
+	cin>>n;
+	cin>>m;
+	for (int i=1; i<=m; i++) {cin>>t; v[t]=1;}
+
+	for (int i=1; i<=n; i++) {
+		if (v[i]) continue;
+		vector<int> f;
+		for (int j=1; j<=n; j++) if (i!=j) f.push_back(j);
+		do {
+			cout<<i<<' ';
+			for (auto c:f) cout<<c<<' ';
+			cout<<'\n';
+		} while(next_permutation(f.begin(), f.end()));
+	}
+}
