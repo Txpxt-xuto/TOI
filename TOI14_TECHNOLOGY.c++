@@ -14005,9 +14005,9 @@ int main()
             printf("..*.");
         }
         else printf("..#.");
-        {
         
-        }
+        
+        
         i++;
     }
     printf(".\n");
