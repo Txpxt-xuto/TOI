@@ -13928,3 +13928,87 @@ int main()
 }
 
 
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    char word[16];
+    scanf("%s",&word);
+    int i=0,j;
+    while(word[i]!=0)
+    {
+        if((i+1)%3==0)
+        {
+            printf("..*.");
+        }
+        else
+        {
+            printf("..#.");
+        }
+        i++;
+    }
+    printf(".\n");
+    for(j=0;j<2*i;j++)
+    {
+        if((j+1)%6==5 || (j+1)%6==0)
+        {
+            printf(".*");
+        }
+        else
+        {
+            printf(".#");
+        }
+    }
+    printf(".\n");
+    printf("#.");
+    for(j=1;j<2*i;j++)
+    {
+        if(j%6==4 || j%6==0 )
+        {
+            printf("*.");
+        }
+        else if((j)%2==1)
+        {
+            printf("%c.",word[(j-1)/2]);
+        }
+        else
+        {
+            printf("#.");
+        }
+    }
+    if(i%3==0)
+    {
+        printf("*");
+    }
+    else
+    {
+        printf("#");
+    }
+    printf("\n");
+    for(j=0;j<2*i;j++)
+    {
+        if((j+1)%6==5  || (j+1)%6==0)
+        {
+            printf(".*");
+        }
+        else
+        {
+            printf(".#");
+        }
+    }
+    printf(".\n");
+    i=0;
+    while(word[i]!=0)
+    {
+        if((i+1)%3==0)
+        {
+            printf("..*.");
+        }
+        else
+        {
+            printf("..#.");
+        }
+        i++;
+    }
+    printf(".\n");
+}
