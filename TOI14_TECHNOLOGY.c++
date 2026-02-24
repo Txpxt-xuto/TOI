@@ -14018,7 +14018,7 @@ int main() {
 	cin>>m;
 	for (int i=1; i<=m; i++) {cin>>t; v[t]=1;}
 
-	for (int i=1; i<=n; i++) {
+	for (int i=1; i<=n; i++){
 		if (v[i]) continue;
 		vector<int> f;
 		for (int j=1; j<=n; j++) if (i!=j) f.push_back(j);
