@@ -14016,7 +14016,7 @@ int main()
 	cout.tie(0);
 	cin>>n;
 	cin>>m;
-	for (int i=1; i<=m; i++)
+	for(int i=1; i<=m; i++)
     { 
         cin >> t;
         v[t]=1;
