@@ -14004,10 +14004,6 @@ int main()
     for(int i=0;i<t;i++) cout << best[i] << "\n";
 }
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
 int n, m, t;
 vector<int> v(10);
 int main()
@@ -14025,7 +14021,7 @@ int main()
     {
 		if(v[i]) continue;
 		vector<int> f;
-		for (int j=1; j<=n; j++) if (i!=j) f.push_back(j);
+		for (int j=1;j<=n;j++) if (i!=j) f.push_back(j);
 		do{
 			cout << i << ' ';
 			for(auto c:f) cout << c << ' ';
