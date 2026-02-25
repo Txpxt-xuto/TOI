@@ -14018,7 +14018,7 @@ int main()
 	cin>>m;
 	for (int i=1; i<=m; i++)
     { 
-        cin>>t;
+        cin >> t;
         v[t]=1;
     }
 	for (int i=1; i<=n; i++)
