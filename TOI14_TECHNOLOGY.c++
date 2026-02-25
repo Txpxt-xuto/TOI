@@ -14010,7 +14010,8 @@ int main()
 using namespace std;
 int n, m, t;
 vector<int> v(10);
-int main() {
+int main()
+{
 	cin.tie(0)->sync_with_stdio(0);
 	cout.tie(0);
 
