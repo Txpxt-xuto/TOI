@@ -14021,7 +14021,7 @@ int main()
         cin >> t;
         v[t]=1;
     }
-	for (int i=1; i<=n; i++)
+	for(int i=1; i<=n; i++)
     {
 		if (v[i]) continue;
 		vector<int> f;
