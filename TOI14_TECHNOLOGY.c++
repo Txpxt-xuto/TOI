@@ -14033,7 +14033,8 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 
-int gcd(int a, int b) {
+int gcd(int a, int b)
+{
     int r;
     while (b != 0) {
         r = a % b;
