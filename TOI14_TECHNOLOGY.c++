@@ -14004,7 +14004,6 @@ int main(){
         for(int j=1;j<=m;j++){
             cin >> road[i][j];
         
-
     canFinish(0, n);
     for(int i=0;i<t;i++) cout << best[i] << "\n";
 }
