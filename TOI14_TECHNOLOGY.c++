@@ -13976,7 +13976,6 @@ int main()
 
 #include <bits/stdc++.h>
 using namespace std;
-
 bool road[105][45];
 bool mem[105][45];
 int best[105];
