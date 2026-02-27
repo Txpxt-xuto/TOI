@@ -14000,11 +14000,11 @@ int main(){
     ios::sync_with_stdio(false);
     int n;
     cin >> m >> n >> t;
-    for(int i=1;i<=t;i++){
+    for(int i=1;i<=t;i++)
         for(int j=1;j<=m;j++){
             cin >> road[i][j];
-        }
-    }
+        
+    
     canFinish(0, n);
     for(int i=0;i<t;i++) cout << best[i] << "\n";
 }
