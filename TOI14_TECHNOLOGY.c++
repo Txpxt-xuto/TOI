@@ -13995,7 +13995,8 @@ bool canFinish(int nt, int n){
     return mem[nt][n];
 }
 
-int main(){
+int main()
+{
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
     int n;
