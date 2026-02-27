@@ -13988,7 +13988,7 @@ bool canFinish(int nt, int n){
     bool a = canFinish(nt+1, n-1);
     bool b = canFinish(nt+1, n+1);
     bool c = canFinish(nt+1, n);
-    if(a)best[nt]=1;
+    if(a) best[nt]=1;
     else if(b) best[nt]=2;
     else if(c) best[nt]=3;
     mem[nt][n] = a || b || c;
