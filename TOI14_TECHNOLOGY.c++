@@ -14006,5 +14006,5 @@ int main(){
         }
     }
     canFinish(0, n);
-    for(int i=0;i<t;i++)cout << best[i] << "\n";
+    for(int i=0;i<t;i++) cout << best[i] << "\n";
 }
