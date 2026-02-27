@@ -13974,3 +13974,37 @@ int main()
     printf(".\n");
 }
 
+#include <bits/stdc++.h>
+using namespace std;
+
+bool road[105][45];
+bool mem[105][45];
+int best[105];
+int m,t;
+bool canFinish(int nt, int n){
+    if(mem[nt][n])return mem[nt][n];
+    if(road[nt][n] || n<=0 || n>m)return false;
+    if(nt==t)return true;
+    bool a = canFinish(nt+1, n-1);
+    bool b = canFinish(nt+1, n+1);
+    bool c = canFinish(nt+1, n);
+    if(a)best[nt]=1;
+    else if(b)best[nt]=2;
+    else if(c)best[nt]=3;
+    mem[nt][n] = a || b || c;
+    return mem[nt][n];
+}
+
+int main(){
+    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    int n;
+    cin >> m >> n >> t;
+    for(int i=1;i<=t;i++){
+        for(int j=1;j<=m;j++){
+            cin >> road[i][j];
+        }
+    }
+    canFinish(0, n);
+    for(int i=0;i<t;i++)cout << best[i] << "\n";
+}
