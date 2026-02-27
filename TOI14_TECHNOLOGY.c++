@@ -13985,7 +13985,7 @@ bool canFinish(int nt, int n)
 {
     if(mem[nt][n]) return mem[nt][n];
     if(road[nt][n] || n<=0 || n>m) return false;
-    if(nt==t)return true;
+    if(nt==t) return true;
     bool a = canFinish(nt+1, n-1);
     bool b = canFinish(nt+1, n+1);
     bool c = canFinish(nt+1, n);
