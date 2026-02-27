@@ -13981,7 +13981,8 @@ bool road[105][45];
 bool mem[105][45];
 int best[105];
 int m,t;
-bool canFinish(int nt, int n){
+bool canFinish(int nt, int n)
+{
     if(mem[nt][n])return mem[nt][n];
     if(road[nt][n] || n<=0 || n>m)return false;
     if(nt==t)return true;
