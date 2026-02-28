@@ -14030,7 +14030,6 @@ int main()
 	}
 }
 
-#include <bits/stdc++.h>
 int gcd(int a, int b)
 {
     int r;
