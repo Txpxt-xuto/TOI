@@ -14048,3 +14048,56 @@ int main()
     cin >> a >> b;
     cout << gcd(a, b);
 }
+
+#include <iostream>
+#include <string>
+enum Face {
+  TOP=1,
+  FRONT,
+  LEFT,
+  BACK,
+  RIGHT,
+  BOTTOM
+} ;
+int g_start[6] = {1,2,3,5,4,6};
+typedef int Transform_table[6];
+Transform_table g_tTables[6] = {
+  5,1,3,6,4,2,
+  2,6,3,1,4,5,
+  4,2,1,5,6,3,
+  3,2,6,5,1,4,
+  1,4,2,3,5,6,
+  1,3,5,4,2,6
+};
+char g_map[128];
+int g_fIndices[7];
+
+void rotate(int* dice, char r) {
+  int temp[6];
+  for (int i=0; i<6; ++i) {
+    temp[i] = dice[g_fIndices[g_tTables[g_map[r]][i]]];
+  }
+  for (int i=0; i<6; ++i) {
+    dice[i] = temp[i];
+  }
+}
+
+
+int main() {
+  for (int i=0; i<6; ++i) g_fIndices[g_start[i]] = i;
+  const char* string = "FBLRCD";
+  for (int i=0; i<sizeof(string)/sizeof(char); ++i) g_map[string[i]] = i;
+  int n;
+  std::cin >> n;
+  std::string input;
+  int fronts[n];
+  for (int i=0; i<n; ++i) {
+    int dice[6] = {1,2,3,5,4,6};  
+    std::cin >> input;
+    for (const auto& c : input) rotate(dice, c);
+    fronts[i] = dice[1];
+  }
+  for (const auto& f : fronts) {
+    std::cout << f << ' ';
+  }
+}
