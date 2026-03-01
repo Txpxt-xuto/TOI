@@ -14088,7 +14088,7 @@ int main() {
     const char* string = "FBLRCD";
     for (int i=0; i<sizeof(string)/sizeof(char); ++i) g_map[string[i]] = i;
     int n;
-  std::cin >> n;
+    std::cin >> n;
   std::string input;
   int fronts[n];
   for (int i=0; i<n; ++i) {
