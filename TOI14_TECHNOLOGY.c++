@@ -14084,7 +14084,7 @@ void rotate(int* dice, char r) {
 
 
 int main() {
-    for (int i=0; i<6; ++i) g_fIndices[g_start[i]] = i;
+    for(int i=0; i<6; ++i) g_fIndices[g_start[i]] = i;
     const char* string = "FBLRCD";
     for (int i=0; i<sizeof(string)/sizeof(char); ++i) g_map[string[i]] = i;
     int n;
