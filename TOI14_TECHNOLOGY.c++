@@ -14092,7 +14092,7 @@ int main()
     std::cin >> n;
     std::string input;
     int fronts[n];
-    for(int i=0; i<n; ++i)
+    for(int i=0;i<n;++i)
     {
     int dice[6] = {1,2,3,5,4,6};  
     std::cin >> input;
