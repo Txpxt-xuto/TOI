@@ -14098,6 +14098,6 @@ int main()
     std::cin >> input;
     for (const auto& c : input) rotate(dice, c);
     fronts[i] = dice[1];
-  }
-  for (const auto& f : fronts) std::cout << f << ' ';
+    }
+    for (const auto& f : fronts) std::cout << f << ' ';
 }
