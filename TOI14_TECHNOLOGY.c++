@@ -14097,7 +14097,7 @@ int main()
     int dice[6] = {1,2,3,5,4,6};  
     std::cin >> input;
     for (const auto& c : input) rotate(dice, c);
-    fronts[i] = dice[1];
+        fronts[i] = dice[1];
     }
     for (const auto& f : fronts) std::cout << f << ' ';
 }
