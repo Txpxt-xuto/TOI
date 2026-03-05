@@ -14079,9 +14079,8 @@ void rotate(int* dice, char r) {
   }
   for (int i=0; i<6; ++i) {
     dice[i] = temp[i];
-  }
+    }
 }
-
 
 int main()
 {
