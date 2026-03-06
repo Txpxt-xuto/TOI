@@ -14077,9 +14077,7 @@ void rotate(int* dice, char r) {
   for (int i=0; i<6; ++i) {
     temp[i] = dice[g_fIndices[g_tTables[g_map[r]][i]]];
     }
-    for (int i=0; i<6; ++i) 
-        dice[i] = temp[i];
-    }
+    for (int i=0; i<6; ++i) dice[i] = temp[i];
 }
 
 int main()
