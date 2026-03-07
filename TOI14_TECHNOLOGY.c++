@@ -14052,12 +14052,12 @@ int main()
 #include <iostream>
 #include <string>
 enum Face {
-  TOP=1,
-  FRONT,
-  LEFT,
-  BACK,
-  RIGHT,
-  BOTTOM
+    TOP=1,
+    FRONT,
+    LEFT,
+    BACK,
+    RIGHT,
+    BOTTOM
 } ;
 int g_start[6] = {1,2,3,5,4,6};
 typedef int Transform_table[6];
