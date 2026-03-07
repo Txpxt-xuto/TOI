@@ -14072,8 +14072,9 @@ Transform_table g_tTables[6] = {
 char g_map[128];
 int g_fIndices[7];
 
-void rotate(int* dice, char r) {
-  int temp[6];
+void rotate(int* dice, char r)
+{
+    int temp[6];
     for (int i=0; i<6; ++i) temp[i] = dice[g_fIndices[g_tTables[g_map[r]][i]]];
     for (int i=0; i<6; ++i) dice[i] = temp[i];
 }
