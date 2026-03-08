@@ -14250,8 +14250,8 @@ int main() {
                 mx = num;
                 rep = v[i].idx-pos;
             }
-            else if(num == mx) {rep += v[i].idx-pos;
-            }
+            else if(num == mx) rep += v[i].idx-pos;
+            
                 
         }
     }
