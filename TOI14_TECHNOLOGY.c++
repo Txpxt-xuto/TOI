@@ -14251,8 +14251,6 @@ int main() {
                 rep = v[i].idx-pos;
             }
             else if(num == mx) rep += v[i].idx-pos;
-            
-                
         }
     }
     cout << mx << " "<< rep << "\n";
