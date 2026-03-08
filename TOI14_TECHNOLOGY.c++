@@ -14161,7 +14161,6 @@ int main() {
             }
             // cout << h1 << " : " << cnt.first << " " << cnt.second << " " << x << "\n";
         }
-        // cout << cnt.first << " " << cnt.second << "\n";
         if(h0 >= n)
         {
             cout << 0 << "\n";
