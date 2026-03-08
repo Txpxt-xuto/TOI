@@ -14168,7 +14168,8 @@ int main() {
             cout << x;
             break;
         }
-        if(h1 >= n) {
+        if(h1 >= n)
+        {
             cout << 1 << "\n";
             cout << x;
             break;
