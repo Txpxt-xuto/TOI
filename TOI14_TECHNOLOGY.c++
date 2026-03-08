@@ -14163,7 +14163,8 @@ int main() {
         }
         // cout << cnt.first << " " << cnt.second << "\n";
 
-        if(h0 >= n){
+        if(h0 >= n)
+        {
             cout << 0 << "\n";
             cout << x;
             break;
