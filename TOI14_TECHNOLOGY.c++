@@ -14157,8 +14157,6 @@ int main() {
             if(cnt.first >= 3) {
                 h1 += 3;
             }else h1++;
-                
-            
         }
         if(h0 >= n)
         {
