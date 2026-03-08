@@ -14098,9 +14098,6 @@ int main()
     for (const auto& f : fronts) std::cout << f << ' '; 
 }
 
-#include <bits/stdc++.h>
-using namespace std;
-
 int main()
 {
     cin.tie(nullptr)->sync_with_stdio(false);
