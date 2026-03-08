@@ -14126,7 +14126,7 @@ int main() {
         h1++;
     }
     num.pop();
-    while (num.size())
+    while(num.size())
     {
         int x = num.front();
         num.pop();
