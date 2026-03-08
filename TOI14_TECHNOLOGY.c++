@@ -14234,7 +14234,8 @@ int main() {
     long long n2=0,n3=0,n5=0,n7=0;
     long long mx=0,rep=0;
     int i = 0;
-    while(i<v.size()){
+    while(i<v.size())
+    {
         long long pos = v[i].idx;
         while(pos == v[i].idx && i<v.size())
         {
