@@ -14096,5 +14096,83 @@ int main()
         fronts[i] = dice[1];
     }
     for (const auto& f : fronts) std::cout << f << ' '; 
+}
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+
+    int n;cin >> n;
+    queue<int> num;
+
+    for (int i = 0; i < 2*n; i++) {
+        int x;cin >> x;
+        num.push(x);
+    }
+
+    int h0 = 0,h1 = 0;
+    pair<int,int> cnt = {0,0};
+    if(num.front() % 2 == 0)
+    {
+        cnt.first = 1;
+        h0++;
+    }
+    else
+    {
+        cnt.first = 1;
+        cnt.second = 1;
+        h1++;
+    }
+    num.pop();
+    while (num.size()) {
+        int x = num.front();
+        num.pop();
+        if(x % 2 == 0) {
+            if(cnt.second == 0) {
+                cnt.first++;
+            }
+            else if(cnt.second == 1)
+            {
+                cnt.first = 1;
+                cnt.second = 0;
+            }
+            
+            if(cnt.first >= 3) {
+                h0 += 3;
+            }else {
+                h0++;
+            }
+        }else {
+            if(cnt.second == 1) {
+                cnt.first++;
+            }
+            else if(cnt.second == 0)
+            {
+                cnt.first = 1;
+                cnt.second = 1; 
+            }
+            
+            if(cnt.first >= 3) {
+                h1 += 3;
+            }else {
+                h1++;
+            }
+            // cout << h1 << " : " << cnt.first << " " << cnt.second << " " << x << "\n";
+        }
+        // cout << cnt.first << " " << cnt.second << "\n";
+
+        if(h0 >= n){
+            cout << 0 << "\n";
+            cout << x;
+            break;
+        }
+        if(h1 >= n) {
+            cout << 1 << "\n";
+            cout << x;
+            break;
+        }
+    }
 
 }
