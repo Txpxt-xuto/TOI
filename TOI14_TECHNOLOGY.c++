@@ -14129,7 +14129,8 @@ int main() {
     while (num.size()) {
         int x = num.front();
         num.pop();
-        if(x % 2 == 0) {
+        if(x % 2 == 0)
+        {
             if(cnt.second == 0) cnt.first++;
             else if(cnt.second == 1)
             {
