@@ -14236,7 +14236,8 @@ int main() {
     int i = 0;
     while(i<v.size()){
         long long pos = v[i].idx;
-        while(pos == v[i].idx && i<v.size()) {
+        while(pos == v[i].idx && i<v.size())
+        {
             n2+=v[i].cnt2;
             n3+=v[i].cnt3;
             n5+=v[i].cnt5;
