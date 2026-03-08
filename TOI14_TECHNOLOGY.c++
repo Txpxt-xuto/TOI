@@ -14130,15 +14130,12 @@ int main() {
         int x = num.front();
         num.pop();
         if(x % 2 == 0) {
-            if(cnt.second == 0) {
-                cnt.first++;
-            }
+            if(cnt.second == 0) cnt.first++;
             else if(cnt.second == 1)
             {
                 cnt.first = 1;
                 cnt.second = 0;
             }
-            
             if(cnt.first >= 3) h0 += 3;
             else h0++;
         }
