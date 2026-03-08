@@ -14107,11 +14107,11 @@ int main() {
     int n;cin >> n;
     queue<int> num;
 
-    for (int i = 0; i < 2*n; i++) {
+    for(int i = 0; i < 2*n; i++)
+    {
         int x;cin >> x;
         num.push(x);
     }
-
     int h0 = 0,h1 = 0;
     pair<int,int> cnt = {0,0};
     if(num.front() % 2 == 0)
