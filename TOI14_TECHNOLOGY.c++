@@ -14139,9 +14139,7 @@ int main() {
                 cnt.second = 0;
             }
             
-            if(cnt.first >= 3) {
-                h0 += 3;
-            }
+            if(cnt.first >= 3) h0 += 3;
             else h0++;
         }
         else
