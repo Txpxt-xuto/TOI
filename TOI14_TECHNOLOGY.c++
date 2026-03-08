@@ -14243,7 +14243,8 @@ int main() {
             n7+=v[i].cnt7;
             ++i;
         }
-        if(i<v.size()&& v[i].idx>pos) {
+        if(i<v.size()&& v[i].idx>pos)
+        {
             long long num = (n2+1)*(n3+1)*(n5+1)*(n7+1);
             if(num > mx) {
                 mx = num;
