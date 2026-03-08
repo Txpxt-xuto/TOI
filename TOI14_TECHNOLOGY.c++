@@ -14145,15 +14145,12 @@ int main() {
                 h0++;
             }
         }else {
-            if(cnt.second == 1) {
-                cnt.first++;
-            }
+            if(cnt.second == 1) cnt.first++;
             else if(cnt.second == 0)
             {
                 cnt.first = 1;
                 cnt.second = 1; 
             }
-            
             if(cnt.first >= 3) h1 += 3;
             else h1++;
         }
