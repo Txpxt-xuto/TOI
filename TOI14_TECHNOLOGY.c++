@@ -14144,7 +14144,9 @@ int main() {
             }else {
                 h0++;
             }
-        }else {
+        }
+        else
+        {
             if(cnt.second == 1) cnt.first++;
             else if(cnt.second == 0)
             {
