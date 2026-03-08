@@ -14101,12 +14101,11 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
     cin.tie(nullptr)->sync_with_stdio(false);
-
     int n;cin >> n;
     queue<int> num;
-
     for(int i = 0; i < 2*n; i++)
     {
         int x;cin >> x;
