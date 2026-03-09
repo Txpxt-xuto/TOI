@@ -14212,7 +14212,8 @@ vector<what> v;
 int main() {
     ios_base::sync_with_stdio(0),cin.tie(0);
     long long m,n;cin>>m>>n;
-    for(int i =0 ; i<m ; ++i) {
+    for(int i =0 ; i<m ; ++i)
+    {
         long long x,l,r;cin>>x>>l>>r;
         what w1,w2;
         w1.idx = l,w2.idx = r+1;
