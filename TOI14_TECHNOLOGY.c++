@@ -14188,7 +14188,7 @@ void ADSL(vector<int> &room, int m){
             high = (low+high)/2;
         }else low = (low+high)/2+1;
     }
-    cout << low; //<<high
+    cout << low;
 }
 
 int main()
