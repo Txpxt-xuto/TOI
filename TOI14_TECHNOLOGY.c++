@@ -14183,7 +14183,8 @@ bool canSplit(vector<int> &room, int low, int high, int m){
 void ADSL(vector<int> &room, int m){
     int low = *max_element(room.begin(), room.end());
     int high = accumulate(room.begin(), room.end(),0);
-    while(low<high){
+    while(low<high)
+    {
         if(canSplit(room, low, high, m)){
             high = (low+high)/2;
         }else low = (low+high)/2+1;
