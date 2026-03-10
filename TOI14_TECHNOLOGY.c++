@@ -14201,13 +14201,14 @@ int main(){
 
     #include <bits/stdc++.h>
 using namespace std;
-struct what{
+struct what
+{
     long long idx,cnt2=0,cnt3=0,cnt5=0,cnt7=0;
-
     bool operator<(const what &other) const{
         return idx < other.idx;
     }
 };
+
 vector<what> v;
 int main()
 {
