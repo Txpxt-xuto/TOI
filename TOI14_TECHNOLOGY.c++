@@ -14187,7 +14187,8 @@ void ADSL(vector<int> &room, int m){
     {
         if(canSplit(room, low, high, m)){
             high = (low+high)/2;
-        }else low = (low+high)/2+1;
+        }
+        else low = (low+high)/2+1;
     }
     cout << low;
 }
