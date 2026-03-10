@@ -14195,9 +14195,9 @@ int main(){
     int m, o;
     cin >> m >> o;
     vector<int> room(o);
-    for(int i=0; i<o; i++){
-        cin >> room[i];
-    }
+    for(int i=0; i<o; i++) cin >> room[i];
+        
+    
 
 #include <bits/stdc++.h>
 using namespace std;
