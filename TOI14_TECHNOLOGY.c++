@@ -14209,7 +14209,8 @@ struct what{
     }
 };
 vector<what> v;
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0),cin.tie(0);
     long long m,n;cin>>m>>n;
     for(int i =0 ; i<m ; ++i)
