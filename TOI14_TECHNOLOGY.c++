@@ -14165,8 +14165,8 @@ int main()
 
 #include<bits/stdc++.h>
 using namespace std;
-
-bool canSplit(vector<int> &room, int low, int high, int m){
+bool canSplit(vector<int> &room, int low, int high, int m)
+{
     int mid = (low+high)/2;
     int total=0, group=1;
     for(int i=0; i<room.size(); i++)
