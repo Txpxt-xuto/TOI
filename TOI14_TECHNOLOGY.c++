@@ -14172,7 +14172,6 @@ bool canSplit(vector<int> &room, int low, int high, int m){
     for(int i=0; i<room.size(); i++)
     {
         if(total+room[i]<=mid) total+=room[i];
-            
         else
         {
             group++;
