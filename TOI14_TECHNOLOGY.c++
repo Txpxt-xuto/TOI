@@ -14169,7 +14169,8 @@ using namespace std;
 bool canSplit(vector<int> &room, int low, int high, int m){
     int mid = (low+high)/2;
     int total=0, group=1;
-    for(int i=0; i<room.size(); i++){
+    for(int i=0; i<room.size(); i++)
+    {
         if(total+room[i]<=mid){
             total+=room[i];
         }else{
@@ -14180,7 +14181,8 @@ bool canSplit(vector<int> &room, int low, int high, int m){
     return group<=m;
 }
 
-void ADSL(vector<int> &room, int m){
+void ADSL(vector<int> &room, int m)
+{
     int low = *max_element(room.begin(), room.end());
     int high = accumulate(room.begin(), room.end(),0);
     while(low<high)
