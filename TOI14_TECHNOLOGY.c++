@@ -14198,3 +14198,61 @@ int main(){
     for(int i=0; i<o; i++){
         cin >> room[i];
     }
+
+    #include <bits/stdc++.h>
+using namespace std;
+struct what{
+    long long idx,cnt2=0,cnt3=0,cnt5=0,cnt7=0;
+
+    bool operator<(const what &other) const{
+        return idx < other.idx;
+    }
+};
+vector<what> v;
+int main() {
+    ios_base::sync_with_stdio(0),cin.tie(0);
+    long long m,n;cin>>m>>n;
+    for(int i =0 ; i<m ; ++i) {
+        long long x,l,r;cin>>x>>l>>r;
+        what w1,w2;
+        w1.idx = l,w2.idx = r+1;
+        long long c2 = 0,c3 = 0,c5 = 0,c7 = 0;
+        if(x == 2) c2 = 1;
+        if(x == 3) c3 = 1;
+        if(x == 4) c2 = 2;
+        if(x == 5) c5 = 1;
+        if(x == 6) c2 = c3 = 1;
+        if(x == 7) c7 = 1;
+        if(x == 8) c2 = 3;
+        if(x == 9) c3 = 2;
+        if(x == 10) c2 = c5 = 1;
+        w1.cnt2 = c2,w1.cnt3 = c3,w1.cnt5 = c5,w1.cnt7 = c7;
+        w2.cnt2 = -c2,w2.cnt3 = -c3,w2.cnt5 = -c5,w2.cnt7 = -c7;
+        v.push_back(w1),v.push_back(w2);
+    }
+    sort(v.begin(),v.end());
+    long long n2=0,n3=0,n5=0,n7=0;
+    long long mx=0,rep=0;
+    int i = 0;
+    while(i<v.size()){
+        long long pos = v[i].idx;
+        while(pos == v[i].idx && i<v.size()) {
+            n2+=v[i].cnt2;
+            n3+=v[i].cnt3;
+            n5+=v[i].cnt5;
+            n7+=v[i].cnt7;
+            ++i;
+        }
+        if(i<v.size()&& v[i].idx>pos) {
+            long long num = (n2+1)*(n3+1)*(n5+1)*(n7+1);
+            if(num > mx) {
+                mx = num;
+                rep = v[i].idx-pos;
+            }
+            else if(num == mx) {
+                rep += v[i].idx-pos;
+            }
+        }
+    }
+    cout << mx << " "<< rep << "\n";
+}
