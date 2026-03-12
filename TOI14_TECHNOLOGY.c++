@@ -14162,3 +14162,39 @@ int main()
         }
     }
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool canSplit(vector<int> &room, int low, int high, int m){
+    int mid = (low+high)/2;
+    int total=0, group=1;
+    for(int i=0; i<room.size(); i++){
+        if(total+room[i]<=mid){
+            total+=room[i];
+        }else{
+            group++;
+            total=room[i];
+        }
+    }
+    return group<=m;
+}
+
+void ADSL(vector<int> &room, int m){
+    int low = *max_element(room.begin(), room.end());
+    int high = accumulate(room.begin(), room.end(),0);
+    while(low<high){
+        if(canSplit(room, low, high, m)){
+            high = (low+high)/2;
+        }else low = (low+high)/2+1;
+    }
+    cout << low; //<<high
+}
+
+int main(){
+    int m, o;
+    cin >> m >> o;
+    vector<int> room(o);
+    for(int i=0; i<o; i++){
+        cin >> room[i];
+    }
