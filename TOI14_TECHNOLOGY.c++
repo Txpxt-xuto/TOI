@@ -14289,7 +14289,8 @@ int main() {
     for (int i = 0;i <= N;i++) head[i] = i;
     priority_queue<edge> pq;
 
-    while(M--) {
+    while(M--)
+    {
         int u,v;
         long long w;
         cin >> u >> v >> w;
