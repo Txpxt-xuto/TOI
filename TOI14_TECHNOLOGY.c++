@@ -14299,7 +14299,8 @@ int main() {
     {
         auto [w,u,v] = pq.top();
         pq.pop();
-        if (findd(u,head) != findd(v,head)) {
+        if (findd(u,head) != findd(v,head))
+        {
             unionn(u,v,head);
             tong += w-1;
         }
