@@ -14264,3 +14264,44 @@ int main()
     }
     cout << mx << " "<< rep << "\n";
 }
+
+#include<bits/stdc++.h>
+using namespace std;
+#define edge tuple<long long,int,int>
+
+int N,M;
+long long tong = 0;
+
+int findd(int x,vector<int> &head) {
+    if (head[x] == x) return x;
+    return head[x] = findd(head[x], head);
+}
+
+void unionn(int x,int y,vector<int> &head) {
+    head[findd(y,head)] = findd(x,head);
+}
+
+int main() {
+    cin.tie(0)->sync_with_stdio(0);
+
+    cin >> N >> M;
+    vector<int> head(N+5);
+    for (int i = 0;i <= N;i++) head[i] = i;
+    priority_queue<edge> pq;
+
+    while(M--) {
+        int u,v;
+        long long w;
+        cin >> u >> v >> w;
+        pq.push({w,u,v});
+    }
+    while (!pq.empty()) {
+        auto [w,u,v] = pq.top();
+        pq.pop();
+        if (findd(u,head) != findd(v,head)) {
+            unionn(u,v,head);
+            tong += w-1;
+        }
+    }
+    cout << tong << '\n';
+}
