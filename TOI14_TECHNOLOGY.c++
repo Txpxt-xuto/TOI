@@ -14268,7 +14268,6 @@ int main()
 #include<bits/stdc++.h>
 using namespace std;
 #define edge tuple<long long,int,int>
-
 int N,M;
 long long tong = 0;
 
