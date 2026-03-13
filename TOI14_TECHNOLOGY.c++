@@ -14281,14 +14281,13 @@ void unionn(int x,int y,vector<int> &head) {
     head[findd(y,head)] = findd(x,head);
 }
 
-int main() {
+int main()
+{
     cin.tie(0)->sync_with_stdio(0);
-
     cin >> N >> M;
     vector<int> head(N+5);
-    for (int i = 0;i <= N;i++) head[i] = i;
+    for(int i = 0;i <= N;i++) head[i] = i;
     priority_queue<edge> pq;
-
     while(M--)
     {
         int u,v;
