@@ -14295,7 +14295,8 @@ int main() {
         cin >> u >> v >> w;
         pq.push({w,u,v});
     }
-    while (!pq.empty()) {
+    while (!pq.empty())
+    {
         auto [w,u,v] = pq.top();
         pq.pop();
         if (findd(u,head) != findd(v,head)) {
