@@ -14323,8 +14323,7 @@ int main()
                 min=pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01-fcost-(nbook*(100-(nbook-1000)/500));
                 a=nbook;
                 b=pbook;
-                c=pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01-fcost-(nbook*(100-(nbook-1000)/500));
-            }
+                c=ทรืว
         }
     }
     printf("%.0lf\n%.0lf\n%.2lf",a,b,c);
