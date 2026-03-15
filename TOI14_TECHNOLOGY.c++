@@ -14311,15 +14311,14 @@ int main()
 #include <math.h>
 int main()
 {
-    double fcost,rev,a,b,c,min=1E8;
+    double fcost,a,b,c,min=1E8;
     int nbook,pbook;
     scanf("%lf",&fcost);
     for(nbook=1000;nbook<=15000;nbook+=500)
     {
         for(pbook=74;pbook<=144;pbook++)
         {
-            rev=pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01-fcost-(nbook*(100-(nbook-1000)/500));
-            if(rev<min && rev>0)
+            if(pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01-fcost-(nbook*(100-(nbook-1000)/500))<min && pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01-fcost-(nbook*(100-(nbook-1000)/500))>0)
             {
                 min=rev;
                 a=nbook;
