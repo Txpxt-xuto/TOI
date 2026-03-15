@@ -14307,28 +14307,33 @@ int main()
     cout << tong << '\n';
 }
 
+#include <stdio.h>
+#include <math.h>
+
 int main()
 {
-    double income,fcost,vcost,cost,ncsbook,d,rev,a,b,min=1E8;
-    int nbook;
+    double cbook,income,fcost,vcost,ncsbook,d,rev,a,b,c,min=1E8,totalcost;
+    int nbook,pbook;
     scanf("%lf",&fcost);
     for(nbook=1000;nbook<=15000;nbook+=500)
     {
         for(pbook=74;pbook<=144;pbook++)
         {
+            cbook=100-(nbook-1000)/500;
             d=(pbook-100)*0.09;
             ncsbook=((100-(0.8569*exp(d)))*nbook)*0.01;
-            vcost=nbook*pbook;
+            vcost=nbook*cbook;
             income=pbook*ncsbook;
             totalcost=fcost+vcost;
             rev=income-totalcost;
             if(rev<min && rev>0)
             {
+                min=rev;
                 a=nbook;
                 b=pbook;
                 c=rev;
             }
         }
     }
-    printf("%lf %lf %.2lf",a,b,c);
+    printf("%.0lf\n%.0lf\n%.2lf",a,b,c);
 }
