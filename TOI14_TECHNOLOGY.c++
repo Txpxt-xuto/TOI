@@ -14316,6 +14316,7 @@ int main()
     scanf("%lf",&fcost);
     for(nbook=1000;nbook<=15000;nbook+=500)
     {
+        
         for(pbook=74;pbook<=144;pbook++)
         {
             cbook=100-(nbook-1000)/500;
