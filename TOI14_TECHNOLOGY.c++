@@ -14309,7 +14309,6 @@ int main()
 
 #include <stdio.h>
 #include <math.h>
-
 int main()
 {
     double cbook,income,fcost,vcost,ncsbook,d,rev,a,b,c,min=1E8,totalcost;
