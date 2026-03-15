@@ -14318,9 +14318,8 @@ int main()
     {
         for(pbook=74;pbook<=144;pbook++)
         {
-            vcost=nbook*(100-(nbook-1000)/500);
             income=pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01;
-            totalcost=fcost+vcost;
+            totalcost=fcost+(nbook*(100-(nbook-1000)/500));
             rev=income-totalcost;
             if(rev<min && rev>0)
             {
