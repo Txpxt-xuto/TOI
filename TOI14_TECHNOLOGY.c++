@@ -14318,10 +14318,10 @@ int main()
     {
         for(pbook=74;pbook<=144;pbook++)
         {
-            cbook=100-(nbook-1000)/500;
+            cbook=
             d=(pbook-100)*0.09;
             ncsbook=((100-(0.8569*exp(d)))*nbook)*0.01;
-            vcost=nbook*cbook;
+            vcost=nbook*cbook;100-(nbook-1000)/500;
             income=pbook*ncsbook;
             totalcost=fcost+vcost;
             rev=income-totalcost;
