@@ -14311,7 +14311,7 @@ int main()
 #include <math.h>
 int main()
 {
-    double income,fcost,d,rev,a,b,c,min=1E8;
+    double fcost,d,rev,a,b,c,min=1E8;
     int nbook,pbook;
     scanf("%lf",&fcost);
     for(nbook=1000;nbook<=15000;nbook+=500)
