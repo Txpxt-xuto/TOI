@@ -14311,7 +14311,7 @@ int main()
 #include <math.h>
 int main()
 {
-    double income,fcost,vcost,ncsbook,d,rev,a,b,c,min=1E8,totalcost;
+    double income,fcost,d,rev,a,b,c,min=1E8,totalcost;
     int nbook,pbook;
     scanf("%lf",&fcost);
     for(nbook=1000;nbook<=15000;nbook+=500)
@@ -14319,8 +14319,8 @@ int main()
         for(pbook=74;pbook<=144;pbook++)
         {
             income=pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01;
-            totalcost=fcost+(nbook*(100-(nbook-1000)/500));
-            rev=income-totalcost;
+            totalcost=
+            rev=income-fcost-(nbook*(100-(nbook-1000)/500));
             if(rev<min && rev>0)
             {
                 min=rev;
