@@ -14320,10 +14320,10 @@ int main()
         {
             if(pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01-fcost-(nbook*(100-(nbook-1000)/500))<min && pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01-fcost-(nbook*(100-(nbook-1000)/500))>0)
             {
-                min=rev;
+                min=pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01-fcost-(nbook*(100-(nbook-1000)/500));
                 a=nbook;
                 b=pbook;
-                c=rev;
+                c=pbook*((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01-fcost-(nbook*(100-(nbook-1000)/500));
             }
         }
     }
