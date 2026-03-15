@@ -14311,17 +14311,16 @@ int main()
 #include <math.h>
 int main()
 {
-    double cbook,income,fcost,vcost,ncsbook,d,rev,a,b,c,min=1E8,totalcost;
+    double income,fcost,vcost,ncsbook,d,rev,a,b,c,min=1E8,totalcost;
     int nbook,pbook;
     scanf("%lf",&fcost);
     for(nbook=1000;nbook<=15000;nbook+=500)
     {
         for(pbook=74;pbook<=144;pbook++)
         {
-            cbook=
-            d=(pbook-100)*0.09;
-            ncsbook=((100-(0.8569*exp(d)))*nbook)*0.01;
-            vcost=nbook*cbook;100-(nbook-1000)/500;
+            d=;
+            ncsbook=((100-(0.8569*exp((pbook-100)*0.09)))*nbook)*0.01;
+            vcost=nbook*(100-(nbook-1000)/500);
             income=pbook*ncsbook;
             totalcost=fcost+vcost;
             rev=income-totalcost;
