@@ -14347,6 +14347,7 @@ void Menu()
         printf("[3]  ดูรถที่ว่างกับวัน เวลาของคุณ\n");
         printf("[4]  อ่านเงื่อนไข กติกาการเช่า\n");
         printf("[5]  ออก\n");
+        printf("Please choose menu : \n");
         scanf("%d",&i);
         if(i==1) Dorent();
         else if(i==2) Canclerent();
@@ -14358,6 +14359,22 @@ void Dorent()
 {
     int AltisStart[31][12][100],ViosBlackStart[31][12][100],ViosWhitekStart[31][12][100],AltisEnd[31][12][100],ViosBlackEnd[31][12][100],ViosWhitekEnd[31][12][100];
     ChooseCar();
+}
+
+void ChooseCar()
+{
+    int Day,Month,Year,Car;
+    printf("[1]  Altis\n");
+    printf("[2]  Vios Black\n");
+    printf("[3]  Vios White\n");
+    printf("Please choose menu : \n");
+    scanf("%d",&Car);
+    printf("Enter Day Start: ");
+    scanf("%d",&Day);
+    printf("Enter Month Start: ");
+    scanf("%d",&Month);
+    printf("Enter year Start: ");
+    scanf("%d",&Yeat);
 }
 
 void Readrule()
