@@ -14358,23 +14358,70 @@ void Menu()
 void Dorent()
 {
     int AltisStart[31][12][100],ViosBlackStart[31][12][100],ViosWhitekStart[31][12][100],AltisEnd[31][12][100],ViosBlackEnd[31][12][100],ViosWhitekEnd[31][12][100];
-    ChooseCar();
-}
+    int DayS,MonthS,YearS,Car,DayE,MonthE,YearE;
 
-void ChooseCar()
-{
-    int Day,Month,Year,Car;
     printf("[1]  Altis\n");
     printf("[2]  Vios Black\n");
     printf("[3]  Vios White\n");
+
     printf("Please choose menu : \n");
     scanf("%d",&Car);
+
     printf("Enter Day Start: ");
-    scanf("%d",&Day);
+    scanf("%d",&DayS);
     printf("Enter Month Start: ");
-    scanf("%d",&Month);
+    scanf("%d",&MonthS);
     printf("Enter year Start: ");
-    scanf("%d",&Yeat);
+    scanf("%d",&YearS);
+
+    printf("Enter Day End: ");
+    scanf("%d",&DayE);
+    printf("Enter Month End: ");
+    scanf("%d",&MonthE);
+    printf("Enter year End: ");
+    scanf("%d",&YearE);
+    if(car==1)
+    {
+        for(int i=YearS;i<=YearE;i++)
+        {
+            for(int j=MonthS;j<=MonthE;j++)
+            {
+                for(int k=DayS;k<=DayE;k++)
+                {
+                    if()
+                }
+            }
+        }
+    }
+    else if(car==2)
+    {
+        for(int i=YearS;i<=YearE;i++)
+        {
+            for(int j=MonthS;j<=MonthE;j++)
+            {
+                for(int k=DayS;k<=DayE;k++)
+                {
+                    if(AltisStart[k][j][i]==1)
+                    {
+                        printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
+                    }
+                }
+            }
+        }
+    }
+    else if(car==3)
+    {
+        for(int i=YearS;i<=YearE;i++)
+        {
+            for(int j=MonthS;j<=MonthE;j++)
+            {
+                for(int k=DayS;k<=DayE;k++)
+                {
+                    if()
+                }
+            }
+        }
+    }
 }
 
 void Readrule()
