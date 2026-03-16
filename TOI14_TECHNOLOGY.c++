@@ -14341,12 +14341,22 @@ void Menu()
         printf("[5] ออก");
         scanf("%d",&i);
         if(i==1) dorent();
-        if(i==2) canclerent();
-        if(i==3) sreach();
-        if(i==4) readrule();
+        else if(i==2) canclerent();
+        else if(i==3) sreach();
+        else if(i==4) readrule();
     }while (i!=5);
     return 0;
 
+}
+
+void read()
+{
+    printf("1.ห้ามชน \n2.ห้ามบิด \n3.ห้าม 18+");
+}
+
+void dorent()
+{
+    printf("1.ห้ามชน \n2.ห้ามบิด \n3.ห้าม 18+");
 }
 
 int main()
