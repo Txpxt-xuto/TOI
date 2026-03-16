@@ -14380,7 +14380,7 @@ void Dorent()
     scanf("%d",&MonthE);
     printf("Enter year End: ");
     scanf("%d",&YearE);
-    if(car==1)
+    if(Car==1)
     {
         for(int i=YearS;i<=YearE;i++)
         {
@@ -14392,7 +14392,7 @@ void Dorent()
                     {
                         printf("Day %d Month %d Year %d มีคนจองแล้ว คุณต้องการเปลี่ยนวันหรือไม่ หากไม่เปลี่ยนวันนี้คุณไม่สามารถเช่าได้\n",k,j,i);
                         printf("[1] YES %t %t %t [2] NO",k,j,i);
-                        scanf("%d"&Ans);
+                        scanf("%d",&Ans);
                         if(Ans==1) 
                         {
                             k=DayE;
@@ -14404,7 +14404,7 @@ void Dorent()
             }
         }
     }
-    else if(car==2)
+    else if(Car==2)
     {
         for(int i=YearS;i<=YearE;i++)
         {
@@ -14416,7 +14416,7 @@ void Dorent()
                     {
                         printf("Day %d Month %d Year %d มีคนจองแล้ว คุณต้องการเปลี่ยนวันหรือไม่ หากไม่เปลี่ยนวันนี้คุณไม่สามารถเช่าได้\n",k,j,i);
                         printf("[1] YES %t %t %t [2] NO",k,j,i);
-                        scanf("%d"&Ans);
+                        scanf("%d",&Ans);
                         if(Ans==1) 
                         {
                             k=DayE;
@@ -14428,7 +14428,7 @@ void Dorent()
             }
         }
     }
-    else if(car==3)
+    else if(Car==3)
     {
         for(int i=YearS;i<=YearE;i++)
         {
@@ -14440,7 +14440,7 @@ void Dorent()
                     {
                         printf("Day %d Month %d Year %d มีคนจองแล้ว คุณต้องการเปลี่ยนวันหรือไม่ หากไม่เปลี่ยนวันนี้คุณไม่สามารถเช่าได้\n",k,j,i);
                         printf("[1] YES %t %t %t [2] NO",k,j,i);
-                        scanf("%d"&Ans);
+                        scanf("%d",&Ans);
                         if(Ans==1) 
                         {
                             k=DayE;
