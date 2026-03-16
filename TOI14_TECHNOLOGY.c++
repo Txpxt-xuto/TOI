@@ -14357,7 +14357,7 @@ void Menu()
 }
 void Dorent()
 {
-    int AltisStart[31][12][100],ViosBlackStart[31][12][100],ViosWhitekStart[31][12][100],AltisEnd[31][12][100],ViosBlackEnd[31][12][100],ViosWhitekEnd[31][12][100];
+    int Altis[31][12][100],ViosBlack[31][12][100],ViosWhitek[31][12][100];
     int DayS,MonthS,YearS,Car,DayE,MonthE,YearE;
 
     printf("[1]  Altis\n");
@@ -14388,7 +14388,8 @@ void Dorent()
             {
                 for(int k=DayS;k<=DayE;k++)
                 {
-                    if()
+                    if(Altis[k][j][i]==1) printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
+                    else Altis[k][j][i]==1;
                 }
             }
         }
@@ -14401,8 +14402,8 @@ void Dorent()
             {
                 for(int k=DayS;k<=DayE;k++)
                 {
-                    if(AltisStart[k][j][i]==1) printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
-                    else AltisStart[k][j][i]==1;
+                    if(ViosBlack[k][j][i]==1) printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
+                    else ViosBlack[k][j][i]==1;
                 }
             }
         }
@@ -14415,8 +14416,8 @@ void Dorent()
             {
                 for(int k=DayS;k<=DayE;k++)
                 {
-                    if(AltisStart[k][j][i]==1) printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
-                    else AltisStart[k][j][i]==1;
+                    if(ViosWhitek[k][j][i]==1) printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
+                    else ViosWhitek[k][j][i]==1;
                 }
             }
         }
