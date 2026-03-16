@@ -14328,3 +14328,4 @@ int main()
     }
     printf("%.0lf\n%.0lf\n%.2lf",a,b,c);
 }
+
