@@ -14357,7 +14357,7 @@ void Menu()
 }
 void Dorent()
 {
-    int Altis[31][12][100],ViosBlack[31][12][100],ViosWhitek[31][12][100];
+    int Altis[31][12][100]= {0},ViosBlack[31][12][100]= {0},ViosWhitek[31][12][100]= {0};
     int DayS,MonthS,YearS,Car,DayE,MonthE,YearE,Ans;
 
     printf("[1]  Altis\n");
