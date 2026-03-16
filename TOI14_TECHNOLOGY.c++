@@ -14328,39 +14328,59 @@ int main()
     }
     printf("%.0lf\n%.0lf\n%.2lf",a,b,c);
 }
+#include <stdio.h>
+
+void Menu();
+void Dorent();
+void Readrule();
+void Canclerent();
+void Sreach();
+void Canclerent();
 
 void Menu()
 {
     int i;
     do
     {
-        printf("[1] ดำเนินการจองรถ");
-        printf("[2] ยกเลิกการจองรถ");
-        printf("[3] ดูรถที่ว่างกับวัน เวลาของคุณ");
-        printf("[4] อ่านเงื่อนไข กติกาการเช่า");
-        printf("[5] ออก");
+        printf("[1]  ดำเนินการจองรถ\n");
+        printf("[2]  ยกเลิกการจองรถ\n");
+        printf("[3]  ดูรถที่ว่างกับวัน เวลาของคุณ\n");
+        printf("[4]  อ่านเงื่อนไข กติกาการเช่า\n");
+        printf("[5]  ออก\n");
         scanf("%d",&i);
-        if(i==1) dorent();
-        else if(i==2) canclerent();
-        else if(i==3) sreach();
-        else if(i==4) readrule();
+        if(i==1) Dorent();
+        else if(i==2) Canclerent();
+        else if(i==3) Sreach();
+        else if(i==4) Readrule();
     }while (i!=5);
-    return 0;
-
 }
-
-void dorent()
+void Dorent()
 {
-    
+    int AltisStart[31][12][100],ViosBlackStart[31][12][100],ViosWhitekStart[31][12][100],AltisEnd[31][12][100],ViosBlackEnd[31][12][100],ViosWhitekEnd[31][12][100];
+    ChooseCar();
 }
 
-void read()
+void Readrule()
 {
     printf("กติกาการเช่ารถ\n");
     printf("1.ห้ามชน \n2.ห้ามบิด \n3.ห้าม 18+");
 }
 
+void Sreach()
+{
+    printf("กติกาการเช่ารถ\n");
+    printf("1.ห้ามชน \n2.ห้ามบิด \n3.ห้าม 18+");
+}
+
+void Canclerent()
+{
+    printf("กติกาการเช่ารถ\n");
+    printf("1.ห้ามชน \n2.ห้ามบิด \n3.ห้าม 18+");
+}
+
+
 int main()
 {
+    
     Menu();
 }
