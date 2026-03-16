@@ -14358,7 +14358,7 @@ void Menu()
 void Dorent()
 {
     int Altis[31][12][100],ViosBlack[31][12][100],ViosWhitek[31][12][100];
-    int DayS,MonthS,YearS,Car,DayE,MonthE,YearE;
+    int DayS,MonthS,YearS,Car,DayE,MonthE,YearE,Ans;
 
     printf("[1]  Altis\n");
     printf("[2]  Vios Black\n");
@@ -14388,9 +14388,19 @@ void Dorent()
             {
                 for(int k=DayS;k<=DayE;k++)
                 {
-                    if(Altis[k][j][i]==1) printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
-                    else Altis[k][j][i]==1;
+                    if(Altis[k][j][i]==1)
+                    {
+                        printf("Day %d Month %d Year %d มีคนจองแล้ว คุณต้องการเปลี่ยนวันหรือไม่ หากไม่เปลี่ยนวันนี้คุณไม่สามารถเช่าได้\n",k,j,i);
+                        printf("[1] YES %t %t %t [2] NO",k,j,i);
+                        scanf("%d"&Ans);
+                        if(Ans==1) 
+                        {
+                            k=DayE;
+                            Dorent();
+                        }
+                    }
                 }
+                for(int k=DayS;k<=DayE;k++) Altis[k][j][i]==1;
             }
         }
     }
@@ -14402,9 +14412,19 @@ void Dorent()
             {
                 for(int k=DayS;k<=DayE;k++)
                 {
-                    if(ViosBlack[k][j][i]==1) printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
-                    else ViosBlack[k][j][i]==1;
+                    if(ViosBlack[k][j][i]==1)
+                    {
+                        printf("Day %d Month %d Year %d มีคนจองแล้ว คุณต้องการเปลี่ยนวันหรือไม่ หากไม่เปลี่ยนวันนี้คุณไม่สามารถเช่าได้\n",k,j,i);
+                        printf("[1] YES %t %t %t [2] NO",k,j,i);
+                        scanf("%d"&Ans);
+                        if(Ans==1) 
+                        {
+                            k=DayE;
+                            Dorent();
+                        }
+                    }
                 }
+                for(int k=DayS;k<=DayE;k++) ViosBlack[k][j][i]==1;
             }
         }
     }
@@ -14416,12 +14436,25 @@ void Dorent()
             {
                 for(int k=DayS;k<=DayE;k++)
                 {
-                    if(ViosWhitek[k][j][i]==1) printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
-                    else ViosWhitek[k][j][i]==1;
+                    if(ViosWhitek[k][j][i]==1)
+                    {
+                        printf("Day %d Month %d Year %d มีคนจองแล้ว คุณต้องการเปลี่ยนวันหรือไม่ หากไม่เปลี่ยนวันนี้คุณไม่สามารถเช่าได้\n",k,j,i);
+                        printf("[1] YES %t %t %t [2] NO",k,j,i);
+                        scanf("%d"&Ans);
+                        if(Ans==1) 
+                        {
+                            k=DayE;
+                            Dorent();
+                        }
+                    }
                 }
+                for(int k=DayS;k<=DayE;k++) ViosWhitek[k][j][i]==1;
             }
         }
     }
+    printf("ดำเนินการโอนเงินเพื่อมัดจำการจอง...\n");
+    scanf("%d",Ans);
+    printf("การจองสำเร็จ ขอบคุณที่ใช้บริการ");
 }
 
 void Readrule()
