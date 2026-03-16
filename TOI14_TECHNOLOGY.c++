@@ -14415,9 +14415,7 @@ void Dorent()
             {
                 for(int k=DayS;k<=DayE;k++)
                 {
-                    if(AltisStart[k][j][i]==1)
-                    {
-                        printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
+                    if(AltisStart[k][j][i]==1) printf("Day %d Month %d Year %d มีคนจองแล้ว",k,j,i);
                     else AltisStart[k][j][i]==1;
                 }
             }
