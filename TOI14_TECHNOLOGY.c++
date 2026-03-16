@@ -14328,6 +14328,8 @@ int main()
     }
     printf("%.0lf\n%.0lf\n%.2lf",a,b,c);
 }
+
+
 #include <stdio.h>
 
 void Menu();
@@ -14342,12 +14344,14 @@ void Menu()
     int i;
     do
     {
-        printf("[1]  ดำเนินการจองรถ\n");
-        printf("[2]  ยกเลิกการจองรถ\n");
-        printf("[3]  ดูรถที่ว่างกับวัน เวลาของคุณ\n");
-        printf("[4]  อ่านเงื่อนไข กติกาการเช่า\n");
-        printf("[5]  ออก\n");
-        printf("Please choose menu : \n");
+        printf("*****************************************\n");
+        printf("*   [1]  Booking                        *\n");
+        printf("*   [2]  Unbooking                      *\n");
+        printf("*   [3]  Check for available vehicles   *\n");
+        printf("*   [4]  Read the rules                 *\n");
+        printf("*   [5]  Quit                           *\n");
+        printf("*****************************************\n");
+        printf("Please choose menu : ");
         scanf("%d",&i);
         if(i==1) Dorent();
         else if(i==2) Canclerent();
@@ -14360,10 +14364,12 @@ void Dorent()
     int Altis[31][12][100]= {0},ViosBlack[31][12][100]= {0},ViosWhitek[31][12][100]= {0};
     int DayS,MonthS,YearS,Car,DayE,MonthE,YearE,Ans;
 
-    printf("[1]  Altis\n");
-    printf("[2]  Vios Black\n");
-    printf("[3]  Vios White\n");
 
+    printf("*****************************************\n");
+    printf("*           [1]  Altis                  *\n");
+    printf("*           [2]  Vios Black             *\n");
+    printf("*           [3]  Vios White             *\n");
+    printf("*****************************************\n");
     printf("Please choose menu : \n");
     scanf("%d",&Car);
 
