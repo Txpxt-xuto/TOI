@@ -14349,12 +14349,12 @@ void Menu()
 
 }
 
-void read()
+void dorent()
 {
     
 }
 
-void dorent()
+void read()
 {
     printf("กติกาการเช่ารถ\n");
     printf("1.ห้ามชน \n2.ห้ามบิด \n3.ห้าม 18+");
