@@ -35,3 +35,34 @@ int main(){
         else break;
     }
 }
+void bookCar(){
+
+    int id;
+
+    printf("Enter car ID: ");
+    scanf("%d",&id);
+
+    for(int i=0;i<carCount;i++){
+
+        if(cars[i].id == id && cars[i].available){
+
+            cars[i].available = 0;
+
+            bookings[bookingCount].carID = id;
+
+            printf("Customer name: ");
+            scanf("%s", bookings[bookingCount].customer);
+
+            printf("Date: ");
+            scanf("%s", bookings[bookingCount].date);
+
+            bookingCount++;
+
+            printf("Booking success\n");
+
+            return;
+        }
+    }
+
+    printf("Car not available\n");
+}
