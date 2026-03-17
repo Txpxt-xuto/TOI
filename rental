@@ -66,3 +66,18 @@ void bookCar(){
 
     printf("Car not available\n");
 }
+
+void showCars(){
+
+    printf("\nCar List\n");
+
+    for(int i=0;i<carCount;i++){
+
+        printf("%d %s ",cars[i].id,cars[i].brand);
+
+        if(cars[i].available)
+            printf("Available\n");
+        else
+            printf("Booked\n");
+    }
+}
