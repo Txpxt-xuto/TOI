@@ -1,3 +1,10 @@
+
+struct Car cars[100];
+struct Booking bookings[100];
+
+int carCount = 0;
+int bookingCount = 0;
+
 void saveCars(){
 
     FILE *fp = fopen("cars.csv","w");
