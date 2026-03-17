@@ -14344,6 +14344,7 @@ void Menu()
     int i;
     do
     {
+        printf("\n           Car Rental System           \n");
         printf("*****************************************\n");
         printf("*   [1]  Booking                        *\n");
         printf("*   [2]  Unbooking                      *\n");
@@ -14471,7 +14472,7 @@ void Readrule()
 void Sreach()
 {
 
-    int DayS,MonthS,YearS,Car,DayE,MonthE,YearE,Ans;
+    int DayS,MonthS,YearS,Car,DayE,MonthE,YearE,sum;
     
     printf("Enter Day Start: ");
     scanf("%d",&DayS);
@@ -14487,12 +14488,12 @@ void Sreach()
     printf("Enter year End: ");
     scanf("%d",&YearE);
 
-    for(int i=YearS;i<=YearE;i++)
+    for(int k=DayS;k<=DayE;k++)
         {
             for(int j=MonthS;j<=MonthE;j++)
             {
                 sum=0;
-                for(int k=DayS;k<=DayE;k++)
+                for(int i=YearS;i<=YearE;i++)
                 {
                     if(ViosWhite[k][j][i]==1) 
                     {
@@ -14503,7 +14504,7 @@ void Sreach()
                 }
                 if(sum==DayE-DayS) printf("ViosWhite\n");
                 sum=0;
-                for(int k=DayS;k<=DayE;k++)
+                for(int i=YearS;i<=YearE;i++)
                 {
                     if(ViosBlack[k][j][i]==1) 
                     {
@@ -14514,7 +14515,7 @@ void Sreach()
                 }
                 if(sum==DayE-DayS) printf("ViosBlack\n");
                 sum=0;
-                for(int k=DayS;k<=DayE;k++)
+                for(int i=YearS;i<=YearE;i++)
                 {
                     if(Altis[k][j][i]==1) 
                     {
