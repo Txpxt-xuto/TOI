@@ -1,0 +1,37 @@
+void saveCars(){
+
+    FILE *fp = fopen("cars.csv","w");
+
+    for(int i=0;i<carCount;i++){
+
+        fprintf(fp,"%d,%s,%d\n",
+        cars[i].id,
+        cars[i].brand,
+        cars[i].available);
+    }
+
+    fclose(fp);
+}
+
+int main(){
+
+    int choice;
+
+    while(1){
+
+        printf("\nCar Rental System\n");
+        printf("1.Add Car\n");
+        printf("2.Show Cars\n");
+        printf("3.Book Car\n");
+        printf("4.Save\n");
+        printf("5.Exit\n");
+
+        scanf("%d",&choice);
+
+        if(choice==1) addCar();
+        else if(choice==2) showCars();
+        else if(choice==3) bookCar();
+        else if(choice==4) saveCars();
+        else break;
+    }
+}
