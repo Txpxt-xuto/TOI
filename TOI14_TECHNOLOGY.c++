@@ -14331,7 +14331,7 @@ int main()
 
 
 #include <stdio.h>
-
+int Altis[31][12][100]= {0},ViosBlack[31][12][100]= {0},ViosWhite[31][12][100]= {0};
 void Menu();
 void Dorent();
 void Readrule();
@@ -14361,7 +14361,6 @@ void Menu()
 }
 void Dorent()
 {
-    int Altis[31][12][100]= {0},ViosBlack[31][12][100]= {0},ViosWhitek[31][12][100]= {0};
     int DayS,MonthS,YearS,Car,DayE,MonthE,YearE,Ans;
 
 
@@ -14442,7 +14441,7 @@ void Dorent()
             {
                 for(int k=DayS;k<=DayE;k++)
                 {
-                    if(ViosWhitek[k][j][i]==1)
+                    if(ViosWhite[k][j][i]==1)
                     {
                         printf("Day %d Month %d Year %d มีคนจองแล้ว คุณต้องการเปลี่ยนวันหรือไม่ หากไม่เปลี่ยนวันนี้คุณไม่สามารถเช่าได้\n",k,j,i);
                         printf("[1] YES %t %t %t [2] NO",k,j,i);
@@ -14454,7 +14453,7 @@ void Dorent()
                         }
                     }
                 }
-                for(int k=DayS;k<=DayE;k++) ViosWhitek[k][j][i]==1;
+                for(int k=DayS;k<=DayE;k++) ViosWhite[k][j][i]==1;
             }
         }
     }
@@ -14471,8 +14470,63 @@ void Readrule()
 
 void Sreach()
 {
-    printf("กติกาการเช่ารถ\n");
-    printf("1.ห้ามชน \n2.ห้ามบิด \n3.ห้าม 18+");
+
+    int DayS,MonthS,YearS,Car,DayE,MonthE,YearE,Ans;
+    
+    printf("Enter Day Start: ");
+    scanf("%d",&DayS);
+    printf("Enter Month Start: ");
+    scanf("%d",&MonthS);
+    printf("Enter year Start: ");
+    scanf("%d",&YearS);
+
+    printf("Enter Day End: ");
+    scanf("%d",&DayE);
+    printf("Enter Month End: ");
+    scanf("%d",&MonthE);
+    printf("Enter year End: ");
+    scanf("%d",&YearE);
+
+    for(int i=YearS;i<=YearE;i++)
+        {
+            for(int j=MonthS;j<=MonthE;j++)
+            {
+                sum=0;
+                for(int k=DayS;k<=DayE;k++)
+                {
+                    if(ViosWhite[k][j][i]==1) 
+                    {
+                        sum=0;
+                        k=DayE;
+                    }
+                    else sum++;
+                }
+                if(sum==DayE-DayS) printf("ViosWhite\n");
+                sum=0;
+                for(int k=DayS;k<=DayE;k++)
+                {
+                    if(ViosBlack[k][j][i]==1) 
+                    {
+                        sum=0;
+                        k=DayE;
+                    }
+                    else sum++;
+                }
+                if(sum==DayE-DayS) printf("ViosBlack\n");
+                sum=0;
+                for(int k=DayS;k<=DayE;k++)
+                {
+                    if(Altis[k][j][i]==1) 
+                    {
+                        sum=0;
+                        k=DayE;
+                    }
+                    else sum++;
+                }
+                if(sum==DayE-DayS) printf("Altis\n");
+            }
+        }
+
 }
 
 void Canclerent()
