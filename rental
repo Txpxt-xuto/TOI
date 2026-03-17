@@ -1,32 +1,120 @@
+
 #include <stdio.h>
 #include <string.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
 
-int main() {
+struct Car {
+    int id;
+    char brand[50];
+    int available;
+};
 
-    int server_fd, client;
-    struct sockaddr_in address;
-    int addrlen = sizeof(address);
+struct Booking {
+    int carID;
+    char customer[50];
+    char date[20];
+};
 
-    server_fd = socket(AF_INET, SOCK_STREAM, 0);
+struct Car cars[100];
+struct Booking bookings[100];
 
-    address.sin_family = AF_INET;
-    address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(8080);
+int carCount = 0;
+int bookingCount = 0;
 
-    bind(server_fd, (struct sockaddr *)&address, sizeof(address));
-    listen(server_fd, 3);
+void saveCars(){
 
-    printf("Server running on port 8080\n");
+    FILE *fp = fopen("cars.csv","w");
 
-    client = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen);
+    for(int i=0;i<carCount;i++){
 
-    char response[] =
-    "HTTP/1.1 200 OK\n"
-    "Content-Type: text/plain\n\n"
-    "Hello from C backend";
+        fprintf(fp,"%d,%s,%d\n",
+        cars[i].id,
+        cars[i].brand,
+        cars[i].available);
+    }
 
-    send(client, response, strlen(response), 0);
+    fclose(fp);
+}
 
+int main(){
+
+    int choice;
+
+    while(1){
+
+        printf("\nCar Rental System\n");
+        printf("1.Add Car\n");
+        printf("2.Show Cars\n");
+        printf("3.Book Car\n");
+        printf("4.Save\n");
+        printf("5.Exit\n");
+
+        scanf("%d",&choice);
+
+        if(choice==1) addCar();
+        else if(choice==2) showCars();
+        else if(choice==3) bookCar();
+        else if(choice==4) saveCars();
+        else break;
+    }
+}
+void bookCar(){
+
+    int id;
+
+    printf("Enter car ID: ");
+    scanf("%d",&id);
+
+    for(int i=0;i<carCount;i++){
+
+        if(cars[i].id == id && cars[i].available){
+
+            cars[i].available = 0;
+
+            bookings[bookingCount].carID = id;
+
+            printf("Customer name: ");
+            scanf("%s", bookings[bookingCount].customer);
+
+            printf("Date: ");
+            scanf("%s", bookings[bookingCount].date);
+
+            bookingCount++;
+
+            printf("Booking success\n");
+
+            return;
+        }
+    }
+
+    printf("Car not available\n");
+}
+
+void showCars(){
+
+    printf("\nCar List\n");
+
+    for(int i=0;i<carCount;i++){
+
+        printf("%d %s ",cars[i].id,cars[i].brand);
+
+        if(cars[i].available)
+            printf("Available\n");
+        else
+            printf("Booked\n");
+    }
+}
+
+void addCar() {
+
+    printf("Car ID: ");
+    scanf("%d",&cars[carCount].id);
+
+    printf("Car Brand: ");
+    scanf("%s",cars[carCount].brand);
+
+    cars[carCount].available = 1;
+
+    carCount++;
+
+    printf("Car added successfully\n");
 }
