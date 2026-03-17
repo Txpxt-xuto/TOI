@@ -1,4 +1,19 @@
 
+#include <stdio.h>
+#include <string.h>
+
+struct Car {
+    int id;
+    char brand[50];
+    int available;
+};
+
+struct Booking {
+    int carID;
+    char customer[50];
+    char date[20];
+};
+
 struct Car cars[100];
 struct Booking bookings[100];
 
