@@ -81,3 +81,18 @@ void showCars(){
             printf("Booked\n");
     }
 }
+
+void addCar() {
+
+    printf("Car ID: ");
+    scanf("%d",&cars[carCount].id);
+
+    printf("Car Brand: ");
+    scanf("%s",cars[carCount].brand);
+
+    cars[carCount].available = 1;
+
+    carCount++;
+
+    printf("Car added successfully\n");
+}
