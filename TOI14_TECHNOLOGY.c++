@@ -14331,7 +14331,13 @@ int main()
 
 
 #include <stdio.h>
-int Altis[31][12][100]= {0},ViosBlack[31][12][100]= {0},ViosWhite[31][12][100]= {0};
+int Altis[365]= {0},ViosBlack[365]= {0},ViosWhite[365]= {0};
+
+struct Car {
+    int Id;
+    char Name[50];
+    int Status[365];
+};
 void Menu();
 void Dorent();
 void Readrule();
@@ -14360,10 +14366,44 @@ void Menu()
         else if(i==4) Readrule();
     }while (i!=5);
 }
+
+int isLeap(int y)
+{
+    if((y%4==0 && y%100!=0) || y%400==0) return 1;
+    return 0;
+}
+
+int daysInMonth(int m, int y)
+{
+    int d[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+    if(m==2 && isLeap(y)) return 29;
+    return d[m-1];
+}
+
+int countDays(int d, int m, int y)
+{
+
+    int days = d;
+    for(int i=1;i<m;i++) days += daysInMonth(i,y);
+    for(int i=1;i<y;i++)
+    {
+        days += 365;
+        if(isLeap(i)) days += 1;
+    }
+    return days;
+}
+
+
 void Dorent()
 {
-    int DayS,MonthS,YearS,Car,DayE,MonthE,YearE,Ans;
 
+    FILE *fp = fopen("cars.csv","r");
+    char line[100];
+    char *Id = strtok(line,",");
+    char *Name = strtok(NULL,",");
+    char *Status = strtok(NULL,",");
+
+    int DayS,MonthS,YearS,Car,DayE,MonthE,YearE,Ans;
 
     printf("*****************************************\n");
     printf("*           [1]  Altis                  *\n");
@@ -14373,19 +14413,14 @@ void Dorent()
     printf("Please choose menu : \n");
     scanf("%d",&Car);
 
-    printf("Enter Day Start: ");
-    scanf("%d",&DayS);
-    printf("Enter Month Start: ");
-    scanf("%d",&MonthS);
-    printf("Enter year Start: ");
-    scanf("%d",&YearS);
+    printf("Start date (dd mm yyyy): ");
+    scanf("%d %d %d",&DayS,&MonthS,&YearS);
+    printf("End  date  (dd mm yyyy): ");
+    scanf("%d %d %d",&DayE,&MonthE,&YearE);
 
-    printf("Enter Day End: ");
-    scanf("%d",&DayE);
-    printf("Enter Month End: ");
-    scanf("%d",&MonthE);
-    printf("Enter year End: ");
-    scanf("%d",&YearE);
+    int days1 = countDays(DayS,MonthS,YearS);
+    int days2 = countDays(DayE,MonthE,YearE);
+
     if(Car==1)
     {
         for(int i=YearS;i<=YearE;i++)
@@ -14458,9 +14493,13 @@ void Dorent()
             }
         }
     }
+    printf("ทำการจอง %s \nตั้งแต่ %d %d %d ถึง %d %d %d จำนวน %d",Name,DayS,MonthS,YearS,DayE,MonthE,YearE,days2-days1);
     printf("ดำเนินการโอนเงินเพื่อมัดจำการจอง...\n");
     scanf("%d",Ans);
     printf("การจองสำเร็จ ขอบคุณที่ใช้บริการ");
+
+    fclose(fp);
+
 }
 
 void Readrule()
